@@ -1,0 +1,178 @@
+{
+  "schemaVersion": "human-protocol.builder-support-surface-bake.v1",
+  "sourceManifest": "src/assets/manifests/builder/hp_residential_reference_furniture_image2_v1.json",
+  "glbOverrideDir": "src/assets/models/environment/props",
+  "bakeMode": "mesh-bounds-conservative-top-surface",
+  "assets": [
+    {
+      "modelKey": "hp_furniture_residential_oval_coffee_table_v1",
+      "label": "住宅圆角茶几",
+      "sourceGlb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models/environment/props/hp_furniture_residential_oval_coffee_table_v1.glb",
+      "canBake": true,
+      "supportSurfaces": [
+        {
+          "id": "mesh_top",
+          "kind": "tabletop",
+          "localCenter": [
+            0.0,
+            0.5175,
+            0.0
+          ],
+          "size": [
+            1.1544,
+            0.5904
+          ],
+          "maxChildHeight": 1.1
+        }
+      ],
+      "notes": [],
+      "meshBounds": {
+        "min": [
+          -0.74,
+          0.04,
+          -0.41
+        ],
+        "max": [
+          0.74,
+          0.5175,
+          0.41
+        ],
+        "sizeMeters": [
+          1.48,
+          0.4775,
+          0.82
+        ]
+      }
+    },
+    {
+      "modelKey": "hp_furniture_residential_fluted_sideboard_v1",
+      "label": "住宅竖纹边柜",
+      "sourceGlb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models/environment/props/hp_furniture_residential_fluted_sideboard_v1.glb",
+      "canBake": true,
+      "supportSurfaces": [
+        {
+          "id": "mesh_top",
+          "kind": "tabletop",
+          "localCenter": [
+            0.0,
+            0.9825,
+            -0.004
+          ],
+          "size": [
+            1.4508,
+            0.481
+          ],
+          "maxChildHeight": 1.1
+        }
+      ],
+      "notes": [],
+      "meshBounds": {
+        "min": [
+          -0.93,
+          0.02,
+          -0.338
+        ],
+        "max": [
+          0.93,
+          0.9825,
+          0.33
+        ],
+        "sizeMeters": [
+          1.86,
+          0.9625,
+          0.668
+        ]
+      }
+    },
+    {
+      "modelKey": "hp_furniture_residential_entry_bench_cubby_v1",
+      "label": "玄关储物换鞋凳",
+      "sourceGlb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models/environment/props/hp_furniture_residential_entry_bench_cubby_v1.glb",
+      "canBake": false,
+      "supportSurfaces": [],
+      "notes": [
+        "not a support-family asset"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+      "label": "半高隔断书架",
+      "sourceGlb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+      "canBake": true,
+      "supportSurfaces": [
+        {
+          "id": "mesh_top",
+          "kind": "shelf",
+          "localCenter": [
+            0.0,
+            1.44,
+            0.0023
+          ],
+          "size": [
+            1.2384,
+            0.2115
+          ],
+          "maxChildHeight": 0.45
+        }
+      ],
+      "notes": [],
+      "meshBounds": {
+        "min": [
+          -0.86,
+          0.12,
+          -0.19
+        ],
+        "max": [
+          0.86,
+          1.44,
+          0.1945
+        ],
+        "sizeMeters": [
+          1.72,
+          1.32,
+          0.3845
+        ]
+      }
+    },
+    {
+      "modelKey": "hp_furniture_residential_cleaner_closet_v1",
+      "label": "家政清洁储物柜",
+      "sourceGlb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models/environment/props/hp_furniture_residential_cleaner_closet_v1.glb",
+      "canBake": true,
+      "supportSurfaces": [
+        {
+          "id": "mesh_top",
+          "kind": "tabletop",
+          "localCenter": [
+            0.0,
+            1.96,
+            -0.05
+          ],
+          "size": [
+            0.7254,
+            0.4464
+          ],
+          "maxChildHeight": 1.1
+        }
+      ],
+      "notes": [],
+      "meshBounds": {
+        "min": [
+          -0.465,
+          0.0,
+          -0.36
+        ],
+        "max": [
+          0.465,
+          1.96,
+          0.26
+        ],
+        "sizeMeters": [
+          0.93,
+          1.96,
+          0.62
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "schema": "human-protocol/viewmodel-weapon-assets@1",
+  "source": "webgpu-robot-lab/scripts/generate-prop-assets.py",
+  "assets": [
+    {
+      "id": "iron_rod_advanced",
+      "label": "Advanced Iron Rod",
+      "category": "melee",
+      "file": "src/assets/models/viewmodel/hp_iron_rod_advanced.glb",
+      "sourceFile": "iron-rod.glb",
+      "gripProfile": "rod",
+      "sizeMeters": [0.24, 0.24, 2.9],
+      "movingParts": [
+        "iron_rod_root",
+        "iron_rod_main_bar",
+        "iron_rod_right_impact_cap",
+        "iron_rod_right_dark_strike_face"
+      ],
+      "sockets": [
+        "iron_rod_right_hand_grip_socket",
+        "iron_rod_hit_tip_socket",
+        "iron_rod_hit_base_socket",
+        "iron_rod_trail_mid_socket"
+      ],
+      "notes": "Polished Blender-generated iron rod with grip wraps, machined strike cap and hit-tip sockets. Runtime iron rod attacks use the same single right-hand viewmodel as the sidearm."
+    }
+  ]
+}

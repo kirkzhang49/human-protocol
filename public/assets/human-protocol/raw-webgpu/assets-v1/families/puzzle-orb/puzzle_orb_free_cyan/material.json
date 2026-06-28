@@ -1,0 +1,182 @@
+{
+  "file": "material.json",
+  "hash": "716a419f45643672",
+  "materials": [
+    {
+      "index": 26,
+      "id": "mat:procedural-free-orb:26:puzzle-orb-free-cyan-smoked-titanium-base",
+      "name": "puzzle_orb_free_cyan:smoked_titanium_base",
+      "category": "interaction",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.82,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.003677,
+        0.006049,
+        0.007499,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.72,
+      "metallicFactor": 0.38,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 27,
+      "id": "mat:procedural-free-orb:27:puzzle-orb-free-cyan-aged-brass-trim",
+      "name": "puzzle_orb_free_cyan:aged_brass_trim",
+      "category": "interaction",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.86,
+        0.42,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.467784,
+        0.234551,
+        0.039546,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0.58,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 28,
+      "id": "mat:procedural-free-orb:28:puzzle-orb-free-cyan-colored-glass-shell",
+      "name": "puzzle_orb_free_cyan:colored_glass_shell",
+      "category": "interaction",
+      "visualRole": "glass_shell",
+      "semanticParams": [
+        5,
+        0.78,
+        0.1976,
+        0.12
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.201556,
+        0.904661,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.114435,
+        0.896269,
+        1
+      ],
+      "emissiveStrength": 0.22,
+      "roughnessFactor": 0.18,
+      "metallicFactor": 0.04,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 29,
+      "id": "mat:procedural-free-orb:29:puzzle-orb-free-cyan-sequence-core-cyan",
+      "name": "puzzle_orb_free_cyan:sequence_core_cyan",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.64,
+        0.3656,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.114435,
+        0.896269,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.114435,
+        0.896269,
+        1
+      ],
+      "emissiveStrength": 0.82,
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0.08,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

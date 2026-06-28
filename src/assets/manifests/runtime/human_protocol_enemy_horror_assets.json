@@ -1,0 +1,315 @@
+{
+  "schemaVersion": "hp.enemy-horror-assets.v2",
+  "assets": [
+    {
+      "modelKey": "hp_enemy_repair_drone_horror",
+      "file": "src/assets/models/enemies/hp_enemy_repair_drone_horror.glb",
+      "category": "enemy",
+      "archetypeIds": [
+        "repair_drone"
+      ],
+      "robotTemplateId": "hp-clean-repair-drone-preview-v1",
+      "sourceRobotLabel": "HP Repair Drone Clean Preview",
+      "roles": [
+        "maintenance",
+        "medical",
+        "drone"
+      ],
+      "allowedTiers": [
+        "normal",
+        "elite"
+      ],
+      "sizeMeters": [
+        1.24,
+        1.38,
+        1.24
+      ],
+      "pivot": "hover_center",
+      "forwardAxis": "+Z",
+      "collision": {
+        "type": "sphere",
+        "radius": 0.62
+      },
+      "clips": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "materialSlots": [
+        "mat_body_off_white_panel_atlas",
+        "mat_dark_armored_panel_atlas",
+        "mat_brushed_detail_trim",
+        "mat_dark_gunmetal",
+        "mat_rubberized_joint_black",
+        "mat_scanner_cyan_emissive",
+        "mat_warning_amber_emissive",
+        "mat_core_red_emissive"
+      ],
+      "textureAtlas": "src/assets/textures/enemies/hp_enemy_repair_drone_horror_wgpu_panel_atlas.webp",
+      "emissiveMap": "src/assets/textures/enemies/hp_enemy_repair_drone_horror_emissive.webp",
+      "mobileCost": 4,
+      "tags": [
+        "enemy",
+        "wgpu-original-ip",
+        "advanced-procedural-rig",
+        "human-protocol",
+        "horror"
+      ]
+    },
+    {
+      "modelKey": "hp_enemy_clamp_repair_horror",
+      "file": "src/assets/models/enemies/hp_enemy_clamp_repair_horror.glb",
+      "category": "enemy",
+      "archetypeIds": [
+        "clamp_bot"
+      ],
+      "robotTemplateId": "hp-clean-clamp-repair-preview-v1",
+      "sourceRobotLabel": "HP Clamp Repair Clean Preview",
+      "roles": [
+        "maintenance",
+        "retrieval",
+        "clamp"
+      ],
+      "allowedTiers": [
+        "normal",
+        "elite"
+      ],
+      "sizeMeters": [
+        1.24,
+        1.58,
+        1.24
+      ],
+      "pivot": "bottom_center",
+      "forwardAxis": "+Z",
+      "collision": {
+        "type": "sphere",
+        "radius": 0.62
+      },
+      "clips": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "materialSlots": [
+        "mat_body_off_white_panel_atlas",
+        "mat_dark_armored_panel_atlas",
+        "mat_brushed_detail_trim",
+        "mat_dark_gunmetal",
+        "mat_rubberized_joint_black",
+        "mat_scanner_cyan_emissive",
+        "mat_warning_amber_emissive",
+        "mat_core_red_emissive"
+      ],
+      "textureAtlas": "src/assets/textures/enemies/hp_enemy_clamp_repair_horror_wgpu_panel_atlas.webp",
+      "emissiveMap": "src/assets/textures/enemies/hp_enemy_clamp_repair_horror_emissive.webp",
+      "mobileCost": 4,
+      "tags": [
+        "enemy",
+        "wgpu-original-ip",
+        "advanced-procedural-rig",
+        "human-protocol",
+        "horror"
+      ]
+    },
+    {
+      "modelKey": "hp_enemy_shield_technician_horror",
+      "file": "src/assets/models/enemies/hp_enemy_shield_technician_horror.glb",
+      "category": "enemy",
+      "archetypeIds": [
+        "shield_tech"
+      ],
+      "robotTemplateId": "hp-clean-shield-tech-preview-v1",
+      "sourceRobotLabel": "HP Shield Tech Clean Preview",
+      "roles": [
+        "archive",
+        "shield",
+        "medical"
+      ],
+      "allowedTiers": [
+        "normal",
+        "elite",
+        "leader"
+      ],
+      "sizeMeters": [
+        1.44,
+        1.84,
+        1.44
+      ],
+      "pivot": "bottom_center",
+      "forwardAxis": "+Z",
+      "collision": {
+        "type": "sphere",
+        "radius": 0.72
+      },
+      "clips": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "materialSlots": [
+        "mat_body_off_white_panel_atlas",
+        "mat_dark_armored_panel_atlas",
+        "mat_brushed_detail_trim",
+        "mat_dark_gunmetal",
+        "mat_rubberized_joint_black",
+        "mat_scanner_cyan_emissive",
+        "mat_warning_amber_emissive",
+        "mat_core_red_emissive"
+      ],
+      "textureAtlas": "src/assets/textures/enemies/hp_enemy_shield_technician_horror_wgpu_panel_atlas.webp",
+      "emissiveMap": "src/assets/textures/enemies/hp_enemy_shield_technician_horror_emissive.webp",
+      "mobileCost": 5,
+      "tags": [
+        "enemy",
+        "wgpu-original-ip",
+        "advanced-procedural-rig",
+        "human-protocol",
+        "horror"
+      ]
+    },
+    {
+      "modelKey": "hp_enemy_custodian_foreman_horror",
+      "file": "src/assets/models/enemies/hp_enemy_custodian_foreman_horror.glb",
+      "category": "enemy",
+      "archetypeIds": [
+        "custodian_elite"
+      ],
+      "robotTemplateId": "hp-clean-custodian-foreman-preview-v1",
+      "sourceRobotLabel": "HP Custodian Foreman Clean Preview",
+      "roles": [
+        "boss",
+        "maintenance",
+        "foreman"
+      ],
+      "allowedTiers": [
+        "leader",
+        "boss"
+      ],
+      "sizeMeters": [
+        2.1,
+        2.58,
+        2.1
+      ],
+      "pivot": "bottom_center",
+      "forwardAxis": "+Z",
+      "collision": {
+        "type": "sphere",
+        "radius": 1.05
+      },
+      "clips": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "materialSlots": [
+        "mat_body_off_white_panel_atlas",
+        "mat_dark_armored_panel_atlas",
+        "mat_brushed_detail_trim",
+        "mat_dark_gunmetal",
+        "mat_rubberized_joint_black",
+        "mat_scanner_cyan_emissive",
+        "mat_warning_amber_emissive",
+        "mat_core_red_emissive"
+      ],
+      "textureAtlas": "src/assets/textures/enemies/hp_enemy_custodian_foreman_horror_wgpu_panel_atlas.webp",
+      "emissiveMap": "src/assets/textures/enemies/hp_enemy_custodian_foreman_horror_emissive.webp",
+      "mobileCost": 8,
+      "tags": [
+        "enemy",
+        "wgpu-original-ip",
+        "advanced-procedural-rig",
+        "human-protocol",
+        "horror"
+      ]
+    },
+    {
+      "modelKey": "hp_enemy_reclamation_mother_final_horror",
+      "file": "src/assets/models/enemies/hp_enemy_reclamation_mother_final_horror.glb",
+      "category": "enemy",
+      "archetypeIds": [
+        "custodian_elite"
+      ],
+      "robotTemplateId": "hp-clean-reclamation-mother-preview-v1",
+      "sourceRobotLabel": "HP Reclamation Mother Clean Preview",
+      "roles": [
+        "final-boss",
+        "reclamation",
+        "archive"
+      ],
+      "allowedTiers": [
+        "boss"
+      ],
+      "sizeMeters": [
+        2.56,
+        3.08,
+        2.56
+      ],
+      "pivot": "bottom_center",
+      "forwardAxis": "+Z",
+      "collision": {
+        "type": "sphere",
+        "radius": 1.28
+      },
+      "clips": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "materialSlots": [
+        "mat_body_off_white_panel_atlas",
+        "mat_dark_armored_panel_atlas",
+        "mat_brushed_detail_trim",
+        "mat_dark_gunmetal",
+        "mat_rubberized_joint_black",
+        "mat_scanner_cyan_emissive",
+        "mat_warning_amber_emissive",
+        "mat_core_red_emissive"
+      ],
+      "textureAtlas": "src/assets/textures/enemies/hp_enemy_reclamation_mother_final_horror_wgpu_panel_atlas.webp",
+      "emissiveMap": "src/assets/textures/enemies/hp_enemy_reclamation_mother_final_horror_emissive.webp",
+      "mobileCost": 10,
+      "tags": [
+        "enemy",
+        "wgpu-original-ip",
+        "advanced-procedural-rig",
+        "human-protocol",
+        "horror"
+      ]
+    }
+  ]
+}

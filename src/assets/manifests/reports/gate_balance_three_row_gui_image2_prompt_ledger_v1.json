@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "hp.image2.promptLedger.v1",
+  "family": "gate_balance_three_row_gui",
+  "createdBy": "OpenAI/Codex Image2 source images ingested into repo-local runtime atlas",
+  "modelPrompt": {
+    "intent": "Human Protocol sci-fi three-row gate balance puzzle GUI skin pack",
+    "negative": "no baked Chinese text, no numbers, no plus/minus glyphs, no full poster UI as runtime logic",
+    "parts": [
+      "main frame with empty title, three row holes, status strip, reset and lock plates",
+      "separated reusable readout shell, valve-control shell, button states, lock/reset plates, close plate, slider handle, progress track"
+    ]
+  },
+  "layoutPolicy": "1128x490 px cropped visible-frame canvas; every live label/value/control uses named pixel slots in gate_balance_three_row_layout_v1.json.",
+  "sourceComponentBoxes": {
+    "readout_shell": [
+      74,
+      51,
+      1388,
+      191
+    ],
+    "control_shell": [
+      94,
+      286,
+      1348,
+      164
+    ],
+    "button_idle": [
+      127,
+      494,
+      161,
+      148
+    ],
+    "button_pressed": [
+      382,
+      494,
+      161,
+      148
+    ],
+    "button_disabled": [
+      637,
+      494,
+      161,
+      148
+    ],
+    "lock_ready": [
+      904,
+      496,
+      496,
+      146
+    ],
+    "lock_success": [
+      74,
+      687,
+      394,
+      136
+    ],
+    "reset_idle": [
+      537,
+      687,
+      382,
+      136
+    ],
+    "lock_disabled": [
+      992,
+      687,
+      435,
+      136
+    ],
+    "close": [
+      201,
+      864,
+      126,
+      106
+    ],
+    "slider_handle": [
+      513,
+      865,
+      71,
+      103
+    ],
+    "progress_track": [
+      702,
+      898,
+      648,
+      46
+    ]
+  }
+}

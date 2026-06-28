@@ -1,0 +1,8 @@
+{
+  "id": "human-protocol",
+  "title": "Human Protocol",
+  "version": "0.1.0",
+  "genre": "mobile-first first-person survival action",
+  "platforms": ["web", "crazygames", "itch"],
+  "entry": "index.html"
+}

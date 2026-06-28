@@ -1,0 +1,460 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "age_museum_floor_route_inlay",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level03/age_museum_floor_route_inlay.glb",
+  "fileName": "age_museum_floor_route_inlay.glb",
+  "sourceAsset": {
+    "modelKey": "age_museum_floor_route_inlay",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level03/age_museum_floor_route_inlay.glb",
+    "file": "src/assets/models-cooked/environment/level03/age_museum_floor_route_inlay.glb",
+    "sizeMeters": [
+      4.6,
+      0.06,
+      0.82
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 44164,
+      "meshes": 8,
+      "nodes": 10,
+      "skins": 0,
+      "primitives": 8,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 28,
+      "bufferViews": 28,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 864
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level03/age_museum_floor_route_inlay.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 0,
+    "vertexCount": 2592,
+    "triangleCount": 864,
+    "meshCount": 8,
+    "materialCount": 4,
+    "nodeCount": 10,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -2.3,
+        0,
+        -0.41
+      ],
+      "center": [
+        0,
+        0.0345,
+        0
+      ],
+      "size": [
+        4.6,
+        0.069,
+        0.82
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_floor_route_inlay_main_worn_gold_path",
+        "vertexOffset": 0,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.044,
+          0.01,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.044,
+          -0.01,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_floor_route_inlay_muted_cyan_waypoint",
+        "vertexOffset": 324,
+        "vertexCount": 324,
+        "bindMatrix": [
+          0.710914,
+          0,
+          -0.703279,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.703279,
+          0,
+          0.710914,
+          0,
+          -1.98,
+          0.062,
+          0.014,
+          1
+        ],
+        "inverseBindMatrix": [
+          0.710913,
+          0,
+          0.703279,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.703279,
+          0,
+          0.710913,
+          0,
+          1.417455,
+          -0.062,
+          1.382541,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_floor_route_inlay_route_tick_01",
+        "vertexOffset": 648,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.62,
+          0.058,
+          0.012,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.62,
+          -0.058,
+          -0.012,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_floor_route_inlay_route_tick_02",
+        "vertexOffset": 972,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.82,
+          0.058,
+          0.012,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.82,
+          -0.058,
+          -0.012,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_floor_route_inlay_route_tick_03",
+        "vertexOffset": 1296,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.058,
+          0.012,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.058,
+          -0.012,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_floor_route_inlay_route_tick_04",
+        "vertexOffset": 1620,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.82,
+          0.058,
+          0.012,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.82,
+          -0.058,
+          -0.012,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_floor_route_inlay_route_tick_05",
+        "vertexOffset": 1944,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.62,
+          0.058,
+          0.012,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.62,
+          -0.058,
+          -0.012,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_floor_route_inlay_thin_black_recess",
+        "vertexOffset": 2268,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.018,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.018,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_03_body_route_asset",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        0.046,
+        -6.92
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.12,
+        1,
+        0.88
+      ],
+      "tags": [
+        "museum",
+        "floor_inlay",
+        "puzzle_clue"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          0.046,
+          -6.92
+        ],
+        "halfSize": [
+          2.576,
+          0.03,
+          0.3608
+        ]
+      }
+    }
+  ]
+}

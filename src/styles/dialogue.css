@@ -1,0 +1,153 @@
+.dialogue-toast {
+  position: fixed;
+  left: 50%;
+  top: 42%;
+  z-index: 19;
+  width: min(720px, calc(100vw - 48px));
+  min-height: 92px;
+  padding: 16px 22px 18px;
+  border: 0;
+  border-radius: 2px;
+  color: var(--text);
+  text-align: center;
+  background:
+    linear-gradient(90deg, transparent, rgba(4, 8, 12, 0.62) 18%, rgba(4, 8, 12, 0.68) 82%, transparent),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.045) 0 1px, transparent 1px 7px);
+  box-shadow: 0 0 38px rgba(0, 0, 0, 0.28);
+  contain: layout paint;
+  opacity: 0.88;
+  transform: translate(-50%, -50%);
+  animation: dialogueFlash 780ms ease-in-out infinite alternate;
+  will-change: opacity;
+  cursor: pointer;
+}
+
+.dialogue-toast::after {
+  content: none;
+}
+
+.dialogue-toast::before {
+  position: absolute;
+  left: 7%;
+  right: 7%;
+  top: 0;
+  height: 2px;
+  content: "";
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.62), transparent);
+}
+
+.dialogue-toast em,
+.dialogue-toast span,
+.dialogue-toast strong {
+  display: block;
+  font-style: normal;
+}
+
+.dialogue-toast em {
+  color: rgba(255, 224, 202, 0.68);
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.dialogue-toast span {
+  margin-top: 4px;
+  color: rgba(144, 224, 255, 0.78);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.dialogue-toast strong {
+  margin-top: 8px;
+  max-width: none;
+  font-size: clamp(22px, 3.6vw, 32px);
+  line-height: 1.12;
+  text-wrap: balance;
+}
+
+.dialogue-toast i {
+  position: absolute;
+  left: 12%;
+  bottom: 0;
+  width: 76%;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(255, 214, 150, 0.8), rgba(255, 255, 255, 0.62));
+  transform-origin: left center;
+  animation: dialogueTimer var(--dialogue-duration, 2.4s) linear forwards;
+  will-change: transform;
+}
+
+.dialogue-toast.system {
+  background:
+    linear-gradient(90deg, transparent, rgba(4, 16, 25, 0.58) 18%, rgba(4, 16, 25, 0.64) 82%, transparent),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 7px);
+  box-shadow: 0 0 26px rgba(100, 215, 255, 0.12);
+}
+
+.dialogue-toast.player {
+  background:
+    linear-gradient(90deg, transparent, rgba(32, 20, 12, 0.58) 18%, rgba(32, 20, 12, 0.62) 82%, transparent),
+    repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.04) 0 1px, transparent 1px 7px);
+}
+
+.dialogue-toast.reveal {
+  background:
+    linear-gradient(90deg, transparent, rgba(58, 37, 9, 0.58) 18%, rgba(8, 10, 14, 0.62) 82%, transparent),
+    repeating-linear-gradient(90deg, rgba(255, 195, 91, 0.06) 0 2px, transparent 2px 7px);
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .dialogue-toast {
+    top: 40%;
+    width: min(560px, calc(100vw - 170px));
+    min-height: 76px;
+    padding: 13px 18px 16px;
+  }
+
+  .dialogue-toast strong {
+    font-size: clamp(18px, 4.8vw, 25px);
+  }
+}
+
+@media (max-width: 520px) {
+  .dialogue-toast {
+    left: 50%;
+    top: 39%;
+    width: min(292px, calc(100vw - 28px));
+    transform: translate(-50%, -50%);
+  }
+}
+
+@media (max-height: 430px) {
+  .dialogue-toast {
+    top: 39%;
+    width: min(520px, calc(100vw - 186px));
+    min-height: 58px;
+    padding: 10px 14px 12px;
+  }
+
+  .dialogue-toast strong {
+    font-size: 16px;
+    line-height: 1.16;
+  }
+}
+
+@keyframes dialogueFlash {
+  from {
+    opacity: 0.68;
+  }
+
+  to {
+    opacity: 0.92;
+  }
+}
+
+@keyframes dialogueTimer {
+  from {
+    transform: scaleX(1);
+  }
+
+  to {
+    transform: scaleX(0);
+  }
+}

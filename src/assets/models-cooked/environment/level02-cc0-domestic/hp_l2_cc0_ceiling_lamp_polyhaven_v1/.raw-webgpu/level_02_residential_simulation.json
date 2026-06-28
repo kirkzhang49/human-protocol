@@ -1,0 +1,335 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+  "fileName": "hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+  "sourceAsset": {
+    "modelKey": "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+    "file": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+    "sizeMeters": [
+      0.39,
+      0.928,
+      0.39
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 103240,
+      "meshes": 4,
+      "nodes": 4,
+      "skins": 0,
+      "primitives": 5,
+      "materials": 5,
+      "textures": 3,
+      "images": 3,
+      "accessors": 17,
+      "bufferViews": 16,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_materials_emissive_strength",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 6936
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 464598,
+    "vertexCount": 20808,
+    "triangleCount": 6936,
+    "meshCount": 5,
+    "materialCount": 5,
+    "nodeCount": 4,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.195073,
+        0,
+        -0.195073
+      ],
+      "center": [
+        0,
+        0.464,
+        0
+      ],
+      "size": [
+        0.390146,
+        0.928001,
+        0.390146
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "cc0_source_modern_ceiling_lamp_01_mesh",
+        "vertexOffset": 464598,
+        "vertexCount": 912,
+        "bindMatrix": [
+          0.43,
+          0,
+          0,
+          0,
+          0,
+          0.43,
+          0,
+          0,
+          0,
+          0,
+          0.43,
+          0,
+          0,
+          0.43,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.325581,
+          0,
+          0,
+          0,
+          0,
+          2.325581,
+          0,
+          0,
+          0,
+          0,
+          2.325581,
+          0,
+          0,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "cc0_source_modern_ceiling_lamp_01_mesh_1",
+        "vertexOffset": 465510,
+        "vertexCount": 15456,
+        "bindMatrix": [
+          0.43,
+          0,
+          0,
+          0,
+          0,
+          0.43,
+          0,
+          0,
+          0,
+          0,
+          0.43,
+          0,
+          0,
+          0.43,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.325581,
+          0,
+          0,
+          0,
+          0,
+          2.325581,
+          0,
+          0,
+          0,
+          0,
+          2.325581,
+          0,
+          0,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_ceiling_mount_dark_cap",
+        "vertexOffset": 480966,
+        "vertexCount": 1428,
+        "bindMatrix": [
+          0.085826,
+          0,
+          0,
+          0,
+          0,
+          0.085826,
+          0,
+          0,
+          0,
+          0,
+          0.085826,
+          0,
+          0,
+          0.888,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          11.651453,
+          0,
+          0,
+          0,
+          0,
+          11.651453,
+          0,
+          0,
+          0,
+          0,
+          11.651453,
+          0,
+          0,
+          -10.346491,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_ceiling_mount_brass_lip",
+        "vertexOffset": 482394,
+        "vertexCount": 1428,
+        "bindMatrix": [
+          0.087777,
+          0,
+          0,
+          0,
+          0,
+          0.087777,
+          0,
+          0,
+          0,
+          0,
+          0.087777,
+          0,
+          0,
+          0.922,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          11.392532,
+          0,
+          0,
+          0,
+          0,
+          11.392532,
+          0,
+          0,
+          0,
+          0,
+          11.392532,
+          0,
+          0,
+          -10.503914,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_lamp_warm_inner_glow",
+        "vertexOffset": 483822,
+        "vertexCount": 1584,
+        "bindMatrix": [
+          0.062419,
+          0,
+          0,
+          0,
+          0,
+          0.062419,
+          0,
+          0,
+          0,
+          0,
+          0.062419,
+          0,
+          0,
+          0.1978,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          16.020747,
+          0,
+          0,
+          0,
+          0,
+          16.020747,
+          0,
+          0,
+          0,
+          0,
+          16.020747,
+          0,
+          0,
+          -3.168904,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_mq3kae",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_recovery_foyer",
+      "secondaryRoomId": null,
+      "position": [
+        -5,
+        2.5,
+        15
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5,
+          2.5,
+          15
+        ],
+        "halfSize": [
+          0.195,
+          0.464,
+          0.195
+        ]
+      }
+    }
+  ]
+}

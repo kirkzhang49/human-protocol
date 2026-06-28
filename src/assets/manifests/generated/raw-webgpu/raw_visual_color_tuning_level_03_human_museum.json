@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "hp.raw-webgpu.visual-color-tuning.v1",
+  "algorithm": "cpp-objective-museum-cyan-warmth-grade-v1",
+  "source": "scripts/optimizer/level03_raw_color_grade_optimizer.cpp",
+  "candidatesEvaluated": 10000001,
+  "elapsedMs": 1158,
+  "currentScore": 43.807396,
+  "score": 98.280796,
+  "improvement": 54.473399,
+  "inputMetrics": {"cyanDominance": 0.479173, "warmBalance": 0.416768, "neutralAnchor": 0.189924, "textureCoverage": 0.324819, "materialReadability": 0.255645, "meanLuma": 0.543461, "textureDetail": 0.151562, "cyanLightPressure": 0.474758, "warmLightPressure": 0.719330, "profileExposure": 1.106895, "profileContrast": 1.230085, "profileSaturation": 1.070865, "profileWarmth": 0.469035},
+  "params": {"exposureScale": 1.153392, "contrastScale": 1.039233, "saturationScale": 0.864277, "blackScale": 0.656361, "cyanRedLift": 0.079873, "cyanGreenScale": 0.774106, "cyanBlueScale": 1.008906, "cyanNeutralMix": 0.337059, "bloomScale": 0.926411, "fogGuardScale": 1.368311}
+}

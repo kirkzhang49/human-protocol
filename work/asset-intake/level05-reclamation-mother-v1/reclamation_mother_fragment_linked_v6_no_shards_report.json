@@ -1,0 +1,105 @@
+{
+  "schema": "human-protocol/level05-reclamation-mother-fragment-linked@1",
+  "generatedAt": "2026-06-28T04:10:58.329102+00:00",
+  "purpose": "Preserve the more reference-like fragmented triangular silhouette while removing visible joint gaps through a continuous low-poly outer shell plus overlapping project-owned connector geometry.",
+  "assetAuthorship": {
+    "meshMethod": "continuous fragment proxy from user-provided generated source geometry; source texture, UVs, and materials removed",
+    "textures": "none; project-owned material slots only",
+    "externalTextureDependency": false,
+    "runtimeFacingNamesSanitized": true
+  },
+  "gapPolicy": {
+    "outerShell": "source fragment shell disabled in this clean comparison build; source geometry is used for scale audit only",
+    "innerShadowShell": "not exported in this clean comparison build",
+    "cleanArmorPanels": "large procedural front-facing armor panels cover noisy shards while keeping the approved black skeleton layout",
+    "connectors": "small overlapping black sockets/cylinders are inserted into shoulders, spine, hips, knees, ankles, wrists, and core recess",
+    "knownTradeoff": "this visual candidate favors no-gap silhouette over fully separated limb deformation; later node cuts should happen inside these overlap bands"
+  },
+  "fragmentLinkedProxy": {
+    "sourceVertices": 7807,
+    "sourcePolygons": 4824,
+    "decimateRatio": 0.1,
+    "noiseFacesRemoved": 0,
+    "noiseFilter": "removed tiny and high-aspect splinter triangles before gap fill and panel overlay",
+    "proxyVerticesAfterDecimate": 3413,
+    "proxyPolygonsAfterDecimate": 486,
+    "proxyVerticesAfterLinking": 7688,
+    "proxyTriangleApprox": 15152
+  },
+  "derivedAsset": {
+    "modelKeyCandidate": "hp_enemy_reclamation_mother_fragment_linked_v6_no_shards",
+    "glb": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_fragment_linked_v6_no_shards.glb",
+    "sourceBlend": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_fragment_linked_v6_no_shards.blend",
+    "preview": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_fragment_linked_v6_no_shards_preview.png",
+    "status": "visual-candidate-not-yet-registered-in-level5",
+    "animatedClips": [
+      "idle",
+      "move",
+      "attack_windup",
+      "attack_strike",
+      "attack_recover",
+      "hit_light",
+      "hit_heavy",
+      "stagger",
+      "death",
+      "spawn_boot",
+      "utility_idle_00",
+      "utility_idle_01",
+      "utility_idle_02",
+      "utility_idle_03"
+    ],
+    "requiredSockets": [
+      "core_glass_weakpoint",
+      "missile_hit_socket",
+      "skill3_lockon_socket",
+      "boss_vfx_center_socket",
+      "floor_contact_socket",
+      "warning_emissive_slots"
+    ],
+    "meshObjects": 57,
+    "emptyObjects": 24,
+    "connectorObjects": 35,
+    "verticesApprox": 7688,
+    "trianglesApprox": 15152,
+    "boundsMinBlender": [
+      -0.9338,
+      -0.599,
+      0.0588
+    ],
+    "boundsMaxBlender": [
+      0.9343,
+      0.3059,
+      2.4873
+    ],
+    "dimensionsBlender": [
+      1.8681,
+      0.9049,
+      2.4285
+    ],
+    "cleanArmorPanelObjects": 22,
+    "glbScan": {
+      "isGlb": true,
+      "jsonFound": true,
+      "nodes": 81,
+      "meshes": 57,
+      "materials": 7,
+      "textures": 0,
+      "images": 0,
+      "animations": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "forbiddenMarkerMatches": []
+    }
+  }
+}

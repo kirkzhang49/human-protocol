@@ -1,0 +1,470 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "light_residential_lamp_warm",
+  "category": "room",
+  "file": "src/assets/models-runtime/environment/level02/hp_light_residential_lamp_warm.glb",
+  "fileName": "hp_light_residential_lamp_warm.glb",
+  "sourceAsset": {
+    "modelKey": "light_residential_lamp_warm",
+    "category": "room",
+    "url": "/src/assets/models-runtime/environment/level02/hp_light_residential_lamp_warm.glb",
+    "file": "src/assets/models-runtime/environment/level02/hp_light_residential_lamp_warm.glb",
+    "sizeMeters": [
+      0.63,
+      1.34,
+      0.55
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 126260,
+      "meshes": 7,
+      "nodes": 8,
+      "skins": 0,
+      "primitives": 7,
+      "materials": 4,
+      "textures": 3,
+      "images": 2,
+      "accessors": 28,
+      "bufferViews": 30,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 860
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level02/hp_light_residential_lamp_warm.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 390636,
+    "vertexCount": 2580,
+    "triangleCount": 860,
+    "meshCount": 7,
+    "materialCount": 4,
+    "nodeCount": 8,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.257634,
+        0,
+        -0.207258
+      ],
+      "center": [
+        0,
+        0.740333,
+        0
+      ],
+      "size": [
+        0.515267,
+        1.480667,
+        0.414515
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "bottom_cap_dark",
+        "vertexOffset": 390636,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.489028,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.489028,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "front_glowing_lens",
+        "vertexOffset": 390960,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.978055,
+          0.030809,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.978055,
+          -0.030809,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_back_housing",
+        "vertexOffset": 391284,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.978055,
+          -0.044812,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.978055,
+          0.044812,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "small_side_handle",
+        "vertexOffset": 391608,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.209702,
+          0.923719,
+          0.022406,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.209702,
+          -0.923719,
+          -0.022406,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "top_cap_dark",
+        "vertexOffset": 391932,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.42633,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.42633,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "vertical_service_spine",
+        "vertexOffset": 392256,
+        "vertexCount": 636,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.611284,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.611284,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "weighted_floor_base",
+        "vertexOffset": 392892,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.08,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.08,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_02_living_left_warm_lamp",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        -7,
+        0.02,
+        5.62
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.92,
+        0.92,
+        0.92
+      ],
+      "tags": [
+        "residential_simulation",
+        "light",
+        "story_clue",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7,
+          0.02,
+          5.62
+        ],
+        "halfSize": [
+          0.2898,
+          0.6164,
+          0.253
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_living_right_warm_lamp",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        7.34,
+        0.02,
+        5.65
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        0.82,
+        0.82,
+        0.82
+      ],
+      "tags": [
+        "residential_simulation",
+        "light",
+        "story_clue",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          7.34,
+          0.02,
+          5.65
+        ],
+        "halfSize": [
+          0.2583,
+          0.5494,
+          0.2255
+        ]
+      }
+    }
+  ]
+}

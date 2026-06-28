@@ -1,0 +1,26 @@
+{
+  "assetId": "route_switch_router_console_image2_source_v1",
+  "generatedDate": "2026-06-21",
+  "tool": "built-in image_gen",
+  "model": "not-exposed-by-built-in-image-gen",
+  "toolCallId": "not-exposed-by-built-in-image-gen",
+  "generatedImagesDirectory": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd",
+  "originalGeneratedPath": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd/ig_0c85d24d1d37464b016a38cee73a80819b80e322ec263f6920.png",
+  "projectSourcePath": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/route_switch_router_console_image2_source_v1.png",
+  "atlasPath": "src/assets/textures/environment/builder-puzzle-machines/hp_route_switch_console_image2_atlas_v1.png",
+  "regionsPath": "src/assets/textures/environment/builder-puzzle-machines/hp_route_switch_console_image2_atlas_v1.regions.json",
+  "licenseLabel": "owned-generated-output",
+  "termsLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "sourceRole": "Image2 texture source sheet for the 3D builder route-switch console",
+  "promptSummary": "2048-style texture kit matching the 2D route-switch overlay: four-slot rack, top deck plate, rotary dial, authorization key lens, empty badge bezels, side rails, screws, brass/copper trims, blackened steel, no text.",
+  "derivativeOutputs": [
+    "src/assets/models-cooked/environment/builder-puzzle-machines/hp_builder_route_switch_console.glb",
+    "src/assets/source_blend/builder-puzzle-machines/hp_builder_route_switch_console_image2_v2.blend"
+  ],
+  "derivativeScript": "scripts/asset-build/generate-builder-puzzle-machine-glbs.py -- builder_route_switch_console",
+  "notes": [
+    "The GLB keeps the existing config/runtime modelKey `builder_route_switch_console`.",
+    "Output target meaning and selected state are not baked into the GLB.",
+    "The atlas is UV-sampled onto real geometry rather than pasted as a whole UI screenshot."
+  ]
+}

@@ -1,0 +1,415 @@
+{
+  "schemaVersion": "hp.raw-webgpu.color-quality-audit.v2",
+  "generatedAt": "2026-06-23T05:35:40.753Z",
+  "levelId": "level_03_human_museum",
+  "plan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_03_human_museum.json",
+  "roleCount": 17,
+  "roles": [
+    {
+      "role": "ceiling_surface",
+      "count": 7,
+      "expectedSemanticId": 3,
+      "semanticId": 3,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.4571,
+      "chroma": 0.103824,
+      "cyan": 0.276856,
+      "warm": 0.376561,
+      "textureCoverage": 1
+    },
+    {
+      "role": "cyan_emissive",
+      "count": 24,
+      "expectedSemanticId": 7,
+      "semanticId": 7,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.252026,
+      "luma": 0.590472,
+      "chroma": 0.464275,
+      "cyan": 0.650409,
+      "warm": 0.168393,
+      "textureCoverage": 0.041667
+    },
+    {
+      "role": "door_access_cyan",
+      "count": 2,
+      "expectedSemanticId": 13,
+      "semanticId": 13,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.489504,
+      "chroma": 0.64,
+      "cyan": 0.6858,
+      "warm": 0,
+      "textureCoverage": 0
+    },
+    {
+      "role": "door_locked_red",
+      "count": 1,
+      "expectedSemanticId": 12,
+      "semanticId": 12,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.284488,
+      "chroma": 0.76,
+      "cyan": 0,
+      "warm": 0.6672,
+      "textureCoverage": 0
+    },
+    {
+      "role": "exhibit_warm",
+      "count": 20,
+      "expectedSemanticId": 6,
+      "semanticId": 6,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.464147,
+      "luma": 0.579117,
+      "chroma": 0.234336,
+      "cyan": 0.330772,
+      "warm": 0.494395,
+      "textureCoverage": 0.35
+    },
+    {
+      "role": "floor_surface",
+      "count": 10,
+      "expectedSemanticId": 2,
+      "semanticId": 2,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.504781,
+      "chroma": 0.080604,
+      "cyan": 0.410907,
+      "warm": 0.323529,
+      "textureCoverage": 0.7
+    },
+    {
+      "role": "glass_shell",
+      "count": 20,
+      "expectedSemanticId": 5,
+      "semanticId": 5,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.623076,
+      "chroma": 0.4378,
+      "cyan": 0.637394,
+      "warm": 0.266716,
+      "textureCoverage": 0.1
+    },
+    {
+      "role": "neutral_surface",
+      "count": 53,
+      "expectedSemanticId": 1,
+      "semanticId": 1,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.214737,
+      "luma": 0.526814,
+      "chroma": 0.08218,
+      "cyan": 0.368012,
+      "warm": 0.38901,
+      "textureCoverage": 0.415094
+    },
+    {
+      "role": "pickup_energy",
+      "count": 3,
+      "expectedSemanticId": 15,
+      "semanticId": 15,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.537218,
+      "luma": 0.522882,
+      "chroma": 0.728185,
+      "cyan": 0.005499,
+      "warm": 0.749973,
+      "textureCoverage": 0
+    },
+    {
+      "role": "pickup_health",
+      "count": 3,
+      "expectedSemanticId": 14,
+      "semanticId": 14,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.628035,
+      "luma": 0.478644,
+      "chroma": 0.280188,
+      "cyan": 0.205756,
+      "warm": 0.504295,
+      "textureCoverage": 0
+    },
+    {
+      "role": "pickup_key",
+      "count": 1,
+      "expectedSemanticId": 17,
+      "semanticId": 17,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.788404,
+      "luma": 0.761329,
+      "chroma": 0.856129,
+      "cyan": 0.090369,
+      "warm": 0.94982,
+      "textureCoverage": 0
+    },
+    {
+      "role": "robot_body",
+      "count": 2,
+      "expectedSemanticId": 11,
+      "semanticId": 11,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.397584,
+      "chroma": 0.28,
+      "cyan": 0.4062,
+      "warm": 0.1264,
+      "textureCoverage": 0
+    },
+    {
+      "role": "route_gold",
+      "count": 35,
+      "expectedSemanticId": 8,
+      "semanticId": 8,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.626693,
+      "luma": 0.454239,
+      "chroma": 0.424286,
+      "cyan": 0.13686,
+      "warm": 0.487575,
+      "textureCoverage": 0.085714
+    },
+    {
+      "role": "screen_label",
+      "count": 7,
+      "expectedSemanticId": 10,
+      "semanticId": 10,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.432416,
+      "luma": 0.327956,
+      "chroma": 0.220852,
+      "cyan": 0.351057,
+      "warm": 0.105112,
+      "textureCoverage": 0
+    },
+    {
+      "role": "structural_dark",
+      "count": 75,
+      "expectedSemanticId": 4,
+      "semanticId": 4,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.243288,
+      "chroma": 0.066434,
+      "cyan": 0.177117,
+      "warm": 0.168827,
+      "textureCoverage": 0.04
+    },
+    {
+      "role": "switch_active",
+      "count": 6,
+      "expectedSemanticId": 18,
+      "semanticId": 18,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.417503,
+      "luma": 0.585643,
+      "chroma": 0.667669,
+      "cyan": 0.753562,
+      "warm": 0.032953,
+      "textureCoverage": 0.166667
+    },
+    {
+      "role": "switch_inactive",
+      "count": 3,
+      "expectedSemanticId": 19,
+      "semanticId": 19,
+      "roleIdMismatches": 0,
+      "paletteMix": 0.643719,
+      "luma": 0.321227,
+      "chroma": 0.840134,
+      "cyan": 0,
+      "warm": 0.745625,
+      "textureCoverage": 0
+    }
+  ],
+  "museumScopes": {
+    "surfaceRoles": [
+      {
+        "role": "floor_surface",
+        "count": 3,
+        "luma": 0.264006,
+        "chroma": 0.047333,
+        "cyan": 0.214083,
+        "warm": 0.161847,
+        "textureCoverage": 0,
+        "materials": [
+          "floor_plaque",
+          "hp_elevator_floor_blackened_steel_pbr",
+          "hp_elevator_floor_polished_worn_edge_pbr"
+        ]
+      },
+      {
+        "role": "glass_shell",
+        "count": 6,
+        "luma": 0.528642,
+        "chroma": 0.1455,
+        "cyan": 0.456823,
+        "warm": 0.29541,
+        "textureCoverage": 0,
+        "materials": [
+          "glass",
+          "glass_glare",
+          "hp_elevator_button_convex_ceramic_glass_pbr",
+          "hp_elevator_shaft_smoked_depth_glass_pbr",
+          "l3_exhibit_thick_cyan_glass",
+          "smoked_glass"
+        ]
+      },
+      {
+        "role": "neutral_surface",
+        "count": 29,
+        "luma": 0.439758,
+        "chroma": 0.089815,
+        "cyan": 0.31727,
+        "warm": 0.313298,
+        "textureCoverage": 0.241379,
+        "materials": [
+          "antique_ceramic_vase_01",
+          "bull_head",
+          "enamel_plinth",
+          "hp_elevator_button_smoked_brushed_metal_face_pbr",
+          "hp_elevator_cool_scuffed_panel_highlight_pbr",
+          "hp_elevator_graphite_microbrushed_pbr",
+          "hp_elevator_shaft_microbrushed_graphite_pbr",
+          "marble",
+          "marble_bust_01",
+          "room_edge_wear_bright",
+          "room_image2_wall_art_human_origin_v1",
+          "room_image2_wall_art_last_human_v1",
+          "room_image2_wall_art_protocol_diagram_v1",
+          "room_image2_wall_art_robot_worker_v1",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_museum_door_aged_bronze",
+          "room_rubber",
+          "white_marble"
+        ]
+      },
+      {
+        "role": "structural_dark",
+        "count": 14,
+        "luma": 0.093986,
+        "chroma": 0.012714,
+        "cyan": 0.074622,
+        "warm": 0.061014,
+        "textureCoverage": 0,
+        "materials": [
+          "dark_stone",
+          "hp_black_stone_plinth",
+          "hp_elevator_black_rubber_gasket_pbr",
+          "hp_elevator_button_deep_socket_pbr",
+          "hp_elevator_deep_black_anodized_pbr",
+          "hp_elevator_opaque_smoked_glass_pbr",
+          "hp_elevator_shaft_blackened_steel_pbr",
+          "hp_elevator_smoked_titanium_pbr",
+          "museum_pillar_deep_black_stone_core",
+          "museum_pillar_smoked_metal_edges",
+          "museum_wall_wash_black_mount",
+          "room_metal_worn",
+          "room_museum_door_blackened_steel",
+          "steel"
+        ]
+      }
+    ],
+    "cyanAccents": {
+      "role": "museum_room_cyan_accents",
+      "count": 12,
+      "luma": 0.490891,
+      "chroma": 0.461511,
+      "cyan": 0.590855,
+      "warm": 0.077381,
+      "textureCoverage": 0,
+      "materials": [
+        "base_scanner",
+        "hp_elevator_button_cyan_glass_ring_pbr",
+        "hp_elevator_cold_edge_light_pbr",
+        "hp_elevator_shaft_cyan_motion_tube_pbr",
+        "hp_elevator_shaft_soft_cyan_reflection_pbr",
+        "label_cyan",
+        "museum_pillar_tiny_cyan_status",
+        "museum_wall_wash_small_cyan_service_light",
+        "room_glass_screen",
+        "room_label_dark",
+        "specimen_glow",
+        "spot_glow"
+      ]
+    },
+    "gameplayColoredTargets": {
+      "role": "gameplay_colored_targets",
+      "count": 13,
+      "luma": 0.515303,
+      "chroma": 0.710118,
+      "cyan": 0.367059,
+      "warm": 0.436305,
+      "textureCoverage": 0,
+      "materials": [
+        "puzzle_orb_blue_inner_core",
+        "puzzle_orb_blue_museum_glass",
+        "puzzle_orb_dark_stem",
+        "puzzle_orb_green_inner_core",
+        "puzzle_orb_green_museum_glass",
+        "puzzle_orb_old_gold_holder",
+        "puzzle_orb_purple_inner_core",
+        "puzzle_orb_purple_museum_glass",
+        "puzzle_orb_red_inner_core",
+        "puzzle_orb_red_museum_glass",
+        "puzzle_orb_soft_white_glint",
+        "puzzle_orb_yellow_inner_core",
+        "puzzle_orb_yellow_museum_glass"
+      ]
+    }
+  },
+  "issues": [
+    {
+      "severity": "warn",
+      "role": "ceiling_surface",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "door_access_cyan",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "door_locked_red",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "floor_surface",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "glass_shell",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "robot_body",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "structural_dark",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    }
+  ],
+  "status": "pass"
+}

@@ -1,0 +1,105 @@
+{
+  "atlasSize": [
+    1472,
+    640
+  ],
+  "source": "src/assets/gui/route-switch/image2-sources/route_switch_rotary_controller_image2_source_v2.png",
+  "housingSource": "src/assets/gui/route-switch/image2-sources/route_switch_integrated_output_module_image2_source_v1.png",
+  "sourcePolicy": "Composed from saved route-switch Image2 rotary controller source pixels plus an integrated output-module Image2 housing. Local script crops, keys the flat black background to transparency, resizes source-painted knob animation frames, composites them into the housing, packs PNG regions, and writes JSON. The rejected long nameplate cut is intentionally not packed; runtime target meaning is carried by separate cut Image2 ancient badges seated in the housing. No text is baked.",
+  "license": "owned-generated-output",
+  "sourceRegions": {
+    "module_housing": [
+      214,
+      12,
+      380,
+      586
+    ],
+    "knob_enabled": [
+      35,
+      20,
+      270,
+      270
+    ],
+    "knob_disabled": [
+      35,
+      585,
+      270,
+      270
+    ],
+    "knob_selected": [
+      35,
+      300,
+      270,
+      270
+    ],
+    "knob_selected_r0": [
+      35,
+      300,
+      270,
+      270
+    ],
+    "knob_selected_r1": [
+      335,
+      300,
+      270,
+      270
+    ],
+    "knob_selected_r2": [
+      635,
+      300,
+      270,
+      270
+    ],
+    "knob_selected_r3": [
+      940,
+      300,
+      270,
+      270
+    ]
+  },
+  "regions": {
+    "button_enabled": [
+      24,
+      24,
+      184,
+      288
+    ],
+    "button_disabled": [
+      232,
+      24,
+      184,
+      288
+    ],
+    "button_selected": [
+      440,
+      24,
+      184,
+      288
+    ],
+    "button_rotating_0": [
+      648,
+      24,
+      184,
+      288
+    ],
+    "button_rotating_1": [
+      24,
+      340,
+      184,
+      288
+    ],
+    "button_rotating_2": [
+      232,
+      340,
+      184,
+      288
+    ],
+    "button_rotating_3": [
+      440,
+      340,
+      184,
+      288
+    ]
+  },
+  "notes": "Runtime uses Image2-backed integrated selector modules: a unified ancient output-module housing, source-painted knob states, and four source-painted rotating knob frames from Image2. The cutter applies a dark material pass so the rotary controls read as deeper smoked metal while retaining cyan/amber light rings. React layers cut Image2 ancient target badges from route_switch_icon_language_image2_v1 into the lower housing seat, while keeping hidden aria labels."
+}

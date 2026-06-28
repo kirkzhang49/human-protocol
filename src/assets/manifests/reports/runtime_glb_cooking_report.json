@@ -1,0 +1,58 @@
+{
+  "generatedAt": "2026-06-28T16:51:50.290Z",
+  "sourceRoot": "src/assets/models",
+  "outputRoot": "src/assets/models-cooked",
+  "command": "gltf-transform optimize with per-directory runtime decode policy",
+  "includedDirs": [
+    "environment",
+    "enemies"
+  ],
+  "policies": {
+    "environment": {
+      "id": "static_environment_meshopt_webp",
+      "runtimeDecodeSensitive": false,
+      "args": [
+        "--simplify",
+        "false",
+        "--compress",
+        "meshopt",
+        "--texture-compress",
+        "webp",
+        "--texture-size",
+        "2048"
+      ]
+    },
+    "enemies": {
+      "id": "enemy_no_runtime_geometry_or_texture_recompression",
+      "runtimeDecodeSensitive": true,
+      "args": [
+        "--simplify",
+        "false",
+        "--compress",
+        "false",
+        "--texture-compress",
+        "false",
+        "--texture-size",
+        "2048",
+        "--palette",
+        "false"
+      ]
+    }
+  },
+  "totalFiles": 1,
+  "beforeBytes": 7930428,
+  "afterBytes": 7757872,
+  "savedBytes": 172556,
+  "savedRatio": 0.021758724749786518,
+  "files": [
+    {
+      "file": "enemies/hp_enemy_reclamation_mother_final_horror.glb",
+      "policy": "enemy_no_runtime_geometry_or_texture_recompression",
+      "runtimeDecodeSensitive": true,
+      "beforeBytes": 7930428,
+      "afterBytes": 7757872,
+      "savedBytes": 172556,
+      "savedRatio": 0.021758724749786518
+    }
+  ]
+}

@@ -1,0 +1,422 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "age_museum_puzzle_orb_white",
+  "category": "interaction",
+  "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_white.glb",
+  "fileName": "age_museum_puzzle_orb_white.glb",
+  "sourceAsset": {
+    "modelKey": "age_museum_puzzle_orb_white",
+    "category": "interaction",
+    "url": "/src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_white.glb",
+    "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_white.glb",
+    "sizeMeters": [
+      0.72,
+      0.72,
+      0.72
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 70944,
+      "meshes": 7,
+      "nodes": 8,
+      "skins": 0,
+      "primitives": 7,
+      "materials": 5,
+      "textures": 0,
+      "images": 0,
+      "accessors": 13,
+      "bufferViews": 13,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 3632
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_white.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 92280,
+    "vertexCount": 10896,
+    "triangleCount": 3632,
+    "meshCount": 7,
+    "materialCount": 5,
+    "nodeCount": 8,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.3095,
+        -0.505,
+        -0.3095
+      ],
+      "center": [
+        0,
+        -0.1025,
+        0
+      ],
+      "size": [
+        0.619,
+        0.805,
+        0.619
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_puzzle_orb_white_baked_shell",
+        "vertexOffset": 92280,
+        "vertexCount": 3840,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_puzzle_orb_white_faceted_core",
+        "vertexOffset": 96120,
+        "vertexCount": 240,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_puzzle_orb_white_lower_holder_ring",
+        "vertexOffset": 96360,
+        "vertexCount": 2880,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -0.235,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          -0.235,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_puzzle_orb_white_thin_equator_glint",
+        "vertexOffset": 99240,
+        "vertexCount": 3072,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_puzzle_orb_white_bottom_socket_pin",
+        "vertexOffset": 102312,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.36,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.36,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_puzzle_orb_white_pedestal_socket_stem",
+        "vertexOffset": 102648,
+        "vertexCount": 288,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.46,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.46,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_puzzle_orb_white_painted_upper_glint",
+        "vertexOffset": 102936,
+        "vertexCount": 240,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.12,
+          0.15,
+          0.19,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.12,
+          -0.15,
+          -0.19,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "puzzle-target:level_03_body_sequence:level_03_white_orb",
+      "source": "level.puzzles.targets",
+      "role": "puzzle_target",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -1.95,
+        1.26,
+        -6.65
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.222222,
+        1.222222,
+        1.222222
+      ],
+      "tags": [
+        "puzzle_target",
+        "color:white",
+        "puzzle_orb_white"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": {
+        "puzzleId": "level_03_body_sequence",
+        "targetId": "level_03_white_orb",
+        "colorKey": "white"
+      },
+      "estimatedBounds": {
+        "center": [
+          -1.95,
+          1.26,
+          -6.65
+        ],
+        "halfSize": [
+          0.44,
+          0.44,
+          0.44
+        ]
+      }
+    }
+  ]
+}

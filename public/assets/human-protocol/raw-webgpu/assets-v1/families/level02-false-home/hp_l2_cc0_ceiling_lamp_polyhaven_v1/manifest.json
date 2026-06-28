@@ -1,0 +1,662 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+  "family": "level02-false-home",
+  "bundleId": "level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 20808,
+    "triangleCount": 6936,
+    "byteLength": 832320,
+    "hash": "0c54b04292e9589f",
+    "asset": {
+      "modelKey": "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+      "sourceFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+      "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 20808,
+      "triangleCount": 6936,
+      "meshCount": 5,
+      "materialCount": 5,
+      "nodeCount": 4,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "cc0_source_modern_ceiling_lamp_01_mesh",
+          "vertexOffset": 0,
+          "vertexCount": 912,
+          "bindMatrix": [
+            0.43,
+            0,
+            0,
+            0,
+            0,
+            0.43,
+            0,
+            0,
+            0,
+            0,
+            0.43,
+            0,
+            0,
+            0.43,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.325581,
+            0,
+            0,
+            0,
+            0,
+            2.325581,
+            0,
+            0,
+            0,
+            0,
+            2.325581,
+            0,
+            0,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cc0_source_modern_ceiling_lamp_01_mesh_1",
+          "vertexOffset": 912,
+          "vertexCount": 15456,
+          "bindMatrix": [
+            0.43,
+            0,
+            0,
+            0,
+            0,
+            0.43,
+            0,
+            0,
+            0,
+            0,
+            0.43,
+            0,
+            0,
+            0.43,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.325581,
+            0,
+            0,
+            0,
+            0,
+            2.325581,
+            0,
+            0,
+            0,
+            0,
+            2.325581,
+            0,
+            0,
+            -1,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "hp_ceiling_mount_dark_cap",
+          "vertexOffset": 16368,
+          "vertexCount": 1428,
+          "bindMatrix": [
+            0.085826,
+            0,
+            0,
+            0,
+            0,
+            0.085826,
+            0,
+            0,
+            0,
+            0,
+            0.085826,
+            0,
+            0,
+            0.888,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            11.651453,
+            0,
+            0,
+            0,
+            0,
+            11.651453,
+            0,
+            0,
+            0,
+            0,
+            11.651453,
+            0,
+            0,
+            -10.346491,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "hp_ceiling_mount_brass_lip",
+          "vertexOffset": 17796,
+          "vertexCount": 1428,
+          "bindMatrix": [
+            0.087777,
+            0,
+            0,
+            0,
+            0,
+            0.087777,
+            0,
+            0,
+            0,
+            0,
+            0.087777,
+            0,
+            0,
+            0.922,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            11.392532,
+            0,
+            0,
+            0,
+            0,
+            11.392532,
+            0,
+            0,
+            0,
+            0,
+            11.392532,
+            0,
+            0,
+            -10.503914,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "hp_lamp_warm_inner_glow",
+          "vertexOffset": 19224,
+          "vertexCount": 1584,
+          "bindMatrix": [
+            0.062419,
+            0,
+            0,
+            0,
+            0,
+            0.062419,
+            0,
+            0,
+            0,
+            0,
+            0.062419,
+            0,
+            0,
+            0.1978,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            16.020747,
+            0,
+            0,
+            0,
+            0,
+            16.020747,
+            0,
+            0,
+            0,
+            0,
+            16.020747,
+            0,
+            0,
+            -3.168904,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.195073,
+          0,
+          -0.195073
+        ],
+        "center": [
+          0,
+          0.464,
+          0
+        ],
+        "size": [
+          0.390146,
+          0.928001,
+          0.390146
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "dc2b022d624ea642",
+    "materials": [
+      {
+        "index": 53,
+        "id": "mat:builder-resource:modern-ceiling-globe:6f39xx",
+        "name": "modern_ceiling_globe",
+        "category": "builder-resource",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.56,
+          0.378678,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.865958,
+          0.838622,
+          0.77155,
+          1
+        ],
+        "emissiveFactor": [
+          0.622958,
+          0.541622,
+          0.47455
+        ],
+        "emissiveStrength": 0.983478,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "modern_ceiling_lamp_01_diff_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/basecolor-10-modern-ceiling-lamp-01-diff-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/basecolor-10-modern-ceiling-lamp-01-diff-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.652831,
+              "contrast": 0.312985,
+              "chroma": 0.091052,
+              "detail": 0.091672
+            },
+            "generated": false,
+            "layer": 10
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "modern_ceiling_lamp_01_nor_gl_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/normal-05-modern-ceiling-lamp-01-nor-gl-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/normal-05-modern-ceiling-lamp-01-nor-gl-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.535257,
+              "contrast": 0.028669,
+              "chroma": 0.771061,
+              "detail": 0.024083
+            },
+            "generated": false,
+            "layer": 5
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "modern_ceiling_lamp_01_arm_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/metallicroughness-06-modern-ceiling-lamp-01-arm-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/metallicroughness-06-modern-ceiling-lamp-01-arm-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.25733,
+              "contrast": 0.164538,
+              "chroma": 0.760098,
+              "detail": 0.073118
+            },
+            "generated": false,
+            "layer": 6
+          }
+        ]
+      },
+      {
+        "index": 54,
+        "id": "mat:builder-resource:modern-ceiling-lamp-01-glass:m2ilxl",
+        "name": "modern_ceiling_lamp_01_glass",
+        "category": "builder-resource",
+        "visualRole": "glass_shell",
+        "semanticParams": [
+          5,
+          0.7,
+          0.18,
+          0.12
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 6,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "modern_ceiling_lamp_01_diff_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/basecolor-10-modern-ceiling-lamp-01-diff-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/basecolor-10-modern-ceiling-lamp-01-diff-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.652831,
+              "contrast": 0.312985,
+              "chroma": 0.091052,
+              "detail": 0.091672
+            },
+            "generated": false,
+            "layer": 10
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "modern_ceiling_lamp_01_nor_gl_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/normal-05-modern-ceiling-lamp-01-nor-gl-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/normal-05-modern-ceiling-lamp-01-nor-gl-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.535257,
+              "contrast": 0.028669,
+              "chroma": 0.771061,
+              "detail": 0.024083
+            },
+            "generated": false,
+            "layer": 5
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "modern_ceiling_lamp_01_arm_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/metallicroughness-06-modern-ceiling-lamp-01-arm-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/metallicroughness-06-modern-ceiling-lamp-01-arm-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.25733,
+              "contrast": 0.164538,
+              "chroma": 0.760098,
+              "detail": 0.073118
+            },
+            "generated": false,
+            "layer": 6
+          }
+        ]
+      },
+      {
+        "index": 55,
+        "id": "mat:builder-resource:hp-smoked-titanium-black:v7eiwo",
+        "name": "hp_smoked_titanium_black",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.012,
+          0.018,
+          0.022,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.62,
+        "metallicFactor": 0.2,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 56,
+        "id": "mat:builder-resource:hp-muted-brass-pin:qu8x2h",
+        "name": "hp_muted_brass_pin",
+        "category": "builder-resource",
+        "visualRole": "route_gold",
+        "semanticParams": [
+          8,
+          0.9,
+          0.42,
+          0.06
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.88,
+          0.56,
+          0.18,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.38,
+        "metallicFactor": 0.45,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 57,
+        "id": "mat:builder-resource:hp-warm-lamp-glow:7alrik",
+        "name": "hp_warm_lamp_glow",
+        "category": "builder-resource",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.8,
+          0.441376,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          0.78,
+          0.42,
+          1
+        ],
+        "emissiveFactor": [
+          1,
+          0.58,
+          0.18
+        ],
+        "emissiveStrength": 1.2672,
+        "roughnessFactor": 0.18,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 10,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/basecolor-10-modern-ceiling-lamp-01-diff-1k.webp",
+        "name": "modern_ceiling_lamp_01_diff_1k",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/basecolor-10-modern-ceiling-lamp-01-diff-1k.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.652831,
+          "contrast": 0.312985,
+          "chroma": 0.091052,
+          "detail": 0.091672
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": [
+      {
+        "layer": 5,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/normal-05-modern-ceiling-lamp-01-nor-gl-1k.webp",
+        "name": "modern_ceiling_lamp_01_nor_gl_1k",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/normal-05-modern-ceiling-lamp-01-nor-gl-1k.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.535257,
+          "contrast": 0.028669,
+          "chroma": 0.771061,
+          "detail": 0.024083
+        }
+      },
+      {
+        "layer": 6,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/metallicroughness-06-modern-ceiling-lamp-01-arm-1k.webp",
+        "name": "modern_ceiling_lamp_01_arm_1k",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/textures/metallicroughness-06-modern-ceiling-lamp-01-arm-1k.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.25733,
+          "contrast": 0.164538,
+          "chroma": 0.760098,
+          "detail": 0.073118
+        }
+      }
+    ]
+  }
+}

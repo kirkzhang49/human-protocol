@@ -1,0 +1,1293 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "room_l01_p10",
+  "family": "shared",
+  "bundleId": "shared/room_l01_p10",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/props/hp_room_l01_p10.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_01_maintenance_bay"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 3660,
+    "triangleCount": 1220,
+    "byteLength": 146400,
+    "hash": "da90bbb2066bfd23",
+    "asset": {
+      "modelKey": "room_l01_p10",
+      "sourceFile": "src/assets/models-cooked/environment/props/hp_room_l01_p10.glb",
+      "rawFile": "src/assets/models-cooked/environment/props/hp_room_l01_p10.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 3660,
+      "triangleCount": 1220,
+      "meshCount": 9,
+      "materialCount": 9,
+      "nodeCount": 1,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube",
+          "vertexOffset": 0,
+          "vertexCount": 96,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_1",
+          "vertexOffset": 96,
+          "vertexCount": 1002,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_2",
+          "vertexOffset": 1098,
+          "vertexCount": 486,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_3",
+          "vertexOffset": 1584,
+          "vertexCount": 882,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_4",
+          "vertexOffset": 2466,
+          "vertexCount": 288,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_5",
+          "vertexOffset": 2754,
+          "vertexCount": 96,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_6",
+          "vertexOffset": 2850,
+          "vertexCount": 450,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_7",
+          "vertexOffset": 3300,
+          "vertexCount": 264,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_8",
+          "vertexOffset": 3564,
+          "vertexCount": 96,
+          "bindMatrix": [
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0,
+            0,
+            0.404373,
+            0,
+            0,
+            0.404491,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            0,
+            0,
+            2.472962,
+            0,
+            0,
+            -1.00029,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.30999,
+          0.000117,
+          -0.258196
+        ],
+        "center": [
+          0,
+          0.404491,
+          0
+        ],
+        "size": [
+          0.619981,
+          0.808747,
+          0.516392
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "4a56a19d0f352cd7",
+    "materials": [
+      {
+        "index": 218,
+        "id": "mat:builder-resource:steel-dark:xjbsx7",
+        "name": "steel_dark",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_steel_brushed_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.179925,
+              "contrast": 0.009586,
+              "chroma": 0.000743,
+              "detail": 0.015094
+            },
+            "generated": false,
+            "layer": 44
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_steel_brushed_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-67-pbr-steel-brushed-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-67-pbr-steel-brushed-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536066,
+              "contrast": 0.004081,
+              "chroma": 0.77658,
+              "detail": 0.006655
+            },
+            "generated": false,
+            "layer": 67
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_steel_brushed_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.545818,
+              "contrast": 0.001702,
+              "chroma": 0.929372,
+              "detail": 0.002554
+            },
+            "generated": false,
+            "layer": 68
+          }
+        ]
+      },
+      {
+        "index": 223,
+        "id": "mat:builder-resource:concrete-plinth:1iipm0h",
+        "name": "concrete_plinth",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_stone_concrete_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-43-pbr-stone-concrete-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-43-pbr-stone-concrete-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.360473,
+              "contrast": 0.00929,
+              "chroma": 0.033884,
+              "detail": 0.012242
+            },
+            "generated": false,
+            "layer": 43
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_stone_concrete_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-65-pbr-stone-concrete-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-65-pbr-stone-concrete-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536037,
+              "contrast": 0.005967,
+              "chroma": 0.775245,
+              "detail": 0.013394
+            },
+            "generated": false,
+            "layer": 65
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_stone_concrete_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-66-pbr-stone-concrete-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-66-pbr-stone-concrete-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.724612,
+              "contrast": 0.005006,
+              "chroma": 1,
+              "detail": 0.006948
+            },
+            "generated": false,
+            "layer": 66
+          }
+        ]
+      },
+      {
+        "index": 242,
+        "id": "mat:builder-resource:porcelain-white:1a0rd98",
+        "name": "porcelain_white",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_white_marble_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-47-pbr-white-marble-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-47-pbr-white-marble-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.501014,
+              "contrast": 0.016503,
+              "chroma": 0.068403,
+              "detail": 0.022554
+            },
+            "generated": false,
+            "layer": 47
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_white_marble_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-72-pbr-white-marble-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-72-pbr-white-marble-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536412,
+              "contrast": 0.005245,
+              "chroma": 0.776631,
+              "detail": 0.010572
+            },
+            "generated": false,
+            "layer": 72
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_white_marble_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-73-pbr-white-marble-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-73-pbr-white-marble-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.375395,
+              "contrast": 0.002881,
+              "chroma": 1,
+              "detail": 0.003914
+            },
+            "generated": false,
+            "layer": 73
+          }
+        ]
+      },
+      {
+        "index": 272,
+        "id": "mat:builder-resource:diag-cyan:1tqbmwh",
+        "name": "diag_cyan",
+        "category": "builder-resource",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.46,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.3,
+          0.95,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.3,
+          0.95,
+          1
+        ],
+        "emissiveStrength": 4,
+        "roughnessFactor": 0.3,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 282,
+        "id": "mat:builder-resource:rubber-black:o5hzwj",
+        "name": "rubber_black",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.05,
+          0.05,
+          0.06,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.92,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 283,
+        "id": "mat:builder-resource:steel-brushed:onzfiu",
+        "name": "steel_brushed",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_steel_brushed_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.179925,
+              "contrast": 0.009586,
+              "chroma": 0.000743,
+              "detail": 0.015094
+            },
+            "generated": false,
+            "layer": 44
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_steel_brushed_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-67-pbr-steel-brushed-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-67-pbr-steel-brushed-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536066,
+              "contrast": 0.004081,
+              "chroma": 0.77658,
+              "detail": 0.006655
+            },
+            "generated": false,
+            "layer": 67
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_steel_brushed_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.545818,
+              "contrast": 0.001702,
+              "chroma": 0.929372,
+              "detail": 0.002554
+            },
+            "generated": false,
+            "layer": 68
+          }
+        ]
+      },
+      {
+        "index": 284,
+        "id": "mat:builder-resource:glass-panel:1bz3eox",
+        "name": "glass_panel",
+        "category": "builder-resource",
+        "visualRole": "glass_shell",
+        "semanticParams": [
+          5,
+          0.82,
+          0.18,
+          0.12
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 6,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_glass_frosted_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-46-pbr-glass-frosted-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-46-pbr-glass-frosted-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.511048,
+              "contrast": 0.008446,
+              "chroma": 0.030018,
+              "detail": 0.008804
+            },
+            "generated": false,
+            "layer": 46
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_glass_frosted_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-70-pbr-glass-frosted-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-70-pbr-glass-frosted-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.535117,
+              "contrast": 0.000171,
+              "chroma": 0.778039,
+              "detail": 0.000015
+            },
+            "generated": false,
+            "layer": 70
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_glass_frosted_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-71-pbr-glass-frosted-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-71-pbr-glass-frosted-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.271774,
+              "contrast": 0.001599,
+              "chroma": 1,
+              "detail": 0.001187
+            },
+            "generated": false,
+            "layer": 71
+          }
+        ]
+      },
+      {
+        "index": 285,
+        "id": "mat:builder-resource:diag-cyan-dim:fwyg8g",
+        "name": "diag_cyan_dim",
+        "category": "builder-resource",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.46,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.3,
+          0.95,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.3,
+          0.95,
+          1
+        ],
+        "emissiveStrength": 2.7,
+        "roughnessFactor": 0.35,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 286,
+        "id": "mat:builder-resource:warn-amber:id4j9j",
+        "name": "warn_amber",
+        "category": "builder-resource",
+        "visualRole": "route_gold",
+        "semanticParams": [
+          8,
+          0.9,
+          0.58,
+          0.06
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          0.7,
+          0.2,
+          1
+        ],
+        "emissiveFactor": [
+          1,
+          0.7,
+          0.2
+        ],
+        "emissiveStrength": 3.42,
+        "roughnessFactor": 0.4,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 43,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-43-pbr-stone-concrete-basecolor.webp",
+        "name": "pbr_stone_concrete_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-43-pbr-stone-concrete-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.360473,
+          "contrast": 0.00929,
+          "chroma": 0.033884,
+          "detail": 0.012242
+        }
+      },
+      {
+        "layer": 44,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+        "name": "pbr_steel_brushed_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.179925,
+          "contrast": 0.009586,
+          "chroma": 0.000743,
+          "detail": 0.015094
+        }
+      },
+      {
+        "layer": 46,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-46-pbr-glass-frosted-basecolor.webp",
+        "name": "pbr_glass_frosted_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-46-pbr-glass-frosted-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.511048,
+          "contrast": 0.008446,
+          "chroma": 0.030018,
+          "detail": 0.008804
+        }
+      },
+      {
+        "layer": 47,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-47-pbr-white-marble-basecolor.webp",
+        "name": "pbr_white_marble_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/basecolor-47-pbr-white-marble-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.501014,
+          "contrast": 0.016503,
+          "chroma": 0.068403,
+          "detail": 0.022554
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": [
+      {
+        "layer": 65,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-65-pbr-stone-concrete-normal.webp",
+        "name": "pbr_stone_concrete_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-65-pbr-stone-concrete-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536037,
+          "contrast": 0.005967,
+          "chroma": 0.775245,
+          "detail": 0.013394
+        }
+      },
+      {
+        "layer": 66,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-66-pbr-stone-concrete-orm.webp",
+        "name": "pbr_stone_concrete_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-66-pbr-stone-concrete-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.724612,
+          "contrast": 0.005006,
+          "chroma": 1,
+          "detail": 0.006948
+        }
+      },
+      {
+        "layer": 67,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-67-pbr-steel-brushed-normal.webp",
+        "name": "pbr_steel_brushed_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-67-pbr-steel-brushed-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536066,
+          "contrast": 0.004081,
+          "chroma": 0.77658,
+          "detail": 0.006655
+        }
+      },
+      {
+        "layer": 68,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+        "name": "pbr_steel_brushed_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.545818,
+          "contrast": 0.001702,
+          "chroma": 0.929372,
+          "detail": 0.002554
+        }
+      },
+      {
+        "layer": 70,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-70-pbr-glass-frosted-normal.webp",
+        "name": "pbr_glass_frosted_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-70-pbr-glass-frosted-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.535117,
+          "contrast": 0.000171,
+          "chroma": 0.778039,
+          "detail": 0.000015
+        }
+      },
+      {
+        "layer": 71,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-71-pbr-glass-frosted-orm.webp",
+        "name": "pbr_glass_frosted_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-71-pbr-glass-frosted-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.271774,
+          "contrast": 0.001599,
+          "chroma": 1,
+          "detail": 0.001187
+        }
+      },
+      {
+        "layer": 72,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-72-pbr-white-marble-normal.webp",
+        "name": "pbr_white_marble_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/normal-72-pbr-white-marble-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536412,
+          "contrast": 0.005245,
+          "chroma": 0.776631,
+          "detail": 0.010572
+        }
+      },
+      {
+        "layer": 73,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-73-pbr-white-marble-orm.webp",
+        "name": "pbr_white_marble_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l01_p10/textures/metallicroughness-73-pbr-white-marble-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.375395,
+          "contrast": 0.002881,
+          "chroma": 1,
+          "detail": 0.003914
+        }
+      }
+    ]
+  }
+}

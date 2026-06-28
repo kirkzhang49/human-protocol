@@ -1,0 +1,395 @@
+{
+  "file": "material.json",
+  "hash": "3dba14c48a3bc1c0",
+  "materials": [
+    {
+      "index": 11,
+      "id": "mat:door:ind-iron:yyfo0x",
+      "name": "ind_iron",
+      "category": "door",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.18,
+        0.58,
+        0.78,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.45,
+      "metallicFactor": 0.8,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "de3b17bb-c93c-47d0-a093-66c4c7d9187f",
+          "url": null,
+          "sourceFile": null,
+          "mimeType": null,
+          "stats": null,
+          "generated": false
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "id": "mat:door:ind-rivet:4r6mlr",
+      "name": "ind_rivet",
+      "category": "door",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.18,
+        0.58,
+        0.78,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0.92,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "de3b17bb-c93c-47d0-a093-66c4c7d9187f",
+          "url": null,
+          "sourceFile": null,
+          "mimeType": null,
+          "stats": null,
+          "generated": false
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "id": "mat:door:ind-steel:o8z0jn",
+      "name": "ind_steel",
+      "category": "door",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.18,
+        0.58,
+        0.78,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.85,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "de3b17bb-c93c-47d0-a093-66c4c7d9187f",
+          "url": null,
+          "sourceFile": null,
+          "mimeType": null,
+          "stats": null,
+          "generated": false
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "id": "mat:door:ind-hazard:196i6ts",
+      "name": "ind_hazard",
+      "category": "door",
+      "visualRole": "door_locked_red",
+      "semanticParams": [
+        12,
+        0.9,
+        0.368,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.84,
+        0.14,
+        0.08,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0.1,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0.1,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "de3b17bb-c93c-47d0-a093-66c4c7d9187f",
+          "url": null,
+          "sourceFile": null,
+          "mimeType": null,
+          "stats": null,
+          "generated": false
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "id": "mat:door:ind-vent:sb34yt",
+      "name": "ind_vent",
+      "category": "door",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.18,
+        0.58,
+        0.78,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.35,
+      "metallicFactor": 0.75,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "de3b17bb-c93c-47d0-a093-66c4c7d9187f",
+          "url": null,
+          "sourceFile": null,
+          "mimeType": null,
+          "stats": null,
+          "generated": false
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "id": "mat:door:ind-lock:30rh7i",
+      "name": "ind_lock",
+      "category": "door",
+      "visualRole": "door_locked_red",
+      "semanticParams": [
+        12,
+        0.9,
+        0.368,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.84,
+        0.14,
+        0.08,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0.1,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0.82,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "de3b17bb-c93c-47d0-a093-66c4c7d9187f",
+          "url": null,
+          "sourceFile": null,
+          "mimeType": null,
+          "stats": null,
+          "generated": false
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "id": "mat:door:ind-cyan:1v0hx21",
+      "name": "ind_cyan",
+      "category": "door",
+      "visualRole": "door_access_cyan",
+      "semanticParams": [
+        13,
+        0.86,
+        0.348,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.1,
+        0.58,
+        0.74,
+        1
+      ],
+      "emissiveFactor": [
+        0.188235,
+        0.862745,
+        1
+      ],
+      "emissiveStrength": 0.1,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.3,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "de3b17bb-c93c-47d0-a093-66c4c7d9187f",
+          "url": null,
+          "sourceFile": null,
+          "mimeType": null,
+          "stats": null,
+          "generated": false
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

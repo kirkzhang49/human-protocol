@@ -1,0 +1,26 @@
+{
+  "schema": "human-protocol/refined-viewmodel-weapons@1",
+  "budget": {
+    "maxBytesPerWeapon": 180000,
+    "maxMeshObjectsPerWeapon": 40,
+    "maxMaterialsPerWeapon": 8
+  },
+  "assets": [
+    {
+      "asset": "hp_viewmodel_iron_rod_refined",
+      "file": "src/assets/models/viewmodel/hp_viewmodel_iron_rod_refined.glb",
+      "bytes": 112692,
+      "meshObjects": 23,
+      "materials": 8,
+      "trianglesApprox": 3588
+    },
+    {
+      "asset": "hp_viewmodel_sidearm_refined",
+      "file": "src/assets/models/viewmodel/hp_viewmodel_sidearm_refined.glb",
+      "bytes": 75980,
+      "meshObjects": 21,
+      "materials": 8,
+      "trianglesApprox": 2380
+    }
+  ]
+}

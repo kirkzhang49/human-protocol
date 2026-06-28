@@ -1,0 +1,1239 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "room_l1_img2_sterile_wash_basin",
+  "family": "shared",
+  "bundleId": "shared/room_l1_img2_sterile_wash_basin",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_sterile_wash_basin.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_01_maintenance_bay"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 4128,
+    "triangleCount": 1376,
+    "byteLength": 165120,
+    "hash": "1e6dc33868254da0",
+    "asset": {
+      "modelKey": "room_l1_img2_sterile_wash_basin",
+      "sourceFile": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_sterile_wash_basin.glb",
+      "rawFile": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_sterile_wash_basin.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 4128,
+      "triangleCount": 1376,
+      "meshCount": 14,
+      "materialCount": 9,
+      "nodeCount": 15,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "room_l1_img2_sterile_wash_basin_hazard_tab_1",
+          "vertexOffset": 0,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.085,
+            0.67,
+            0.305,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.085,
+            -0.67,
+            -0.305,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "room_l1_img2_sterile_wash_basin_hazard_tab_2",
+          "vertexOffset": 324,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.085,
+            0.67,
+            0.305,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.085,
+            -0.67,
+            -0.305,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_back_enamel_panel",
+          "vertexOffset": 648,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.86,
+            -0.31,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.86,
+            0.31,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_base_cabinet",
+          "vertexOffset": 972,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.32,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.32,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_counter_lip",
+          "vertexOffset": 1296,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.69,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.69,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_cyan_sterile_panel",
+          "vertexOffset": 1620,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.5,
+            0.58,
+            0.29,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.5,
+            -0.58,
+            -0.29,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_dark_side_service",
+          "vertexOffset": 1944,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.58,
+            0.38,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.58,
+            -0.38,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_faucet_spout_-028",
+          "vertexOffset": 2268,
+          "vertexCount": 228,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -0.21,
+            1.08,
+            -0.16,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.21,
+            0.16,
+            1.08,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_faucet_spout_008",
+          "vertexOffset": 2496,
+          "vertexCount": 228,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0.15,
+            1.08,
+            -0.16,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.15,
+            0.16,
+            1.08,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_faucet_upright_-028",
+          "vertexOffset": 2724,
+          "vertexCount": 276,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.28,
+            0.99,
+            -0.245,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.28,
+            -0.99,
+            0.245,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_faucet_upright_008",
+          "vertexOffset": 3000,
+          "vertexCount": 276,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.08,
+            0.99,
+            -0.245,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.08,
+            -0.99,
+            0.245,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_inner_steel_bowl",
+          "vertexOffset": 3276,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.16,
+            0.77,
+            0.02,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.16,
+            -0.77,
+            -0.02,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_recess_water_well",
+          "vertexOffset": 3600,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.16,
+            0.735,
+            0.02,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.16,
+            -0.735,
+            -0.02,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wash_basin_side_hose",
+          "vertexOffset": 3924,
+          "vertexCount": 204,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.69,
+            0.42,
+            -0.08,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.69,
+            -0.42,
+            0.08,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.71,
+          0,
+          -0.35
+        ],
+        "center": [
+          0.003787,
+          0.5525,
+          -0.018
+        ],
+        "size": [
+          1.427575,
+          1.105,
+          0.664
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "8b0377dbf7189298",
+    "materials": [
+      {
+        "index": 737,
+        "id": "mat:builder-resource:l1-workcell-image2-worn-black-panel:1vz92z3",
+        "name": "l1_workcell_image2_worn_black_panel",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.82,
+        "metallicFactor": 0.35,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      },
+      {
+        "index": 738,
+        "id": "mat:builder-resource:l1-workcell-image2-cyan-diagnostic-glass:ddd1wc",
+        "name": "l1_workcell_image2_cyan_diagnostic_glass",
+        "category": "builder-resource",
+        "visualRole": "glass_shell",
+        "semanticParams": [
+          5,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          0.78
+        ],
+        "emissiveFactor": [
+          0,
+          0.099,
+          0.135
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.32,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 6,
+        "alphaMode": "BLEND",
+        "transparency": {
+          "mode": "blend",
+          "alpha": 0.78,
+          "source": "gltf-material.transparent+gltf-material.opacity"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      },
+      {
+        "index": 739,
+        "id": "mat:builder-resource:l1-workcell-image2-dark-powdercoat:spmbuw",
+        "name": "l1_workcell_image2_dark_powdercoat",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.78,
+        "metallicFactor": 0.45,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      },
+      {
+        "index": 740,
+        "id": "mat:builder-resource:l1-workcell-image2-brushed-steel:v0cthr",
+        "name": "l1_workcell_image2_brushed_steel",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.42,
+        "metallicFactor": 0.85,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      },
+      {
+        "index": 741,
+        "id": "mat:builder-resource:l1-workcell-image2-off-white-enamel:1v2r3jh",
+        "name": "l1_workcell_image2_off_white_enamel",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.66,
+        "metallicFactor": 0.12,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      },
+      {
+        "index": 742,
+        "id": "mat:builder-resource:l1-workcell-image2-hazard-stripe:rc66rs",
+        "name": "l1_workcell_image2_hazard_stripe",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.78,
+        "metallicFactor": 0.12,
+        "aoStrength": 1,
+        "materialKind": 5,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      },
+      {
+        "index": 744,
+        "id": "mat:builder-resource:l1-workcell-image2-rubber-wheel-tread:hv0q78",
+        "name": "l1_workcell_image2_rubber_wheel_tread",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.9,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      },
+      {
+        "index": 750,
+        "id": "mat:builder-resource:l1-workcell-image2-scuffed-white-panel:suvdxb",
+        "name": "l1_workcell_image2_scuffed_white_panel",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.74,
+        "metallicFactor": 0.18,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      },
+      {
+        "index": 751,
+        "id": "mat:builder-resource:l1-workcell-image2-stainless-basin:124caof",
+        "name": "l1_workcell_image2_stainless_basin",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.36,
+        "metallicFactor": 0.92,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_workcell_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.334168,
+              "contrast": 0.271294,
+              "chroma": 0.168254,
+              "detail": 0.09374
+            },
+            "generated": false,
+            "layer": 60
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 60,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+        "name": "hp_level01_workcell_image2_atlas",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.334168,
+          "contrast": 0.271294,
+          "chroma": 0.168254,
+          "detail": 0.09374
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

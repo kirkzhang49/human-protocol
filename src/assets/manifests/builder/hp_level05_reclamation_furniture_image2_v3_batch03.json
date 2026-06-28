@@ -1,0 +1,173 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level05_reclamation_furniture_image2_v3_batch03",
+  "label": "HP Level 05 Reclamation Core Furniture v3 Batch 03 (Industrial Medical Machines)",
+  "sourceTool": "generate-level05-reclamation-furniture-image2-v3-batch03-assets.py",
+  "generatedAt": "2026-06-27",
+  "revision": "v1-batch03-industrial-medical-machines",
+  "atlas": {
+    "image": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/hp_level05_reclamation_furniture_image2_v3_batch03_atlas.png",
+    "regions": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/hp_level05_reclamation_furniture_image2_v3_batch03_atlas.regions.json",
+    "size": [
+      2048,
+      2048
+    ]
+  },
+  "assets": [
+    {
+      "modelKey": "room_l5_v3_bio_recline_couch",
+      "label": "L5 V3 Bio Recline Couch",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "\u8bca\u7597",
+      "source": "level05-reclamation-furniture-image2-v3-batch03",
+      "sourceAssetId": "room_l5_v3_bio_recline_couch_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_bio_recline_couch.glb",
+      "sizeMeters": [
+        2.55,
+        0.667,
+        1.17
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "bed",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch03",
+        "source:generated-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "role:industrial-medical-machine",
+        "family:bed_or_exam_table"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "label": "L5 V3 Memory Diagnostic Terminal",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "\u8bca\u7597",
+      "source": "level05-reclamation-furniture-image2-v3-batch03",
+      "sourceAssetId": "room_l5_v3_memory_diagnostic_terminal_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_memory_diagnostic_terminal.glb",
+      "sizeMeters": [
+        1.24,
+        2.16,
+        0.579
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch03",
+        "source:generated-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "role:industrial-medical-machine",
+        "family:control_console"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "label": "L5 V3 Tissue Freezer Cabinet",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "\u8bca\u7597",
+      "source": "level05-reclamation-furniture-image2-v3-batch03",
+      "sourceAssetId": "room_l5_v3_tissue_freezer_cabinet_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_tissue_freezer_cabinet.glb",
+      "sizeMeters": [
+        1.377,
+        1.755,
+        0.722
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch03",
+        "source:generated-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "role:industrial-medical-machine",
+        "family:cabinet"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_limb_calibration_rack",
+      "label": "L5 V3 Limb Calibration Rack",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "\u8bca\u7597",
+      "source": "level05-reclamation-furniture-image2-v3-batch03",
+      "sourceAssetId": "room_l5_v3_limb_calibration_rack_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_limb_calibration_rack.glb",
+      "sizeMeters": [
+        1.52,
+        2.28,
+        0.545
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "display_case",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch03",
+        "source:generated-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "role:industrial-medical-machine",
+        "family:display_case"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_cleaning_robot_dock",
+      "label": "L5 V3 Cleaning Robot Dock",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "\u8bca\u7597",
+      "source": "level05-reclamation-furniture-image2-v3-batch03",
+      "sourceAssetId": "room_l5_v3_cleaning_robot_dock_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_cleaning_robot_dock.glb",
+      "sizeMeters": [
+        1.62,
+        0.445,
+        1.645
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "crate",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch03",
+        "source:generated-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "role:industrial-medical-machine",
+        "family:storage_crate"
+      ]
+    }
+  ]
+}

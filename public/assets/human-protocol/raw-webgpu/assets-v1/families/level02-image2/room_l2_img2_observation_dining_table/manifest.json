@@ -1,0 +1,586 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "room_l2_img2_observation_dining_table",
+  "family": "level02-image2",
+  "bundleId": "level02-image2/room_l2_img2_observation_dining_table",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 22044,
+    "triangleCount": 7348,
+    "byteLength": 881760,
+    "hash": "b4aadf0e688437f5",
+    "asset": {
+      "modelKey": "room_l2_img2_observation_dining_table",
+      "sourceFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+      "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 22044,
+      "triangleCount": 7348,
+      "meshCount": 7,
+      "materialCount": 4,
+      "nodeCount": 8,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "table_flowing_walnut_pedestal_a",
+          "vertexOffset": 0,
+          "vertexCount": 3876,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.009216,
+            -0.05,
+            -0.012838,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.009216,
+            0.05,
+            0.012838,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "table_flowing_walnut_pedestal_b",
+          "vertexOffset": 3876,
+          "vertexCount": 3876,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.009216,
+            -0.05,
+            -0.012838,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.009216,
+            0.05,
+            0.012838,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "table_gallery_live_edge_walnut_top",
+          "vertexOffset": 7752,
+          "vertexCount": 6900,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.009216,
+            -0.05,
+            -0.012838,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.009216,
+            0.05,
+            0.012838,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "table_smoked_chrome_sculptural_arc_a",
+          "vertexOffset": 14652,
+          "vertexCount": 180,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.009216,
+            -0.05,
+            -0.012838,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.009216,
+            0.05,
+            0.012838,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "table_smoked_chrome_sculptural_arc_b",
+          "vertexOffset": 14832,
+          "vertexCount": 180,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.009216,
+            -0.05,
+            -0.012838,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.009216,
+            0.05,
+            0.012838,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "table_soft_shadow_underlip",
+          "vertexOffset": 15012,
+          "vertexCount": 6900,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.009216,
+            -0.05,
+            -0.012838,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.009216,
+            0.05,
+            0.012838,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "table_underside_hidden_service_seam",
+          "vertexOffset": 21912,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.410784,
+            0.61,
+            0.447162,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.410784,
+            -0.61,
+            -0.447162,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.947396,
+          0,
+          -0.478647
+        ],
+        "center": [
+          0,
+          0.36375,
+          0
+        ],
+        "size": [
+          1.894793,
+          0.7275,
+          0.957294
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "83f88c090afb1c7a",
+    "materials": [
+      {
+        "index": 818,
+        "id": "mat:builder-resource:l2-smoked-chrome-gallery-accent:1ii045u",
+        "name": "l2_smoked_chrome_gallery_accent",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.66,
+          0.65,
+          0.6,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.24,
+        "metallicFactor": 0.9,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 820,
+        "id": "mat:builder-resource:l2-hidden-control-shadow:luik88",
+        "name": "l2_hidden_control_shadow",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.28,
+          0.28,
+          0.25,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.88,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 824,
+        "id": "mat:builder-resource:l2-gallery-dark-woodgrain:17durwq",
+        "name": "l2_gallery_dark_woodgrain",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.25,
+          0.15,
+          0.09,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.66,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 837,
+        "id": "mat:builder-resource:l2-image2-walnut-large-grain:16gr7w6",
+        "name": "l2_image2_walnut_large_grain",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.54,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level02_furniture_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_observation_dining_table/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_observation_dining_table/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.658327,
+              "contrast": 0.289874,
+              "chroma": 0.221643,
+              "detail": 0.075651
+            },
+            "generated": false,
+            "layer": 62
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 62,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_observation_dining_table/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+        "name": "hp_level02_furniture_image2_atlas",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_observation_dining_table/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.658327,
+          "contrast": 0.289874,
+          "chroma": 0.221643,
+          "detail": 0.075651
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

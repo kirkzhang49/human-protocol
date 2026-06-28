@@ -1,0 +1,512 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_l2_img2_camera_lamp",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_camera_lamp.glb",
+  "fileName": "room_l2_img2_camera_lamp.glb",
+  "sourceAsset": {
+    "modelKey": "room_l2_img2_camera_lamp",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_camera_lamp.glb",
+    "file": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_camera_lamp.glb",
+    "sizeMeters": [
+      0.44,
+      1.63,
+      0.448
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 108884,
+      "meshes": 8,
+      "nodes": 9,
+      "skins": 0,
+      "primitives": 8,
+      "materials": 8,
+      "textures": 8,
+      "images": 8,
+      "accessors": 18,
+      "bufferViews": 26,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 376
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_camera_lamp.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 470970,
+    "vertexCount": 1128,
+    "triangleCount": 376,
+    "meshCount": 8,
+    "materialCount": 8,
+    "nodeCount": 9,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.22,
+        0,
+        -0.224
+      ],
+      "center": [
+        0,
+        0.815,
+        0
+      ],
+      "size": [
+        0.44,
+        1.63,
+        0.448
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_base",
+        "vertexOffset": 470970,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_base_trim",
+        "vertexOffset": 471102,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_pole",
+        "vertexOffset": 471234,
+        "vertexCount": 240,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_shade",
+        "vertexOffset": 471474,
+        "vertexCount": 384,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_warm_core",
+        "vertexOffset": 471858,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_scanner_ring",
+        "vertexOffset": 471990,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_camera_lens",
+        "vertexOffset": 472026,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lamp_warm_glass_inlay",
+        "vertexOffset": 472062,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_02_img2_care_lamp_left",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        -8.45,
+        0,
+        6.85
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.3,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "official",
+        "level02",
+        "remaster",
+        "image2",
+        "light"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -8.45,
+          0,
+          6.85
+        ],
+        "halfSize": [
+          0.22,
+          0.815,
+          0.224
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_img2_care_lamp_right",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        8.4,
+        0,
+        6.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.35,
+        0
+      ],
+      "scale": [
+        0.96,
+        0.96,
+        0.96
+      ],
+      "tags": [
+        "official",
+        "level02",
+        "remaster",
+        "image2",
+        "light"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.4,
+          0,
+          6.5
+        ],
+        "halfSize": [
+          0.2112,
+          0.7824,
+          0.21504
+        ]
+      }
+    }
+  ]
+}

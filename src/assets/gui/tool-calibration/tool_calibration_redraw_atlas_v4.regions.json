@@ -1,0 +1,382 @@
+{
+  "atlasSize": [
+    1560,
+    2568
+  ],
+  "source": "src/assets/gui/tool-calibration/image2-sources/tool_calibration_redraw_source_v4.png",
+  "regions": {
+    "tool_hero": [
+      20,
+      20,
+      734,
+      260
+    ],
+    "tile_straight_off": [
+      774,
+      20,
+      200,
+      200
+    ],
+    "tile_straight_on": [
+      994,
+      20,
+      200,
+      200
+    ],
+    "tile_corner_off": [
+      1214,
+      20,
+      200,
+      200
+    ],
+    "tile_corner_on": [
+      20,
+      300,
+      200,
+      200
+    ],
+    "tile_tee_off": [
+      240,
+      300,
+      200,
+      200
+    ],
+    "tile_tee_on": [
+      460,
+      300,
+      200,
+      200
+    ],
+    "tile_cross_off": [
+      680,
+      300,
+      200,
+      200
+    ],
+    "tile_cross_on": [
+      900,
+      300,
+      200,
+      200
+    ],
+    "tile_blocked": [
+      1120,
+      300,
+      200,
+      200
+    ],
+    "tile_core": [
+      1340,
+      300,
+      200,
+      200
+    ],
+    "tile_entry": [
+      20,
+      520,
+      200,
+      200
+    ],
+    "tile_output": [
+      240,
+      520,
+      200,
+      200
+    ],
+    "tool_grid_backplate": [
+      20,
+      740,
+      1165,
+      268
+    ],
+    "tile_straight_off_r0": [
+      1205,
+      740,
+      200,
+      200
+    ],
+    "tile_straight_off_r1": [
+      20,
+      1028,
+      200,
+      200
+    ],
+    "tile_straight_off_r2": [
+      240,
+      1028,
+      200,
+      200
+    ],
+    "tile_straight_off_r3": [
+      460,
+      1028,
+      200,
+      200
+    ],
+    "tile_straight_on_r0": [
+      680,
+      1028,
+      200,
+      200
+    ],
+    "tile_straight_on_r1": [
+      900,
+      1028,
+      200,
+      200
+    ],
+    "tile_straight_on_r2": [
+      1120,
+      1028,
+      200,
+      200
+    ],
+    "tile_straight_on_r3": [
+      1340,
+      1028,
+      200,
+      200
+    ],
+    "tile_corner_off_r0": [
+      20,
+      1248,
+      200,
+      200
+    ],
+    "tile_corner_off_r1": [
+      240,
+      1248,
+      200,
+      200
+    ],
+    "tile_corner_off_r2": [
+      460,
+      1248,
+      200,
+      200
+    ],
+    "tile_corner_off_r3": [
+      680,
+      1248,
+      200,
+      200
+    ],
+    "tile_corner_on_r0": [
+      900,
+      1248,
+      200,
+      200
+    ],
+    "tile_corner_on_r1": [
+      1120,
+      1248,
+      200,
+      200
+    ],
+    "tile_corner_on_r2": [
+      1340,
+      1248,
+      200,
+      200
+    ],
+    "tile_corner_on_r3": [
+      20,
+      1468,
+      200,
+      200
+    ],
+    "tile_tee_off_r0": [
+      240,
+      1468,
+      200,
+      200
+    ],
+    "tile_tee_off_r1": [
+      460,
+      1468,
+      200,
+      200
+    ],
+    "tile_tee_off_r2": [
+      680,
+      1468,
+      200,
+      200
+    ],
+    "tile_tee_off_r3": [
+      900,
+      1468,
+      200,
+      200
+    ],
+    "tile_tee_on_r0": [
+      1120,
+      1468,
+      200,
+      200
+    ],
+    "tile_tee_on_r1": [
+      1340,
+      1468,
+      200,
+      200
+    ],
+    "tile_tee_on_r2": [
+      20,
+      1688,
+      200,
+      200
+    ],
+    "tile_tee_on_r3": [
+      240,
+      1688,
+      200,
+      200
+    ],
+    "tile_cross_off_r0": [
+      460,
+      1688,
+      200,
+      200
+    ],
+    "tile_cross_off_r1": [
+      680,
+      1688,
+      200,
+      200
+    ],
+    "tile_cross_off_r2": [
+      900,
+      1688,
+      200,
+      200
+    ],
+    "tile_cross_off_r3": [
+      1120,
+      1688,
+      200,
+      200
+    ],
+    "tile_cross_on_r0": [
+      1340,
+      1688,
+      200,
+      200
+    ],
+    "tile_cross_on_r1": [
+      20,
+      1908,
+      200,
+      200
+    ],
+    "tile_cross_on_r2": [
+      240,
+      1908,
+      200,
+      200
+    ],
+    "tile_cross_on_r3": [
+      460,
+      1908,
+      200,
+      200
+    ],
+    "tile_blocked_r0": [
+      680,
+      1908,
+      200,
+      200
+    ],
+    "tile_blocked_r1": [
+      900,
+      1908,
+      200,
+      200
+    ],
+    "tile_blocked_r2": [
+      1120,
+      1908,
+      200,
+      200
+    ],
+    "tile_blocked_r3": [
+      1340,
+      1908,
+      200,
+      200
+    ],
+    "tile_core_r0": [
+      20,
+      2128,
+      200,
+      200
+    ],
+    "tile_core_r1": [
+      240,
+      2128,
+      200,
+      200
+    ],
+    "tile_core_r2": [
+      460,
+      2128,
+      200,
+      200
+    ],
+    "tile_core_r3": [
+      680,
+      2128,
+      200,
+      200
+    ],
+    "tile_entry_r0": [
+      900,
+      2128,
+      200,
+      200
+    ],
+    "tile_entry_r1": [
+      1120,
+      2128,
+      200,
+      200
+    ],
+    "tile_entry_r2": [
+      1340,
+      2128,
+      200,
+      200
+    ],
+    "tile_entry_r3": [
+      20,
+      2348,
+      200,
+      200
+    ],
+    "tile_output_r0": [
+      240,
+      2348,
+      200,
+      200
+    ],
+    "tile_output_r1": [
+      460,
+      2348,
+      200,
+      200
+    ],
+    "tile_output_r2": [
+      680,
+      2348,
+      200,
+      200
+    ],
+    "tile_output_r3": [
+      900,
+      2348,
+      200,
+      200
+    ]
+  },
+  "notes": "Cropped and packed from a purpose-built Image2 redraw source sheet. Script removes flat black background only; it does not draw primary art."
+}

@@ -1,0 +1,1377 @@
+{
+  "schemaVersion": "hp.level04-memory-clinic-furniture.v1",
+  "packId": "hp_level04_memory_clinic_furniture_v1",
+  "sourceTool": "generate-level04-memory-clinic-furniture-v1.py",
+  "sourceType": "fresh-rebuild-abandoning-old-l4-furniture",
+  "assets": [
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_decon_gate",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "入口路标 / 消毒扫描压迫感",
+      "scaleMeters": [
+        2.65,
+        2.62,
+        0.72
+      ],
+      "silhouette": [
+        "two vertical towers",
+        "crossbar",
+        "low glass barrier"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens",
+        "translucent_curtain"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active"
+      ],
+      "collisionProxy": {
+        "type": "none-or-thin-trigger",
+        "reason": "decorative/transparent/wall/ceiling furniture"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 4020
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_decon_gate.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_decon_gate.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "barrier",
+        "roomHints": [
+          "level_04_entry_decon"
+        ],
+        "priority": "P1"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_reception_counter",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "候诊厅主锚点 / 轻遮挡",
+      "scaleMeters": [
+        3.2,
+        1.28,
+        0.86
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          1.536,
+          0.576,
+          0.413
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 5220
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_reception_counter.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_reception_counter.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "table",
+        "roomHints": [
+          "level_04_waiting_room"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_waiting_sofa_row",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "候诊厅软性遮挡 / 人味反差",
+      "scaleMeters": [
+        2.55,
+        0.88,
+        0.82
+      ],
+      "silhouette": [
+        "soft rounded seating blocks",
+        "thin metal legs",
+        "low human scale"
+      ],
+      "materialSlots": [
+        "ceramic_white",
+        "dark_acoustic_mesh",
+        "lime_cushion",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          1.224,
+          0.396,
+          0.394
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 5460
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_waiting_sofa_row.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_waiting_sofa_row.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "sofa",
+        "roomHints": [
+          "level_04_waiting_room"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_lime_ottoman",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "候诊厅色彩锚点 / 低遮挡",
+      "scaleMeters": [
+        0.86,
+        0.48,
+        0.86
+      ],
+      "silhouette": [
+        "soft rounded seating blocks",
+        "thin metal legs",
+        "low human scale"
+      ],
+      "materialSlots": [
+        "lime_cushion",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.413,
+          0.216,
+          0.413
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 2820
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_lime_ottoman.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_lime_ottoman.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "sofa",
+        "roomHints": [
+          "level_04_waiting_room"
+        ],
+        "priority": "P2"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_side_table_planter",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "人味细节 / 候诊区比例参照",
+      "scaleMeters": [
+        0.86,
+        0.82,
+        0.72
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "dark_acoustic_mesh",
+        "plant_green",
+        "smoked_titanium",
+        "warm_wood"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.413,
+          0.369,
+          0.346
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 3300
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_side_table_planter.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_side_table_planter.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "table",
+        "roomHints": [
+          "level_04_waiting_room"
+        ],
+        "priority": "P2"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_triage_kiosk",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "未来 puzzle host / 候诊方向提示",
+      "scaleMeters": [
+        0.78,
+        1.56,
+        0.58
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "cyan_screen",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.374,
+          0.702,
+          0.278
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 2820
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_triage_kiosk.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_triage_kiosk.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "table",
+        "roomHints": [
+          "level_04_waiting_room"
+        ],
+        "priority": "P1"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_med_cabinet",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "叙事储物 / 补给或线索插槽",
+      "scaleMeters": [
+        1.05,
+        1.94,
+        0.52
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.504,
+          0.873,
+          0.25
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 4740
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_med_cabinet.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_med_cabinet.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "cabinet",
+        "roomHints": [
+          "level_04_waiting_room",
+          "level_04_body_chair"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_record_wall_cabinet",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "档案线索 / 低墙面节奏",
+      "scaleMeters": [
+        1.34,
+        1.36,
+        0.42
+      ],
+      "silhouette": [
+        "flat wall module",
+        "framed panel",
+        "thin depth"
+      ],
+      "materialSlots": [
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.643,
+          0.612,
+          0.202
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 7860
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_record_wall_cabinet.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_record_wall_cabinet.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "cabinet",
+        "roomHints": [
+          "level_04_waiting_room",
+          "level_04_childhood_chair"
+        ],
+        "priority": "P1"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_exam_table",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "诊疗床参考 / 身体房支撑件",
+      "scaleMeters": [
+        2.28,
+        1.18,
+        0.92
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "blue_cushion",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "rubber_black",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          1.094,
+          0.531,
+          0.442
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 4980
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_exam_table.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_exam_table.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "bed",
+        "roomHints": [
+          "level_04_body_chair"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_memory_recliner",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "三椅室核心交互锚点",
+      "scaleMeters": [
+        1.42,
+        1.48,
+        1.82
+      ],
+      "silhouette": [
+        "reclined medical chair",
+        "head ring",
+        "arm restraints",
+        "lift base"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "blue_cushion",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium",
+        "surgical_lens"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.682,
+          0.666,
+          0.874
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 5940
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_memory_recliner.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_memory_recliner.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "bed",
+        "roomHints": [
+          "level_04_childhood_chair",
+          "level_04_rescue_chair",
+          "level_04_body_chair"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_scan_arch",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "治疗椅背后的机器框架",
+      "scaleMeters": [
+        1.96,
+        2.05,
+        0.82
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "smoked_titanium",
+        "surgical_lens",
+        "translucent_curtain"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "none-or-thin-trigger",
+        "reason": "decorative/transparent/wall/ceiling furniture"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 4980
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_scan_arch.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_scan_arch.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "barrier",
+        "roomHints": [
+          "level_04_childhood_chair",
+          "level_04_rescue_chair",
+          "level_04_body_chair"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_projection_pod",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "假童年/假救援来源",
+      "scaleMeters": [
+        0.98,
+        1.42,
+        1.26
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.47,
+          0.639,
+          0.605
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 4740
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_projection_pod.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_projection_pod.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "lamp",
+        "roomHints": [
+          "level_04_childhood_chair",
+          "level_04_rescue_chair"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_rescue_speaker_panel",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "救援房误导声源",
+      "scaleMeters": [
+        1.24,
+        0.72,
+        0.12
+      ],
+      "silhouette": [
+        "flat wall module",
+        "framed panel",
+        "thin depth"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "red_fault",
+        "smoked_titanium"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked"
+      ],
+      "collisionProxy": {
+        "type": "none-or-thin-trigger",
+        "reason": "decorative/transparent/wall/ceiling furniture"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 3140
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_rescue_speaker_panel.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_rescue_speaker_panel.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "wall_panel",
+        "roomHints": [
+          "level_04_rescue_chair"
+        ],
+        "priority": "P2"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_cable_trolley",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "移动医疗设备 / 低遮挡",
+      "scaleMeters": [
+        0.82,
+        1.36,
+        0.68
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "rubber_black",
+        "smoked_titanium"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.394,
+          0.612,
+          0.326
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 3780
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_cable_trolley.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_cable_trolley.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "crate",
+        "roomHints": [
+          "level_04_rescue_chair",
+          "level_04_body_chair",
+          "level_04_therapy_theater"
+        ],
+        "priority": "P1"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_observation_desk",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "监视感 / 未来 puzzle host",
+      "scaleMeters": [
+        1.72,
+        1.34,
+        1.16
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.826,
+          0.603,
+          0.557
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 3540
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_observation_desk.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_observation_desk.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "table",
+        "roomHints": [
+          "level_04_waiting_room",
+          "level_04_body_chair"
+        ],
+        "priority": "P1"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_surgical_light",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "身体揭示聚光 / 顶部视觉锚",
+      "scaleMeters": [
+        1.06,
+        1.22,
+        0.92
+      ],
+      "silhouette": [
+        "ceiling armature",
+        "round lens cluster",
+        "thin medical arms"
+      ],
+      "materialSlots": [
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "smoked_titanium",
+        "surgical_lens"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked"
+      ],
+      "collisionProxy": {
+        "type": "none-or-thin-trigger",
+        "reason": "decorative/transparent/wall/ceiling furniture"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 5060
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_surgical_light.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_surgical_light.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "lamp",
+        "roomHints": [
+          "level_04_body_chair",
+          "level_04_therapy_theater"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_monitor_arm",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "身体房大屏/公式载体，但内容 runtime",
+      "scaleMeters": [
+        2.18,
+        1.78,
+        0.72
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          1.046,
+          0.801,
+          0.346
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 5220
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_monitor_arm.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_monitor_arm.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "table",
+        "roomHints": [
+          "level_04_body_chair"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_privacy_screen",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "身体反转遮挡 / 半透明恐怖感",
+      "scaleMeters": [
+        1.86,
+        1.92,
+        0.32
+      ],
+      "silhouette": [
+        "white ceramic shell",
+        "dark titanium base",
+        "cyan status detail"
+      ],
+      "materialSlots": [
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "translucent_curtain"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked"
+      ],
+      "collisionProxy": {
+        "type": "none-or-thin-trigger",
+        "reason": "decorative/transparent/wall/ceiling furniture"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 3540
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_privacy_screen.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_privacy_screen.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "barrier",
+        "roomHints": [
+          "level_04_body_chair"
+        ],
+        "priority": "P1"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_sedation_gate",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "治疗剧场前的安全/镇静门槛",
+      "scaleMeters": [
+        1.92,
+        2.36,
+        0.72
+      ],
+      "silhouette": [
+        "two vertical towers",
+        "crossbar",
+        "low glass barrier"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "translucent_curtain"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked",
+        "clue_available",
+        "solved"
+      ],
+      "collisionProxy": {
+        "type": "none-or-thin-trigger",
+        "reason": "decorative/transparent/wall/ceiling furniture"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 5220
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_sedation_gate.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_sedation_gate.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "barrier",
+        "roomHints": [
+          "level_04_therapy_theater"
+        ],
+        "priority": "P0"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    },
+    {
+      "assetFamily": "level04_memory_clinic_furniture_v1",
+      "modelKey": "hp_l4_cineclinic_theater_wall",
+      "assetClass": "furniture",
+      "readiness": "build-ready",
+      "role": "boss/剧场背景，不含怪和玩法",
+      "scaleMeters": [
+        5.05,
+        2.32,
+        0.42
+      ],
+      "silhouette": [
+        "flat wall module",
+        "framed panel",
+        "thin depth"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "states": [
+        "idle",
+        "powered",
+        "active",
+        "fault",
+        "locked"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          2.424,
+          1.044,
+          0.202
+        ],
+        "blocks": "furniture footprint only; keep doors and critical route clear"
+      },
+      "runtimeContent": "No baked puzzle answers, localized text, digits, room numbers, or UI copy. Screens/lights are runtime/config driven.",
+      "lodPolicy": {
+        "mobile": "single GLB, simple primitive silhouette, bevels only on visible edges",
+        "triangleBudget": 4260
+      },
+      "pathPlan": {
+        "glb": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_theater_wall.glb",
+        "sourceBlend": "src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_theater_wall.blend"
+      },
+      "integration": {
+        "builderPack": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+        "group": "诊疗",
+        "footprintFamily": "wall_panel",
+        "roomHints": [
+          "level_04_therapy_theater"
+        ],
+        "priority": "P1"
+      },
+      "qaEvidence": {
+        "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+        "provenance": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_source_provenance.json",
+        "mathReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_math_report.json",
+        "blenderReport": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_blender_report.json"
+      }
+    }
+  ]
+}

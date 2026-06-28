@@ -1,0 +1,294 @@
+{
+  "schemaVersion": "hp.blender-generation-report.v1",
+  "assets": [
+    {
+      "modelKey": "hp_l4_cineclinic_decon_gate",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_decon_gate.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_decon_gate.blend",
+      "partCount": 13,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens",
+        "translucent_curtain"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_reception_counter",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_reception_counter.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_reception_counter.blend",
+      "partCount": 13,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_waiting_sofa_row",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_waiting_sofa_row.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_waiting_sofa_row.blend",
+      "partCount": 14,
+      "materials": [
+        "ceramic_white",
+        "dark_acoustic_mesh",
+        "lime_cushion",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_lime_ottoman",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_lime_ottoman.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_lime_ottoman.blend",
+      "partCount": 8,
+      "materials": [
+        "lime_cushion",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_side_table_planter",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_side_table_planter.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_side_table_planter.blend",
+      "partCount": 10,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "dark_acoustic_mesh",
+        "plant_green",
+        "smoked_titanium",
+        "warm_wood"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_triage_kiosk",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_triage_kiosk.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_triage_kiosk.blend",
+      "partCount": 8,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "cyan_screen",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_med_cabinet",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_med_cabinet.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_med_cabinet.blend",
+      "partCount": 11,
+      "materials": [
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_record_wall_cabinet",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_record_wall_cabinet.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_record_wall_cabinet.blend",
+      "partCount": 29,
+      "materials": [
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_exam_table",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_exam_table.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_exam_table.blend",
+      "partCount": 12,
+      "materials": [
+        "blue_cushion",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "rubber_black",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_memory_recliner",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_memory_recliner.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_memory_recliner.blend",
+      "partCount": 16,
+      "materials": [
+        "black_glass_screen",
+        "blue_cushion",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_scan_arch",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_scan_arch.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_scan_arch.blend",
+      "partCount": 12,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "smoked_titanium",
+        "surgical_lens",
+        "translucent_curtain"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_projection_pod",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_projection_pod.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_projection_pod.blend",
+      "partCount": 11,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_rescue_speaker_panel",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_rescue_speaker_panel.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_rescue_speaker_panel.blend",
+      "partCount": 11,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "red_fault",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_cable_trolley",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_cable_trolley.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_cable_trolley.blend",
+      "partCount": 12,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "rubber_black",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_observation_desk",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_observation_desk.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_observation_desk.blend",
+      "partCount": 11,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_surgical_light",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_surgical_light.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_surgical_light.blend",
+      "partCount": 14,
+      "materials": [
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_monitor_arm",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_monitor_arm.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_monitor_arm.blend",
+      "partCount": 13,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_privacy_screen",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_privacy_screen.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_privacy_screen.blend",
+      "partCount": 11,
+      "materials": [
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "translucent_curtain"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_sedation_gate",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_sedation_gate.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_sedation_gate.blend",
+      "partCount": 13,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "translucent_curtain"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_theater_wall",
+      "glb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_theater_wall.glb",
+      "sourceBlend": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/source_blend/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_theater_wall.blend",
+      "partCount": 14,
+      "materials": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    }
+  ]
+}

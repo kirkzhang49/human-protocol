@@ -1,0 +1,424 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_05_reclamation_core",
+  "modelKey": "age_museum_puzzle_orb_blue",
+  "category": "interaction",
+  "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_blue.glb",
+  "fileName": "age_museum_puzzle_orb_blue.glb",
+  "sourceAsset": {
+    "modelKey": "age_museum_puzzle_orb_blue",
+    "category": "interaction",
+    "url": "/src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_blue.glb",
+    "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_blue.glb",
+    "sizeMeters": [
+      0.72,
+      0.72,
+      0.72
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 209540,
+      "meshes": 7,
+      "nodes": 7,
+      "skins": 0,
+      "primitives": 7,
+      "materials": 5,
+      "textures": 0,
+      "images": 0,
+      "accessors": 28,
+      "bufferViews": 28,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 5028
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_blue.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 0,
+    "vertexCount": 15084,
+    "triangleCount": 5028,
+    "meshCount": 7,
+    "materialCount": 5,
+    "nodeCount": 7,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.343,
+        -0.385,
+        -0.337
+      ],
+      "center": [
+        0,
+        -0.021,
+        0
+      ],
+      "size": [
+        0.686,
+        0.728,
+        0.674
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "puzzle_orb_blue_outer_glass",
+        "vertexOffset": 0,
+        "vertexCount": 6624,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "puzzle_orb_blue_core",
+        "vertexOffset": 6624,
+        "vertexCount": 2880,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "puzzle_orb_blue_equator_brass",
+        "vertexOffset": 9504,
+        "vertexCount": 2304,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "puzzle_orb_blue_vertical_brass",
+        "vertexOffset": 11808,
+        "vertexCount": 2304,
+        "bindMatrix": [
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "puzzle_orb_blue_base_socket",
+        "vertexOffset": 14112,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.35,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.35,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "puzzle_orb_blue_cyan_reflection_plate",
+        "vertexOffset": 14436,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.09,
+          0.17,
+          0.255,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.09,
+          -0.17,
+          -0.255,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "puzzle_orb_blue_small_accession_tag",
+        "vertexOffset": 14760,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.18,
+          -0.18,
+          0.255,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.18,
+          0.18,
+          -0.255,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "puzzle-target:level_05_north_lock_sequence:level_05_north_blue",
+      "source": "level.puzzles.targets",
+      "role": "puzzle_target",
+      "roomId": "level_05_north_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -1.6,
+        1.2,
+        -5.1
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "puzzle_target",
+        "color:blue",
+        "puzzle_orb_blue"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": {
+        "puzzleId": "level_05_north_lock_sequence",
+        "targetId": "level_05_north_blue",
+        "colorKey": "blue"
+      },
+      "estimatedBounds": {
+        "center": [
+          -1.6,
+          1.2,
+          -5.1
+        ],
+        "halfSize": [
+          0.36,
+          0.36,
+          0.36
+        ]
+      }
+    }
+  ]
+}

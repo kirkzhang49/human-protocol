@@ -1,0 +1,885 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_06_cyberpunk_foyer",
+  "modelKey": "room_ceiling_panel_maintenance",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_ceiling_panel_maintenance.glb",
+  "fileName": "hp_room_ceiling_panel_maintenance.glb",
+  "sourceAsset": {
+    "modelKey": "room_ceiling_panel_maintenance",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_ceiling_panel_maintenance.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_ceiling_panel_maintenance.glb",
+    "sizeMeters": [
+      2.4,
+      0.28,
+      1.45
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 6460,
+      "meshes": 2,
+      "nodes": 2,
+      "skins": 0,
+      "primitives": 2,
+      "materials": 2,
+      "textures": 2,
+      "images": 2,
+      "accessors": 7,
+      "bufferViews": 8,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_materials_unlit",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 192
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_ceiling_panel_maintenance.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 411000,
+    "vertexCount": 576,
+    "triangleCount": 192,
+    "meshCount": 16,
+    "materialCount": 5,
+    "nodeCount": 16,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -1.6,
+        0,
+        -1.1
+      ],
+      "center": [
+        0,
+        0.1575,
+        0
+      ],
+      "size": [
+        3.2,
+        0.315,
+        2.2
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_shadow_backplate",
+        "vertexOffset": 411000,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.04,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.04,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_recess_left",
+        "vertexOffset": 411036,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.82,
+          0.098,
+          -0.36,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.82,
+          -0.098,
+          0.36,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_recess_right",
+        "vertexOffset": 411072,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.82,
+          0.098,
+          0.36,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.82,
+          -0.098,
+          -0.36,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_worn_insert_a",
+        "vertexOffset": 411108,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.62,
+          0.123,
+          0.48,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.62,
+          -0.123,
+          -0.48,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_worn_insert_b",
+        "vertexOffset": 411144,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.62,
+          0.123,
+          -0.48,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.62,
+          -0.123,
+          0.48,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_long_beam_-132",
+        "vertexOffset": 411180,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.32,
+          0.19,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.32,
+          -0.19,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_long_beam_-044",
+        "vertexOffset": 411216,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.44,
+          0.19,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.44,
+          -0.19,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_long_beam_044",
+        "vertexOffset": 411252,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.44,
+          0.19,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.44,
+          -0.19,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_long_beam_132",
+        "vertexOffset": 411288,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.32,
+          0.19,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.32,
+          -0.19,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_cross_beam_-086",
+        "vertexOffset": 411324,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.205,
+          -0.86,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.205,
+          0.86,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_cross_beam_-028",
+        "vertexOffset": 411360,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.205,
+          -0.28,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.205,
+          0.28,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_cross_beam_028",
+        "vertexOffset": 411396,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.205,
+          0.28,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.205,
+          -0.28,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_cross_beam_086",
+        "vertexOffset": 411432,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.205,
+          0.86,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.205,
+          -0.86,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_cyan_spine",
+        "vertexOffset": 411468,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.44,
+          0.297,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.44,
+          -0.297,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_cyan_short_a",
+        "vertexOffset": 411504,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.72,
+          0.3,
+          0.62,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.72,
+          -0.3,
+          -0.62,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_ceiling_cyan_short_b",
+        "vertexOffset": 411540,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.92,
+          0.3,
+          -0.62,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.92,
+          -0.3,
+          0.62,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:level_06_foyer_hall:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_06_foyer_hall",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.65,
+        1
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        4.6875,
+        1,
+        7.727273
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.65,
+          1
+        ],
+        "halfSize": [
+          5.625,
+          0.14,
+          5.602273
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_power_alcove:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_06_power_alcove",
+      "secondaryRoomId": null,
+      "position": [
+        -9.4,
+        3.65,
+        -3
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.3125,
+        1,
+        2.272727
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -9.4,
+          3.65,
+          -3
+        ],
+        "halfSize": [
+          1.575,
+          0.14,
+          1.647727
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_lift_atrium:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_06_lift_atrium",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.65,
+        -14.2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.5625,
+        1,
+        1.545455
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.65,
+          -14.2
+        ],
+        "halfSize": [
+          1.875,
+          0.14,
+          1.120455
+        ]
+      }
+    }
+  ]
+}

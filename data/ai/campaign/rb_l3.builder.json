@@ -1,0 +1,458 @@
+{
+  "schemaVersion": "hp.builder.v1",
+  "projectId": "rb_l3",
+  "title": "人类博物馆·重制",
+  "rooms": [
+    {
+      "id": "rb_l3_r0",
+      "label": "展厅入口",
+      "style": "sterile",
+      "center": [
+        0,
+        -4
+      ],
+      "size": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "rb_l3_r1",
+      "label": "工具展厅",
+      "style": "museum",
+      "center": [
+        0,
+        -12.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l3_r2",
+      "label": "影像展厅",
+      "style": "museum",
+      "center": [
+        0,
+        -21.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l3_r3",
+      "label": "身体展厅",
+      "style": "museum",
+      "center": [
+        0,
+        -30.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l3_r4",
+      "label": "中央档案",
+      "style": "core",
+      "center": [
+        0,
+        -39.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l3_r5",
+      "label": "撤离电梯",
+      "style": "exit",
+      "center": [
+        0,
+        -47
+      ],
+      "size": [
+        12,
+        6
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "id": "rb_l3_d0",
+      "fromRoomId": "rb_l3_r0",
+      "toRoomId": "rb_l3_r1",
+      "lockType": "none"
+    },
+    {
+      "id": "rb_l3_d1",
+      "fromRoomId": "rb_l3_r1",
+      "toRoomId": "rb_l3_r2",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "circuit_grid",
+      "puzzleRoomId": "rb_l3_r1",
+      "doorFamily": "industrial"
+    },
+    {
+      "id": "rb_l3_d2",
+      "fromRoomId": "rb_l3_r2",
+      "toRoomId": "rb_l3_r3",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "surveillance_match",
+      "puzzleRoomId": "rb_l3_r2",
+      "doorFamily": "clinic"
+    },
+    {
+      "id": "rb_l3_d3",
+      "fromRoomId": "rb_l3_r3",
+      "toRoomId": "rb_l3_r4",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "color_sequence",
+      "puzzleRoomId": "rb_l3_r3",
+      "doorFamily": "reclamation"
+    },
+    {
+      "id": "rb_l3_d4",
+      "fromRoomId": "rb_l3_r4",
+      "toRoomId": "rb_l3_r5",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "archive_merge",
+      "puzzleRoomId": "rb_l3_r4",
+      "doorFamily": "elevator"
+    }
+  ],
+  "props": [
+    {
+      "id": "rb_l3_p0",
+      "modelKey": "room_museum_archive_column",
+      "roomId": "rb_l3_r0",
+      "position": [
+        -4.08,
+        -1.44
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p1",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l3_r0",
+      "position": [
+        4.08,
+        -6.5600000000000005
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p2",
+      "modelKey": "room_museum_glass_vitrine_specimen",
+      "roomId": "rb_l3_r0",
+      "position": [
+        -4.08,
+        -6.4
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p3",
+      "modelKey": "room_museum_archive_column",
+      "roomId": "rb_l3_r1",
+      "position": [
+        -4.08,
+        -9.620000000000001
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p4",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l3_r1",
+      "position": [
+        4.08,
+        -15.379999999999999
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p5",
+      "modelKey": "room_museum_low_barrier",
+      "roomId": "rb_l3_r1",
+      "position": [
+        -4.08,
+        -15.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p6",
+      "modelKey": "room_museum_low_barrier",
+      "roomId": "rb_l3_r2",
+      "position": [
+        -4.08,
+        -18.62
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p7",
+      "modelKey": "room_museum_archive_column",
+      "roomId": "rb_l3_r2",
+      "position": [
+        4.08,
+        -24.38
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p8",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l3_r2",
+      "position": [
+        -4.08,
+        -24.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p9",
+      "modelKey": "room_museum_archive_column",
+      "roomId": "rb_l3_r3",
+      "position": [
+        -4.08,
+        -27.62
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p10",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l3_r3",
+      "position": [
+        4.08,
+        -33.38
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p11",
+      "modelKey": "room_museum_glass_vitrine_specimen",
+      "roomId": "rb_l3_r3",
+      "position": [
+        -4.08,
+        -33.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p12",
+      "modelKey": "room_museum_archive_column",
+      "roomId": "rb_l3_r4",
+      "position": [
+        -4.08,
+        -36.62
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p13",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l3_r4",
+      "position": [
+        4.08,
+        -42.38
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_p14",
+      "modelKey": "room_museum_low_barrier",
+      "roomId": "rb_l3_r4",
+      "position": [
+        -4.08,
+        -42.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_tool_last_human_tool_vitrine",
+      "modelKey": "room_museum_last_human_tool_vitrine",
+      "roomId": "rb_l3_r1",
+      "position": [
+        0,
+        -14.95
+      ],
+      "rotationY": 0.04,
+      "scale": 1,
+      "story": {
+        "title": "展柜记录",
+        "clue": "展柜记录：最后人类不是姓名，是协议。",
+        "hint": "再核对一次相框。"
+      }
+    },
+    {
+      "id": "rb_l3_voice_archive_case_asset",
+      "modelKey": "room_museum_voice_archive_case",
+      "roomId": "rb_l3_r2",
+      "position": [
+        0,
+        -23
+      ],
+      "rotationY": -0.08,
+      "scale": 1
+    },
+    {
+      "id": "rb_l3_body_skeleton_vitrine_asset",
+      "modelKey": "room_museum_skeleton_vitrine",
+      "roomId": "rb_l3_r3",
+      "position": [
+        -2.8,
+        -30.85
+      ],
+      "rotationY": -0.08,
+      "scale": 1
+    }
+  ],
+  "puzzles": [
+    {
+      "id": "rb_l3_pz1",
+      "kind": "circuit_grid",
+      "linkedDoorId": "rb_l3_d1",
+      "roomId": "rb_l3_r1",
+      "position": [
+        0,
+        -14.95
+      ],
+      "rotationY": 0,
+      "sourceInteraction": {
+        "type": "terminal",
+        "radius": 1.9,
+        "visualKey": "none",
+        "materialKey": "terminal_cyan",
+        "label": "工具档案校准",
+        "hostPropId": "rb_l3_tool_last_human_tool_vitrine"
+      }
+    },
+    {
+      "id": "rb_l3_pz2",
+      "kind": "surveillance_match",
+      "linkedDoorId": "rb_l3_d2",
+      "roomId": "rb_l3_r2",
+      "position": [
+        0,
+        -21.5
+      ],
+      "rotationY": 0
+    },
+    {
+      "id": "rb_l3_pz3",
+      "kind": "color_sequence",
+      "linkedDoorId": "rb_l3_d3",
+      "roomId": "rb_l3_r3",
+      "position": [
+        0,
+        -30.5
+      ],
+      "rotationY": 0,
+      "components": [
+        {
+          "id": "rb_l3_pz3_o0",
+          "role": "orb_cyan",
+          "roomId": "rb_l3_r3",
+          "position": [
+            -3.5,
+            -28.9
+          ]
+        },
+        {
+          "id": "rb_l3_pz3_o1",
+          "role": "orb_red",
+          "roomId": "rb_l3_r3",
+          "position": [
+            3.5,
+            -28.9
+          ]
+        },
+        {
+          "id": "rb_l3_pz3_o2",
+          "role": "orb_yellow",
+          "roomId": "rb_l3_r3",
+          "position": [
+            0,
+            -27.9
+          ]
+        }
+      ]
+    },
+    {
+      "id": "rb_l3_pz4",
+      "kind": "archive_merge",
+      "linkedDoorId": "rb_l3_d4",
+      "roomId": "rb_l3_r4",
+      "position": [
+        0,
+        -39.5
+      ],
+      "rotationY": 0,
+      "archiveTargetValue": 512
+    }
+  ],
+  "robots": [
+    {
+      "id": "rb_l3_rb0",
+      "roomId": "rb_l3_r3",
+      "archetype": "clamp_bot",
+      "count": 2
+    },
+    {
+      "id": "rb_l3_rb1",
+      "roomId": "rb_l3_r4",
+      "archetype": "custodian_elite",
+      "count": 1,
+      "tier": "elite"
+    }
+  ],
+  "pickups": [
+    {
+      "id": "rb_l3_pk0",
+      "kind": "coreCell",
+      "roomId": "rb_l3_r2",
+      "position": [
+        -2,
+        -23.5
+      ]
+    }
+  ],
+  "story": {
+    "templateId": "museum_archive",
+    "victoryLine": "展柜记录：最后人类不是姓名，是协议。",
+    "transitionLine": "电梯门合拢，登记灯熄灭。"
+  },
+  "exitRoomId": "rb_l3_r5",
+  "lighting": {
+    "ambient": 0.56,
+    "keyColor": "#d6ebe8",
+    "keyIntensity": 0.98,
+    "fog": 0.34,
+    "bloom": 0.52,
+    "shadow": 0.5
+  }
+}

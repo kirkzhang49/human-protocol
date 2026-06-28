@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "hp.image2.textureReport.v1",
+  "assetFamily": "hp_level01_workcell_image2_v1",
+  "generatedAt": "2026-06-20",
+  "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+  "sourceSha256": "599bfcfe5ab52d202d499ff4f19025e3bf73724fc3f9c067c3b392b3dd241364",
+  "atlas": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.png",
+  "regions": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.regions.json",
+  "fixedRectCuts": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts",
+  "debugAtlas": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.debug.png",
+  "regionCount": 12,
+  "assetModelKeys": [
+    "room_l1_img2_mobile_repair_cart",
+    "room_l1_img2_hydraulic_lift_table",
+    "room_l1_img2_wall_tool_board",
+    "room_l1_img2_prosthetic_parts_cabinet",
+    "room_l1_img2_sterile_wash_basin"
+  ],
+  "qaNotes": [
+    "Image2 source contains all five requested workcell references.",
+    "Cyan is isolated to small diagnostic glass crops and should stay an accent.",
+    "Hazard strip crops are available for small edge marks; avoid large striped surfaces."
+  ]
+}

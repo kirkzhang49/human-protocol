@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "hp.level03-museum-shell-assets.v5",
+  "generatedBy": "scripts/asset-build/blender-generate-level03-museum-shell-assets.py",
+  "purpose": "Reusable Level 3 museum interior shell using the actual full-room image2 museum floor composition instead of repeated generated tiles.",
+  "sourceBlend": "src/assets/source_blend/level03/human_protocol_level03_museum_shell_assets_v5.blend",
+  "textures": [
+    "src/assets/textures/environment/hero-floors/image2/source-roomfit/level03_image2_full_room_human_museum_gallery_floor_18x12.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v3.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png"
+  ],
+  "models": [
+    {
+      "modelKey": "room_floor_tile_museum",
+      "file": "src/assets/models/environment/shells/hp_room_floor_tile_museum.glb",
+      "primaryTexture": "src/assets/textures/environment/hero-floors/image2/source-roomfit/level03_image2_full_room_human_museum_gallery_floor_18x12.png",
+      "qualityNotes": [
+        "top face uses the authored full-room level03 image2 museum floor, not a generated repeated grid",
+        "geometry only adds a thin smoked edge lip so the image2 composition remains the visual source of truth",
+        "raw WebGPU should place this as a single scaled room floor, matching the Three hero-floor intent"
+      ]
+    },
+    {
+      "modelKey": "room_ceiling_panel_museum",
+      "file": "src/assets/models/environment/shells/hp_room_ceiling_panel_museum.glb",
+      "primaryTexture": "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v3.png",
+      "qualityNotes": [
+        "image2 underside face uses explicit 0-1 UVs for visible grid skin",
+        "deep coffer beams and dark inserts make the ceiling read as a real gallery structure",
+        "warm track spot housings create museum display light while small cyan service blades keep the raw WebGPU identity",
+        "the shell stays model-key compatible with hp:human_museum_gallery_shell_v1 for config-driven reuse"
+      ]
+    },
+    {
+      "modelKey": "room_wall_panel_museum",
+      "file": "src/assets/models/environment/shells/hp_room_wall_panel_museum.glb",
+      "primaryTexture": "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+      "qualityNotes": [
+        "black stone wall slab, smoked metal frame, and thin brass datum lines match the authored museum floor",
+        "warm label slots replace large cyan wall washes so the room reads as a gallery",
+        "a single small cyan service tick preserves Human Protocol identity without dominating the palette"
+      ]
+    },
+    {
+      "modelKey": "room_corner_pillar_museum",
+      "file": "src/assets/models/environment/shells/hp_room_corner_pillar_museum.glb",
+      "qualityNotes": [
+        "black pylon with smoked edges and brass caps replaces generic maintenance-style pillar color",
+        "small cyan status slit is intentionally low budget and non-dominant"
+      ]
+    },
+    {
+      "modelKey": "room_wall_wash_light_museum",
+      "file": "src/assets/models/environment/shells/hp_room_wall_wash_light_museum.glb",
+      "qualityNotes": [
+        "warm gallery rail light supports museum readability",
+        "aged brass endcaps tie wall lighting to the floor inlay language"
+      ]
+    }
+  ],
+  "configReady": {
+    "shellKit": "hp:human_museum_gallery_shell_v1",
+    "lightingPreset": "hp:human_museum_gallery_lighting_v1",
+    "level": "level_03_human_museum"
+  }
+}

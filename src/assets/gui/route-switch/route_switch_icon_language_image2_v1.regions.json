@@ -1,0 +1,125 @@
+{
+  "atlasSize": [
+    1024,
+    768
+  ],
+  "source": "src/assets/gui/route-switch/image2-sources/route_switch_icon_language_image2_source_v1.png",
+  "targetBadgeSource": "src/assets/gui/route-switch/image2-sources/route_switch_target_badges_ancient_image2_source_v1.png",
+  "sourcePolicy": "Composed from saved route-switch Image2 icon-language source pixels plus a dedicated ancient target-badge Image2 source. Local script crops, keys only edge-connected black background to transparency, preserves internal dark metal faces, applies a restrained material/visibility pass, resizes, packs PNG regions, and writes JSON. No text is baked.",
+  "license": "owned-generated-output",
+  "sourceRegions": {
+    "title_archive_router": [
+      18,
+      72,
+      520,
+      330
+    ],
+    "auth_authorized": [
+      870,
+      430,
+      350,
+      370
+    ],
+    "auth_locked": [
+      65,
+      845,
+      355,
+      345
+    ],
+    "footer_branch": [
+      470,
+      845,
+      350,
+      350
+    ],
+    "auth_denied": [
+      850,
+      840,
+      380,
+      355
+    ]
+  },
+  "targetSourceRegions": {
+    "icon_door": [
+      50,
+      48,
+      555,
+      555
+    ],
+    "icon_terminal": [
+      650,
+      48,
+      555,
+      555
+    ],
+    "icon_robot": [
+      50,
+      650,
+      555,
+      555
+    ],
+    "icon_gate": [
+      650,
+      650,
+      555,
+      555
+    ]
+  },
+  "regions": {
+    "title_archive_router": [
+      24,
+      24,
+      360,
+      220
+    ],
+    "icon_door": [
+      416,
+      24,
+      156,
+      156
+    ],
+    "icon_terminal": [
+      592,
+      24,
+      156,
+      156
+    ],
+    "icon_robot": [
+      768,
+      24,
+      156,
+      156
+    ],
+    "icon_gate": [
+      416,
+      208,
+      156,
+      156
+    ],
+    "auth_authorized": [
+      592,
+      208,
+      156,
+      156
+    ],
+    "auth_locked": [
+      768,
+      208,
+      156,
+      156
+    ],
+    "footer_branch": [
+      416,
+      392,
+      156,
+      156
+    ],
+    "auth_denied": [
+      592,
+      392,
+      156,
+      156
+    ]
+  },
+  "notes": "Runtime uses Image2 icons to replace visible explanatory text: title emblem, output-kind symbols, authorization state, footer branch, and denied state. The four output-kind symbols are ancient brass/black-iron target medallions without blue line-dot language. React keeps hidden aria labels and state semantics."
+}

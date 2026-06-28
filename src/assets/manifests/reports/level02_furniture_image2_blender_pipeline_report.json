@@ -1,0 +1,1226 @@
+{
+  "schema": "human-protocol/level02-furniture-image2-blender-report@2",
+  "generatedAt": "2026-06-19",
+  "sourceBlend": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+  "manifest": "src/assets/manifests/builder/hp_level02_furniture_image2_v1.json",
+  "researchReportIncorporation": {
+    "source": "/Users/zhengkaizhang/Downloads/GPT 驱动的 3D 家具资产与游戏道具生产方案研究报告 (1).pdf",
+    "appliedRules": [
+      "GPT is used for specification, automation, metadata, and QA rather than direct final mesh generation",
+      "Blender source and deterministic scripts remain the production source of truth",
+      "GLB is the Web/runtime delivery format",
+      "palette roles, material budgets, platform hints, and AI/reference notes are recorded in the report"
+    ]
+  },
+  "artReferenceIncorporation": {
+    "source": "/Users/zhengkaizhang/Desktop/Screenshot 2026-06-19 at 10.29.30 AM.png",
+    "usage": "high-level style study only; no exact furniture design was copied",
+    "translatedRules": [
+      "organic gallery-furniture curves translated into restrained residential silhouettes",
+      "warm sculptural wood is expressed through large material planes and bevels, not many tiny grain lines",
+      "smoked chrome and muted brass kept to thin supports, handles, and rim highlights",
+      "soft upholstery reads through volume, rolled edges, and piping instead of dirty texture"
+    ],
+    "appliedControls": [
+      "organic slabs and flowing support columns are used on table/console/bookcase where believable",
+      "warm walnut is carried by broad material fields and large insets rather than repeated decorative micro-lines",
+      "smoked chrome is limited to thin structural accents and shadow lines",
+      "upholstery quality comes from rounded volume, rolled arms, piping, and integrated pads",
+      "decorative scatter is explicitly capped; small parts must explain construction or function"
+    ]
+  },
+  "platformBudget": {
+    "target": [
+      "desktop_web",
+      "mobile_web",
+      "raw_webgpu_builder"
+    ],
+    "format": "glb",
+    "texturePolicy": "shared Image2 atlas is selectively UV-mapped onto large readable surfaces; small structural parts stay PBR-only",
+    "standardMaterialRoles": "1-3 visible roles for simple furniture, 4-6 for larger hero furniture",
+    "emissivePolicy": "warm lamp only, no visible cyan scanner strips",
+    "lodIntent": "current builder pack uses cooked GLB; future LOD must be source-generated, not hand-patched",
+    "collisionProxy": "builder footprints use simple footprint families and sizeMeters"
+  },
+  "paletteIntent": {
+    "goal": "clean residential showroom, warm but not one-note beige, slightly over-controlled",
+    "referenceTranslation": [
+      "organic gallery-furniture curves translated into restrained residential silhouettes",
+      "warm sculptural wood is expressed through large material planes and bevels, not many tiny grain lines",
+      "smoked chrome and muted brass kept to thin supports, handles, and rim highlights",
+      "soft upholstery reads through volume, rolled edges, and piping instead of dirty texture"
+    ],
+    "dominantRoles": [
+      "ivory fabric",
+      "warm walnut",
+      "light oak",
+      "warm white cabinet",
+      "muted brass"
+    ],
+    "supportRoles": [
+      "smoked chrome",
+      "cool-gray seams",
+      "porcelain sink",
+      "low-saturation sage/blue-gray books"
+    ],
+    "forbiddenFirstRead": [
+      "large cyan strips",
+      "visible cameras",
+      "large service panels",
+      "dirty black cracks"
+    ],
+    "lowNoiseRules": [
+      "no decorative scatter of small spheres or repeated micro-lines",
+      "visible details must be structural: seams, handles, rails, plinths, cushions, or support members",
+      "large surfaces carry the color work; small geometry only marks contact, function, or construction"
+    ]
+  },
+  "textureIntent": {
+    "atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+    "regions": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.regions.json",
+    "strategy": "selective large-surface texture; no all-over poster wrapping",
+    "primaryApplications": {
+      "walnut_large_grain": [
+        "observation_dining_table tabletop"
+      ],
+      "honed_stone_warm_vein": [
+        "generated material evidence only; final counter uses cleaner PBR stone"
+      ],
+      "ivory_boucle_fabric": [
+        "generated material evidence only; final upholstery uses cleaner PBR fabric"
+      ],
+      "warm_lacquer_panel": [
+        "wardrobe and elevator large inset panels"
+      ],
+      "residential_art_panel": [
+        "family_portrait_console framed panel"
+      ],
+      "muted_book_spines": [
+        "observation_bookshelf book fronts"
+      ],
+      "shadow_trim_gap": [
+        "hidden control/service plates only"
+      ]
+    },
+    "avoid": [
+      "whole-object poster wrap",
+      "dense decorative micro-lines in geometry",
+      "texture on tiny knobs, poles, or handles",
+      "cyan sci-fi strips or visible camera motifs"
+    ]
+  },
+  "materialPalette": [
+    {
+      "key": "book_a",
+      "name": "l2_muted_book_warm_gray",
+      "role": "muted_book_spine",
+      "baseColor": [
+        0.56,
+        0.55,
+        0.5,
+        1.0
+      ],
+      "roughness": 0.78,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "book_b",
+      "name": "l2_muted_book_sage",
+      "role": "muted_book_spine",
+      "baseColor": [
+        0.5,
+        0.56,
+        0.48,
+        1.0
+      ],
+      "roughness": 0.8,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "book_c",
+      "name": "l2_muted_book_blue_gray",
+      "role": "muted_book_spine",
+      "baseColor": [
+        0.48,
+        0.54,
+        0.58,
+        1.0
+      ],
+      "roughness": 0.8,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "book_d",
+      "name": "l2_muted_book_ivory",
+      "role": "muted_book_spine",
+      "baseColor": [
+        0.78,
+        0.75,
+        0.66,
+        1.0
+      ],
+      "roughness": 0.8,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "brass",
+      "name": "l2_muted_champagne_hardware",
+      "role": "muted_metal_hardware",
+      "baseColor": [
+        0.64,
+        0.52,
+        0.3,
+        1.0
+      ],
+      "roughness": 0.42,
+      "metallic": 0.5,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "cabinet",
+      "name": "l2_residential_warm_white_cabinet",
+      "role": "warm_white_laminate",
+      "baseColor": [
+        0.84,
+        0.82,
+        0.72,
+        1.0
+      ],
+      "roughness": 0.74,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "cabinet_shadow",
+      "name": "l2_residential_cool_gray_reveal",
+      "role": "door_reveal_shadow",
+      "baseColor": [
+        0.5,
+        0.5,
+        0.46,
+        1.0
+      ],
+      "roughness": 0.84,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "chrome",
+      "name": "l2_smoked_chrome_gallery_accent",
+      "role": "smoked_chrome_thin_accent",
+      "baseColor": [
+        0.66,
+        0.65,
+        0.6,
+        1.0
+      ],
+      "roughness": 0.24,
+      "metallic": 0.9,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "fabric",
+      "name": "l2_residential_ivory_fabric",
+      "role": "clean_ivory_upholstery",
+      "baseColor": [
+        0.9,
+        0.87,
+        0.78,
+        1.0
+      ],
+      "roughness": 0.92,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "fabric_shadow",
+      "name": "l2_residential_cool_fabric_recess",
+      "role": "soft_cool_recess",
+      "baseColor": [
+        0.62,
+        0.6,
+        0.54,
+        1.0
+      ],
+      "roughness": 0.94,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "fabric_welt",
+      "name": "l2_residential_upholstery_welt",
+      "role": "soft_upholstery_edge_piping",
+      "baseColor": [
+        0.76,
+        0.72,
+        0.62,
+        1.0
+      ],
+      "roughness": 0.9,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "glass",
+      "name": "l2_warm_fabric_lamp_glow",
+      "role": "tiny_warm_emissive",
+      "baseColor": [
+        0.92,
+        0.78,
+        0.5,
+        0.58
+      ],
+      "roughness": 0.34,
+      "metallic": 0.0,
+      "alpha": 0.58,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "oak",
+      "name": "l2_residential_clean_oak",
+      "role": "light_oak",
+      "baseColor": [
+        0.7,
+        0.59,
+        0.4,
+        1.0
+      ],
+      "roughness": 0.58,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "oak_dark",
+      "name": "l2_residential_recessed_oak_shadow",
+      "role": "contact_shadow_oak",
+      "baseColor": [
+        0.38,
+        0.3,
+        0.21,
+        1.0
+      ],
+      "roughness": 0.68,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "porcelain",
+      "name": "l2_clean_porcelain_sink",
+      "role": "porcelain_household_surface",
+      "baseColor": [
+        0.78,
+        0.79,
+        0.74,
+        1.0
+      ],
+      "roughness": 0.64,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "shadow",
+      "name": "l2_hidden_control_shadow",
+      "role": "hidden_control_hint",
+      "baseColor": [
+        0.28,
+        0.28,
+        0.25,
+        1.0
+      ],
+      "roughness": 0.88,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "stone",
+      "name": "l2_warm_honed_stone",
+      "role": "clean_honed_stone",
+      "baseColor": [
+        0.78,
+        0.74,
+        0.64,
+        1.0
+      ],
+      "roughness": 0.72,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "tex_art",
+      "name": "l2_image2_residential_art_panel",
+      "role": "image2_residential_art_panel",
+      "baseColor": [
+        0.82,
+        0.68,
+        0.46,
+        1.0
+      ],
+      "roughness": 0.72,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+      "textureRegion": "residential_art_panel"
+    },
+    {
+      "key": "tex_books",
+      "name": "l2_image2_muted_book_spines",
+      "role": "image2_muted_book_spines",
+      "baseColor": [
+        0.54,
+        0.55,
+        0.5,
+        1.0
+      ],
+      "roughness": 0.82,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+      "textureRegion": "muted_book_spines"
+    },
+    {
+      "key": "tex_fabric",
+      "name": "l2_image2_ivory_boucle_fabric",
+      "role": "image2_ivory_boucle_fabric",
+      "baseColor": [
+        0.9,
+        0.87,
+        0.78,
+        1.0
+      ],
+      "roughness": 0.94,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+      "textureRegion": "ivory_boucle_fabric"
+    },
+    {
+      "key": "tex_lacquer",
+      "name": "l2_image2_warm_lacquer_panel",
+      "role": "image2_warm_lacquer_panel",
+      "baseColor": [
+        0.84,
+        0.79,
+        0.66,
+        1.0
+      ],
+      "roughness": 0.76,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+      "textureRegion": "warm_lacquer_panel"
+    },
+    {
+      "key": "tex_shadow",
+      "name": "l2_image2_shadow_trim_gap",
+      "role": "image2_shadow_trim_gap",
+      "baseColor": [
+        0.25,
+        0.24,
+        0.21,
+        1.0
+      ],
+      "roughness": 0.88,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+      "textureRegion": "shadow_trim_gap"
+    },
+    {
+      "key": "tex_stone",
+      "name": "l2_image2_honed_stone_warm_vein",
+      "role": "image2_honed_stone",
+      "baseColor": [
+        0.78,
+        0.74,
+        0.64,
+        1.0
+      ],
+      "roughness": 0.7,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+      "textureRegion": "honed_stone_warm_vein"
+    },
+    {
+      "key": "tex_walnut",
+      "name": "l2_image2_walnut_large_grain",
+      "role": "image2_walnut_large_grain",
+      "baseColor": [
+        0.58,
+        0.35,
+        0.18,
+        1.0
+      ],
+      "roughness": 0.54,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+      "textureRegion": "walnut_large_grain"
+    },
+    {
+      "key": "wallpaper",
+      "name": "l2_plain_warm_wallpaper",
+      "role": "quiet_wall_surface",
+      "baseColor": [
+        0.76,
+        0.73,
+        0.65,
+        1.0
+      ],
+      "roughness": 0.84,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "walnut",
+      "name": "l2_gallery_warm_walnut",
+      "role": "sculptural_warm_walnut",
+      "baseColor": [
+        0.56,
+        0.34,
+        0.18,
+        1.0
+      ],
+      "roughness": 0.52,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "walnut_dark",
+      "name": "l2_gallery_dark_woodgrain",
+      "role": "dark_recessed_woodgrain",
+      "baseColor": [
+        0.25,
+        0.15,
+        0.09,
+        1.0
+      ],
+      "roughness": 0.66,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    },
+    {
+      "key": "wood_rust",
+      "name": "l2_gallery_rust_wood_inlay",
+      "role": "warm_wood_inlay",
+      "baseColor": [
+        0.72,
+        0.3,
+        0.1,
+        1.0
+      ],
+      "roughness": 0.6,
+      "metallic": 0.0,
+      "alpha": 1.0,
+      "textureAtlas": null,
+      "textureRegion": null
+    }
+  ],
+  "image2Evidence": {
+    "atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+    "regions": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.regions.json",
+    "contactSheet": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_contact_sheet.png",
+    "sourceDirectory": "src/assets/textures/environment/level02-furniture-image2/image2-sources",
+    "application": "selective baseColorTexture regions mapped onto large readable surfaces; small construction details remain material-only"
+  },
+  "assets": [
+    {
+      "modelKey": "room_l2_img2_modular_sofa",
+      "sizeMeters": [
+        2.53,
+        1.007,
+        0.875
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_modular_sofa.glb",
+      "blueprint": {
+        "role": "large living-room anchor",
+        "silhouette": "long low sofa, rolled arms, continuous back",
+        "hiddenControlHint": "rear access seam only",
+        "constraints": {
+          "width": [
+            2.2,
+            2.6
+          ],
+          "height": [
+            0.8,
+            1.05
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_gallery_dark_woodgrain",
+        "l2_hidden_control_shadow",
+        "l2_residential_cool_fabric_recess",
+        "l2_residential_ivory_fabric",
+        "l2_residential_recessed_oak_shadow",
+        "l2_residential_upholstery_welt",
+        "l2_smoked_chrome_gallery_accent"
+      ],
+      "textureRegions": {},
+      "metadata": {
+        "asset_id": "room_l2_img2_modular_sofa",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_sofa_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_observation_dining_table",
+      "sizeMeters": [
+        1.895,
+        0.727,
+        0.957
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+      "blueprint": {
+        "role": "ordinary residential table",
+        "silhouette": "rounded rectangular/oval tabletop on four legs",
+        "hiddenControlHint": "thin underside seam",
+        "constraints": {
+          "width": [
+            1.6,
+            1.95
+          ],
+          "height": [
+            0.7,
+            0.82
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_gallery_dark_woodgrain",
+        "l2_hidden_control_shadow",
+        "l2_image2_walnut_large_grain",
+        "l2_smoked_chrome_gallery_accent"
+      ],
+      "textureRegions": {
+        "walnut_large_grain": [
+          "table_gallery_live_edge_walnut_top"
+        ]
+      },
+      "metadata": {
+        "asset_id": "room_l2_img2_observation_dining_table",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_table_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_nursery_bed",
+      "sizeMeters": [
+        1.48,
+        0.85,
+        0.76
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_nursery_bed.glb",
+      "blueprint": {
+        "role": "care bed without sci-fi base",
+        "silhouette": "soft mattress, low drawer base, sparse guard rails",
+        "hiddenControlHint": "small rear inspection plate",
+        "constraints": {
+          "width": [
+            1.35,
+            1.7
+          ],
+          "height": [
+            0.75,
+            1.05
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_gallery_dark_woodgrain",
+        "l2_gallery_warm_walnut",
+        "l2_hidden_control_shadow",
+        "l2_residential_clean_oak",
+        "l2_residential_cool_gray_reveal",
+        "l2_residential_ivory_fabric",
+        "l2_residential_upholstery_welt",
+        "l2_residential_warm_white_cabinet"
+      ],
+      "textureRegions": {},
+      "metadata": {
+        "asset_id": "room_l2_img2_nursery_bed",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_bed_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_family_portrait_console",
+      "sizeMeters": [
+        1.34,
+        0.92,
+        0.225
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_family_portrait_console.glb",
+      "blueprint": {
+        "role": "wall portrait and shallow console",
+        "silhouette": "framed domestic wall object",
+        "hiddenControlHint": "over-thick back board and underside slot",
+        "constraints": {
+          "width": [
+            1.1,
+            1.5
+          ],
+          "height": [
+            0.75,
+            1.1
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_gallery_warm_walnut",
+        "l2_hidden_control_shadow",
+        "l2_image2_residential_art_panel",
+        "l2_muted_champagne_hardware",
+        "l2_plain_warm_wallpaper"
+      ],
+      "textureRegions": {
+        "residential_art_panel": [
+          "portrait_sculptural_image2_art_panel"
+        ]
+      },
+      "metadata": {
+        "asset_id": "room_l2_img2_family_portrait_console",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_wall_panel_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_service_kitchen_counter",
+      "sizeMeters": [
+        1.94,
+        1.065,
+        0.75
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_service_kitchen_counter.glb",
+      "blueprint": {
+        "role": "kitchen base cabinet",
+        "silhouette": "countertop, sink, drawers, real handles",
+        "hiddenControlHint": "rear access plate",
+        "constraints": {
+          "width": [
+            1.7,
+            2.1
+          ],
+          "height": [
+            0.85,
+            1.12
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_clean_porcelain_sink",
+        "l2_gallery_warm_walnut",
+        "l2_hidden_control_shadow",
+        "l2_image2_warm_lacquer_panel",
+        "l2_muted_champagne_hardware",
+        "l2_residential_cool_gray_reveal",
+        "l2_residential_warm_white_cabinet",
+        "l2_warm_honed_stone"
+      ],
+      "textureRegions": {
+        "warm_lacquer_panel": [
+          "counter_inset_door_panel_0",
+          "counter_inset_door_panel_1",
+          "counter_inset_door_panel_2",
+          "counter_top_drawer_face_0",
+          "counter_top_drawer_face_1",
+          "counter_top_drawer_face_2"
+        ]
+      },
+      "metadata": {
+        "asset_id": "room_l2_img2_service_kitchen_counter",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_table_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_scanner_wardrobe",
+      "sizeMeters": [
+        1.24,
+        2.005,
+        0.692
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_scanner_wardrobe.glb",
+      "blueprint": {
+        "role": "ordinary wardrobe with quiet scanning implication",
+        "silhouette": "two tall doors, base plinth, cornice",
+        "hiddenControlHint": "center reveal and back gap",
+        "constraints": {
+          "width": [
+            1.05,
+            1.35
+          ],
+          "height": [
+            1.85,
+            2.2
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_gallery_dark_woodgrain",
+        "l2_gallery_warm_walnut",
+        "l2_hidden_control_shadow",
+        "l2_image2_warm_lacquer_panel",
+        "l2_muted_champagne_hardware",
+        "l2_residential_clean_oak",
+        "l2_residential_cool_gray_reveal"
+      ],
+      "textureRegions": {
+        "warm_lacquer_panel": [
+          "wardrobe_rear_left_large_cabinet_inset",
+          "wardrobe_rear_right_large_cabinet_inset",
+          "wardrobe_recessed_tall_door_+0.3",
+          "wardrobe_recessed_tall_door_-0.3"
+        ]
+      },
+      "metadata": {
+        "asset_id": "room_l2_img2_scanner_wardrobe",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_cabinet_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_camera_lamp",
+      "sizeMeters": [
+        0.44,
+        1.63,
+        0.447
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_camera_lamp.glb",
+      "blueprint": {
+        "role": "floor lamp",
+        "silhouette": "fabric shade, pole, weighted base",
+        "hiddenControlHint": "tiny underside collar",
+        "constraints": {
+          "width": [
+            0.36,
+            0.55
+          ],
+          "height": [
+            1.45,
+            1.75
+          ],
+          "glowAreaMax": 0.08
+        }
+      },
+      "materialSlots": [
+        "l2_hidden_control_shadow",
+        "l2_muted_champagne_hardware",
+        "l2_residential_upholstery_welt",
+        "l2_smoked_chrome_gallery_accent",
+        "l2_warm_fabric_lamp_glow"
+      ],
+      "textureRegions": {},
+      "metadata": {
+        "asset_id": "room_l2_img2_camera_lamp",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_lamp_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_living_end_elevator_fixture",
+      "sizeMeters": [
+        1.378,
+        2.12,
+        0.283
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_living_end_elevator_fixture.glb",
+      "blueprint": {
+        "role": "built-in end wall fixture",
+        "silhouette": "residential panel doors in warm surround",
+        "hiddenControlHint": "too-perfect central split",
+        "constraints": {
+          "width": [
+            1.15,
+            1.5
+          ],
+          "height": [
+            1.9,
+            2.25
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_gallery_dark_woodgrain",
+        "l2_gallery_warm_walnut",
+        "l2_hidden_control_shadow",
+        "l2_image2_warm_lacquer_panel",
+        "l2_muted_champagne_hardware",
+        "l2_residential_clean_oak"
+      ],
+      "textureRegions": {
+        "warm_lacquer_panel": [
+          "elevator_left_plain_panel_door",
+          "elevator_rear_large_residential_inset",
+          "elevator_right_plain_panel_door"
+        ]
+      },
+      "metadata": {
+        "asset_id": "room_l2_img2_living_end_elevator_fixture",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_cabinet_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_observation_bookshelf",
+      "sizeMeters": [
+        1.253,
+        1.837,
+        0.516
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_bookshelf.glb",
+      "blueprint": {
+        "role": "open bookcase",
+        "silhouette": "open shelves, books, lower doors",
+        "hiddenControlHint": "small rear plate hidden by shelves",
+        "constraints": {
+          "width": [
+            1.05,
+            1.4
+          ],
+          "height": [
+            1.55,
+            1.9
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_gallery_warm_walnut",
+        "l2_hidden_control_shadow",
+        "l2_image2_muted_book_spines",
+        "l2_muted_book_ivory",
+        "l2_muted_book_sage",
+        "l2_muted_champagne_hardware",
+        "l2_residential_warm_white_cabinet"
+      ],
+      "textureRegions": {
+        "muted_book_spines": [
+          "bookshelf_front_book_0_0",
+          "bookshelf_front_book_0_2",
+          "bookshelf_front_book_1_1",
+          "bookshelf_front_book_1_3",
+          "bookshelf_front_book_2_0",
+          "bookshelf_front_book_2_2",
+          "bookshelf_front_book_3_1",
+          "bookshelf_front_book_3_3"
+        ]
+      },
+      "metadata": {
+        "asset_id": "room_l2_img2_observation_bookshelf",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_books_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_carekeeper_armchair",
+      "sizeMeters": [
+        1.24,
+        1.111,
+        0.827
+      ],
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_carekeeper_armchair.glb",
+      "blueprint": {
+        "role": "soft residential armchair",
+        "silhouette": "single cushion, rolled arms, rounded back",
+        "hiddenControlHint": "rear seam and small brass pins",
+        "constraints": {
+          "width": [
+            0.9,
+            1.25
+          ],
+          "height": [
+            0.85,
+            1.15
+          ],
+          "glowAreaMax": 0.0
+        }
+      },
+      "materialSlots": [
+        "l2_gallery_dark_woodgrain",
+        "l2_hidden_control_shadow",
+        "l2_muted_champagne_hardware",
+        "l2_residential_ivory_fabric",
+        "l2_residential_recessed_oak_shadow",
+        "l2_residential_upholstery_welt",
+        "l2_smoked_chrome_gallery_accent"
+      ],
+      "textureRegions": {},
+      "metadata": {
+        "asset_id": "room_l2_img2_carekeeper_armchair",
+        "style": "l2_clean_residential_image2_material_showroom",
+        "platform_hint": [
+          "desktop_web",
+          "mobile_web",
+          "raw_webgpu_builder"
+        ],
+        "collision": "builder_chair_footprint_proxy",
+        "lod_count": 1,
+        "source_file": "src/assets/source_blend/level02-furniture-image2/human_protocol_level02_furniture_image2_blender_v1.blend",
+        "texture_atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png"
+      },
+      "pipelineGates": [
+        "hard_reset_old_outputs",
+        "blender",
+        "large_silhouette_first",
+        "bevels",
+        "weighted_normals",
+        "grounded_pivot",
+        "named_parts",
+        "material_slots",
+        "selective_image2_texture_regions",
+        "math_inset_uv_mapping",
+        "hidden_control_hints_only",
+        "gallery_reference_translated_not_copied"
+      ]
+    }
+  ]
+}

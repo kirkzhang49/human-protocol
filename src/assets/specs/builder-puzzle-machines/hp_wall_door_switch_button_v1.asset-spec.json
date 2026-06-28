@@ -1,0 +1,160 @@
+{
+  "assetId": "hp_wall_door_switch_button_v1",
+  "modelKey": "hp_wall_door_switch_button_v1",
+  "displayName": "Wall Door Switch Lever",
+  "role": "generic wall-mounted repeatable door lever for wall-door-switch mechanisms",
+  "license": {
+    "status": "project-owned",
+    "commercialUse": true,
+    "modification": true,
+    "attributionRequired": false,
+    "notes": "Original deterministic Blender geometry and deterministic Image2-style texture pixels. No third-party mesh or texture is bundled. User reference image was high-level aesthetic direction only."
+  },
+  "referenceInputs": [
+    {
+      "path": "/Users/zhengkaizhang/Library/Containers/com.tencent.xinWeChat/Data/Documents/xwechat_files/wxid_tohlw3b0n15h12_00ac/temp/RWTemp/2026-06/6023ed73a57207488d03c9e96bbdca95/ed5265907dad5612f86767826635f90b.png",
+      "use": "high-level aesthetic direction only",
+      "redistributed": false
+    }
+  ],
+  "outputs": {
+    "glb": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_wall_door_switch_button_v1.glb",
+    "sourceBlend": "src/assets/source_blend/builder-puzzle-machines/hp_wall_door_switch_button_v1.blend",
+    "spec": "src/assets/specs/builder-puzzle-machines/hp_wall_door_switch_button_v1.asset-spec.json",
+    "report": "src/assets/manifests/reports/wall_door_switch_button_v1_blender_report.json",
+    "image2Atlas": "src/assets/textures/environment/builder-puzzle-machines/hp_wall_door_switch_lever_image2_atlas_v1.png",
+    "image2AtlasRegions": "src/assets/textures/environment/builder-puzzle-machines/hp_wall_door_switch_lever_image2_atlas_v1.regions.json",
+    "image2ContactSheet": "src/assets/manifests/reports/wall_door_switch_lever_image2_contact_sheet.png"
+  },
+  "image2": {
+    "prompt": "Generic Human Protocol wall-mounted mechanical door lever, premium sci-fi hospital / robot facility hardware, rounded warm white ceramic wall plate, smoked gunmetal titanium slide track, short upper-half dark metal pull handle, small precision bearing collar instead of an oversized ring, visible up/down motion notches with cyan and amber state light slots, clean Image2-baked material detail, readable first-person and mobile silhouette, no readable text, no logos, no gore. User reference image is used only as high-level aesthetic direction; final geometry and texture pixels are original deterministic project output.",
+    "generator": "deterministic Blender Python Image2-style texture source generator",
+    "license": "project-owned deterministic generated output",
+    "sourceTiles": [
+      {
+        "key": "ceramic_shell",
+        "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_ceramic_shell_image2.png",
+        "width": 256,
+        "height": 256,
+        "promptRole": "ceramic shell"
+      },
+      {
+        "key": "smoked_titanium_spine",
+        "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_smoked_titanium_spine_image2.png",
+        "width": 256,
+        "height": 256,
+        "promptRole": "smoked titanium spine"
+      },
+      {
+        "key": "black_rubber_recess",
+        "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_black_rubber_recess_image2.png",
+        "width": 256,
+        "height": 256,
+        "promptRole": "black rubber recess"
+      },
+      {
+        "key": "dark_handle_metal",
+        "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_dark_handle_metal_image2.png",
+        "width": 256,
+        "height": 256,
+        "promptRole": "dark handle metal"
+      },
+      {
+        "key": "cyan_status_glass",
+        "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_cyan_status_glass_image2.png",
+        "width": 256,
+        "height": 256,
+        "promptRole": "cyan status glass"
+      },
+      {
+        "key": "amber_status_glass",
+        "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_amber_status_glass_image2.png",
+        "width": 256,
+        "height": 256,
+        "promptRole": "amber status glass"
+      }
+    ],
+    "atlas": "src/assets/textures/environment/builder-puzzle-machines/hp_wall_door_switch_lever_image2_atlas_v1.png",
+    "regions": "src/assets/textures/environment/builder-puzzle-machines/hp_wall_door_switch_lever_image2_atlas_v1.regions.json",
+    "contactSheet": "src/assets/manifests/reports/wall_door_switch_lever_image2_contact_sheet.png"
+  },
+  "sizeMeters": [
+    0.49,
+    0.848,
+    0.294
+  ],
+  "collisionProxyRecommendation": {
+    "kind": "wall-mounted nonblocking interaction prop",
+    "boxMeters": [
+      0.5,
+      0.12,
+      0.85
+    ],
+    "notes": "Use interaction radius for E prompt; keep lever protrusion visual-only so the player does not snag on the handle."
+  },
+  "orientation": {
+    "upAxisInBlender": "Z",
+    "frontFaceInBlender": "-Y",
+    "runtimePlacement": "LevelInteraction.position is the plate center; LevelInteraction.yaw rotates the front face toward the player/wall normal."
+  },
+  "designPrompt": "Generic Human Protocol wall-mounted mechanical door lever, premium sci-fi hospital / robot facility hardware, rounded warm white ceramic wall plate, smoked gunmetal titanium slide track, short upper-half dark metal pull handle, small precision bearing collar instead of an oversized ring, visible up/down motion notches with cyan and amber state light slots, clean Image2-baked material detail, readable first-person and mobile silhouette, no readable text, no logos, no gore. User reference image is used only as high-level aesthetic direction; final geometry and texture pixels are original deterministic project output.",
+  "materialSlots": [
+    "wall_switch_amber_status_glass_image2",
+    "wall_switch_black_rubber_recess_image2",
+    "wall_switch_ceramic_shell_image2",
+    "wall_switch_cyan_status_glass_image2",
+    "wall_switch_dark_handle_metal_image2",
+    "wall_switch_smoked_titanium_spine_image2"
+  ],
+  "nodeNames": [
+    "wall_switch_shadow_gasket_backplate",
+    "wall_switch_rounded_ceramic_wall_plate",
+    "wall_switch_ceramic_upper_cap",
+    "wall_switch_ceramic_lower_cap",
+    "wall_switch_left_guard_rail",
+    "wall_switch_right_ceramic_guard",
+    "wall_switch_smoked_titanium_main_spine",
+    "wall_switch_black_vertical_motion_slot",
+    "wall_switch_up_motion_memory_notch_cyan",
+    "wall_switch_down_motion_memory_notch_amber",
+    "wall_switch_motion_track_center_scrape",
+    "wall_switch_top_status_smoked_window",
+    "wall_switch_bottom_status_smoked_window",
+    "wall_switch_cyan_up_status_light",
+    "wall_switch_amber_down_status_light",
+    "wall_switch_right_side_cyan_glass_slit",
+    "wall_switch_lever_movable_short_upper_pull_rod",
+    "wall_switch_lever_movable_top_grip_cap",
+    "wall_switch_lever_movable_lower_stop_cap",
+    "wall_switch_lever_movable_bearing_disc_back",
+    "wall_switch_lever_movable_bearing_disc_front",
+    "wall_switch_lever_movable_small_bearing_collar",
+    "wall_switch_lever_movable_center_pin",
+    "wall_switch_lever_movable_slider_yoke",
+    "wall_switch_recessed_hex_screw_0",
+    "wall_switch_recessed_hex_screw_1",
+    "wall_switch_recessed_hex_screw_2",
+    "wall_switch_recessed_hex_screw_3",
+    "wall_switch_blank_micro_tick_0",
+    "wall_switch_blank_micro_tick_1",
+    "wall_switch_blank_micro_tick_2",
+    "wall_switch_blank_micro_tick_3"
+  ],
+  "mobileBudget": {
+    "intendedCountPerLevel": "1-8",
+    "opaqueMaterialsPreferred": true,
+    "transparentMaterials": [],
+    "emissiveMaterials": [
+      "wall_switch_cyan_status_glass_image2",
+      "wall_switch_amber_status_glass_image2"
+    ],
+    "triangleCount": 6796,
+    "textureBudget": "Six embedded 256x256 base-color tiles plus one archived 768x512 atlas/contact sheet.",
+    "readability": "Short upper-half pull rod, small bearing collar, and cyan/amber up-down memory notches are visible at mobile first-person distance."
+  },
+  "builderCatalog": {
+    "category": "interaction",
+    "footprint": "wall-mounted; anchor to wall face; no floor footprint",
+    "runtimeModelKeyCompatibility": "Existing configs keep hp_wall_door_switch_button_v1."
+  }
+}

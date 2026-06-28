@@ -1,0 +1,32 @@
+{
+  "assetId": "enemy_l5_reclamation_mother_source_intake_v1",
+  "sourceType": "external-ai-3d-user-generated-download",
+  "sourcePageUrl": "external-generation-page-redacted",
+  "cdnUrlRedacted": "external-cdn-url-redacted",
+  "originalFilename": "reference_texture_721f9d39-316f-43d0-ac83-588c2d94df81_meshopt.glb",
+  "localRawGlb": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/work/asset-intake/level05-reclamation-mother-v1/reclamation_mother_source_meshopt.glb",
+  "downloadedAt": "2026-06-28T01:17:51.367Z",
+  "contentType": "binary/octet-stream",
+  "contentLengthHeader": "2678240",
+  "byteLength": 2678240,
+  "sha256": "20c0bb8de3c5e0234363e76bf12f1d60e5190e6177a8175a1a290931b4323c02",
+  "pageAssetInventorySummary": {
+    "byKind": {
+      "font": 0,
+      "image": 32,
+      "other": 33,
+      "script": 52,
+      "stylesheet": 3,
+      "video": 0
+    },
+    "inlineSvgCount": 0,
+    "totalCount": 120
+  },
+  "pageAssetId": "9febc2d5f27f6aa4",
+  "sources": [
+    {
+      "kind": "resource",
+      "property": "fetch"
+    }
+  ]
+}

@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level02_furniture_image2_v1",
+  "label": "HP 居住模拟家具包 (Image2 / Blender material polish)",
+  "sourceTool": "level02-image2-furniture-blender-image2-material-polish",
+  "generatedAt": "2026-06-19",
+  "atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+  "assets": [
+    {
+      "modelKey": "room_l2_img2_modular_sofa",
+      "label": "看护沙发",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_modular_sofa_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_modular_sofa.glb",
+      "sizeMeters": [
+        2.53,
+        1.007,
+        0.875
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "lane:living",
+        "role:anchor",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_observation_dining_table",
+      "label": "观察餐桌",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_observation_dining_table_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+      "sizeMeters": [
+        1.895,
+        0.727,
+        0.957
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:living",
+        "role:interactive",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_nursery_bed",
+      "label": "儿童看护床",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_nursery_bed_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_nursery_bed.glb",
+      "sizeMeters": [
+        1.48,
+        0.85,
+        0.76
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:care",
+        "role:anchor",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_family_portrait_console",
+      "label": "全家福管制台",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_family_portrait_console_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_family_portrait_console.glb",
+      "sizeMeters": [
+        1.34,
+        0.92,
+        0.225
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:surveillance",
+        "role:clue",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_service_kitchen_counter",
+      "label": "服务厨房台",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_service_kitchen_counter_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_service_kitchen_counter.glb",
+      "sizeMeters": [
+        1.94,
+        1.065,
+        0.75
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:service",
+        "role:interactive",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_scanner_wardrobe",
+      "label": "衣柜扫描舱",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_scanner_wardrobe_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_scanner_wardrobe.glb",
+      "sizeMeters": [
+        1.24,
+        2.005,
+        0.692
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:surveillance",
+        "role:hero",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_camera_lamp",
+      "label": "看护落地灯",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_camera_lamp_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_camera_lamp.glb",
+      "sizeMeters": [
+        0.44,
+        1.63,
+        0.447
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "lane:surveillance",
+        "role:filler",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_living_end_elevator_fixture",
+      "label": "尽头电梯饰柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_living_end_elevator_fixture_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_living_end_elevator_fixture.glb",
+      "sizeMeters": [
+        1.378,
+        2.12,
+        0.283
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:exit",
+        "role:hero",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_observation_bookshelf",
+      "label": "观察书柜",
+      "assetKind": "furniture",
+      "family": "bookshelf",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_observation_bookshelf_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_bookshelf.glb",
+      "sizeMeters": [
+        1.253,
+        1.837,
+        0.516
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "books",
+      "tags": [
+        "lane:surveillance",
+        "role:clue",
+        "style:l2-residential-sim"
+      ]
+    },
+    {
+      "modelKey": "room_l2_img2_carekeeper_armchair",
+      "label": "看护单椅",
+      "assetKind": "furniture",
+      "family": "chair",
+      "group": "居住",
+      "source": "level02-image2-furniture-blender-image2-material-polish",
+      "sourceAssetId": "room_l2_img2_carekeeper_armchair_blender_image2_material_polish_v5",
+      "themeId": "hp_level02_residential_sim",
+      "glbFile": "../../models-cooked/environment/level02-furniture-image2/room_l2_img2_carekeeper_armchair.glb",
+      "sizeMeters": [
+        1.24,
+        1.111,
+        0.827
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "chair",
+      "tags": [
+        "lane:living",
+        "role:filler",
+        "style:l2-residential-sim"
+      ]
+    }
+  ]
+}

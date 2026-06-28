@@ -1,0 +1,902 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_06_cyberpunk_foyer",
+  "modelKey": "room_corner_pillar_maintenance",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_maintenance.glb",
+  "fileName": "hp_room_corner_pillar_maintenance.glb",
+  "sourceAsset": {
+    "modelKey": "room_corner_pillar_maintenance",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_corner_pillar_maintenance.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_maintenance.glb",
+    "sizeMeters": [
+      0.58,
+      2.62,
+      0.58
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 5660,
+      "meshes": 4,
+      "nodes": 4,
+      "skins": 0,
+      "primitives": 4,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 9,
+      "bufferViews": 7,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_materials_unlit",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 84
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_corner_pillar_maintenance.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 411576,
+    "vertexCount": 252,
+    "triangleCount": 84,
+    "meshCount": 7,
+    "materialCount": 4,
+    "nodeCount": 7,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.29,
+        0,
+        -0.29
+      ],
+      "center": [
+        0,
+        1.31,
+        0
+      ],
+      "size": [
+        0.58,
+        2.62,
+        0.58
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_corner_pillar_core",
+        "vertexOffset": 411576,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.275,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.275,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_corner_pillar_front_plate",
+        "vertexOffset": 411612,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.24,
+          0.235,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.24,
+          -0.235,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_corner_pillar_side_plate",
+        "vertexOffset": 411648,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.235,
+          1.24,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.235,
+          -1.24,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_corner_pillar_top_cap",
+        "vertexOffset": 411684,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          2.54,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -2.54,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_corner_pillar_floor_cap",
+        "vertexOffset": 411720,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.06,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.06,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_corner_pillar_vertical_light",
+        "vertexOffset": 411756,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.12,
+          1.32,
+          0.268,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.12,
+          -1.32,
+          -0.268,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_corner_pillar_low_status",
+        "vertexOffset": 411792,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.1,
+          0.38,
+          0.27,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.1,
+          -0.38,
+          -0.27,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:level_06_foyer_hall:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_foyer_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -7.16,
+        0,
+        -7.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7.16,
+          0,
+          -7.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_foyer_hall:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_foyer_hall",
+      "secondaryRoomId": null,
+      "position": [
+        7.16,
+        0,
+        -7.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          7.16,
+          0,
+          -7.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_foyer_hall:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_foyer_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -7.16,
+        0,
+        9.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7.16,
+          0,
+          9.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_foyer_hall:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_foyer_hall",
+      "secondaryRoomId": null,
+      "position": [
+        7.16,
+        0,
+        9.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          7.16,
+          0,
+          9.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_power_alcove:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_power_alcove",
+      "secondaryRoomId": null,
+      "position": [
+        -11.16,
+        0,
+        -5.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -11.16,
+          0,
+          -5.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_power_alcove:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_power_alcove",
+      "secondaryRoomId": null,
+      "position": [
+        -7.64,
+        0,
+        -5.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7.64,
+          0,
+          -5.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_power_alcove:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_power_alcove",
+      "secondaryRoomId": null,
+      "position": [
+        -11.16,
+        0,
+        -0.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -11.16,
+          0,
+          -0.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_power_alcove:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_power_alcove",
+      "secondaryRoomId": null,
+      "position": [
+        -7.64,
+        0,
+        -0.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7.64,
+          0,
+          -0.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_lift_atrium:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_lift_atrium",
+      "secondaryRoomId": null,
+      "position": [
+        -2.16,
+        0,
+        -15.56
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.16,
+          0,
+          -15.56
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_lift_atrium:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_lift_atrium",
+      "secondaryRoomId": null,
+      "position": [
+        2.16,
+        0,
+        -15.56
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.16,
+          0,
+          -15.56
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_lift_atrium:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_lift_atrium",
+      "secondaryRoomId": null,
+      "position": [
+        -2.16,
+        0,
+        -12.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.16,
+          0,
+          -12.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_06_lift_atrium:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_06_lift_atrium",
+      "secondaryRoomId": null,
+      "position": [
+        2.16,
+        0,
+        -12.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.16,
+          0,
+          -12.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    }
+  ]
+}

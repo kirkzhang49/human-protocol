@@ -1,0 +1,83 @@
+{
+  "atlas": "src/assets/textures/environment/builder-puzzle-machines/hp_wall_door_switch_lever_image2_atlas_v1.png",
+  "regions": {
+    "ceramic_shell": {
+      "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_ceramic_shell_image2.png",
+      "x": 0,
+      "y": 0,
+      "width": 256,
+      "height": 256,
+      "uv": [
+        0.0,
+        0.0,
+        0.3333,
+        0.5
+      ]
+    },
+    "smoked_titanium_spine": {
+      "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_smoked_titanium_spine_image2.png",
+      "x": 256,
+      "y": 0,
+      "width": 256,
+      "height": 256,
+      "uv": [
+        0.3333,
+        0.0,
+        0.3333,
+        0.5
+      ]
+    },
+    "black_rubber_recess": {
+      "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_black_rubber_recess_image2.png",
+      "x": 512,
+      "y": 0,
+      "width": 256,
+      "height": 256,
+      "uv": [
+        0.6667,
+        0.0,
+        0.3333,
+        0.5
+      ]
+    },
+    "dark_handle_metal": {
+      "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_dark_handle_metal_image2.png",
+      "x": 0,
+      "y": 256,
+      "width": 256,
+      "height": 256,
+      "uv": [
+        0.0,
+        0.5,
+        0.3333,
+        0.5
+      ]
+    },
+    "cyan_status_glass": {
+      "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_cyan_status_glass_image2.png",
+      "x": 256,
+      "y": 256,
+      "width": 256,
+      "height": 256,
+      "uv": [
+        0.3333,
+        0.5,
+        0.3333,
+        0.5
+      ]
+    },
+    "amber_status_glass": {
+      "file": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/wall_switch_amber_status_glass_image2.png",
+      "x": 512,
+      "y": 256,
+      "width": 256,
+      "height": 256,
+      "uv": [
+        0.6667,
+        0.5,
+        0.3333,
+        0.5
+      ]
+    }
+  }
+}

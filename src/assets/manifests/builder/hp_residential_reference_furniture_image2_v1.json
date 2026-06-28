@@ -1,0 +1,233 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_residential_reference_furniture_image2_v1",
+  "label": "HP 通用住宅参照家具包 (Image2)",
+  "sourceTool": "residential-reference-image2-asset-factory",
+  "generatedAt": "2026-06-19",
+  "sourceManifest": "src/assets/manifests/runtime/human_protocol_environment_asset_factory_residential_reference_v1.json",
+  "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend",
+  "textureSources": {
+    "type": "image2-base-color-png",
+    "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+    "atlasRegions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+    "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+    "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+    "glbTextureAudit": "src/assets/manifests/reports/residential_reference_furniture_glb_texture_audit.json",
+    "sourceTilesDir": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources",
+    "sourceProvenance": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.json",
+    "sourceProvenanceHuman": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.md",
+    "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+    "generatingAccount": "kirkzhang49@gmail.com",
+    "generationDate": "2026-06-19",
+    "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+    "licenseClassification": "owned-generated-output",
+    "releaseClearanceStatus": "cleared-for-project-use-call-id-not-exposed",
+    "generationCallIdStatus": "not-exposed-by-built-in-codex-image-tool"
+  },
+  "assets": [
+    {
+      "modelKey": "hp_furniture_residential_oval_coffee_table_v1",
+      "label": "住宅圆角茶几",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "居住",
+      "source": "residential-reference-image2-asset-factory",
+      "sourceAssetId": "hp_furniture_residential_oval_coffee_table_v1_from_asset_factory",
+      "themeId": "hp_residential_reference_image2",
+      "glbFile": "../../models-cooked/environment/props/hp_furniture_residential_oval_coffee_table_v1.glb",
+      "sizeMeters": [
+        1.48,
+        0.477,
+        0.82
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "supportSurfaces": [
+        {
+          "id": "mesh_top",
+          "kind": "tabletop",
+          "localCenter": [
+            0,
+            0.5175,
+            0
+          ],
+          "size": [
+            1.1544,
+            0.5904
+          ],
+          "maxChildHeight": 1.1
+        }
+      ],
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "style:residential-reference",
+        "style:image2",
+        "pipeline:runtime-asset-factory",
+        "family:residential_coffee_table"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_fluted_sideboard_v1",
+      "label": "住宅竖纹边柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "居住",
+      "source": "residential-reference-image2-asset-factory",
+      "sourceAssetId": "hp_furniture_residential_fluted_sideboard_v1_from_asset_factory",
+      "themeId": "hp_residential_reference_image2",
+      "glbFile": "../../models-cooked/environment/props/hp_furniture_residential_fluted_sideboard_v1.glb",
+      "sizeMeters": [
+        1.86,
+        0.962,
+        0.668
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": true,
+      "supportSurfaces": [
+        {
+          "id": "mesh_top",
+          "kind": "tabletop",
+          "localCenter": [
+            0,
+            0.9825,
+            -0.004
+          ],
+          "size": [
+            1.4508,
+            0.481
+          ],
+          "maxChildHeight": 1.1
+        }
+      ],
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "style:residential-reference",
+        "style:image2",
+        "pipeline:runtime-asset-factory",
+        "family:residential_sideboard"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_entry_bench_cubby_v1",
+      "label": "玄关储物换鞋凳",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "居住",
+      "source": "residential-reference-image2-asset-factory",
+      "sourceAssetId": "hp_furniture_residential_entry_bench_cubby_v1_from_asset_factory",
+      "themeId": "hp_residential_reference_image2",
+      "glbFile": "../../models-cooked/environment/props/hp_furniture_residential_entry_bench_cubby_v1.glb",
+      "sizeMeters": [
+        1.52,
+        1.64,
+        0.588
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "style:residential-reference",
+        "style:image2",
+        "pipeline:runtime-asset-factory",
+        "family:residential_entry_bench"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+      "label": "半高隔断书架",
+      "assetKind": "furniture",
+      "family": "bookshelf",
+      "group": "居住",
+      "source": "residential-reference-image2-asset-factory",
+      "sourceAssetId": "hp_furniture_residential_room_divider_shelf_v1_from_asset_factory",
+      "themeId": "hp_residential_reference_image2",
+      "glbFile": "../../models-cooked/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+      "sizeMeters": [
+        1.72,
+        1.32,
+        0.384
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "supportSurfaces": [
+        {
+          "id": "mesh_top",
+          "kind": "shelf",
+          "localCenter": [
+            0,
+            1.44,
+            0.0023
+          ],
+          "size": [
+            1.2384,
+            0.2115
+          ],
+          "maxChildHeight": 0.45
+        }
+      ],
+      "clueCapacity": 2,
+      "footprintFamily": "books",
+      "tags": [
+        "style:residential-reference",
+        "style:image2",
+        "pipeline:runtime-asset-factory",
+        "family:residential_room_divider_shelf"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_cleaner_closet_v1",
+      "label": "家政清洁储物柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "居住",
+      "source": "residential-reference-image2-asset-factory",
+      "sourceAssetId": "hp_furniture_residential_cleaner_closet_v1_from_asset_factory",
+      "themeId": "hp_residential_reference_image2",
+      "glbFile": "../../models-cooked/environment/props/hp_furniture_residential_cleaner_closet_v1.glb",
+      "sizeMeters": [
+        0.93,
+        1.96,
+        0.62
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "supportSurfaces": [
+        {
+          "id": "mesh_top",
+          "kind": "tabletop",
+          "localCenter": [
+            0,
+            1.96,
+            -0.05
+          ],
+          "size": [
+            0.7254,
+            0.4464
+          ],
+          "maxChildHeight": 1.1
+        }
+      ],
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "style:residential-reference",
+        "style:image2",
+        "pipeline:runtime-asset-factory",
+        "family:residential_cleaner_closet"
+      ]
+    }
+  ]
+}

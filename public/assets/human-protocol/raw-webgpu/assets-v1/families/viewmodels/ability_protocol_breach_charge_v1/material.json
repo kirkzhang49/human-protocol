@@ -1,0 +1,345 @@
+{
+  "file": "material.json",
+  "hash": "0762ef077b724013",
+  "materials": [
+    {
+      "index": 2,
+      "id": "mat:builder-resource:skill3-body-edge-dark:119p8t1",
+      "name": "skill3_body_edge_dark",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.023529,
+        0.031373,
+        0.039216,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.62,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 3,
+      "id": "mat:builder-resource:skill3-clamp-brass-warm:27786r",
+      "name": "skill3_clamp_brass_warm",
+      "category": "builder-resource",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.42,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.72549,
+        0.521569,
+        0.258824,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.86,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 4,
+      "id": "mat:builder-resource:skill3-body-graphite:9ps9gj",
+      "name": "skill3_body_graphite",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.066667,
+        0.078431,
+        0.090196,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 5,
+      "id": "mat:builder-resource:skill3-image2-energy-window-atlas:3j845a",
+      "name": "skill3_image2_energy_window_atlas",
+      "category": "builder-resource",
+      "visualRole": "glass_shell",
+      "semanticParams": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.268235,
+        0.688941,
+        0.72
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0.12,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_ability_protocol_breach_charge_v1_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/ability_protocol_breach_charge_v1/textures/basecolor-01-hp-ability-protocol-breach-charge-v1-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/ability_protocol_breach_charge_v1/textures/basecolor-01-hp-ability-protocol-breach-charge-v1-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.123538,
+            "contrast": 0.273935,
+            "chroma": 0.128836,
+            "detail": 0.127474
+          },
+          "generated": false,
+          "layer": 1
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "id": "mat:builder-resource:skill3-cyan-energy-glass:67x2oi",
+      "name": "skill3_cyan_energy_glass",
+      "category": "builder-resource",
+      "visualRole": "glass_shell",
+      "semanticParams": [
+        5,
+        0.82,
+        0.1856,
+        0.12
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.372549,
+        0.956863,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.333333,
+        0.917647,
+        1
+      ],
+      "emissiveStrength": 0.07,
+      "roughnessFactor": 0.16,
+      "metallicFactor": 0.08,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 7,
+      "id": "mat:builder-resource:skill3-safety-pin-blacksteel:v5ihv",
+      "name": "skill3_safety_pin_blacksteel",
+      "category": "builder-resource",
+      "visualRole": "exhibit_warm",
+      "semanticParams": [
+        6,
+        0.8,
+        0.34,
+        0.18
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.101961,
+        0.113725,
+        0.121569,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0.78,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 8,
+      "id": "mat:builder-resource:skill3-black-rubber-grip:1tliw8a",
+      "name": "skill3_black_rubber_grip",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.031373,
+        0.035294,
+        0.039216,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.58,
+      "metallicFactor": 0.22,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 1,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/ability_protocol_breach_charge_v1/textures/basecolor-01-hp-ability-protocol-breach-charge-v1-atlas.webp",
+      "name": "hp_ability_protocol_breach_charge_v1_atlas",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/ability_protocol_breach_charge_v1/textures/basecolor-01-hp-ability-protocol-breach-charge-v1-atlas.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.123538,
+        "contrast": 0.273935,
+        "chroma": 0.128836,
+        "detail": 0.127474
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

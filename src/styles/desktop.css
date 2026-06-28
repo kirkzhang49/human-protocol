@@ -1,0 +1,41 @@
+.desktop-aim-chip {
+  position: fixed;
+  left: 50%;
+  bottom: 34px;
+  z-index: 15;
+  width: min(260px, calc(100vw - 32px));
+  padding: 10px 12px;
+  border: 1px solid rgba(100, 215, 255, 0.38);
+  border-radius: 8px;
+  color: var(--text);
+  text-align: center;
+  background: rgba(4, 12, 18, 0.78);
+  box-shadow: 0 0 22px rgba(100, 215, 255, 0.14);
+  pointer-events: none;
+  transform: translateX(-50%);
+}
+
+.desktop-aim-chip span,
+.desktop-aim-chip strong {
+  display: block;
+}
+
+.desktop-aim-chip span {
+  color: var(--cyan);
+  font-size: 11px;
+  font-weight: 900;
+  line-height: 1;
+  text-transform: uppercase;
+}
+
+.desktop-aim-chip strong {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.1;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .desktop-aim-chip {
+    display: none;
+  }
+}

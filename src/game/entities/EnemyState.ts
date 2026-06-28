@@ -1,0 +1,48 @@
+import { Vector3 } from "three";
+import type { EnemyArchetypeId } from "../config/enemyArchetypes";
+import type { EnemyTextureAtlasKey, EnemyTierId } from "../config/enemyTiers";
+import type { RobotSkinId } from "../skins/SkinTypes";
+import type { EntityId } from "./EntityTypes";
+
+export interface EnemyState {
+  id: EntityId;
+  archetypeId: EnemyArchetypeId;
+  tier: EnemyTierId;
+  tierLabel: string;
+  waveId: string;
+  spawnRoomId?: string;
+  skinId: RobotSkinId;
+  position: Vector3;
+  velocity: Vector3;
+  health: number;
+  maxHealth: number;
+  radius: number;
+  rotationY: number;
+  isAlive: boolean;
+  attackCooldownRemaining: number;
+  attackWindupRemaining: number;
+  attackWindupTotal: number;
+  staggerRemaining: number;
+  staggerTotal: number;
+  staggerCharge: number;
+  damageMultiplier: number;
+  moveSpeedMultiplier: number;
+  attackCooldownMultiplier: number;
+  attackRangeMultiplier: number;
+  threatWeightMultiplier: number;
+  visualScaleMultiplier: number;
+  lightIntensityMultiplier: number;
+  modelKey?: string;
+  textureAtlasKey: EnemyTextureAtlasKey;
+  bodyColor: string;
+  armorColor: string;
+  coreColor: string;
+  warningColor: string;
+  spawnAge: number;
+  damageFlash: number;
+  hitReact: number;
+  hitReactionCharge: number;
+  deathAge: number;
+  lastHitDirection: Vector3;
+  prewarmSlot?: boolean;
+}

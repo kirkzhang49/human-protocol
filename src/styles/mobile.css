@@ -1,0 +1,911 @@
+.mobile-controls,
+.look-pad,
+.joystick,
+.mobile-action,
+.threat-segment {
+  touch-action: none;
+}
+
+.mobile-controls {
+  position: fixed;
+  inset: 0;
+  display: none;
+  pointer-events: none;
+  z-index: 12;
+}
+
+.look-pad {
+  position: absolute;
+  inset: 0 0 0 42%;
+  pointer-events: auto;
+}
+
+.joystick {
+  position: absolute;
+  left: max(20px, env(safe-area-inset-left));
+  bottom: max(22px, env(safe-area-inset-bottom));
+  width: 132px;
+  height: 132px;
+  border: 1px solid rgba(130, 205, 255, 0.42);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(220, 248, 255, 0.14) 0 20%, transparent 21%),
+    radial-gradient(circle, rgba(110, 213, 255, 0.1), rgba(6, 12, 20, 0.48));
+  box-shadow: inset 0 0 26px rgba(90, 205, 255, 0.2), 0 0 24px rgba(0, 0, 0, 0.24);
+  pointer-events: auto;
+}
+
+.joystick::before,
+.joystick::after {
+  position: absolute;
+  inset: 13px;
+  content: "";
+  border: 1px solid rgba(180, 235, 255, 0.12);
+  border-radius: 50%;
+}
+
+.joystick::after {
+  inset: 0;
+  border: 0;
+  background:
+    linear-gradient(90deg, transparent 48%, rgba(190, 236, 255, 0.32) 49% 51%, transparent 52%),
+    linear-gradient(180deg, transparent 48%, rgba(190, 236, 255, 0.32) 49% 51%, transparent 52%);
+  opacity: 0.42;
+}
+
+.joystick span {
+  position: absolute;
+  left: 44px;
+  top: 44px;
+  width: 44px;
+  height: 44px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 50%;
+  background: rgba(220, 245, 255, 0.18);
+  box-shadow: 0 0 18px rgba(100, 215, 255, 0.35);
+}
+
+.joystick.active {
+  border-color: rgba(120, 225, 255, 0.72);
+}
+
+.mobile-dash-button {
+  position: absolute;
+  left: max(48px, calc(env(safe-area-inset-left) + 48px));
+  bottom: max(162px, calc(env(safe-area-inset-bottom) + 162px));
+  display: grid;
+  grid-template-rows: 1fr auto;
+  place-items: center;
+  width: 66px;
+  height: 66px;
+  padding: 0;
+  border: 1px solid rgba(225, 242, 248, 0.5);
+  border-radius: 50%;
+  color: rgba(245, 250, 250, 0.9);
+  background:
+    conic-gradient(from -90deg, rgba(105, 220, 255, 0.86) 0 var(--dash), rgba(255, 255, 255, 0.09) var(--dash) 100%),
+    radial-gradient(circle at 50% 46%, rgba(205, 240, 255, 0.12) 0 24%, rgba(6, 12, 18, 0.92) 25% 58%, rgba(6, 12, 18, 0.42) 59%);
+  box-shadow:
+    inset 0 0 0 6px rgba(4, 8, 12, 0.72),
+    inset 0 0 28px rgba(105, 220, 255, 0.08),
+    0 12px 24px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+}
+
+.mobile-dash-button strong {
+  position: relative;
+  z-index: 1;
+  display: block;
+  line-height: 1;
+}
+
+.mobile-dash-icon {
+  position: relative;
+  z-index: 1;
+  width: 34px;
+  height: 34px;
+  margin-top: 10px;
+  color: currentColor;
+  filter: drop-shadow(0 0 8px rgba(105, 220, 255, 0.32));
+}
+
+.mobile-dash-button strong {
+  align-self: end;
+  max-width: 54px;
+  padding-bottom: 8px;
+  overflow: hidden;
+  color: rgba(226, 242, 248, 0.82);
+  font-size: 8px;
+  font-weight: 900;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.mobile-dash-button.ready {
+  grid-template-rows: 1fr;
+  border-color: rgba(255, 232, 150, 0.74);
+  color: #fff4ba;
+  box-shadow:
+    inset 0 0 0 6px rgba(4, 8, 12, 0.66),
+    inset 0 0 26px rgba(255, 205, 92, 0.08),
+    0 0 18px rgba(255, 205, 92, 0.25);
+}
+
+.mobile-dash-button.ready .mobile-dash-icon {
+  margin-top: 0;
+}
+
+.mobile-dash-button.ready strong {
+  display: none;
+}
+
+.mobile-dash-button.cooling {
+  color: rgba(226, 234, 236, 0.62);
+}
+
+.mobile-interact-button {
+  position: absolute;
+  right: max(26px, calc(env(safe-area-inset-right) + 26px));
+  bottom: max(204px, calc(env(safe-area-inset-bottom) + 204px));
+  display: grid;
+  gap: 3px;
+  place-items: center;
+  width: 112px;
+  min-height: 58px;
+  padding: 8px 12px;
+  border: 1px solid rgba(232, 246, 250, 0.5);
+  border-radius: 8px;
+  color: var(--text);
+  background:
+    linear-gradient(135deg, rgba(226, 244, 248, 0.12), rgba(4, 10, 15, 0.58)),
+    rgba(5, 10, 14, 0.38);
+  box-shadow:
+    inset 0 0 22px rgba(110, 222, 255, 0.08),
+    0 12px 26px rgba(0, 0, 0, 0.24);
+  pointer-events: auto;
+}
+
+.mobile-interact-button span,
+.mobile-interact-button strong {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mobile-interact-button span {
+  color: rgba(234, 246, 248, 0.86);
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.mobile-interact-button strong {
+  color: var(--cyan);
+  font-size: 13px;
+  font-weight: 900;
+}
+
+.mobile-interact-button.locked {
+  border-color: rgba(255, 92, 72, 0.4);
+}
+
+.mobile-interact-button.locked strong {
+  color: #ffb5aa;
+}
+
+.mobile-action-stack {
+  position: absolute;
+  right: max(16px, env(safe-area-inset-right));
+  bottom: max(14px, env(safe-area-inset-bottom));
+  width: 250px;
+  height: 208px;
+  pointer-events: auto;
+}
+
+.mobile-action-stack::before {
+  position: absolute;
+  right: 38px;
+  bottom: 62px;
+  width: 154px;
+  height: 78px;
+  content: "";
+  border-right: 1px solid rgba(210, 238, 248, 0.12);
+  border-bottom: 1px solid rgba(210, 238, 248, 0.12);
+  transform: skewX(-12deg);
+}
+
+.mobile-action {
+  position: absolute;
+  display: grid;
+  place-items: center;
+  width: 90px;
+  height: 90px;
+  padding: 0;
+  overflow: hidden;
+  border: 1px solid rgba(232, 246, 250, 0.48);
+  border-radius: 50%;
+  color: var(--text);
+  background:
+    conic-gradient(from 220deg, rgba(255, 255, 255, 0.08), transparent 28%, rgba(115, 226, 255, 0.14), transparent 62%),
+    radial-gradient(circle at 50% 46%, rgba(230, 242, 244, 0.12) 0 24%, rgba(7, 12, 16, 0.46) 25% 56%, rgba(5, 8, 12, 0.14) 57%),
+    rgba(5, 9, 13, 0.16);
+  box-shadow:
+    inset 0 0 0 5px rgba(3, 7, 10, 0.2),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.04),
+    inset 0 0 26px rgba(115, 226, 255, 0.045),
+    0 10px 24px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(2px);
+  transform-origin: 50% 50%;
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease, box-shadow 120ms ease;
+}
+
+.mobile-action::before {
+  position: absolute;
+  inset: 7px;
+  content: "";
+  border: 1px solid rgba(225, 242, 248, 0.18);
+  border-radius: 50%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.06), transparent 48%);
+}
+
+.mobile-action-icon {
+  position: relative;
+  z-index: 1;
+  display: block;
+  width: 52px;
+  height: 52px;
+  color: currentColor;
+  opacity: 0.88;
+  filter: drop-shadow(0 0 7px rgba(255, 255, 255, 0.18));
+  overflow: visible;
+}
+
+.mobile-action:nth-child(1) {
+  right: 0;
+  top: 0;
+  width: 98px;
+  height: 98px;
+}
+
+.mobile-action:nth-child(2) {
+  left: 0;
+  bottom: 44px;
+  width: 86px;
+  height: 86px;
+}
+
+.mobile-action:nth-child(3) {
+  right: 8px;
+  bottom: 0;
+  width: 82px;
+  height: 82px;
+}
+
+.mobile-action-icon.rod-icon {
+  width: 58px;
+  height: 58px;
+}
+
+.mobile-action-icon.pistol-icon {
+  width: 52px;
+  height: 52px;
+}
+
+.mobile-action-icon.item-icon {
+  width: 48px;
+  height: 48px;
+}
+
+.mobile-action.primary {
+  width: 96px;
+  height: 96px;
+  border-color: rgba(242, 248, 250, 0.42);
+  background:
+    conic-gradient(from 220deg, rgba(255, 255, 255, 0.08), transparent 28%, rgba(255, 207, 102, 0.12), transparent 62%),
+    radial-gradient(circle at 50% 46%, rgba(255, 255, 255, 0.1) 0 24%, rgba(8, 10, 10, 0.46) 25% 56%, rgba(5, 8, 12, 0.14) 57%);
+  box-shadow:
+    inset 0 0 0 5px rgba(3, 7, 10, 0.2),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.035),
+    0 10px 24px rgba(0, 0, 0, 0.2);
+}
+
+.mobile-action.secondary {
+  color: rgba(244, 248, 248, 0.88);
+}
+
+.mobile-action.selected {
+  z-index: 2;
+  transform: scale(1.1);
+  border-color: rgba(255, 255, 255, 0.86);
+  color: #ffffff;
+  box-shadow:
+    inset 0 0 0 5px rgba(3, 7, 10, 0.18),
+    inset 0 0 0 6px rgba(255, 255, 255, 0.08),
+    inset 0 0 30px rgba(255, 255, 255, 0.07),
+    0 0 18px rgba(255, 255, 255, 0.2);
+}
+
+.mobile-action.primary.selected {
+  transform: scale(1.06);
+}
+
+.mobile-action.item-ready {
+  border-color: rgba(255, 222, 126, 0.86);
+  color: #ffe39a;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 213, 88, 0.18), transparent 50%),
+    rgba(24, 17, 9, 0.2);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 239, 176, 0.22),
+    inset 0 0 26px rgba(255, 197, 64, 0.08),
+    0 0 20px rgba(255, 190, 70, 0.24);
+}
+
+.mobile-action.item-empty {
+  border-color: rgba(242, 248, 250, 0.34);
+  color: rgba(220, 228, 228, 0.58);
+  background: rgba(10, 16, 20, 0.12);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+    0 0 10px rgba(0, 0, 0, 0.12);
+}
+
+.mobile-action.item-empty .item-icon {
+  opacity: 0.5;
+}
+
+.mobile-action:disabled,
+.mobile-action.disabled {
+  color: rgba(216, 226, 228, 0.32);
+  border-color: rgba(220, 236, 240, 0.18);
+  background: rgba(6, 10, 14, 0.1);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.04),
+    0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-action:disabled .mobile-action-icon,
+.mobile-action.disabled .mobile-action-icon {
+  opacity: 0.28;
+}
+
+.threat-ring {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 8;
+}
+
+.threat-segment {
+  position: absolute;
+  width: 92px;
+  height: 28px;
+  border: 0;
+  border-radius: 4px;
+  opacity: calc(var(--threat) * 0.95);
+  background: linear-gradient(90deg, transparent, rgba(255, 65, 45, 0.92), transparent);
+  box-shadow: 0 0 calc(14px + var(--threat) * 22px) rgba(255, 51, 42, 0.72);
+  pointer-events: auto;
+}
+
+.threat-segment.s0,
+.threat-segment.s1,
+.threat-segment.s2 {
+  top: max(16px, env(safe-area-inset-top));
+}
+
+.threat-segment.s5,
+.threat-segment.s6,
+.threat-segment.s7 {
+  bottom: max(16px, env(safe-area-inset-bottom));
+}
+
+.threat-segment.s0,
+.threat-segment.s7 {
+  left: max(20px, env(safe-area-inset-left));
+  transform: rotate(-36deg);
+}
+
+.threat-segment.s1,
+.threat-segment.s6 {
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.threat-segment.s2,
+.threat-segment.s5 {
+  right: max(20px, env(safe-area-inset-right));
+  transform: rotate(36deg);
+}
+
+.threat-segment.s3,
+.threat-segment.s4 {
+  top: 50%;
+  width: 30px;
+  height: 104px;
+  transform: translateY(-50%);
+  background: linear-gradient(180deg, transparent, rgba(255, 65, 45, 0.92), transparent);
+}
+
+.threat-segment.s3 {
+  right: max(12px, env(safe-area-inset-right));
+}
+
+.threat-segment.s4 {
+  left: max(12px, env(safe-area-inset-left));
+}
+
+.crosshair.locked {
+  filter: drop-shadow(0 0 14px rgba(100, 215, 255, 0.72));
+}
+
+.crosshair.locked .crosshair-dot {
+  border-color: rgba(100, 235, 255, 0.96);
+  box-shadow: 0 0 16px rgba(100, 215, 255, 0.62);
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .mobile-controls {
+    display: block;
+    transition: opacity 0.3s ease;
+  }
+  /* During a 3D focus reveal the facility camera is in control; fade the touch
+     controls out and stop them taking input so nothing implies the player can
+     still move/aim/fire. Restores when the reveal ends. */
+  .mobile-controls.is-reveal-hidden {
+    opacity: 0;
+    pointer-events: none;
+  }
+  .mobile-controls.is-reveal-hidden * {
+    pointer-events: none !important;
+  }
+
+  .hud {
+    display: grid;
+    width: min(228px, calc(100vw - 24px));
+    gap: 4px;
+    transform: none;
+    transform-origin: left top;
+  }
+
+  .hud-row {
+    grid-template-columns: 25px 1fr;
+    min-height: 32px;
+    padding: 5px 8px 5px 6px;
+  }
+
+  .hud-row.health {
+    grid-template-columns: 34px 1fr;
+    min-height: 50px;
+    padding: 7px 10px 7px 7px;
+  }
+
+  .hud-icon {
+    width: 23px;
+    height: 23px;
+    font-size: 11px;
+  }
+
+  .hud-row.health .hud-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 15px;
+  }
+
+  .bar-track {
+    height: 4px;
+    margin-top: 4px;
+  }
+
+  .hud-row.health .bar-track {
+    height: 8px;
+    margin-top: 6px;
+  }
+
+  .hud-row.health .hud-label-line {
+    font-size: 13px;
+  }
+
+  .hud-row.health .hud-label-line span:last-child {
+    font-size: 16px;
+  }
+
+  .lower-hud {
+    display: none;
+  }
+
+  .debug-panel {
+    display: none;
+  }
+}
+
+@media (max-height: 430px) {
+  .hud {
+    width: 204px;
+    transform: none;
+    transform-origin: left top;
+  }
+
+  .hud-label-line {
+    font-size: 9px;
+  }
+
+  .hud-row {
+    background:
+      linear-gradient(90deg, rgba(112, 226, 255, 0.14), transparent 48%),
+      rgba(4, 8, 13, 0.64);
+  }
+
+  .hud-row.health {
+    background:
+      linear-gradient(90deg, rgba(255, 81, 61, 0.22), transparent 58%),
+      rgba(5, 7, 10, 0.68);
+  }
+
+  .mobile-dash-button {
+    left: max(54px, calc(env(safe-area-inset-left) + 54px));
+    bottom: max(174px, calc(env(safe-area-inset-bottom) + 174px));
+    width: 58px;
+    height: 58px;
+  }
+
+  .mobile-dash-icon {
+    width: 31px;
+    height: 31px;
+    margin-top: 8px;
+  }
+
+  .mobile-dash-button strong {
+    max-width: 48px;
+    padding-bottom: 7px;
+    font-size: 7px;
+  }
+}
+
+@media (max-width: 520px) {
+  .joystick {
+    left: max(14px, env(safe-area-inset-left));
+    width: 114px;
+    height: 114px;
+  }
+
+  .joystick span {
+    left: 39px;
+    top: 39px;
+    width: 36px;
+    height: 36px;
+  }
+
+  .mobile-action-stack {
+    right: max(8px, env(safe-area-inset-right));
+    width: 184px;
+    height: 156px;
+  }
+
+  .mobile-action-stack::before {
+    right: 28px;
+    bottom: 46px;
+    width: 110px;
+    height: 54px;
+  }
+
+  .mobile-action {
+    width: 64px;
+    height: 64px;
+  }
+
+  .mobile-action:nth-child(1) {
+    width: 72px;
+    height: 72px;
+  }
+
+  .mobile-action:nth-child(2) {
+    bottom: 38px;
+  }
+
+  .mobile-action:nth-child(3) {
+    right: 6px;
+    width: 62px;
+    height: 62px;
+  }
+
+  .mobile-dash-button {
+    left: max(38px, calc(env(safe-area-inset-left) + 38px));
+    bottom: max(138px, calc(env(safe-area-inset-bottom) + 138px));
+    width: 58px;
+    height: 58px;
+  }
+
+  .mobile-action-icon,
+  .mobile-action-icon.pistol-icon,
+  .mobile-action-icon.item-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .mobile-action-icon.rod-icon {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+/* === Manual-action buttons: fire (hold) / sprint (toggle) / pause ========
+   Base rules are top-level like .mobile-dash-button; the parent
+   .mobile-controls is display:none unless the (max-width:900px),(pointer:coarse)
+   media query above flips it to block, so desktop never renders these.
+   Everything below is append-only — no existing rule is modified. */
+
+.mobile-fire-button {
+  position: absolute;
+  right: max(34px, calc(env(safe-area-inset-right) + 34px));
+  bottom: max(236px, calc(env(safe-area-inset-bottom) + 236px));
+  display: grid;
+  place-items: center;
+  width: 92px;
+  height: 92px;
+  padding: 0;
+  border: 1px solid rgba(255, 150, 128, 0.62);
+  border-radius: 50%;
+  color: #ffd8cd;
+  background:
+    radial-gradient(circle at 50% 45%, rgba(255, 120, 96, 0.22) 0 30%, rgba(20, 8, 8, 0.5) 31% 60%, rgba(8, 5, 6, 0.32) 61%),
+    rgba(28, 10, 10, 0.2);
+  box-shadow:
+    inset 0 0 0 5px rgba(6, 3, 4, 0.6),
+    inset 0 0 24px rgba(255, 110, 84, 0.12),
+    0 10px 24px rgba(0, 0, 0, 0.3);
+  pointer-events: auto;
+  transition: transform 90ms ease, border-color 90ms ease, box-shadow 90ms ease;
+}
+
+.mobile-fire-icon {
+  width: 48px;
+  height: 48px;
+  color: currentColor;
+  filter: drop-shadow(0 0 8px rgba(255, 120, 90, 0.4));
+}
+
+.mobile-fire-button.firing {
+  transform: scale(0.94);
+  border-color: rgba(255, 110, 84, 0.95);
+  color: #fff1ec;
+  box-shadow:
+    inset 0 0 0 5px rgba(6, 3, 4, 0.5),
+    inset 0 0 30px rgba(255, 96, 70, 0.3),
+    0 0 22px rgba(255, 96, 70, 0.4);
+}
+
+.mobile-sprint-button {
+  position: absolute;
+  left: max(52px, calc(env(safe-area-inset-left) + 52px));
+  bottom: max(238px, calc(env(safe-area-inset-bottom) + 238px));
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  padding: 0;
+  border: 1px solid rgba(225, 242, 248, 0.46);
+  border-radius: 50%;
+  color: rgba(228, 244, 248, 0.82);
+  background:
+    radial-gradient(circle at 50% 46%, rgba(205, 240, 255, 0.1) 0 26%, rgba(6, 12, 18, 0.66) 27% 60%, rgba(6, 12, 18, 0.34) 61%);
+  box-shadow:
+    inset 0 0 0 4px rgba(4, 8, 12, 0.62),
+    0 8px 20px rgba(0, 0, 0, 0.28);
+  pointer-events: auto;
+  transition: transform 90ms ease, border-color 90ms ease, color 90ms ease, box-shadow 90ms ease;
+}
+
+.mobile-sprint-icon {
+  width: 34px;
+  height: 34px;
+  color: currentColor;
+}
+
+.mobile-sprint-button.active {
+  border-color: rgba(120, 235, 255, 0.9);
+  color: #d6f6ff;
+  box-shadow:
+    inset 0 0 0 4px rgba(4, 8, 12, 0.5),
+    inset 0 0 20px rgba(105, 220, 255, 0.22),
+    0 0 18px rgba(105, 220, 255, 0.34);
+}
+
+@media (max-height: 430px) {
+  .mobile-fire-button {
+    right: max(28px, calc(env(safe-area-inset-right) + 28px));
+    bottom: max(196px, calc(env(safe-area-inset-bottom) + 196px));
+    width: 76px;
+    height: 76px;
+  }
+
+  .mobile-fire-icon {
+    width: 40px;
+    height: 40px;
+  }
+
+  .mobile-sprint-button {
+    left: max(56px, calc(env(safe-area-inset-left) + 56px));
+    bottom: max(244px, calc(env(safe-area-inset-bottom) + 244px));
+    width: 52px;
+    height: 52px;
+  }
+
+  .mobile-sprint-icon {
+    width: 30px;
+    height: 30px;
+  }
+}
+
+@media (max-width: 520px) {
+  .mobile-fire-button {
+    width: 80px;
+    height: 80px;
+  }
+
+  .mobile-sprint-button {
+    left: max(40px, calc(env(safe-area-inset-left) + 40px));
+    width: 54px;
+    height: 54px;
+  }
+}
+
+/* ===========================================================================
+   MOBILE OVERLAY REFLOW OVERRIDES (append-only; overlays.css is NEVER edited).
+   mobile.css is imported BEFORE overlays.css (main.tsx:11 vs :12), so every
+   override is prefixed with its `.X-overlay` ancestor to out-specify the
+   single-class originals. All rules gated behind phone media so desktop
+   (wide viewport + fine pointer) never matches.
+   =========================================================================== */
+
+@media (max-width: 900px), (pointer: coarse) {
+  /* CircuitGrid: fixed minmax(56px,86px) cells (overlays.css:2405) overflow
+     narrow phones. Make tracks fluid + keep cells square so the board shrinks
+     to fit the panel instead of scrolling horizontally. */
+  .cyber-puzzle-overlay .circuit-grid-board {
+    grid-template-columns: repeat(var(--circuit-grid-cols), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--circuit-grid-rows), minmax(0, 1fr));
+    width: 100%;
+    max-width: min(86vw, 520px);
+  }
+  .cyber-puzzle-overlay .circuit-grid-board .circuit-grid-cell {
+    aspect-ratio: 1 / 1;
+    min-width: 0;
+    min-height: 0;
+  }
+  .cyber-puzzle-overlay .circuit-grid-board-shell {
+    width: 100%;
+  }
+
+  .cyber-puzzle-overlay .valve-matrix-gate-screen {
+    min-height: 132px;
+    gap: 8px;
+  }
+
+  .cyber-puzzle-overlay .valve-matrix-layout {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  /* Standardize panel max-heights on dynamic viewport units. On mobile 100vh is
+     the LARGE viewport (under the URL bar), so panels run beneath browser
+     chrome; dvh tracks the visible area. vh is kept as the preceding fallback
+     for engines without dvh. */
+  .flow-overlay .flow-panel { max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); }
+  .pause-overlay .pause-panel { max-height: calc(100vh - 32px); max-height: calc(100dvh - 32px); }
+  .code-lock-overlay .code-lock-panel { max-height: calc(100vh - 28px); max-height: calc(100dvh - 28px); }
+  .museum-story-overlay .museum-story-panel { max-height: calc(100vh - 34px); max-height: calc(100dvh - 34px); }
+  .tool-calibration-overlay .tool-calibration-panel { max-height: calc(100vh - 44px); max-height: calc(100dvh - 44px); }
+  .cyber-puzzle-overlay .cyber-puzzle-panel { max-height: calc(100vh - 44px); max-height: calc(100dvh - 44px); }
+  .sequence-playback-overlay .sequence-playback-panel { max-height: calc(100vh - 96px); max-height: calc(100dvh - 96px); }
+  .archive-merge-overlay .archive-merge-panel { max-height: calc(100vh - 48px); max-height: calc(100dvh - 48px); }
+  .gallery-reading-overlay .gallery-reading-panel { max-height: calc(100vh - 48px); max-height: calc(100dvh - 48px); }
+  .route-switch-overlay .route-switch-panel { max-height: calc(100vh - 24px); max-height: calc(100dvh - 24px); }
+}
+
+@media (max-width: 900px) and (max-height: 540px), (pointer: coarse) and (max-height: 540px) {
+  /* Short landscape phones: min-height 580-620px + overflow:hidden
+     (overlays.css archive/gallery panels) clip header/footer/body. Let the
+     panels size to the viewport and scroll their content instead of clipping. */
+  .archive-merge-overlay .archive-merge-panel,
+  .gallery-reading-overlay .gallery-reading-panel {
+    min-height: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  /* route-switch forces aspect-ratio:16/9 which overflows short heights. Drop
+     the lock and let height drive layout. */
+  .route-switch-overlay .route-switch-panel {
+    aspect-ratio: auto;
+    height: auto;
+    min-height: 0;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  /* No body `overlay-open` class exists; overlays are conditionally-mounted
+     full-screen siblings that precede `.mobile-controls` in `.app-shell`. While
+     any modal overlay is mounted, fade the look-pad and stop it intercepting
+     touches meant for overlay UI — mirrors the `.is-reveal-hidden` pattern.
+     InputSystem already discards gameplay input during overlays; this is the
+     UI-layer guard. On engines without :has() the selector simply no-ops. */
+  .app-shell:has(.flow-overlay) .look-pad,
+  .app-shell:has(.choice-overlay) .look-pad,
+  .app-shell:has(.upgrade-overlay) .look-pad,
+  .app-shell:has(.pause-overlay) .look-pad,
+  .app-shell:has(.code-lock-overlay) .look-pad,
+  .app-shell:has(.museum-story-overlay) .look-pad,
+  .app-shell:has(.tool-calibration-overlay) .look-pad,
+  .app-shell:has(.cyber-puzzle-overlay) .look-pad,
+  .app-shell:has(.sequence-playback-overlay) .look-pad,
+  .app-shell:has(.archive-merge-overlay) .look-pad,
+  .app-shell:has(.gallery-reading-overlay) .look-pad,
+  .app-shell:has(.route-switch-overlay) .look-pad,
+  .app-shell:has(.level-transfer-overlay) .look-pad,
+  .app-shell:has(.exit-cinematic-overlay) .look-pad {
+    opacity: 0;
+    pointer-events: none;
+  }
+}
+
+/* === PWA update / install affordances (global; rendered at document root by
+   PwaPrompt, outside the game tree). z-index 60 sits in the modal band. ===== */
+.pwa-toast {
+  position: fixed;
+  left: 50%;
+  bottom: max(16px, calc(env(safe-area-inset-bottom) + 16px));
+  z-index: 60;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  max-width: min(560px, calc(100vw - 24px));
+  padding: 10px 14px;
+  border: 1px solid rgba(120, 220, 255, 0.4);
+  border-radius: 12px;
+  color: #eaf6fb;
+  font-size: 13px;
+  font-weight: 700;
+  background: rgba(8, 16, 22, 0.92);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(6px);
+}
+
+.pwa-update {
+  cursor: pointer;
+}
+
+.pwa-install span {
+  flex: 1;
+  min-width: 0;
+}
+
+.pwa-install-accept {
+  flex: none;
+  padding: 7px 14px;
+  border: 1px solid rgba(120, 235, 255, 0.7);
+  border-radius: 8px;
+  color: #05121a;
+  font-weight: 900;
+  background: linear-gradient(180deg, #8fe9ff, #43c8ff);
+  cursor: pointer;
+}
+
+.pwa-dismiss {
+  flex: none;
+  width: 28px;
+  height: 28px;
+  padding: 0;
+  border: 0;
+  border-radius: 6px;
+  color: rgba(220, 236, 244, 0.8);
+  font-size: 18px;
+  line-height: 1;
+  background: rgba(255, 255, 255, 0.08);
+  cursor: pointer;
+}

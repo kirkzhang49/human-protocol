@@ -1,0 +1,36 @@
+{
+  "source": "Poly Haven",
+  "assetId": "horse_statue_01",
+  "sourceUrl": "https://polyhaven.com/a/horse_statue_01",
+  "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/horse_statue_01/horse_statue_01_1k.gltf",
+  "license": "CC0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "resolution": "1k glTF",
+  "files": {
+    "include": {
+      "textures/horse_statue_01_diff_1k.jpg": {
+        "size": 143564,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/horse_statue_01/horse_statue_01_diff_1k.jpg",
+        "md5": "a0aa4ddcc70e6223279cbbb4e031c1a6"
+      },
+      "textures/horse_statue_01_nor_gl_1k.jpg": {
+        "size": 125167,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/horse_statue_01/horse_statue_01_nor_gl_1k.jpg",
+        "md5": "5d39dedc6a58786c9d68f80037fb9513"
+      },
+      "horse_statue_01.bin": {
+        "size": 839480,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/horse_statue_01/horse_statue_01.bin",
+        "md5": "f240dd187e04807481bc422b5a9596c3"
+      },
+      "textures/horse_statue_01_arm_1k.jpg": {
+        "size": 169527,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/horse_statue_01/horse_statue_01_arm_1k.jpg",
+        "md5": "5e5f6cfaa0d8c8b7394f82b31951f9ac"
+      }
+    },
+    "size": 5858,
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/horse_statue_01/horse_statue_01_1k.gltf",
+    "md5": "3cca65f1d964c30947ca3c473ddbadff"
+  }
+}

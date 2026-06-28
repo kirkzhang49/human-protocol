@@ -1,0 +1,296 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_01_maintenance_bay",
+  "modelKey": "pickup_iron_rod_story",
+  "category": "pickup",
+  "file": "src/assets/models-cooked/environment/level01/hp_pickup_iron_rod_story.glb",
+  "fileName": "hp_pickup_iron_rod_story.glb",
+  "sourceAsset": {
+    "modelKey": "pickup_iron_rod_story",
+    "category": "pickup",
+    "url": "/src/assets/models-cooked/environment/level01/hp_pickup_iron_rod_story.glb",
+    "file": "src/assets/models-cooked/environment/level01/hp_pickup_iron_rod_story.glb",
+    "sizeMeters": [
+      0.95,
+      0.84,
+      0.25
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 6056,
+      "meshes": 1,
+      "nodes": 1,
+      "skins": 0,
+      "primitives": 4,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 12,
+      "bufferViews": 12,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 48
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level01/hp_pickup_iron_rod_story.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 428682,
+    "vertexCount": 144,
+    "triangleCount": 48,
+    "meshCount": 4,
+    "materialCount": 4,
+    "nodeCount": 1,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.44859,
+        -0.409419,
+        -0.13339
+      ],
+      "center": [
+        0.049114,
+        0.047191,
+        0.017194
+      ],
+      "size": [
+        0.995408,
+        0.913221,
+        0.301168
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "pickup_iron_rod_story",
+        "vertexOffset": 428682,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "pickup_iron_rod_story_1",
+        "vertexOffset": 428718,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "pickup_iron_rod_story_2",
+        "vertexOffset": 428754,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "pickup_iron_rod_story_3",
+        "vertexOffset": 428790,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "story-pickup-seed:pickup_iron_rod",
+      "source": "level.pickups.storyPickups",
+      "role": "pickup_ironRod",
+      "roomId": "maintenance_bay_floor",
+      "secondaryRoomId": null,
+      "position": [
+        -0.82,
+        0,
+        6.18
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "raw_asset_seed",
+        "story_pickup"
+      ],
+      "visibility": {
+        "type": "pickup",
+        "pickupId": "pickup_iron_rod"
+      },
+      "state": {
+        "pickupId": "pickup_iron_rod",
+        "interactionId": "pickup_iron_rod",
+        "type": "ironRod"
+      },
+      "estimatedBounds": {
+        "center": [
+          -0.82,
+          0,
+          6.18
+        ],
+        "halfSize": [
+          0.475,
+          0.42,
+          0.125
+        ]
+      }
+    }
+  ]
+}

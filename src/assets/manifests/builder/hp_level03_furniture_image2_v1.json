@@ -1,0 +1,234 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level03_furniture_image2_v1",
+  "label": "HP \u7b2c\u4e09\u5173 \u4eba\u7c7b\u535a\u7269\u9986\u5bb6\u5177\u5305 (Image2)",
+  "sourceTool": "generate-level03-furniture-image2-assets.py",
+  "generatedAt": "2026-06-13",
+  "atlas": {
+    "image": "src/assets/textures/environment/level03-furniture-image2/hp_level03_furniture_image2_atlas.png",
+    "regions": "src/assets/textures/environment/level03-furniture-image2/hp_level03_furniture_image2_atlas.regions.json",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "assets": [
+    {
+      "modelKey": "room_l3_img2_display_plinth",
+      "label": "\u5c55\u67dc\u57fa\u5ea7",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "\u535a\u7269\u9986",
+      "source": "level03-image2-furniture",
+      "sourceAssetId": "room_l3_img2_display_plinth_v1",
+      "themeId": "hp_museum_smoked_glass",
+      "glbFile": "../../models-cooked/environment/level03-furniture-image2/room_l3_img2_display_plinth.glb",
+      "sizeMeters": [
+        0.9,
+        1.475,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "display_case",
+      "tags": [
+        "level:03",
+        "theme:human-museum",
+        "style:image2",
+        "family:display_case"
+      ]
+    },
+    {
+      "modelKey": "room_l3_img2_archive_card_cabinet",
+      "label": "\u6863\u6848\u5361\u7247\u67dc",
+      "assetKind": "furniture",
+      "family": "drawer_chest",
+      "group": "\u535a\u7269\u9986",
+      "source": "level03-image2-furniture",
+      "sourceAssetId": "room_l3_img2_archive_card_cabinet_v1",
+      "themeId": "hp_museum_smoked_glass",
+      "glbFile": "../../models-cooked/environment/level03-furniture-image2/room_l3_img2_archive_card_cabinet.glb",
+      "sizeMeters": [
+        1.1,
+        1.47,
+        0.5
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 3,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:03",
+        "theme:human-museum",
+        "style:image2",
+        "family:drawer_chest"
+      ]
+    },
+    {
+      "modelKey": "room_l3_img2_mural_lightbox",
+      "label": "\u58c1\u753b\u706f\u7bb1",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "\u535a\u7269\u9986",
+      "source": "level03-image2-furniture",
+      "sourceAssetId": "room_l3_img2_mural_lightbox_v1",
+      "themeId": "hp_museum_smoked_glass",
+      "glbFile": "../../models-cooked/environment/level03-furniture-image2/room_l3_img2_mural_lightbox.glb",
+      "sizeMeters": [
+        1.62,
+        1.1,
+        0.264
+      ],
+      "solid": true,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "level:03",
+        "theme:human-museum",
+        "style:image2",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l3_img2_specimen_bench",
+      "label": "\u6807\u672c\u957f\u51f3",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "\u535a\u7269\u9986",
+      "source": "level03-image2-furniture",
+      "sourceAssetId": "room_l3_img2_specimen_bench_v1",
+      "themeId": "hp_museum_smoked_glass",
+      "glbFile": "../../models-cooked/environment/level03-furniture-image2/room_l3_img2_specimen_bench.glb",
+      "sizeMeters": [
+        1.74,
+        0.74,
+        0.56
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "level:03",
+        "theme:human-museum",
+        "style:image2",
+        "family:sofa_bench"
+      ]
+    },
+    {
+      "modelKey": "room_l3_img2_queue_rail",
+      "label": "\u53c2\u89c2\u680f\u6746",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "\u535a\u7269\u9986",
+      "source": "level03-image2-furniture",
+      "sourceAssetId": "room_l3_img2_queue_rail_v1",
+      "themeId": "hp_museum_smoked_glass",
+      "glbFile": "../../models-cooked/environment/level03-furniture-image2/room_l3_img2_queue_rail.glb",
+      "sizeMeters": [
+        1.66,
+        0.995,
+        0.26
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:03",
+        "theme:human-museum",
+        "style:image2",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l3_img2_evidence_round_table",
+      "label": "\u8bc1\u7269\u5706\u684c",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "\u535a\u7269\u9986",
+      "source": "level03-image2-furniture",
+      "sourceAssetId": "room_l3_img2_evidence_round_table_v1",
+      "themeId": "hp_museum_smoked_glass",
+      "glbFile": "../../models-cooked/environment/level03-furniture-image2/room_l3_img2_evidence_round_table.glb",
+      "sizeMeters": [
+        1.04,
+        0.77,
+        1.04
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "level:03",
+        "theme:human-museum",
+        "style:image2",
+        "family:desk"
+      ]
+    },
+    {
+      "modelKey": "room_l3_img2_label_terminal",
+      "label": "\u5c55\u7b7e\u7ec8\u7aef",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "\u535a\u7269\u9986",
+      "source": "level03-image2-furniture",
+      "sourceAssetId": "room_l3_img2_label_terminal_v1",
+      "themeId": "hp_museum_smoked_glass",
+      "glbFile": "../../models-cooked/environment/level03-furniture-image2/room_l3_img2_label_terminal.glb",
+      "sizeMeters": [
+        0.52,
+        1.27,
+        0.52
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:03",
+        "theme:human-museum",
+        "style:image2",
+        "family:control_console"
+      ]
+    },
+    {
+      "modelKey": "room_l3_img2_preservation_case",
+      "label": "\u4fdd\u5b58\u67dc",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "\u535a\u7269\u9986",
+      "source": "level03-image2-furniture",
+      "sourceAssetId": "room_l3_img2_preservation_case_v1",
+      "themeId": "hp_museum_smoked_glass",
+      "glbFile": "../../models-cooked/environment/level03-furniture-image2/room_l3_img2_preservation_case.glb",
+      "sizeMeters": [
+        0.88,
+        1.755,
+        0.88
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "display_case",
+      "tags": [
+        "level:03",
+        "theme:human-museum",
+        "style:image2",
+        "family:display_case"
+      ]
+    }
+  ]
+}

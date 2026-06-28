@@ -1,0 +1,1711 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "room_l09_p02",
+  "family": "puzzle",
+  "bundleId": "puzzle/room_l09_p02",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/props/hp_room_l09_p02.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 7140,
+    "triangleCount": 2380,
+    "byteLength": 285600,
+    "hash": "4f29b811e01fe38f",
+    "asset": {
+      "modelKey": "room_l09_p02",
+      "sourceFile": "src/assets/models-cooked/environment/props/hp_room_l09_p02.glb",
+      "rawFile": "src/assets/models-cooked/environment/props/hp_room_l09_p02.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 7140,
+      "triangleCount": 2380,
+      "meshCount": 11,
+      "materialCount": 10,
+      "nodeCount": 1,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube",
+          "vertexOffset": 0,
+          "vertexCount": 192,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_1",
+          "vertexOffset": 192,
+          "vertexCount": 492,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_2",
+          "vertexOffset": 684,
+          "vertexCount": 288,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_3",
+          "vertexOffset": 972,
+          "vertexCount": 2166,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_4",
+          "vertexOffset": 3138,
+          "vertexCount": 1194,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_5",
+          "vertexOffset": 4332,
+          "vertexCount": 1992,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_6",
+          "vertexOffset": 6324,
+          "vertexCount": 96,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_7",
+          "vertexOffset": 6420,
+          "vertexCount": 192,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_8",
+          "vertexOffset": 6612,
+          "vertexCount": 192,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_9",
+          "vertexOffset": 6804,
+          "vertexCount": 240,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "Cube_10",
+          "vertexOffset": 7044,
+          "vertexCount": 96,
+          "bindMatrix": [
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0,
+            0,
+            0.7475,
+            0,
+            0,
+            0.7475,
+            0.000586,
+            1
+          ],
+          "inverseBindMatrix": [
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            0,
+            0,
+            1.337793,
+            0,
+            0,
+            -1,
+            -0.000784,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.31,
+          0,
+          -0.248824
+        ],
+        "center": [
+          0,
+          0.7475,
+          0.000586
+        ],
+        "size": [
+          0.62,
+          1.495,
+          0.49882
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "cac8f1f01caa5ec6",
+    "materials": [
+      {
+        "index": 459,
+        "id": "mat:builder-resource:brass-bright:1f0d901",
+        "name": "brass_bright",
+        "category": "builder-resource",
+        "visualRole": "route_gold",
+        "semanticParams": [
+          8,
+          0.9,
+          0.42,
+          0.06
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_brass_polished_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-52-pbr-brass-polished-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-52-pbr-brass-polished-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.430407,
+              "contrast": 0.013461,
+              "chroma": 0.589572,
+              "detail": 0.017737
+            },
+            "generated": false,
+            "layer": 52
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_brass_polished_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-82-pbr-brass-polished-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-82-pbr-brass-polished-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536543,
+              "contrast": 0.004485,
+              "chroma": 0.775503,
+              "detail": 0.007841
+            },
+            "generated": false,
+            "layer": 82
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_brass_polished_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-83-pbr-brass-polished-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-83-pbr-brass-polished-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.445806,
+              "contrast": 0.001372,
+              "chroma": 1,
+              "detail": 0.002169
+            },
+            "generated": false,
+            "layer": 83
+          }
+        ]
+      },
+      {
+        "index": 606,
+        "id": "mat:builder-resource:steel-clip:t9mv0d",
+        "name": "steel_clip",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_steel_brushed_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.179925,
+              "contrast": 0.009586,
+              "chroma": 0.000743,
+              "detail": 0.015094
+            },
+            "generated": false,
+            "layer": 44
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_steel_brushed_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-67-pbr-steel-brushed-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-67-pbr-steel-brushed-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536066,
+              "contrast": 0.004081,
+              "chroma": 0.77658,
+              "detail": 0.006655
+            },
+            "generated": false,
+            "layer": 67
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_steel_brushed_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.545818,
+              "contrast": 0.001702,
+              "chroma": 0.929372,
+              "detail": 0.002554
+            },
+            "generated": false,
+            "layer": 68
+          }
+        ]
+      },
+      {
+        "index": 643,
+        "id": "mat:builder-resource:wood-base:1nlnfgi",
+        "name": "wood_base",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_wood_walnut_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-51-pbr-wood-walnut-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-51-pbr-wood-walnut-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.179805,
+              "contrast": 0.020664,
+              "chroma": 0.274663,
+              "detail": 0.029674
+            },
+            "generated": false,
+            "layer": 51
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_wood_walnut_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-80-pbr-wood-walnut-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-80-pbr-wood-walnut-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536134,
+              "contrast": 0.010491,
+              "chroma": 0.777518,
+              "detail": 0.019853
+            },
+            "generated": false,
+            "layer": 80
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_wood_walnut_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-81-pbr-wood-walnut-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-81-pbr-wood-walnut-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.511655,
+              "contrast": 0.004045,
+              "chroma": 1,
+              "detail": 0.005668
+            },
+            "generated": false,
+            "layer": 81
+          }
+        ]
+      },
+      {
+        "index": 644,
+        "id": "mat:builder-resource:wood-post:nxgkn1",
+        "name": "wood_post",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_wood_walnut_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-51-pbr-wood-walnut-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-51-pbr-wood-walnut-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.179805,
+              "contrast": 0.020664,
+              "chroma": 0.274663,
+              "detail": 0.029674
+            },
+            "generated": false,
+            "layer": 51
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_wood_walnut_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-80-pbr-wood-walnut-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-80-pbr-wood-walnut-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536134,
+              "contrast": 0.010491,
+              "chroma": 0.777518,
+              "detail": 0.019853
+            },
+            "generated": false,
+            "layer": 80
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_wood_walnut_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-81-pbr-wood-walnut-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-81-pbr-wood-walnut-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.511655,
+              "contrast": 0.004045,
+              "chroma": 1,
+              "detail": 0.005668
+            },
+            "generated": false,
+            "layer": 81
+          }
+        ]
+      },
+      {
+        "index": 645,
+        "id": "mat:builder-resource:marble-inset:tz4w39",
+        "name": "marble_inset",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.48,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_dark_marble_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-50-pbr-dark-marble-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-50-pbr-dark-marble-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.145288,
+              "contrast": 0.046835,
+              "chroma": 0.00757,
+              "detail": 0.06879
+            },
+            "generated": false,
+            "layer": 50
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_dark_marble_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-78-pbr-dark-marble-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-78-pbr-dark-marble-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.535905,
+              "contrast": 0.004205,
+              "chroma": 0.777238,
+              "detail": 0.007702
+            },
+            "generated": false,
+            "layer": 78
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_dark_marble_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-79-pbr-dark-marble-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-79-pbr-dark-marble-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.417059,
+              "contrast": 0.002121,
+              "chroma": 1,
+              "detail": 0.002801
+            },
+            "generated": false,
+            "layer": 79
+          }
+        ]
+      },
+      {
+        "index": 646,
+        "id": "mat:builder-resource:brass-worn:1v9c60r",
+        "name": "brass_worn",
+        "category": "builder-resource",
+        "visualRole": "route_gold",
+        "semanticParams": [
+          8,
+          0.9,
+          0.42,
+          0.06
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_brass_aged_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-48-pbr-brass-aged-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-48-pbr-brass-aged-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.270354,
+              "contrast": 0.017268,
+              "chroma": 0.306335,
+              "detail": 0.024443
+            },
+            "generated": false,
+            "layer": 48
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_brass_aged_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-74-pbr-brass-aged-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-74-pbr-brass-aged-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536058,
+              "contrast": 0.003789,
+              "chroma": 0.776537,
+              "detail": 0.005843
+            },
+            "generated": false,
+            "layer": 74
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_brass_aged_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-75-pbr-brass-aged-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-75-pbr-brass-aged-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.591453,
+              "contrast": 0.003674,
+              "chroma": 0.842992,
+              "detail": 0.00418
+            },
+            "generated": false,
+            "layer": 75
+          }
+        ]
+      },
+      {
+        "index": 647,
+        "id": "mat:builder-resource:felt-pad:1wbxf74",
+        "name": "felt_pad",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_velvet_oxblood_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-53-pbr-velvet-oxblood-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-53-pbr-velvet-oxblood-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.150314,
+              "contrast": 0.010943,
+              "chroma": 0.976369,
+              "detail": 0.019301
+            },
+            "generated": false,
+            "layer": 53
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_velvet_oxblood_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-84-pbr-velvet-oxblood-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-84-pbr-velvet-oxblood-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536009,
+              "contrast": 0.005784,
+              "chroma": 0.77595,
+              "detail": 0.013162
+            },
+            "generated": false,
+            "layer": 84
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_velvet_oxblood_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-85-pbr-velvet-oxblood-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-85-pbr-velvet-oxblood-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.683311,
+              "contrast": 0.003568,
+              "chroma": 1,
+              "detail": 0.005542
+            },
+            "generated": false,
+            "layer": 85
+          }
+        ]
+      },
+      {
+        "index": 648,
+        "id": "mat:builder-resource:board-card:19iaqu4",
+        "name": "board_card",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pbr_bone_ivory_basecolor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-49-pbr-bone-ivory-basecolor.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-49-pbr-bone-ivory-basecolor.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.480881,
+              "contrast": 0.00816,
+              "chroma": 0.158364,
+              "detail": 0.011339
+            },
+            "generated": false,
+            "layer": 49
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_bone_ivory_normal",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-76-pbr-bone-ivory-normal.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-76-pbr-bone-ivory-normal.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.535804,
+              "contrast": 0.003519,
+              "chroma": 0.777452,
+              "detail": 0.005561
+            },
+            "generated": false,
+            "layer": 76
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "pbr_bone_ivory_orm",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-77-pbr-bone-ivory-orm.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-77-pbr-bone-ivory-orm.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.550363,
+              "contrast": 0.005198,
+              "chroma": 1,
+              "detail": 0.007137
+            },
+            "generated": false,
+            "layer": 77
+          }
+        ]
+      },
+      {
+        "index": 649,
+        "id": "mat:builder-resource:sale-amber:1o4u0oh",
+        "name": "sale_amber",
+        "category": "builder-resource",
+        "visualRole": "route_gold",
+        "semanticParams": [
+          8,
+          0.9,
+          0.58,
+          0.06
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          0.72,
+          0.24,
+          1
+        ],
+        "emissiveFactor": [
+          1,
+          0.7,
+          0.2
+        ],
+        "emissiveStrength": 3.876,
+        "roughnessFactor": 0.4,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 650,
+        "id": "mat:builder-resource:warm-glow:5oh5i9",
+        "name": "warm_glow",
+        "category": "builder-resource",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.8,
+          0.5,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          0.84,
+          0.55,
+          1
+        ],
+        "emissiveFactor": [
+          1,
+          0.82,
+          0.5
+        ],
+        "emissiveStrength": 3.0624,
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 44,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+        "name": "pbr_steel_brushed_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-44-pbr-steel-brushed-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.179925,
+          "contrast": 0.009586,
+          "chroma": 0.000743,
+          "detail": 0.015094
+        }
+      },
+      {
+        "layer": 48,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-48-pbr-brass-aged-basecolor.webp",
+        "name": "pbr_brass_aged_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-48-pbr-brass-aged-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.270354,
+          "contrast": 0.017268,
+          "chroma": 0.306335,
+          "detail": 0.024443
+        }
+      },
+      {
+        "layer": 49,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-49-pbr-bone-ivory-basecolor.webp",
+        "name": "pbr_bone_ivory_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-49-pbr-bone-ivory-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.480881,
+          "contrast": 0.00816,
+          "chroma": 0.158364,
+          "detail": 0.011339
+        }
+      },
+      {
+        "layer": 50,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-50-pbr-dark-marble-basecolor.webp",
+        "name": "pbr_dark_marble_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-50-pbr-dark-marble-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.145288,
+          "contrast": 0.046835,
+          "chroma": 0.00757,
+          "detail": 0.06879
+        }
+      },
+      {
+        "layer": 51,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-51-pbr-wood-walnut-basecolor.webp",
+        "name": "pbr_wood_walnut_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-51-pbr-wood-walnut-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.179805,
+          "contrast": 0.020664,
+          "chroma": 0.274663,
+          "detail": 0.029674
+        }
+      },
+      {
+        "layer": 52,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-52-pbr-brass-polished-basecolor.webp",
+        "name": "pbr_brass_polished_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-52-pbr-brass-polished-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.430407,
+          "contrast": 0.013461,
+          "chroma": 0.589572,
+          "detail": 0.017737
+        }
+      },
+      {
+        "layer": 53,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-53-pbr-velvet-oxblood-basecolor.webp",
+        "name": "pbr_velvet_oxblood_basecolor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/basecolor-53-pbr-velvet-oxblood-basecolor.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.150314,
+          "contrast": 0.010943,
+          "chroma": 0.976369,
+          "detail": 0.019301
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": [
+      {
+        "layer": 67,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-67-pbr-steel-brushed-normal.webp",
+        "name": "pbr_steel_brushed_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-67-pbr-steel-brushed-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536066,
+          "contrast": 0.004081,
+          "chroma": 0.77658,
+          "detail": 0.006655
+        }
+      },
+      {
+        "layer": 68,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+        "name": "pbr_steel_brushed_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-68-pbr-steel-brushed-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.545818,
+          "contrast": 0.001702,
+          "chroma": 0.929372,
+          "detail": 0.002554
+        }
+      },
+      {
+        "layer": 74,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-74-pbr-brass-aged-normal.webp",
+        "name": "pbr_brass_aged_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-74-pbr-brass-aged-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536058,
+          "contrast": 0.003789,
+          "chroma": 0.776537,
+          "detail": 0.005843
+        }
+      },
+      {
+        "layer": 75,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-75-pbr-brass-aged-orm.webp",
+        "name": "pbr_brass_aged_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-75-pbr-brass-aged-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.591453,
+          "contrast": 0.003674,
+          "chroma": 0.842992,
+          "detail": 0.00418
+        }
+      },
+      {
+        "layer": 76,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-76-pbr-bone-ivory-normal.webp",
+        "name": "pbr_bone_ivory_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-76-pbr-bone-ivory-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.535804,
+          "contrast": 0.003519,
+          "chroma": 0.777452,
+          "detail": 0.005561
+        }
+      },
+      {
+        "layer": 77,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-77-pbr-bone-ivory-orm.webp",
+        "name": "pbr_bone_ivory_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-77-pbr-bone-ivory-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.550363,
+          "contrast": 0.005198,
+          "chroma": 1,
+          "detail": 0.007137
+        }
+      },
+      {
+        "layer": 78,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-78-pbr-dark-marble-normal.webp",
+        "name": "pbr_dark_marble_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-78-pbr-dark-marble-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.535905,
+          "contrast": 0.004205,
+          "chroma": 0.777238,
+          "detail": 0.007702
+        }
+      },
+      {
+        "layer": 79,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-79-pbr-dark-marble-orm.webp",
+        "name": "pbr_dark_marble_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-79-pbr-dark-marble-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.417059,
+          "contrast": 0.002121,
+          "chroma": 1,
+          "detail": 0.002801
+        }
+      },
+      {
+        "layer": 80,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-80-pbr-wood-walnut-normal.webp",
+        "name": "pbr_wood_walnut_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-80-pbr-wood-walnut-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536134,
+          "contrast": 0.010491,
+          "chroma": 0.777518,
+          "detail": 0.019853
+        }
+      },
+      {
+        "layer": 81,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-81-pbr-wood-walnut-orm.webp",
+        "name": "pbr_wood_walnut_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-81-pbr-wood-walnut-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.511655,
+          "contrast": 0.004045,
+          "chroma": 1,
+          "detail": 0.005668
+        }
+      },
+      {
+        "layer": 82,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-82-pbr-brass-polished-normal.webp",
+        "name": "pbr_brass_polished_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-82-pbr-brass-polished-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536543,
+          "contrast": 0.004485,
+          "chroma": 0.775503,
+          "detail": 0.007841
+        }
+      },
+      {
+        "layer": 83,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-83-pbr-brass-polished-orm.webp",
+        "name": "pbr_brass_polished_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-83-pbr-brass-polished-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.445806,
+          "contrast": 0.001372,
+          "chroma": 1,
+          "detail": 0.002169
+        }
+      },
+      {
+        "layer": 84,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-84-pbr-velvet-oxblood-normal.webp",
+        "name": "pbr_velvet_oxblood_normal",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/normal-84-pbr-velvet-oxblood-normal.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536009,
+          "contrast": 0.005784,
+          "chroma": 0.77595,
+          "detail": 0.013162
+        }
+      },
+      {
+        "layer": 85,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-85-pbr-velvet-oxblood-orm.webp",
+        "name": "pbr_velvet_oxblood_orm",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/room_l09_p02/textures/metallicroughness-85-pbr-velvet-oxblood-orm.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.683311,
+          "contrast": 0.003568,
+          "chroma": 1,
+          "detail": 0.005542
+        }
+      }
+    ]
+  }
+}

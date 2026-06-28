@@ -1,0 +1,57 @@
+{
+  "assetPack": "hp_level01_power_infra_image2_v1",
+  "script": "scripts/asset-build/generate-level01-power-infra-image2-assets.py",
+  "sourceBlend": "src/assets/source_blend/level01-power-infra-image2/human_protocol_level01_power_infra_image2_v1.blend",
+  "generatedAssets": [
+    {
+      "modelKey": "room_l1_img2_battery_charging_rack",
+      "glb": "src/assets/models-cooked/environment/level01-power-infra-image2/room_l1_img2_battery_charging_rack.glb",
+      "sizeMeters": [
+        1.45,
+        1.67,
+        0.662
+      ],
+      "bytes": 2018136
+    },
+    {
+      "modelKey": "room_l1_img2_breaker_pylon",
+      "glb": "src/assets/models-cooked/environment/level01-power-infra-image2/room_l1_img2_breaker_pylon.glb",
+      "sizeMeters": [
+        0.8,
+        1.745,
+        0.72
+      ],
+      "bytes": 1931164
+    },
+    {
+      "modelKey": "room_l1_img2_valve_manifold_wall",
+      "glb": "src/assets/models-cooked/environment/level01-power-infra-image2/room_l1_img2_valve_manifold_wall.glb",
+      "sizeMeters": [
+        1.75,
+        1.22,
+        0.202
+      ],
+      "bytes": 2030636
+    },
+    {
+      "modelKey": "room_l1_img2_overhead_rail_gantry",
+      "glb": "src/assets/models-cooked/environment/level01-power-infra-image2/room_l1_img2_overhead_rail_gantry.glb",
+      "sizeMeters": [
+        2.25,
+        2.13,
+        0.864
+      ],
+      "bytes": 1940864
+    },
+    {
+      "modelKey": "room_l1_img2_robot_docking_post",
+      "glb": "src/assets/models-cooked/environment/level01-power-infra-image2/room_l1_img2_robot_docking_post.glb",
+      "sizeMeters": [
+        0.94,
+        1.53,
+        0.852
+      ],
+      "bytes": 1908224
+    }
+  ]
+}

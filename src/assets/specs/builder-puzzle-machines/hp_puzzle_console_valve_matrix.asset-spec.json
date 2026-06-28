@@ -1,0 +1,65 @@
+{
+  "schemaVersion": "hp.assetSpec.v1",
+  "assetFamily": "gate_balance",
+  "modelKey": "puzzle_console_valve_matrix",
+  "role": "Build Page valve_matrix screen-gate puzzle console",
+  "scaleMeters": [
+    1.712,
+    1.534,
+    0.546
+  ],
+  "silhouette": [
+    "wide cyan screen",
+    "three vertical gate inlays",
+    "old-gold lower bus rail",
+    "right status module",
+    "grounded plinth"
+  ],
+  "materialSlots": [
+    "gb_smoked_titanium_body",
+    "gb_black_recess",
+    "gb_brushed_steel_trim",
+    "gb_old_gold_bus",
+    "gb_black_rubber",
+    "gb_cyan_glow",
+    "gb_gate_safe_glow",
+    "gb_gate_warning_glow",
+    "gb_terminal_screen_image2_atlas"
+  ],
+  "textureSources": [
+    "src/assets/textures/environment/builder-puzzle-machines/hp_gate_balance_terminal_screen_atlas_v1.png",
+    "src/assets/textures/environment/builder-puzzle-machines/hp_gate_balance_terminal_screen_atlas_v1.regions.json"
+  ],
+  "states": [
+    "idle",
+    "focused",
+    "balanced",
+    "error"
+  ],
+  "collisionProxy": {
+    "type": "box",
+    "sizeMeters": [
+      1.46,
+      1.44,
+      0.46
+    ],
+    "notes": "Should block like a compact floor terminal; interaction still uses the generated puzzle terminal interaction radius."
+  },
+  "runtimeContent": [
+    "localized puzzle title",
+    "valve labels and numeric positions",
+    "gauge values and target deltas",
+    "timer",
+    "success/failure state",
+    "answer positions"
+  ],
+  "mobileBudget": {
+    "targetTriangles": 9000,
+    "actualTriangles": 7888,
+    "textureAtlas": "1024x1024 PNG embedded in GLB"
+  },
+  "qaEvidence": [
+    "src/assets/manifests/reports/gate_balance_console_blender_report_v1.json",
+    "src/assets/manifests/reports/gate_balance_console_render_v1.png"
+  ]
+}

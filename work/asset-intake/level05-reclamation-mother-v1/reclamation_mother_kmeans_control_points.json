@@ -1,0 +1,686 @@
+{
+  "schema": "human-protocol/reclamation-mother-kmeans-controls@1",
+  "axisMap": "generatorX=referenceY, generatorY=referenceX, generatorZ=referenceZ",
+  "controls": [
+    {
+      "id": "cluster_24",
+      "center": [
+        -0.5285,
+        0.0245,
+        0.2338
+      ],
+      "scale": [
+        0.2003,
+        0.2157,
+        0.1964
+      ],
+      "material": "dark",
+      "count": 286,
+      "referenceCenter": [
+        0.0245,
+        -0.5285,
+        0.2338
+      ]
+    },
+    {
+      "id": "cluster_17",
+      "center": [
+        0.4625,
+        0.2987,
+        0.2341
+      ],
+      "scale": [
+        0.1562,
+        0.2205,
+        0.1876
+      ],
+      "material": "dark",
+      "count": 295,
+      "referenceCenter": [
+        0.2987,
+        0.4625,
+        0.2341
+      ]
+    },
+    {
+      "id": "cluster_28",
+      "center": [
+        -0.3929,
+        -0.0404,
+        0.8299
+      ],
+      "scale": [
+        0.165,
+        0.1098,
+        0.2386
+      ],
+      "material": "dark",
+      "count": 137,
+      "referenceCenter": [
+        -0.0404,
+        -0.3929,
+        0.8299
+      ]
+    },
+    {
+      "id": "cluster_15",
+      "center": [
+        0.3549,
+        0.3041,
+        0.8395
+      ],
+      "scale": [
+        0.1557,
+        0.1793,
+        0.2034
+      ],
+      "material": "dark",
+      "count": 256,
+      "referenceCenter": [
+        0.3041,
+        0.3549,
+        0.8395
+      ]
+    },
+    {
+      "id": "cluster_21",
+      "center": [
+        -0.4292,
+        0.234,
+        0.9203
+      ],
+      "scale": [
+        0.1411,
+        0.1024,
+        0.2215
+      ],
+      "material": "dark",
+      "count": 114,
+      "referenceCenter": [
+        0.234,
+        -0.4292,
+        0.9203
+      ]
+    },
+    {
+      "id": "cluster_20",
+      "center": [
+        -0.8207,
+        -0.0161,
+        1.0817
+      ],
+      "scale": [
+        0.0769,
+        0.097,
+        0.0723
+      ],
+      "material": "dark",
+      "count": 248,
+      "referenceCenter": [
+        -0.0161,
+        -0.8207,
+        1.0817
+      ]
+    },
+    {
+      "id": "cluster_22",
+      "center": [
+        0.7723,
+        0.2967,
+        1.0844
+      ],
+      "scale": [
+        0.0859,
+        0.0855,
+        0.0701
+      ],
+      "material": "dark",
+      "count": 242,
+      "referenceCenter": [
+        0.2967,
+        0.7723,
+        1.0844
+      ]
+    },
+    {
+      "id": "cluster_31",
+      "center": [
+        0.6862,
+        0.2583,
+        1.2916
+      ],
+      "scale": [
+        0.1537,
+        0.0714,
+        0.0995
+      ],
+      "material": "dark",
+      "count": 130,
+      "referenceCenter": [
+        0.2583,
+        0.6862,
+        1.2916
+      ]
+    },
+    {
+      "id": "cluster_00",
+      "center": [
+        0.218,
+        0.0583,
+        1.3022
+      ],
+      "scale": [
+        0.1628,
+        0.0975,
+        0.1525
+      ],
+      "material": "dark",
+      "count": 83,
+      "referenceCenter": [
+        0.0583,
+        0.218,
+        1.3022
+      ]
+    },
+    {
+      "id": "cluster_19",
+      "center": [
+        -0.8671,
+        -0.107,
+        1.3131
+      ],
+      "scale": [
+        0.1249,
+        0.1267,
+        0.0904
+      ],
+      "material": "dark",
+      "count": 189,
+      "referenceCenter": [
+        -0.107,
+        -0.8671,
+        1.3131
+      ]
+    },
+    {
+      "id": "cluster_10",
+      "center": [
+        0.8399,
+        0.0922,
+        1.3174
+      ],
+      "scale": [
+        0.1111,
+        0.1048,
+        0.0959
+      ],
+      "material": "dark",
+      "count": 44,
+      "referenceCenter": [
+        0.0922,
+        0.8399,
+        1.3174
+      ]
+    },
+    {
+      "id": "cluster_23",
+      "center": [
+        0.2126,
+        0.2844,
+        1.4061
+      ],
+      "scale": [
+        0.1718,
+        0.127,
+        0.1253
+      ],
+      "material": "dark",
+      "count": 95,
+      "referenceCenter": [
+        0.2844,
+        0.2126,
+        1.4061
+      ]
+    },
+    {
+      "id": "cluster_02",
+      "center": [
+        -0.2368,
+        -0.0641,
+        1.4312
+      ],
+      "scale": [
+        0.1469,
+        0.079,
+        0.1856
+      ],
+      "material": "dark",
+      "count": 143,
+      "referenceCenter": [
+        -0.0641,
+        -0.2368,
+        1.4312
+      ]
+    },
+    {
+      "id": "cluster_32",
+      "center": [
+        -0.2718,
+        0.2225,
+        1.4557
+      ],
+      "scale": [
+        0.1537,
+        0.1019,
+        0.1695
+      ],
+      "material": "dark",
+      "count": 164,
+      "referenceCenter": [
+        0.2225,
+        -0.2718,
+        1.4557
+      ]
+    },
+    {
+      "id": "cluster_29",
+      "center": [
+        -0.8449,
+        -0.3525,
+        1.6261
+      ],
+      "scale": [
+        0.1559,
+        0.1244,
+        0.1485
+      ],
+      "material": "dark",
+      "count": 109,
+      "referenceCenter": [
+        -0.3525,
+        -0.8449,
+        1.6261
+      ]
+    },
+    {
+      "id": "cluster_26",
+      "center": [
+        0.8616,
+        -0.0772,
+        1.6374
+      ],
+      "scale": [
+        0.1383,
+        0.114,
+        0.139
+      ],
+      "material": "dark",
+      "count": 96,
+      "referenceCenter": [
+        -0.0772,
+        0.8616,
+        1.6374
+      ]
+    },
+    {
+      "id": "cluster_06",
+      "center": [
+        0.1644,
+        -0.0431,
+        1.6384
+      ],
+      "scale": [
+        0.0848,
+        0.0823,
+        0.1503
+      ],
+      "material": "dark",
+      "count": 116,
+      "referenceCenter": [
+        -0.0431,
+        0.1644,
+        1.6384
+      ]
+    },
+    {
+      "id": "cluster_09",
+      "center": [
+        0.1529,
+        0.2714,
+        1.688
+      ],
+      "scale": [
+        0.1172,
+        0.0949,
+        0.1684
+      ],
+      "material": "dark",
+      "count": 103,
+      "referenceCenter": [
+        0.2714,
+        0.1529,
+        1.688
+      ]
+    },
+    {
+      "id": "cluster_30",
+      "center": [
+        -0.2233,
+        0.0856,
+        1.8141
+      ],
+      "scale": [
+        0.0995,
+        0.1815,
+        0.1406
+      ],
+      "material": "dark",
+      "count": 191,
+      "referenceCenter": [
+        0.0856,
+        -0.2233,
+        1.8141
+      ]
+    },
+    {
+      "id": "cluster_18",
+      "center": [
+        0.7718,
+        -0.1803,
+        1.8224
+      ],
+      "scale": [
+        0.1676,
+        0.1427,
+        0.1373
+      ],
+      "material": "dark",
+      "count": 172,
+      "referenceCenter": [
+        -0.1803,
+        0.7718,
+        1.8224
+      ]
+    },
+    {
+      "id": "cluster_12",
+      "center": [
+        -0.7618,
+        -0.4042,
+        1.8696
+      ],
+      "scale": [
+        0.1565,
+        0.1588,
+        0.1374
+      ],
+      "material": "dark",
+      "count": 173,
+      "referenceCenter": [
+        -0.4042,
+        -0.7618,
+        1.8696
+      ]
+    },
+    {
+      "id": "cluster_25",
+      "center": [
+        0.2018,
+        0.0581,
+        1.8728
+      ],
+      "scale": [
+        0.0678,
+        0.1804,
+        0.1266
+      ],
+      "material": "dark",
+      "count": 121,
+      "referenceCenter": [
+        0.0581,
+        0.2018,
+        1.8728
+      ]
+    },
+    {
+      "id": "cluster_01",
+      "center": [
+        -0.4277,
+        -0.1461,
+        2.0746
+      ],
+      "scale": [
+        0.19,
+        0.1194,
+        0.1333
+      ],
+      "material": "dark",
+      "count": 107,
+      "referenceCenter": [
+        -0.1461,
+        -0.4277,
+        2.0746
+      ]
+    },
+    {
+      "id": "cluster_27",
+      "center": [
+        0.4331,
+        -0.0673,
+        2.1789
+      ],
+      "scale": [
+        0.1174,
+        0.1318,
+        0.1316
+      ],
+      "material": "dark",
+      "count": 135,
+      "referenceCenter": [
+        -0.0673,
+        0.4331,
+        2.1789
+      ]
+    },
+    {
+      "id": "cluster_33",
+      "center": [
+        0.0215,
+        -0.3283,
+        2.2273
+      ],
+      "scale": [
+        0.165,
+        0.0641,
+        0.2662
+      ],
+      "material": "body_shadow",
+      "count": 167,
+      "referenceCenter": [
+        -0.3283,
+        0.0215,
+        2.2273
+      ]
+    },
+    {
+      "id": "cluster_03",
+      "center": [
+        -0.3373,
+        0.2314,
+        2.2441
+      ],
+      "scale": [
+        0.158,
+        0.1262,
+        0.1718
+      ],
+      "material": "body_shadow",
+      "count": 162,
+      "referenceCenter": [
+        0.2314,
+        -0.3373,
+        2.2441
+      ]
+    },
+    {
+      "id": "cluster_13",
+      "center": [
+        0.287,
+        0.3053,
+        2.2603
+      ],
+      "scale": [
+        0.1997,
+        0.0943,
+        0.1718
+      ],
+      "material": "body_shadow",
+      "count": 142,
+      "referenceCenter": [
+        0.3053,
+        0.287,
+        2.2603
+      ]
+    },
+    {
+      "id": "cluster_04",
+      "center": [
+        0.7131,
+        0.07,
+        2.3494
+      ],
+      "scale": [
+        0.1311,
+        0.1592,
+        0.1769
+      ],
+      "material": "dark",
+      "count": 187,
+      "referenceCenter": [
+        0.07,
+        0.7131,
+        2.3494
+      ]
+    },
+    {
+      "id": "cluster_07",
+      "center": [
+        -0.775,
+        -0.2126,
+        2.3624
+      ],
+      "scale": [
+        0.1153,
+        0.0915,
+        0.2021
+      ],
+      "material": "dark",
+      "count": 117,
+      "referenceCenter": [
+        -0.2126,
+        -0.775,
+        2.3624
+      ]
+    },
+    {
+      "id": "cluster_16",
+      "center": [
+        -0.6904,
+        0.0431,
+        2.3894
+      ],
+      "scale": [
+        0.1482,
+        0.0852,
+        0.2079
+      ],
+      "material": "body_shadow",
+      "count": 62,
+      "referenceCenter": [
+        0.0431,
+        -0.6904,
+        2.3894
+      ]
+    },
+    {
+      "id": "cluster_11",
+      "center": [
+        -0.3761,
+        -0.2395,
+        2.3948
+      ],
+      "scale": [
+        0.1836,
+        0.1061,
+        0.1582
+      ],
+      "material": "body_shadow",
+      "count": 108,
+      "referenceCenter": [
+        -0.2395,
+        -0.3761,
+        2.3948
+      ]
+    },
+    {
+      "id": "cluster_08",
+      "center": [
+        -0.0036,
+        0.1214,
+        2.5118
+      ],
+      "scale": [
+        0.1394,
+        0.1356,
+        0.0961
+      ],
+      "material": "body_shadow",
+      "count": 117,
+      "referenceCenter": [
+        0.1214,
+        -0.0036,
+        2.5118
+      ]
+    },
+    {
+      "id": "cluster_05",
+      "center": [
+        0.3352,
+        -0.0373,
+        2.5409
+      ],
+      "scale": [
+        0.1889,
+        0.1704,
+        0.1453
+      ],
+      "material": "dark",
+      "count": 194,
+      "referenceCenter": [
+        -0.0373,
+        0.3352,
+        2.5409
+      ]
+    },
+    {
+      "id": "cluster_14",
+      "center": [
+        -0.2873,
+        0.0201,
+        2.5414
+      ],
+      "scale": [
+        0.1769,
+        0.1473,
+        0.1593
+      ],
+      "material": "dark",
+      "count": 195,
+      "referenceCenter": [
+        0.0201,
+        -0.2873,
+        2.5414
+      ]
+    }
+  ]
+}

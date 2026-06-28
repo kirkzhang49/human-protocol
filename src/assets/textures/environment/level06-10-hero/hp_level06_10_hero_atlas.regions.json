@@ -1,0 +1,4457 @@
+{
+  "atlasSize": [
+    640,
+    640
+  ],
+  "format": "[x, y, w, h] in pixels, top-left origin; one atlas per asset",
+  "perAsset": {
+    "room_l610_hero_route_switch_console": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_route_switch_atlas.png",
+      "guiBackground": "src/assets/gui/level07/transit_route_switch_background_image2.png",
+      "guiKit": "level07_transit_route_switch",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_hero_lockdown_override_console": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_lockdown_override_atlas.png",
+      "guiBackground": "src/assets/gui/level09/lockdown_override_background_image2.png",
+      "guiKit": "level09_lockdown_override",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_hero_final_protocol_console": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_final_protocol_atlas.png",
+      "guiBackground": "src/assets/gui/level10/final_protocol_background_image2.png",
+      "guiKit": "level10_final_protocol",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_hero_cryo_record_pod": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_cryo_record_pod_atlas.png",
+      "guiBackground": "src/assets/gui/level06/frozen_archive_background_image2.png",
+      "guiKit": "level06_frozen_archive",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_hero_memory_projection_pedestal": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_memory_projection_pedestal_atlas.png",
+      "guiBackground": "src/assets/gui/level08/identity_playback_background_image2.png",
+      "guiKit": "level08_identity_playback",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_track_relay_cabinet": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_track_relay_cabinet_atlas.png",
+      "guiBackground": "src/assets/gui/level07/transit_route_switch_background_image2.png",
+      "guiKit": "level07_transit_route_switch",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_pressure_containment_tank": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_pressure_containment_tank_atlas.png",
+      "guiBackground": "src/assets/gui/level09/lockdown_override_background_image2.png",
+      "guiKit": "level09_lockdown_override",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_core_server_obelisk": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_core_server_obelisk_atlas.png",
+      "guiBackground": "src/assets/gui/level10/final_protocol_background_image2.png",
+      "guiKit": "level10_final_protocol",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_specimen_glass_case": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_specimen_glass_case_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_frozen_archive_terminal": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_frozen_archive_terminal_atlas.png",
+      "guiBackground": "src/assets/gui/level06/frozen_archive_background_image2.png",
+      "guiKit": "level06_frozen_archive",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_sample_drawer_stack": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_sample_drawer_stack_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_medical_rail_wall": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_medical_rail_wall_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_cold_scan_pedestal": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_cold_scan_pedestal_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_defrost_valve_cart": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_defrost_valve_cart_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_manual_lever_bank": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_manual_lever_bank_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_floor_rail_crossing": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_floor_rail_crossing_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_signal_light_mast": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_signal_light_mast_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_maintenance_barrier": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_maintenance_barrier_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_identity_playback_terminal": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_identity_playback_terminal_atlas.png",
+      "guiBackground": "src/assets/gui/level08/identity_playback_background_image2.png",
+      "guiKit": "level08_identity_playback",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_wall_memory_screen": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_memory_screen_atlas.png",
+      "guiBackground": "src/assets/gui/level08/identity_playback_background_image2.png",
+      "guiKit": "level08_identity_playback",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_archive_bench": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_archive_bench_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_gallery_stanchion": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_gallery_stanchion_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_emergency_breaker_crate": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_emergency_breaker_crate_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_blast_door_segment": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_blast_door_segment_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_pipe_valve_cluster": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_pipe_valve_cluster_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_maintenance_tool_rack": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_maintenance_tool_rack_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_human_echo_screen": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_human_echo_screen_atlas.png",
+      "guiBackground": "src/assets/gui/level10/final_protocol_background_image2.png",
+      "guiKit": "level10_final_protocol",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_boss_terminal_door": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_boss_terminal_door_atlas.png",
+      "guiBackground": "src/assets/gui/level10/final_protocol_background_image2.png",
+      "guiKit": "level10_final_protocol",
+      "regions": {
+        "screen": [
+          0,
+          0,
+          640,
+          360
+        ],
+        "graphite": [
+          0,
+          368,
+          64,
+          64
+        ],
+        "black_glass": [
+          64,
+          368,
+          64,
+          64
+        ],
+        "steel": [
+          128,
+          368,
+          64,
+          64
+        ],
+        "brass": [
+          192,
+          368,
+          64,
+          64
+        ],
+        "amber_panel": [
+          256,
+          368,
+          64,
+          64
+        ],
+        "red_panel": [
+          320,
+          368,
+          64,
+          64
+        ],
+        "enamel": [
+          384,
+          368,
+          64,
+          64
+        ],
+        "chrome": [
+          448,
+          368,
+          64,
+          64
+        ],
+        "cyan_strip": [
+          512,
+          368,
+          64,
+          64
+        ],
+        "amber_strip": [
+          576,
+          368,
+          64,
+          64
+        ],
+        "red_strip": [
+          0,
+          432,
+          64,
+          64
+        ],
+        "lamp_cyan": [
+          64,
+          432,
+          64,
+          64
+        ],
+        "lamp_amber": [
+          128,
+          432,
+          64,
+          64
+        ],
+        "lamp_red": [
+          192,
+          432,
+          64,
+          64
+        ],
+        "hazard_amber": [
+          256,
+          432,
+          64,
+          64
+        ],
+        "hazard_red": [
+          320,
+          432,
+          64,
+          64
+        ],
+        "edge_wear": [
+          384,
+          432,
+          64,
+          64
+        ],
+        "warning": [
+          448,
+          432,
+          64,
+          64
+        ]
+      }
+    },
+    "room_l610_protocol_cable_spine": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_protocol_cable_spine_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_archive_core_pedestal": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_archive_core_pedestal_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_wall_clinic_service": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_clinic_service_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_wall_archive_cabinet": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_archive_cabinet_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_wall_museum_brass": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_museum_brass_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_wall_machine_relay": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_machine_relay_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_wall_gallery_glass": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_gallery_glass_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_wall_security_corridor": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_security_corridor_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_wall_terminal_boss": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_terminal_boss_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    },
+    "room_l610_wall_damaged_transition": {
+      "atlas": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_wall_damaged_transition_atlas.png",
+      "guiBackground": null,
+      "guiKit": null,
+      "regions": {
+        "graphite": [
+          0,
+          0,
+          96,
+          96
+        ],
+        "black_glass": [
+          96,
+          0,
+          96,
+          96
+        ],
+        "steel": [
+          192,
+          0,
+          96,
+          96
+        ],
+        "brass": [
+          288,
+          0,
+          96,
+          96
+        ],
+        "amber_panel": [
+          384,
+          0,
+          96,
+          96
+        ],
+        "red_panel": [
+          480,
+          0,
+          96,
+          96
+        ],
+        "enamel": [
+          0,
+          96,
+          96,
+          96
+        ],
+        "chrome": [
+          96,
+          96,
+          96,
+          96
+        ],
+        "cyan_strip": [
+          192,
+          96,
+          96,
+          96
+        ],
+        "amber_strip": [
+          288,
+          96,
+          96,
+          96
+        ],
+        "red_strip": [
+          384,
+          96,
+          96,
+          96
+        ],
+        "lamp_cyan": [
+          480,
+          96,
+          96,
+          96
+        ],
+        "lamp_amber": [
+          0,
+          192,
+          96,
+          96
+        ],
+        "lamp_red": [
+          96,
+          192,
+          96,
+          96
+        ],
+        "hazard_amber": [
+          192,
+          192,
+          96,
+          96
+        ],
+        "hazard_red": [
+          288,
+          192,
+          96,
+          96
+        ],
+        "edge_wear": [
+          384,
+          192,
+          96,
+          96
+        ],
+        "warning": [
+          480,
+          192,
+          96,
+          96
+        ]
+      }
+    }
+  }
+}

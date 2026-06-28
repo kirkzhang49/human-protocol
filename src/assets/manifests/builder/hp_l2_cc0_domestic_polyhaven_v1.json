@@ -1,0 +1,169 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_l2_cc0_domestic_polyhaven_v1",
+  "label": "HP 居住模拟 CC0 新家具包 (Poly Haven)",
+  "sourceTool": "polyhaven-level02-domestic-cc0-ingest",
+  "generatedAt": "2026-06-19",
+  "sourceReport": "src/assets/manifests/reports/human_protocol_polyhaven_l2_domestic_cc0_v1.json",
+  "license": {
+    "name": "CC0",
+    "source": "Poly Haven",
+    "licenseUrl": "https://polyhaven.com/license",
+    "commercialUseAllowed": true,
+    "modificationAllowed": true,
+    "redistributionAllowedInBundledGame": true,
+    "attributionRequired": false
+  },
+  "assets": [
+    {
+      "modelKey": "hp_l2_cc0_dining_chair_polyhaven_v1",
+      "label": "皮革餐椅",
+      "assetKind": "furniture",
+      "family": "chair",
+      "group": "居住",
+      "source": "polyhaven-level02-domestic-cc0",
+      "sourceAssetId": "dining_chair_02",
+      "themeId": "hp_level02_residential_sim_cc0_domestic",
+      "glbFile": "../../models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_dining_chair_polyhaven_v1.glb",
+      "previewFile": "../../thumbnails/builder/hp-l2-cc0-domestic-polyhaven-v1/hp_l2_cc0_dining_chair_polyhaven_v1.png",
+      "sizeMeters": [
+        0.428,
+        0.96,
+        0.605
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "chair",
+      "tags": [
+        "style:l2-residential-sim",
+        "style:cc0-polyhaven",
+        "source:polyhaven",
+        "license:cc0",
+        "mount:floor"
+      ]
+    },
+    {
+      "modelKey": "hp_l2_cc0_ottoman_polyhaven_v1",
+      "label": "皮革软凳",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "居住",
+      "source": "polyhaven-level02-domestic-cc0",
+      "sourceAssetId": "Ottoman_01",
+      "themeId": "hp_level02_residential_sim_cc0_domestic",
+      "glbFile": "../../models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+      "previewFile": "../../thumbnails/builder/hp-l2-cc0-domestic-polyhaven-v1/hp_l2_cc0_ottoman_polyhaven_v1.png",
+      "sizeMeters": [
+        0.652,
+        0.46,
+        0.471
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "style:l2-residential-sim",
+        "style:cc0-polyhaven",
+        "source:polyhaven",
+        "license:cc0",
+        "mount:floor"
+      ]
+    },
+    {
+      "modelKey": "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+      "label": "玻璃吊灯",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "居住",
+      "source": "polyhaven-level02-domestic-cc0",
+      "sourceAssetId": "modern_ceiling_lamp_01",
+      "themeId": "hp_level02_residential_sim_cc0_domestic",
+      "glbFile": "../../models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+      "previewFile": "../../thumbnails/builder/hp-l2-cc0-domestic-polyhaven-v1/hp_l2_cc0_ceiling_lamp_polyhaven_v1.png",
+      "sizeMeters": [
+        0.39,
+        0.928,
+        0.39
+      ],
+      "solid": false,
+      "mount": "ceiling",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "style:l2-residential-sim",
+        "style:cc0-polyhaven",
+        "source:polyhaven",
+        "license:cc0",
+        "mount:ceiling"
+      ]
+    },
+    {
+      "modelKey": "hp_l2_cc0_wall_mirror_polyhaven_v1",
+      "label": "装饰墙镜",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "居住",
+      "source": "polyhaven-level02-domestic-cc0",
+      "sourceAssetId": "ornate_mirror_01",
+      "themeId": "hp_level02_residential_sim_cc0_domestic",
+      "glbFile": "../../models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_wall_mirror_polyhaven_v1.glb",
+      "previewFile": "../../thumbnails/builder/hp-l2-cc0-domestic-polyhaven-v1/hp_l2_cc0_wall_mirror_polyhaven_v1.png",
+      "sizeMeters": [
+        0.798,
+        1.22,
+        0.153
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "style:l2-residential-sim",
+        "style:cc0-polyhaven",
+        "source:polyhaven",
+        "license:cc0",
+        "mount:wall"
+      ]
+    },
+    {
+      "modelKey": "hp_l2_cc0_desk_lamp_polyhaven_v1",
+      "label": "折臂台灯",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "居住",
+      "source": "polyhaven-level02-domestic-cc0",
+      "sourceAssetId": "desk_lamp_arm_01",
+      "themeId": "hp_level02_residential_sim_cc0_domestic",
+      "glbFile": "../../models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_desk_lamp_polyhaven_v1.glb",
+      "previewFile": "../../thumbnails/builder/hp-l2-cc0-domestic-polyhaven-v1/hp_l2_cc0_desk_lamp_polyhaven_v1.png",
+      "sizeMeters": [
+        0.163,
+        0.72,
+        0.495
+      ],
+      "solid": false,
+      "mount": "tabletop",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "style:l2-residential-sim",
+        "style:cc0-polyhaven",
+        "source:polyhaven",
+        "license:cc0",
+        "mount:tabletop"
+      ]
+    }
+  ]
+}

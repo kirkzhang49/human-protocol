@@ -1,0 +1,24 @@
+{
+  "assetId": "route_switch_icon_language_image2_source_v1",
+  "generatedDate": "2026-06-21",
+  "tool": "built-in image_gen",
+  "model": "not-exposed-by-built-in-image-gen",
+  "toolCallId": "not-exposed-by-built-in-image-gen",
+  "generatedImagesDirectory": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd",
+  "originalGeneratedPath": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd/ig_0f8416dc3c4b9605016a38ae8cb1788198b20dfdcad7545346.png",
+  "projectSourcePath": "src/assets/gui/route-switch/image2-sources/route_switch_icon_language_image2_source_v1.png",
+  "licenseLabel": "owned-generated-output",
+  "termsLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "sourceRole": "Image2 icon-language source sheet for the route-switch overlay",
+  "promptSummary": "A no-text bitmap source sheet of isolated Human Protocol sci-fi route-switch icon badges: archive-router title emblem, door, terminal, robot, gate, authorized key, locked key, footer branching mark, and denied key mark. Pure black crop-friendly background, high-end hard-surface UI pixels, cyan/amber facility palette, no Chinese text, no English text, no numbers, no logo, no watermark.",
+  "derivativeOutputs": [
+    "src/assets/gui/route-switch/route_switch_icon_language_image2_v1.png",
+    "src/assets/gui/route-switch/route_switch_icon_language_image2_v1.regions.json"
+  ],
+  "derivativeScript": "scripts/asset-build/cut-route-switch-icon-language-image2.mjs",
+  "notes": [
+    "The build script keys only edge-connected black background to alpha so internal dark metal faces remain solid.",
+    "Runtime uses these cut Image2 badges to replace visible explanatory text in the route-switch overlay.",
+    "Accessibility labels remain in React as hidden text and aria labels; no visible UI explanation text is baked into the atlas."
+  ]
+}

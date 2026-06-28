@@ -1,0 +1,2138 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_05_reclamation_core",
+  "modelKey": "room_wall_wash_light_maintenance",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_maintenance.glb",
+  "fileName": "hp_room_wall_wash_light_maintenance.glb",
+  "sourceAsset": {
+    "modelKey": "room_wall_wash_light_maintenance",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_maintenance.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_maintenance.glb",
+    "sizeMeters": [
+      1.7,
+      0.22,
+      0.12
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 4000,
+      "meshes": 3,
+      "nodes": 3,
+      "skins": 0,
+      "primitives": 3,
+      "materials": 3,
+      "textures": 0,
+      "images": 0,
+      "accessors": 6,
+      "bufferViews": 5,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_materials_unlit",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 48
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_wall_wash_light_maintenance.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 839346,
+    "vertexCount": 144,
+    "triangleCount": 48,
+    "meshCount": 4,
+    "materialCount": 3,
+    "nodeCount": 4,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.84,
+        0,
+        -0.04
+      ],
+      "center": [
+        0,
+        0.10125,
+        0.02375
+      ],
+      "size": [
+        1.68,
+        0.2025,
+        0.1275
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_wash_mount",
+        "vertexOffset": 839346,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.06,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.06,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_wash_upper_lip",
+        "vertexOffset": 839382,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.14,
+          0.035,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.14,
+          -0.035,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_wash_emissive_blade",
+        "vertexOffset": 839418,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.19,
+          0.055,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.19,
+          -0.055,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_wash_soft_pool",
+        "vertexOffset": 839454,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.03,
+          0.07,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.03,
+          -0.07,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:level_05_core_entry:wall-wash:front-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_core_entry",
+      "secondaryRoomId": null,
+      "position": [
+        -2.2,
+        0.16,
+        13.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.2,
+          0.16,
+          13.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_core_entry:wall-wash:front-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_core_entry",
+      "secondaryRoomId": null,
+      "position": [
+        2.2,
+        0.16,
+        13.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.2,
+          0.16,
+          13.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_core_entry:wall-wash:back-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_core_entry",
+      "secondaryRoomId": null,
+      "position": [
+        -2.2,
+        0.16,
+        20.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.2,
+          0.16,
+          20.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_core_entry:wall-wash:back-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_core_entry",
+      "secondaryRoomId": null,
+      "position": [
+        2.2,
+        0.16,
+        20.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.2,
+          0.16,
+          20.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_core_entry:wall-wash:left-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_core_entry",
+      "secondaryRoomId": null,
+      "position": [
+        -4.75,
+        0.16,
+        17
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -4.75,
+          0.16,
+          17
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_core_entry:wall-wash:right-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_core_entry",
+      "secondaryRoomId": null,
+      "position": [
+        4.75,
+        0.16,
+        17
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          4.75,
+          0.16,
+          17
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_lock_hub:wall-wash:front-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_lock_hub",
+      "secondaryRoomId": null,
+      "position": [
+        -3.96,
+        0.16,
+        1.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.96,
+          0.16,
+          1.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_lock_hub:wall-wash:front-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_lock_hub",
+      "secondaryRoomId": null,
+      "position": [
+        3.96,
+        0.16,
+        1.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.96,
+          0.16,
+          1.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_lock_hub:wall-wash:back-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_lock_hub",
+      "secondaryRoomId": null,
+      "position": [
+        -3.96,
+        0.16,
+        13.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.96,
+          0.16,
+          13.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_lock_hub:wall-wash:back-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_lock_hub",
+      "secondaryRoomId": null,
+      "position": [
+        3.96,
+        0.16,
+        13.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.96,
+          0.16,
+          13.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_lock_hub:wall-wash:left-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_lock_hub",
+      "secondaryRoomId": null,
+      "position": [
+        -8.75,
+        0.16,
+        7.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -8.75,
+          0.16,
+          7.5
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_lock_hub:wall-wash:right-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_lock_hub",
+      "secondaryRoomId": null,
+      "position": [
+        8.75,
+        0.16,
+        7.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.75,
+          0.16,
+          7.5
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_north_lock:wall-wash:front-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_north_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -1.98,
+        0.16,
+        -5.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -1.98,
+          0.16,
+          -5.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_north_lock:wall-wash:front-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_north_lock",
+      "secondaryRoomId": null,
+      "position": [
+        1.98,
+        0.16,
+        -5.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          1.98,
+          0.16,
+          -5.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_north_lock:wall-wash:back-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_north_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -1.98,
+        0.16,
+        1.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -1.98,
+          0.16,
+          1.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_north_lock:wall-wash:back-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_north_lock",
+      "secondaryRoomId": null,
+      "position": [
+        1.98,
+        0.16,
+        1.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          1.98,
+          0.16,
+          1.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_north_lock:wall-wash:left-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_north_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -4.25,
+        0.16,
+        -2.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -4.25,
+          0.16,
+          -2.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_north_lock:wall-wash:right-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_north_lock",
+      "secondaryRoomId": null,
+      "position": [
+        4.25,
+        0.16,
+        -2.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          4.25,
+          0.16,
+          -2.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_east_lock:wall-wash:front-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_east_lock",
+      "secondaryRoomId": null,
+      "position": [
+        11.24,
+        0.16,
+        3.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          11.24,
+          0.16,
+          3.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_east_lock:wall-wash:front-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_east_lock",
+      "secondaryRoomId": null,
+      "position": [
+        14.76,
+        0.16,
+        3.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          14.76,
+          0.16,
+          3.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_east_lock:wall-wash:back-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_east_lock",
+      "secondaryRoomId": null,
+      "position": [
+        11.24,
+        0.16,
+        11.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          11.24,
+          0.16,
+          11.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_east_lock:wall-wash:back-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_east_lock",
+      "secondaryRoomId": null,
+      "position": [
+        14.76,
+        0.16,
+        11.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          14.76,
+          0.16,
+          11.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_east_lock:wall-wash:left-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_east_lock",
+      "secondaryRoomId": null,
+      "position": [
+        9.25,
+        0.16,
+        7.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          9.25,
+          0.16,
+          7.5
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_east_lock:wall-wash:right-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_east_lock",
+      "secondaryRoomId": null,
+      "position": [
+        16.75,
+        0.16,
+        7.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          16.75,
+          0.16,
+          7.5
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_west_lock:wall-wash:front-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_west_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -14.76,
+        0.16,
+        3.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -14.76,
+          0.16,
+          3.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_west_lock:wall-wash:front-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_west_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -11.24,
+        0.16,
+        3.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -11.24,
+          0.16,
+          3.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_west_lock:wall-wash:back-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_west_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -14.76,
+        0.16,
+        11.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -14.76,
+          0.16,
+          11.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_west_lock:wall-wash:back-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_west_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -11.24,
+        0.16,
+        11.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -11.24,
+          0.16,
+          11.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_west_lock:wall-wash:left-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_west_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -16.75,
+        0.16,
+        7.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -16.75,
+          0.16,
+          7.5
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_west_lock:wall-wash:right-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_west_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -9.25,
+        0.16,
+        7.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -9.25,
+          0.16,
+          7.5
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_platform:wall-wash:front-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        -3.52,
+        0.16,
+        -18.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.52,
+          0.16,
+          -18.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_platform:wall-wash:front-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        3.52,
+        0.16,
+        -18.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.52,
+          0.16,
+          -18.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_platform:wall-wash:back-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        -3.52,
+        0.16,
+        -5.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.52,
+          0.16,
+          -5.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_platform:wall-wash:back-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        3.52,
+        0.16,
+        -5.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.52,
+          0.16,
+          -5.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_platform:wall-wash:left-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        -7.75,
+        0.16,
+        -12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7.75,
+          0.16,
+          -12
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_platform:wall-wash:right-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        7.75,
+        0.16,
+        -12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          7.75,
+          0.16,
+          -12
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_archive_room:wall-wash:front-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_archive_room",
+      "secondaryRoomId": null,
+      "position": [
+        9.96,
+        0.16,
+        -15.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          9.96,
+          0.16,
+          -15.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_archive_room:wall-wash:front-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_archive_room",
+      "secondaryRoomId": null,
+      "position": [
+        13.04,
+        0.16,
+        -15.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          13.04,
+          0.16,
+          -15.25
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_archive_room:wall-wash:back-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_archive_room",
+      "secondaryRoomId": null,
+      "position": [
+        9.96,
+        0.16,
+        -8.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          9.96,
+          0.16,
+          -8.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_archive_room:wall-wash:back-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_archive_room",
+      "secondaryRoomId": null,
+      "position": [
+        13.04,
+        0.16,
+        -8.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          13.04,
+          0.16,
+          -8.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_archive_room:wall-wash:left-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_archive_room",
+      "secondaryRoomId": null,
+      "position": [
+        8.25,
+        0.16,
+        -12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.25,
+          0.16,
+          -12
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:level_05_archive_room:wall-wash:right-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "level_05_archive_room",
+      "secondaryRoomId": null,
+      "position": [
+        14.75,
+        0.16,
+        -12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          14.75,
+          0.16,
+          -12
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    }
+  ]
+}

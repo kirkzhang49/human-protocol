@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "hp.raw-webgpu.museum-lighting-director.v1",
+  "algorithm": "cpp-oklab-lighting-director-search-v1",
+  "source": "scripts/optimizer/museum_lighting_director_solver.cpp",
+  "candidatesEvaluated": 2,
+  "score": 0.172877,
+  "params": {
+    "ambientScale": 0.820000,
+    "ambientNeutralMix": 0.580000,
+    "fogNeutralMix": 0.440000,
+    "directionalScale": 0.920000,
+    "localLightScale": 1.120000,
+    "cyanSuppression": 0.220000,
+    "warmIslandGain": 0.260000,
+    "redRestraint": 0.720000,
+    "contactGain": 1.140000,
+    "probeGain": 1.100000,
+    "exposureScale": 0.920000,
+    "contrastScale": 1.100000,
+    "saturationScale": 0.900000
+  }
+}

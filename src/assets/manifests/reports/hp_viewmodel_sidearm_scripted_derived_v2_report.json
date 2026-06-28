@@ -1,0 +1,51 @@
+{
+  "schema": "human-protocol/viewmodel-sidearm-real-layered@1",
+  "asset": "sidearm_scripted_derived_v2",
+  "strategy": "Classify the existing scripted-derived sidearm mesh by texture samples and geometry, assign opaque material slots, then separate by material into mesh nodes. No decorative geometry is added.",
+  "input": "work/scripted-derived/viewmodel_sidearm_reference_raw_for_blender.glb",
+  "unoptimizedFile": "work/scripted-derived/hp_viewmodel_sidearm_scripted_derived_v2_unoptimized.glb",
+  "targetFile": "src/assets/models/viewmodel/prototypes/hp_viewmodel_sidearm_scripted_derived_v2.glb",
+  "sourceBlend": "src/assets/source_blend/viewmodel/hp_viewmodel_sidearm_scripted_derived_v2.blend",
+  "trianglesApprox": 76195,
+  "verticesApprox": 59800,
+  "materialFaceCounts": {
+    "slide": 17360,
+    "frame": 4038,
+    "grip": 44757,
+    "barrel": 8608,
+    "trim": 820,
+    "emissive": 612
+  },
+  "meshNodes": [
+    "sidearm_barrel_node",
+    "sidearm_emissive_node",
+    "sidearm_frame_node",
+    "sidearm_grip_node",
+    "sidearm_slide_node",
+    "sidearm_trim_node"
+  ],
+  "boundsMin": [
+    -0.12144,
+    -0.48941,
+    -0.32446
+  ],
+  "boundsMax": [
+    0.12164,
+    0.48907,
+    0.32285
+  ],
+  "dimensions": [
+    0.24307,
+    0.97849,
+    0.64731
+  ],
+  "sockets": [
+    "sidearm_layered_visual_body",
+    "sidearm_muzzle_socket",
+    "sidearm_right_hand_grip_socket",
+    "sidearm_trigger_contact_socket",
+    "sidearm_grip_front_contact_socket",
+    "sidearm_grip_back_contact_socket",
+    "sidearm_heat_core_socket"
+  ]
+}

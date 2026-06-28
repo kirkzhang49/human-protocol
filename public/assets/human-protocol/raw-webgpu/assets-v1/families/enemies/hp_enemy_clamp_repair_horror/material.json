@@ -1,0 +1,341 @@
+{
+  "file": "material.json",
+  "hash": "9495fb9cb7b2c619",
+  "materials": [
+    {
+      "index": 31,
+      "id": "mat:enemy:palettematerial001:1ff0cz3",
+      "name": "PaletteMaterial001",
+      "category": "enemy",
+      "visualRole": "robot_body",
+      "semanticParams": [
+        11,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.96,
+      "metallicFactor": 1,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "PaletteBaseColor",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/basecolor-04-palettebasecolor.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/basecolor-04-palettebasecolor.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.195586,
+            "contrast": 0.420944,
+            "chroma": 0.163168,
+            "detail": 0.155387
+          },
+          "generated": false,
+          "layer": 4
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/normal-46-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/normal-46-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.535889,
+            "contrast": 0.041851,
+            "chroma": 0.799856,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 46
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "PaletteMetallicRoughness",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/metallicroughness-47-palettemetallicroughness.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/metallicroughness-47-palettemetallicroughness.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.372095,
+            "contrast": 0.463811,
+            "chroma": 0.932754,
+            "detail": 0.106274
+          },
+          "generated": false,
+          "layer": 47
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/ao-48-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/ao-48-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.637209,
+            "contrast": 0.047632,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 48
+        }
+      ]
+    },
+    {
+      "index": 32,
+      "id": "mat:enemy:palettematerial003:lgwchu",
+      "name": "PaletteMaterial003",
+      "category": "enemy",
+      "visualRole": "robot_body",
+      "semanticParams": [
+        11,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.62,
+      "metallicFactor": 0.03,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "BLEND",
+      "transparency": {
+        "mode": "blend",
+        "alpha": 1,
+        "source": "gltf-material.transparent"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "PaletteBaseColor",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/basecolor-04-palettebasecolor.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/basecolor-04-palettebasecolor.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.195586,
+            "contrast": 0.420944,
+            "chroma": 0.163168,
+            "detail": 0.155387
+          },
+          "generated": false,
+          "layer": 4
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/normal-49-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/normal-49-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.535882,
+            "contrast": 0.050576,
+            "chroma": 0.799868,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 49
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/metallicroughness-50-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/metallicroughness-50-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.597344,
+            "contrast": 0.027945,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 50
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/ao-51-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/ao-51-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.644166,
+            "contrast": 0.049391,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 51
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 4,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/basecolor-04-palettebasecolor.webp",
+      "name": "PaletteBaseColor",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/basecolor-04-palettebasecolor.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.195586,
+        "contrast": 0.420944,
+        "chroma": 0.163168,
+        "detail": 0.155387
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 46,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/normal-46-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/normal-46-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.535889,
+        "contrast": 0.041851,
+        "chroma": 0.799856,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 47,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/metallicroughness-47-palettemetallicroughness.webp",
+      "name": "PaletteMetallicRoughness",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/metallicroughness-47-palettemetallicroughness.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.372095,
+        "contrast": 0.463811,
+        "chroma": 0.932754,
+        "detail": 0.106274
+      }
+    },
+    {
+      "layer": 48,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/ao-48-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/ao-48-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.637209,
+        "contrast": 0.047632,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 49,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/normal-49-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/normal-49-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.535882,
+        "contrast": 0.050576,
+        "chroma": 0.799868,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 50,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/metallicroughness-50-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/metallicroughness-50-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.597344,
+        "contrast": 0.027945,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 51,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/ao-51-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_clamp_repair_horror/textures/ao-51-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.644166,
+        "contrast": 0.049391,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    }
+  ]
+}

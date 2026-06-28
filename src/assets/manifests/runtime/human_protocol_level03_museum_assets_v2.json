@@ -1,0 +1,182 @@
+{
+  "schemaVersion": "hp.level03-museum-assets.v2",
+  "generatedBy": "scripts/asset-build/blender-generate-level03-museum-assets.py",
+  "sourceBlend": "src/assets/source_blend/level03/human_protocol_level03_museum_assets_v2.blend",
+  "textures": [
+    "src/assets/textures/environment/level03/level03_image2_museum_body_reference.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v2.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v3.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_floor_route_gradient.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_floor_tile_skin_v2.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_floor_tile_skin_v3.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_label_panel.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_smoked_glass.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_voice_waveform.png"
+  ],
+  "assets": [
+    {
+      "modelKey": "room_museum_display_case_tool",
+      "file": "src/assets/models/environment/level03/hp_room_museum_display_case_tool.glb",
+      "sizeMeters": [
+        1.775,
+        1.572,
+        0.913
+      ],
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1.775,
+          1.572,
+          0.913
+        ]
+      },
+      "usesImage2Textures": true,
+      "sourceReport": "src/assets/manifests/reports/human_protocol_level03_museum_art_objective_v2_report.json",
+      "notes": "AGE v2-selected Human Museum exhibit asset: premium black stone, aged brass, restrained cyan, story-readable exhibit silhouette, image2 textures, bevels, weighted normals, and grounded collision-friendly proportions."
+    },
+    {
+      "modelKey": "room_museum_voice_booth",
+      "file": "src/assets/models/environment/level03/hp_room_museum_voice_booth.glb",
+      "sizeMeters": [
+        1.94,
+        1.94,
+        0.653
+      ],
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1.94,
+          1.94,
+          0.653
+        ]
+      },
+      "usesImage2Textures": true,
+      "sourceReport": "src/assets/manifests/reports/human_protocol_level03_museum_art_objective_v2_report.json",
+      "notes": "AGE v2-selected Human Museum exhibit asset: premium black stone, aged brass, restrained cyan, story-readable exhibit silhouette, image2 textures, bevels, weighted normals, and grounded collision-friendly proportions."
+    },
+    {
+      "modelKey": "room_museum_body_reference_case",
+      "file": "src/assets/models/environment/level03/hp_room_museum_body_reference_case.glb",
+      "sizeMeters": [
+        2.477,
+        1.823,
+        0.643
+      ],
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          2.477,
+          1.823,
+          0.643
+        ]
+      },
+      "usesImage2Textures": true,
+      "sourceReport": "src/assets/manifests/reports/human_protocol_level03_museum_art_objective_v2_report.json",
+      "notes": "AGE v2-selected Human Museum exhibit asset: premium black stone, aged brass, restrained cyan, story-readable exhibit silhouette, image2 textures, bevels, weighted normals, and grounded collision-friendly proportions."
+    },
+    {
+      "modelKey": "room_museum_archive_column",
+      "file": "src/assets/models/environment/level03/hp_room_museum_archive_column.glb",
+      "sizeMeters": [
+        1.26,
+        2.442,
+        1.259
+      ],
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1.26,
+          2.442,
+          1.259
+        ]
+      },
+      "usesImage2Textures": true,
+      "sourceReport": "src/assets/manifests/reports/human_protocol_level03_museum_art_objective_v2_report.json",
+      "notes": "AGE v2-selected Human Museum exhibit asset: premium black stone, aged brass, restrained cyan, story-readable exhibit silhouette, image2 textures, bevels, weighted normals, and grounded collision-friendly proportions."
+    },
+    {
+      "modelKey": "room_museum_low_barrier",
+      "file": "src/assets/models/environment/level03/hp_room_museum_low_barrier.glb",
+      "sizeMeters": [
+        2.546,
+        0.565,
+        0.178
+      ],
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          2.546,
+          0.565,
+          0.178
+        ]
+      },
+      "usesImage2Textures": true,
+      "sourceReport": "src/assets/manifests/reports/human_protocol_level03_museum_art_objective_v2_report.json",
+      "notes": "AGE v2-selected Human Museum exhibit asset: premium black stone, aged brass, restrained cyan, story-readable exhibit silhouette, image2 textures, bevels, weighted normals, and grounded collision-friendly proportions."
+    },
+    {
+      "modelKey": "room_museum_wall_label_panel",
+      "file": "src/assets/models/environment/level03/hp_room_museum_wall_label_panel.glb",
+      "sizeMeters": [
+        1.122,
+        0.744,
+        0.094
+      ],
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1.122,
+          0.744,
+          0.094
+        ]
+      },
+      "usesImage2Textures": true,
+      "sourceReport": "src/assets/manifests/reports/human_protocol_level03_museum_art_objective_v2_report.json",
+      "notes": "AGE v2-selected Human Museum exhibit asset: premium black stone, aged brass, restrained cyan, story-readable exhibit silhouette, image2 textures, bevels, weighted normals, and grounded collision-friendly proportions."
+    },
+    {
+      "modelKey": "room_museum_color_orb_pedestal",
+      "file": "src/assets/models/environment/level03/hp_room_museum_color_orb_pedestal.glb",
+      "sizeMeters": [
+        0.823,
+        1.112,
+        0.788
+      ],
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.823,
+          1.112,
+          0.788
+        ]
+      },
+      "usesImage2Textures": true,
+      "sourceReport": "src/assets/manifests/reports/human_protocol_level03_museum_art_objective_v2_report.json",
+      "notes": "AGE v2-selected Human Museum exhibit asset: premium black stone, aged brass, restrained cyan, story-readable exhibit silhouette, image2 textures, bevels, weighted normals, and grounded collision-friendly proportions."
+    },
+    {
+      "modelKey": "room_museum_floor_route_inlay",
+      "file": "src/assets/models/environment/level03/hp_room_museum_floor_route_inlay.glb",
+      "sizeMeters": [
+        4.919,
+        0.051,
+        0.946
+      ],
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          4.919,
+          0.051,
+          0.946
+        ]
+      },
+      "usesImage2Textures": true,
+      "sourceReport": "src/assets/manifests/reports/human_protocol_level03_museum_art_objective_v2_report.json",
+      "notes": "AGE v2-selected Human Museum exhibit asset: premium black stone, aged brass, restrained cyan, story-readable exhibit silhouette, image2 textures, bevels, weighted normals, and grounded collision-friendly proportions."
+    }
+  ],
+  "legacyBackup": {
+    "wgpuLab": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/asset-lab/original-glb/human-protocol-level03-museum/20260606_pre_museum_exhibit_v2"
+  }
+}

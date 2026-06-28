@@ -1,0 +1,58 @@
+{
+  "atlasSize": [
+    1280,
+    720
+  ],
+  "source": "src/assets/gui/route-switch/image2-sources/route_switch_output_modules_image2_source_v1.png",
+  "regions": {
+    "full_layer_16x9": [
+      0,
+      0,
+      1280,
+      720
+    ],
+    "output_panel_plate": [
+      74,
+      96,
+      600,
+      346
+    ],
+    "route_output_display": [
+      704,
+      116,
+      504,
+      264
+    ],
+    "button_enabled": [
+      96,
+      500,
+      260,
+      78
+    ],
+    "button_disabled": [
+      386,
+      500,
+      260,
+      78
+    ],
+    "button_selected": [
+      676,
+      500,
+      260,
+      78
+    ],
+    "status_icon_bank": [
+      450,
+      372,
+      714,
+      104
+    ],
+    "detail_strip": [
+      760,
+      594,
+      420,
+      86
+    ]
+  },
+  "notes": "Composed only from the Level07 route-switch Image2 parts source; no local-drawn primary art."
+}

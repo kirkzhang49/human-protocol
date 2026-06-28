@@ -1,0 +1,389 @@
+{
+  "schemaVersion": "hp.gateBalance.threeRow.image2Layout.v1",
+  "canvas": [
+    1128,
+    490
+  ],
+  "composition": "real-image2-frame-plus-transparent-parts",
+  "background": "src/assets/gui/gate-balance-three-row/gate_balance_three_row_frame_image2_v1.png",
+  "parts": "src/assets/gui/gate-balance-three-row/gate_balance_three_row_parts_image2_v1.png",
+  "regionsFile": "src/assets/gui/gate-balance-three-row/gate_balance_three_row_parts_image2_v1.regions.json",
+  "sourceImages": [
+    "src/assets/gui/gate-balance-three-row/image2-sources/gate_balance_three_row_frame_image2_source_v1_chromakey.png",
+    "src/assets/gui/gate-balance-three-row/image2-sources/gate_balance_three_row_parts_image2_source_v1_chromakey.png"
+  ],
+  "regions": {
+    "titleBlock": [
+      158,
+      29,
+      678,
+      42
+    ],
+    "closeButton": [
+      1084,
+      9,
+      44,
+      44
+    ],
+    "guidance": [
+      48,
+      87,
+      1014,
+      24
+    ],
+    "syncLabel": [
+      38,
+      427,
+      82,
+      24
+    ],
+    "syncBar": [
+      124,
+      436,
+      420,
+      12
+    ],
+    "syncCount": [
+      678,
+      421,
+      82,
+      36
+    ],
+    "timer": [
+      774,
+      421,
+      76,
+      36
+    ],
+    "row0Gauge": [
+      50,
+      87,
+      620,
+      93
+    ],
+    "row0Control": [
+      638,
+      105,
+      470,
+      63
+    ],
+    "row1Gauge": [
+      50,
+      193,
+      620,
+      93
+    ],
+    "row1Control": [
+      638,
+      211,
+      470,
+      63
+    ],
+    "row2Gauge": [
+      50,
+      297,
+      620,
+      93
+    ],
+    "row2Control": [
+      638,
+      315,
+      470,
+      63
+    ],
+    "statusText": [
+      38,
+      467,
+      430,
+      24
+    ],
+    "error": [
+      476,
+      427,
+      180,
+      24
+    ],
+    "resetButton": [
+      586,
+      407,
+      148,
+      52
+    ],
+    "lockButton": [
+      767,
+      407,
+      251,
+      52
+    ],
+    "countdownText": [
+      574,
+      413,
+      148,
+      52
+    ],
+    "lockButtonText": [
+      755,
+      413,
+      251,
+      52
+    ],
+    "row0GaugeLabel": [
+      106,
+      109,
+      172,
+      22
+    ],
+    "row0GaugeBadge": [
+      555,
+      104,
+      76,
+      24
+    ],
+    "row0GaugeBar": [
+      90,
+      141,
+      540,
+      10
+    ],
+    "row0GaugeValue": [
+      106,
+      155,
+      192,
+      18
+    ],
+    "row0ControlLabel": [
+      668,
+      107,
+      88,
+      16
+    ],
+    "row0ControlMinus": [
+      669,
+      115,
+      50,
+      44
+    ],
+    "row0ControlValue": [
+      764,
+      116,
+      230,
+      40
+    ],
+    "row0ControlPlus": [
+      1027,
+      115,
+      50,
+      44
+    ],
+    "row0ControlTrack": [
+      766,
+      161,
+      228,
+      8
+    ],
+    "row0ControlFill": [
+      766,
+      161,
+      228,
+      8
+    ],
+    "row0ControlHandle": [
+      638,
+      105,
+      30,
+      38
+    ],
+    "row1GaugeLabel": [
+      106,
+      215,
+      172,
+      22
+    ],
+    "row1GaugeBadge": [
+      555,
+      210,
+      76,
+      24
+    ],
+    "row1GaugeBar": [
+      90,
+      247,
+      540,
+      10
+    ],
+    "row1GaugeValue": [
+      106,
+      261,
+      192,
+      18
+    ],
+    "row1ControlLabel": [
+      668,
+      213,
+      88,
+      16
+    ],
+    "row1ControlMinus": [
+      669,
+      221,
+      50,
+      44
+    ],
+    "row1ControlValue": [
+      764,
+      222,
+      230,
+      40
+    ],
+    "row1ControlPlus": [
+      1027,
+      221,
+      50,
+      44
+    ],
+    "row1ControlTrack": [
+      766,
+      267,
+      228,
+      8
+    ],
+    "row1ControlFill": [
+      766,
+      267,
+      228,
+      8
+    ],
+    "row1ControlHandle": [
+      638,
+      211,
+      30,
+      38
+    ],
+    "row2GaugeLabel": [
+      106,
+      319,
+      172,
+      22
+    ],
+    "row2GaugeBadge": [
+      555,
+      314,
+      76,
+      24
+    ],
+    "row2GaugeBar": [
+      90,
+      351,
+      540,
+      10
+    ],
+    "row2GaugeValue": [
+      106,
+      365,
+      192,
+      18
+    ],
+    "row2ControlLabel": [
+      668,
+      317,
+      88,
+      16
+    ],
+    "row2ControlMinus": [
+      669,
+      325,
+      50,
+      44
+    ],
+    "row2ControlValue": [
+      764,
+      326,
+      230,
+      40
+    ],
+    "row2ControlPlus": [
+      1027,
+      325,
+      50,
+      44
+    ],
+    "row2ControlTrack": [
+      766,
+      371,
+      228,
+      8
+    ],
+    "row2ControlFill": [
+      766,
+      371,
+      228,
+      8
+    ],
+    "row2ControlHandle": [
+      638,
+      315,
+      30,
+      38
+    ]
+  },
+  "rows": [
+    {
+      "gauge": "row0Gauge",
+      "control": "row0Control",
+      "slots": {
+        "gaugeLabel": "row0GaugeLabel",
+        "gaugeBadge": "row0GaugeBadge",
+        "gaugeBar": "row0GaugeBar",
+        "gaugeValue": "row0GaugeValue",
+        "controlLabel": "row0ControlLabel",
+        "minus": "row0ControlMinus",
+        "value": "row0ControlValue",
+        "plus": "row0ControlPlus",
+        "controlTrack": "row0ControlTrack",
+        "controlFill": "row0ControlFill",
+        "handle": "row0ControlHandle"
+      }
+    },
+    {
+      "gauge": "row1Gauge",
+      "control": "row1Control",
+      "slots": {
+        "gaugeLabel": "row1GaugeLabel",
+        "gaugeBadge": "row1GaugeBadge",
+        "gaugeBar": "row1GaugeBar",
+        "gaugeValue": "row1GaugeValue",
+        "controlLabel": "row1ControlLabel",
+        "minus": "row1ControlMinus",
+        "value": "row1ControlValue",
+        "plus": "row1ControlPlus",
+        "controlTrack": "row1ControlTrack",
+        "controlFill": "row1ControlFill",
+        "handle": "row1ControlHandle"
+      }
+    },
+    {
+      "gauge": "row2Gauge",
+      "control": "row2Control",
+      "slots": {
+        "gaugeLabel": "row2GaugeLabel",
+        "gaugeBadge": "row2GaugeBadge",
+        "gaugeBar": "row2GaugeBar",
+        "gaugeValue": "row2GaugeValue",
+        "controlLabel": "row2ControlLabel",
+        "minus": "row2ControlMinus",
+        "value": "row2ControlValue",
+        "plus": "row2ControlPlus",
+        "controlTrack": "row2ControlTrack",
+        "controlFill": "row2ControlFill",
+        "handle": "row2ControlHandle"
+      }
+    }
+  ],
+  "runtimeMustNotBake": [
+    "localized title and guidance",
+    "gauge labels, values, target deltas, and stable badges",
+    "valve labels and valve numeric positions",
+    "button glyphs, button text, timer, status, and failure copy",
+    "dynamic gauge bands, needles, control fills, and drag handles"
+  ]
+}

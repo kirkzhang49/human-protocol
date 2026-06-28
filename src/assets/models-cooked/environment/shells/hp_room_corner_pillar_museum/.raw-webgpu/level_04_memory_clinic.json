@@ -1,0 +1,591 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_04_memory_clinic",
+  "modelKey": "room_corner_pillar_museum",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum.glb",
+  "fileName": "hp_room_corner_pillar_museum.glb",
+  "sourceAsset": {
+    "modelKey": "room_corner_pillar_museum",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum.glb",
+    "sizeMeters": [
+      0.58,
+      2.62,
+      0.58
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 9824,
+      "meshes": 4,
+      "nodes": 4,
+      "skins": 0,
+      "primitives": 4,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 12,
+      "bufferViews": 9,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 416
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_corner_pillar_museum.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 920118,
+    "vertexCount": 1248,
+    "triangleCount": 416,
+    "meshCount": 8,
+    "materialCount": 4,
+    "nodeCount": 9,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.24,
+        -0.24,
+        -2.815
+      ],
+      "center": [
+        0,
+        0,
+        -1.4
+      ],
+      "size": [
+        0.48,
+        0.48,
+        2.83
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_back_smoked_edge",
+        "vertexOffset": 920118,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.18,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.18,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_black_square_core",
+        "vertexOffset": 920250,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_bottom_brass_cap",
+        "vertexOffset": 920574,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.02,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.02,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_front_smoked_edge",
+        "vertexOffset": 920706,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.18,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.18,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_left_smoked_edge",
+        "vertexOffset": 920838,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.18,
+          0,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.18,
+          0,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_right_smoked_edge",
+        "vertexOffset": 920970,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.18,
+          0,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.18,
+          0,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_small_cyan_status_slit",
+        "vertexOffset": 921102,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.205,
+          -1.78,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.205,
+          1.78,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_top_brass_cap",
+        "vertexOffset": 921234,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -2.78,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          2.78,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:room_q0q7rw:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        -3.66,
+        0,
+        20.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.66,
+          0,
+          20.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:room_q0q7rw:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        3.66,
+        0,
+        20.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.66,
+          0,
+          20.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:room_q0q7rw:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        -3.66,
+        0,
+        25.36
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.66,
+          0,
+          25.36
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:room_q0q7rw:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        3.66,
+        0,
+        25.36
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.66,
+          0,
+          25.36
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    }
+  ]
+}

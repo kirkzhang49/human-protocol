@@ -1,0 +1,640 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_floor_tile_museum",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_museum.glb",
+  "fileName": "hp_room_floor_tile_museum.glb",
+  "sourceAsset": {
+    "modelKey": "room_floor_tile_museum",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_floor_tile_museum.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_museum.glb",
+    "sizeMeters": [
+      3.2,
+      0.08,
+      2.25
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 113532,
+      "meshes": 3,
+      "nodes": 3,
+      "skins": 0,
+      "primitives": 3,
+      "materials": 3,
+      "textures": 1,
+      "images": 1,
+      "accessors": 10,
+      "bufferViews": 9,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 222
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_floor_tile_museum.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 1063260,
+    "vertexCount": 666,
+    "triangleCount": 222,
+    "meshCount": 6,
+    "materialCount": 3,
+    "nodeCount": 7,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -2.17,
+        0,
+        -1.545
+      ],
+      "center": [
+        0,
+        0.0795,
+        0
+      ],
+      "size": [
+        4.34,
+        0.159,
+        3.09
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_floor_black_underplate_for_single_image2",
+        "vertexOffset": 1063260,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.016,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.016,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_floor_image2_full_gallery_composition_visible_face",
+        "vertexOffset": 1063392,
+        "vertexCount": 6,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.124,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.124,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_floor_low_smoked_back_lip",
+        "vertexOffset": 1063398,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.146,
+          1.4,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.146,
+          -1.4,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_floor_low_smoked_front_lip",
+        "vertexOffset": 1063530,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.146,
+          -1.4,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.146,
+          1.4,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_floor_low_smoked_left_lip",
+        "vertexOffset": 1063662,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -2.1,
+          0.146,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2.1,
+          -0.146,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_floor_low_smoked_right_lip",
+        "vertexOffset": 1063794,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          2.1,
+          0.146,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -2.1,
+          -0.146,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:level_03_entry_hall:floor:single-image2",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        -0.015,
+        12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.764977,
+        1.02,
+        2.265372
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          -0.015,
+          12
+        ],
+        "halfSize": [
+          4.423963,
+          0.0408,
+          2.548544
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:floor:single-image2",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        -0.015,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        4.147465,
+        1.02,
+        3.559871
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          -0.015,
+          3.5
+        ],
+        "halfSize": [
+          6.635945,
+          0.0408,
+          4.004854
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:floor:single-image2",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -12.2,
+        -0.015,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.612903,
+        1.02,
+        2.265372
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -12.2,
+          -0.015,
+          3.5
+        ],
+        "halfSize": [
+          2.580645,
+          0.0408,
+          2.548544
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:floor:single-image2",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        12.2,
+        -0.015,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.612903,
+        1.02,
+        2.265372
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          12.2,
+          -0.015,
+          3.5
+        ],
+        "halfSize": [
+          2.580645,
+          0.0408,
+          2.548544
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:floor:single-image2",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        -0.015,
+        -5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.764977,
+        1.02,
+        2.265372
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          -0.015,
+          -5
+        ],
+        "halfSize": [
+          4.423963,
+          0.0408,
+          2.548544
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:floor:single-image2",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        -0.015,
+        -12.65
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.995392,
+        1.02,
+        3.009709
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          -0.015,
+          -12.65
+        ],
+        "halfSize": [
+          4.792627,
+          0.0408,
+          3.385922
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:floor:single-image2",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        12.75,
+        -0.015,
+        -13
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.880184,
+        1.02,
+        2.394822
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          12.75,
+          -0.015,
+          -13
+        ],
+        "halfSize": [
+          4.608295,
+          0.0408,
+          2.694175
+        ]
+      }
+    }
+  ]
+}

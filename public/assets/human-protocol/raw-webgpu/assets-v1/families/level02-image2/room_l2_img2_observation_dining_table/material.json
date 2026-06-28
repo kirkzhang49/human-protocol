@@ -1,0 +1,216 @@
+{
+  "file": "material.json",
+  "hash": "83f88c090afb1c7a",
+  "materials": [
+    {
+      "index": 818,
+      "id": "mat:builder-resource:l2-smoked-chrome-gallery-accent:1ii045u",
+      "name": "l2_smoked_chrome_gallery_accent",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.66,
+        0.65,
+        0.6,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.24,
+      "metallicFactor": 0.9,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 820,
+      "id": "mat:builder-resource:l2-hidden-control-shadow:luik88",
+      "name": "l2_hidden_control_shadow",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.28,
+        0.28,
+        0.25,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.88,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 824,
+      "id": "mat:builder-resource:l2-gallery-dark-woodgrain:17durwq",
+      "name": "l2_gallery_dark_woodgrain",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.25,
+        0.15,
+        0.09,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.66,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 837,
+      "id": "mat:builder-resource:l2-image2-walnut-large-grain:16gr7w6",
+      "name": "l2_image2_walnut_large_grain",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.54,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level02_furniture_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_observation_dining_table/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_observation_dining_table/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.658327,
+            "contrast": 0.289874,
+            "chroma": 0.221643,
+            "detail": 0.075651
+          },
+          "generated": false,
+          "layer": 62
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 62,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_observation_dining_table/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+      "name": "hp_level02_furniture_image2_atlas",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_observation_dining_table/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.658327,
+        "contrast": 0.289874,
+        "chroma": 0.221643,
+        "detail": 0.075651
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

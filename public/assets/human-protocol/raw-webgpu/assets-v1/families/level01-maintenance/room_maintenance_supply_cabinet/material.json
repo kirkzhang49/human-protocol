@@ -1,0 +1,1966 @@
+{
+  "file": "material.json",
+  "hash": "957c9736d257dede",
+  "materials": [
+    {
+      "index": 78,
+      "id": "mat:room:room-edge-wear-bright:6jj4ze",
+      "name": "room_edge_wear_bright",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.9,
+        0.95,
+        0.9,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-23-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-23-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536098,
+            "contrast": 0.00712,
+            "chroma": 0.779585,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 23
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-112-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-112-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.20079,
+            "contrast": 0.011643,
+            "chroma": 0.989558,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 112
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-25-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-25-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.802036,
+            "contrast": 0.019009,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 25
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "id": "mat:room:room-accent-protocol-gold:1cy1w04",
+      "name": "room_accent_protocol_gold",
+      "category": "room",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.42,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.95,
+        0.67,
+        0.18,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.42,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-118-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-118-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536116,
+            "contrast": 0.009507,
+            "chroma": 0.781023,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 118
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-119-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-119-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.349274,
+            "contrast": 0.009946,
+            "chroma": 0.759397,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 119
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-120-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-120-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.820899,
+            "contrast": 0.012158,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 120
+        }
+      ]
+    },
+    {
+      "index": 83,
+      "id": "mat:room:room-rubber:12igr7f",
+      "name": "room_rubber",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.012,
+        0.012,
+        0.011,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.86,
+      "metallicFactor": 0.04,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-23-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-23-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536098,
+            "contrast": 0.00712,
+            "chroma": 0.779585,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 23
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-122-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-122-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.841057,
+            "contrast": 0.012226,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 122
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-25-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-25-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.802036,
+            "contrast": 0.019009,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 25
+        }
+      ]
+    },
+    {
+      "index": 86,
+      "id": "mat:room:room-accent-energy-teal:wtt8b4",
+      "name": "room_accent_energy_teal",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.08,
+        0.62,
+        0.58,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0.22,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-23-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-23-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536098,
+            "contrast": 0.00712,
+            "chroma": 0.779585,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 23
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-125-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-125-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.400013,
+            "contrast": 0.012059,
+            "chroma": 0.969097,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 125
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-25-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-25-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.802036,
+            "contrast": 0.019009,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 25
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "id": "mat:room:room-warning-orange:14sc6b3",
+      "name": "room_warning_orange",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.92,
+        0.42,
+        0.08,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.48,
+      "metallicFactor": 0.32,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536087,
+            "contrast": 0.007298,
+            "chroma": 0.779627,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 19
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-126-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-126-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.46297,
+            "contrast": 0.011409,
+            "chroma": 0.812691,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 126
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.801883,
+            "contrast": 0.017336,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 21
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "id": "mat:room:room-dust-shadow:y8oxia",
+      "name": "room_dust_shadow",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.18,
+        0.17,
+        0.145,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0.12,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-08-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-08-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536088,
+            "contrast": 0.016314,
+            "chroma": 0.790544,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 8
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-124-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-124-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.903456,
+            "contrast": 0.01661,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 124
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-10-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-10-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.641,
+            "contrast": 0.033002,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 10
+        }
+      ]
+    },
+    {
+      "index": 94,
+      "id": "mat:room:room-metal-worn:zzd6xt",
+      "name": "room_metal_worn",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.45,
+        0.49,
+        0.48,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.3813,
+      "metallicFactor": 0.7579,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-12-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-12-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536089,
+            "contrast": 0.016295,
+            "chroma": 0.79053,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 12
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-111-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-111-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.364457,
+            "contrast": 0.017824,
+            "chroma": 0.554033,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 111
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-14-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-14-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.642611,
+            "contrast": 0.032567,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 14
+        }
+      ]
+    },
+    {
+      "index": 95,
+      "id": "mat:room:room-metal-dark:wppqso",
+      "name": "room_metal_dark",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.055,
+        0.065,
+        0.072,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.3013,
+      "metallicFactor": 0.8379,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-12-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-12-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536089,
+            "contrast": 0.016295,
+            "chroma": 0.79053,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 12
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-13-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-13-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.24084,
+            "contrast": 0.016839,
+            "chroma": 0.973745,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 13
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-14-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-14-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.642611,
+            "contrast": 0.032567,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 14
+        }
+      ]
+    },
+    {
+      "index": 96,
+      "id": "mat:room:room-warning-black:1838ln5",
+      "name": "room_warning_black",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.015,
+        0.016,
+        0.014,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.58,
+      "metallicFactor": 0.28,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-12-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-12-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536089,
+            "contrast": 0.016295,
+            "chroma": 0.79053,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 12
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-130-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-130-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.564498,
+            "contrast": 0.017554,
+            "chroma": 0.698152,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 130
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-14-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-14-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.642611,
+            "contrast": 0.032567,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 14
+        }
+      ]
+    },
+    {
+      "index": 97,
+      "id": "mat:room:room-trim-light:wzqa3d",
+      "name": "room_trim_light",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.86,
+        0.93,
+        0.9,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0.38,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536087,
+            "contrast": 0.007298,
+            "chroma": 0.779627,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 19
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-131-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-131-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.319903,
+            "contrast": 0.011123,
+            "chroma": 0.804933,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 131
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.801883,
+            "contrast": 0.017336,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 21
+        }
+      ]
+    },
+    {
+      "index": 98,
+      "id": "mat:room:room-grime-soft:2zli9d",
+      "name": "room_grime_soft",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.105,
+        0.12,
+        0.105,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0.08,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536087,
+            "contrast": 0.007298,
+            "chroma": 0.779627,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 19
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-132-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-132-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.903243,
+            "contrast": 0.010832,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 132
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.801883,
+            "contrast": 0.017336,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 21
+        }
+      ]
+    },
+    {
+      "index": 99,
+      "id": "mat:room:room-image2-repair-cabinet-wrap-v1:11xka9l",
+      "name": "room_image2_repair_cabinet_wrap_v1",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.58,
+      "metallicFactor": 0.24,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_image2_repair_cabinet_wrap_v1",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/basecolor-12-hp-image2-repair-cabinet-wrap-v1.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/basecolor-12-hp-image2-repair-cabinet-wrap-v1.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.248514,
+            "contrast": 0.214447,
+            "chroma": 0.088582,
+            "detail": 0.150241
+          },
+          "generated": false,
+          "layer": 12
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536087,
+            "contrast": 0.007298,
+            "chroma": 0.779627,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 19
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-133-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-133-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.562784,
+            "contrast": 0.011455,
+            "chroma": 0.936773,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 133
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.801883,
+            "contrast": 0.017336,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 21
+        }
+      ]
+    },
+    {
+      "index": 100,
+      "id": "mat:room:room-accent-medical-red:1b61j3r",
+      "name": "room_accent_medical_red",
+      "category": "room",
+      "visualRole": "danger_red",
+      "semanticParams": [
+        9,
+        0.86,
+        0.26,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.82,
+        0.12,
+        0.1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-15-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-15-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536096,
+            "contrast": 0.00646,
+            "chroma": 0.778982,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 15
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-134-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-134-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.48484,
+            "contrast": 0.009076,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 134
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-17-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-17-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.835601,
+            "contrast": 0.012792,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 17
+        }
+      ]
+    },
+    {
+      "index": 101,
+      "id": "mat:room:room-emissive-green:11eotdg",
+      "name": "room_emissive_green",
+      "category": "room",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.365558,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.16,
+        0.9,
+        0.42,
+        1
+      ],
+      "emissiveFactor": [
+        0.1423,
+        0.5833,
+        0.6402
+      ],
+      "emissiveStrength": 0.81948,
+      "roughnessFactor": 0.2413,
+      "metallicFactor": 0.5305,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-113-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-113-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536133,
+            "contrast": 0.003307,
+            "chroma": 0.778554,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 113
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-114-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-114-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.21579,
+            "contrast": 0.005511,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 114
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-115-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-115-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.865504,
+            "contrast": 0.007162,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 115
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/emissive-117-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/emissive-117-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.718333,
+            "contrast": 0.243666,
+            "chroma": 0.89049,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 117
+        }
+      ]
+    },
+    {
+      "index": 102,
+      "id": "mat:room:room-label-dark:57s55b",
+      "name": "room_label_dark",
+      "category": "room",
+      "visualRole": "screen_label",
+      "semanticParams": [
+        10,
+        0.78,
+        0.36,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.035,
+        0.045,
+        0.048,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.64,
+      "metallicFactor": 0.22,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-135-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-135-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536094,
+            "contrast": 0.002774,
+            "chroma": 0.777512,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 135
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-136-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-136-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.621032,
+            "contrast": 0.004205,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 136
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-137-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-137-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.889066,
+            "contrast": 0.005922,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 137
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 12,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/basecolor-12-hp-image2-repair-cabinet-wrap-v1.webp",
+      "name": "hp_image2_repair_cabinet_wrap_v1",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/basecolor-12-hp-image2-repair-cabinet-wrap-v1.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.248514,
+        "contrast": 0.214447,
+        "chroma": 0.088582,
+        "detail": 0.150241
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 8,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-08-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-08-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536088,
+        "contrast": 0.016314,
+        "chroma": 0.790544,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 10,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-10-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-10-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.641,
+        "contrast": 0.033002,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 12,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-12-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-12-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536089,
+        "contrast": 0.016295,
+        "chroma": 0.79053,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 13,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-13-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-13-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.24084,
+        "contrast": 0.016839,
+        "chroma": 0.973745,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 14,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-14-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-14-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.642611,
+        "contrast": 0.032567,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 15,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-15-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-15-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536096,
+        "contrast": 0.00646,
+        "chroma": 0.778982,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 17,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-17-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-17-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.835601,
+        "contrast": 0.012792,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 19,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-19-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536087,
+        "contrast": 0.007298,
+        "chroma": 0.779627,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 21,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-21-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.801883,
+        "contrast": 0.017336,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 23,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-23-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-23-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536098,
+        "contrast": 0.00712,
+        "chroma": 0.779585,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 25,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-25-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-25-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.802036,
+        "contrast": 0.019009,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 111,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-111-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-111-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.364457,
+        "contrast": 0.017824,
+        "chroma": 0.554033,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 112,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-112-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-112-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.20079,
+        "contrast": 0.011643,
+        "chroma": 0.989558,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 113,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-113-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-113-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536133,
+        "contrast": 0.003307,
+        "chroma": 0.778554,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 114,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-114-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-114-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.21579,
+        "contrast": 0.005511,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 115,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-115-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-115-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.865504,
+        "contrast": 0.007162,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 117,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/emissive-117-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/emissive-117-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.718333,
+        "contrast": 0.243666,
+        "chroma": 0.89049,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 118,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-118-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-118-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536116,
+        "contrast": 0.009507,
+        "chroma": 0.781023,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 119,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-119-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-119-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.349274,
+        "contrast": 0.009946,
+        "chroma": 0.759397,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 120,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-120-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-120-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.820899,
+        "contrast": 0.012158,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 122,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-122-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-122-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.841057,
+        "contrast": 0.012226,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 124,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-124-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-124-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.903456,
+        "contrast": 0.01661,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 125,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-125-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-125-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.400013,
+        "contrast": 0.012059,
+        "chroma": 0.969097,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 126,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-126-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-126-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.46297,
+        "contrast": 0.011409,
+        "chroma": 0.812691,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 130,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-130-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-130-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.564498,
+        "contrast": 0.017554,
+        "chroma": 0.698152,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 131,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-131-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-131-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.319903,
+        "contrast": 0.011123,
+        "chroma": 0.804933,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 132,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-132-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-132-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.903243,
+        "contrast": 0.010832,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 133,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-133-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-133-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.562784,
+        "contrast": 0.011455,
+        "chroma": 0.936773,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 134,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-134-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-134-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.48484,
+        "contrast": 0.009076,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 135,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-135-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/normal-135-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536094,
+        "contrast": 0.002774,
+        "chroma": 0.777512,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 136,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-136-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/metallicroughness-136-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.621032,
+        "contrast": 0.004205,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 137,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-137-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_maintenance_supply_cabinet/textures/ao-137-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.889066,
+        "contrast": 0.005922,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    }
+  ]
+}

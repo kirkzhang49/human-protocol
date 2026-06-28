@@ -1,0 +1,225 @@
+{
+  "file": "material.json",
+  "hash": "1e3aa9e8cef1f1f3",
+  "materials": [
+    {
+      "index": 110,
+      "id": "mat:interaction:interaction-material:rb2lcv",
+      "name": "interaction_material",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.002125,
+        0.004025,
+        0.006049,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.46,
+      "metallicFactor": 0.82,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 111,
+      "id": "mat:interaction:interaction-material:ajf0nj",
+      "name": "interaction_material",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.274677,
+        0.366253,
+        0.376262,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0.78,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 112,
+      "id": "mat:interaction:interaction-material:1sjpnvy",
+      "name": "interaction_material",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.258183,
+        0.930111,
+        1,
+        0.78
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.24,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "BLEND",
+      "transparency": {
+        "mode": "blend",
+        "alpha": 0.78,
+        "source": "gltf-material.transparent+gltf-material.opacity"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 113,
+      "id": "mat:interaction:interaction-material:1u06sc6",
+      "name": "interaction_material",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.122139,
+        0.863157,
+        1,
+        0.88
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.24,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "BLEND",
+      "transparency": {
+        "mode": "blend",
+        "alpha": 0.88,
+        "source": "gltf-material.transparent+gltf-material.opacity"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 114,
+      "id": "mat:interaction:interaction-material:wmlbug",
+      "name": "interaction_material",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.745404,
+        0.371238,
+        0.061246,
+        0.78
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.24,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "BLEND",
+      "transparency": {
+        "mode": "blend",
+        "alpha": 0.78,
+        "source": "gltf-material.transparent+gltf-material.opacity"
+      },
+      "doubleSided": false,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

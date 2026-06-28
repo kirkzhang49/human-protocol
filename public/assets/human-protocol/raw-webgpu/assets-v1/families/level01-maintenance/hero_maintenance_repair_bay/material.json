@@ -1,0 +1,311 @@
+{
+  "file": "material.json",
+  "hash": "d33be46cb687fdde",
+  "materials": [
+    {
+      "index": 9,
+      "id": "mat:builder-resource:mat-rubber-black:omx48e",
+      "name": "mat_rubber_black",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.006,
+        0.007,
+        0.008,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.84,
+      "metallicFactor": 0.08,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 10,
+      "id": "mat:builder-resource:mat-soft-blue-read-light-emissive:mxh28k",
+      "name": "mat_soft_blue_read_light_emissive",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.382238,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.1,
+        0.35,
+        0.72,
+        1
+      ],
+      "emissiveFactor": [
+        0.1785,
+        0.7317,
+        0.8031
+      ],
+      "emissiveStrength": 1.02798,
+      "roughnessFactor": 0.2225,
+      "metallicFactor": 0.5353,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 11,
+      "id": "mat:builder-resource:mat-dark-gunmetal-layered:42of9v",
+      "name": "mat_dark_gunmetal_layered",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.025,
+        0.033,
+        0.038,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.26,
+      "metallicFactor": 0.88,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 12,
+      "id": "mat:builder-resource:mat-cyan-medical-emissive:12g72rz",
+      "name": "mat_cyan_medical_emissive",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.411022,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.13,
+        0.65,
+        0.72,
+        1
+      ],
+      "emissiveFactor": [
+        0.1785,
+        0.7317,
+        0.8031
+      ],
+      "emissiveStrength": 1.387773,
+      "roughnessFactor": 0.2225,
+      "metallicFactor": 0.5353,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 13,
+      "id": "mat:builder-resource:mat-amber-fault-emissive:hkm40j",
+      "name": "mat_amber_fault_emissive",
+      "category": "builder-resource",
+      "visualRole": "danger_red",
+      "semanticParams": [
+        9,
+        0.86,
+        0.342238,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.9,
+        0.5,
+        0.08,
+        1
+      ],
+      "emissiveFactor": [
+        0.1785,
+        0.7317,
+        0.8031
+      ],
+      "emissiveStrength": 1.02798,
+      "roughnessFactor": 0.2225,
+      "metallicFactor": 0.5353,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 14,
+      "id": "mat:builder-resource:mat-brushed-steel-trim:14aozy8",
+      "name": "mat_brushed_steel_trim",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.58,
+        0.64,
+        0.62,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.78,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 15,
+      "id": "mat:builder-resource:mat-worn-off-white-panel:1c3e85u",
+      "name": "mat_worn_off_white_panel",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.48,
+        0.54,
+        0.54,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.36,
+      "metallicFactor": 0.58,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

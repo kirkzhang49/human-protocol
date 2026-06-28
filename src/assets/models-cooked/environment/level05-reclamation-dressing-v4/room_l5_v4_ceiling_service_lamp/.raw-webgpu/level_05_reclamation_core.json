@@ -1,0 +1,570 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_05_reclamation_core",
+  "modelKey": "room_l5_v4_ceiling_service_lamp",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_ceiling_service_lamp.glb",
+  "fileName": "room_l5_v4_ceiling_service_lamp.glb",
+  "sourceAsset": {
+    "modelKey": "room_l5_v4_ceiling_service_lamp",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_ceiling_service_lamp.glb",
+    "file": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_ceiling_service_lamp.glb",
+    "sizeMeters": [
+      1.76,
+      0.253,
+      0.365
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 12272,
+      "meshes": 7,
+      "nodes": 8,
+      "skins": 0,
+      "primitives": 7,
+      "materials": 5,
+      "textures": 0,
+      "images": 0,
+      "accessors": 13,
+      "bufferViews": 13,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 444
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_ceiling_service_lamp.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 814338,
+    "vertexCount": 1332,
+    "triangleCount": 444,
+    "meshCount": 7,
+    "materialCount": 5,
+    "nodeCount": 8,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.88,
+        0,
+        -0.1825
+      ],
+      "center": [
+        0,
+        0.12625,
+        0
+      ],
+      "size": [
+        1.76,
+        0.2525,
+        0.365
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "black_ceiling_spine",
+        "vertexOffset": 814338,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "frosted_light_bar",
+        "vertexOffset": 814470,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lower_cyan_glow_strip",
+        "vertexOffset": 814602,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "brass_end_cap_-082",
+        "vertexOffset": 814734,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_socket_-082",
+        "vertexOffset": 814866,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "brass_end_cap_082",
+        "vertexOffset": 815202,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_socket_082",
+        "vertexOffset": 815334,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_05_v4_dressing_entry_ceiling_service_lamp",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_core_entry",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.2,
+        17.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:ceiling"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.2,
+          17.25
+        ],
+        "halfSize": [
+          0.88,
+          0.1265,
+          0.1825
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_v4_dressing_east_ceiling_service_lamp",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_east_lock",
+      "secondaryRoomId": null,
+      "position": [
+        13,
+        3.26,
+        7.6
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.5708,
+        0
+      ],
+      "scale": [
+        0.92,
+        0.92,
+        0.92
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:ceiling"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          13,
+          3.26,
+          7.6
+        ],
+        "halfSize": [
+          0.8096,
+          0.11638,
+          0.1679
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_v4_dressing_platform_ceiling_service_lamp",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.32,
+        -12.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.08,
+        1.08,
+        1.08
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:ceiling"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.32,
+          -12.25
+        ],
+        "halfSize": [
+          0.9504,
+          0.13662,
+          0.1971
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_v4_dressing_archive_ceiling_service_lamp",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_archive_room",
+      "secondaryRoomId": null,
+      "position": [
+        11.5,
+        3.24,
+        -12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.5708,
+        0
+      ],
+      "scale": [
+        0.86,
+        0.86,
+        0.86
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:ceiling"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          11.5,
+          3.24,
+          -12
+        ],
+        "halfSize": [
+          0.7568,
+          0.10879,
+          0.15695
+        ]
+      }
+    }
+  ]
+}

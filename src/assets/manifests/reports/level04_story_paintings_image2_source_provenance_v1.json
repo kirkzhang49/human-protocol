@@ -1,0 +1,82 @@
+{
+  "schema": "hp.image2.sourceProvenance.v1",
+  "assetFamily": "level04_story_paintings_image2_v1",
+  "project": "Human Protocol",
+  "level": "level04_memory_clinic",
+  "createdAtLocal": "2026-06-25T18:44:06-07:00",
+  "createdBy": "Codex agent using OpenAI image generation through Codex image_gen",
+  "sourceType": "project-generated bitmap assets",
+  "generationRoute": "Image2/generated bitmap route",
+  "thirdPartyMaterialUsed": false,
+  "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "sourceImageInputs": [],
+  "referenceInputs": [
+    {
+      "type": "project-authored text brief",
+      "description": "User-provided Human Protocol Level 4 memory clinic themes and restrictions: four story paintings about a human memory robot protagonist, with no readable text, logo, watermark, or identifiable real human faces."
+    }
+  ],
+  "notThirdPartyMaterialStatement": "These four PNGs are newly generated project assets from text prompts for Human Protocol. They are not sourced from third-party image libraries, stock art, screenshots, photos, logos, or existing copyrighted reference images.",
+  "toolDisclosure": {
+    "tool": "Codex image_gen",
+    "provider": "OpenAI",
+    "model": "not-exposed-by-tool",
+    "callId": "not-exposed-by-tool",
+    "generationBatchDirectory": "/Users/zhengkaizhang/.codex/generated_images/019f0191-2d3b-7cd0-9b59-7ed730c13a71"
+  },
+  "outputs": [
+    {
+      "assetId": "l4_story_awakened_machine_image2_v1",
+      "suggestedBuildAssetKey": "level04.storyPaintings.awakenedMachine.v1",
+      "sourceGeneratedFile": "/Users/zhengkaizhang/.codex/generated_images/019f0191-2d3b-7cd0-9b59-7ed730c13a71/ig_0d356b62d5abdef1016a3dd8032750819982b2a57c69410993.png",
+      "projectOutputPath": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/gui/level04-story-paintings/l4_story_awakened_machine_image2_v1.png",
+      "repoRelativeProjectOutputPath": "src/assets/gui/level04-story-paintings/l4_story_awakened_machine_image2_v1.png",
+      "sha256": "c5105d0b2286490da5cafc0f99985976e7afbad2ab41c89b4a068880e22d6930",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "assetId": "l4_story_preserved_childhood_image2_v1",
+      "suggestedBuildAssetKey": "level04.storyPaintings.preservedChildhood.v1",
+      "sourceGeneratedFile": "/Users/zhengkaizhang/.codex/generated_images/019f0191-2d3b-7cd0-9b59-7ed730c13a71/ig_0d356b62d5abdef1016a3dd8573eec81998504075bb09819e5.png",
+      "projectOutputPath": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/gui/level04-story-paintings/l4_story_preserved_childhood_image2_v1.png",
+      "repoRelativeProjectOutputPath": "src/assets/gui/level04-story-paintings/l4_story_preserved_childhood_image2_v1.png",
+      "sha256": "e160ab0116b9e748f73919dffb59fe81818b06c90d64ab78d18588a3a1c0af81",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "assetId": "l4_story_rescue_loop_image2_v1",
+      "suggestedBuildAssetKey": "level04.storyPaintings.rescueLoop.v1",
+      "sourceGeneratedFile": "/Users/zhengkaizhang/.codex/generated_images/019f0191-2d3b-7cd0-9b59-7ed730c13a71/ig_0d356b62d5abdef1016a3dd8a38140819985b0996650962cfa.png",
+      "projectOutputPath": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/gui/level04-story-paintings/l4_story_rescue_loop_image2_v1.png",
+      "repoRelativeProjectOutputPath": "src/assets/gui/level04-story-paintings/l4_story_rescue_loop_image2_v1.png",
+      "sha256": "63dc605e51b1b0b974413eb4716ae698a8ed209f06f67ddedc59c196d0d3dbcf",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    },
+    {
+      "assetId": "l4_story_h0_discharge_image2_v1",
+      "suggestedBuildAssetKey": "level04.storyPaintings.h0Discharge.v1",
+      "sourceGeneratedFile": "/Users/zhengkaizhang/.codex/generated_images/019f0191-2d3b-7cd0-9b59-7ed730c13a71/ig_0d356b62d5abdef1016a3dd8f7eff88199903261effcfda278.png",
+      "projectOutputPath": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/assets/gui/level04-story-paintings/l4_story_h0_discharge_image2_v1.png",
+      "repoRelativeProjectOutputPath": "src/assets/gui/level04-story-paintings/l4_story_h0_discharge_image2_v1.png",
+      "sha256": "9ea99bb95513ee037170f5926d738152f375762e6e190b18697a30d7b7b74e83",
+      "dimensions": {
+        "width": 1254,
+        "height": 1254
+      }
+    }
+  ],
+  "visualQaNotes": [
+    "Manual visual inspection found no readable text, logos, watermarks, or identifiable real human faces in the copied project outputs.",
+    "Some paintings include abstract waveform marks, tiny case panels, helmets, silhouettes, or blank archival shapes; these are not intended as readable text or real-person likenesses."
+  ],
+  "integrationBoundary": "Prepared only as source assets and reports. No Level 4 official JSON, code, builder catalog, generated runtime manifest, or Raw WebGPU resource map was modified."
+}

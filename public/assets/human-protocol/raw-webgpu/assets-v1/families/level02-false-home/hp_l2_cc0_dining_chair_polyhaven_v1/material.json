@@ -1,0 +1,238 @@
+{
+  "file": "material.json",
+  "hash": "c9232ae29ef89154",
+  "materials": [
+    {
+      "index": 55,
+      "id": "mat:builder-resource:hp-smoked-titanium-black:v7eiwo",
+      "name": "hp_smoked_titanium_black",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.012,
+        0.018,
+        0.022,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.62,
+      "metallicFactor": 0.2,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 60,
+      "id": "mat:builder-resource:dining-chair-02:1p452tw",
+      "name": "dining_chair_02",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.48,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.54,
+        0.66,
+        0.66,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.96,
+      "metallicFactor": 1,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "dining_chair_02_diff_1k",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/basecolor-12-dining-chair-02-diff-1k.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/basecolor-12-dining-chair-02-diff-1k.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.122056,
+            "contrast": 0.098342,
+            "chroma": 0.128186,
+            "detail": 0.05369
+          },
+          "generated": false,
+          "layer": 12
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "dining_chair_02_nor_gl_1k",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/normal-09-dining-chair-02-nor-gl-1k.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/normal-09-dining-chair-02-nor-gl-1k.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.529798,
+            "contrast": 0.042428,
+            "chroma": 0.780517,
+            "detail": 0.041178
+          },
+          "generated": false,
+          "layer": 9
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "dining_chair_02_arm_1k",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/metallicroughness-10-dining-chair-02-arm-1k.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/metallicroughness-10-dining-chair-02-arm-1k.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.588728,
+            "contrast": 0.141972,
+            "chroma": 1,
+            "detail": 0.096654
+          },
+          "generated": false,
+          "layer": 10
+        }
+      ]
+    },
+    {
+      "index": 61,
+      "id": "mat:builder-resource:hp-soft-cyan-status-light:1xs3oh5",
+      "name": "hp_soft_cyan_status_light",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3702,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.35,
+        0.9,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.2275,
+        0.585,
+        0.65
+      ],
+      "emissiveStrength": 0.8775,
+      "roughnessFactor": 0.25,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 12,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/basecolor-12-dining-chair-02-diff-1k.webp",
+      "name": "dining_chair_02_diff_1k",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/basecolor-12-dining-chair-02-diff-1k.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.122056,
+        "contrast": 0.098342,
+        "chroma": 0.128186,
+        "detail": 0.05369
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 9,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/normal-09-dining-chair-02-nor-gl-1k.webp",
+      "name": "dining_chair_02_nor_gl_1k",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/normal-09-dining-chair-02-nor-gl-1k.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.529798,
+        "contrast": 0.042428,
+        "chroma": 0.780517,
+        "detail": 0.041178
+      }
+    },
+    {
+      "layer": 10,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/metallicroughness-10-dining-chair-02-arm-1k.webp",
+      "name": "dining_chair_02_arm_1k",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/textures/metallicroughness-10-dining-chair-02-arm-1k.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.588728,
+        "contrast": 0.141972,
+        "chroma": 1,
+        "detail": 0.096654
+      }
+    }
+  ]
+}

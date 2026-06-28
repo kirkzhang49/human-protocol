@@ -1,0 +1,306 @@
+{
+  "schemaVersion": "hp.raw-webgpu.color-quality-audit.v2",
+  "generatedAt": "2026-06-22T15:58:20.169Z",
+  "levelId": "level_01_maintenance_bay",
+  "plan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+  "roleCount": 16,
+  "roles": [
+    {
+      "role": "cyan_emissive",
+      "count": 23,
+      "expectedSemanticId": 7,
+      "semanticId": 7,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.554347,
+      "chroma": 0.458391,
+      "cyan": 0.587117,
+      "warm": 0.180631,
+      "textureCoverage": 0
+    },
+    {
+      "role": "danger_red",
+      "count": 4,
+      "expectedSemanticId": 9,
+      "semanticId": 9,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.508799,
+      "chroma": 0.7825,
+      "cyan": 0.0169,
+      "warm": 0.78055,
+      "textureCoverage": 0
+    },
+    {
+      "role": "door_access_cyan",
+      "count": 3,
+      "expectedSemanticId": 13,
+      "semanticId": 13,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.489504,
+      "chroma": 0.64,
+      "cyan": 0.6858,
+      "warm": 0,
+      "textureCoverage": 0
+    },
+    {
+      "role": "door_locked_red",
+      "count": 3,
+      "expectedSemanticId": 12,
+      "semanticId": 12,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.284488,
+      "chroma": 0.76,
+      "cyan": 0,
+      "warm": 0.6672,
+      "textureCoverage": 0
+    },
+    {
+      "role": "exhibit_warm",
+      "count": 9,
+      "expectedSemanticId": 6,
+      "semanticId": 6,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.440707,
+      "chroma": 0.101512,
+      "cyan": 0.360455,
+      "warm": 0.269587,
+      "textureCoverage": 0.222222
+    },
+    {
+      "role": "floor_surface",
+      "count": 1,
+      "expectedSemanticId": 2,
+      "semanticId": 2,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.154324,
+      "chroma": 0.025,
+      "cyan": 0.1222,
+      "warm": 0.0974,
+      "textureCoverage": 0
+    },
+    {
+      "role": "glass_shell",
+      "count": 14,
+      "expectedSemanticId": 5,
+      "semanticId": 5,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.677303,
+      "chroma": 0.269286,
+      "cyan": 0.629957,
+      "warm": 0.329129,
+      "textureCoverage": 0.285714
+    },
+    {
+      "role": "neutral_surface",
+      "count": 79,
+      "expectedSemanticId": 1,
+      "semanticId": 1,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.581822,
+      "chroma": 0.15257,
+      "cyan": 0.461619,
+      "warm": 0.37616,
+      "textureCoverage": 0.35443
+    },
+    {
+      "role": "pickup_energy",
+      "count": 3,
+      "expectedSemanticId": 15,
+      "semanticId": 15,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.517211,
+      "chroma": 0.72,
+      "cyan": 0.0086,
+      "warm": 0.7392,
+      "textureCoverage": 0
+    },
+    {
+      "role": "pickup_health",
+      "count": 3,
+      "expectedSemanticId": 14,
+      "semanticId": 14,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.478644,
+      "chroma": 0.546667,
+      "cyan": 0.208867,
+      "warm": 0.675333,
+      "textureCoverage": 0
+    },
+    {
+      "role": "pickup_key",
+      "count": 1,
+      "expectedSemanticId": 17,
+      "semanticId": 17,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.754844,
+      "chroma": 0.82,
+      "cyan": 0.1046,
+      "warm": 0.926,
+      "textureCoverage": 0
+    },
+    {
+      "role": "robot_body",
+      "count": 4,
+      "expectedSemanticId": 11,
+      "semanticId": 11,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.397584,
+      "chroma": 0.28,
+      "cyan": 0.4062,
+      "warm": 0.1264,
+      "textureCoverage": 0
+    },
+    {
+      "role": "route_gold",
+      "count": 10,
+      "expectedSemanticId": 8,
+      "semanticId": 8,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.571187,
+      "chroma": 0.483567,
+      "cyan": 0.155893,
+      "warm": 0.643986,
+      "textureCoverage": 0
+    },
+    {
+      "role": "screen_label",
+      "count": 4,
+      "expectedSemanticId": 10,
+      "semanticId": 10,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.344272,
+      "chroma": 0.029132,
+      "cyan": 0.254665,
+      "warm": 0.238319,
+      "textureCoverage": 0
+    },
+    {
+      "role": "structural_dark",
+      "count": 76,
+      "expectedSemanticId": 4,
+      "semanticId": 4,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.277403,
+      "chroma": 0.064349,
+      "cyan": 0.209368,
+      "warm": 0.186731,
+      "textureCoverage": 0.052632
+    },
+    {
+      "role": "switch_active",
+      "count": 2,
+      "expectedSemanticId": 18,
+      "semanticId": 18,
+      "roleIdMismatches": 0,
+      "paletteMix": 0,
+      "luma": 0.601104,
+      "chroma": 0.72,
+      "cyan": 0.804,
+      "warm": 0.0096,
+      "textureCoverage": 0
+    }
+  ],
+  "museumScopes": null,
+  "issues": [
+    {
+      "severity": "warn",
+      "role": "cyan_emissive",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "danger_red",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "door_access_cyan",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "door_locked_red",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "exhibit_warm",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "floor_surface",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "glass_shell",
+      "message": "museum room surface cyan pressure 0.629957 is high; authored room material should be rebalanced"
+    },
+    {
+      "severity": "warn",
+      "role": "glass_shell",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "neutral_surface",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "pickup_energy",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "pickup_health",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "pickup_key",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "robot_body",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "route_gold",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "screen_label",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "structural_dark",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    },
+    {
+      "severity": "warn",
+      "role": "switch_active",
+      "message": "role has no palette mix, so the offline solver is not affecting it"
+    }
+  ],
+  "status": "pass"
+}

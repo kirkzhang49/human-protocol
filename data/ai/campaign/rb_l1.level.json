@@ -1,0 +1,1912 @@
+{
+  "id": "builder_level_rb_l1",
+  "title": "维修舱·重制",
+  "authoringProfile": "generated",
+  "authoringMetadata": {
+    "builderEnvironment": {
+      "lighting": {
+        "ambient": 0.5,
+        "keyColor": "#6fe3c2",
+        "keyIntensity": 0.85,
+        "fog": 0.4,
+        "bloom": 0.5,
+        "shadow": 0.55
+      },
+      "rooms": {}
+    },
+    "builderStories": {
+      "rb_l1_p3": {
+        "title": "检修工单",
+        "clue": "档案残缺：有一段记录被涂黑了。",
+        "hint": "翻到背面。"
+      }
+    },
+    "builderStory": {
+      "templateId": "maintenance_incident",
+      "victoryLine": "档案残缺：有一段记录被涂黑了。",
+      "transitionLine": "电梯门合拢，登记灯熄灭。"
+    }
+  },
+  "articles": [
+    {
+      "id": "article_room_fuse_box_rb_l1_p3",
+      "roomId": "rb_l1_r1",
+      "interactionId": "story_rb_l1_p3",
+      "systemLabel": "墙面档案",
+      "title": "检修工单",
+      "pages": [
+        {
+          "id": "record",
+          "body": "档案残缺：有一段记录被涂黑了。"
+        },
+        {
+          "id": "note",
+          "body": "翻到背面。"
+        }
+      ],
+      "readReward": {
+        "label": "墙面档案",
+        "detail": "检修工单 已读取",
+        "rarity": "story"
+      },
+      "readRewardDuration": 1.35
+    }
+  ],
+  "spawnPoint": [
+    0,
+    0,
+    -5
+  ],
+  "initialInventory": {
+    "hasRod": true,
+    "hasPistol": true,
+    "coreCells": 0,
+    "equipWeapon": "railLance"
+  },
+  "initialWaveStartDelay": 0,
+  "requiresStoryPickupsBeforeWaves": false,
+  "exit": {
+    "id": "builder_exit",
+    "position": [
+      0,
+      0,
+      -30.8
+    ],
+    "radius": 2.2,
+    "unlockedLabel": "维修电梯",
+    "distanceLabel": "维修电梯",
+    "unlockMessage": "维修电梯已通电。",
+    "unlockDialogueTrigger": "builder_exit_unlocked",
+    "unlockWarning": {
+      "label": "出口已通电",
+      "detail": "维修电梯可以使用了"
+    },
+    "cinematic": {
+      "type": "elevator_walk_in",
+      "duration": 5.6,
+      "walkInDuration": 1.55,
+      "doorOpenTime": 0.08,
+      "doorCloseTime": 2.15,
+      "buttonPressTime": 4,
+      "buttonPressDuration": 2,
+      "whiteOutTime": 4.85,
+      "enterPosition": [
+        0,
+        0,
+        -31.599999999999998
+      ],
+      "faceYaw": 1.641599759364805,
+      "doorId": "rb_l1_d2",
+      "message": "维修电梯正在接管关卡切换。"
+    },
+    "transitionMessage": "电梯门合拢，登记灯熄灭。",
+    "transitionDialogueTrigger": "builder_exit_transition",
+    "victoryMessage": "档案残缺：有一段记录被涂黑了。"
+  },
+  "map": {
+    "id": "builder_level_rb_l1_map",
+    "schemaVersion": "hp.map.v1",
+    "rooms": [
+      {
+        "id": "rb_l1_r0",
+        "label": "维修主舱",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -5
+          ],
+          "size": [
+            14,
+            4,
+            10
+          ]
+        },
+        "mood": "uneasy",
+        "floorMaterialKey": "maintenance_bay_wet_floor",
+        "wallMaterialKey": "maintenance_bay_glass_wall",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#6fe3c2"
+        }
+      },
+      {
+        "id": "rb_l1_r1",
+        "label": "配电壁龛",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -14.5
+          ],
+          "size": [
+            12,
+            4,
+            9
+          ]
+        },
+        "mood": "uneasy",
+        "floorMaterialKey": "maintenance_bay_wet_floor",
+        "wallMaterialKey": "maintenance_bay_glass_wall",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#6fe3c2"
+        }
+      },
+      {
+        "id": "rb_l1_r2",
+        "label": "工具间",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -23.5
+          ],
+          "size": [
+            12,
+            4,
+            9
+          ]
+        },
+        "mood": "uneasy",
+        "floorMaterialKey": "hazard_hall_floor",
+        "wallMaterialKey": "hazard_hall_wall",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#ffb34f"
+        }
+      },
+      {
+        "id": "rb_l1_r3",
+        "label": "检修电梯",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -30.7
+          ],
+          "size": [
+            6.4,
+            4,
+            5.4
+          ]
+        },
+        "mood": "reveal",
+        "skinKey": "human_museum_gallery",
+        "floorMaterialKey": "museum_floor",
+        "wallMaterialKey": "service_elevator_metal",
+        "ambientPressure": 0.55,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": false,
+          "renderCeiling": false,
+          "collisionWalls": true,
+          "accentColor": "#f3f0df"
+        },
+        "aesthetic": {
+          "enabled": true,
+          "style": "exit",
+          "detail": "high"
+        }
+      }
+    ],
+    "doors": [
+      {
+        "id": "rb_l1_d0",
+        "label": "维修主舱 → 配电壁龛",
+        "fromRoomId": "rb_l1_r0",
+        "toRoomId": "rb_l1_r1",
+        "position": [
+          0,
+          0,
+          -10
+        ],
+        "size": [
+          3.2,
+          3.2,
+          0.35
+        ],
+        "yaw": 0,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "service_elevator_door",
+        "materialKey": "service_elevator_metal",
+        "panelPosition": [
+          1.78,
+          0,
+          -9.65
+        ],
+        "autoOpenOnApproach": true
+      },
+      {
+        "id": "rb_l1_d1",
+        "label": "配电壁龛 → 工具间",
+        "fromRoomId": "rb_l1_r1",
+        "toRoomId": "rb_l1_r2",
+        "position": [
+          0,
+          0,
+          -19
+        ],
+        "size": [
+          3.2,
+          3.2,
+          0.35
+        ],
+        "yaw": 0,
+        "defaultState": "locked",
+        "lock": {
+          "type": "puzzle_complete",
+          "puzzleId": "rb_l1_pz1",
+          "lockedMessage": "先在「配电壁龛」的谜题台上完成工具档案校准。",
+          "unlockedMessage": "工具档案校准完成，门已解锁。"
+        },
+        "visualKey": "industrial_access_door",
+        "materialKey": "hazard_hall_wall",
+        "panelPosition": [
+          1.78,
+          0,
+          -18.65
+        ],
+        "autoOpenOnApproach": false
+      },
+      {
+        "id": "rb_l1_d2",
+        "label": "工具间 → 检修电梯",
+        "fromRoomId": "rb_l1_r2",
+        "toRoomId": "rb_l1_r3",
+        "position": [
+          0,
+          0,
+          -28
+        ],
+        "size": [
+          3.2,
+          3.2,
+          0.35
+        ],
+        "yaw": 0,
+        "defaultState": "locked",
+        "lock": {
+          "type": "puzzle_complete",
+          "puzzleId": "rb_l1_pz2",
+          "lockedMessage": "先在「工具间」的谜题台上完成阀门配平台。",
+          "unlockedMessage": "阀门配平台完成，门已解锁。"
+        },
+        "visualKey": "service_elevator_door",
+        "materialKey": "service_elevator_metal",
+        "panelPosition": [
+          1.78,
+          0,
+          -27.65
+        ],
+        "autoOpenOnApproach": true,
+        "skinKey": "service_elevator_hero",
+        "openSpeed": 1.35,
+        "openVisualPolicy": {
+          "hideClosedHardwareAfterOpen": true,
+          "hidePanelAfterOpen": true
+        },
+        "cameraImpact": {
+          "shake": 0.34,
+          "fovKick": 1.85
+        }
+      }
+    ],
+    "keyItems": [],
+    "interactions": [
+      {
+        "id": "pz_rb_l1_d1_panel",
+        "type": "terminal",
+        "roomId": "rb_l1_r1",
+        "position": [
+          0,
+          0,
+          -14.5
+        ],
+        "radius": 1.7,
+        "visualKey": "control_bank",
+        "materialKey": "terminal_cyan",
+        "label": "工具档案校准"
+      },
+      {
+        "id": "pz_rb_l1_d2_panel",
+        "type": "terminal",
+        "roomId": "rb_l1_r2",
+        "position": [
+          0,
+          0,
+          -23.5
+        ],
+        "radius": 1.7,
+        "visualKey": "control_bank",
+        "materialKey": "terminal_cyan",
+        "label": "阀门配平台"
+      },
+      {
+        "id": "use_builder_exit",
+        "type": "exit",
+        "roomId": "rb_l1_r3",
+        "position": [
+          2.82,
+          0,
+          -31.4
+        ],
+        "radius": 2.2,
+        "visualKey": "service_elevator_panel",
+        "materialKey": "terminal_cyan",
+        "label": "进入维修电梯",
+        "opensDoorId": "rb_l1_d2"
+      },
+      {
+        "id": "story_rb_l1_p3",
+        "type": "article",
+        "roomId": "rb_l1_r1",
+        "position": [
+          -4.08,
+          0,
+          -11.620000000000001
+        ],
+        "radius": 1.45,
+        "visualKey": "none",
+        "materialKey": "terminal_cyan",
+        "anchorPropId": "rb_l1_p3",
+        "label": "检修工单"
+      }
+    ],
+    "pickups": [
+      {
+        "id": "rb_l1_pk0",
+        "type": "repairKit",
+        "roomId": "rb_l1_r1",
+        "position": [
+          -2,
+          0,
+          -16.5
+        ],
+        "label": "治疗包"
+      }
+    ],
+    "props": [
+      {
+        "id": "rb_l1_p0",
+        "roomId": "rb_l1_r0",
+        "modelKey": "room_rm_maint_broken_cradle",
+        "position": [
+          -4.08,
+          0,
+          -1.7999999999999998
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "破损检修台",
+        "collider": {
+          "halfSize": [
+            1.2,
+            0.4595,
+            1.05
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_p1",
+        "roomId": "rb_l1_r0",
+        "modelKey": "room_crate_stack",
+        "position": [
+          4.08,
+          0,
+          -8.2
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "货箱堆",
+        "collider": {
+          "halfSize": [
+            0.45,
+            0.45,
+            0.36
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_p2",
+        "roomId": "rb_l1_r0",
+        "modelKey": "room_fuse_box",
+        "position": [
+          -4.08,
+          0,
+          -8
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "配电箱"
+      },
+      {
+        "id": "rb_l1_p3",
+        "roomId": "rb_l1_r1",
+        "modelKey": "room_fuse_box",
+        "position": [
+          -4.08,
+          0,
+          -11.620000000000001
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "配电箱"
+      },
+      {
+        "id": "rb_l1_p4",
+        "roomId": "rb_l1_r1",
+        "modelKey": "room_rm_maint_gantry_hoist",
+        "position": [
+          4.08,
+          0,
+          -17.38
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "龙门吊架",
+        "collider": {
+          "halfSize": [
+            0.8795,
+            1.025,
+            0.55
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_p5",
+        "roomId": "rb_l1_r1",
+        "modelKey": "room_locker_low",
+        "position": [
+          -4.08,
+          0,
+          -17.2
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "矮储物柜",
+        "collider": {
+          "halfSize": [
+            0.37,
+            0.55,
+            0.19
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_p6",
+        "roomId": "rb_l1_r2",
+        "modelKey": "room_rm_maint_gantry_hoist",
+        "position": [
+          -4.08,
+          0,
+          -20.62
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "龙门吊架",
+        "collider": {
+          "halfSize": [
+            0.8795,
+            1.025,
+            0.55
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_p7",
+        "roomId": "rb_l1_r2",
+        "modelKey": "room_rm_maint_tool_wall",
+        "position": [
+          4.08,
+          1.5,
+          -26.38
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "工具挂板"
+      },
+      {
+        "id": "rb_l1_p8",
+        "roomId": "rb_l1_r2",
+        "modelKey": "room_locker_low",
+        "position": [
+          -4.08,
+          0,
+          -26.2
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "矮储物柜",
+        "collider": {
+          "halfSize": [
+            0.37,
+            0.55,
+            0.19
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_hp9",
+        "roomId": "rb_l1_r0",
+        "modelKey": "room_rm_maint_weapon_cradle",
+        "position": [
+          1.8592833001166582,
+          0,
+          -6.784458527341485
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "武器认领架",
+        "collider": {
+          "halfSize": [
+            0.65,
+            0.435,
+            0.45
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_hp10",
+        "roomId": "rb_l1_r0",
+        "modelKey": "room_rm_maint_cable_spine",
+        "position": [
+          0.02031407319009304,
+          0,
+          -6.066866172477603
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "脊柱电缆槽",
+        "collider": {
+          "halfSize": [
+            1.3,
+            0.165,
+            0.487
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_hp11",
+        "roomId": "rb_l1_r0",
+        "modelKey": "room_rm_maint_coolant_drums",
+        "position": [
+          -1.1596843404695392,
+          0,
+          -4.119726617820561
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "冷却剂桶组",
+        "collider": {
+          "halfSize": [
+            0.7965,
+            0.56,
+            0.7435
+          ]
+        }
+      },
+      {
+        "id": "rb_l1_hp12",
+        "roomId": "rb_l1_r1",
+        "modelKey": "room_rm_maint_battery_rack",
+        "position": [
+          0.2558701066300273,
+          0,
+          -13.032631744630635
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "电池充能架",
+        "collider": {
+          "halfSize": [
+            0.55,
+            0.78,
+            0.35
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_interior_shell",
+        "roomId": "rb_l1_r3",
+        "modelKey": "service_elevator_interior_shell",
+        "position": [
+          0,
+          0,
+          -30.7
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "出口电梯内壁",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "builder",
+          "playtest",
+          "interior_shell",
+          "bright_exit"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_threshold",
+        "roomId": "rb_l1_r3",
+        "modelKey": "door_threshold_service_elevator",
+        "position": [
+          0,
+          0.035,
+          -28.59
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1.15,
+          1,
+          1
+        ],
+        "label": "出口电梯门槛",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "builder",
+          "playtest",
+          "threshold",
+          "bright_exit"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_call_buttons",
+        "roomId": "rb_l1_r3",
+        "modelKey": "service_elevator_call_buttons",
+        "position": [
+          2.82,
+          1.42,
+          -31.4
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "出口电梯呼叫按钮",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "builder",
+          "playtest",
+          "exit_call_buttons",
+          "button_panel"
+        ]
+      }
+    ],
+    "navigation": {
+      "criticalPathRoomIds": [
+        "rb_l1_r0",
+        "rb_l1_r1",
+        "rb_l1_r2",
+        "rb_l1_r3"
+      ],
+      "optionalRoomIds": [],
+      "maxBacktrackSeconds": 24,
+      "mobileReadableDoorCount": 3
+    },
+    "decals": [
+      {
+        "id": "rb_l1_decal_body",
+        "roomId": "rb_l1_r0",
+        "kind": "human_body_reference",
+        "position": [
+          -6.8,
+          1.78,
+          -3
+        ],
+        "size": [
+          0.82,
+          1.22
+        ],
+        "opacity": 0.84,
+        "label": "人体比例参考",
+        "tags": [
+          "remake",
+          "level01",
+          "wall_reference"
+        ]
+      },
+      {
+        "id": "rb_l1_decal_hand",
+        "roomId": "rb_l1_r0",
+        "kind": "human_hand_reference",
+        "position": [
+          -6.8,
+          1.86,
+          -4.3
+        ],
+        "size": [
+          0.72,
+          1.06
+        ],
+        "opacity": 0.84,
+        "label": "手部资产参考",
+        "tags": [
+          "remake",
+          "level01",
+          "wall_reference"
+        ]
+      },
+      {
+        "id": "rb_l1_decal_spine",
+        "roomId": "rb_l1_r0",
+        "kind": "human_spine_reference",
+        "position": [
+          -6.8,
+          1.74,
+          -5.6
+        ],
+        "size": [
+          0.68,
+          1
+        ],
+        "opacity": 0.84,
+        "label": "脊柱映射参考",
+        "tags": [
+          "remake",
+          "level01",
+          "wall_reference"
+        ]
+      }
+    ]
+  },
+  "puzzles": [
+    {
+      "id": "rb_l1_pz1",
+      "type": "tool_calibration",
+      "label": "工具档案校准",
+      "roomId": "rb_l1_r1",
+      "interactionId": "pz_rb_l1_d1_panel",
+      "toolLabel": "馆藏校准棒",
+      "columns": 6,
+      "rows": 4,
+      "entry": {
+        "x": 0,
+        "y": 2,
+        "channel": "signal"
+      },
+      "targets": [
+        {
+          "x": 5,
+          "y": 1,
+          "channel": "stability"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "channel": "force"
+        }
+      ],
+      "requiredCells": [
+        {
+          "x": 3,
+          "y": 2,
+          "channel": "protocol"
+        }
+      ],
+      "cells": [
+        {
+          "x": 0,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 2
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 0
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "kind": "tee",
+          "rotation": 3
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "kind": "blocked"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 1
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 0
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "kind": "tee",
+          "rotation": 2
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 3
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 1
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 0
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "kind": "amplifier",
+          "rotation": 0
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "kind": "tee",
+          "rotation": 0
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "kind": "blocked"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "kind": "blocked"
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "kind": "corner",
+          "rotation": 0
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "kind": "tee",
+          "rotation": 0
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "kind": "corner",
+          "rotation": 0
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 1
+        }
+      ],
+      "perfectMoveLimit": 5,
+      "maxMoveLimit": 10,
+      "timeLimitSec": 90,
+      "variants": [
+        {
+          "id": "builder_tool_route_01",
+          "solutionMoveCount": 5,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 3
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_02",
+          "solutionMoveCount": 4,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 3
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_03",
+          "solutionMoveCount": 6,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 2
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_04",
+          "solutionMoveCount": 5,
+          "rotationOverrides": [
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 2
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_05",
+          "solutionMoveCount": 4,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_06",
+          "solutionMoveCount": 6,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 2
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 3
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_07",
+          "solutionMoveCount": 5,
+          "rotationOverrides": [
+            {
+              "x": 2,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 3
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_08",
+          "solutionMoveCount": 4,
+          "rotationOverrides": [
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_09",
+          "solutionMoveCount": 6,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 3
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_10",
+          "solutionMoveCount": 5,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "rotation": 0
+            }
+          ]
+        }
+      ],
+      "success": {
+        "opensDoorId": "rb_l1_d1",
+        "rewardPulse": {
+          "label": "工具档案校准完成",
+          "detail": "谜题门已解锁",
+          "rarity": "epic"
+        },
+        "rewardPulseDuration": 1.6,
+        "audio": {
+          "key": "system_exit_open",
+          "intensity": 0.9
+        },
+        "actions": [
+          {
+            "type": "open_door",
+            "doorId": "rb_l1_d1"
+          },
+          {
+            "type": "focus_reveal",
+            "reveal": {
+              "kind": "door",
+              "doorId": "rb_l1_d1"
+            }
+          }
+        ]
+      },
+      "perfectBonus": {
+        "pickupType": "repairKit",
+        "rewardPulse": {
+          "label": "完美校准",
+          "detail": "额外治疗包弹出",
+          "rarity": "epic"
+        },
+        "rewardPulseDuration": 1.5
+      },
+      "fail": {
+        "message": "校准路径断开，馆藏台重置。"
+      }
+    },
+    {
+      "id": "rb_l1_pz2",
+      "type": "valve_matrix",
+      "label": "阀门配平台",
+      "roomId": "rb_l1_r2",
+      "interactionId": "pz_rb_l1_d2_panel",
+      "guidance": "主泵推压力，回流稳水位，旁通压温度。三块表全部进绿区。",
+      "valves": [
+        {
+          "id": "rb_l1_pz2_valve_pump",
+          "label": "主泵",
+          "min": 0,
+          "max": 8,
+          "initial": 2,
+          "gaugeShift": [
+            6,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "rb_l1_pz2_valve_return",
+          "label": "回流",
+          "min": 0,
+          "max": 8,
+          "initial": 1,
+          "gaugeShift": [
+            -2,
+            5,
+            2
+          ]
+        },
+        {
+          "id": "rb_l1_pz2_valve_bypass",
+          "label": "旁通",
+          "min": 0,
+          "max": 8,
+          "initial": 0,
+          "gaugeShift": [
+            0,
+            -3,
+            7
+          ]
+        }
+      ],
+      "gauges": [
+        {
+          "id": "rb_l1_pz2_gauge_pressure",
+          "label": "主压",
+          "base": 8,
+          "target": 30,
+          "tolerance": 2,
+          "unit": "bar"
+        },
+        {
+          "id": "rb_l1_pz2_gauge_level",
+          "label": "水位",
+          "base": 6,
+          "target": 27,
+          "tolerance": 2,
+          "unit": ""
+        },
+        {
+          "id": "rb_l1_pz2_gauge_core_temp",
+          "label": "核温",
+          "base": 36,
+          "target": 65,
+          "tolerance": 3,
+          "unit": "°"
+        }
+      ],
+      "solution": [
+        5,
+        4,
+        3
+      ],
+      "timeLimitSec": 50,
+      "success": {
+        "opensDoorId": "rb_l1_d2",
+        "rewardPulse": {
+          "label": "阀门配平台完成",
+          "detail": "谜题门已解锁",
+          "rarity": "epic"
+        },
+        "rewardPulseDuration": 1.6,
+        "audio": {
+          "key": "system_exit_open",
+          "intensity": 0.9
+        }
+      },
+      "fail": {
+        "message": "歧管泄压，阀位复位。",
+        "cameraImpact": {
+          "shake": 0.28,
+          "fovKick": 1.2
+        },
+        "audio": {
+          "key": "enemy_hit",
+          "intensity": 0.56
+        }
+      }
+    }
+  ],
+  "objectiveChain": [
+    {
+      "id": "obj_puzzle_rb_l1_d1",
+      "type": "custom",
+      "title": "校准工具档案",
+      "detail": "在「配电壁龛」的谜题台：让信号经过协议格并接到双端口。",
+      "requiredIds": [
+        "rb_l1_pz1"
+      ],
+      "completesWhen": {
+        "type": "puzzle_completed",
+        "id": "rb_l1_pz1"
+      },
+      "hudLabel": "工具档案校准",
+      "startsWhen": {
+        "type": "level_start"
+      },
+      "nextObjectiveId": "obj_open_rb_l1_d1"
+    },
+    {
+      "id": "obj_open_rb_l1_d1",
+      "type": "open_door",
+      "title": "打开 配电壁龛 → 工具间",
+      "detail": "靠近门并打开它。",
+      "requiredIds": [
+        "rb_l1_d1"
+      ],
+      "completesWhen": {
+        "type": "door_opened",
+        "id": "rb_l1_d1"
+      },
+      "hudLabel": "开门",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_puzzle_rb_l1_d1"
+      },
+      "nextObjectiveId": "obj_puzzle_rb_l1_d2"
+    },
+    {
+      "id": "obj_puzzle_rb_l1_d2",
+      "type": "custom",
+      "title": "配平阀门",
+      "detail": "在「工具间」的谜题台：调节三组阀门，让三块表同时进绿区。",
+      "requiredIds": [
+        "rb_l1_pz2"
+      ],
+      "completesWhen": {
+        "type": "puzzle_completed",
+        "id": "rb_l1_pz2"
+      },
+      "hudLabel": "阀门配平台",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_open_rb_l1_d1"
+      },
+      "nextObjectiveId": "obj_open_rb_l1_d2"
+    },
+    {
+      "id": "obj_open_rb_l1_d2",
+      "type": "open_door",
+      "title": "打开 工具间 → 检修电梯",
+      "detail": "靠近门并打开它。",
+      "requiredIds": [
+        "rb_l1_d2"
+      ],
+      "completesWhen": {
+        "type": "door_opened",
+        "id": "rb_l1_d2"
+      },
+      "hudLabel": "开门",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_puzzle_rb_l1_d2"
+      },
+      "nextObjectiveId": "obj_reach_exit"
+    },
+    {
+      "id": "obj_reach_exit",
+      "type": "reach_exit",
+      "title": "进入维修电梯",
+      "detail": "抵达出口，启动它。",
+      "requiredIds": [
+        "use_builder_exit"
+      ],
+      "completesWhen": {
+        "type": "interaction_completed",
+        "id": "use_builder_exit"
+      },
+      "hudLabel": "撤离",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_open_rb_l1_d2"
+      }
+    }
+  ],
+  "waves": [
+    {
+      "id": "wave_rb_l1_r2",
+      "startDelay": 0,
+      "trigger": {
+        "type": "room_entered",
+        "id": "rb_l1_r2",
+        "delay": 0.4
+      },
+      "enemies": [
+        {
+          "archetype": "repair_drone",
+          "count": 1,
+          "from": "sg_rb_l1_r2"
+        }
+      ],
+      "reward": "none"
+    }
+  ],
+  "events": [
+    {
+      "id": "builder_unlock_exit_on_enter",
+      "trigger": {
+        "type": "room_entered",
+        "id": "rb_l1_r3"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "unlock_exit"
+        }
+      ]
+    }
+  ],
+  "dialogues": [],
+  "spawnGroups": [
+    {
+      "id": "front",
+      "label": "前方舱门",
+      "layout": "front"
+    },
+    {
+      "id": "front_arc",
+      "label": "前方舱门",
+      "layout": "front_arc"
+    },
+    {
+      "id": "side_rear",
+      "label": "侧后方夹击",
+      "layout": "side_rear"
+    },
+    {
+      "id": "front_gate",
+      "label": "正门重型单位",
+      "layout": "front_gate"
+    },
+    {
+      "id": "turret_rail",
+      "label": "左右轨道炮台",
+      "layout": "turret_rail"
+    },
+    {
+      "id": "around_ring",
+      "label": "四周通道",
+      "layout": "around_ring"
+    },
+    {
+      "id": "rear_ring",
+      "label": "后方追击队",
+      "layout": "rear_ring"
+    },
+    {
+      "id": "sg_rb_l1_r2",
+      "label": "工具间 内部",
+      "layout": "front",
+      "positions": [
+        [
+          -3.3600000000000003,
+          0,
+          -26.02
+        ],
+        [
+          3.3600000000000003,
+          0,
+          -26.02
+        ],
+        [
+          -3.3600000000000003,
+          0,
+          -20.98
+        ],
+        [
+          3.3600000000000003,
+          0,
+          -20.98
+        ]
+      ]
+    }
+  ],
+  "cinematicBeats": [],
+  "pickups": {
+    "maxActiveDynamicPickups": 3,
+    "dynamicLifetimeSec": 22,
+    "storyPickups": [],
+    "collectRadii": {
+      "coreCell": 2.45,
+      "repairKit": 2.25,
+      "ironRod": 1.65,
+      "pistol": 1.65
+    },
+    "repairKit": {
+      "minMissingHealthToCollect": 3,
+      "healAmount": 24,
+      "rewardLabel": "拾取修复箱"
+    },
+    "coreCell": {
+      "maxHeld": 1,
+      "pickupLabel": "拾取应急电池",
+      "pickupDetailPrefix": "物品",
+      "useLabel": "应急电池释放",
+      "useDetail": "一次性清场冲击",
+      "preservedLabel": "电池余电",
+      "preservedDetail": "这枚电池没有完全耗尽",
+      "upgradeInsertedLabel": "应急电池装入",
+      "emptyUseReward": {
+        "label": "没有应急电池",
+        "detail": "电池很少，留给被包围时",
+        "rarity": "common"
+      }
+    },
+    "drops": {
+      "coreCell": {
+        "activeDropLimit": 1,
+        "pityKills": 18,
+        "minKillsForPity": 16,
+        "eliteChance": 0.72,
+        "archetypeChances": {
+          "clamp_bot": {
+            "minKills": 12,
+            "chance": 0.07
+          },
+          "repair_drone": {
+            "minKills": 16,
+            "chance": 0.018
+          }
+        }
+      },
+      "repairKit": {
+        "activeDropLimit": 1,
+        "minMissingHealth": 14,
+        "eliteChance": 0.22,
+        "baseChance": 0.012,
+        "archetypeChanceBonus": {
+          "clamp_bot": 0.02
+        },
+        "missingHealthThreshold": 0.34,
+        "missingHealthBonus": 0.03,
+        "lowHealthBonuses": [
+          {
+            "healthRatioAtMost": 0.4,
+            "bonus": 0.09
+          },
+          {
+            "healthRatioAtMost": 0.24,
+            "bonus": 0.16
+          }
+        ],
+        "lowHealthPity": [
+          {
+            "healthRatioAtMost": 0.22,
+            "kills": 4
+          },
+          {
+            "healthRatioAtMost": 0.32,
+            "kills": 7
+          }
+        ]
+      }
+    }
+  },
+  "economy": {
+    "memoryFragments": {
+      "default": 1,
+      "byArchetype": {
+        "custodian_elite": 18,
+        "signal_turret": 3,
+        "clamp_bot": 2
+      }
+    },
+    "killStreakWindowSec": 3.8,
+    "memoryCacheMilestones": [
+      {
+        "amount": 10,
+        "label": "体力恢复",
+        "reward": "energy",
+        "rarity": "rare"
+      },
+      {
+        "amount": 28,
+        "label": "呼吸变稳",
+        "reward": "heat",
+        "rarity": "rare"
+      },
+      {
+        "amount": 52,
+        "label": "生命上限恢复",
+        "reward": "health",
+        "rarity": "epic"
+      }
+    ],
+    "curatedUpgradeRolls": [
+      [
+        "pulse_faster_cycle",
+        "pulse_coolant_feed",
+        "rail_overcharge",
+        "core_plating",
+        "servo_stride",
+        "wide_target_cone",
+        "thermal_buffer",
+        "dash_shorter_cd",
+        "field_medicine"
+      ],
+      [
+        "shock_repair_ping",
+        "shock_shorter_cd",
+        "core_cell_damage",
+        "core_cell_preserve",
+        "pulse_chain_mark",
+        "rail_double_line",
+        "last_human_protocol",
+        "dash_shorter_cd",
+        "field_medicine"
+      ]
+    ],
+    "tempoSurge": {
+      "eliteDuration": 6.5,
+      "normalThreshold": 5,
+      "tier2Threshold": 10,
+      "tier1Duration": 4.4,
+      "tier2Duration": 5.8,
+      "tier1HeatRefund": 7,
+      "tier2HeatRefund": 12,
+      "tier1EnergyRefund": 7,
+      "tier2EnergyRefund": 12
+    }
+  },
+  "revive": {
+    "maxRevives": 1,
+    "hpRatio": 0.7,
+    "memoryFragments": 12,
+    "reviveSurgeSec": 9.5,
+    "tempoSurgeSec": 5.5,
+    "blastRadius": 6.5,
+    "blastDamage": 80,
+    "blastKnockback": 6,
+    "rewardPulse": {
+      "label": "第二口气",
+      "detail": "+线索 + 短暂爆发",
+      "rarity": "story"
+    },
+    "rewardPulseDuration": 2.4,
+    "message": "你又醒了。几秒内全身发热。"
+  },
+  "combatLimits": {
+    "smallEnemyArchetypes": [
+      "repair_drone",
+      "clamp_bot"
+    ],
+    "eliteArchetypeId": "custodian_elite",
+    "smallEnemyDamageMultiplier": 1.3
+  },
+  "enemyDeathBeats": [],
+  "presentation": {
+    "defaultWaveStartMessage": "敌对单位正在部署。",
+    "reinforcementMessage": "增援单位已部署。",
+    "waveLabels": {
+      "wave_rb_l1_r2": "工具间 清剿"
+    },
+    "objectives": {
+      "upgrade": {
+        "title": "选一种活法",
+        "detail": "只能选一项",
+        "progressLabel": "升级上线",
+        "progressText": "选 1 个"
+      },
+      "preRod": {
+        "title": "捡起铁棒",
+        "detail": "别空手"
+      },
+      "prePistol": {
+        "title": "捡起手枪",
+        "detail": "拿到枪，门会锁"
+      },
+      "default": {
+        "title": "继续前进",
+        "detail": "目标还没完成"
+      },
+      "exitUnlocked": {
+        "title": "进入出口",
+        "detail": "进电梯",
+        "progressLabel": "撤离",
+        "progressText": "走"
+      }
+    },
+    "flow": {
+      "title": {
+        "system": "异常生命信号",
+        "heading": "Human Protocol",
+        "body": "你醒在一段不该有人的协议里。",
+        "signalStrip": [
+          "生命体征",
+          "门禁",
+          "无线电噪声"
+        ],
+        "startButton": "开始"
+      },
+      "death": {
+        "system": "急救失败",
+        "heading": "你倒下了",
+        "itchSuffix": "itch 版本无广告。",
+        "reviveOfferPrefix": "醒来后有几秒肾上腺素爆发。",
+        "cacheReadyText": "补给已备好。",
+        "reviveButtonRewarded": "看广告急救",
+        "reviveButtonLocal": "急救",
+        "restartButton": "重开本关",
+        "restartAfterReviveUsedButton": "重新开始"
+      },
+      "transition": {
+        "system": "出口",
+        "heading": "继续下行"
+      },
+      "victory": {
+        "system": "档案片段",
+        "heading": "记录完成",
+        "body": "门合上了，下一层仍在亮。",
+        "doubleMemoryButton": "看广告 x2 积分",
+        "doubleMemoryClaimedButton": "x2 积分已领取",
+        "replayButton": "再次进入"
+      }
+    },
+    "waves": [
+      {
+        "id": "wave_rb_l1_r2",
+        "label": "工具间 清剿",
+        "objectiveTitle": "清剿 工具间",
+        "objectiveDetail": "击毁房间里的敌对单位。",
+        "startMessage": "工具间 的机器人被唤醒。",
+        "startWarning": {
+          "label": "敌对单位",
+          "detail": "工具间 出现机器人"
+        },
+        "startWarningDuration": 1.8
+      }
+    ],
+    "spawnSourceLabels": {
+      "front": "前方入口",
+      "front_arc": "前方入口",
+      "side_rear": "侧后方夹击",
+      "front_gate": "正门重型单位",
+      "turret_rail": "左右轨道炮台",
+      "around_ring": "四周通道",
+      "rear_ring": "后方追击队",
+      "sg_rb_l1_r2": "工具间 内部"
+    },
+    "reinforcementWarningDuration": 1.45,
+    "environmentPressure": {
+      "title": 0.16,
+      "death": 0.95,
+      "idle": 0.24,
+      "exitUnlocked": 0.84,
+      "byWave": {}
+    }
+  }
+}

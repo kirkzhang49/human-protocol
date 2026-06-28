@@ -1,0 +1,1456 @@
+{
+  "schemaVersion": "hp.official.builder.v1",
+  "documentId": "official_builder_level_02_residential_simulation_from_local_slot_1",
+  "title": "居住模拟间 · 可编辑草稿",
+  "campaign": {
+    "levelId": "level_02_residential_simulation",
+    "title": "居住模拟间",
+    "ordinal": 2,
+    "packId": "human-protocol-base-demo",
+    "nextLevelId": "level_03_human_museum"
+  },
+  "project": {
+    "schemaVersion": "hp.builder.v1",
+    "projectId": "proj_import_level_02_residential_simulation",
+    "title": "居住模拟间 · 可编辑草稿",
+    "story": {
+      "templateId": "false_family",
+      "transitionLine": "电梯门合拢，住宅声场停止。",
+      "victoryLine": "居住记录：对象会回头寻找家。"
+    },
+    "rooms": [
+      {
+        "id": "level_02_recovery_foyer",
+        "label": "恢复前厅",
+        "style": "residential",
+        "center": [
+          0,
+          12.1
+        ],
+        "size": [
+          12.5,
+          7.4
+        ],
+        "env": {
+          "surfaceKitId": "hp:residential_false_home_shell_v1",
+          "floorPresetId": "floor_level03_museum_premium_stone_shell",
+          "wallPresetId": "wall_level02_false_home_plaster_v1",
+          "ceilingPresetId": "ceiling_level02_false_home_plaster_v1",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "ceiling": {
+              "presetId": "ceiling_level02_false_home_plaster_v1",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level02_false_home_plaster_v1",
+              "authored": true
+            },
+            "floor": {
+              "presetId": "floor_level03_museum_premium_stone_shell",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "quiet",
+          "floorMaterialKey": "residential_floor",
+          "wallMaterialKey": "residential_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#d6b678"
+          },
+          "aesthetic": {
+            "style": "residential",
+            "detail": "medium"
+          },
+          "ambientPressure": 0.22,
+          "entryDialogueTrigger": "level_start",
+          "skinKey": "residential_sim_dark"
+        }
+      },
+      {
+        "id": "level_02_living_room",
+        "label": "生活模拟大厅",
+        "style": "residential",
+        "center": [
+          0,
+          0.4
+        ],
+        "size": [
+          18.8,
+          16.6
+        ],
+        "env": {
+          "surfaceKitId": "hp:residential_false_home_shell_v1",
+          "floorPresetId": "floor_level03_museum_premium_stone_shell",
+          "wallPresetId": "wall_level02_false_home_plaster_v1",
+          "ceilingPresetId": "ceiling_level02_false_home_plaster_v1",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "ceiling": {
+              "presetId": "ceiling_level02_false_home_plaster_v1",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level02_false_home_plaster_v1",
+              "authored": true
+            },
+            "floor": {
+              "presetId": "floor_level03_museum_premium_stone_shell",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "combat",
+          "floorMaterialKey": "residential_floor",
+          "wallMaterialKey": "residential_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#d6b678"
+          },
+          "aesthetic": {
+            "style": "residential",
+            "detail": "high"
+          },
+          "ambientPressure": 0.56,
+          "entryDialogueTrigger": "level_02_living_entry",
+          "skinKey": "residential_sim_dark"
+        }
+      },
+      {
+        "id": "level_02_care_room",
+        "label": "家政维修间",
+        "style": "hazard",
+        "center": [
+          13,
+          0.4
+        ],
+        "size": [
+          7.2,
+          7.8
+        ],
+        "env": {
+          "surfaceKitId": "hp:residential_false_home_shell_v1",
+          "floorPresetId": "floor_level03_museum_premium_stone_shell",
+          "wallPresetId": "wall_level02_false_home_plaster_v1",
+          "ceilingPresetId": "ceiling_level02_false_home_plaster_v1",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "ceiling": {
+              "presetId": "ceiling_level02_false_home_plaster_v1",
+              "authored": true
+            },
+            "floor": {
+              "presetId": "floor_level03_museum_premium_stone_shell",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level02_false_home_plaster_v1",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "boss",
+          "floorMaterialKey": "hazard_hall_floor",
+          "wallMaterialKey": "hazard_hall_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#ffb34f"
+          },
+          "aesthetic": {
+            "style": "hazard",
+            "detail": "high"
+          },
+          "ambientPressure": 0.82,
+          "entryDialogueTrigger": "level_02_care_room_entered",
+          "skinKey": "residential_sim_dark"
+        }
+      },
+      {
+        "id": "level_02_light_room",
+        "label": "家庭灯控室",
+        "style": "sterile",
+        "center": [
+          -13,
+          0.4
+        ],
+        "size": [
+          7.2,
+          7.8
+        ],
+        "env": {
+          "surfaceKitId": "hp:residential_false_home_shell_v1",
+          "floorPresetId": "floor_level03_museum_premium_stone_shell",
+          "wallPresetId": "wall_level02_false_home_plaster_v1",
+          "ceilingPresetId": "ceiling_level02_false_home_plaster_v1",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "ceiling": {
+              "presetId": "ceiling_level02_false_home_plaster_v1",
+              "authored": true
+            },
+            "floor": {
+              "presetId": "floor_level03_museum_premium_stone_shell",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level02_false_home_plaster_v1",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "uneasy",
+          "floorMaterialKey": "sterile_lab_floor",
+          "wallMaterialKey": "sterile_lab_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#7ff2ff"
+          },
+          "aesthetic": {
+            "style": "sterile",
+            "detail": "high"
+          },
+          "ambientPressure": 0.7,
+          "skinKey": "residential_sim_dark"
+        }
+      },
+      {
+        "id": "level_02_exit_elevator_room",
+        "label": "尽头电梯",
+        "style": "exit",
+        "center": [
+          0,
+          -10.6
+        ],
+        "size": [
+          6.4,
+          5.4
+        ],
+        "env": {
+          "floorPresetId": "floor_dark_rubber",
+          "wallPresetId": "wall_dark_metal_panel",
+          "ceilingPresetId": "wall_dark_metal_panel",
+          "ceilingVisible": false,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36
+        },
+        "sourceRoom": {
+          "mood": "reveal",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "museum_floor",
+          "wallMaterialKey": "service_elevator_metal",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": false,
+            "renderCeiling": false,
+            "collisionWalls": true,
+            "accentColor": "#f3f0df"
+          },
+          "aesthetic": {
+            "enabled": true,
+            "style": "exit",
+            "detail": "high"
+          },
+          "ambientPressure": 0.55
+        }
+      }
+    ],
+    "doors": [
+      {
+        "id": "level_02_living_room_door",
+        "label": "生活区门",
+        "fromRoomId": "level_02_recovery_foyer",
+        "toRoomId": "level_02_living_room",
+        "lockType": "none",
+        "sourceDoor": {
+          "label": "生活区门",
+          "position": [
+            0,
+            0,
+            8.55
+          ],
+          "size": [
+            2.7,
+            2.72,
+            0.34
+          ],
+          "yaw": 0,
+          "defaultState": "closed",
+          "lock": {
+            "type": "none"
+          },
+          "visualKey": "residential_access_door",
+          "materialKey": "residential_wall",
+          "panelPosition": [
+            1.78,
+            0,
+            8.9
+          ],
+          "openSpeed": 1.18,
+          "autoOpenOnApproach": true,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true,
+            "hidePanelAfterOpen": true
+          },
+          "cameraImpact": {
+            "shake": 0.12,
+            "fovKick": 0.65
+          }
+        }
+      },
+      {
+        "id": "level_02_care_room_door",
+        "label": "家政维修间门",
+        "fromRoomId": "level_02_living_room",
+        "toRoomId": "level_02_care_room",
+        "lockType": "survive_wave",
+        "sourceDoor": {
+          "label": "家政维修间门",
+          "position": [
+            9.4,
+            0,
+            0.4
+          ],
+          "size": [
+            2.05,
+            2.58,
+            0.32
+          ],
+          "yaw": 1.5707963267948966,
+          "defaultState": "locked",
+          "lock": {
+            "type": "survive_wave",
+            "waveId": "wave_gumgzq",
+            "lockedMessage": "清掉「夹钳机器人 6、夹钳机器人 5」，门才会开。",
+            "unlockedMessage": "威胁解除，门已解锁。"
+          },
+          "visualKey": "residential_access_door",
+          "materialKey": "residential_wall",
+          "panelPosition": [
+            8.95,
+            0,
+            1.85
+          ],
+          "openSpeed": 1.22,
+          "autoOpenOnApproach": false,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true,
+            "hidePanelAfterOpen": true
+          },
+          "openedDialogueTrigger": "level_02_care_room_open",
+          "cameraImpact": {
+            "shake": 0.18,
+            "fovKick": 0.9
+          }
+        },
+        "surviveRobotIds": [
+          "robot_5qwc3i",
+          "robot_jwhx3f"
+        ],
+        "surviveRobotId": "robot_5qwc3i",
+        "waveIds": []
+      },
+      {
+        "id": "level_02_light_room_door",
+        "label": "家庭灯控室门",
+        "fromRoomId": "level_02_living_room",
+        "toRoomId": "level_02_light_room",
+        "lockType": "key_item",
+        "sourceDoor": {
+          "label": "家庭灯控室门",
+          "position": [
+            -9.4,
+            0,
+            0.4
+          ],
+          "size": [
+            2.05,
+            2.58,
+            0.32
+          ],
+          "yaw": 1.5707963267948966,
+          "defaultState": "locked",
+          "lock": {
+            "type": "key_item",
+            "keyItemId": "key_level_02_light_room_door",
+            "lockedMessage": "缺少门禁片。去「家政维修间」找找。",
+            "unlockedMessage": "门禁确认，门已解锁。"
+          },
+          "visualKey": "residential_access_door",
+          "materialKey": "residential_wall",
+          "panelPosition": [
+            -8.95,
+            0,
+            1.85
+          ],
+          "openSpeed": 1.22,
+          "autoOpenOnApproach": false,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true
+          },
+          "closedDialogueTrigger": "level_02_light_room_locked",
+          "openedDialogueTrigger": "level_02_light_room_open",
+          "cameraImpact": {
+            "shake": 0.2,
+            "fovKick": 1.1
+          }
+        },
+        "keyRoomId": "level_02_care_room"
+      },
+      {
+        "id": "level_02_family_exit_door",
+        "label": "尽头电梯门",
+        "fromRoomId": "level_02_living_room",
+        "toRoomId": "level_02_exit_elevator_room",
+        "lockType": "puzzle_complete",
+        "puzzleKind": "color_sequence",
+        "puzzleRoomId": "level_02_light_room",
+        "sourceDoor": {
+          "label": "尽头电梯门",
+          "position": [
+            0,
+            0,
+            -7.9
+          ],
+          "size": [
+            4.5,
+            3.4,
+            0.42
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "puzzle_complete",
+            "puzzleId": "level_02_light_sequence",
+            "lockedMessage": "灯序尚未确认。",
+            "unlockedMessage": "灯序确认。"
+          },
+          "skinKey": "service_elevator_hero",
+          "visualKey": "service_elevator_door",
+          "materialKey": "service_elevator_metal",
+          "panelPosition": [
+            2.68,
+            0,
+            -7.55
+          ],
+          "openSpeed": 1.35,
+          "autoOpenOnApproach": true,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true,
+            "hidePanelAfterOpen": true
+          },
+          "cameraImpact": {
+            "shake": 0.34,
+            "fovKick": 1.85
+          }
+        }
+      }
+    ],
+    "props": [
+      {
+        "id": "level_02_official_exit_elevator_interior_shell",
+        "modelKey": "service_elevator_interior_shell",
+        "roomId": "level_02_exit_elevator_room",
+        "position": [
+          0,
+          -10.6
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "出口电梯内壁",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "level02",
+            "residential_simulation",
+            "interior_shell",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "level_02_official_exit_elevator_threshold",
+        "modelKey": "door_threshold_service_elevator",
+        "roomId": "level_02_exit_elevator_room",
+        "position": [
+          0,
+          -8.49
+        ],
+        "rotationY": 0,
+        "scale": 1.05,
+        "elevation": 0.04,
+        "sourceProp": {
+          "y": 0.035,
+          "scale": [
+            1.15,
+            1,
+            1
+          ],
+          "label": "出口电梯门槛",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "level02",
+            "residential_simulation",
+            "threshold",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "level_02_official_exit_elevator_call_buttons",
+        "modelKey": "service_elevator_call_buttons",
+        "roomId": "level_02_exit_elevator_room",
+        "position": [
+          2.82,
+          -11.3
+        ],
+        "rotationY": -1.5707963267948966,
+        "scale": 1,
+        "elevation": 1.42,
+        "sourceProp": {
+          "y": 1.42,
+          "scale": 1,
+          "label": "出口电梯呼叫按钮",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "level02",
+            "residential_simulation",
+            "exit_call_buttons",
+            "button_panel"
+          ]
+        }
+      },
+      {
+        "id": "prop_mq3kae",
+        "modelKey": "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+        "roomId": "level_02_recovery_foyer",
+        "position": [
+          -5,
+          15
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 2.5
+      },
+      {
+        "id": "prop_repzr7",
+        "modelKey": "room_l2_img2_family_portrait_console",
+        "roomId": "level_02_recovery_foyer",
+        "position": [
+          -6,
+          12
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "elevation": 1.5
+      },
+      {
+        "id": "prop_kn2uz2",
+        "modelKey": "room_l2_img2_modular_sofa",
+        "roomId": "level_02_living_room",
+        "position": [
+          -4.5,
+          7.5
+        ],
+        "rotationY": 6.283185307179586,
+        "scale": 1
+      },
+      {
+        "id": "prop_85sxpb",
+        "modelKey": "room_l2_img2_carekeeper_armchair",
+        "roomId": "level_02_recovery_foyer",
+        "position": [
+          1,
+          15
+        ],
+        "rotationY": 6.283185307179586,
+        "scale": 1
+      },
+      {
+        "id": "prop_v62qzt",
+        "modelKey": "hp_l2_cc0_wall_mirror_polyhaven_v1",
+        "roomId": "level_02_recovery_foyer",
+        "position": [
+          3,
+          9
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 1.5
+      },
+      {
+        "id": "prop_4pd2rl",
+        "modelKey": "room_l09_p05",
+        "roomId": "level_02_recovery_foyer",
+        "position": [
+          -2.5,
+          9.5
+        ],
+        "rotationY": 0,
+        "scale": 1
+      },
+      {
+        "id": "prop_a7ks2q",
+        "modelKey": "hp_furniture_residential_entry_bench_cubby_v1",
+        "roomId": "level_02_living_room",
+        "position": [
+          3,
+          8
+        ],
+        "rotationY": 3.141592653589793,
+        "scale": 1
+      },
+      {
+        "id": "prop_6me40p",
+        "modelKey": "hp_furniture_residential_oval_coffee_table_v1",
+        "roomId": "level_02_care_room",
+        "position": [
+          15,
+          2
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1
+      },
+      {
+        "id": "prop_30j7ed",
+        "modelKey": "hp_l2_cc0_dining_chair_polyhaven_v1",
+        "roomId": "level_02_care_room",
+        "position": [
+          15.5,
+          2
+        ],
+        "rotationY": 4.71238898038469,
+        "scale": 1
+      },
+      {
+        "id": "prop_mwru1f",
+        "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+        "roomId": "level_02_care_room",
+        "position": [
+          16,
+          0
+        ],
+        "rotationY": 4.71238898038469,
+        "scale": 1
+      },
+      {
+        "id": "prop_tnq3x4",
+        "modelKey": "hp_furniture_residential_fluted_sideboard_v1",
+        "roomId": "level_02_living_room",
+        "position": [
+          7.5,
+          -6.5
+        ],
+        "rotationY": 5.497787143782138,
+        "scale": 1
+      },
+      {
+        "id": "prop_l2uk9v",
+        "modelKey": "room_l09_p07",
+        "roomId": "level_02_light_room",
+        "position": [
+          -15,
+          3.5
+        ],
+        "rotationY": 3.141592653589793,
+        "scale": 1
+      },
+      {
+        "id": "prop_026zgn",
+        "modelKey": "room_l09_p09",
+        "roomId": "level_02_living_room",
+        "position": [
+          -8,
+          7.5
+        ],
+        "rotationY": 8.63937979737193,
+        "scale": 1
+      },
+      {
+        "id": "prop_2491u5",
+        "modelKey": "room_l09_p02",
+        "roomId": "level_02_living_room",
+        "position": [
+          8.5,
+          3
+        ],
+        "rotationY": 7.0685834705770345,
+        "scale": 1
+      },
+      {
+        "id": "prop_3zo4a7",
+        "modelKey": "room_l2_img2_observation_dining_table",
+        "roomId": "level_02_living_room",
+        "position": [
+          -3,
+          -2.5
+        ],
+        "rotationY": 0.7853981633974483,
+        "scale": 1
+      },
+      {
+        "id": "prop_rd3zq7",
+        "modelKey": "hp_l2_cc0_dining_chair_polyhaven_v1",
+        "roomId": "level_02_living_room",
+        "position": [
+          -3.5,
+          -3
+        ],
+        "rotationY": 0.7853981633974483,
+        "scale": 1
+      },
+      {
+        "id": "prop_odm2f5",
+        "modelKey": "hp_l2_cc0_wall_mirror_polyhaven_v1",
+        "roomId": "level_02_living_room",
+        "position": [
+          -8.5,
+          3.5
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "elevation": 1.5
+      },
+      {
+        "id": "prop_vq1oiy",
+        "modelKey": "hp_l2_cc0_ottoman_polyhaven_v1",
+        "roomId": "level_02_living_room",
+        "position": [
+          -7,
+          -5
+        ],
+        "rotationY": 0,
+        "scale": 1
+      }
+    ],
+    "pickups": [
+      {
+        "id": "level_02_foyer_repair_01",
+        "kind": "repairKit",
+        "roomId": "level_02_recovery_foyer",
+        "position": [
+          -3.2,
+          12.85
+        ]
+      },
+      {
+        "id": "level_02_foyer_repair_02",
+        "kind": "repairKit",
+        "roomId": "level_02_recovery_foyer",
+        "position": [
+          5,
+          9.5
+        ]
+      },
+      {
+        "id": "pickup_8nigp8",
+        "kind": "coreCell",
+        "roomId": "level_02_recovery_foyer",
+        "position": [
+          2.5,
+          12.5
+        ]
+      },
+      {
+        "id": "key_level_02_light_room_door",
+        "kind": "key_item",
+        "roomId": "level_02_care_room",
+        "position": [
+          11.4,
+          -1.6
+        ],
+        "linkedDoorId": "level_02_light_room_door",
+        "sourceKeyItem": {
+          "label": "家庭灯控室门禁片",
+          "collectRadius": 1.5,
+          "visualKey": "large_yellow_key",
+          "materialKey": "access_card_gold",
+          "rewardPulse": {
+            "label": "门禁片",
+            "detail": "家庭灯控室的门可以打开了",
+            "rarity": "rare"
+          }
+        }
+      }
+    ],
+    "robots": [
+      {
+        "id": "robot_level_02_living_swarm_enemy_1",
+        "roomId": "level_02_living_room",
+        "archetype": "repair_drone",
+        "count": 3,
+        "position": [
+          2.5,
+          1
+        ],
+        "wave": {
+          "id": "level_02_living_swarm",
+          "label": "生活区清剿",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_02_living_room",
+          "triggerDelay": 0.35,
+          "startDelay": 0.35,
+          "interruptsActiveWave": true,
+          "reward": "none",
+          "completionDialogueTrigger": "level_02_living_clear",
+          "spawnGroupId": "level02_living_ring",
+          "spawnGroupLabel": "生活区四周",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            0.4
+          ],
+          "spawnGroupRadius": 7.3,
+          "presentation": {
+            "id": "level_02_living_swarm",
+            "label": "生活区清剿",
+            "objectiveTitle": "清掉生活模拟大厅",
+            "objectiveDetail": "右门会在清剿后解锁",
+            "startMessage": "家政单位正在接近。",
+            "startWarning": {
+              "label": "生活区清剿",
+              "detail": "击毁大厅家政单位"
+            },
+            "startWarningDuration": 2.15,
+            "startDialogueTrigger": "level_02_living_entry",
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_level_02_living_swarm_enemy_2",
+        "roomId": "level_02_living_room",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "position": [
+          -1.5,
+          1
+        ],
+        "wave": {
+          "id": "level_02_living_swarm",
+          "label": "生活区清剿",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_02_living_room",
+          "triggerDelay": 0.35,
+          "startDelay": 0.35,
+          "interruptsActiveWave": true,
+          "reward": "none",
+          "completionDialogueTrigger": "level_02_living_clear",
+          "spawnGroupId": "level02_living_ring",
+          "spawnGroupLabel": "生活区四周",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            0.4
+          ],
+          "spawnGroupRadius": 7.3,
+          "presentation": {
+            "id": "level_02_living_swarm",
+            "label": "生活区清剿",
+            "objectiveTitle": "清掉生活模拟大厅",
+            "objectiveDetail": "右门会在清剿后解锁",
+            "startMessage": "家政单位正在接近。",
+            "startWarning": {
+              "label": "生活区清剿",
+              "detail": "击毁大厅家政单位"
+            },
+            "startWarningDuration": 2.15,
+            "startDialogueTrigger": "level_02_living_entry",
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_level_02_carekeeper_host_enemy_1",
+        "roomId": "level_02_care_room",
+        "archetype": "custodian_elite",
+        "count": 1,
+        "tier": "leader",
+        "combat": {
+          "tierLabel": "维修头领",
+          "healthMultiplier": 0.85,
+          "damageMultiplier": 1.02,
+          "attackCooldownMultiplier": 1,
+          "radiusMultiplier": 1,
+          "visual": {
+            "modelKey": "hp_enemy_custodian_foreman_horror",
+            "coreColor": "#ff6a52",
+            "warningColor": "#ffd36d",
+            "textureAtlasKey": "custodian_boss",
+            "scaleMultiplier": 1.06,
+            "lightIntensityMultiplier": 1.22
+          }
+        },
+        "position": [
+          13,
+          -1.5
+        ],
+        "wave": {
+          "id": "level_02_carekeeper_host",
+          "label": "家政主管",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_02_care_room",
+          "triggerDelay": 0.22,
+          "startDelay": 0.22,
+          "interruptsActiveWave": true,
+          "reward": "none",
+          "completionDialogueTrigger": "level_02_host_down",
+          "spawnGroupId": "level02_boss_room",
+          "spawnGroupLabel": "家政维修间",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            13,
+            0.4
+          ],
+          "spawnGroupRadius": 2.15,
+          "presentation": {
+            "id": "level_02_carekeeper_host",
+            "label": "家政主管",
+            "objectiveTitle": "击倒家政主管",
+            "objectiveDetail": "主管守着维修台",
+            "startMessage": "家政主管启动。",
+            "startWarning": {
+              "label": "家政主管",
+              "detail": "击倒后使用维修台"
+            },
+            "startWarningDuration": 2.25,
+            "startDialogueTrigger": "level_02_host_spawn",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1.12
+            },
+            "startCamera": {
+              "shake": 0.52,
+              "fovKick": 2.8
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_level_02_carekeeper_host_enemy_2",
+        "roomId": "level_02_care_room",
+        "archetype": "repair_drone",
+        "count": 1,
+        "position": [
+          15,
+          -1.5
+        ],
+        "wave": {
+          "id": "level_02_carekeeper_host",
+          "label": "家政主管",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_02_care_room",
+          "triggerDelay": 0.22,
+          "startDelay": 0.22,
+          "interruptsActiveWave": true,
+          "reward": "none",
+          "completionDialogueTrigger": "level_02_host_down",
+          "spawnGroupId": "level02_boss_room",
+          "spawnGroupLabel": "家政维修间",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            13,
+            0.4
+          ],
+          "spawnGroupRadius": 2.15,
+          "presentation": {
+            "id": "level_02_carekeeper_host",
+            "label": "家政主管",
+            "objectiveTitle": "击倒家政主管",
+            "objectiveDetail": "主管守着维修台",
+            "startMessage": "家政主管启动。",
+            "startWarning": {
+              "label": "家政主管",
+              "detail": "击倒后使用维修台"
+            },
+            "startWarningDuration": 2.25,
+            "startDialogueTrigger": "level_02_host_spawn",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1.12
+            },
+            "startCamera": {
+              "shake": 0.52,
+              "fovKick": 2.8
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_jwhx3f",
+        "label": "夹钳机器人 5",
+        "roomId": "level_02_living_room",
+        "archetype": "clamp_bot",
+        "count": 2,
+        "position": [
+          0,
+          -3.5
+        ],
+        "waveChain": {
+          "waveId": "wave_gumgzq",
+          "order": 1,
+          "label": "波次 1",
+          "pressureLoop": {
+            "enabled": true,
+            "archetype": "clamp_bot",
+            "count": 1,
+            "startsAfter": 0.6,
+            "every": 7,
+            "maxAlive": 2
+          }
+        }
+      },
+      {
+        "id": "robot_5qwc3i",
+        "label": "夹钳机器人 6",
+        "roomId": "level_02_living_room",
+        "archetype": "clamp_bot",
+        "count": 2,
+        "position": [
+          6,
+          -5.5
+        ],
+        "waveChain": {
+          "waveId": "wave_gumgzq",
+          "order": 1,
+          "label": "波次 1",
+          "pressureLoop": {
+            "enabled": true,
+            "archetype": "clamp_bot",
+            "count": 1,
+            "startsAfter": 0.6,
+            "every": 7,
+            "maxAlive": 2
+          }
+        }
+      },
+      {
+        "id": "robot_j1rvoj",
+        "label": "护盾技师 7",
+        "roomId": "level_02_light_room",
+        "archetype": "shield_tech",
+        "count": 2,
+        "position": [
+          -15,
+          1.5
+        ]
+      },
+      {
+        "id": "robot_7yqek8",
+        "label": "夹钳机器人 8",
+        "roomId": "level_02_light_room",
+        "archetype": "clamp_bot",
+        "count": 2,
+        "position": [
+          -12.5,
+          -2.5
+        ]
+      }
+    ],
+    "puzzles": [
+      {
+        "id": "level_02_light_sequence",
+        "kind": "color_sequence",
+        "linkedDoorId": "level_02_family_exit_door",
+        "roomId": "level_02_light_room",
+        "position": [
+          -15.5,
+          -2.5
+        ],
+        "rotationY": 0.7853981633974483,
+        "components": [
+          {
+            "id": "pzc_992xsd",
+            "role": "orb_red",
+            "roomId": "level_02_recovery_foyer",
+            "position": [
+              -5.5,
+              10
+            ]
+          },
+          {
+            "id": "pzc_2x5r91",
+            "role": "orb_blue",
+            "roomId": "level_02_living_room",
+            "position": [
+              -6.5,
+              -6
+            ]
+          },
+          {
+            "id": "pzc_pfcn0n",
+            "role": "orb_green",
+            "roomId": "level_02_light_room",
+            "position": [
+              -10.5,
+              -1.5
+            ]
+          }
+        ]
+      }
+    ],
+    "exitRoomId": "level_02_exit_elevator_room",
+    "lighting": {
+      "ambient": 0.42,
+      "keyColor": "#dbefff",
+      "keyIntensity": 0.88,
+      "fog": 0.18,
+      "bloom": 0.28,
+      "shadow": 0.62
+    },
+    "sourceLevel": {
+      "levelId": "level_02_residential_simulation",
+      "mapId": "level_02_residential_simulation_map",
+      "dialogues": [
+        {
+          "id": "level_02_start_01",
+          "trigger": "level_start",
+          "speaker": "耳机里",
+          "line": "这里像家，但门禁在听你呼吸。",
+          "tone": "system",
+          "duration": 2.7
+        },
+        {
+          "id": "level_02_living_entry_01",
+          "trigger": "level_02_living_entry",
+          "speaker": "远处人声",
+          "line": "欢迎回家。请按旧习惯就座。",
+          "tone": "threat",
+          "duration": 2.9
+        },
+        {
+          "id": "level_02_first_kill_01",
+          "trigger": "first_enemy_killed",
+          "speaker": "你",
+          "line": "它们不想杀我，只想让我留下。",
+          "tone": "player",
+          "duration": 2.6
+        },
+        {
+          "id": "level_02_light_locked_01",
+          "trigger": "level_02_light_room_locked",
+          "speaker": "门禁",
+          "line": "家庭灯控室锁定。需完成照护校准。",
+          "tone": "threat",
+          "duration": 2.3
+        },
+        {
+          "id": "level_02_living_clear_01",
+          "trigger": "level_02_living_clear",
+          "speaker": "门禁",
+          "line": "客厅反应稳定。照护间已开放。",
+          "tone": "system",
+          "duration": 2.4
+        },
+        {
+          "id": "level_02_care_room_open_01",
+          "trigger": "level_02_care_room_open",
+          "speaker": "近处广播",
+          "line": "照护间开放。家政主管开始复位。",
+          "tone": "threat",
+          "duration": 2.5
+        },
+        {
+          "id": "level_02_care_room_01",
+          "trigger": "level_02_care_room_entered",
+          "speaker": "耳机里",
+          "line": "主管守着校准台。先让它停机。",
+          "tone": "system",
+          "duration": 2.8
+        },
+        {
+          "id": "level_02_host_spawn_01",
+          "trigger": "level_02_host_spawn",
+          "speaker": "家政主管",
+          "line": "未授权离家。执行安抚回收。",
+          "tone": "threat",
+          "duration": 3
+        },
+        {
+          "id": "level_02_host_half_01",
+          "trigger": "elite_hp_50",
+          "speaker": "家政主管",
+          "line": "离开不是康复，是失配。",
+          "tone": "reveal",
+          "duration": 2.8
+        },
+        {
+          "id": "level_02_host_down_01",
+          "trigger": "level_02_host_down",
+          "speaker": "未知频道",
+          "line": "主管离线。校准台现在归你。",
+          "tone": "reveal",
+          "duration": 2.8
+        },
+        {
+          "id": "level_02_care_panel_done_01",
+          "trigger": "level_02_care_panel_done",
+          "speaker": "门禁",
+          "line": "照护校准完成。灯控室放行。",
+          "tone": "system",
+          "duration": 2.5
+        },
+        {
+          "id": "level_02_light_room_open_01",
+          "trigger": "level_02_light_room_open",
+          "speaker": "门禁",
+          "line": "按旧作息开灯。看清这间屋子。",
+          "tone": "threat",
+          "duration": 2.6
+        },
+        {
+          "id": "level_02_light_sequence_done_01",
+          "trigger": "level_02_light_sequence_done",
+          "speaker": "公寓广播",
+          "line": "墙纸下面不是墙，是维修管线。",
+          "tone": "reveal",
+          "duration": 2.9
+        },
+        {
+          "id": "level_02_exit_01",
+          "trigger": "exit_entered",
+          "speaker": "档案残片",
+          "line": "居住模拟：对象会寻找“家”。",
+          "tone": "reveal",
+          "duration": 3
+        }
+      ],
+      "cinematicBeats": [
+        {
+          "id": "level_02_living_pressure",
+          "waveId": "level_02_living_swarm",
+          "triggerAt": 1.4,
+          "spawnWarning": {
+            "label": "生活区围捕",
+            "detail": "清掉大厅，右门才会开"
+          },
+          "spawnWarningDuration": 2.1,
+          "tempoSurgeSec": 2.4,
+          "cameraImpact": {
+            "shake": 0.3,
+            "fovKick": 1.5
+          },
+          "audio": {
+            "key": "assist_reorient",
+            "intensity": 0.78
+          }
+        },
+        {
+          "id": "level_02_host_title",
+          "waveId": "level_02_carekeeper_host",
+          "triggerAt": 1.2,
+          "dialogueTrigger": "level_02_host_spawn",
+          "spawnWarning": {
+            "label": "家政主管",
+            "detail": "击倒后校准维修台"
+          },
+          "spawnWarningDuration": 2.35,
+          "cameraImpact": {
+            "shake": 0.72,
+            "fovKick": 3.8,
+            "rumble": 0.36,
+            "rumbleDuration": 0.24
+          },
+          "audio": {
+            "key": "elite_warning",
+            "intensity": 1.14
+          }
+        }
+      ],
+      "bossPhases": [
+        {
+          "id": "level_02_host_half_pressure",
+          "actorId": "custodian_elite",
+          "tier": "leader",
+          "threshold": 0.5,
+          "actions": [
+            {
+              "type": "queue_dialogue",
+              "trigger": "elite_hp_50"
+            },
+            {
+              "type": "spawn_warning",
+              "warning": {
+                "label": "主管外壳破裂",
+                "detail": "压住它，维修台快能用了"
+              },
+              "duration": 2.1
+            },
+            {
+              "type": "camera_impact",
+              "cameraImpact": {
+                "shake": 0.46,
+                "fovKick": 2.1,
+                "rumble": 0.18,
+                "rumbleDuration": 0.18
+              }
+            },
+            {
+              "type": "audio",
+              "audio": {
+                "key": "elite_warning",
+                "intensity": 0.8
+              }
+            }
+          ]
+        }
+      ],
+      "enemyDeathBeats": [
+        {
+          "archetypeId": "custodian_elite",
+          "spawnWarning": {
+            "label": "家政主管倒下",
+            "detail": "维修台可以校准了"
+          },
+          "spawnWarningDuration": 2.4,
+          "cameraImpact": {
+            "shake": 0.98,
+            "fovKick": 5.4,
+            "rumble": 0.68,
+            "rumbleDuration": 0.72
+          },
+          "dashBurst": {
+            "lifetime": 0.58,
+            "intensity": 2.5
+          }
+        }
+      ],
+      "economy": {
+        "memoryFragments": {
+          "default": 1,
+          "byArchetype": {
+            "custodian_elite": 22,
+            "signal_turret": 3,
+            "clamp_bot": 2
+          }
+        },
+        "killStreakWindowSec": 3.8,
+        "memoryCacheMilestones": [
+          {
+            "amount": 10,
+            "label": "体力恢复",
+            "reward": "energy",
+            "rarity": "rare"
+          },
+          {
+            "amount": 28,
+            "label": "呼吸变稳",
+            "reward": "heat",
+            "rarity": "rare"
+          },
+          {
+            "amount": 52,
+            "label": "生命上限恢复",
+            "reward": "health",
+            "rarity": "epic"
+          }
+        ],
+        "curatedUpgradeRolls": [
+          [
+            "core_plating",
+            "dash_shorter_cd",
+            "field_medicine",
+            "pulse_coolant_feed",
+            "rail_overcharge"
+          ]
+        ],
+        "tempoSurge": {
+          "eliteDuration": 6.5,
+          "normalThreshold": 5,
+          "tier2Threshold": 10,
+          "tier1Duration": 4.4,
+          "tier2Duration": 5.8,
+          "tier1HeatRefund": 7,
+          "tier2HeatRefund": 12,
+          "tier1EnergyRefund": 7,
+          "tier2EnergyRefund": 12
+        }
+      },
+      "revive": {
+        "maxRevives": 1,
+        "hpRatio": 0.7,
+        "memoryFragments": 12,
+        "reviveSurgeSec": 9.5,
+        "tempoSurgeSec": 5.5,
+        "blastRadius": 6.5,
+        "blastDamage": 80,
+        "blastKnockback": 6,
+        "rewardPulse": {
+          "label": "第二口气",
+          "detail": "+线索 + 短暂爆发",
+          "rarity": "story"
+        },
+        "rewardPulseDuration": 2.4,
+        "message": "你从客厅地板上醒来。门禁还在闪。"
+      }
+    },
+    "routeSwitches": []
+  },
+  "contract": {
+    "profileId": "residential_simulation",
+    "globalRules": [
+      "no_proxy_geometry",
+      "no_fallback_materials",
+      "source_role_traceability"
+    ],
+    "roleRules": [
+      "roomSurface",
+      "door",
+      "keyItem",
+      "interaction",
+      "puzzleStation",
+      "enemy",
+      "exitFixture"
+    ],
+    "levelOverrides": []
+  },
+  "advanced": {
+    "notes": [
+      "Imported from /build exported hp.config.v1 pack: 居住模拟间-可编辑草稿.hp.config.json",
+      "Builder-native official source; runtime progression is generated from project rooms, doors, puzzles, and waves."
+    ]
+  }
+}

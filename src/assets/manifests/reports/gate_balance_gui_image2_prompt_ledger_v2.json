@@ -1,0 +1,24 @@
+{
+  "schemaVersion": "hp.image2.promptLedger.v2",
+  "assetFamily": "gate_balance_gui",
+  "generatedAt": "2026-06-24",
+  "tool": "Codex image_gen / Image2",
+  "threadId": "019efa53-6ca6-78d3-a5b2-2824ea0b1627",
+  "callId": "not-exposed-by-codex-imagegen",
+  "sourcePrompt": "Human Protocol 2D puzzle overlay GUI art source, exact landscape game UI, premium sci-fi medical facility gate balancing console. IMPORTANT LAYOUT: three identical bottom control trays across the bottom, each tray must have a blank square button socket on the left, a blank center value window, and a blank square button socket on the right. Under those three trays there must be two separate blank action plates: a small reset plate near lower center and a wide lock/confirm plate near lower right. Do not merge the right gate control tray with the lock button. Center area has three large mechanical shutter gate windows, all same size. Below gates are three diagnostic readout panels, all same size. Top-left blank title plate, top-center blank progress rail, top-right small blank close plate. Dark smoked titanium, cyan glass, old-gold trim, scratches, screws, bevels, scanlines, high-quality real Image2 bitmap game UI art. No readable text, no letters, no numbers, no logos, no Chinese, no English. Avoid plus, minus, X, checkmark, arrows, or text; only blank physical button surfaces and mechanical shapes. React live text and symbols will be overlaid later. No people, no hands, no characters.",
+  "sourcePath": "/Users/zhengkaizhang/.codex/generated_images/019efa53-6ca6-78d3-a5b2-2824ea0b1627/ig_02e06c5886453cba016a3c1af25ca881998ebd8eca311b032b.png",
+  "repoSourceCopy": "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_image2_source_v2_original.png",
+  "runtimeOutputs": [
+    "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_image2_source_v2.png",
+    "src/assets/gui/gate-balance/gate_balance_overlay_background_image2_v2.png",
+    "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v2.png",
+    "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v2.regions.json",
+    "src/assets/gui/gate-balance/gate_balance_overlay_layout_v2.json"
+  ],
+  "negativeRules": [
+    "no baked text",
+    "no answer numbers",
+    "no people",
+    "no logos"
+  ]
+}

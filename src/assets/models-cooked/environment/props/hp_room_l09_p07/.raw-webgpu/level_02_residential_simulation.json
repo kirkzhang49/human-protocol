@@ -1,0 +1,462 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_l09_p07",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/props/hp_room_l09_p07.glb",
+  "fileName": "hp_room_l09_p07.glb",
+  "sourceAsset": {
+    "modelKey": "room_l09_p07",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/props/hp_room_l09_p07.glb",
+    "file": "src/assets/models-cooked/environment/props/hp_room_l09_p07.glb",
+    "sizeMeters": [
+      1.45,
+      0.795,
+      0.74
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 760080,
+      "meshes": 1,
+      "nodes": 1,
+      "skins": 0,
+      "primitives": 8,
+      "materials": 7,
+      "textures": 12,
+      "images": 12,
+      "accessors": 30,
+      "bufferViews": 35,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_materials_emissive_strength",
+        "KHR_mesh_quantization",
+        "KHR_texture_transform"
+      ],
+      "estimatedTriangles": 1274
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/props/hp_room_l09_p07.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 887316,
+    "vertexCount": 3822,
+    "triangleCount": 1274,
+    "meshCount": 8,
+    "materialCount": 7,
+    "nodeCount": 1,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.789402,
+        0.001476,
+        -0.367802
+      ],
+      "center": [
+        -0.064701,
+        0.397588,
+        0
+      ],
+      "size": [
+        1.449403,
+        0.792224,
+        0.735605
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube",
+        "vertexOffset": 887316,
+        "vertexCount": 966,
+        "bindMatrix": [
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          -0.064701,
+          0.397588,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0.08928,
+          -0.548623,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_1",
+        "vertexOffset": 888282,
+        "vertexCount": 384,
+        "bindMatrix": [
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          -0.064701,
+          0.397588,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0.08928,
+          -0.548623,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_2",
+        "vertexOffset": 888666,
+        "vertexCount": 120,
+        "bindMatrix": [
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          -0.064701,
+          0.397588,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0.08928,
+          -0.548623,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_3",
+        "vertexOffset": 888786,
+        "vertexCount": 756,
+        "bindMatrix": [
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          -0.064701,
+          0.397588,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0.08928,
+          -0.548623,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_4",
+        "vertexOffset": 889542,
+        "vertexCount": 966,
+        "bindMatrix": [
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          -0.064701,
+          0.397588,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0.08928,
+          -0.548623,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_5",
+        "vertexOffset": 890508,
+        "vertexCount": 438,
+        "bindMatrix": [
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          -0.064701,
+          0.397588,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0.08928,
+          -0.548623,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_6",
+        "vertexOffset": 890946,
+        "vertexCount": 96,
+        "bindMatrix": [
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          -0.064701,
+          0.397588,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0.08928,
+          -0.548623,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_7",
+        "vertexOffset": 891042,
+        "vertexCount": 96,
+        "bindMatrix": [
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          0,
+          0,
+          0,
+          0.724701,
+          0,
+          -0.064701,
+          0.397588,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0,
+          0,
+          0,
+          1.379879,
+          0,
+          0.08928,
+          -0.548623,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_l2uk9v",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_light_room",
+      "secondaryRoomId": null,
+      "position": [
+        -15,
+        0,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -15,
+          0,
+          3.5
+        ],
+        "halfSize": [
+          0.725,
+          0.3975,
+          0.37
+        ]
+      }
+    }
+  ]
+}

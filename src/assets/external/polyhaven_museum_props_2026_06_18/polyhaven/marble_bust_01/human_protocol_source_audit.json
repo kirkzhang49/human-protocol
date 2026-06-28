@@ -1,0 +1,36 @@
+{
+  "source": "Poly Haven",
+  "assetId": "marble_bust_01",
+  "sourceUrl": "https://polyhaven.com/a/marble_bust_01",
+  "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/marble_bust_01/marble_bust_01_1k.gltf",
+  "license": "CC0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "resolution": "1k glTF",
+  "files": {
+    "include": {
+      "marble_bust_01.bin": {
+        "size": 416608,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/marble_bust_01/marble_bust_01.bin",
+        "md5": "1c62c1189a0e8985618c1662e1bd25a3"
+      },
+      "textures/marble_bust_01_nor_gl_1k.jpg": {
+        "size": 124627,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/marble_bust_01/marble_bust_01_nor_gl_1k.jpg",
+        "md5": "134149a7e8f142fcb605f0bde52b3ff6"
+      },
+      "textures/marble_bust_01_diff_1k.jpg": {
+        "size": 160337,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/marble_bust_01/marble_bust_01_diff_1k.jpg",
+        "md5": "aede40cc2b092d91a5f72598c911da4f"
+      },
+      "textures/marble_bust_01_rough_1k.jpg": {
+        "size": 193918,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/marble_bust_01/marble_bust_01_rough_1k.jpg",
+        "md5": "9fdff7b2b17d12fcc478de3021f561dd"
+      }
+    },
+    "size": 2793,
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/marble_bust_01/marble_bust_01_1k.gltf",
+    "md5": "599d6dd71c2dcdffa064b1c1d85882f4"
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "hp.environment-level01-assets.v1",
+  "generatedBy": "webgpu-robot-lab level01 official map integration",
+  "sourceRepo": "/Users/zhengkaizhang/Documents/webgpu-robot-lab",
+  "targetRepo": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol",
+  "notes": "Official Level 01 uses configurable map.props for hero assets. Elevator room is the endpoint config; red environment state means locked, blue means exit-ready/open. No password door/keypad is required for this map.",
+  "assets": [
+    {
+      "modelKey": "hero_maintenance_repair_bay",
+      "file": "assets/models/environment/level01/hp_hero_maintenance_repair_bay.glb",
+      "category": "room",
+      "sizeMeters": [3.2, 1.25, 1.4],
+      "configSurface": "map.props[]",
+      "tags": ["level01", "repair_bay", "hero_set_piece"]
+    },
+    {
+      "modelKey": "hero_maintenance_repair_arm_cluster",
+      "file": "assets/models/environment/level01/hp_hero_maintenance_repair_arm_cluster.glb",
+      "category": "room",
+      "sizeMeters": [2.2, 2.6, 1.4],
+      "configSurface": "map.props[]",
+      "tags": ["level01", "repair_arm", "hero_set_piece"]
+    },
+    {
+      "modelKey": "backdrop_robot_storage_window_dark",
+      "file": "assets/models/environment/level01/hp_backdrop_robot_storage_window_dark.glb",
+      "category": "room",
+      "sizeMeters": [7.5, 3.2, 0.35],
+      "configSurface": "map.props[]",
+      "tags": ["level01", "robot_storage", "backdrop"]
+    },
+    {
+      "modelKey": "room_wall_occluder_maintenance_half_panel",
+      "file": "assets/models/environment/level01/hp_room_wall_occluder_maintenance_half_panel.glb",
+      "category": "room",
+      "sizeMeters": [2.4, 1.45, 0.32],
+      "configSurface": "map.props[]",
+      "tags": ["level01", "cover", "room_dressing"]
+    },
+    {
+      "modelKey": "door_service_elevator_inner_cyan",
+      "file": "assets/models/environment/level01/hp_door_service_elevator_inner_cyan.glb",
+      "category": "door",
+      "sizeMeters": [4.8, 3.24, 0.32],
+      "configSurface": "map.doors[].visualKey=service_elevator_door",
+      "tags": ["level01", "elevator", "endpoint", "red_locked", "blue_open"]
+    },
+    {
+      "modelKey": "light_ceiling_flicker_cyan_2m",
+      "file": "assets/models/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+      "category": "room",
+      "sizeMeters": [2.0, 0.12, 0.18],
+      "configSurface": "map.props[] + environmentStates",
+      "tags": ["level01", "lighting", "cyan"]
+    },
+    {
+      "modelKey": "light_wall_medical_strip_cyan_1m",
+      "file": "assets/models/environment/level01/hp_light_wall_medical_strip_cyan_1m.glb",
+      "category": "room",
+      "sizeMeters": [0.12, 1.0, 0.08],
+      "configSurface": "map.props[] + environmentStates",
+      "tags": ["level01", "lighting", "medical"]
+    }
+  ],
+  "configHooks": {
+    "mapProps": "level_01_maintenance_bay.map.props",
+    "mapDecals": "level_01_maintenance_bay.map.decals",
+    "lightingEvents": ["level_01_initial_lighting_state", "level_01_lockdown_lights_after_weapon", "level_01_elevator_open_blue_state"],
+    "endpointDoor": "service_elevator_door",
+    "endpointInteraction": "use_service_elevator",
+    "lockedState": "level_01_elevator_locked_red",
+    "openState": "level_01_elevator_open_blue"
+  }
+}

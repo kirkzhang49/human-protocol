@@ -1,0 +1,651 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_museum_color_orb_pedestal",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level03/hp_room_museum_color_orb_pedestal.glb",
+  "fileName": "hp_room_museum_color_orb_pedestal.glb",
+  "sourceAsset": {
+    "modelKey": "room_museum_color_orb_pedestal",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level03/hp_room_museum_color_orb_pedestal.glb",
+    "file": "src/assets/models-cooked/environment/level03/hp_room_museum_color_orb_pedestal.glb",
+    "sizeMeters": [
+      0.922,
+      1.016,
+      0.831
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 59444,
+      "meshes": 6,
+      "nodes": 6,
+      "skins": 0,
+      "primitives": 6,
+      "materials": 6,
+      "textures": 2,
+      "images": 2,
+      "accessors": 21,
+      "bufferViews": 18,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 1884
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level03/hp_room_museum_color_orb_pedestal.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 612636,
+    "vertexCount": 5652,
+    "triangleCount": 1884,
+    "meshCount": 9,
+    "materialCount": 6,
+    "nodeCount": 10,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.330967,
+        0,
+        -0.330967
+      ],
+      "center": [
+        0,
+        0.440567,
+        0
+      ],
+      "size": [
+        0.661934,
+        0.881133,
+        0.661934
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "empty_hit_orb_mount_ring",
+        "vertexOffset": 612636,
+        "vertexCount": 1284,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.844998,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.844998,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "inner_shadow_socket_not_target",
+        "vertexOffset": 613920,
+        "vertexCount": 1140,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.856117,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.856117,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "orb_pedestal_base",
+        "vertexOffset": 615060,
+        "vertexCount": 1284,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.111184,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.111184,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "orb_pedestal_body",
+        "vertexOffset": 616344,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.466973,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.466973,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "orb_pedestal_label",
+        "vertexOffset": 616668,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.400262,
+          0.252165,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.400262,
+          -0.252165,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "pedestal_hit_registration_tick_0",
+        "vertexOffset": 616992,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.148192,
+          0.62263,
+          0.252165,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.148192,
+          -0.62263,
+          -0.252165,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "pedestal_hit_registration_tick_1",
+        "vertexOffset": 617316,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.62263,
+          0.252165,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.62263,
+          -0.252165,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "pedestal_hit_registration_tick_2",
+        "vertexOffset": 617640,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.148192,
+          0.62263,
+          0.252165,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.148192,
+          -0.62263,
+          -0.252165,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "wrong_order_red_mini_indicator",
+        "vertexOffset": 617964,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.205822,
+          0.222368,
+          0.244285,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.205822,
+          -0.222368,
+          -0.244285,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_03_voice_orb_pedestal_yellow",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        13.6,
+        0.045,
+        2.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.25,
+        0
+      ],
+      "scale": [
+        0.58,
+        0.58,
+        0.58
+      ],
+      "tags": [
+        "museum",
+        "puzzle_pedestal",
+        "yellow",
+        "voice_clue"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          13.6,
+          0.045,
+          2.75
+        ],
+        "halfSize": [
+          0.26738,
+          0.29464,
+          0.24099
+        ]
+      }
+    },
+    {
+      "id": "prop:level_03_body_orb_pedestal_white",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -1.95,
+        0.045,
+        -6.65
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.15,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "tags": [
+        "museum",
+        "puzzle_pedestal",
+        "white"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -1.95,
+          0.045,
+          -6.65
+        ],
+        "halfSize": [
+          0.31348,
+          0.34544,
+          0.28254
+        ]
+      }
+    },
+    {
+      "id": "prop:level_03_body_orb_pedestal_blue",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        2.05,
+        0.045,
+        -6.82
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.18,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "tags": [
+        "museum",
+        "puzzle_pedestal",
+        "blue"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.05,
+          0.045,
+          -6.82
+        ],
+        "halfSize": [
+          0.31348,
+          0.34544,
+          0.28254
+        ]
+      }
+    },
+    {
+      "id": "prop:level_03_body_orb_pedestal_red",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        2.7,
+        0.045,
+        -5.2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.28,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "tags": [
+        "museum",
+        "puzzle_pedestal",
+        "red"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.7,
+          0.045,
+          -5.2
+        ],
+        "halfSize": [
+          0.31348,
+          0.34544,
+          0.28254
+        ]
+      }
+    }
+  ]
+}

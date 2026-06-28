@@ -1,0 +1,92 @@
+{
+  "atlasSize": [
+    1024,
+    1024
+  ],
+  "regions": {
+    "stage_plate": [
+      0,
+      0,
+      896,
+      224
+    ],
+    "gate_slot_idle": [
+      0,
+      240,
+      260,
+      160
+    ],
+    "gate_slot_focus": [
+      272,
+      240,
+      260,
+      160
+    ],
+    "gate_slot_balanced": [
+      544,
+      240,
+      260,
+      160
+    ],
+    "gauge_plate_idle": [
+      0,
+      416,
+      300,
+      112
+    ],
+    "gauge_plate_near": [
+      312,
+      416,
+      300,
+      112
+    ],
+    "gauge_plate_locked": [
+      624,
+      416,
+      300,
+      112
+    ],
+    "control_plate": [
+      0,
+      544,
+      300,
+      84
+    ],
+    "button_primary": [
+      312,
+      544,
+      240,
+      64
+    ],
+    "button_secondary": [
+      564,
+      544,
+      180,
+      64
+    ],
+    "close_plate": [
+      756,
+      544,
+      120,
+      56
+    ],
+    "progress_track": [
+      0,
+      648,
+      780,
+      34
+    ],
+    "readout_glass": [
+      0,
+      704,
+      220,
+      88
+    ],
+    "warning_glass": [
+      240,
+      704,
+      220,
+      88
+    ]
+  }
+}

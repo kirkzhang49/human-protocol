@@ -1,0 +1,1502 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "room_l1_img2_cable_reel_cart",
+  "family": "shared",
+  "bundleId": "shared/room_l1_img2_cable_reel_cart",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/level01-furniture-image2/room_l1_img2_cable_reel_cart.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_01_maintenance_bay"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 15420,
+    "triangleCount": 5140,
+    "byteLength": 616800,
+    "hash": "e466d834388174bb",
+    "asset": {
+      "modelKey": "room_l1_img2_cable_reel_cart",
+      "sourceFile": "src/assets/models-cooked/environment/level01-furniture-image2/room_l1_img2_cable_reel_cart.glb",
+      "rawFile": "src/assets/models-cooked/environment/level01-furniture-image2/room_l1_img2_cable_reel_cart.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 15420,
+      "triangleCount": 5140,
+      "meshCount": 23,
+      "materialCount": 8,
+      "nodeCount": 24,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_amber_fault_tick",
+          "vertexOffset": 0,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_charge_lens_bezel",
+          "vertexOffset": 324,
+          "vertexCount": 708,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_charge_lens_glass",
+          "vertexOffset": 1032,
+          "vertexCount": 228,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_front_screen",
+          "vertexOffset": 1260,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_hazard_lip",
+          "vertexOffset": 1584,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_lower_tray",
+          "vertexOffset": 1908,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_post_0",
+          "vertexOffset": 2232,
+          "vertexCount": 660,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_post_1",
+          "vertexOffset": 2892,
+          "vertexCount": 660,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_post_2",
+          "vertexOffset": 3552,
+          "vertexCount": 660,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_post_3",
+          "vertexOffset": 4212,
+          "vertexCount": 660,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_push_handle",
+          "vertexOffset": 4872,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_upper_guard",
+          "vertexOffset": 5436,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_wheel_0",
+          "vertexOffset": 5760,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_wheel_1",
+          "vertexOffset": 6324,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_wheel_2",
+          "vertexOffset": 6888,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_cart_wheel_3",
+          "vertexOffset": 7452,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_reel_left_plate",
+          "vertexOffset": 8016,
+          "vertexCount": 996,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "cable_reel_right_plate",
+          "vertexOffset": 9012,
+          "vertexCount": 996,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "nested_black_cable_loop_0",
+          "vertexOffset": 10008,
+          "vertexCount": 1140,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "nested_black_cable_loop_1",
+          "vertexOffset": 11148,
+          "vertexCount": 1140,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "nested_black_cable_loop_2",
+          "vertexOffset": 12288,
+          "vertexCount": 1140,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "nested_black_cable_loop_3",
+          "vertexOffset": 13428,
+          "vertexCount": 1140,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "reel_cyan_live_core",
+          "vertexOffset": 14568,
+          "vertexCount": 852,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.54,
+          0,
+          -0.36
+        ],
+        "center": [
+          0,
+          0.4585,
+          0
+        ],
+        "size": [
+          1.08,
+          0.917,
+          0.72
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "8c221f83045b27ac",
+    "materials": [
+      {
+        "index": 711,
+        "id": "mat:builder-resource:l1-amber-fault-glow:1sgtm17",
+        "name": "l1_amber_fault_glow",
+        "category": "builder-resource",
+        "visualRole": "danger_red",
+        "semanticParams": [
+          9,
+          0.86,
+          0.388256,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.95,
+          0.62,
+          0.18,
+          1
+        ],
+        "emissiveFactor": [
+          1,
+          0.55,
+          0.12
+        ],
+        "emissiveStrength": 1.6032,
+        "roughnessFactor": 0.3,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 713,
+        "id": "mat:builder-resource:l1-diagnostic-screen-atlas:vkueo0",
+        "name": "l1_diagnostic_screen_atlas",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.141176,
+          0.823529,
+          1
+        ],
+        "emissiveStrength": 1.4028,
+        "roughnessFactor": 0.16,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_furniture_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.428381,
+              "contrast": 0.471513,
+              "chroma": 0.16311,
+              "detail": 0.118902
+            },
+            "generated": false,
+            "layer": 58
+          }
+        ]
+      },
+      {
+        "index": 714,
+        "id": "mat:builder-resource:l1-brushed-steel-atlas:1w6yvjr",
+        "name": "l1_brushed_steel_atlas",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.32,
+        "metallicFactor": 0.85,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_furniture_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.428381,
+              "contrast": 0.471513,
+              "chroma": 0.16311,
+              "detail": 0.118902
+            },
+            "generated": false,
+            "layer": 58
+          }
+        ]
+      },
+      {
+        "index": 715,
+        "id": "mat:builder-resource:l1-cyan-lens-atlas:7ivkd8",
+        "name": "l1_cyan_lens_atlas",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.2,
+          0.9,
+          1
+        ],
+        "emissiveStrength": 3.024,
+        "roughnessFactor": 0.18,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_furniture_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.428381,
+              "contrast": 0.471513,
+              "chroma": 0.16311,
+              "detail": 0.118902
+            },
+            "generated": false,
+            "layer": 58
+          }
+        ]
+      },
+      {
+        "index": 717,
+        "id": "mat:builder-resource:l1-black-rubber-solid:168et3j",
+        "name": "l1_black_rubber_solid",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.045,
+          0.05,
+          0.055,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.82,
+        "metallicFactor": 0.05,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 718,
+        "id": "mat:builder-resource:l1-brushed-steel-solid:4aiotd",
+        "name": "l1_brushed_steel_solid",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.5,
+          0.52,
+          0.55,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 0.8,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 719,
+        "id": "mat:builder-resource:l1-hazard-edge-atlas:njxl5f",
+        "name": "l1_hazard_edge_atlas",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.5,
+        "metallicFactor": 0.3,
+        "aoStrength": 1,
+        "materialKind": 5,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_furniture_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.428381,
+              "contrast": 0.471513,
+              "chroma": 0.16311,
+              "detail": 0.118902
+            },
+            "generated": false,
+            "layer": 58
+          }
+        ]
+      },
+      {
+        "index": 734,
+        "id": "mat:builder-resource:l1-black-rubber-atlas:15ec0oz",
+        "name": "l1_black_rubber_atlas",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.78,
+        "metallicFactor": 0.1,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_furniture_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.428381,
+              "contrast": 0.471513,
+              "chroma": 0.16311,
+              "detail": 0.118902
+            },
+            "generated": false,
+            "layer": 58
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 58,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+        "name": "hp_level01_furniture_image2_atlas",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.428381,
+          "contrast": 0.471513,
+          "chroma": 0.16311,
+          "detail": 0.118902
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

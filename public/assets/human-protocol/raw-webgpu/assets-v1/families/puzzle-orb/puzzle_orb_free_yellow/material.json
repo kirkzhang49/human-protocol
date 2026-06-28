@@ -1,0 +1,182 @@
+{
+  "file": "material.json",
+  "hash": "a25338b7cab395c6",
+  "materials": [
+    {
+      "index": 14,
+      "id": "mat:procedural-free-orb:14:puzzle-orb-free-yellow-smoked-titanium-base",
+      "name": "puzzle_orb_free_yellow:smoked_titanium_base",
+      "category": "interaction",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.82,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.003677,
+        0.006049,
+        0.007499,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.72,
+      "metallicFactor": 0.38,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 15,
+      "id": "mat:procedural-free-orb:15:puzzle-orb-free-yellow-aged-brass-trim",
+      "name": "puzzle_orb_free_yellow:aged_brass_trim",
+      "category": "interaction",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.86,
+        0.42,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.467784,
+        0.234551,
+        0.039546,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0.58,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 16,
+      "id": "mat:procedural-free-orb:16:puzzle-orb-free-yellow-colored-glass-shell",
+      "name": "puzzle_orb_free_yellow:colored_glass_shell",
+      "category": "interaction",
+      "visualRole": "glass_shell",
+      "semanticParams": [
+        5,
+        0.78,
+        0.1976,
+        0.12
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.814847,
+        0.730461,
+        0.242281,
+        1
+      ],
+      "emissiveFactor": [
+        1,
+        0.64448,
+        0.078187
+      ],
+      "emissiveStrength": 0.22,
+      "roughnessFactor": 0.18,
+      "metallicFactor": 0.04,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 17,
+      "id": "mat:procedural-free-orb:17:puzzle-orb-free-yellow-sequence-core-yellow",
+      "name": "puzzle_orb_free_yellow:sequence_core_yellow",
+      "category": "interaction",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.86,
+        0.4856,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        0.64448,
+        0.078187,
+        1
+      ],
+      "emissiveFactor": [
+        1,
+        0.64448,
+        0.078187
+      ],
+      "emissiveStrength": 0.82,
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0.08,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

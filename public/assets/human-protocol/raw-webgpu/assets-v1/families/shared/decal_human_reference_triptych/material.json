@@ -1,0 +1,87 @@
+{
+  "file": "material.json",
+  "hash": "d944924cc6074c62",
+  "materials": [
+    {
+      "index": 2,
+      "id": "mat:room:hp-decal-human-reference-triptych-image2-poster:03bf787",
+      "name": "hp_decal_human_reference_triptych_image2_poster",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.035,
+        0.12,
+        0.15
+      ],
+      "emissiveStrength": 0.183,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_decal_human_reference_triptych_image2_poster_texture",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-tsbw91.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-tsbw91.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.202691,
+            "contrast": 0.277978,
+            "chroma": 0.199009,
+            "detail": 0.277605
+          },
+          "generated": false,
+          "layer": 1
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 1024,
+  "baseColorTextures": [
+    {
+      "layer": 1,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-tsbw91.webp",
+      "name": "hp_decal_human_reference_triptych_image2_poster_texture",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-tsbw91.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.202691,
+        "contrast": 0.277978,
+        "chroma": 0.199009,
+        "detail": 0.277605
+      }
+    }
+  ],
+  "materialTextureSize": 1024,
+  "materialTextures": []
+}

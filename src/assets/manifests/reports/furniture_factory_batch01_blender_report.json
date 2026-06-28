@@ -1,0 +1,268 @@
+{
+  "schema": "human-protocol/furniture-factory-blender-report@1",
+  "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+  "assets": [
+    {
+      "modelKey": "hp_furniture_museum_glass_display_case_v1",
+      "label": "\u73bb\u7483\u5c55\u793a\u67dc",
+      "footprint": "display_case",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_museum_glass_display_case_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_museum_glass_display_case_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        1.42,
+        2.03,
+        0.845
+      ],
+      "expectedSizeMeters": [
+        1.38,
+        2.05,
+        0.78
+      ],
+      "objectCount": 21,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_black_museum_stone",
+        "hp_cyan_exhibit_emissive",
+        "hp_cyan_soft_panel",
+        "hp_dark_smoked_metal",
+        "hp_glass_edge_glint",
+        "hp_muted_amber_specimen",
+        "hp_near_clear_cyan_glass",
+        "hp_sterile_off_white"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_museum_horizontal_tool_case_v1",
+      "label": "\u6a2a\u5411\u6b66\u5668/\u5de5\u5177\u67dc",
+      "footprint": "display_case",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_museum_horizontal_tool_case_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_museum_horizontal_tool_case_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        2.36,
+        0.93,
+        0.82
+      ],
+      "expectedSizeMeters": [
+        2.36,
+        0.9,
+        0.82
+      ],
+      "objectCount": 17,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_black_museum_stone",
+        "hp_cyan_exhibit_emissive",
+        "hp_dark_smoked_metal",
+        "hp_glass_edge_glint",
+        "hp_near_clear_cyan_glass"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_museum_gallery_bench_v1",
+      "label": "\u535a\u7269\u9986\u957f\u6905",
+      "footprint": "table",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_museum_gallery_bench_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_museum_gallery_bench_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        2.0,
+        0.51,
+        0.48
+      ],
+      "expectedSizeMeters": [
+        2.0,
+        0.51,
+        0.48
+      ],
+      "objectCount": 8,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_black_museum_stone",
+        "hp_dark_gallery_leather",
+        "hp_dark_smoked_metal"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_archive_cabinet_v1",
+      "label": "\u6863\u6848\u67dc",
+      "footprint": "cabinet",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_archive_cabinet_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_archive_cabinet_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        0.98,
+        1.64,
+        0.646
+      ],
+      "expectedSizeMeters": [
+        0.98,
+        1.64,
+        0.62
+      ],
+      "objectCount": 17,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_black_museum_stone",
+        "hp_cyan_soft_panel",
+        "hp_dark_smoked_metal",
+        "hp_sterile_off_white"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_maintenance_cart_v1",
+      "label": "\u91d1\u5c5e\u68c0\u4fee\u63a8\u8f66",
+      "footprint": "table",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_maintenance_cart_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_maintenance_cart_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        1.092,
+        0.996,
+        0.685
+      ],
+      "expectedSizeMeters": [
+        1.08,
+        1.02,
+        0.72
+      ],
+      "objectCount": 17,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_black_rubber_wheel",
+        "hp_cyan_soft_panel",
+        "hp_dark_smoked_metal"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_display_plinth_v1",
+      "label": "\u5c55\u793a\u5e95\u5ea7",
+      "footprint": "pedestal",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_display_plinth_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_display_plinth_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        0.86,
+        0.928,
+        0.86
+      ],
+      "expectedSizeMeters": [
+        0.86,
+        0.93,
+        0.86
+      ],
+      "objectCount": 4,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_black_museum_stone",
+        "hp_cool_pale_stone",
+        "hp_cyan_exhibit_emissive"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_wall_archive_cabinet_v1",
+      "label": "\u58c1\u6302\u8d44\u6599\u67dc",
+      "footprint": "wall_panel",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_wall_archive_cabinet_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_wall_archive_cabinet_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        1.28,
+        1.12,
+        0.278
+      ],
+      "expectedSizeMeters": [
+        1.28,
+        1.24,
+        0.24
+      ],
+      "objectCount": 21,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_black_museum_stone",
+        "hp_cyan_soft_panel",
+        "hp_dark_smoked_metal",
+        "hp_sterile_off_white"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_lab_table_v1",
+      "label": "\u5b9e\u9a8c\u684c",
+      "footprint": "table",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_lab_table_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_lab_table_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        1.82,
+        0.944,
+        0.784
+      ],
+      "expectedSizeMeters": [
+        1.82,
+        0.97,
+        0.8
+      ],
+      "objectCount": 10,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_cyan_exhibit_emissive",
+        "hp_cyan_soft_panel",
+        "hp_dark_smoked_metal",
+        "hp_near_clear_cyan_glass",
+        "hp_sterile_off_white"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_cold_ceiling_light_slot_v1",
+      "label": "\u51b7\u5149\u5929\u82b1\u706f\u69fd",
+      "footprint": "lamp",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_cold_ceiling_light_slot_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_cold_ceiling_light_slot_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        2.05,
+        0.15,
+        0.38
+      ],
+      "expectedSizeMeters": [
+        2.05,
+        0.16,
+        0.38
+      ],
+      "objectCount": 4,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_cyan_exhibit_emissive",
+        "hp_dark_smoked_metal"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_specimen_plinth_combo_v1",
+      "label": "\u5c0f\u578b\u96d5\u5851/\u6807\u672c\u5e95\u5ea7\u7ec4\u5408",
+      "footprint": "pedestal",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_specimen_plinth_combo_v1.glb",
+      "previewPng": "work/furniture-factory/previews/hp_furniture_specimen_plinth_combo_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+      "sizeMeters": [
+        0.92,
+        1.366,
+        0.92
+      ],
+      "expectedSizeMeters": [
+        0.92,
+        1.41,
+        0.92
+      ],
+      "objectCount": 14,
+      "materialSlots": [
+        "hp_aged_brass_trim",
+        "hp_black_museum_stone",
+        "hp_cyan_exhibit_emissive",
+        "hp_glass_edge_glint",
+        "hp_near_clear_cyan_glass",
+        "hp_sterile_off_white"
+      ]
+    }
+  ]
+}

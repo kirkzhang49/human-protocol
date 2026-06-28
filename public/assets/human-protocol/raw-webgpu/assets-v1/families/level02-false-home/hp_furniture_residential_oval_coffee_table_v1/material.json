@@ -1,0 +1,315 @@
+{
+  "file": "material.json",
+  "hash": "2ead974141c30d28",
+  "materials": [
+    {
+      "index": 42,
+      "id": "mat:builder-resource:hp-residential-light-oak:17qjr56",
+      "name": "hp_residential_light_oak",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.56,
+        0.3,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.54,
+        0.66,
+        0.66,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.62,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "pale_oak_slats",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-03-pale-oak-slats.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-03-pale-oak-slats.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.751589,
+            "contrast": 0.052385,
+            "chroma": 0.579021,
+            "detail": 0.096034
+          },
+          "generated": false,
+          "layer": 3
+        }
+      ]
+    },
+    {
+      "index": 43,
+      "id": "mat:builder-resource:hp-residential-hidden-shadow-gap:rqga5f",
+      "name": "hp_residential_hidden_shadow_gap",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.74,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.54,
+        0.66,
+        0.66,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "shadow_gap_panel",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-04-shadow-gap-panel.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-04-shadow-gap-panel.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.181975,
+            "contrast": 0.086532,
+            "chroma": 0.089845,
+            "detail": 0.035803
+          },
+          "generated": false,
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "id": "mat:builder-resource:hp-residential-warm-walnut:1xlhn1k",
+      "name": "hp_residential_warm_walnut",
+      "category": "builder-resource",
+      "visualRole": "exhibit_warm",
+      "semanticParams": [
+        6,
+        0.68,
+        0.34,
+        0.18
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.54,
+        0.66,
+        0.66,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.56,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "warm_walnut_ribbed",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.23027,
+            "contrast": 0.048322,
+            "chroma": 0.4512,
+            "detail": 0.069431
+          },
+          "generated": false,
+          "layer": 7
+        }
+      ]
+    },
+    {
+      "index": 49,
+      "id": "mat:builder-resource:hp-residential-warm-stone:y70tlx",
+      "name": "hp_residential_warm_stone",
+      "category": "builder-resource",
+      "visualRole": "exhibit_warm",
+      "semanticParams": [
+        6,
+        0.8,
+        0.34,
+        0.18
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.54,
+        0.66,
+        0.66,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.76,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "warm_stone_oval",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-08-warm-stone-oval.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-08-warm-stone-oval.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.797975,
+            "contrast": 0.020635,
+            "chroma": 0.19402,
+            "detail": 0.028198
+          },
+          "generated": false,
+          "layer": 8
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 3,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-03-pale-oak-slats.webp",
+      "name": "pale_oak_slats",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-03-pale-oak-slats.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.751589,
+        "contrast": 0.052385,
+        "chroma": 0.579021,
+        "detail": 0.096034
+      }
+    },
+    {
+      "layer": 4,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-04-shadow-gap-panel.webp",
+      "name": "shadow_gap_panel",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-04-shadow-gap-panel.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.181975,
+        "contrast": 0.086532,
+        "chroma": 0.089845,
+        "detail": 0.035803
+      }
+    },
+    {
+      "layer": 7,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+      "name": "warm_walnut_ribbed",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.23027,
+        "contrast": 0.048322,
+        "chroma": 0.4512,
+        "detail": 0.069431
+      }
+    },
+    {
+      "layer": 8,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-08-warm-stone-oval.webp",
+      "name": "warm_stone_oval",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/textures/basecolor-08-warm-stone-oval.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.797975,
+        "contrast": 0.020635,
+        "chroma": 0.19402,
+        "detail": 0.028198
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

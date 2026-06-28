@@ -1,0 +1,420 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_05_reclamation_core",
+  "modelKey": "room_l5_v3_crescent_low_sofa",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_crescent_low_sofa.glb",
+  "fileName": "room_l5_v3_crescent_low_sofa.glb",
+  "sourceAsset": {
+    "modelKey": "room_l5_v3_crescent_low_sofa",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_crescent_low_sofa.glb",
+    "file": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_crescent_low_sofa.glb",
+    "sizeMeters": [
+      2.384,
+      0.72,
+      1.153
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 7872044,
+      "meshes": 7,
+      "nodes": 8,
+      "skins": 0,
+      "primitives": 7,
+      "materials": 5,
+      "textures": 20,
+      "images": 20,
+      "accessors": 23,
+      "bufferViews": 27,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 1772
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_crescent_low_sofa.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 684510,
+    "vertexCount": 5316,
+    "triangleCount": 1772,
+    "meshCount": 7,
+    "materialCount": 5,
+    "nodeCount": 8,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -1.192106,
+        0,
+        -0.576683
+      ],
+      "center": [
+        0,
+        0.36,
+        0
+      ],
+      "size": [
+        2.384213,
+        0.72,
+        1.153365
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "single_curved_graphite_plinth",
+        "vertexOffset": 684510,
+        "vertexCount": 1020,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "continuous_white_ceramic_under_shell",
+        "vertexOffset": 685530,
+        "vertexCount": 1020,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "continuous_black_crescent_seat",
+        "vertexOffset": 686550,
+        "vertexCount": 1068,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "curved_white_rear_shell",
+        "vertexOffset": 687618,
+        "vertexCount": 1020,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "soft_black_back_cushion_band",
+        "vertexOffset": 688638,
+        "vertexCount": 924,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "rounded_ceramic_end_cap_-102",
+        "vertexOffset": 689562,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "rounded_ceramic_end_cap_102",
+        "vertexOffset": 689694,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_05_v3_furniture_crescent_low_sofa",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_lock_hub",
+      "secondaryRoomId": null,
+      "position": [
+        -6.15,
+        0,
+        10.6
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        2.72,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "tags": [
+        "hp:level05_v3_furniture_image2",
+        "source:image2",
+        "license:owned-generated-output",
+        "placement:art_directed",
+        "mount:floor"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -6.15,
+          0,
+          10.6
+        ],
+        "halfSize": [
+          1.0728,
+          0.324,
+          0.51885
+        ]
+      }
+    }
+  ]
+}

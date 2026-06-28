@@ -1,0 +1,232 @@
+{
+  "schemaVersion": "hp.image2.sourceProvenance.v1",
+  "assetFamily": "hp_level01_workcell_image2_v1",
+  "licenseLabel": "owned-generated-output",
+  "termsLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "generationDate": "2026-06-20",
+  "generatingAccount": "project user via Codex built-in image_gen",
+  "tool": "built-in image_gen",
+  "toolCallId": "not-exposed-by-built-in-image_gen",
+  "sourceOrigin": "/Users/zhengkaizhang/.codex/generated_images/019ee642-d712-7551-848b-3842ad6d9589/ig_0ae7f274bdaf1c33016a36d9e11358819a8c8986415a1d2c96.png",
+  "repoSourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+  "repoSourceSha256": "599bfcfe5ab52d202d499ff4f19025e3bf73724fc3f9c067c3b392b3dd241364",
+  "prompt": "Use case: stylized-concept\nAsset type: Human Protocol Level 1 industrial workcell Image2 material/reference board for game asset atlas source\nPrimary request: Create a single high-resolution material/reference board for five reusable maintenance bay furniture props: mobile repair tool cart, hydraulic lift repair table, wall-mounted tool board, prosthetic spare parts cabinet, sterile parts wash basin.\nScene/backdrop: clean robot-facility maintenance bay workcell reference board, orthographic product/material sheet, no perspective room scene.\nSubject: five distinct industrial furniture/material regions arranged in a tidy grid, with surfaces and detail patches suitable for cropping into an atlas: dark gray industrial metal, white enamel maintenance panels, yellow-black hazard striping, small cyan-blue diagnostic glass/acrylic indicators, rubber wheels, hydraulic pistons, pegboard holes, sterile basin metal.\nStyle/medium: realistic-to-stylized game texture reference board, sharp PBR-like material details, low-poly-friendly, production asset source.\nComposition/framing: square image, evenly spaced rectangular panels/regions, clear boundaries between material zones, enough margin for deterministic rectangular crops; no text labels.\nLighting/mood: neutral studio lighting, clean but used, subtle scuffs and edge wear, no grime piles.\nColor palette: deep neutral grays, off-white enamel, safety yellow/black accents, restrained cyan-blue diagnostics only.\nMaterials/textures: brushed metal, powder coated metal, enamel panels, rubber, glass/acrylic, warning tape, pegboard, stainless basin, minor scratches.\nConstraints: no text, no logos, no watermark, no human characters, no large cyan areas, no clutter, no trash, no UI, no transparent background required.\nAvoid: muddy dirty junkyard look, organic shapes, excessive neon, fantasy/sci-fi weapons, readable writing.",
+  "derivatives": {
+    "atlas": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.png",
+    "regions": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.regions.json",
+    "fixedRectCuts": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts",
+    "debugAtlas": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.debug.png",
+    "builderManifest": "src/assets/manifests/builder/hp_level01_workcell_image2_v1.json"
+  },
+  "cropMapping": {
+    "cart_dark_powdercoat": {
+      "atlasRect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        15,
+        370,
+        106,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/cart_dark_powdercoat.png",
+      "intent": "dark gray powder-coated tool-cart body panels"
+    },
+    "worn_black_panel": {
+      "atlasRect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        126,
+        370,
+        100,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/worn_black_panel.png",
+      "intent": "slightly used black industrial metal face"
+    },
+    "brushed_steel": {
+      "atlasRect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        233,
+        370,
+        78,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/brushed_steel.png",
+      "intent": "brushed steel trim and hydraulic metal"
+    },
+    "safety_yellow": {
+      "atlasRect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        393,
+        370,
+        83,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/safety_yellow.png",
+      "intent": "yellow caution paint, edge-worn"
+    },
+    "hazard_stripe": {
+      "atlasRect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        482,
+        370,
+        78,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/hazard_stripe.png",
+      "intent": "yellow-black hazard striping for edges and lips"
+    },
+    "lift_white_enamel": {
+      "atlasRect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        777,
+        370,
+        104,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/lift_white_enamel.png",
+      "intent": "off-white enamel maintenance panels"
+    },
+    "lift_scuffed_white": {
+      "atlasRect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        887,
+        370,
+        86,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/lift_scuffed_white.png",
+      "intent": "used white repair-table rim panels"
+    },
+    "tool_pegboard": {
+      "atlasRect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        126,
+        770,
+        94,
+        75
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/tool_pegboard.png",
+      "intent": "white pegboard holes for wall-mounted tool panel"
+    },
+    "dark_tool_plate": {
+      "atlasRect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        225,
+        770,
+        110,
+        75
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/dark_tool_plate.png",
+      "intent": "dark tool tray / drawer insert"
+    },
+    "cyan_diagnostic_glass": {
+      "atlasRect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        452,
+        770,
+        115,
+        75
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/cyan_diagnostic_glass.png",
+      "intent": "small cyan diagnostic glass, restrained accent only"
+    },
+    "stainless_basin": {
+      "atlasRect": [
+        512,
+        512,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        404,
+        865,
+        158,
+        155
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/stainless_basin.png",
+      "intent": "stainless wash-basin bowl and rim"
+    },
+    "rubber_wheel_tread": {
+      "atlasRect": [
+        768,
+        512,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        586,
+        1044,
+        118,
+        196
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/rubber_wheel_tread.png",
+      "intent": "dark rubber wheel/tread material"
+    }
+  },
+  "notes": [
+    "Source is a real generated bitmap saved repo-local before derivative crops.",
+    "Atlas tiles are fixed rectangles from the Image2 board; no PIL noise or synthetic texture source is used.",
+    "Final GLBs are deterministic Blender geometry; Image2 is material/reference evidence."
+  ]
+}

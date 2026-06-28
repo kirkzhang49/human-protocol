@@ -1,0 +1,1163 @@
+{
+  "schemaVersion": "hp.image2.semanticAtlasRegions.v1.1",
+  "atlas": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/hp_level05_reclamation_furniture_image2_v3_hero_atlas.png",
+  "atlasSize": [
+    2048,
+    2048
+  ],
+  "cellSize": 256,
+  "sourceSheets": {
+    "gate": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/intake_identity_gate_parts_image2.png",
+      "modelKey": "room_l5_v3_intake_identity_gate",
+      "prompt": "High-detail orthographic Image2 parts sheet for a sci-fi intake identity gate: black ribbed fabric pads, white ceramic curved panels, graphite frames, brass trim, cyan biometric glass lenses, gaskets, screws, isolated parts on neutral background.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_0373a8457b231815016a3fdc4197588199941c9d6ff0e893a4.png"
+    },
+    "monolith": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/three_lock_monolith_parts_image2.png",
+      "modelKey": "room_l5_v3_three_lock_monolith",
+      "prompt": "High-detail orthographic Image2 parts sheet for a three-lock monolith: sculpted graphite panels, three mechanical lock rings, brass rims, cyan and amber lenses, ceramic fins, black padded strips, screws and gaskets.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_0b916caec4914cd3016a3fdc83922c8199ae8875f77683159f.png"
+    },
+    "table": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/core_route_map_table_parts_image2.png",
+      "modelKey": "room_l5_v3_core_route_map_table",
+      "prompt": "High-detail orthographic Image2 parts sheet for a core route map table: black glass map panels with subtle cyan line glow, white ceramic rim arcs, graphite pedestal shells, padded anemone rolls, brass brackets, cyan edge lenses.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_0b916caec4914cd3016a3fdcb879fc819981503f75bdc452e5.png"
+    },
+    "vault": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/release_key_vault_parts_image2.png",
+      "modelKey": "room_l5_v3_release_key_vault",
+      "prompt": "High-detail orthographic Image2 parts sheet for a three-key release vault: white ceramic door panels, dark graphite door slab, brass key sockets with cyan rings, black padded bolsters, hinges, drawers, screws and gaskets.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_0b916caec4914cd3016a3fdcfdad648199ab42fe089893c75d.png"
+    },
+    "altar": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/reclamation_core_altar_parts_image2.png",
+      "modelKey": "room_l5_v3_reclamation_core_altar",
+      "prompt": "High-detail orthographic Image2 parts sheet for a reclamation core altar: layered cyan glass core lens, amber secondary lens, graphite pedestal panels, white ceramic petal fins, black ribbed cushion arcs, brass rings, sockets, screws and light strips.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_0b916caec4914cd3016a3fdd38013481998fcb77a4bcbe8bda.png"
+    }
+  },
+  "regions": {
+    "gate_black_ribbed_pad": {
+      "atlasRect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "gate",
+      "sourceModelKey": "room_l5_v3_intake_identity_gate",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/intake_identity_gate_parts_image2.png",
+      "sourceCrop": [
+        12,
+        18,
+        220,
+        760
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/gate_black_ribbed_pad.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 6913,
+        "opaquePixelsGte250": 160287,
+        "transparentRatio": 0.0413
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        45,
+        45,
+        45
+      ],
+      "note": "large stitched black fabric side pad",
+      "image2Assert": true
+    },
+    "gate_white_ceramic_panel": {
+      "atlasRect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "gate",
+      "sourceModelKey": "room_l5_v3_intake_identity_gate",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/intake_identity_gate_parts_image2.png",
+      "sourceCrop": [
+        455,
+        24,
+        220,
+        435
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/gate_white_ceramic_panel.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 32549,
+        "opaquePixelsGte250": 63151,
+        "transparentRatio": 0.3401
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        207,
+        204,
+        200
+      ],
+      "note": "curved white ceramic panel",
+      "image2Assert": true
+    },
+    "gate_graphite_round_frame": {
+      "atlasRect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "gate",
+      "sourceModelKey": "room_l5_v3_intake_identity_gate",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/intake_identity_gate_parts_image2.png",
+      "sourceCrop": [
+        1090,
+        84,
+        415,
+        320
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/gate_graphite_round_frame.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 21215,
+        "opaquePixelsGte250": 111585,
+        "transparentRatio": 0.1598
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        173,
+        173,
+        173
+      ],
+      "note": "rounded graphite scanner frame",
+      "image2Assert": true
+    },
+    "gate_brass_trim_bar": {
+      "atlasRect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "gate",
+      "sourceModelKey": "room_l5_v3_intake_identity_gate",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/intake_identity_gate_parts_image2.png",
+      "sourceCrop": [
+        1088,
+        468,
+        420,
+        84
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/gate_brass_trim_bar.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 2330,
+        "opaquePixelsGte250": 32950,
+        "transparentRatio": 0.066
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        193,
+        172,
+        137
+      ],
+      "note": "brushed brass horizontal trim",
+      "image2Assert": true
+    },
+    "gate_cyan_biometric_lens": {
+      "atlasRect": [
+        1024,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "gate",
+      "sourceModelKey": "room_l5_v3_intake_identity_gate",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/intake_identity_gate_parts_image2.png",
+      "sourceCrop": [
+        458,
+        720,
+        390,
+        145
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/gate_cyan_biometric_lens.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 1825,
+        "opaquePixelsGte250": 54725,
+        "transparentRatio": 0.0323
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        82,
+        161,
+        186
+      ],
+      "note": "cyan glass biometric lens",
+      "image2Assert": true
+    },
+    "gate_black_gasket_bar": {
+      "atlasRect": [
+        1280,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "gate",
+      "sourceModelKey": "room_l5_v3_intake_identity_gate",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/intake_identity_gate_parts_image2.png",
+      "sourceCrop": [
+        28,
+        808,
+        392,
+        94
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/gate_black_gasket_bar.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 341,
+        "opaquePixelsGte250": 36507,
+        "transparentRatio": 0.0093
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        86,
+        85,
+        83
+      ],
+      "note": "black gasket bars and thin rails",
+      "image2Assert": true
+    },
+    "gate_status_light_bank": {
+      "atlasRect": [
+        1536,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "gate",
+      "sourceModelKey": "room_l5_v3_intake_identity_gate",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/intake_identity_gate_parts_image2.png",
+      "sourceCrop": [
+        1000,
+        724,
+        430,
+        120
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/gate_status_light_bank.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 5872,
+        "opaquePixelsGte250": 45728,
+        "transparentRatio": 0.1138
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        159,
+        155,
+        144
+      ],
+      "note": "amber white cyan red status light parts",
+      "image2Assert": true
+    },
+    "monolith_graphite_body": {
+      "atlasRect": [
+        1792,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "monolith",
+      "sourceModelKey": "room_l5_v3_three_lock_monolith",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/three_lock_monolith_parts_image2.png",
+      "sourceCrop": [
+        330,
+        18,
+        260,
+        720
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/monolith_graphite_body.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 16021,
+        "opaquePixelsGte250": 171179,
+        "transparentRatio": 0.0856
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        55,
+        55,
+        53
+      ],
+      "note": "sculpted graphite monolith body",
+      "image2Assert": true
+    },
+    "monolith_lock_ring_graphite": {
+      "atlasRect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "monolith",
+      "sourceModelKey": "room_l5_v3_three_lock_monolith",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/three_lock_monolith_parts_image2.png",
+      "sourceCrop": [
+        592,
+        22,
+        205,
+        205
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/monolith_lock_ring_graphite.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 12004,
+        "opaquePixelsGte250": 30021,
+        "transparentRatio": 0.2856
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        76,
+        70,
+        60
+      ],
+      "note": "brass and graphite lock ring",
+      "image2Assert": true
+    },
+    "monolith_cyan_lens_ring": {
+      "atlasRect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "monolith",
+      "sourceModelKey": "room_l5_v3_three_lock_monolith",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/three_lock_monolith_parts_image2.png",
+      "sourceCrop": [
+        592,
+        235,
+        205,
+        205
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/monolith_cyan_lens_ring.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 12592,
+        "opaquePixelsGte250": 29433,
+        "transparentRatio": 0.2996
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        78,
+        85,
+        75
+      ],
+      "note": "cyan active lock lens",
+      "image2Assert": true
+    },
+    "monolith_amber_lens_ring": {
+      "atlasRect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "monolith",
+      "sourceModelKey": "room_l5_v3_three_lock_monolith",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/three_lock_monolith_parts_image2.png",
+      "sourceCrop": [
+        592,
+        448,
+        205,
+        205
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/monolith_amber_lens_ring.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 10181,
+        "opaquePixelsGte250": 31844,
+        "transparentRatio": 0.2423
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        91,
+        71,
+        55
+      ],
+      "note": "amber warning lock lens",
+      "image2Assert": true
+    },
+    "monolith_white_ceramic_fin": {
+      "atlasRect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "monolith",
+      "sourceModelKey": "room_l5_v3_three_lock_monolith",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/three_lock_monolith_parts_image2.png",
+      "sourceCrop": [
+        836,
+        82,
+        165,
+        335
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/monolith_white_ceramic_fin.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 22014,
+        "opaquePixelsGte250": 33261,
+        "transparentRatio": 0.3983
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        208,
+        205,
+        202
+      ],
+      "note": "curved white ceramic side fin",
+      "image2Assert": true
+    },
+    "monolith_black_ribbed_pad": {
+      "atlasRect": [
+        1024,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "monolith",
+      "sourceModelKey": "room_l5_v3_three_lock_monolith",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/three_lock_monolith_parts_image2.png",
+      "sourceCrop": [
+        1118,
+        34,
+        165,
+        690
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/monolith_black_ribbed_pad.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 1003,
+        "opaquePixelsGte250": 112847,
+        "transparentRatio": 0.0088
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        40,
+        40,
+        41
+      ],
+      "note": "tall stitched black pad",
+      "image2Assert": true
+    },
+    "monolith_brass_handle": {
+      "atlasRect": [
+        1280,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "monolith",
+      "sourceModelKey": "room_l5_v3_three_lock_monolith",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/three_lock_monolith_parts_image2.png",
+      "sourceCrop": [
+        585,
+        806,
+        140,
+        58
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/monolith_brass_handle.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 789,
+        "opaquePixelsGte250": 7331,
+        "transparentRatio": 0.0972
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        149,
+        128,
+        103
+      ],
+      "note": "small brass handles and bars",
+      "image2Assert": true
+    },
+    "table_black_glass_map_top": {
+      "atlasRect": [
+        1536,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "table",
+      "sourceModelKey": "room_l5_v3_core_route_map_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/core_route_map_table_parts_image2.png",
+      "sourceCrop": [
+        18,
+        26,
+        855,
+        205
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/table_black_glass_map_top.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 467,
+        "opaquePixelsGte250": 174808,
+        "transparentRatio": 0.0027
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        17,
+        23,
+        26
+      ],
+      "note": "black glass tabletop with cyan route lines",
+      "image2Assert": true
+    },
+    "table_black_glass_map_side": {
+      "atlasRect": [
+        1792,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "table",
+      "sourceModelKey": "room_l5_v3_core_route_map_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/core_route_map_table_parts_image2.png",
+      "sourceCrop": [
+        20,
+        260,
+        855,
+        165
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/table_black_glass_map_side.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 547,
+        "opaquePixelsGte250": 140528,
+        "transparentRatio": 0.0039
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        26,
+        31,
+        31
+      ],
+      "note": "secondary black glass map surface",
+      "image2Assert": true
+    },
+    "table_cyan_edge_lens": {
+      "atlasRect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "table",
+      "sourceModelKey": "room_l5_v3_core_route_map_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/core_route_map_table_parts_image2.png",
+      "sourceCrop": [
+        20,
+        452,
+        450,
+        78
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/table_cyan_edge_lens.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 2606,
+        "opaquePixelsGte250": 32494,
+        "transparentRatio": 0.0742
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        134,
+        177,
+        188
+      ],
+      "note": "cyan glass edge strip",
+      "image2Assert": true
+    },
+    "table_white_ceramic_rim": {
+      "atlasRect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "table",
+      "sourceModelKey": "room_l5_v3_core_route_map_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/core_route_map_table_parts_image2.png",
+      "sourceCrop": [
+        536,
+        452,
+        410,
+        64
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/table_white_ceramic_rim.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 10076,
+        "opaquePixelsGte250": 16164,
+        "transparentRatio": 0.384
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        213,
+        210,
+        208
+      ],
+      "note": "curved white ceramic rim strip",
+      "image2Assert": true
+    },
+    "table_graphite_pedestal_shell": {
+      "atlasRect": [
+        512,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "table",
+      "sourceModelKey": "room_l5_v3_core_route_map_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/core_route_map_table_parts_image2.png",
+      "sourceCrop": [
+        1140,
+        40,
+        280,
+        350
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/table_graphite_pedestal_shell.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 5132,
+        "opaquePixelsGte250": 92868,
+        "transparentRatio": 0.0524
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        77,
+        76,
+        76
+      ],
+      "note": "curved graphite pedestal shell",
+      "image2Assert": true
+    },
+    "table_black_soft_roll": {
+      "atlasRect": [
+        768,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "table",
+      "sourceModelKey": "room_l5_v3_core_route_map_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/core_route_map_table_parts_image2.png",
+      "sourceCrop": [
+        530,
+        604,
+        155,
+        280
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/table_black_soft_roll.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 339,
+        "opaquePixelsGte250": 43061,
+        "transparentRatio": 0.0078
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        34,
+        34,
+        34
+      ],
+      "note": "stitched black padded roll",
+      "image2Assert": true
+    },
+    "table_brass_connector": {
+      "atlasRect": [
+        1024,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "table",
+      "sourceModelKey": "room_l5_v3_core_route_map_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/core_route_map_table_parts_image2.png",
+      "sourceCrop": [
+        1030,
+        460,
+        122,
+        330
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/table_brass_connector.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 6420,
+        "opaquePixelsGte250": 33840,
+        "transparentRatio": 0.1595
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        151,
+        138,
+        118
+      ],
+      "note": "brass connector plates",
+      "image2Assert": true
+    },
+    "vault_black_ribbed_pad": {
+      "atlasRect": [
+        1280,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "vault",
+      "sourceModelKey": "room_l5_v3_release_key_vault",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/release_key_vault_parts_image2.png",
+      "sourceCrop": [
+        18,
+        18,
+        190,
+        760
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/vault_black_ribbed_pad.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 10905,
+        "opaquePixelsGte250": 133495,
+        "transparentRatio": 0.0755
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        36,
+        36,
+        36
+      ],
+      "note": "large black stitched side bolster",
+      "image2Assert": true
+    },
+    "vault_white_ceramic_door": {
+      "atlasRect": [
+        1536,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "vault",
+      "sourceModelKey": "room_l5_v3_release_key_vault",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/release_key_vault_parts_image2.png",
+      "sourceCrop": [
+        388,
+        20,
+        220,
+        425
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/vault_white_ceramic_door.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 4287,
+        "opaquePixelsGte250": 89213,
+        "transparentRatio": 0.0459
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        219,
+        216,
+        215
+      ],
+      "note": "white ceramic vault door panel",
+      "image2Assert": true
+    },
+    "vault_graphite_door_slab": {
+      "atlasRect": [
+        1792,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "vault",
+      "sourceModelKey": "room_l5_v3_release_key_vault",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/release_key_vault_parts_image2.png",
+      "sourceCrop": [
+        618,
+        20,
+        350,
+        438
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/vault_graphite_door_slab.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 16608,
+        "opaquePixelsGte250": 136692,
+        "transparentRatio": 0.1083
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        159,
+        158,
+        156
+      ],
+      "note": "dark graphite main safe door",
+      "image2Assert": true
+    },
+    "vault_key_socket_cyan": {
+      "atlasRect": [
+        0,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "vault",
+      "sourceModelKey": "room_l5_v3_release_key_vault",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/release_key_vault_parts_image2.png",
+      "sourceCrop": [
+        1248,
+        18,
+        160,
+        160
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/vault_key_socket_cyan.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 4953,
+        "opaquePixelsGte250": 20647,
+        "transparentRatio": 0.1935
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        124,
+        114,
+        88
+      ],
+      "note": "brass key socket with cyan ring",
+      "image2Assert": true
+    },
+    "vault_brass_hinge_handle": {
+      "atlasRect": [
+        256,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "vault",
+      "sourceModelKey": "room_l5_v3_release_key_vault",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/release_key_vault_parts_image2.png",
+      "sourceCrop": [
+        452,
+        600,
+        350,
+        90
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/vault_brass_hinge_handle.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 7796,
+        "opaquePixelsGte250": 23704,
+        "transparentRatio": 0.2475
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        196,
+        189,
+        179
+      ],
+      "note": "brass handle and hinge rods",
+      "image2Assert": true
+    },
+    "vault_cyan_window": {
+      "atlasRect": [
+        512,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "vault",
+      "sourceModelKey": "room_l5_v3_release_key_vault",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/release_key_vault_parts_image2.png",
+      "sourceCrop": [
+        804,
+        708,
+        300,
+        122
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/vault_cyan_window.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 6071,
+        "opaquePixelsGte250": 30529,
+        "transparentRatio": 0.1659
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        112,
+        180,
+        186
+      ],
+      "note": "cyan inspection glass window",
+      "image2Assert": true
+    },
+    "vault_black_drawer_inset": {
+      "atlasRect": [
+        768,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "vault",
+      "sourceModelKey": "room_l5_v3_release_key_vault",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/release_key_vault_parts_image2.png",
+      "sourceCrop": [
+        1200,
+        618,
+        310,
+        126
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/vault_black_drawer_inset.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 4656,
+        "opaquePixelsGte250": 34404,
+        "transparentRatio": 0.1192
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        60,
+        59,
+        59
+      ],
+      "note": "black recessed drawer tray",
+      "image2Assert": true
+    },
+    "altar_cyan_core_lens": {
+      "atlasRect": [
+        1024,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "altar",
+      "sourceModelKey": "room_l5_v3_reclamation_core_altar",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/reclamation_core_altar_parts_image2.png",
+      "sourceCrop": [
+        18,
+        16,
+        315,
+        315
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/altar_cyan_core_lens.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 18588,
+        "opaquePixelsGte250": 80637,
+        "transparentRatio": 0.1873
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        66,
+        125,
+        148
+      ],
+      "note": "large layered cyan energy core lens",
+      "image2Assert": true
+    },
+    "altar_amber_lens": {
+      "atlasRect": [
+        1280,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "altar",
+      "sourceModelKey": "room_l5_v3_reclamation_core_altar",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/reclamation_core_altar_parts_image2.png",
+      "sourceCrop": [
+        350,
+        20,
+        180,
+        180
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/altar_amber_lens.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 8618,
+        "opaquePixelsGte250": 23782,
+        "transparentRatio": 0.266
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        118,
+        82,
+        38
+      ],
+      "note": "amber secondary glass lens",
+      "image2Assert": true
+    },
+    "altar_graphite_pedestal_panel": {
+      "atlasRect": [
+        1536,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "altar",
+      "sourceModelKey": "room_l5_v3_reclamation_core_altar",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/reclamation_core_altar_parts_image2.png",
+      "sourceCrop": [
+        565,
+        25,
+        340,
+        360
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/altar_graphite_pedestal_panel.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 6778,
+        "opaquePixelsGte250": 115622,
+        "transparentRatio": 0.0554
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        66,
+        66,
+        66
+      ],
+      "note": "curved graphite pedestal shell panel",
+      "image2Assert": true
+    },
+    "altar_white_ceramic_petal": {
+      "atlasRect": [
+        1792,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "altar",
+      "sourceModelKey": "room_l5_v3_reclamation_core_altar",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/reclamation_core_altar_parts_image2.png",
+      "sourceCrop": [
+        54,
+        322,
+        292,
+        260
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/altar_white_ceramic_petal.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 27222,
+        "opaquePixelsGte250": 48698,
+        "transparentRatio": 0.3586
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        212,
+        208,
+        204
+      ],
+      "note": "white ceramic petal fins",
+      "image2Assert": true
+    },
+    "altar_black_padded_arc": {
+      "atlasRect": [
+        0,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "altar",
+      "sourceModelKey": "room_l5_v3_reclamation_core_altar",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/reclamation_core_altar_parts_image2.png",
+      "sourceCrop": [
+        382,
+        470,
+        430,
+        176
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/altar_black_padded_arc.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 18778,
+        "opaquePixelsGte250": 56902,
+        "transparentRatio": 0.2481
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        62,
+        62,
+        60
+      ],
+      "note": "stitched black padded arc",
+      "image2Assert": true
+    },
+    "altar_brass_ring_segment": {
+      "atlasRect": [
+        256,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "altar",
+      "sourceModelKey": "room_l5_v3_reclamation_core_altar",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/reclamation_core_altar_parts_image2.png",
+      "sourceCrop": [
+        1278,
+        18,
+        190,
+        165
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/altar_brass_ring_segment.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 12612,
+        "opaquePixelsGte250": 18738,
+        "transparentRatio": 0.4023
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        126,
+        108,
+        87
+      ],
+      "note": "brass circular ring segment",
+      "image2Assert": true
+    },
+    "altar_socket_panel": {
+      "atlasRect": [
+        512,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "altar",
+      "sourceModelKey": "room_l5_v3_reclamation_core_altar",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-sources/reclamation_core_altar_parts_image2.png",
+      "sourceCrop": [
+        1078,
+        392,
+        180,
+        110
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/image2-cutouts/altar_socket_panel.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 6381,
+        "opaquePixelsGte250": 13419,
+        "transparentRatio": 0.3223
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        62,
+        63,
+        63
+      ],
+      "note": "black connector socket panel",
+      "image2Assert": true
+    }
+  }
+}

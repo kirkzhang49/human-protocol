@@ -1,0 +1,828 @@
+{
+  "generatedAt": "2026-06-19T04:12:12.367Z",
+  "objective": "human_protocol_combat_gui_non_overlapping_viewport_layout",
+  "formulas": {
+    "scale": "sqrt((w*h)/(1920*1080)) clamped to [0.74, 1.14]",
+    "reservedTopRows": "hud/settings occupy first row; objective fits between reserved left and right, or moves below hud in compact viewports",
+    "reservedBottomRows": "weapon panel owns bottom-right; aim/mission prompts are centered with width reduced by action panel reserve",
+    "warningNotice": "spawn and critical warnings use --hp-notice-y, below the objective/guidance stack and above bottom controls",
+    "overlap": "intersection_area(rectA, rectB) must be 0 for active combat GUI rectangles"
+  },
+  "viewports": [
+    {
+      "viewport": "2048x1280",
+      "layout": {
+        "width": 2048,
+        "height": 1280,
+        "scale": 1.124,
+        "edge": 23,
+        "gap": 29,
+        "hudWidth": 338,
+        "hudHeight": 138,
+        "settingsWidth": 111,
+        "settingsHeight": 56,
+        "objectiveWidth": 720,
+        "objectiveHeight": 135,
+        "objectiveMax": 720,
+        "actionCluster": 260,
+        "actionPanelWidth": 300,
+        "actionSlot": 99,
+        "actionMainSlot": 112,
+        "actionItemSlot": 94,
+        "topReserve": 190,
+        "bottomReserve": 367,
+        "noticeY": 190,
+        "typeXs": 12,
+        "typeSm": 14,
+        "typeMd": 18,
+        "typeLg": 24
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 23,
+          "y": 23,
+          "w": 338,
+          "h": 138
+        },
+        {
+          "id": "settings",
+          "x": 1914,
+          "y": 23,
+          "w": 111,
+          "h": 56
+        },
+        {
+          "id": "objective",
+          "x": 778,
+          "y": 23,
+          "w": 720,
+          "h": 135
+        },
+        {
+          "id": "actionHud",
+          "x": 1725,
+          "y": 905,
+          "w": 300,
+          "h": 352
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 834,
+          "y": 1203,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 834,
+          "y": 1133,
+          "w": 380,
+          "h": 58
+        },
+        {
+          "id": "warningNotice",
+          "x": 814,
+          "y": 190,
+          "w": 420,
+          "h": 54
+        }
+      ]
+    },
+    {
+      "viewport": "1920x1080",
+      "layout": {
+        "width": 1920,
+        "height": 1080,
+        "scale": 1,
+        "edge": 19,
+        "gap": 27,
+        "hudWidth": 317,
+        "hudHeight": 129,
+        "settingsWidth": 104,
+        "settingsHeight": 48,
+        "objectiveWidth": 691,
+        "objectiveHeight": 130,
+        "objectiveMax": 691,
+        "actionCluster": 248,
+        "actionPanelWidth": 288,
+        "actionSlot": 94,
+        "actionMainSlot": 107,
+        "actionItemSlot": 89,
+        "topReserve": 175,
+        "bottomReserve": 351,
+        "noticeY": 175,
+        "typeXs": 10,
+        "typeSm": 12,
+        "typeMd": 16,
+        "typeLg": 21
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 19,
+          "y": 19,
+          "w": 317,
+          "h": 129
+        },
+        {
+          "id": "settings",
+          "x": 1797,
+          "y": 19,
+          "w": 104,
+          "h": 48
+        },
+        {
+          "id": "objective",
+          "x": 721,
+          "y": 19,
+          "w": 691,
+          "h": 130
+        },
+        {
+          "id": "actionHud",
+          "x": 1613,
+          "y": 721,
+          "w": 288,
+          "h": 340
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 770,
+          "y": 1007,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 770,
+          "y": 937,
+          "w": 380,
+          "h": 58
+        },
+        {
+          "id": "warningNotice",
+          "x": 750,
+          "y": 175,
+          "w": 420,
+          "h": 54
+        }
+      ]
+    },
+    {
+      "viewport": "1600x900",
+      "layout": {
+        "width": 1600,
+        "height": 900,
+        "scale": 0.833,
+        "edge": 16,
+        "gap": 22,
+        "hudWidth": 264,
+        "hudHeight": 107,
+        "settingsWidth": 86,
+        "settingsHeight": 42,
+        "objectiveWidth": 576,
+        "objectiveHeight": 108,
+        "objectiveMax": 576,
+        "actionCluster": 207,
+        "actionPanelWidth": 240,
+        "actionSlot": 79,
+        "actionMainSlot": 89,
+        "actionItemSlot": 75,
+        "topReserve": 145,
+        "bottomReserve": 307,
+        "noticeY": 145,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 16,
+          "y": 16,
+          "w": 264,
+          "h": 107
+        },
+        {
+          "id": "settings",
+          "x": 1498,
+          "y": 16,
+          "w": 86,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 601,
+          "y": 16,
+          "w": 576,
+          "h": 108
+        },
+        {
+          "id": "actionHud",
+          "x": 1344,
+          "y": 585,
+          "w": 240,
+          "h": 299
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 610,
+          "y": 830,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 610,
+          "y": 760,
+          "w": 380,
+          "h": 58
+        },
+        {
+          "id": "warningNotice",
+          "x": 590,
+          "y": 145,
+          "w": 420,
+          "h": 54
+        }
+      ]
+    },
+    {
+      "viewport": "1366x768",
+      "layout": {
+        "width": 1366,
+        "height": 768,
+        "scale": 0.74,
+        "edge": 14,
+        "gap": 19,
+        "hudWidth": 250,
+        "hudHeight": 102,
+        "settingsWidth": 84,
+        "settingsHeight": 42,
+        "objectiveWidth": 492,
+        "objectiveHeight": 92,
+        "objectiveMax": 492,
+        "actionCluster": 190,
+        "actionPanelWidth": 220,
+        "actionSlot": 72,
+        "actionMainSlot": 82,
+        "actionItemSlot": 68,
+        "topReserve": 135,
+        "bottomReserve": 288,
+        "noticeY": 135,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 14,
+          "y": 14,
+          "w": 250,
+          "h": 102
+        },
+        {
+          "id": "settings",
+          "x": 1268,
+          "y": 14,
+          "w": 84,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 520,
+          "y": 14,
+          "w": 492,
+          "h": 92
+        },
+        {
+          "id": "actionHud",
+          "x": 1132,
+          "y": 472,
+          "w": 220,
+          "h": 282
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 493,
+          "y": 700,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 493,
+          "y": 630,
+          "w": 380,
+          "h": 58
+        },
+        {
+          "id": "warningNotice",
+          "x": 473,
+          "y": 135,
+          "w": 420,
+          "h": 54
+        }
+      ]
+    },
+    {
+      "viewport": "1280x720",
+      "layout": {
+        "width": 1280,
+        "height": 720,
+        "scale": 0.74,
+        "edge": 13,
+        "gap": 18,
+        "hudWidth": 250,
+        "hudHeight": 102,
+        "settingsWidth": 84,
+        "settingsHeight": 42,
+        "objectiveWidth": 461,
+        "objectiveHeight": 86,
+        "objectiveMax": 461,
+        "actionCluster": 190,
+        "actionPanelWidth": 220,
+        "actionSlot": 72,
+        "actionMainSlot": 82,
+        "actionItemSlot": 68,
+        "topReserve": 133,
+        "bottomReserve": 287,
+        "noticeY": 133,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 13,
+          "y": 13,
+          "w": 250,
+          "h": 102
+        },
+        {
+          "id": "settings",
+          "x": 1183,
+          "y": 13,
+          "w": 84,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 493,
+          "y": 13,
+          "w": 461,
+          "h": 86
+        },
+        {
+          "id": "actionHud",
+          "x": 1047,
+          "y": 425,
+          "w": 220,
+          "h": 282
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 450,
+          "y": 653,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 450,
+          "y": 583,
+          "w": 380,
+          "h": 58
+        },
+        {
+          "id": "warningNotice",
+          "x": 430,
+          "y": 133,
+          "w": 420,
+          "h": 54
+        }
+      ]
+    },
+    {
+      "viewport": "1024x768",
+      "layout": {
+        "width": 1024,
+        "height": 768,
+        "scale": 0.74,
+        "edge": 12,
+        "gap": 14,
+        "hudWidth": 220,
+        "hudHeight": 90,
+        "settingsWidth": 84,
+        "settingsHeight": 42,
+        "objectiveWidth": 420,
+        "objectiveHeight": 79,
+        "objectiveMax": 420,
+        "actionCluster": 170,
+        "actionPanelWidth": 197,
+        "actionSlot": 65,
+        "actionMainSlot": 73,
+        "actionItemSlot": 61,
+        "topReserve": 116,
+        "bottomReserve": 266,
+        "noticeY": 195,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 12,
+          "y": 12,
+          "w": 220,
+          "h": 90
+        },
+        {
+          "id": "settings",
+          "x": 928,
+          "y": 12,
+          "w": 84,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 253,
+          "y": 108,
+          "w": 420,
+          "h": 79
+        },
+        {
+          "id": "actionHud",
+          "x": 815,
+          "y": 494,
+          "w": 197,
+          "h": 262
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 322,
+          "y": 702,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 322,
+          "y": 632,
+          "w": 380,
+          "h": 58
+        },
+        {
+          "id": "warningNotice",
+          "x": 302,
+          "y": 195,
+          "w": 420,
+          "h": 54
+        }
+      ]
+    },
+    {
+      "viewport": "900x540",
+      "layout": {
+        "width": 900,
+        "height": 540,
+        "scale": 0.74,
+        "edge": 11,
+        "gap": 14,
+        "hudWidth": 194,
+        "hudHeight": 79,
+        "settingsWidth": 84,
+        "settingsHeight": 42,
+        "objectiveWidth": 420,
+        "objectiveHeight": 79,
+        "objectiveMax": 420,
+        "actionCluster": 170,
+        "actionPanelWidth": 197,
+        "actionSlot": 65,
+        "actionMainSlot": 73,
+        "actionItemSlot": 61,
+        "topReserve": 104,
+        "bottomReserve": 265,
+        "noticeY": 183,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 11,
+          "y": 11,
+          "w": 194,
+          "h": 79
+        },
+        {
+          "id": "settings",
+          "x": 805,
+          "y": 11,
+          "w": 84,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 240,
+          "y": 96,
+          "w": 420,
+          "h": 79
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 260,
+          "y": 475,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 260,
+          "y": 405,
+          "w": 380,
+          "h": 58
+        }
+      ]
+    },
+    {
+      "viewport": "812x375",
+      "layout": {
+        "width": 812,
+        "height": 375,
+        "scale": 0.74,
+        "edge": 11,
+        "gap": 14,
+        "hudWidth": 194,
+        "hudHeight": 79,
+        "settingsWidth": 84,
+        "settingsHeight": 42,
+        "objectiveWidth": 420,
+        "objectiveHeight": 79,
+        "objectiveMax": 420,
+        "actionCluster": 170,
+        "actionPanelWidth": 197,
+        "actionSlot": 65,
+        "actionMainSlot": 73,
+        "actionItemSlot": 61,
+        "topReserve": 104,
+        "bottomReserve": 265,
+        "noticeY": 38,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 11,
+          "y": 11,
+          "w": 194,
+          "h": 79
+        },
+        {
+          "id": "settings",
+          "x": 717,
+          "y": 11,
+          "w": 84,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 196,
+          "y": 96,
+          "w": 420,
+          "h": 79
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 216,
+          "y": 310,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 216,
+          "y": 240,
+          "w": 380,
+          "h": 58
+        }
+      ]
+    },
+    {
+      "viewport": "768x375",
+      "layout": {
+        "width": 768,
+        "height": 375,
+        "scale": 0.74,
+        "edge": 11,
+        "gap": 14,
+        "hudWidth": 194,
+        "hudHeight": 79,
+        "settingsWidth": 84,
+        "settingsHeight": 42,
+        "objectiveWidth": 420,
+        "objectiveHeight": 79,
+        "objectiveMax": 420,
+        "actionCluster": 170,
+        "actionPanelWidth": 197,
+        "actionSlot": 65,
+        "actionMainSlot": 73,
+        "actionItemSlot": 61,
+        "topReserve": 104,
+        "bottomReserve": 265,
+        "noticeY": 38,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 11,
+          "y": 11,
+          "w": 194,
+          "h": 79
+        },
+        {
+          "id": "settings",
+          "x": 673,
+          "y": 11,
+          "w": 84,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 174,
+          "y": 96,
+          "w": 420,
+          "h": 79
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 194,
+          "y": 310,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 194,
+          "y": 240,
+          "w": 380,
+          "h": 58
+        }
+      ]
+    },
+    {
+      "viewport": "667x375",
+      "layout": {
+        "width": 667,
+        "height": 375,
+        "scale": 0.74,
+        "edge": 11,
+        "gap": 14,
+        "hudWidth": 194,
+        "hudHeight": 79,
+        "settingsWidth": 84,
+        "settingsHeight": 42,
+        "objectiveWidth": 339,
+        "objectiveHeight": 64,
+        "objectiveMax": 339,
+        "actionCluster": 170,
+        "actionPanelWidth": 197,
+        "actionSlot": 65,
+        "actionMainSlot": 73,
+        "actionItemSlot": 61,
+        "topReserve": 104,
+        "bottomReserve": 265,
+        "noticeY": 38,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 11,
+          "y": 11,
+          "w": 194,
+          "h": 79
+        },
+        {
+          "id": "settings",
+          "x": 572,
+          "y": 11,
+          "w": 84,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 164,
+          "y": 96,
+          "w": 339,
+          "h": 64
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 144,
+          "y": 310,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 144,
+          "y": 240,
+          "w": 380,
+          "h": 58
+        }
+      ]
+    },
+    {
+      "viewport": "568x320",
+      "layout": {
+        "width": 568,
+        "height": 320,
+        "scale": 0.74,
+        "edge": 11,
+        "gap": 14,
+        "hudWidth": 194,
+        "hudHeight": 79,
+        "settingsWidth": 84,
+        "settingsHeight": 42,
+        "objectiveWidth": 320,
+        "objectiveHeight": 60,
+        "objectiveMax": 320,
+        "actionCluster": 170,
+        "actionPanelWidth": 197,
+        "actionSlot": 65,
+        "actionMainSlot": 73,
+        "actionItemSlot": 61,
+        "topReserve": 104,
+        "bottomReserve": 265,
+        "noticeY": 11,
+        "typeXs": 9,
+        "typeSm": 10,
+        "typeMd": 13,
+        "typeLg": 16
+      },
+      "rects": [
+        {
+          "id": "hud",
+          "x": 11,
+          "y": 11,
+          "w": 194,
+          "h": 79
+        },
+        {
+          "id": "settings",
+          "x": 473,
+          "y": 11,
+          "w": 84,
+          "h": 42
+        },
+        {
+          "id": "objective",
+          "x": 124,
+          "y": 96,
+          "w": 320,
+          "h": 60
+        },
+        {
+          "id": "desktopAimOrMission",
+          "x": 94,
+          "y": 255,
+          "w": 380,
+          "h": 54
+        },
+        {
+          "id": "interactionOrReward",
+          "x": 94,
+          "y": 185,
+          "w": 380,
+          "h": 58
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "critical": 0,
+    "checkedViewports": 11
+  },
+  "issues": []
+}

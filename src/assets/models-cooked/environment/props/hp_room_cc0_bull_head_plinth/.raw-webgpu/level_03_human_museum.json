@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_cc0_bull_head_plinth",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/props/hp_room_cc0_bull_head_plinth.glb",
+  "fileName": "hp_room_cc0_bull_head_plinth.glb",
+  "sourceAsset": {
+    "modelKey": "room_cc0_bull_head_plinth",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/props/hp_room_cc0_bull_head_plinth.glb",
+    "file": "src/assets/models-cooked/environment/props/hp_room_cc0_bull_head_plinth.glb",
+    "sizeMeters": [
+      0.965,
+      1.28,
+      0.965
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 191664,
+      "meshes": 3,
+      "nodes": 3,
+      "skins": 0,
+      "primitives": 3,
+      "materials": 3,
+      "textures": 3,
+      "images": 3,
+      "accessors": 10,
+      "bufferViews": 11,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 17594
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/props/hp_room_cc0_bull_head_plinth.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 980400,
+    "vertexCount": 52782,
+    "triangleCount": 17594,
+    "meshCount": 3,
+    "materialCount": 3,
+    "nodeCount": 3,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.482527,
+        -0.000005,
+        -0.482527
+      ],
+      "center": [
+        0,
+        0.639997,
+        0
+      ],
+      "size": [
+        0.965054,
+        1.280005,
+        0.965054
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "bull_head",
+        "vertexOffset": 980400,
+        "vertexCount": 49050,
+        "bindMatrix": [
+          0.55,
+          0,
+          0,
+          0,
+          0,
+          0.55,
+          0,
+          0,
+          0,
+          0,
+          0.55,
+          0,
+          0,
+          0.73,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.818182,
+          0,
+          0,
+          0,
+          0,
+          1.818182,
+          0,
+          0,
+          0,
+          0,
+          1.818182,
+          0,
+          0,
+          -1.327273,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_museum_low_black_plinth",
+        "vertexOffset": 1029450,
+        "vertexCount": 1428,
+        "bindMatrix": [
+          0.482527,
+          0,
+          0,
+          0,
+          0,
+          0.482527,
+          0,
+          0,
+          0,
+          0,
+          0.482527,
+          0,
+          0,
+          0.09,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.072423,
+          0,
+          0,
+          0,
+          0,
+          2.072423,
+          0,
+          0,
+          0,
+          0,
+          2.072423,
+          0,
+          0,
+          -0.186518,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_museum_plinth_brass_lip",
+        "vertexOffset": 1030878,
+        "vertexCount": 2304,
+        "bindMatrix": [
+          0.476051,
+          0,
+          0,
+          0,
+          0,
+          0.476051,
+          0,
+          0,
+          0,
+          0,
+          0.476051,
+          0,
+          0,
+          0.182,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.100615,
+          0,
+          0,
+          0,
+          0,
+          2.100615,
+          0,
+          0,
+          0,
+          0,
+          2.100615,
+          0,
+          0,
+          -0.382312,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_lvm57s",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -9.5,
+        0,
+        1
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        5.497787,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -9.5,
+          0,
+          1
+        ],
+        "halfSize": [
+          0.4825,
+          0.64,
+          0.4825
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,250 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "hp_l2_cc0_ottoman_polyhaven_v1",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+  "fileName": "hp_l2_cc0_ottoman_polyhaven_v1.glb",
+  "sourceAsset": {
+    "modelKey": "hp_l2_cc0_ottoman_polyhaven_v1",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+    "file": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+    "sizeMeters": [
+      0.652,
+      0.46,
+      0.471
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 101416,
+      "meshes": 3,
+      "nodes": 3,
+      "skins": 0,
+      "primitives": 3,
+      "materials": 3,
+      "textures": 3,
+      "images": 3,
+      "accessors": 7,
+      "bufferViews": 9,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 4450
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 537087,
+    "vertexCount": 13350,
+    "triangleCount": 4450,
+    "meshCount": 3,
+    "materialCount": 3,
+    "nodeCount": 3,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.32587,
+        0.000011,
+        -0.228836
+      ],
+      "center": [
+        0,
+        0.23,
+        0.006784
+      ],
+      "size": [
+        0.65174,
+        0.459979,
+        0.471239
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "cc0_source_Ottoman_01",
+        "vertexOffset": 537087,
+        "vertexCount": 12054,
+        "bindMatrix": [
+          0.32587,
+          0,
+          0,
+          0,
+          0,
+          0.32587,
+          0,
+          0,
+          0,
+          0,
+          0.32587,
+          0,
+          0,
+          0.23,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          3.06871,
+          0,
+          0,
+          0,
+          0,
+          3.06871,
+          0,
+          0,
+          0,
+          0,
+          3.06871,
+          0,
+          0,
+          -0.705803,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_ottoman_edge_tick_0",
+        "vertexOffset": 549141,
+        "vertexCount": 648,
+        "bindMatrix": [
+          0.1025,
+          0,
+          0,
+          0,
+          0,
+          0.1025,
+          0,
+          0,
+          0,
+          0,
+          0.1025,
+          0,
+          -0.06,
+          0.3772,
+          0.233407,
+          1
+        ],
+        "inverseBindMatrix": [
+          9.756097,
+          0,
+          0,
+          0,
+          0,
+          9.756097,
+          0,
+          0,
+          0,
+          0,
+          9.756097,
+          0,
+          0.585366,
+          -3.68,
+          -2.277139,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_ottoman_edge_tick_1",
+        "vertexOffset": 549789,
+        "vertexCount": 648,
+        "bindMatrix": [
+          0.1025,
+          0,
+          0,
+          0,
+          0,
+          0.1025,
+          0,
+          0,
+          0,
+          0,
+          0.1025,
+          0,
+          0.02,
+          0.3772,
+          0.233407,
+          1
+        ],
+        "inverseBindMatrix": [
+          9.756097,
+          0,
+          0,
+          0,
+          0,
+          9.756097,
+          0,
+          0,
+          0,
+          0,
+          9.756097,
+          0,
+          -0.195122,
+          -3.68,
+          -2.277139,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_vq1oiy",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        -7,
+        0,
+        -5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7,
+          0,
+          -5
+        ],
+        "halfSize": [
+          0.326,
+          0.23,
+          0.2355
+        ]
+      }
+    }
+  ]
+}

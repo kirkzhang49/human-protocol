@@ -1,0 +1,36 @@
+{
+  "source": "Poly Haven",
+  "assetId": "brass_vase_02",
+  "sourceUrl": "https://polyhaven.com/a/brass_vase_02",
+  "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/brass_vase_02/brass_vase_02_1k.gltf",
+  "license": "CC0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "resolution": "1k glTF",
+  "files": {
+    "include": {
+      "brass_vase_02.bin": {
+        "size": 164508,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/brass_vase_02/brass_vase_02.bin",
+        "md5": "081d4638f8ee5538d790afa92a2c0a4f"
+      },
+      "textures/brass_vase_02_diff_1k.jpg": {
+        "size": 648176,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_vase_02/brass_vase_02_diff_1k.jpg",
+        "md5": "e4cbd0185398372ff6c555fa181899b4"
+      },
+      "textures/brass_vase_02_nor_gl_1k.jpg": {
+        "size": 464575,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_vase_02/brass_vase_02_nor_gl_1k.jpg",
+        "md5": "8aa568f1245cdb3eb68e9d4a42a5afde"
+      },
+      "textures/brass_vase_02_arm_1k.jpg": {
+        "size": 550785,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/brass_vase_02/brass_vase_02_arm_1k.jpg",
+        "md5": "3b07ad2b1b6ab0fb474020e7f39d4b81"
+      }
+    },
+    "size": 2672,
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/brass_vase_02/brass_vase_02_1k.gltf",
+    "md5": "2746518f965d4ec6e0e4437e38a0beea"
+  }
+}

@@ -1,0 +1,1647 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_corner_pillar_museum",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum.glb",
+  "fileName": "hp_room_corner_pillar_museum.glb",
+  "sourceAsset": {
+    "modelKey": "room_corner_pillar_museum",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum.glb",
+    "sizeMeters": [
+      0.58,
+      2.62,
+      0.58
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 9824,
+      "meshes": 4,
+      "nodes": 4,
+      "skins": 0,
+      "primitives": 4,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 12,
+      "bufferViews": 9,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 416
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_corner_pillar_museum.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 1081860,
+    "vertexCount": 1248,
+    "triangleCount": 416,
+    "meshCount": 8,
+    "materialCount": 4,
+    "nodeCount": 9,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.24,
+        -0.24,
+        -2.815
+      ],
+      "center": [
+        0,
+        0,
+        -1.4
+      ],
+      "size": [
+        0.48,
+        0.48,
+        2.83
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_back_smoked_edge",
+        "vertexOffset": 1081860,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.18,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.18,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_black_square_core",
+        "vertexOffset": 1081992,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_bottom_brass_cap",
+        "vertexOffset": 1082316,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.02,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.02,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_front_smoked_edge",
+        "vertexOffset": 1082448,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.18,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.18,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_left_smoked_edge",
+        "vertexOffset": 1082580,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.18,
+          0,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.18,
+          0,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_right_smoked_edge",
+        "vertexOffset": 1082712,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.18,
+          0,
+          -1.38,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.18,
+          0,
+          1.38,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_small_cyan_status_slit",
+        "vertexOffset": 1082844,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.205,
+          -1.78,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.205,
+          1.78,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_pillar_top_brass_cap",
+        "vertexOffset": 1082976,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -2.78,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          2.78,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:level_03_entry_hall:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -5.66,
+        0,
+        8.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5.66,
+          0,
+          8.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_entry_hall:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        5.66,
+        0,
+        8.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          5.66,
+          0,
+          8.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_entry_hall:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -5.66,
+        0,
+        15.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5.66,
+          0,
+          15.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_entry_hall:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        5.66,
+        0,
+        15.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          5.66,
+          0,
+          15.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        -8.66,
+        0,
+        -1.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -8.66,
+          0,
+          -1.66
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        8.66,
+        0,
+        -1.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.66,
+          0,
+          -1.66
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        -8.66,
+        0,
+        8.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -8.66,
+          0,
+          8.66
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        8.66,
+        0,
+        8.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.66,
+          0,
+          8.66
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -15.36,
+        0,
+        0.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -15.36,
+          0,
+          0.34
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -9.04,
+        0,
+        0.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -9.04,
+          0,
+          0.34
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -15.36,
+        0,
+        6.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -15.36,
+          0,
+          6.66
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -9.04,
+        0,
+        6.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -9.04,
+          0,
+          6.66
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        9.04,
+        0,
+        0.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          9.04,
+          0,
+          0.34
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        15.36,
+        0,
+        0.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          15.36,
+          0,
+          0.34
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        9.04,
+        0,
+        6.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          9.04,
+          0,
+          6.66
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        15.36,
+        0,
+        6.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          15.36,
+          0,
+          6.66
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -5.66,
+        0,
+        -8.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5.66,
+          0,
+          -8.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        5.66,
+        0,
+        -8.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          5.66,
+          0,
+          -8.16
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -5.66,
+        0,
+        -1.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5.66,
+          0,
+          -1.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        5.66,
+        0,
+        -1.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          5.66,
+          0,
+          -1.84
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        -6.16,
+        0,
+        -16.96
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -6.16,
+          0,
+          -16.96
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        6.16,
+        0,
+        -16.96
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.16,
+          0,
+          -16.96
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        -6.16,
+        0,
+        -8.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -6.16,
+          0,
+          -8.34
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        6.16,
+        0,
+        -8.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.16,
+          0,
+          -8.34
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:pillar:front-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        6.84,
+        0,
+        -16.36
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.84,
+          0,
+          -16.36
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:pillar:front-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        18.66,
+        0,
+        -16.36
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          18.66,
+          0,
+          -16.36
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:pillar:back-left",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        6.84,
+        0,
+        -9.64
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.84,
+          0,
+          -9.64
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:pillar:back-right",
+      "source": "shell",
+      "role": "pillar",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        18.66,
+        0,
+        -9.64
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          18.66,
+          0,
+          -9.64
+        ],
+        "halfSize": [
+          0.29,
+          1.31,
+          0.29
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,598 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "hero_maintenance_repair_arm_cluster",
+  "family": "level01-maintenance",
+  "bundleId": "level01-maintenance/hero_maintenance_repair_arm_cluster",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "assets_v1_glb_bridge",
+    "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#glb-bridge",
+    "sourceGeometry": "public/assets/human-protocol/raw-webgpu/assets-v1/**/geometry.raw.bin",
+    "rawFile": "src/assets/models-cooked/environment/level01/hp_hero_maintenance_repair_arm_cluster.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_01_maintenance_bay"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "hero-or-puzzle",
+    "baseColorTarget": 1024,
+    "normalTarget": 1024,
+    "ormTarget": 512,
+    "emissiveTarget": 1024,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 11748,
+    "triangleCount": 3916,
+    "byteLength": 469920,
+    "hash": "3ce9c2e10b577038",
+    "asset": {
+      "modelKey": "hero_maintenance_repair_arm_cluster",
+      "sourceFile": "src/assets/models-cooked/environment/level01/hp_hero_maintenance_repair_arm_cluster.glb",
+      "rawFile": "src/assets/models-cooked/environment/level01/hp_hero_maintenance_repair_arm_cluster.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 11748,
+      "triangleCount": 3916,
+      "meshCount": 4,
+      "materialCount": 4,
+      "nodeCount": 4,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "arm_bundle_black_cable",
+          "vertexOffset": 0,
+          "vertexCount": 7320,
+          "bindMatrix": [
+            1.175,
+            0,
+            0,
+            0,
+            0,
+            1.175,
+            0,
+            0,
+            0,
+            0,
+            1.175,
+            0,
+            0,
+            1.455,
+            -0.138378,
+            1
+          ],
+          "inverseBindMatrix": [
+            0.851064,
+            0,
+            0,
+            0,
+            0,
+            0.851064,
+            0,
+            0,
+            0,
+            0,
+            0.851064,
+            0,
+            0,
+            -1.238298,
+            0.117768,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "clamp_elbow_blue_bearing",
+          "vertexOffset": 7320,
+          "vertexCount": 3864,
+          "bindMatrix": [
+            1.02125,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1.02125,
+            0,
+            0,
+            -1.02125,
+            0,
+            0,
+            0,
+            1.58625,
+            0.134989,
+            1
+          ],
+          "inverseBindMatrix": [
+            0.979192,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -0.979192,
+            0,
+            0,
+            0.979192,
+            0,
+            0,
+            0,
+            -0.13218,
+            1.553244,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "clamp_left_jaw",
+          "vertexOffset": 11184,
+          "vertexCount": 144,
+          "bindMatrix": [
+            1.003582,
+            0,
+            0,
+            0,
+            0,
+            0.987368,
+            0.179671,
+            0,
+            0,
+            -0.179671,
+            0.987368,
+            0,
+            -0.0425,
+            1.274694,
+            0.188908,
+            1
+          ],
+          "inverseBindMatrix": [
+            0.996431,
+            0,
+            0,
+            0,
+            0,
+            0.980332,
+            -0.178391,
+            0,
+            0,
+            0.178391,
+            0.980332,
+            0,
+            0.042348,
+            -1.283323,
+            0.042201,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "scanner_cyan_lens_large",
+          "vertexOffset": 11328,
+          "vertexCount": 420,
+          "bindMatrix": [
+            0.17,
+            0,
+            0,
+            0,
+            0,
+            0,
+            0.17,
+            0,
+            0,
+            -0.17,
+            0,
+            0,
+            0.1,
+            0.62,
+            -0.1,
+            1
+          ],
+          "inverseBindMatrix": [
+            5.882353,
+            0,
+            0,
+            0,
+            0,
+            -0.000001,
+            -5.882352,
+            0,
+            0,
+            5.882352,
+            -0.000001,
+            0,
+            -0.588235,
+            0.588236,
+            3.647058,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.12494,
+          0.275746,
+          -0.50676
+        ],
+        "center": [
+          0,
+          1.452873,
+          -0.088395
+        ],
+        "size": [
+          2.249881,
+          2.354254,
+          0.83673
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "4cd50cec4b2c220b",
+    "materials": [
+      {
+        "index": 8,
+        "id": "mat:room:palettematerial001:8703bbb",
+        "name": "PaletteMaterial001",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.48,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "PaletteBaseColor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.494428,
+              "contrast": 0.514875,
+              "chroma": 0.337068,
+              "detail": 0.076477
+            },
+            "generated": false,
+            "layer": 2
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "PaletteMetallicRoughness",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.244766,
+              "contrast": 0.268917,
+              "chroma": 0.692561,
+              "detail": 0.031867
+            },
+            "generated": false,
+            "layer": 1
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "id": "mat:room:palettematerial002:3da7b2e",
+        "name": "PaletteMaterial002",
+        "category": "room",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.56,
+          0.3798,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.433,
+          0.8195,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.19,
+          0.5225,
+          0.95
+        ],
+        "emissiveStrength": 0.9975,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "PaletteBaseColor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.494428,
+              "contrast": 0.514875,
+              "chroma": 0.337068,
+              "detail": 0.076477
+            },
+            "generated": false,
+            "layer": 2
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "PaletteMetallicRoughness",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.244766,
+              "contrast": 0.268917,
+              "chroma": 0.692561,
+              "detail": 0.031867
+            },
+            "generated": false,
+            "layer": 1
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "id": "mat:room:palettematerial003:254555e",
+        "name": "PaletteMaterial003",
+        "category": "room",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.56,
+          0.367392,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          0.729,
+          0.369,
+          1
+        ],
+        "emissiveFactor": [
+          0.9,
+          0.432,
+          0.072
+        ],
+        "emissiveStrength": 0.8424,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "PaletteBaseColor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.494428,
+              "contrast": 0.514875,
+              "chroma": 0.337068,
+              "detail": 0.076477
+            },
+            "generated": false,
+            "layer": 2
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "PaletteMetallicRoughness",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.244766,
+              "contrast": 0.268917,
+              "chroma": 0.692561,
+              "detail": 0.031867
+            },
+            "generated": false,
+            "layer": 1
+          }
+        ]
+      },
+      {
+        "index": 11,
+        "id": "mat:room:palettematerial004:0aeaf74",
+        "name": "PaletteMaterial004",
+        "category": "room",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.56,
+          0.444504,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.523,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.28,
+          0.95,
+          1
+        ],
+        "emissiveStrength": 1.8063,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "PaletteBaseColor",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.494428,
+              "contrast": 0.514875,
+              "chroma": 0.337068,
+              "detail": 0.076477
+            },
+            "generated": false,
+            "layer": 2
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "PaletteMetallicRoughness",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.244766,
+              "contrast": 0.268917,
+              "chroma": 0.692561,
+              "detail": 0.031867
+            },
+            "generated": false,
+            "layer": 1
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 1024,
+    "baseColorTextures": [
+      {
+        "layer": 2,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+        "name": "PaletteBaseColor",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-1ie9cdq.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.494428,
+          "contrast": 0.514875,
+          "chroma": 0.337068,
+          "detail": 0.076477
+        }
+      }
+    ],
+    "materialTextureSize": 1024,
+    "materialTextures": [
+      {
+        "layer": 1,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+        "name": "PaletteMetallicRoughness",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-cltdba.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.244766,
+          "contrast": 0.268917,
+          "chroma": 0.692561,
+          "detail": 0.031867
+        }
+      }
+    ]
+  }
+}

@@ -1,0 +1,68 @@
+{
+  "schema": "human-protocol/level02-furniture-image2-atlas-regions@1",
+  "generatedAt": "2026-06-19",
+  "atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+  "atlasSize": [
+    2048,
+    2048
+  ],
+  "paddingPolicy": "16px bleed per region, UVs inset by 8px in Blender",
+  "regions": {
+    "walnut_large_grain": {
+      "x": 16,
+      "y": 16,
+      "w": 752,
+      "h": 496,
+      "padding": 16,
+      "role": "tabletop and warm walnut veneer"
+    },
+    "honed_stone_warm_vein": {
+      "x": 800,
+      "y": 16,
+      "w": 496,
+      "h": 368,
+      "padding": 16,
+      "role": "kitchen stone counter"
+    },
+    "ivory_boucle_fabric": {
+      "x": 1328,
+      "y": 16,
+      "w": 496,
+      "h": 496,
+      "padding": 16,
+      "role": "shared soft upholstery"
+    },
+    "warm_lacquer_panel": {
+      "x": 16,
+      "y": 560,
+      "w": 496,
+      "h": 496,
+      "padding": 16,
+      "role": "wardrobe and elevator inset panels"
+    },
+    "residential_art_panel": {
+      "x": 544,
+      "y": 560,
+      "w": 624,
+      "h": 432,
+      "padding": 16,
+      "role": "portrait console art surface"
+    },
+    "muted_book_spines": {
+      "x": 1200,
+      "y": 560,
+      "w": 368,
+      "h": 240,
+      "padding": 16,
+      "role": "book shelf accents"
+    },
+    "shadow_trim_gap": {
+      "x": 1600,
+      "y": 560,
+      "w": 256,
+      "h": 256,
+      "padding": 16,
+      "role": "hidden control seams and shadow trims"
+    }
+  }
+}

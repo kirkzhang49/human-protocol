@@ -1,0 +1,117 @@
+{
+  "schema": "human-protocol/level05-reclamation-mother-keypoint-proxy@1",
+  "generatedAt": "2026-06-28T03:48:53.683994+00:00",
+  "purpose": "Use a keypoint-ratio low-poly proxy: keep roughly 10-30% geometric control vertices, reconnect and regroup them into Human Protocol runtime nodes, and replace source texture/materials with project-owned material slots.",
+  "assetAuthorship": {
+    "meshMethod": "keypoint proxy retopology from a user-provided generated source asset",
+    "textures": "none; source UVs/images are removed before export",
+    "externalTextureDependency": false,
+    "runtimeFacingNamesSanitized": true
+  },
+  "keypointProxy": {
+    "sourceVertices": 7807,
+    "sourcePolygons": 4824,
+    "decimateRatio": 0.18,
+    "proxyVerticesBeforeSemanticSplit": 3975,
+    "proxyPolygonsBeforeSemanticSplit": 868,
+    "proxyVerticesAfterSemanticSplit": 2746,
+    "proxyTriangleApprox": 5396
+  },
+  "derivedAsset": {
+    "modelKeyCandidate": "hp_enemy_reclamation_mother_keypoint_proxy_v1",
+    "glb": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_keypoint_proxy_v1.glb",
+    "sourceBlend": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_keypoint_proxy_v1.blend",
+    "status": "visual-candidate-not-yet-registered-in-level5",
+    "animatedClips": [
+      "idle",
+      "move",
+      "attack_windup",
+      "attack_strike",
+      "attack_recover",
+      "hit_light",
+      "hit_heavy",
+      "stagger",
+      "death",
+      "spawn_boot",
+      "utility_idle_00",
+      "utility_idle_01",
+      "utility_idle_02",
+      "utility_idle_03"
+    ],
+    "requiredSockets": [
+      "core_glass_weakpoint",
+      "missile_hit_socket",
+      "skill3_lockon_socket",
+      "boss_vfx_center_socket",
+      "floor_contact_socket",
+      "warning_emissive_slots"
+    ],
+    "meshObjects": 25,
+    "semanticGroups": [
+      "abdomen_body_part00",
+      "abdomen_body_part01",
+      "back_spine_dark_part00",
+      "back_spine_dark_part01",
+      "chest_body_part00",
+      "chest_body_part01",
+      "head_hood_body_part00",
+      "head_hood_body_part01",
+      "head_hood_body_part02",
+      "left_foot_dark",
+      "left_forearm_body",
+      "left_shin_body",
+      "left_shoulder_body_part00",
+      "left_shoulder_body_part01",
+      "left_thigh_body",
+      "left_upper_arm_body",
+      "right_foot_dark",
+      "right_forearm_body",
+      "right_shin_body",
+      "right_shoulder_body_part00",
+      "right_shoulder_body_part01",
+      "right_thigh_body",
+      "right_upper_arm_body"
+    ],
+    "verticesApprox": 2746,
+    "trianglesApprox": 5396,
+    "dimensionsBlender": [
+      2.1219,
+      1.2764,
+      2.8358
+    ],
+    "boundsMinBlender": [
+      -1.1028,
+      -0.6346,
+      -0.056
+    ],
+    "boundsMaxBlender": [
+      1.0192,
+      0.6418,
+      2.7798
+    ],
+    "glbScan": {
+      "isGlb": true,
+      "jsonFound": true,
+      "nodes": 49,
+      "meshes": 25,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "animations": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "forbiddenMarkerMatches": []
+    }
+  }
+}

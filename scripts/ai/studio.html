@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>HP · 随机密室工作室</title>
+<style>
+  :root {
+    --bg: #090e13; --panel: #111a23; --panel2: #0d151d; --edge: #1f2e3a;
+    --cyan: #4fd6ff; --mint: #6fe3c2; --amber: #ffb34f; --red: #ff5b4c;
+    --text: #d4e3ed; --muted: #6f8696;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: radial-gradient(1200px 600px at 70% -10%, #11202b 0%, var(--bg) 60%); color: var(--text);
+    font: 14px/1.5 -apple-system, "PingFang SC", "Segoe UI", system-ui, sans-serif; min-height: 100vh; }
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 24px 60px; }
+  header { display: flex; align-items: baseline; gap: 14px; margin-bottom: 6px; }
+  h1 { font-size: 22px; margin: 0; letter-spacing: .5px; }
+  h1 .accent { color: var(--cyan); }
+  .sub { color: var(--muted); font-size: 12.5px; }
+  .controls { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; margin: 22px 0 18px;
+    background: linear-gradient(180deg, var(--panel) 0%, var(--panel2) 100%); border: 1px solid var(--edge);
+    border-radius: 14px; padding: 16px 18px; }
+  .field { display: flex; flex-direction: column; gap: 6px; }
+  .field label { font-size: 11px; color: var(--muted); text-transform: uppercase; letter-spacing: 1px; }
+  select, input { background: #0a1219; color: var(--text); border: 1px solid var(--edge); border-radius: 9px;
+    padding: 9px 11px; font-size: 13.5px; outline: none; min-width: 120px; }
+  select:focus, input:focus { border-color: var(--cyan); }
+  .btn { border: none; border-radius: 11px; padding: 12px 20px; font-size: 14px; font-weight: 600; cursor: pointer;
+    color: #04141a; background: linear-gradient(135deg, var(--cyan), var(--mint)); box-shadow: 0 6px 22px -8px var(--cyan);
+    transition: transform .08s ease, box-shadow .2s; }
+  .btn:hover { transform: translateY(-1px); box-shadow: 0 10px 28px -8px var(--cyan); }
+  .btn:active { transform: translateY(0); }
+  .btn.ghost { background: #0d1922; color: var(--text); border: 1px solid var(--edge); box-shadow: none; }
+  .btn.amber { background: linear-gradient(135deg, var(--amber), #ff8f4f); box-shadow: 0 6px 22px -8px var(--amber); }
+  .btn:disabled { opacity: .4; cursor: not-allowed; transform: none; }
+  .grow { flex: 1; }
+  .stage { display: grid; grid-template-columns: 1.25fr 1fr; gap: 16px; }
+  @media (max-width: 880px) { .stage { grid-template-columns: 1fr; } }
+  .card { background: linear-gradient(180deg, var(--panel) 0%, var(--panel2) 100%); border: 1px solid var(--edge);
+    border-radius: 14px; padding: 16px 18px; }
+  .card h2 { font-size: 13px; color: var(--muted); text-transform: uppercase; letter-spacing: 1.2px; margin: 0 0 12px; }
+  .map { width: 100%; height: 420px; background: #070c11; border-radius: 10px; border: 1px solid var(--edge); }
+  .verdict { display: flex; align-items: center; gap: 14px; margin-bottom: 14px; }
+  .badge { font-weight: 700; padding: 6px 12px; border-radius: 9px; font-size: 13px; }
+  .badge.ok { background: rgba(111,227,194,.14); color: var(--mint); border: 1px solid rgba(111,227,194,.4); }
+  .badge.bad { background: rgba(255,91,76,.14); color: var(--red); border: 1px solid rgba(255,91,76,.4); }
+  .gauge { display: flex; align-items: center; gap: 14px; }
+  .gauge .num { font-size: 34px; font-weight: 800; font-variant-numeric: tabular-nums; }
+  .gauge .of { color: var(--muted); font-size: 13px; }
+  .meta { color: var(--muted); font-size: 12.5px; margin: 2px 0 14px; }
+  .bars { display: grid; gap: 8px; margin: 6px 0 14px; }
+  .bar { display: grid; grid-template-columns: 52px 1fr 22px; align-items: center; gap: 10px; font-size: 12.5px; }
+  .bar .track { height: 9px; background: #0a141c; border-radius: 6px; overflow: hidden; }
+  .bar .fill { height: 100%; background: linear-gradient(90deg, var(--cyan), var(--mint)); border-radius: 6px; }
+  .findings { display: grid; gap: 7px; margin-top: 4px; }
+  .finding { display: flex; gap: 9px; align-items: baseline; font-size: 13px; padding: 7px 10px; border-radius: 8px; background: #0a141c; }
+  .finding .dot { font-weight: 800; }
+  .finding.blocker .dot { color: var(--red); } .finding.warning .dot { color: var(--amber); } .finding.info .dot { color: var(--muted); }
+  .finding .tag { font-weight: 600; } .finding .det { color: var(--muted); }
+  .row { display: flex; gap: 10px; margin-top: 14px; }
+  .empty { color: var(--muted); text-align: center; padding: 80px 0; }
+  .pill { display: inline-block; background: #0a141c; border: 1px solid var(--edge); border-radius: 999px; padding: 3px 10px; font-size: 12px; margin: 2px 4px 2px 0; }
+  .legend { display: flex; gap: 14px; font-size: 11.5px; color: var(--muted); margin-top: 8px; flex-wrap: wrap; }
+  .legend i { display: inline-block; width: 10px; height: 10px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <h1>HP · <span class="accent">随机密室工作室</span></h1>
+    <span class="sub">确定性生成 · 一键体检 · 自动修复 · 零模型 · 不进游戏包</span>
+  </header>
+
+  <div class="controls">
+    <div class="field"><label>主题 Arc</label>
+      <select id="arc">
+        <option value="">随机</option><option value="museum">人类博物馆</option><option value="clinic">记忆诊所</option>
+        <option value="maintenance">维修舱</option><option value="reclamation">回收核心</option><option value="surveillance">监控档案区</option>
+      </select></div>
+    <div class="field"><label>谜题数</label>
+      <select id="pc"><option value="">随机</option><option>3</option><option>4</option><option>5</option></select></div>
+    <div class="field"><label>种子（可空）</label><input id="seed" placeholder="留空=随机" style="width:120px" /></div>
+    <button class="btn" id="gen">🎲 随机生成密室</button>
+    <span class="grow"></span>
+    <button class="btn amber" id="repair" disabled>🔧 一键修复</button>
+    <button class="btn ghost" id="story" disabled>🪶 生成双语故事</button>
+    <button class="btn ghost" id="export" disabled>📥 导出 JSON</button>
+  </div>
+
+  <div class="stage">
+    <div class="card">
+      <h2>俯视平面图</h2>
+      <svg class="map" id="map" viewBox="0 0 600 420" preserveAspectRatio="xMidYMid meet"></svg>
+      <div class="legend">
+        <span><i style="background:#6fe3c2"></i>出生</span><span><i style="background:#ffb34f"></i>出口</span>
+        <span><i style="background:#4fd6ff"></i>谜题锁门</span><span><i style="background:#3a4a57"></i>开门</span>
+        <span><i style="background:#ff5b4c"></i>谜题台</span>
+      </div>
+    </div>
+    <div class="card" id="report">
+      <h2>体检报告</h2>
+      <div class="empty" id="empty">点「🎲 随机生成密室」开始</div>
+      <div id="detail" style="display:none"></div>
+      <div id="storyBox" style="display:none;margin-top:14px;border-top:1px solid var(--edge);padding-top:12px"></div>
+    </div>
+  </div>
+</div>
+
+<script>
+let current = null; // { project, health }
+const $ = (id) => document.getElementById(id);
+
+async function api(path, body) {
+  const r = await fetch(path, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify(body || {}) });
+  return r.json();
+}
+
+function drawMap(project) {
+  const svg = $("map"); svg.innerHTML = "";
+  const rooms = project.rooms, doors = project.doors, puzzles = project.puzzles || [];
+  const xs = rooms.flatMap(r => [r.center[0]-r.size[0]/2, r.center[0]+r.size[0]/2]);
+  const zs = rooms.flatMap(r => [r.center[1]-r.size[1]/2, r.center[1]+r.size[1]/2]);
+  const minX=Math.min(...xs), maxX=Math.max(...xs), minZ=Math.min(...zs), maxZ=Math.max(...zs);
+  const pad=34, W=600, H=420;
+  const sx = (W-2*pad)/Math.max(1,(maxX-minX)), sz=(H-2*pad)/Math.max(1,(maxZ-minZ));
+  const s = Math.min(sx, sz);
+  const X = x => pad + (x-minX)*s + (W-2*pad - (maxX-minX)*s)/2;
+  const Y = z => pad + (maxZ-z)*s; // 高 z 在上
+  const NS = "http://www.w3.org/2000/svg";
+  const el = (t, a) => { const e=document.createElementNS(NS,t); for(const k in a) e.setAttribute(k,a[k]); return e; };
+  const byId = Object.fromEntries(rooms.map(r=>[r.id,r]));
+  // doors
+  for (const d of doors) {
+    const a=byId[d.fromRoomId], b=byId[d.toRoomId]; if(!a||!b) continue;
+    const col = d.lockType==="none" ? "#3a4a57" : d.lockType==="key_item" ? "#ffb34f" : "#4fd6ff";
+    svg.appendChild(el("line",{x1:X(a.center[0]),y1:Y(a.center[1]),x2:X(b.center[0]),y2:Y(b.center[1]),stroke:col,"stroke-width":3,"stroke-dasharray":d.lockType==="none"?"4 4":""}));
+  }
+  // rooms
+  for (const r of rooms) {
+    const isSpawn = r.id===project.rooms[0].id, isExit = r.id===project.exitRoomId;
+    const fill = isSpawn ? "rgba(111,227,194,.12)" : isExit ? "rgba(255,179,79,.12)" : "rgba(79,214,255,.05)";
+    const stroke = isSpawn ? "#6fe3c2" : isExit ? "#ffb34f" : "#27424f";
+    svg.appendChild(el("rect",{x:X(r.center[0]-r.size[0]/2),y:Y(r.center[1]+r.size[1]/2),width:r.size[0]*s,height:r.size[1]*s,rx:6,fill,stroke,"stroke-width":1.5}));
+    const t=el("text",{x:X(r.center[0]),y:Y(r.center[1])-2,fill:"#cfe0ea","font-size":11,"text-anchor":"middle"}); t.textContent=r.label; svg.appendChild(t);
+    const tag=el("text",{x:X(r.center[0]),y:Y(r.center[1])+12,fill:"#6f8696","font-size":9,"text-anchor":"middle"}); tag.textContent=isSpawn?"出生":isExit?"出口":r.style; svg.appendChild(tag);
+  }
+  // puzzles
+  for (const p of puzzles) {
+    const cx=X(p.position[0]), cy=Y(p.position[1]);
+    svg.appendChild(el("rect",{x:cx-6,y:cy-6,width:12,height:12,fill:"#ff5b4c",transform:`rotate(45 ${cx} ${cy})`,opacity:.9}));
+    const t=el("text",{x:cx,y:cy-10,fill:"#ff8f7f","font-size":8.5,"text-anchor":"middle"}); t.textContent=(p.kind||"").replace("_"," ").slice(0,12); svg.appendChild(t);
+  }
+}
+
+function renderReport(health, seed, repaired) {
+  $("empty").style.display="none"; const d=$("detail"); d.style.display="block";
+  const sevMark={blocker:"✗",warning:"⚠",info:"·"};
+  const dd=health.difficulty, axes=[["探索",dd.exploration],["解谜",dd.puzzle],["战斗",dd.combat],["路线",dd.routeComplexity]];
+  d.innerHTML = `
+    <div class="verdict">
+      <span class="badge ${health.playable?'ok':'bad'}">${health.playable?'✓ 可玩':'✗ 被阻断'}</span>
+      <div class="gauge"><span class="num">${health.score}</span><span class="of">/100 质量分</span></div>
+    </div>
+    <div class="meta">arc: ${health.arc} · seed ${seed}${repaired?' · 已自愈':''} · 节奏 ${health.pacing.join("、")}</div>
+    <div>${health.puzzleStructure.kinds.map(k=>`<span class="pill">${k}</span>`).join("")}<span class="pill">链深 ${health.puzzleStructure.chainDepth}</span></div>
+    <div class="bars">${axes.map(([n,v])=>`<div class="bar"><span>${n}</span><div class="track"><div class="fill" style="width:${v/3*100}%"></div></div><span>${v}</span></div>`).join("")}</div>
+    <div class="findings">${health.findings.length? health.findings.map(f=>`<div class="finding ${f.severity}"><span class="dot">${sevMark[f.severity]}</span><span><span class="tag">${f.tag}</span> <span class="det">${f.detail||''}</span></span></div>`).join("") : '<div class="finding info"><span class="dot">✓</span><span class="tag">无问题</span></div>'}</div>
+    <div class="row"><span class="grow"></span></div>`;
+  $("repair").disabled = !health.findings.some(f=>f.tag!=='no_named_lighting_preset');
+  $("export").disabled = false; $("story").disabled = false;
+  $("storyBox").style.display="none";
+}
+
+$("gen").onclick = async () => {
+  $("gen").textContent="生成中…"; $("gen").disabled=true;
+  try {
+    const seed = $("seed").value.trim();
+    const pc = $("pc").value;
+    const res = await api("/api/generate", { seed: seed?Number(seed):undefined, puzzleCount: pc?Number(pc):undefined, arc: $("arc").value||undefined });
+    current = res; drawMap(res.project); renderReport(res.health, res.seed, res.repaired);
+  } catch(e){ alert("生成失败: "+e); }
+  $("gen").textContent="🎲 随机生成密室"; $("gen").disabled=false;
+};
+
+$("repair").onclick = async () => {
+  if(!current) return; $("repair").textContent="修复中…"; $("repair").disabled=true;
+  try {
+    const res = await api("/api/repair", { project: current.project });
+    if(res.error){ alert(res.error); } else {
+      current.project = res.project; current.health = res.after;
+      drawMap(res.project); renderReport(res.after, current.seed, true);
+      alert(`修复完成：分 ${res.before.score}→${res.after.score}，应用 ${res.applied.length} 项`);
+    }
+  } catch(e){ alert("修复失败: "+e); }
+  $("repair").textContent="🔧 一键修复";
+};
+
+$("story").onclick = async () => {
+  if(!current) return; $("story").textContent="生成中…"; $("story").disabled=true;
+  try {
+    const res = await api("/api/story", { project: current.project });
+    const box = $("storyBox"); box.style.display="block";
+    if(res.error){ box.innerHTML = `<div class="finding info"><span class="dot">·</span><span class="det">${res.error}</span></div>`; }
+    else {
+      const d=res.draft, row=(k,b)=>`<div style="margin:6px 0"><span style="color:var(--muted);font-size:11px">${k}</span><div>${b.zh}</div><div style="color:var(--muted)">${b.en}</div></div>`;
+      box.innerHTML = `<h2 style="margin:0 0 8px">🪶 双语故事 <span class="pill">${res.source==='model'?'模型':'model-free'}</span></h2>`
+        + row('标题 title',d.title)+row('背景 premise',d.premise)+row('设施播报',d.facilityLine)+row('结尾档案句',d.victoryLine)
+        + `<div style="margin-top:6px">${d.motifsUsed.map(m=>`<span class="pill">${m}</span>`).join("")}</div>`;
+    }
+  } catch(e){ alert("故事生成失败: "+e); }
+  $("story").textContent="🪶 生成双语故事"; $("story").disabled=false;
+};
+
+$("export").onclick = () => {
+  if(!current) return;
+  const blob = new Blob([JSON.stringify(current.project,null,2)],{type:"application/json"});
+  const a=document.createElement("a"); a.href=URL.createObjectURL(blob); a.download=(current.project.projectId||"room")+".builder.json"; a.click();
+};
+</script>
+</body>
+</html>

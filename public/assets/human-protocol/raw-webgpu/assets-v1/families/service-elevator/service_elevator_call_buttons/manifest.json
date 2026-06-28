@@ -1,0 +1,596 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "service_elevator_call_buttons",
+  "family": "service-elevator",
+  "bundleId": "service-elevator/service_elevator_call_buttons",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "level_02_residential_simulation",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_02_residential_simulation.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_02_residential_simulation_geometry.bin",
+    "rawFile": "src/assets/models/environment/shells/hp_service_elevator_call_buttons.glb",
+    "rawSource": "raw-models",
+    "sourceLevels": [
+      "level_01_maintenance_bay",
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 948,
+    "triangleCount": 316,
+    "byteLength": 37920,
+    "hash": "d14de3125521a07d",
+    "asset": {
+      "modelKey": "service_elevator_call_buttons",
+      "sourceFile": "src/assets/models-cooked/environment/shells/hp_service_elevator_call_buttons.glb",
+      "rawFile": "src/assets/models/environment/shells/hp_service_elevator_call_buttons.glb",
+      "rawSource": "raw-models",
+      "vertexOffset": 0,
+      "vertexCount": 948,
+      "triangleCount": 316,
+      "meshCount": 7,
+      "materialCount": 5,
+      "nodeCount": 7,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_call_panel_mount",
+          "vertexOffset": 0,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_call_panel_bezel_top",
+          "vertexOffset": 36,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.31,
+            0.055,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.31,
+            -0.055,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_call_panel_bezel_bottom",
+          "vertexOffset": 72,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.31,
+            0.055,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.31,
+            -0.055,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_call_panel_screen",
+          "vertexOffset": 108,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.15,
+            0.072,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.15,
+            -0.072,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_call_button_cyan",
+          "vertexOffset": 144,
+          "vertexCount": 384,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -0.09,
+            -0.13,
+            0.083,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.09,
+            -0.083,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_call_button_amber",
+          "vertexOffset": 528,
+          "vertexCount": 384,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0.09,
+            -0.13,
+            0.083,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.09,
+            -0.083,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_call_panel_cyan_label",
+          "vertexOffset": 912,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.27,
+            0.075,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.27,
+            -0.075,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.21,
+          -0.35,
+          -0.04
+        ],
+        "center": [
+          0,
+          0,
+          0.0315
+        ],
+        "size": [
+          0.42,
+          0.7,
+          0.143
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "1e3aa9e8cef1f1f3",
+    "materials": [
+      {
+        "index": 110,
+        "id": "mat:interaction:interaction-material:rb2lcv",
+        "name": "interaction_material",
+        "category": "interaction",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.3,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.002125,
+          0.004025,
+          0.006049,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.46,
+        "metallicFactor": 0.82,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": false,
+        "textures": []
+      },
+      {
+        "index": 111,
+        "id": "mat:interaction:interaction-material:ajf0nj",
+        "name": "interaction_material",
+        "category": "interaction",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.3,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.274677,
+          0.366253,
+          0.376262,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 0.78,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": false,
+        "textures": []
+      },
+      {
+        "index": 112,
+        "id": "mat:interaction:interaction-material:1sjpnvy",
+        "name": "interaction_material",
+        "category": "interaction",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.3,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.258183,
+          0.930111,
+          1,
+          0.78
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.24,
+        "metallicFactor": 0.18,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "BLEND",
+        "transparency": {
+          "mode": "blend",
+          "alpha": 0.78,
+          "source": "gltf-material.transparent+gltf-material.opacity"
+        },
+        "doubleSided": false,
+        "textures": []
+      },
+      {
+        "index": 113,
+        "id": "mat:interaction:interaction-material:1u06sc6",
+        "name": "interaction_material",
+        "category": "interaction",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.3,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.122139,
+          0.863157,
+          1,
+          0.88
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.24,
+        "metallicFactor": 0.18,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "BLEND",
+        "transparency": {
+          "mode": "blend",
+          "alpha": 0.88,
+          "source": "gltf-material.transparent+gltf-material.opacity"
+        },
+        "doubleSided": false,
+        "textures": []
+      },
+      {
+        "index": 114,
+        "id": "mat:interaction:interaction-material:wmlbug",
+        "name": "interaction_material",
+        "category": "interaction",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.3,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.745404,
+          0.371238,
+          0.061246,
+          0.78
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.24,
+        "metallicFactor": 0.18,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "BLEND",
+        "transparency": {
+          "mode": "blend",
+          "alpha": 0.78,
+          "source": "gltf-material.transparent+gltf-material.opacity"
+        },
+        "doubleSided": false,
+        "textures": []
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

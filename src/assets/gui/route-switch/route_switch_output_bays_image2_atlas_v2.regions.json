@@ -1,0 +1,83 @@
+{
+  "atlasSize": [
+    1200,
+    1280
+  ],
+  "source": "src/assets/gui/route-switch/image2-sources/route_switch_output_bays_image2_source_v2.png",
+  "image2SourceInputs": [
+    "src/assets/gui/route-switch/route_switch_parts_image2.png",
+    "src/assets/gui/route-switch/image2-sources/route_switch_output_modules_image2_source_v1.png"
+  ],
+  "sourceRegions": {
+    "output_bay": [
+      380,
+      1032,
+      180,
+      300
+    ],
+    "output_tube_cyan": [
+      570,
+      1032,
+      96,
+      240
+    ],
+    "output_tube_amber": [
+      676,
+      1032,
+      96,
+      240
+    ],
+    "output_tube_green": [
+      782,
+      1032,
+      96,
+      240
+    ],
+    "output_tube_violet": [
+      888,
+      1032,
+      96,
+      240
+    ],
+    "output_tube_off": [
+      10,
+      1342,
+      96,
+      240
+    ]
+  },
+  "scaleFromSource": 2,
+  "regions": {
+    "output_bay_cyan": [
+      20,
+      20,
+      360,
+      600
+    ],
+    "output_bay_amber": [
+      420,
+      20,
+      360,
+      600
+    ],
+    "output_bay_green": [
+      820,
+      20,
+      360,
+      600
+    ],
+    "output_bay_violet": [
+      20,
+      660,
+      360,
+      600
+    ],
+    "output_bay_off": [
+      420,
+      660,
+      360,
+      600
+    ]
+  },
+  "notes": "Primary pixels are assembled from saved Image2 route-switch parts only. Local script performed crop, scale, atlas packing, PNG zlib optimization, and JSON writing; no local drawing/SVG/canvas main visual."
+}

@@ -1,0 +1,191 @@
+{
+  "schemaVersion": "hp.raw-webgpu.level03-lighting-tuning.v3",
+  "algorithm": "age-museum-premium-black-rim-gallery-v4",
+  "source": "scripts/optimizer/run-level03-age-museum-lighting-solver.mjs",
+  "sourceLayout": "src/assets/manifests/generated/age/human_protocol_level03_museum_age_layout_v1.json",
+  "sourceMaterialTargets": "src/assets/manifests/generated/age/human_protocol_level03_museum_material_targets_v1.json",
+  "global": {
+    "shadowStrengthHigh": 0.761817,
+    "shadowStrengthBalanced": 0.521343,
+    "shadowBias": 0.0026,
+    "normalBias": 0.0085,
+    "specularGain": 0.995877,
+    "contactGain": 1.02,
+    "wallGuard": 0.860888,
+    "warmGalleryPoolBudget": 0.48,
+    "selectedCandidateId": "age-natural-graphite-gallery-0707447",
+    "selectedFamily": "natural-graphite-gallery",
+    "bestScore": 148.241837,
+    "materialTargetVersion": "hp.age.museum-material-targets.v1"
+  },
+  "rooms": {
+    "level_03_entry_hall": {
+      "artist": {
+        "exposure": 1.081582,
+        "contrast": 1.221123,
+        "saturation": 1.073236,
+        "warmth": 0.450824
+      },
+      "bounce": {
+        "floor": 0.119531,
+        "ceiling": 0.660973,
+        "side": 0.571882,
+        "shadowDepth": 0.734207
+      },
+      "algorithm": {
+        "ao": 0.780634,
+        "probe": 0.94,
+        "material": 1.24,
+        "localLight": 0.991621,
+        "shadowReceiver": 0.703413,
+        "specular": 1.089217,
+        "contact": 0.92,
+        "wallGuard": 0.824932
+      }
+    },
+    "level_03_gallery_lobby": {
+      "artist": {
+        "exposure": 1.058746,
+        "contrast": 1.279631,
+        "saturation": 1.063236,
+        "warmth": 0.440824
+      },
+      "bounce": {
+        "floor": 0.112471,
+        "ceiling": 0.680973,
+        "side": 0.66,
+        "shadowDepth": 0.798979
+      },
+      "algorithm": {
+        "ao": 0.80161,
+        "probe": 0.94,
+        "material": 1.24,
+        "localLight": 1.024948,
+        "shadowReceiver": 0.713508,
+        "specular": 1.100362,
+        "contact": 0.945998,
+        "wallGuard": 0.832495
+      }
+    },
+    "level_03_tool_exhibit": {
+      "artist": {
+        "exposure": 1.121194,
+        "contrast": 1.247286,
+        "saturation": 1.095236,
+        "warmth": 0.482824
+      },
+      "bounce": {
+        "floor": 0.116568,
+        "ceiling": 0.688973,
+        "side": 0.609842,
+        "shadowDepth": 0.763723
+      },
+      "algorithm": {
+        "ao": 0.811985,
+        "probe": 0.94,
+        "material": 1.24,
+        "localLight": 1.160694,
+        "shadowReceiver": 0.707976,
+        "specular": 1.119086,
+        "contact": 0.969388,
+        "wallGuard": 0.8393
+      }
+    },
+    "level_03_voice_exhibit": {
+      "artist": {
+        "exposure": 1.13425,
+        "contrast": 1.255368,
+        "saturation": 1.113236,
+        "warmth": 0.490824
+      },
+      "bounce": {
+        "floor": 0.119486,
+        "ceiling": 0.688973,
+        "side": 0.618821,
+        "shadowDepth": 0.76911
+      },
+      "algorithm": {
+        "ao": 0.82716,
+        "probe": 0.94,
+        "material": 1.24,
+        "localLight": 1.34,
+        "shadowReceiver": 0.708306,
+        "specular": 1.12037,
+        "contact": 0.994082,
+        "wallGuard": 0.846483
+      }
+    },
+    "level_03_body_exhibit": {
+      "artist": {
+        "exposure": 1.111532,
+        "contrast": 1.293523,
+        "saturation": 1.103236,
+        "warmth": 0.470824
+      },
+      "bounce": {
+        "floor": 0.115241,
+        "ceiling": 0.7,
+        "side": 0.66,
+        "shadowDepth": 0.794051
+      },
+      "algorithm": {
+        "ao": 0.845474,
+        "probe": 0.94,
+        "material": 1.24,
+        "localLight": 1.34,
+        "shadowReceiver": 0.712415,
+        "specular": 1.126335,
+        "contact": 1.019,
+        "wallGuard": 0.853732
+      }
+    },
+    "level_03_central_archive": {
+      "artist": {
+        "exposure": 1.040018,
+        "contrast": 1.34,
+        "saturation": 1.065236,
+        "warmth": 0.432824
+      },
+      "bounce": {
+        "floor": 0.103271,
+        "ceiling": 0.618973,
+        "side": 0.66,
+        "shadowDepth": 0.870224
+      },
+      "algorithm": {
+        "ao": 0.85186,
+        "probe": 0.94,
+        "material": 1.24,
+        "localLight": 1.159343,
+        "shadowReceiver": 0.724821,
+        "specular": 1.129588,
+        "contact": 1.016832,
+        "wallGuard": 0.887102
+      }
+    },
+    "level_03_exit_room": {
+      "artist": {
+        "exposure": 1.072391,
+        "contrast": 1.303694,
+        "saturation": 1.065236,
+        "warmth": 0.432824
+      },
+      "bounce": {
+        "floor": 0.103476,
+        "ceiling": 0.638973,
+        "side": 0.66,
+        "shadowDepth": 0.823578
+      },
+      "algorithm": {
+        "ao": 0.81124,
+        "probe": 0.94,
+        "material": 1.24,
+        "localLight": 1.156235,
+        "shadowReceiver": 0.71826,
+        "specular": 1.127047,
+        "contact": 0.958413,
+        "wallGuard": 0.836107
+      }
+    }
+  }
+}

@@ -1,0 +1,224 @@
+{
+  "schemaVersion": "hp.image2.atlasRegions.v1",
+  "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+  "sourceImageSize": [
+    1254,
+    1254
+  ],
+  "atlas": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.png",
+  "atlasSize": [
+    1024,
+    768
+  ],
+  "cutMethod": "fixed-rectangles-recorded-in-script",
+  "tileSize": [
+    256,
+    256
+  ],
+  "regions": {
+    "cart_dark_powdercoat": {
+      "atlasRect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        15,
+        370,
+        106,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/cart_dark_powdercoat.png",
+      "intent": "dark gray powder-coated tool-cart body panels"
+    },
+    "worn_black_panel": {
+      "atlasRect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        126,
+        370,
+        100,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/worn_black_panel.png",
+      "intent": "slightly used black industrial metal face"
+    },
+    "brushed_steel": {
+      "atlasRect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        233,
+        370,
+        78,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/brushed_steel.png",
+      "intent": "brushed steel trim and hydraulic metal"
+    },
+    "safety_yellow": {
+      "atlasRect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        393,
+        370,
+        83,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/safety_yellow.png",
+      "intent": "yellow caution paint, edge-worn"
+    },
+    "hazard_stripe": {
+      "atlasRect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        482,
+        370,
+        78,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/hazard_stripe.png",
+      "intent": "yellow-black hazard striping for edges and lips"
+    },
+    "lift_white_enamel": {
+      "atlasRect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        777,
+        370,
+        104,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/lift_white_enamel.png",
+      "intent": "off-white enamel maintenance panels"
+    },
+    "lift_scuffed_white": {
+      "atlasRect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        887,
+        370,
+        86,
+        72
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/lift_scuffed_white.png",
+      "intent": "used white repair-table rim panels"
+    },
+    "tool_pegboard": {
+      "atlasRect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        126,
+        770,
+        94,
+        75
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/tool_pegboard.png",
+      "intent": "white pegboard holes for wall-mounted tool panel"
+    },
+    "dark_tool_plate": {
+      "atlasRect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        225,
+        770,
+        110,
+        75
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/dark_tool_plate.png",
+      "intent": "dark tool tray / drawer insert"
+    },
+    "cyan_diagnostic_glass": {
+      "atlasRect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        452,
+        770,
+        115,
+        75
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/cyan_diagnostic_glass.png",
+      "intent": "small cyan diagnostic glass, restrained accent only"
+    },
+    "stainless_basin": {
+      "atlasRect": [
+        512,
+        512,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        404,
+        865,
+        158,
+        155
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/stainless_basin.png",
+      "intent": "stainless wash-basin bowl and rim"
+    },
+    "rubber_wheel_tread": {
+      "atlasRect": [
+        768,
+        512,
+        256,
+        256
+      ],
+      "sourceImage": "src/assets/textures/environment/level01-workcell-image2/image2-sources/level01_workcell_image2_reference_board_v1.png",
+      "sourceRect": [
+        586,
+        1044,
+        118,
+        196
+      ],
+      "fixedRectCut": "src/assets/textures/environment/level01-workcell-image2/fixed-rect-cuts/rubber_wheel_tread.png",
+      "intent": "dark rubber wheel/tread material"
+    }
+  }
+}

@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "human-protocol.asset-report.polyhaven-museum-ceiling.v1",
+  "assetFamily": "polyhaven_museum_ceiling_2026_06_18",
+  "blueprint": {
+    "role": "Three selectable museum ceiling directions: limestone coffer, frosted skylight, and classical rotunda chandelier.",
+    "scaleMeters": {
+      "ceilingSurfaces": "room-sized repeating 384px PBR triples; authored for 3-6m museum rooms",
+      "room_cc0_chandelier_02_ceiling": [
+        1.25,
+        1.561,
+        1.14
+      ]
+    },
+    "silhouette": [
+      "deep coffer grid",
+      "frosted skylight with bronze mullions",
+      "round plaster medallion plus hanging brass chandelier"
+    ],
+    "materialSlots": [
+      "plaster/limestone",
+      "frosted glass",
+      "dark bronze/brass",
+      "warm low emissive bulbs"
+    ],
+    "collisionProxy": "ceiling surface none; chandelier non-solid ceiling mount",
+    "expectedPlacement": "Use the ceiling presets from /build; place chandelier near room center at default ceiling mount elevation."
+  },
+  "licensePolicy": {
+    "source": "Poly Haven",
+    "license": "CC0",
+    "commercialUseAllowed": true,
+    "modificationAllowed": true,
+    "redistributionAllowedInBundledGame": true,
+    "attributionRequired": false,
+    "licenseUrl": "https://polyhaven.com/license"
+  },
+  "assets": [
+    {
+      "modelKey": "room_cc0_chandelier_02_ceiling",
+      "label": "古典黄铜吊灯",
+      "sourceAssetId": "Chandelier_02",
+      "sourceUrl": "https://polyhaven.com/a/Chandelier_02",
+      "author": "Kirill Sannikov",
+      "license": "CC0",
+      "role": "ceiling-mounted brass chandelier for a classical museum rotunda ceiling option",
+      "rawGlb": "src/assets/external/polyhaven_museum_ceiling_2026_06_18/raw-glb/hp_room_cc0_chandelier_02_ceiling.glb",
+      "sourceBlend": "src/assets/source_blend/polyhaven-museum-ceiling/human_protocol_room_cc0_chandelier_02_ceiling.blend",
+      "sizeMeters": [
+        1.25,
+        1.561,
+        1.14
+      ],
+      "mount": "ceiling",
+      "pivot": "top-center; fixture hangs downward from exported Y=0",
+      "bytesRaw": 1315412,
+      "collisionProxy": {
+        "type": "none",
+        "reason": "ceiling light should not block player path"
+      }
+    }
+  ]
+}

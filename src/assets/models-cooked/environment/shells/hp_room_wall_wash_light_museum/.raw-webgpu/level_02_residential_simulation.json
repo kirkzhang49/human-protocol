@@ -1,0 +1,387 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_wall_wash_light_museum",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum.glb",
+  "fileName": "hp_room_wall_wash_light_museum.glb",
+  "sourceAsset": {
+    "modelKey": "room_wall_wash_light_museum",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum.glb",
+    "sizeMeters": [
+      1.7,
+      0.22,
+      0.12
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 8204,
+      "meshes": 4,
+      "nodes": 4,
+      "skins": 0,
+      "primitives": 4,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 12,
+      "bufferViews": 9,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 220
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_wall_wash_light_museum.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 522546,
+    "vertexCount": 660,
+    "triangleCount": 220,
+    "meshCount": 5,
+    "materialCount": 4,
+    "nodeCount": 6,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.7,
+        -0.035,
+        -1.499
+      ],
+      "center": [
+        0,
+        0.013,
+        -1.432
+      ],
+      "size": [
+        1.4,
+        0.096,
+        0.134
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_black_back_rail",
+        "vertexOffset": 522546,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1.42,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1.42,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_cyan_service_dot",
+        "vertexOffset": 522678,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.52,
+          0.052,
+          -1.49,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.52,
+          -0.052,
+          1.49,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_left_brass_endcap",
+        "vertexOffset": 522810,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.66,
+          0.035,
+          -1.42,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.66,
+          -0.035,
+          1.42,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_right_brass_endcap",
+        "vertexOffset": 522942,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.66,
+          0.035,
+          -1.42,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.66,
+          -0.035,
+          1.42,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_warm_linear_lens",
+        "vertexOffset": 523074,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.047,
+          -1.42,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.047,
+          1.42,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_02_official_exit_left_wall_wash_asset",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_exit_elevator_room",
+      "secondaryRoomId": null,
+      "position": [
+        -3.08,
+        1.2,
+        -11.05
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.92,
+        1.08,
+        1
+      ],
+      "tags": [
+        "residential_simulation",
+        "elevator",
+        "wall_light",
+        "bright_exit"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.08,
+          1.2,
+          -11.05
+        ],
+        "halfSize": [
+          0.782,
+          0.1188,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_official_exit_right_wall_wash_asset",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_exit_elevator_room",
+      "secondaryRoomId": null,
+      "position": [
+        3.08,
+        1.2,
+        -11.05
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        0.92,
+        1.08,
+        1
+      ],
+      "tags": [
+        "residential_simulation",
+        "elevator",
+        "wall_light",
+        "bright_exit"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.08,
+          1.2,
+          -11.05
+        ],
+        "halfSize": [
+          0.782,
+          0.1188,
+          0.06
+        ]
+      }
+    }
+  ]
+}

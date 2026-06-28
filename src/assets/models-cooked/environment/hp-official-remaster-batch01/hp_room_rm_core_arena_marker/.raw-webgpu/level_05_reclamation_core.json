@@ -1,0 +1,512 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_05_reclamation_core",
+  "modelKey": "room_rm_core_arena_marker",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_arena_marker.glb",
+  "fileName": "hp_room_rm_core_arena_marker.glb",
+  "sourceAsset": {
+    "modelKey": "room_rm_core_arena_marker",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_arena_marker.glb",
+    "file": "src/assets/models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_arena_marker.glb",
+    "sizeMeters": [
+      1.98,
+      0.068,
+      1.98
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 24636,
+      "meshes": 8,
+      "nodes": 8,
+      "skins": 0,
+      "primitives": 8,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 32,
+      "bufferViews": 32,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_unlit"
+      ],
+      "estimatedTriangles": 264
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_arena_marker.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 498618,
+    "vertexCount": 792,
+    "triangleCount": 264,
+    "meshCount": 8,
+    "materialCount": 4,
+    "nodeCount": 8,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.99,
+        0,
+        -0.99
+      ],
+      "center": [
+        0,
+        0.03375,
+        0
+      ],
+      "size": [
+        1.98,
+        0.0675,
+        1.98
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "marker_ring",
+        "vertexOffset": 498618,
+        "vertexCount": 288,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.025,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.025,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "marker_inner",
+        "vertexOffset": 498906,
+        "vertexCount": 288,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.028,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.028,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "bolt_lug_0",
+        "vertexOffset": 499194,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.92,
+          0.03,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.92,
+          -0.03,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "bolt_lug_15707963267948966",
+        "vertexOffset": 499230,
+        "vertexCount": 36,
+        "bindMatrix": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          0.03,
+          0.92,
+          1
+        ],
+        "inverseBindMatrix": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.92,
+          -0.03,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "bolt_lug_3141592653589793",
+        "vertexOffset": 499266,
+        "vertexCount": 36,
+        "bindMatrix": [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -0.92,
+          0.03,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          -1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          -0.92,
+          -0.03,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "bolt_lug_471238898038469",
+        "vertexOffset": 499302,
+        "vertexCount": 36,
+        "bindMatrix": [
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0.03,
+          -0.92,
+          1
+        ],
+        "inverseBindMatrix": [
+          0,
+          0,
+          1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          -0.92,
+          -0.03,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "ring_glow_a",
+        "vertexOffset": 499338,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.06,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.06,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "ring_glow_b",
+        "vertexOffset": 499374,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.06,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.06,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_05_rm_arena_marker_a",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        -3.6,
+        0,
+        -13.2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "official",
+        "level05",
+        "remaster",
+        "arena"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.6,
+          0,
+          -13.2
+        ],
+        "halfSize": [
+          0.99,
+          0.034,
+          0.99
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_rm_arena_marker_b",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        3.6,
+        0,
+        -13.2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "official",
+        "level05",
+        "remaster",
+        "arena"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.6,
+          0,
+          -13.2
+        ],
+        "halfSize": [
+          0.99,
+          0.034,
+          0.99
+        ]
+      }
+    }
+  ]
+}

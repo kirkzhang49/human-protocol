@@ -1,0 +1,82 @@
+{
+  "schema": "human-protocol/level05-reclamation-mother-stitch-only@1",
+  "generatedAt": "2026-06-28T04:16:25.922613+00:00",
+  "purpose": "Keep the earlier source-like fragmented silhouette and only stitch topology-level gaps; no visible invented rods, balls, armor panels, or redesign links.",
+  "assetAuthorship": {
+    "meshMethod": "source-like decimated shell with local stitch cleanup",
+    "textures": "none; source UVs/images/materials removed",
+    "externalTextureDependency": false,
+    "visibleConnectorGeometry": "none except gameplay core lens"
+  },
+  "stitchOnlyProxy": {
+    "sourceVertices": 7807,
+    "sourcePolygons": 4824,
+    "decimateRatio": 0.22,
+    "verticesAfterStitch": 3569,
+    "polygonsAfterStitch": 1034,
+    "verticesBeforeStitch": 4162,
+    "facesBeforeStitch": 1061,
+    "verticesWeldedApprox": 593,
+    "tinyComponentsRemoved": 31,
+    "stitchMethod": "vertex weld, small-boundary hole fill, normal consistency, tiny detached component removal; no invented visible rods or armor plates",
+    "verticesAfterExport": 4531,
+    "trianglesAfterExport": 2963
+  },
+  "derivedAsset": {
+    "modelKeyCandidate": "hp_enemy_reclamation_mother_stitch_only_v1",
+    "glb": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_only_v1.glb",
+    "sourceBlend": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_only_v1.blend",
+    "preview": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_only_v1_preview.png",
+    "status": "visual-candidate-not-yet-registered-in-level5",
+    "requiredSockets": [
+      "core_glass_weakpoint",
+      "missile_hit_socket",
+      "skill3_lockon_socket",
+      "boss_vfx_center_socket",
+      "floor_contact_socket",
+      "warning_emissive_slots"
+    ],
+    "meshObjects": 3,
+    "verticesApprox": 4531,
+    "trianglesApprox": 2963,
+    "boundsMinBlender": [
+      -1.1062,
+      -0.6377,
+      -0.0578
+    ],
+    "boundsMaxBlender": [
+      1.0192,
+      0.6432,
+      2.7804
+    ],
+    "dimensionsBlender": [
+      2.1253,
+      1.281,
+      2.8382
+    ],
+    "glbScan": {
+      "isGlb": true,
+      "jsonFound": true,
+      "nodes": 27,
+      "meshes": 3,
+      "materials": 5,
+      "textures": 0,
+      "images": 0,
+      "animations": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "forbiddenMarkerMatches": []
+    }
+  }
+}

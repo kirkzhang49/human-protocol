@@ -1,0 +1,242 @@
+{
+  "atlasSize": [
+    1024,
+    2384
+  ],
+  "regions": {
+    "frame_corner_tl": [
+      10,
+      10,
+      200,
+      200
+    ],
+    "frame_corner_tr": [
+      220,
+      10,
+      200,
+      200
+    ],
+    "frame_corner_br": [
+      430,
+      10,
+      200,
+      200
+    ],
+    "frame_corner_bl": [
+      640,
+      10,
+      200,
+      200
+    ],
+    "dial_ring": [
+      10,
+      220,
+      360,
+      360
+    ],
+    "dial_hub": [
+      380,
+      220,
+      220,
+      220
+    ],
+    "dial_pointer_cyan": [
+      610,
+      220,
+      88,
+      128
+    ],
+    "option_plate_enabled": [
+      708,
+      220,
+      248,
+      200
+    ],
+    "option_plate_disabled": [
+      10,
+      590,
+      248,
+      200
+    ],
+    "option_plate_selected": [
+      268,
+      590,
+      248,
+      200
+    ],
+    "key_lens_authorized": [
+      526,
+      590,
+      132,
+      188
+    ],
+    "key_lens_locked": [
+      668,
+      590,
+      132,
+      188
+    ],
+    "icon_door": [
+      810,
+      590,
+      140,
+      140
+    ],
+    "icon_puzzle": [
+      10,
+      800,
+      140,
+      140
+    ],
+    "icon_robot": [
+      160,
+      800,
+      140,
+      140
+    ],
+    "icon_standby": [
+      310,
+      800,
+      140,
+      140
+    ],
+    "wire_cyan": [
+      460,
+      800,
+      300,
+      72
+    ],
+    "wire_amber": [
+      10,
+      950,
+      300,
+      72
+    ],
+    "status_led_on": [
+      320,
+      950,
+      64,
+      64
+    ],
+    "status_led_off": [
+      394,
+      950,
+      64,
+      64
+    ],
+    "scanline_strip": [
+      468,
+      950,
+      360,
+      64
+    ],
+    "brass_bracket": [
+      10,
+      1032,
+      360,
+      84
+    ],
+    "output_bay": [
+      380,
+      1032,
+      180,
+      300
+    ],
+    "output_tube_cyan": [
+      570,
+      1032,
+      96,
+      240
+    ],
+    "output_tube_amber": [
+      676,
+      1032,
+      96,
+      240
+    ],
+    "output_tube_green": [
+      782,
+      1032,
+      96,
+      240
+    ],
+    "output_tube_violet": [
+      888,
+      1032,
+      96,
+      240
+    ],
+    "output_tube_off": [
+      10,
+      1342,
+      96,
+      240
+    ],
+    "hazard_skirt": [
+      116,
+      1342,
+      520,
+      48
+    ],
+    "route_output_module": [
+      10,
+      1592,
+      460,
+      220
+    ],
+    "mech_button_cyan": [
+      480,
+      1592,
+      156,
+      172
+    ],
+    "mech_button_amber": [
+      646,
+      1592,
+      156,
+      172
+    ],
+    "mech_button_locked": [
+      812,
+      1592,
+      156,
+      172
+    ],
+    "cyan_core_capsule": [
+      10,
+      1822,
+      160,
+      300
+    ],
+    "edge_light_bar_long": [
+      180,
+      1822,
+      360,
+      96
+    ],
+    "toggle_guard": [
+      550,
+      1822,
+      180,
+      220
+    ],
+    "cable_bundle": [
+      10,
+      2132,
+      420,
+      130
+    ],
+    "route_relay_block": [
+      440,
+      2132,
+      220,
+      170
+    ],
+    "glass_tube_cluster": [
+      670,
+      2132,
+      220,
+      240
+    ]
+  }
+}

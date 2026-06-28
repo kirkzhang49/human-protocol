@@ -1,0 +1,1776 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+  "family": "level02-false-home",
+  "bundleId": "level02-false-home/hp_furniture_residential_room_divider_shelf_v1",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+    "rawSource": "raw-models",
+    "sourceLevels": [
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 6180,
+    "triangleCount": 2060,
+    "byteLength": 247200,
+    "hash": "8462a54d9421284d",
+    "asset": {
+      "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+      "sourceFile": "src/assets/models-cooked/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+      "rawFile": "src/assets/models/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+      "rawSource": "raw-models",
+      "vertexOffset": 0,
+      "vertexCount": 6180,
+      "triangleCount": 2060,
+      "meshCount": 25,
+      "materialCount": 9,
+      "nodeCount": 25,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "long_open_divider_outer_frame",
+          "vertexOffset": 0,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.78,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.78,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "deep_recessed_back_shadow",
+          "vertexOffset": 564,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.78,
+            -0.172,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.78,
+            0.172,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "vertical_shelf_divider",
+          "vertexOffset": 696,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.54,
+            0.78,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.54,
+            -0.78,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "vertical_shelf_divider001",
+          "vertexOffset": 1020,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.78,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.78,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "vertical_shelf_divider002",
+          "vertexOffset": 1344,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.54,
+            0.78,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.54,
+            -0.78,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "horizontal_shelf_board",
+          "vertexOffset": 1668,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.48,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.48,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "horizontal_shelf_board001",
+          "vertexOffset": 1992,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.78,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.78,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "horizontal_shelf_board002",
+          "vertexOffset": 2316,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.08,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.08,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_0_0",
+          "vertexOffset": 2640,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.68,
+            0.61,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.68,
+            -0.61,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_0_1",
+          "vertexOffset": 2772,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.59,
+            0.61,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.59,
+            -0.61,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_0_2",
+          "vertexOffset": 2904,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.22,
+            0.61,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.22,
+            -0.61,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_0_3",
+          "vertexOffset": 3036,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.32,
+            0.61,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.32,
+            -0.61,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_0_4",
+          "vertexOffset": 3168,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.42,
+            0.61,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.42,
+            -0.61,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_1_0",
+          "vertexOffset": 3300,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.68,
+            0.91,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.68,
+            -0.91,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_1_1",
+          "vertexOffset": 3432,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.59,
+            0.91,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.59,
+            -0.91,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_1_2",
+          "vertexOffset": 3564,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.22,
+            0.91,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.22,
+            -0.91,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_1_3",
+          "vertexOffset": 3696,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.32,
+            0.91,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.32,
+            -0.91,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_1_4",
+          "vertexOffset": 3828,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.42,
+            0.91,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.42,
+            -0.91,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_2_0",
+          "vertexOffset": 3960,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.68,
+            1.21,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.68,
+            -1.21,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_2_1",
+          "vertexOffset": 4092,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.59,
+            1.21,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.59,
+            -1.21,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_2_2",
+          "vertexOffset": 4224,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.22,
+            1.21,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.22,
+            -1.21,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_2_3",
+          "vertexOffset": 4356,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.32,
+            1.21,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.32,
+            -1.21,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "restrained_book_block_2_4",
+          "vertexOffset": 4488,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.42,
+            1.21,
+            0.13,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.42,
+            -1.21,
+            -0.13,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "rounded_display_bowl_one",
+          "vertexOffset": 4620,
+          "vertexCount": 1428,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.68,
+            0.62,
+            0.08,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.68,
+            -0.62,
+            -0.08,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "too_precise_rear_maintenance_inset",
+          "vertexOffset": 6048,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.58,
+            0.97,
+            -0.187,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.58,
+            -0.97,
+            0.187,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.86,
+          0.12,
+          -0.1945
+        ],
+        "center": [
+          0,
+          0.78,
+          -0.00225
+        ],
+        "size": [
+          1.72,
+          1.32,
+          0.3845
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "d13af249145c59a3",
+    "materials": [
+      {
+        "index": 40,
+        "id": "mat:builder-resource:hp-residential-warm-white-lacquer:1r9ff6u",
+        "name": "hp_residential_warm_white_lacquer",
+        "category": "builder-resource",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.8,
+          0.34,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.74,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "warm_white_lacquer",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-02-warm-white-lacquer.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-02-warm-white-lacquer.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.874872,
+              "contrast": 0.038677,
+              "chroma": 0.139614,
+              "detail": 0.009744
+            },
+            "generated": false,
+            "layer": 2
+          }
+        ]
+      },
+      {
+        "index": 42,
+        "id": "mat:builder-resource:hp-residential-light-oak:17qjr56",
+        "name": "hp_residential_light_oak",
+        "category": "builder-resource",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.56,
+          0.3,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.62,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "pale_oak_slats",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-03-pale-oak-slats.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-03-pale-oak-slats.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.751589,
+              "contrast": 0.052385,
+              "chroma": 0.579021,
+              "detail": 0.096034
+            },
+            "generated": false,
+            "layer": 3
+          }
+        ]
+      },
+      {
+        "index": 43,
+        "id": "mat:builder-resource:hp-residential-hidden-shadow-gap:rqga5f",
+        "name": "hp_residential_hidden_shadow_gap",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.74,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.9,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "shadow_gap_panel",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-04-shadow-gap-panel.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-04-shadow-gap-panel.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.181975,
+              "contrast": 0.086532,
+              "chroma": 0.089845,
+              "detail": 0.035803
+            },
+            "generated": false,
+            "layer": 4
+          }
+        ]
+      },
+      {
+        "index": 47,
+        "id": "mat:builder-resource:hp-residential-deep-walnut-shadow:pujrp7",
+        "name": "hp_residential_deep_walnut_shadow",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.74,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.72,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "warm_walnut_ribbed",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.23027,
+              "contrast": 0.048322,
+              "chroma": 0.4512,
+              "detail": 0.069431
+            },
+            "generated": false,
+            "layer": 7
+          }
+        ]
+      },
+      {
+        "index": 48,
+        "id": "mat:builder-resource:hp-residential-warm-walnut:1xlhn1k",
+        "name": "hp_residential_warm_walnut",
+        "category": "builder-resource",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.68,
+          0.34,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.56,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "warm_walnut_ribbed",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.23027,
+              "contrast": 0.048322,
+              "chroma": 0.4512,
+              "detail": 0.069431
+            },
+            "generated": false,
+            "layer": 7
+          }
+        ]
+      },
+      {
+        "index": 49,
+        "id": "mat:builder-resource:hp-residential-warm-stone:y70tlx",
+        "name": "hp_residential_warm_stone",
+        "category": "builder-resource",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.8,
+          0.34,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.76,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "warm_stone_oval",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-08-warm-stone-oval.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-08-warm-stone-oval.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.797975,
+              "contrast": 0.020635,
+              "chroma": 0.19402,
+              "detail": 0.028198
+            },
+            "generated": false,
+            "layer": 8
+          }
+        ]
+      },
+      {
+        "index": 50,
+        "id": "mat:builder-resource:hp-residential-muted-book-spines:lfx885",
+        "name": "hp_residential_muted_book_spines",
+        "category": "builder-resource",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.68,
+          0.34,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.86,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "muted_book_spines",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-09-muted-book-spines.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-09-muted-book-spines.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.476461,
+              "contrast": 0.26717,
+              "chroma": 0.220454,
+              "detail": 0.168693
+            },
+            "generated": false,
+            "layer": 9
+          }
+        ]
+      },
+      {
+        "index": 51,
+        "id": "mat:builder-resource:hp-residential-muted-sage:pvmyle",
+        "name": "hp_residential_muted_sage",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.48,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.82,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "muted_book_spines",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-09-muted-book-spines.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-09-muted-book-spines.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.476461,
+              "contrast": 0.26717,
+              "chroma": 0.220454,
+              "detail": 0.168693
+            },
+            "generated": false,
+            "layer": 9
+          }
+        ]
+      },
+      {
+        "index": 52,
+        "id": "mat:builder-resource:hp-residential-muted-blue-gray:z59n06",
+        "name": "hp_residential_muted_blue_gray",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.48,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.82,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "muted_book_spines",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-09-muted-book-spines.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-09-muted-book-spines.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.476461,
+              "contrast": 0.26717,
+              "chroma": 0.220454,
+              "detail": 0.168693
+            },
+            "generated": false,
+            "layer": 9
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 2,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-02-warm-white-lacquer.webp",
+        "name": "warm_white_lacquer",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-02-warm-white-lacquer.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.874872,
+          "contrast": 0.038677,
+          "chroma": 0.139614,
+          "detail": 0.009744
+        }
+      },
+      {
+        "layer": 3,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-03-pale-oak-slats.webp",
+        "name": "pale_oak_slats",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-03-pale-oak-slats.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.751589,
+          "contrast": 0.052385,
+          "chroma": 0.579021,
+          "detail": 0.096034
+        }
+      },
+      {
+        "layer": 4,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-04-shadow-gap-panel.webp",
+        "name": "shadow_gap_panel",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-04-shadow-gap-panel.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.181975,
+          "contrast": 0.086532,
+          "chroma": 0.089845,
+          "detail": 0.035803
+        }
+      },
+      {
+        "layer": 7,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+        "name": "warm_walnut_ribbed",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-07-warm-walnut-ribbed.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.23027,
+          "contrast": 0.048322,
+          "chroma": 0.4512,
+          "detail": 0.069431
+        }
+      },
+      {
+        "layer": 8,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-08-warm-stone-oval.webp",
+        "name": "warm_stone_oval",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-08-warm-stone-oval.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.797975,
+          "contrast": 0.020635,
+          "chroma": 0.19402,
+          "detail": 0.028198
+        }
+      },
+      {
+        "layer": 9,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-09-muted-book-spines.webp",
+        "name": "muted_book_spines",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/textures/basecolor-09-muted-book-spines.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.476461,
+          "contrast": 0.26717,
+          "chroma": 0.220454,
+          "detail": 0.168693
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

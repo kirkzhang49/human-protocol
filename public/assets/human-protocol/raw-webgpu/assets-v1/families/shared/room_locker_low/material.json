@@ -1,0 +1,1181 @@
+{
+  "file": "material.json",
+  "hash": "94307f2bb1f7747a",
+  "materials": [
+    {
+      "index": 78,
+      "id": "mat:room:room-edge-wear-bright:6jj4ze",
+      "name": "room_edge_wear_bright",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.9,
+        0.95,
+        0.9,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-23-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-23-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536098,
+            "contrast": 0.00712,
+            "chroma": 0.779585,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 23
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-112-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-112-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.20079,
+            "contrast": 0.011643,
+            "chroma": 0.989558,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 112
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-25-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-25-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.802036,
+            "contrast": 0.019009,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 25
+        }
+      ]
+    },
+    {
+      "index": 81,
+      "id": "mat:room:room-accent-protocol-gold:1cy1w04",
+      "name": "room_accent_protocol_gold",
+      "category": "room",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.42,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.95,
+        0.67,
+        0.18,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.42,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-118-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-118-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536116,
+            "contrast": 0.009507,
+            "chroma": 0.781023,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 118
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-119-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-119-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.349274,
+            "contrast": 0.009946,
+            "chroma": 0.759397,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 119
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-120-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-120-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.820899,
+            "contrast": 0.012158,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 120
+        }
+      ]
+    },
+    {
+      "index": 87,
+      "id": "mat:room:room-plastic-black:11i6sac",
+      "name": "room_plastic_black",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.025,
+        0.028,
+        0.03,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.08,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-12-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-12-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536089,
+            "contrast": 0.016295,
+            "chroma": 0.79053,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 12
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-31-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-31-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.823951,
+            "contrast": 0.017416,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 31
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-14-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-14-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.642611,
+            "contrast": 0.032567,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 14
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "id": "mat:room:room-warning-orange:14sc6b3",
+      "name": "room_warning_orange",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.92,
+        0.42,
+        0.08,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.48,
+      "metallicFactor": 0.32,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-19-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-19-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536087,
+            "contrast": 0.007298,
+            "chroma": 0.779627,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 19
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-126-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-126-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.46297,
+            "contrast": 0.011409,
+            "chroma": 0.812691,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 126
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-21-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-21-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.801883,
+            "contrast": 0.017336,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 21
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "id": "mat:room:room-metal-worn:7z995o",
+      "name": "room_metal_worn",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.45,
+        0.49,
+        0.48,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.3748,
+      "metallicFactor": 0.7739,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-12-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-12-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536089,
+            "contrast": 0.016295,
+            "chroma": 0.79053,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 12
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-111-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-111-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.364457,
+            "contrast": 0.017824,
+            "chroma": 0.554033,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 111
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-14-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-14-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.642611,
+            "contrast": 0.032567,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 14
+        }
+      ]
+    },
+    {
+      "index": 90,
+      "id": "mat:room:room-metal-dark:y117ng",
+      "name": "room_metal_dark",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.055,
+        0.065,
+        0.072,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.2948,
+      "metallicFactor": 0.8539,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-12-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-12-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536089,
+            "contrast": 0.016295,
+            "chroma": 0.79053,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 12
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-13-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-13-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.24084,
+            "contrast": 0.016839,
+            "chroma": 0.973745,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 13
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-14-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-14-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.642611,
+            "contrast": 0.032567,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 14
+        }
+      ]
+    },
+    {
+      "index": 91,
+      "id": "mat:room:room-dust-shadow:y8oxia",
+      "name": "room_dust_shadow",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.18,
+        0.17,
+        0.145,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.92,
+      "metallicFactor": 0.12,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-08-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-08-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536088,
+            "contrast": 0.016314,
+            "chroma": 0.790544,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 8
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-124-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-124-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.903456,
+            "contrast": 0.01661,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 124
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-10-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-10-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.641,
+            "contrast": 0.033002,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 10
+        }
+      ]
+    },
+    {
+      "index": 92,
+      "id": "mat:room:room-accent-archive-blue:179fxxq",
+      "name": "room_accent_archive_blue",
+      "category": "room",
+      "visualRole": "exhibit_warm",
+      "semanticParams": [
+        6,
+        0.8,
+        0.34,
+        0.18
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.12,
+        0.42,
+        0.64,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.48,
+      "metallicFactor": 0.24,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-127-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-127-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.5361,
+            "contrast": 0.008843,
+            "chroma": 0.780588,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 127
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-128-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-128-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.457247,
+            "contrast": 0.012763,
+            "chroma": 0.885642,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 128
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-129-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-129-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.754305,
+            "contrast": 0.023584,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 129
+        }
+      ]
+    },
+    {
+      "index": 93,
+      "id": "mat:room:room-panel-white:q294wi",
+      "name": "room_panel_white",
+      "category": "room",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.6,
+        0.05,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.74,
+        0.78,
+        0.73,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.3748,
+      "metallicFactor": 0.4798,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-23-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-23-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536098,
+            "contrast": 0.00712,
+            "chroma": 0.779585,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 23
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-110-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-110-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.35605,
+            "contrast": 0.010537,
+            "chroma": 0.748904,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 110
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-25-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-25-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.802036,
+            "contrast": 0.019009,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 25
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 8,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-08-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-08-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536088,
+        "contrast": 0.016314,
+        "chroma": 0.790544,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 10,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-10-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-10-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.641,
+        "contrast": 0.033002,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 12,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-12-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-12-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536089,
+        "contrast": 0.016295,
+        "chroma": 0.79053,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 13,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-13-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-13-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.24084,
+        "contrast": 0.016839,
+        "chroma": 0.973745,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 14,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-14-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-14-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.642611,
+        "contrast": 0.032567,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 19,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-19-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-19-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536087,
+        "contrast": 0.007298,
+        "chroma": 0.779627,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 21,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-21-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-21-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.801883,
+        "contrast": 0.017336,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 23,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-23-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-23-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536098,
+        "contrast": 0.00712,
+        "chroma": 0.779585,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 25,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-25-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-25-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.802036,
+        "contrast": 0.019009,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 31,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-31-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-31-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.823951,
+        "contrast": 0.017416,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 110,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-110-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-110-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.35605,
+        "contrast": 0.010537,
+        "chroma": 0.748904,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 111,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-111-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-111-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.364457,
+        "contrast": 0.017824,
+        "chroma": 0.554033,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 112,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-112-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-112-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.20079,
+        "contrast": 0.011643,
+        "chroma": 0.989558,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 118,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-118-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-118-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536116,
+        "contrast": 0.009507,
+        "chroma": 0.781023,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 119,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-119-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-119-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.349274,
+        "contrast": 0.009946,
+        "chroma": 0.759397,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 120,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-120-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-120-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.820899,
+        "contrast": 0.012158,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 124,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-124-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-124-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.903456,
+        "contrast": 0.01661,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 126,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-126-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-126-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.46297,
+        "contrast": 0.011409,
+        "chroma": 0.812691,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 127,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-127-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/normal-127-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.5361,
+        "contrast": 0.008843,
+        "chroma": 0.780588,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 128,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-128-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/metallicroughness-128-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.457247,
+        "contrast": 0.012763,
+        "chroma": 0.885642,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 129,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-129-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_locker_low/textures/ao-129-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.754305,
+        "contrast": 0.023584,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    }
+  ]
+}

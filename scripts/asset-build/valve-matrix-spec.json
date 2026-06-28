@@ -1,0 +1,34 @@
+{
+  "modelKey": "puzzle_console_valve_matrix",
+  "label": "闸门校准台",
+  "footprint": "generic",
+  "solid": true,
+  "materials": {
+    "steel":     {"color": [0.16, 0.27, 0.40], "metallic": 0.12, "roughness": 0.74},
+    "darksteel": {"color": [0.08, 0.12, 0.18], "metallic": 0.15, "roughness": 0.62},
+    "pipe":      {"color": [0.13, 0.23, 0.31], "metallic": 0.25, "roughness": 0.5},
+    "wheel":     {"color": [0.52, 0.12, 0.09], "metallic": 0.12, "roughness": 0.6},
+    "brass":     {"color": [0.62, 0.44, 0.13], "metallic": 0.5, "roughness": 0.4},
+    "gauge":     {"color": [0.95, 0.56, 0.16], "metallic": 0, "roughness": 0.4, "emissive": [1.0, 0.58, 0.18], "emissiveStrength": 4.5},
+    "hazard":    {"color": [0.80, 0.58, 0.05], "metallic": 0.1, "roughness": 0.5},
+    "screen":    {"color": [0.16, 0.52, 0.78], "metallic": 0, "roughness": 0.35, "emissive": [0.22, 0.7, 0.95], "emissiveStrength": 3.4}
+  },
+  "parts": [
+    {"shape": "box", "size": [1.12, 0.44, 0.16], "pos": [0, 0, 0.08], "material": "darksteel", "bevel": 0.02},
+    {"shape": "box", "size": [1.0, 0.38, 0.74], "pos": [0, 0.01, 0.5], "material": "steel", "bevel": 0.025},
+    {"shape": "box", "size": [1.03, 0.40, 0.07], "pos": [0, 0, 0.20], "material": "hazard"},
+    {"shape": "box", "size": [0.90, 0.07, 0.42], "pos": [0, -0.20, 0.62], "rot": [22, 0, 0], "material": "darksteel", "bevel": 0.012},
+    {"shape": "cylinder", "radius": 0.075, "depth": 0.03, "verts": 16, "pos": [-0.27, -0.27, 0.62], "rot": [22, 0, 0], "material": "gauge"},
+    {"shape": "cylinder", "radius": 0.075, "depth": 0.03, "verts": 16, "pos": [0, -0.28, 0.66], "rot": [22, 0, 0], "material": "gauge"},
+    {"shape": "cylinder", "radius": 0.075, "depth": 0.03, "verts": 16, "pos": [0.27, -0.27, 0.62], "rot": [22, 0, 0], "material": "gauge"},
+    {"shape": "box", "size": [0.42, 0.02, 0.14], "pos": [0, -0.18, 0.92], "material": "screen"},
+    {"shape": "box", "size": [1.0, 0.38, 0.10], "pos": [0, 0.01, 0.92], "material": "steel", "bevel": 0.02},
+    {"shape": "cylinder", "radius": 0.055, "depth": 0.34, "verts": 12, "pos": [-0.34, 0.06, 1.12], "material": "pipe"},
+    {"shape": "cylinder", "radius": 0.055, "depth": 0.34, "verts": 12, "pos": [0.34, 0.06, 1.12], "material": "pipe"},
+    {"shape": "cylinder", "radius": 0.05, "depth": 0.70, "verts": 12, "pos": [0, 0.06, 1.0], "rot": [0, 90, 0], "material": "pipe"},
+    {"shape": "torus", "major": 0.16, "minor": 0.024, "verts": 22, "pos": [-0.34, -0.04, 1.30], "rot": [90, 0, 0], "material": "wheel"},
+    {"shape": "torus", "major": 0.16, "minor": 0.024, "verts": 22, "pos": [0.34, -0.04, 1.30], "rot": [90, 0, 0], "material": "wheel"},
+    {"shape": "cylinder", "radius": 0.045, "depth": 0.09, "verts": 12, "pos": [-0.34, -0.02, 1.30], "rot": [90, 0, 0], "material": "brass"},
+    {"shape": "cylinder", "radius": 0.045, "depth": 0.09, "verts": 12, "pos": [0.34, -0.02, 1.30], "rot": [90, 0, 0], "material": "brass"}
+  ]
+}

@@ -1,0 +1,118 @@
+{
+  "id": "gui_image2_source_overlay_manifest_v2",
+  "scope": "Tool Calibration and Route Switch 2D overlay Image2-source-backed layers",
+  "date": "2026-06-18",
+  "sourcePolicy": "Primary art is backed by Image2/source PNGs saved under src/assets/gui/*/image2-sources. Local scripts only crop, resize, compose dark backing plates, compress PNGs, and write regions JSON.",
+  "stylePrompt": "Human Protocol premium facility console: black anodized metal, aged brass, smoked glass, cyan glow, cyan glass tubes, energy cores, edge lights, and restrained amber accents. No hands, no skin tones, no biological forms, no gore.",
+  "image2Sources": [
+    {
+      "id": "tool_calibration_complete_ui_v3_no_hand",
+      "path": "src/assets/gui/tool-calibration/image2-sources/tool_calibration_complete_ui_image2_source_v3_no_hand.png",
+      "size": [1600, 900],
+      "role": "Complete no-hand Tool Calibration Image2 UI source. Used for left tool bay crop and no-text tile crops.",
+      "notes": "Source contains live-style mock text in the full image; derived runtime layers avoid using text areas."
+    },
+    {
+      "id": "tool_calibration_hardware_modules_v1",
+      "path": "src/assets/gui/tool-calibration/image2-sources/tool_calibration_hardware_modules_image2_source_v1.png",
+      "size": [1536, 1024],
+      "role": "Clean black-gold/cyan hardware modules source. Used for the horizontal clean calibration rod and module cuts.",
+      "notes": "No hands, no skin tones, no biological forms, no text."
+    },
+    {
+      "id": "route_switch_output_modules_v1",
+      "path": "src/assets/gui/route-switch/image2-sources/route_switch_output_modules_image2_source_v1.png",
+      "size": [2048, 2048],
+      "role": "Saved Level07 route-switch Image2 parts source. Used for output/button layer composition.",
+      "notes": "No baked gameplay text; matches existing route-switch Image2 regions contract."
+    },
+    {
+      "id": "route_switch_output_bays_v2",
+      "path": "src/assets/gui/route-switch/image2-sources/route_switch_output_bays_image2_source_v2.png",
+      "size": [660, 680],
+      "role": "Source-backed route output bay assembly used to build complete cyan/amber/green/violet output bay atlas.",
+      "notes": "Pixels are assembled from saved Image2 route-switch parts; no gameplay text, logo, or local-drawn main visual."
+    }
+  ],
+  "deliverables": [
+    {
+      "id": "tool_calibration_clean_rod",
+      "png": "src/assets/gui/tool-calibration/tool_calibration_clean_rod_image2_layer_v1.png",
+      "regions": "src/assets/gui/tool-calibration/tool_calibration_clean_rod_image2_layer_v1.regions.json",
+      "source": "src/assets/gui/tool-calibration/image2-sources/tool_calibration_hardware_modules_image2_source_v1.png",
+      "size": [1600, 1000],
+      "recommendedUse": "Primary left-side tool bay image. Clean horizontal experimental calibration rod/canister with no hands or skin tones."
+    },
+    {
+      "id": "tool_calibration_left_tool_bay_v3",
+      "png": "src/assets/gui/tool-calibration/tool_calibration_left_tool_bay_image2_layer_v3.png",
+      "regions": "src/assets/gui/tool-calibration/tool_calibration_left_tool_bay_image2_layer_v3.regions.json",
+      "source": "src/assets/gui/tool-calibration/image2-sources/tool_calibration_complete_ui_image2_source_v3_no_hand.png",
+      "size": [960, 600],
+      "recommendedUse": "Alternate left tool bay crop from the complete UI source."
+    },
+    {
+      "id": "tool_calibration_tile_module_no_text_atlas",
+      "png": "src/assets/gui/tool-calibration/tool_calibration_tile_module_image2_atlas_v3_no_text.png",
+      "regions": "src/assets/gui/tool-calibration/tool_calibration_tile_module_image2_atlas_v3_no_text.regions.json",
+      "sources": [
+        "src/assets/gui/tool-calibration/image2-sources/tool_calibration_complete_ui_image2_source_v3_no_hand.png",
+        "src/assets/gui/tool-calibration/image2-sources/tool_calibration_hardware_modules_image2_source_v1.png"
+      ],
+      "size": [888, 888],
+      "recommendedUse": "Source-backed no-text tile/module atlas with cyan lit cells, blocked sockets, glass module, and energy core."
+    },
+    {
+      "id": "route_switch_output_button_layer",
+      "png": "src/assets/gui/route-switch/route_switch_output_button_image2_layer_v1.png",
+      "regions": "src/assets/gui/route-switch/route_switch_output_button_image2_layer_v1.regions.json",
+      "source": "src/assets/gui/route-switch/image2-sources/route_switch_output_modules_image2_source_v1.png",
+      "size": [1280, 720],
+      "recommendedUse": "Route Switch output/display/button layer for a complete overlay composition. Keep labels and state text in React/CSS."
+    },
+    {
+      "id": "route_switch_output_bays_atlas_v2",
+      "png": "src/assets/gui/route-switch/route_switch_output_bays_image2_atlas_v2.png",
+      "regions": "src/assets/gui/route-switch/route_switch_output_bays_image2_atlas_v2.regions.json",
+      "source": "src/assets/gui/route-switch/image2-sources/route_switch_output_bays_image2_source_v2.png",
+      "size": [1200, 1280],
+      "recommendedUse": "Runtime Route Switch output bay sprites: output_bay_cyan, output_bay_amber, output_bay_green, output_bay_violet, and output_bay_off."
+    }
+  ],
+  "scripts": [
+    {
+      "path": "scripts/asset-build/cut-tool-calibration-image2-layers.mjs",
+      "role": "Cuts the clean horizontal calibration rod and module sheet from saved Image2 hardware source."
+    },
+    {
+      "path": "scripts/asset-build/cut-overlay-image2-source-layers.mjs",
+      "role": "Cuts source-backed left tool bay, no-text tile/module atlas, and route output/button layer from saved Image2 sources."
+    }
+  ],
+  "runtimeBoundary": {
+    "notTouched": [
+      "3D assets",
+      "Level 3 runtime logic",
+      "Skill 3 runtime",
+      "tool/weapon cabinet assets"
+    ],
+    "mainAgentShouldOwn": [
+      "React/CSS wiring",
+      "live text",
+      "numbers",
+      "selected state",
+      "accessibility labels",
+      "localization"
+    ]
+  },
+  "verification": [
+    "node scripts/asset-build/cut-tool-calibration-image2-layers.mjs",
+    "node scripts/asset-build/cut-overlay-image2-source-layers.mjs",
+    "JSON parse check for generated regions",
+    "Visual inspection of clean calibration rod, no-text tile atlas, and route output/button layer"
+  ],
+  "caveats": [
+    "A new built-in image_gen Route Switch mechanical-button variant was generated in the conversation, but the app did not expose a filesystem path; it is not listed as a saved source or used in deliverables.",
+    "Runtime wiring now imports the saved Image2-backed Tool Calibration and Route Switch atlases; live labels, counts, state, and accessibility remain in React/CSS."
+  ]
+}

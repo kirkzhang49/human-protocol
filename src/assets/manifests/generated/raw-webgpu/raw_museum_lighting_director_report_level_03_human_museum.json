@@ -1,0 +1,14 @@
+{
+  "schemaVersion": "hp.raw-webgpu.museum-lighting-director-report.v1",
+  "best": {
+    "score": 0.172877,
+    "darkBase": 0.399489,
+    "colorSeparation": 0.161814,
+    "materialRead": 0.086808,
+    "emissiveRead": 0.146818,
+    "transparencyRead": 0.113931,
+    "cyanWashPenalty": 0.000000,
+    "flatPenalty": 0.000000,
+    "overBloomPenalty": 0.000000
+  }
+}

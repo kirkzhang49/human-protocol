@@ -1,0 +1,97 @@
+{
+  "schema": "human-protocol/level01-safety-storage-image2-atlas-regions@1",
+  "atlas": "src/assets/textures/environment/level01-safety-storage-image2/hp_level01_safety_storage_image2_atlas.png",
+  "atlasSize": [
+    1536,
+    1024
+  ],
+  "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+  "sourceImageSize": [
+    1254,
+    1254
+  ],
+  "rectCoordinateSpace": "pixels, top-left origin",
+  "tilePolicy": "fixed source rectangles resized to 512x512 atlas tiles",
+  "regions": {
+    "warning_barrier": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 16,
+        "y": 16,
+        "w": 604,
+        "h": 584
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/warning_barrier_fixed_crop.png",
+      "modelKey": "room_l1_img2_warning_barrier",
+      "materialIntent": "scratched black/yellow warning rail and barrier plank"
+    },
+    "parts_tote_stack": {
+      "x": 512,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 634,
+        "y": 16,
+        "w": 604,
+        "h": 584
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/parts_tote_stack_fixed_crop.png",
+      "modelKey": "room_l1_img2_parts_tote_stack",
+      "materialIntent": "stacked gray-blue industrial plastic tote faces"
+    },
+    "access_diagnostic_cabinet": {
+      "x": 1024,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 16,
+        "y": 614,
+        "w": 396,
+        "h": 610
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/access_diagnostic_cabinet_fixed_crop.png",
+      "modelKey": "room_l1_img2_access_diagnostic_cabinet",
+      "materialIntent": "dark terminal cabinet face with abstract cyan indicators"
+    },
+    "maintenance_privacy_screen": {
+      "x": 0,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 424,
+        "y": 614,
+        "w": 408,
+        "h": 610
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/maintenance_privacy_screen_fixed_crop.png",
+      "modelKey": "room_l1_img2_maintenance_privacy_screen",
+      "materialIntent": "white folding maintenance privacy panels and hinges"
+    },
+    "body_reference_lightbox": {
+      "x": 512,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 844,
+        "y": 614,
+        "w": 396,
+        "h": 610
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/body_reference_lightbox_fixed_crop.png",
+      "modelKey": "room_l1_img2_body_reference_lightbox",
+      "materialIntent": "white medical lightbox with abstract non-readable body reference"
+    }
+  }
+}

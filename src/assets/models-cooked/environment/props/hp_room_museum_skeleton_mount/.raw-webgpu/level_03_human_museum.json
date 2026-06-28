@@ -1,0 +1,416 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_museum_skeleton_mount",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/props/hp_room_museum_skeleton_mount.glb",
+  "fileName": "hp_room_museum_skeleton_mount.glb",
+  "sourceAsset": {
+    "modelKey": "room_museum_skeleton_mount",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/props/hp_room_museum_skeleton_mount.glb",
+    "file": "src/assets/models-cooked/environment/props/hp_room_museum_skeleton_mount.glb",
+    "sizeMeters": [
+      0.658,
+      2.205,
+      0.5
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 229756,
+      "meshes": 1,
+      "nodes": 1,
+      "skins": 0,
+      "primitives": 7,
+      "materials": 7,
+      "textures": 0,
+      "images": 0,
+      "accessors": 28,
+      "bufferViews": 28,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 7300
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/props/hp_room_museum_skeleton_mount.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 961794,
+    "vertexCount": 21900,
+    "triangleCount": 7300,
+    "meshCount": 7,
+    "materialCount": 7,
+    "nodeCount": 1,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.469253,
+        0,
+        -0.28
+      ],
+      "center": [
+        0,
+        1.1175,
+        0
+      ],
+      "size": [
+        0.938505,
+        2.235,
+        0.56
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube",
+        "vertexOffset": 961794,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_1",
+        "vertexOffset": 962118,
+        "vertexCount": 648,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_2",
+        "vertexOffset": 962766,
+        "vertexCount": 4392,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_3",
+        "vertexOffset": 967158,
+        "vertexCount": 2292,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_4",
+        "vertexOffset": 969450,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_5",
+        "vertexOffset": 969774,
+        "vertexCount": 240,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cube_6",
+        "vertexOffset": 970014,
+        "vertexCount": 13680,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_nu7iqk",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        16.5,
+        0,
+        -12.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        4.712389,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          16.5,
+          0,
+          -12.5
+        ],
+        "halfSize": [
+          0.329,
+          1.1025,
+          0.25
+        ]
+      }
+    }
+  ]
+}

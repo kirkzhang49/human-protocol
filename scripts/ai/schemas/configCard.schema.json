@@ -1,0 +1,99 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ConfigCard",
+  "type": "object",
+  "required": ["meta", "roomsGraph", "doorLockChain", "puzzleChain", "routeSwitchGraph", "pickups", "robotsCombat", "visualStory", "assetCoverage", "riskMetrics"],
+  "properties": {
+    "meta": {
+      "type": "object",
+      "required": ["sourceLayer", "id", "title", "authoringProfile", "schemaVersions"],
+      "properties": {
+        "sourceLayer": { "enum": ["level", "builder", "pack"] },
+        "id": { "type": "string" },
+        "title": { "type": "string" },
+        "authoringProfile": { "enum": ["internal", "generated"] }
+      }
+    },
+    "roomsGraph": {
+      "type": "object",
+      "required": ["roomCount", "rooms", "exitRoomId", "adjacency", "criticalPathRoomIds"],
+      "properties": {
+        "roomCount": { "type": "integer" },
+        "rooms": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "label", "mood", "doorDegree"],
+            "properties": {
+              "id": { "type": "string" },
+              "label": { "type": "string" },
+              "mood": { "enum": ["quiet", "uneasy", "combat", "boss", "reveal"] },
+              "doorDegree": { "type": "integer" }
+            }
+          }
+        },
+        "spawnRoomId": { "type": ["string", "null"] },
+        "exitRoomId": { "type": ["string", "null"] }
+      }
+    },
+    "doorLockChain": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["doorId", "from", "to", "lockType"],
+        "properties": {
+          "doorId": { "type": "string" },
+          "lockType": { "type": "string" },
+          "blocksCriticalPath": { "type": "boolean" }
+        }
+      }
+    },
+    "puzzleChain": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["puzzleId", "kind", "roomId", "reachableFromSpawn"],
+        "properties": {
+          "kind": { "type": "string" },
+          "reachableFromSpawn": { "type": "boolean" }
+        }
+      }
+    },
+    "routeSwitchGraph": {
+      "type": "object",
+      "required": ["switchCount", "campaignRouteCount", "choiceCount"]
+    },
+    "pickups": { "type": "object", "required": ["keyItems"] },
+    "robotsCombat": {
+      "type": "object",
+      "required": ["waveCount", "estimatedActiveEnemies", "bossPhaseCount", "combatRoomIds"]
+    },
+    "visualStory": {
+      "type": "object",
+      "required": ["roomsWithMaterials", "storyPresent", "motifsHit"],
+      "properties": {
+        "lightingPreset": { "type": ["string", "null"] },
+        "storyPresent": { "type": "boolean" }
+      }
+    },
+    "assetCoverage": { "type": "object", "required": ["distinctModelKeys", "modelKeys"] },
+    "riskMetrics": {
+      "type": "object",
+      "required": ["validatorOk", "errorCodes", "warningCodes", "exitRoomReachable", "unreachablePuzzles", "difficulty"],
+      "properties": {
+        "validatorOk": { "type": "boolean" },
+        "exitRoomReachable": { "type": "boolean" },
+        "difficulty": {
+          "type": "object",
+          "required": ["exploration", "puzzle", "combat", "routeComplexity"],
+          "properties": {
+            "exploration": { "type": "integer" },
+            "puzzle": { "type": "integer" },
+            "combat": { "type": "integer" },
+            "routeComplexity": { "type": "integer" }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_museum_info_lectern",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/props/hp_room_museum_info_lectern.glb",
+  "fileName": "hp_room_museum_info_lectern.glb",
+  "sourceAsset": {
+    "modelKey": "room_museum_info_lectern",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/props/hp_room_museum_info_lectern.glb",
+    "file": "src/assets/models-cooked/environment/props/hp_room_museum_info_lectern.glb",
+    "sizeMeters": [
+      0.724,
+      0.915,
+      0.724
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 193104,
+      "meshes": 1,
+      "nodes": 1,
+      "skins": 0,
+      "primitives": 7,
+      "materials": 7,
+      "textures": 0,
+      "images": 0,
+      "accessors": 28,
+      "bufferViews": 28,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 5976
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/props/hp_room_museum_info_lectern.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 684744,
+    "vertexCount": 17928,
+    "triangleCount": 5976,
+    "meshCount": 7,
+    "materialCount": 7,
+    "nodeCount": 1,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.397758,
+        0,
+        -0.397758
+      ],
+      "center": [
+        0,
+        0.444158,
+        0
+      ],
+      "size": [
+        0.795517,
+        0.888315,
+        0.795517
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "Cylinder",
+        "vertexOffset": 684744,
+        "vertexCount": 660,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cylinder_1",
+        "vertexOffset": 685404,
+        "vertexCount": 1320,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cylinder_2",
+        "vertexOffset": 686724,
+        "vertexCount": 5580,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cylinder_3",
+        "vertexOffset": 692304,
+        "vertexCount": 5904,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cylinder_4",
+        "vertexOffset": 698208,
+        "vertexCount": 3012,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cylinder_5",
+        "vertexOffset": 701220,
+        "vertexCount": 1128,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "Cylinder_6",
+        "vertexOffset": 702348,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_03_b01_info_lectern",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -2,
+        0.02,
+        10.3
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.25,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "museum",
+        "showcase_batch01",
+        "official",
+        "level03"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2,
+          0.02,
+          10.3
+        ],
+        "halfSize": [
+          0.362,
+          0.4575,
+          0.362
+        ]
+      }
+    }
+  ]
+}

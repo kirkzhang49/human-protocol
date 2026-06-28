@@ -1,0 +1,354 @@
+{
+  "schemaVersion": "hp.gateBalance.image2Layout.v3",
+  "composition": "transparent-parts",
+  "canvas": [
+    1792,
+    1024
+  ],
+  "sourceImage": "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_image2_source_v2_original.png",
+  "background": "src/assets/gui/gate-balance/gate_balance_overlay_frame_image2_v3.png",
+  "parts": "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v3.png",
+  "regionsFile": "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v3.regions.json",
+  "clipsDir": "src/assets/gui/gate-balance/clips-v3",
+  "regions": {
+    "titleBlock": [
+      140,
+      78,
+      460,
+      92
+    ],
+    "closeButton": [
+      1372,
+      80,
+      170,
+      86
+    ],
+    "guidance": [
+      140,
+      180,
+      620,
+      30
+    ],
+    "syncLabel": [
+      650,
+      118,
+      105,
+      26
+    ],
+    "syncBar": [
+      608,
+      138,
+      820,
+      42
+    ],
+    "syncCount": [
+      1438,
+      149,
+      92,
+      42
+    ],
+    "stage": [
+      118,
+      198,
+      1556,
+      500
+    ],
+    "gateLeft": [
+      225,
+      220,
+      340,
+      360
+    ],
+    "gateMid": [
+      655,
+      220,
+      350,
+      360
+    ],
+    "gateRight": [
+      1088,
+      220,
+      350,
+      360
+    ],
+    "stageCaption": [
+      560,
+      548,
+      670,
+      24
+    ],
+    "gaugeSeal": [
+      192,
+      590,
+      390,
+      125
+    ],
+    "gaugeTrack": [
+      635,
+      590,
+      390,
+      125
+    ],
+    "gaugeTemp": [
+      1078,
+      590,
+      390,
+      125
+    ],
+    "controlLeft": [
+      158,
+      720,
+      410,
+      120
+    ],
+    "controlMid": [
+      638,
+      720,
+      410,
+      120
+    ],
+    "controlRight": [
+      1082,
+      720,
+      410,
+      120
+    ],
+    "gateLeftLabel": [
+      286,
+      242,
+      112,
+      28
+    ],
+    "gateLeftFill": [
+      304,
+      314,
+      152,
+      118
+    ],
+    "gateLeftHint": [
+      328,
+      448,
+      104,
+      30
+    ],
+    "gateMidLabel": [
+      724,
+      242,
+      112,
+      28
+    ],
+    "gateMidFill": [
+      742,
+      314,
+      152,
+      118
+    ],
+    "gateMidHint": [
+      766,
+      448,
+      104,
+      30
+    ],
+    "gateRightLabel": [
+      1157,
+      242,
+      112,
+      28
+    ],
+    "gateRightFill": [
+      1175,
+      314,
+      152,
+      118
+    ],
+    "gateRightHint": [
+      1199,
+      448,
+      104,
+      30
+    ],
+    "gaugeSealLabel": [
+      222,
+      592,
+      120,
+      28
+    ],
+    "gaugeSealBadge": [
+      480,
+      592,
+      112,
+      28
+    ],
+    "gaugeSealBar": [
+      330,
+      632,
+      238,
+      18
+    ],
+    "gaugeSealValue": [
+      330,
+      654,
+      238,
+      24
+    ],
+    "gaugeTrackLabel": [
+      706,
+      592,
+      120,
+      28
+    ],
+    "gaugeTrackBadge": [
+      964,
+      592,
+      112,
+      28
+    ],
+    "gaugeTrackBar": [
+      814,
+      632,
+      238,
+      18
+    ],
+    "gaugeTrackValue": [
+      814,
+      654,
+      238,
+      24
+    ],
+    "gaugeTempLabel": [
+      1188,
+      592,
+      120,
+      28
+    ],
+    "gaugeTempBadge": [
+      1446,
+      592,
+      112,
+      28
+    ],
+    "gaugeTempBar": [
+      1296,
+      632,
+      238,
+      18
+    ],
+    "gaugeTempValue": [
+      1296,
+      654,
+      238,
+      24
+    ],
+    "controlLeftMinus": [
+      190,
+      756,
+      60,
+      60
+    ],
+    "controlLeftLabel": [
+      282,
+      760,
+      184,
+      20
+    ],
+    "controlLeftValue": [
+      282,
+      782,
+      184,
+      34
+    ],
+    "controlLeftPlus": [
+      476,
+      756,
+      60,
+      60
+    ],
+    "controlMidMinus": [
+      670,
+      756,
+      60,
+      60
+    ],
+    "controlMidLabel": [
+      762,
+      760,
+      184,
+      20
+    ],
+    "controlMidValue": [
+      762,
+      782,
+      184,
+      34
+    ],
+    "controlMidPlus": [
+      956,
+      756,
+      60,
+      60
+    ],
+    "controlRightMinus": [
+      1114,
+      756,
+      60,
+      60
+    ],
+    "controlRightLabel": [
+      1206,
+      760,
+      184,
+      20
+    ],
+    "controlRightValue": [
+      1206,
+      782,
+      184,
+      34
+    ],
+    "controlRightPlus": [
+      1400,
+      756,
+      60,
+      60
+    ],
+    "statusText": [
+      198,
+      872,
+      480,
+      34
+    ],
+    "resetButton": [
+      765,
+      850,
+      135,
+      72
+    ],
+    "lockButton": [
+      1090,
+      850,
+      430,
+      72
+    ],
+    "timer": [
+      1542,
+      172,
+      90,
+      34
+    ],
+    "error": [
+      650,
+      196,
+      680,
+      30
+    ]
+  },
+  "runtimeMustNotBake": [
+    "localized title and instructions",
+    "gate labels",
+    "gate numeric positions",
+    "gauge values and target deltas",
+    "timer",
+    "success/failure state",
+    "button text and accessibility labels"
+  ]
+}

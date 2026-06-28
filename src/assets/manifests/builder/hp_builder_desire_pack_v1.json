@@ -1,0 +1,414 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_builder_desire_pack_v1",
+  "label": "HP 密室精选包 01",
+  "sourceTool": "hp-internal-asset-factory",
+  "generatedAt": "2026-06-11",
+  "assets": [
+    {
+      "modelKey": "room_desire_archive_desk",
+      "label": "档案台灯桌",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_archive_desk_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_archive_desk.glb",
+      "sizeMeters": [
+        2,
+        1.136,
+        1.1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:archive",
+        "role:anchor",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_card_catalog",
+      "label": "记忆卡片柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_card_catalog_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_card_catalog.glb",
+      "sizeMeters": [
+        1.3,
+        1.6,
+        0.81
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:archive",
+        "role:interactive",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_low_bookcase",
+      "label": "矮档案书墙",
+      "assetKind": "furniture",
+      "family": "bookshelf",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_low_bookcase_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_low_bookcase.glb",
+      "sizeMeters": [
+        2.3,
+        1.142,
+        0.6
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "books",
+      "tags": [
+        "lane:archive",
+        "role:filler",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_clue_board",
+      "label": "线索图析板",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_clue_board_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_clue_board.glb",
+      "sizeMeters": [
+        1.5,
+        1.115,
+        0.115
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:archive",
+        "role:clue",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_tall_vitrine",
+      "label": "标本高展柜",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_tall_vitrine_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_tall_vitrine.glb",
+      "sizeMeters": [
+        1.05,
+        1.965,
+        1.05
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "display_case",
+      "tags": [
+        "lane:museum",
+        "role:hero",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_portrait_panel",
+      "label": "编号肖像板",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_portrait_panel_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_portrait_panel.glb",
+      "sizeMeters": [
+        0.92,
+        1.37,
+        0.225
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:museum",
+        "role:clue",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_gallery_bench",
+      "label": "丝绒展厅长凳",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_gallery_bench_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_gallery_bench.glb",
+      "sizeMeters": [
+        1.7,
+        0.52,
+        0.7
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "lane:museum",
+        "role:filler",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_holo_globe",
+      "label": "全息星仪",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_holo_globe_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_holo_globe.glb",
+      "sizeMeters": [
+        0.8,
+        1.479,
+        0.8
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "lane:museum",
+        "role:filler",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_brass_safe",
+      "label": "黄铜保险柜",
+      "assetKind": "furniture",
+      "family": "safe",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_brass_safe_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_brass_safe.glb",
+      "sizeMeters": [
+        1.05,
+        1.06,
+        0.957
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "crate",
+      "tags": [
+        "lane:vault",
+        "role:interactive",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_archive_tower",
+      "label": "记忆档案塔",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_archive_tower_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_archive_tower.glb",
+      "sizeMeters": [
+        1,
+        2.25,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:vault",
+        "role:hero",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_security_console",
+      "label": "紧凑监控台",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_security_console_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_security_console.glb",
+      "sizeMeters": [
+        1.45,
+        1.193,
+        0.95
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:surveillance",
+        "role:interactive",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_leather_chair",
+      "label": "氧血皮革椅",
+      "assetKind": "furniture",
+      "family": "chair",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_leather_chair_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_leather_chair.glb",
+      "sizeMeters": [
+        0.95,
+        1.1,
+        0.95
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "chair",
+      "tags": [
+        "lane:lounge",
+        "role:filler",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_evidence_cluster",
+      "label": "证物小圆桌",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_evidence_cluster_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_evidence_cluster.glb",
+      "sizeMeters": [
+        0.85,
+        0.88,
+        0.85
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "lamp",
+      "tags": [
+        "lane:lounge",
+        "role:clue",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_bed_pod",
+      "label": "恢复床舱",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_bed_pod_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_bed_pod.glb",
+      "sizeMeters": [
+        2.23,
+        1.336,
+        1.2
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:recovery",
+        "role:anchor",
+        "style:hp-desire-archive"
+      ]
+    },
+    {
+      "modelKey": "room_desire_light_gantry",
+      "label": "暖光灯桥",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "密室精选",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_desire_light_gantry_v1",
+      "themeId": "hp_desire_archive_brass_noir",
+      "glbFile": "../../models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_light_gantry.glb",
+      "sizeMeters": [
+        2.4,
+        2.32,
+        0.5
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:recovery",
+        "role:filler",
+        "style:hp-desire-archive"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "atlasSize": [
+    1600,
+    1000
+  ],
+  "source": "src/assets/gui/tool-calibration/image2-sources/tool_calibration_hardware_modules_image2_source_v1.png",
+  "sourceCrop": {
+    "left": 560,
+    "top": 115,
+    "width": 480,
+    "height": 780,
+    "transform": "rotate90_crop_top48_height388_resize_inside_1220x560"
+  },
+  "regions": {
+    "calibration_rod_dark_16x10": [
+      0,
+      0,
+      1600,
+      1000
+    ],
+    "left_tool_bay_calibration_rod": [
+      190,
+      255,
+      1220,
+      560
+    ]
+  }
+}

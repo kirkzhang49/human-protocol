@@ -1,0 +1,2117 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "pickup_medkit_white_red",
+  "family": "pickups",
+  "bundleId": "pickups/pickup_medkit_white_red",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "level_01_maintenance_bay",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+    "rawFile": "src/assets/models/environment/props/hp_pickup_medkit_white_red.glb",
+    "rawSource": "raw-models",
+    "sourceLevels": [
+      "level_01_maintenance_bay",
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 7452,
+    "triangleCount": 2484,
+    "byteLength": 298080,
+    "hash": "dd798abd4fcdf37d",
+    "asset": {
+      "modelKey": "pickup_medkit_white_red",
+      "sourceFile": "src/assets/models-cooked/environment/props/hp_pickup_medkit_white_red.glb",
+      "rawFile": "src/assets/models/environment/props/hp_pickup_medkit_white_red.glb",
+      "rawSource": "raw-models",
+      "vertexOffset": 0,
+      "vertexCount": 7452,
+      "triangleCount": 2484,
+      "meshCount": 23,
+      "materialCount": 8,
+      "nodeCount": 26,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_dark_latch_l",
+          "vertexOffset": 0,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.22,
+            0.22,
+            0.225,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.22,
+            -0.22,
+            -0.225,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_dark_latch_r",
+          "vertexOffset": 324,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.22,
+            0.22,
+            0.225,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.22,
+            -0.22,
+            -0.225,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_front_case_bezel_trim_bottom",
+          "vertexOffset": 648,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.08,
+            0.229,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.08,
+            -0.229,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_front_case_bezel_trim_left",
+          "vertexOffset": 972,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.3,
+            0.23,
+            0.229,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.3,
+            -0.23,
+            -0.229,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_front_case_bezel_trim_right",
+          "vertexOffset": 1296,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.3,
+            0.23,
+            0.229,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.3,
+            -0.23,
+            -0.229,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_front_case_bezel_trim_top",
+          "vertexOffset": 1620,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.38,
+            0.229,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.38,
+            -0.229,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_front_image2_face",
+          "vertexOffset": 1944,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.23,
+            0.218,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.23,
+            -0.218,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_hard_white_case",
+          "vertexOffset": 2268,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.21,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.21,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_latch_metal_pin_l",
+          "vertexOffset": 2592,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.22,
+            0.22,
+            0.248,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.22,
+            -0.22,
+            -0.248,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_latch_metal_pin_r",
+          "vertexOffset": 2916,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.22,
+            0.22,
+            0.248,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.22,
+            -0.22,
+            -0.248,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_left_image2_side",
+          "vertexOffset": 3240,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.318,
+            0.22,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.318,
+            -0.22,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_left_side_red_cross_h",
+          "vertexOffset": 3564,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.328,
+            0.25,
+            0.02,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.328,
+            -0.25,
+            -0.02,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_left_side_red_cross_v",
+          "vertexOffset": 3888,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.326,
+            0.25,
+            0.02,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.326,
+            -0.25,
+            -0.02,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_medical_side_band_art_color_block",
+          "vertexOffset": 4212,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.23,
+            -0.218,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.23,
+            0.218,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_red_cross_horizontal",
+          "vertexOffset": 4536,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.245,
+            0.23,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.245,
+            -0.23,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_red_cross_vertical",
+          "vertexOffset": 4860,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.245,
+            0.228,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.245,
+            -0.228,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_right_image2_side",
+          "vertexOffset": 5184,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.318,
+            0.22,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.318,
+            -0.22,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_right_side_red_cross_h",
+          "vertexOffset": 5508,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.328,
+            0.25,
+            0.02,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.328,
+            -0.25,
+            -0.02,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_right_side_red_cross_v",
+          "vertexOffset": 5832,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.326,
+            0.25,
+            0.02,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.326,
+            -0.25,
+            -0.02,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_rubber_handle",
+          "vertexOffset": 6156,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.4,
+            -0.04,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.4,
+            0.04,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_top_lid_image2_face",
+          "vertexOffset": 6480,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.387,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.387,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_top_red_cross_horizontal",
+          "vertexOffset": 6804,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.399,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.399,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_medkit_white_red_top_red_cross_vertical",
+          "vertexOffset": 7128,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.397,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.397,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.335,
+          0.04,
+          -0.224
+        ],
+        "center": [
+          0,
+          0.23125,
+          0.015
+        ],
+        "size": [
+          0.67,
+          0.3825,
+          0.478
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "cbe7ca242db80d2d",
+    "materials": [
+      {
+        "index": 44,
+        "id": "mat:pickup:room-metal-dark:1t30k6v",
+        "name": "room_metal_dark",
+        "category": "pickup",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.055,
+          0.065,
+          0.072,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.38,
+        "metallicFactor": 0.72,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-60-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-60-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536083,
+              "contrast": 0.016561,
+              "chroma": 0.790511,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 60
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-61-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-61-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.36294,
+              "contrast": 0.017622,
+              "chroma": 0.556263,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 61
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-62-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-62-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.64476,
+              "contrast": 0.032422,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 62
+          }
+        ]
+      },
+      {
+        "index": 57,
+        "id": "mat:pickup:room-trim-light:n96xfa",
+        "name": "room_trim_light",
+        "category": "pickup",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.86,
+          0.93,
+          0.9,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 0.38,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-85-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-85-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536098,
+              "contrast": 0.006944,
+              "chroma": 0.779559,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 85
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-86-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-86-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.322595,
+              "contrast": 0.011297,
+              "chroma": 0.800758,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 86
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-87-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-87-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801694,
+              "contrast": 0.018868,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 87
+          }
+        ]
+      },
+      {
+        "index": 58,
+        "id": "mat:pickup:room-image2-medkit-wrap-v1:1wxhoqt",
+        "name": "room_image2_medkit_wrap_v1",
+        "category": "pickup",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0.02,
+        "roughnessFactor": 0.58,
+        "metallicFactor": 0.08,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_image2_medkit_wrap_v1",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/basecolor-10-hp-image2-medkit-wrap-v1.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/basecolor-10-hp-image2-medkit-wrap-v1.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.39795,
+              "contrast": 0.405315,
+              "chroma": 0.149827,
+              "detail": 0.230304
+            },
+            "generated": false,
+            "layer": 10
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-85-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-85-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536098,
+              "contrast": 0.006944,
+              "chroma": 0.779559,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 85
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-88-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-88-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.562244,
+              "contrast": 0.011605,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 88
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-87-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-87-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801694,
+              "contrast": 0.018868,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 87
+          }
+        ]
+      },
+      {
+        "index": 59,
+        "id": "mat:pickup:room-panel-white:1c8cixd",
+        "name": "room_panel_white",
+        "category": "pickup",
+        "visualRole": "pickup_health",
+        "semanticParams": [
+          14,
+          0.92,
+          0.3016,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.88,
+          0.9,
+          0.84,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0.02,
+        "roughnessFactor": 0.58,
+        "metallicFactor": 0.28,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-89-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-89-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536096,
+              "contrast": 0.006534,
+              "chroma": 0.77928,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 89
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-90-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-90-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.56398,
+              "contrast": 0.009343,
+              "chroma": 0.933825,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 90
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-91-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-91-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.855103,
+              "contrast": 0.0122,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 91
+          }
+        ]
+      },
+      {
+        "index": 60,
+        "id": "mat:pickup:room-edge-wear-bright:glqhl5",
+        "name": "room_edge_wear_bright",
+        "category": "pickup",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.8,
+          0.34,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.9,
+          0.95,
+          0.9,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.22,
+        "metallicFactor": 0.72,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-92-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-92-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536093,
+              "contrast": 0.009621,
+              "chroma": 0.781884,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 92
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-93-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-93-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.198681,
+              "contrast": 0.014767,
+              "chroma": 0.932035,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 93
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-94-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-94-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.75225,
+              "contrast": 0.023483,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 94
+          }
+        ]
+      },
+      {
+        "index": 61,
+        "id": "mat:pickup:room-accent-medical-red:1w6ie0s",
+        "name": "room_accent_medical_red",
+        "category": "pickup",
+        "visualRole": "pickup_health",
+        "semanticParams": [
+          14,
+          0.92,
+          0.3064,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.88,
+          0.11,
+          0.09,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0.08,
+        "roughnessFactor": 0.4,
+        "metallicFactor": 0.18,
+        "aoStrength": 1,
+        "materialKind": 5,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-89-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-89-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536096,
+              "contrast": 0.006534,
+              "chroma": 0.77928,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 89
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-95-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-95-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.385776,
+              "contrast": 0.009454,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 95
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-91-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-91-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.855103,
+              "contrast": 0.0122,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 91
+          }
+        ]
+      },
+      {
+        "index": 62,
+        "id": "mat:pickup:room-emissive-red:s5p701",
+        "name": "room_emissive_red",
+        "category": "pickup",
+        "visualRole": "pickup_health",
+        "semanticParams": [
+          14,
+          0.92,
+          0.3176,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.88,
+          0.11,
+          0.09,
+          1
+        ],
+        "emissiveFactor": [
+          0.7,
+          0.056,
+          0.028
+        ],
+        "emissiveStrength": 0.22,
+        "roughnessFactor": 0.4,
+        "metallicFactor": 0.04,
+        "aoStrength": 1,
+        "materialKind": 5,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-96-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-96-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536094,
+              "contrast": 0.006401,
+              "chroma": 0.77924,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 96
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-97-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-97-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.385467,
+              "contrast": 0.009232,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 97
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-98-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-98-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.855262,
+              "contrast": 0.012291,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 98
+          }
+        ]
+      },
+      {
+        "index": 63,
+        "id": "mat:pickup:room-rubber:j0at5b",
+        "name": "room_rubber",
+        "category": "pickup",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.8,
+          0.34,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.012,
+          0.012,
+          0.011,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.86,
+        "metallicFactor": 0.04,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-92-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-92-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536093,
+              "contrast": 0.009621,
+              "chroma": 0.781884,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 92
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-99-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-99-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.837892,
+              "contrast": 0.014822,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 99
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-94-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-94-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.75225,
+              "contrast": 0.023483,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 94
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 10,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/basecolor-10-hp-image2-medkit-wrap-v1.webp",
+        "name": "hp_image2_medkit_wrap_v1",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/basecolor-10-hp-image2-medkit-wrap-v1.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.39795,
+          "contrast": 0.405315,
+          "chroma": 0.149827,
+          "detail": 0.230304
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": [
+      {
+        "layer": 60,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-60-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-60-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536083,
+          "contrast": 0.016561,
+          "chroma": 0.790511,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 61,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-61-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-61-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.36294,
+          "contrast": 0.017622,
+          "chroma": 0.556263,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 62,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-62-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-62-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.64476,
+          "contrast": 0.032422,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 85,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-85-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-85-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536098,
+          "contrast": 0.006944,
+          "chroma": 0.779559,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 86,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-86-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-86-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.322595,
+          "contrast": 0.011297,
+          "chroma": 0.800758,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 87,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-87-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-87-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.801694,
+          "contrast": 0.018868,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 88,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-88-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-88-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.562244,
+          "contrast": 0.011605,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 89,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-89-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-89-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536096,
+          "contrast": 0.006534,
+          "chroma": 0.77928,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 90,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-90-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-90-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.56398,
+          "contrast": 0.009343,
+          "chroma": 0.933825,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 91,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-91-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-91-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.855103,
+          "contrast": 0.0122,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 92,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-92-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-92-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536093,
+          "contrast": 0.009621,
+          "chroma": 0.781884,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 93,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-93-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-93-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.198681,
+          "contrast": 0.014767,
+          "chroma": 0.932035,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 94,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-94-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-94-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.75225,
+          "contrast": 0.023483,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 95,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-95-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-95-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.385776,
+          "contrast": 0.009454,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 96,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-96-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/normal-96-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536094,
+          "contrast": 0.006401,
+          "chroma": 0.77924,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 97,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-97-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-97-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.385467,
+          "contrast": 0.009232,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 98,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-98-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/ao-98-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.855262,
+          "contrast": 0.012291,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 99,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-99-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_medkit_white_red/textures/metallicroughness-99-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.837892,
+          "contrast": 0.014822,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      }
+    ]
+  }
+}

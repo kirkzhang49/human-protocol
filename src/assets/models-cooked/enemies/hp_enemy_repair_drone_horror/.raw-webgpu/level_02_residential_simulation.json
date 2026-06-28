@@ -1,0 +1,1495 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "hp_enemy_repair_drone_horror",
+  "category": "enemy",
+  "file": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror.glb",
+  "fileName": "hp_enemy_repair_drone_horror.glb",
+  "sourceAsset": null,
+  "rule": {
+    "modelKey": "hp_enemy_repair_drone_horror",
+    "fileName": "hp_enemy_repair_drone_horror.glb",
+    "compileHiddenNodeExactCount": 7,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 285210,
+    "vertexCount": 65196,
+    "triangleCount": 21732,
+    "meshCount": 18,
+    "materialCount": 2,
+    "nodeCount": 74,
+    "skinCount": 0,
+    "rigidSkin": {
+      "mode": "rigid-node-palette",
+      "jointCount": 72,
+      "referencedJointCount": 18,
+      "chunkCount": 18,
+      "vertexAttribute": "rigidJointIndex"
+    },
+    "bounds": {
+      "min": [
+        -0.46018,
+        -0.116729,
+        -0.566341
+      ],
+      "center": [
+        0,
+        0.631997,
+        -0.095462
+      ],
+      "size": [
+        0.92036,
+        1.497451,
+        0.941758
+      ]
+    },
+    "animationClips": [
+      {
+        "index": 0,
+        "name": "idle",
+        "action": "idle",
+        "durationSeconds": 1.2,
+        "samplerCount": 3,
+        "channelCount": 3,
+        "targetNodeCount": 3,
+        "targetPaths": [
+          "rotation",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "translation"
+          },
+          {
+            "node": 25,
+            "name": "chestPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 32,
+            "name": "part_head",
+            "path": "rotation"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "name": "move",
+        "action": "move",
+        "durationSeconds": 0.8,
+        "samplerCount": 7,
+        "channelCount": 7,
+        "targetNodeCount": 6,
+        "targetPaths": [
+          "rotation",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "translation"
+          },
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "rotation"
+          },
+          {
+            "node": 25,
+            "name": "chestPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 9,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 63,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "name": "attack_windup",
+        "action": "attack_windup",
+        "durationSeconds": 0.32,
+        "samplerCount": 28,
+        "channelCount": 28,
+        "targetNodeCount": 26,
+        "targetPaths": [
+          "rotation",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "translation"
+          },
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "rotation"
+          },
+          {
+            "node": 10,
+            "name": "pelvisPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 27,
+            "name": "torso_control",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "spinePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 25,
+            "name": "chestPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 32,
+            "name": "part_head",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 63,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 47,
+            "name": "part_arm_l",
+            "path": "rotation"
+          },
+          {
+            "node": 46,
+            "name": "part_forearm_l",
+            "path": "rotation"
+          },
+          {
+            "node": 45,
+            "name": "leftForearmTwist",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "part_hand_l",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 62,
+            "name": "part_arm_r",
+            "path": "rotation"
+          },
+          {
+            "node": 61,
+            "name": "part_forearm_r",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 9,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 3,
+            "name": "part_leg_l",
+            "path": "rotation"
+          },
+          {
+            "node": 8,
+            "name": "part_leg_r",
+            "path": "rotation"
+          },
+          {
+            "node": 2,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 7,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 1,
+            "name": "part_shin_l",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "part_shin_r",
+            "path": "rotation"
+          },
+          {
+            "node": 0,
+            "name": "leftAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 5,
+            "name": "rightAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 66,
+            "name": "stun-probe",
+            "path": "rotation"
+          },
+          {
+            "node": 66,
+            "name": "stun-probe",
+            "path": "translation"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "name": "attack_strike",
+        "action": "attack_strike",
+        "durationSeconds": 0.34,
+        "samplerCount": 28,
+        "channelCount": 28,
+        "targetNodeCount": 26,
+        "targetPaths": [
+          "rotation",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "translation"
+          },
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "rotation"
+          },
+          {
+            "node": 10,
+            "name": "pelvisPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 27,
+            "name": "torso_control",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "spinePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 25,
+            "name": "chestPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 32,
+            "name": "part_head",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 63,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 47,
+            "name": "part_arm_l",
+            "path": "rotation"
+          },
+          {
+            "node": 46,
+            "name": "part_forearm_l",
+            "path": "rotation"
+          },
+          {
+            "node": 45,
+            "name": "leftForearmTwist",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "part_hand_l",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 62,
+            "name": "part_arm_r",
+            "path": "rotation"
+          },
+          {
+            "node": 61,
+            "name": "part_forearm_r",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 9,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 3,
+            "name": "part_leg_l",
+            "path": "rotation"
+          },
+          {
+            "node": 8,
+            "name": "part_leg_r",
+            "path": "rotation"
+          },
+          {
+            "node": 2,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 7,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 1,
+            "name": "part_shin_l",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "part_shin_r",
+            "path": "rotation"
+          },
+          {
+            "node": 0,
+            "name": "leftAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 5,
+            "name": "rightAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 66,
+            "name": "stun-probe",
+            "path": "rotation"
+          },
+          {
+            "node": 66,
+            "name": "stun-probe",
+            "path": "translation"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "name": "attack_recover",
+        "action": "attack_recover",
+        "durationSeconds": 0.5,
+        "samplerCount": 28,
+        "channelCount": 28,
+        "targetNodeCount": 26,
+        "targetPaths": [
+          "rotation",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "translation"
+          },
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "rotation"
+          },
+          {
+            "node": 10,
+            "name": "pelvisPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 27,
+            "name": "torso_control",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "spinePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 25,
+            "name": "chestPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 32,
+            "name": "part_head",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 63,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 47,
+            "name": "part_arm_l",
+            "path": "rotation"
+          },
+          {
+            "node": 46,
+            "name": "part_forearm_l",
+            "path": "rotation"
+          },
+          {
+            "node": 45,
+            "name": "leftForearmTwist",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "part_hand_l",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 62,
+            "name": "part_arm_r",
+            "path": "rotation"
+          },
+          {
+            "node": 61,
+            "name": "part_forearm_r",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 9,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 3,
+            "name": "part_leg_l",
+            "path": "rotation"
+          },
+          {
+            "node": 8,
+            "name": "part_leg_r",
+            "path": "rotation"
+          },
+          {
+            "node": 2,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 7,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 1,
+            "name": "part_shin_l",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "part_shin_r",
+            "path": "rotation"
+          },
+          {
+            "node": 0,
+            "name": "leftAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 5,
+            "name": "rightAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 66,
+            "name": "stun-probe",
+            "path": "rotation"
+          },
+          {
+            "node": 66,
+            "name": "stun-probe",
+            "path": "translation"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "name": "hit_light",
+        "action": "hit_light",
+        "durationSeconds": 0.24,
+        "samplerCount": 1,
+        "channelCount": 1,
+        "targetNodeCount": 1,
+        "targetPaths": [
+          "rotation"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "rotation"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "name": "hit_heavy",
+        "action": "hit_heavy",
+        "durationSeconds": 0.5,
+        "samplerCount": 3,
+        "channelCount": 3,
+        "targetNodeCount": 2,
+        "targetPaths": [
+          "rotation",
+          "scale"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "rotation"
+          },
+          {
+            "node": 25,
+            "name": "chestPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "name": "stagger",
+        "action": "stagger",
+        "durationSeconds": 0.72,
+        "samplerCount": 2,
+        "channelCount": 2,
+        "targetNodeCount": 2,
+        "targetPaths": [
+          "rotation"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "rotation"
+          },
+          {
+            "node": 25,
+            "name": "chestPivot",
+            "path": "rotation"
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "name": "death",
+        "action": "death",
+        "durationSeconds": 0.85,
+        "samplerCount": 4,
+        "channelCount": 4,
+        "targetNodeCount": 3,
+        "targetPaths": [
+          "rotation",
+          "scale"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "rotation"
+          },
+          {
+            "node": 47,
+            "name": "part_arm_l",
+            "path": "rotation"
+          },
+          {
+            "node": 62,
+            "name": "part_arm_r",
+            "path": "rotation"
+          },
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "name": "spawn_boot",
+        "action": "spawn_boot",
+        "durationSeconds": 0.55,
+        "samplerCount": 3,
+        "channelCount": 3,
+        "targetNodeCount": 3,
+        "targetPaths": [
+          "rotation",
+          "scale"
+        ],
+        "targetNodes": [
+          {
+            "node": 73,
+            "name": "Root",
+            "path": "scale"
+          },
+          {
+            "node": 25,
+            "name": "chestPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 32,
+            "name": "part_head",
+            "path": "rotation"
+          }
+        ]
+      }
+    ],
+    "nodeChunks": [
+      {
+        "nodeIndex": 11,
+        "nodeName": "mesh_0",
+        "vertexOffset": 285210,
+        "vertexCount": 16596,
+        "bindMatrix": [
+          0.322862,
+          0,
+          0,
+          0,
+          0,
+          0.24572,
+          0.004809,
+          0,
+          0,
+          -0.005549,
+          0.271425,
+          0,
+          0,
+          0.911967,
+          0.015513,
+          1
+        ],
+        "inverseBindMatrix": [
+          3.097302,
+          0,
+          0,
+          0,
+          0,
+          4.068053,
+          -0.072072,
+          0,
+          0,
+          0.083171,
+          3.682788,
+          0,
+          0,
+          -3.711221,
+          0.008596,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 16,
+        "nodeName": "mesh_3",
+        "vertexOffset": 301806,
+        "vertexCount": 13680,
+        "bindMatrix": [
+          0.37542,
+          0,
+          0,
+          0,
+          0,
+          0.396401,
+          0,
+          0,
+          0,
+          0,
+          0.387827,
+          0,
+          0,
+          0.919895,
+          0.263723,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.66368,
+          0,
+          0,
+          0,
+          0,
+          2.522697,
+          0,
+          0,
+          0,
+          0,
+          2.578467,
+          0,
+          0,
+          -2.320617,
+          -0.68,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 28,
+        "nodeName": "mesh_25",
+        "vertexOffset": 315486,
+        "vertexCount": 708,
+        "bindMatrix": [
+          0.135478,
+          0,
+          0,
+          0,
+          0,
+          0.101849,
+          0,
+          0,
+          0,
+          0,
+          0.113006,
+          0,
+          0,
+          1.211397,
+          -0.037694,
+          1
+        ],
+        "inverseBindMatrix": [
+          7.381249,
+          0,
+          0,
+          0,
+          0,
+          9.818412,
+          0,
+          0,
+          0,
+          0,
+          8.849126,
+          0,
+          0,
+          -11.893998,
+          0.333561,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 31,
+        "nodeName": "mesh_9",
+        "vertexOffset": 316194,
+        "vertexCount": 504,
+        "bindMatrix": [
+          0.322568,
+          0,
+          0,
+          0,
+          0,
+          0.31828,
+          0,
+          0,
+          0,
+          0,
+          0.332369,
+          0,
+          0,
+          1.364171,
+          -0.037694,
+          1
+        ],
+        "inverseBindMatrix": [
+          3.100124,
+          0,
+          0,
+          0,
+          0,
+          3.141892,
+          0,
+          0,
+          0,
+          0,
+          3.008703,
+          0,
+          0,
+          -4.286079,
+          0.113411,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 33,
+        "nodeName": "mesh_26",
+        "vertexOffset": 316698,
+        "vertexCount": 4572,
+        "bindMatrix": [
+          0,
+          0.435994,
+          0,
+          0,
+          -0.420313,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.433085,
+          0,
+          -0.334095,
+          0.739307,
+          0.044419,
+          1
+        ],
+        "inverseBindMatrix": [
+          0,
+          -2.379179,
+          0,
+          0,
+          2.293612,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2.309017,
+          0,
+          -1.695684,
+          -0.794872,
+          -0.102564,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 37,
+        "nodeName": "mesh_27",
+        "vertexOffset": 321270,
+        "vertexCount": 228,
+        "bindMatrix": [
+          0.419788,
+          -0.021781,
+          -0.000649,
+          0,
+          0.021007,
+          0.435253,
+          0.012974,
+          0,
+          0,
+          -0.013078,
+          0.43289,
+          0,
+          -0.334095,
+          0.425392,
+          0.105051,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.376205,
+          0.118909,
+          0,
+          0,
+          -0.114581,
+          2.289715,
+          -0.068798,
+          0,
+          -0.003462,
+          0.069174,
+          2.307978,
+          0,
+          0.842984,
+          -0.941566,
+          -0.213189,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 40,
+        "nodeName": "mesh_4",
+        "vertexOffset": 321498,
+        "vertexCount": 144,
+        "bindMatrix": [
+          0.018914,
+          0,
+          0,
+          0,
+          0,
+          0.069759,
+          0,
+          0,
+          0,
+          0,
+          0.012126,
+          0,
+          -0.36772,
+          0.451552,
+          0.213322,
+          1
+        ],
+        "inverseBindMatrix": [
+          52.870634,
+          0,
+          0,
+          0,
+          0,
+          14.335074,
+          0,
+          0,
+          0,
+          0,
+          82.464903,
+          0,
+          19.441595,
+          -6.473025,
+          -17.591575,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 41,
+        "nodeName": "mesh_28",
+        "vertexOffset": 321642,
+        "vertexCount": 528,
+        "bindMatrix": [
+          0.075656,
+          0,
+          0,
+          0,
+          0,
+          0.043599,
+          0,
+          0,
+          0,
+          0,
+          0.077955,
+          0,
+          -0.334095,
+          0.329473,
+          0.122374,
+          1
+        ],
+        "inverseBindMatrix": [
+          13.217659,
+          0,
+          0,
+          0,
+          0,
+          22.936118,
+          0,
+          0,
+          0,
+          0,
+          12.827874,
+          0,
+          4.415954,
+          -7.556841,
+          -1.569801,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 42,
+        "nodeName": "mesh_16",
+        "vertexOffset": 322170,
+        "vertexCount": 384,
+        "bindMatrix": [
+          0.420313,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.433085,
+          0,
+          0,
+          -0.435994,
+          0,
+          0,
+          -0.334095,
+          0.259714,
+          0.30427,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.379179,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -2.293612,
+          0,
+          0,
+          2.309017,
+          0,
+          0,
+          0.794872,
+          -0.702564,
+          0.595684,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 49,
+        "nodeName": "mesh_10",
+        "vertexOffset": 322554,
+        "vertexCount": 4572,
+        "bindMatrix": [
+          0,
+          0.435994,
+          0,
+          0,
+          -0.420313,
+          0,
+          0,
+          0,
+          0,
+          0,
+          0.433085,
+          0,
+          0.334095,
+          0.739307,
+          0.044419,
+          1
+        ],
+        "inverseBindMatrix": [
+          0,
+          -2.379179,
+          0,
+          0,
+          2.293612,
+          0,
+          0,
+          0,
+          0,
+          0,
+          2.309017,
+          0,
+          -1.695684,
+          0.794872,
+          -0.102564,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 53,
+        "nodeName": "mesh_12",
+        "vertexOffset": 327126,
+        "vertexCount": 228,
+        "bindMatrix": [
+          0.419788,
+          0.021781,
+          0.000649,
+          0,
+          -0.021007,
+          0.435253,
+          0.012974,
+          0,
+          0,
+          -0.013078,
+          0.43289,
+          0,
+          0.334095,
+          0.425392,
+          0.105051,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.376205,
+          -0.118909,
+          0,
+          0,
+          0.114581,
+          2.289715,
+          -0.068798,
+          0,
+          0.003462,
+          0.069174,
+          2.307978,
+          0,
+          -0.842984,
+          -0.941566,
+          -0.213189,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 56,
+        "nodeName": "mesh_29",
+        "vertexOffset": 327354,
+        "vertexCount": 912,
+        "bindMatrix": [
+          0.018914,
+          0,
+          0,
+          0,
+          0,
+          0.069759,
+          0,
+          0,
+          0,
+          0,
+          0.012126,
+          0,
+          0.36772,
+          0.451552,
+          0.213322,
+          1
+        ],
+        "inverseBindMatrix": [
+          52.870634,
+          0,
+          0,
+          0,
+          0,
+          14.335074,
+          0,
+          0,
+          0,
+          0,
+          82.464903,
+          0,
+          -19.441595,
+          -6.473025,
+          -17.591575,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 57,
+        "nodeName": "mesh_15",
+        "vertexOffset": 328266,
+        "vertexCount": 144,
+        "bindMatrix": [
+          0.075656,
+          0,
+          0,
+          0,
+          0,
+          0.043599,
+          0,
+          0,
+          0,
+          0,
+          0.077955,
+          0,
+          0.334095,
+          0.329473,
+          0.122374,
+          1
+        ],
+        "inverseBindMatrix": [
+          13.217659,
+          0,
+          0,
+          0,
+          0,
+          22.936118,
+          0,
+          0,
+          0,
+          0,
+          12.827874,
+          0,
+          -4.415954,
+          -7.556841,
+          -1.569801,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 58,
+        "nodeName": "mesh_20",
+        "vertexOffset": 328410,
+        "vertexCount": 9984,
+        "bindMatrix": [
+          0.420313,
+          0,
+          0,
+          0,
+          0,
+          0.435994,
+          0,
+          0,
+          0,
+          0,
+          0.433085,
+          0,
+          0.334095,
+          0.277154,
+          0.243638,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.379179,
+          0,
+          0,
+          0,
+          0,
+          2.293612,
+          0,
+          0,
+          0,
+          0,
+          2.309017,
+          0,
+          -0.794872,
+          -0.635684,
+          -0.562564,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 64,
+        "nodeName": "mesh_21",
+        "vertexOffset": 338394,
+        "vertexCount": 912,
+        "bindMatrix": [
+          0.538863,
+          0,
+          0,
+          0,
+          0,
+          0.531699,
+          0,
+          0,
+          0,
+          0,
+          0.555237,
+          0,
+          0,
+          -0.015706,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.855759,
+          0,
+          0,
+          0,
+          0,
+          1.880762,
+          0,
+          0,
+          0,
+          0,
+          1.801033,
+          0,
+          0,
+          0.029539,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 65,
+        "nodeName": "mesh_22",
+        "vertexOffset": 339306,
+        "vertexCount": 648,
+        "bindMatrix": [
+          0.538863,
+          0,
+          0,
+          0,
+          0,
+          0.531699,
+          0,
+          0,
+          0,
+          0,
+          0.555237,
+          0,
+          0,
+          0.618871,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.855759,
+          0,
+          0,
+          0,
+          0,
+          1.880762,
+          0,
+          0,
+          0,
+          0,
+          1.801033,
+          0,
+          0,
+          -1.163949,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 68,
+        "nodeName": "mesh_6",
+        "vertexOffset": 339954,
+        "vertexCount": 9924,
+        "bindMatrix": [
+          0.334095,
+          0,
+          0,
+          0,
+          0,
+          0.382824,
+          0,
+          0,
+          0,
+          0,
+          0.18878,
+          0,
+          0,
+          0.835013,
+          -0.355352,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.99316,
+          0,
+          0,
+          0,
+          0,
+          2.612169,
+          0,
+          0,
+          0,
+          0,
+          5.297157,
+          0,
+          0,
+          -2.181196,
+          1.882353,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 71,
+        "nodeName": "mesh_30",
+        "vertexOffset": 349878,
+        "vertexCount": 528,
+        "bindMatrix": [
+          -0.140104,
+          0,
+          0,
+          0,
+          0,
+          0.148876,
+          0,
+          0,
+          0,
+          0,
+          -0.019433,
+          0,
+          0,
+          0.877549,
+          -0.494161,
+          1
+        ],
+        "inverseBindMatrix": [
+          -7.137536,
+          0,
+          0,
+          0,
+          0,
+          6.717006,
+          0,
+          0,
+          0,
+          0,
+          -51.4581,
+          0,
+          0,
+          -5.894503,
+          -25.428571,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": []
+}

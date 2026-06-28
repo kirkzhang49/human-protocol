@@ -1,0 +1,2960 @@
+{
+  "schemaVersion": "hp.official.builder.v1",
+  "documentId": "official_builder_level_03_human_museum_proposal",
+  "title": "人类博物馆 · Proposed Official Builder Source",
+  "campaign": {
+    "levelId": "level_03_human_museum",
+    "title": "人类博物馆",
+    "ordinal": 3,
+    "packId": "human-protocol-base-demo",
+    "nextLevelId": null
+  },
+  "project": {
+    "schemaVersion": "hp.builder.v1",
+    "projectId": "official_level_03_human_museum_proposal",
+    "title": "人类博物馆 · 可编辑草稿",
+    "story": {
+      "templateId": "museum_archive",
+      "transitionLine": "电梯门合拢，展厅标签逐个熄灭。",
+      "victoryLine": "馆藏记录：最后人类不是人名，是一套行为协议。"
+    },
+    "rooms": [
+      {
+        "id": "level_03_entry_hall",
+        "label": "博物馆入口",
+        "style": "museum",
+        "center": [
+          0,
+          12
+        ],
+        "size": [
+          12,
+          7
+        ],
+        "env": {
+          "surfaceKitId": "hp:human_museum_gallery_shell_v1",
+          "floorPresetId": "floor_photo_marble",
+          "wallPresetId": "wall_hp_museum_limestone_panel",
+          "ceilingPresetId": "ceiling_hp_museum_coffered_limestone",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_photo_marble"
+            },
+            "wall": {
+              "presetId": "wall_hp_museum_limestone_panel"
+            },
+            "ceiling": {
+              "presetId": "ceiling_hp_museum_coffered_limestone"
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "uneasy",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "level03_museum_floor_premium_stone",
+          "wallMaterialKey": "level03_museum_wall_black_gallery",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#d6ebe8"
+          },
+          "aesthetic": {
+            "style": "museum",
+            "detail": "medium"
+          },
+          "ambientPressure": 0.44,
+          "entryDialogueTrigger": "level_start"
+        }
+      },
+      {
+        "id": "level_03_gallery_lobby",
+        "label": "主展厅",
+        "style": "museum",
+        "center": [
+          0,
+          3.5
+        ],
+        "size": [
+          18,
+          11
+        ],
+        "env": {
+          "surfaceKitId": "hp:human_museum_gallery_shell_v1",
+          "floorPresetId": "floor_photo_marble",
+          "wallPresetId": "wall_hp_museum_limestone_panel",
+          "ceilingPresetId": "ceiling_hp_museum_coffered_limestone",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_photo_marble"
+            },
+            "wall": {
+              "presetId": "wall_hp_museum_limestone_panel"
+            },
+            "ceiling": {
+              "presetId": "ceiling_hp_museum_coffered_limestone"
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "combat",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "level03_museum_floor_premium_stone",
+          "wallMaterialKey": "level03_museum_wall_black_gallery",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#d6ebe8"
+          },
+          "aesthetic": {
+            "style": "museum",
+            "detail": "high"
+          },
+          "ambientPressure": 0.64,
+          "entryDialogueTrigger": "level_03_lobby_entry"
+        }
+      },
+      {
+        "id": "level_03_tool_exhibit",
+        "label": "工具展厅",
+        "style": "museum",
+        "center": [
+          -12.2,
+          3.5
+        ],
+        "size": [
+          7,
+          7
+        ],
+        "env": {
+          "surfaceKitId": "hp:human_museum_gallery_shell_v1",
+          "floorPresetId": "floor_photo_marble",
+          "wallPresetId": "wall_hp_museum_limestone_panel",
+          "ceilingPresetId": "ceiling_hp_museum_coffered_limestone",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_photo_marble"
+            },
+            "wall": {
+              "presetId": "wall_hp_museum_limestone_panel"
+            },
+            "ceiling": {
+              "presetId": "ceiling_hp_museum_coffered_limestone"
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "quiet",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "level03_museum_floor_premium_stone",
+          "wallMaterialKey": "level03_museum_wall_black_gallery",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#ffd36d"
+          },
+          "aesthetic": {
+            "style": "museum",
+            "detail": "high"
+          },
+          "ambientPressure": 0.54
+        }
+      },
+      {
+        "id": "level_03_voice_exhibit",
+        "label": "声纹展厅",
+        "style": "museum",
+        "center": [
+          12.2,
+          3.5
+        ],
+        "size": [
+          7,
+          7
+        ],
+        "env": {
+          "surfaceKitId": "hp:human_museum_gallery_shell_v1",
+          "floorPresetId": "floor_photo_marble",
+          "wallPresetId": "wall_hp_museum_limestone_panel",
+          "ceilingPresetId": "ceiling_hp_museum_coffered_limestone",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_photo_marble"
+            },
+            "wall": {
+              "presetId": "wall_hp_museum_limestone_panel"
+            },
+            "ceiling": {
+              "presetId": "ceiling_hp_museum_coffered_limestone"
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "uneasy",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "level03_museum_floor_premium_stone",
+          "wallMaterialKey": "level03_museum_wall_black_gallery",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#7ff2ff"
+          },
+          "aesthetic": {
+            "style": "museum",
+            "detail": "high"
+          },
+          "ambientPressure": 0.58
+        }
+      },
+      {
+        "id": "level_03_body_exhibit",
+        "label": "身体展厅",
+        "style": "museum",
+        "center": [
+          0,
+          -5
+        ],
+        "size": [
+          12,
+          7
+        ],
+        "env": {
+          "surfaceKitId": "hp:human_museum_gallery_shell_v1",
+          "floorPresetId": "floor_photo_marble",
+          "wallPresetId": "wall_hp_museum_limestone_panel",
+          "ceilingPresetId": "ceiling_hp_museum_coffered_limestone",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_photo_marble"
+            },
+            "wall": {
+              "presetId": "wall_hp_museum_limestone_panel"
+            },
+            "ceiling": {
+              "presetId": "ceiling_hp_museum_coffered_limestone"
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "reveal",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "level03_museum_floor_premium_stone",
+          "wallMaterialKey": "level03_museum_wall_black_gallery",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#ecfbff"
+          },
+          "aesthetic": {
+            "style": "museum",
+            "detail": "high"
+          },
+          "ambientPressure": 0.74
+        }
+      },
+      {
+        "id": "level_03_central_archive",
+        "label": "中央档案室",
+        "style": "museum",
+        "center": [
+          0,
+          -12.65
+        ],
+        "size": [
+          13,
+          9.3
+        ],
+        "env": {
+          "surfaceKitId": "hp:human_museum_gallery_shell_v1",
+          "floorPresetId": "floor_photo_marble",
+          "wallPresetId": "wall_hp_museum_limestone_panel",
+          "ceilingPresetId": "ceiling_hp_museum_coffered_limestone",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_photo_marble"
+            },
+            "wall": {
+              "presetId": "wall_hp_museum_limestone_panel"
+            },
+            "ceiling": {
+              "presetId": "ceiling_hp_museum_coffered_limestone"
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "boss",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "level03_museum_floor_premium_stone",
+          "wallMaterialKey": "level03_museum_wall_black_gallery",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#b84b43"
+          },
+          "aesthetic": {
+            "style": "museum",
+            "detail": "high"
+          },
+          "ambientPressure": 0.9
+        }
+      },
+      {
+        "id": "level_03_official_exit_room",
+        "label": "闭馆电梯",
+        "style": "exit",
+        "center": [
+          0,
+          -20
+        ],
+        "size": [
+          6.4,
+          5.4
+        ],
+        "env": {
+          "floorPresetId": "floor_dark_rubber",
+          "wallPresetId": "wall_dark_metal_panel",
+          "ceilingPresetId": "ceiling_hp_museum_coffered_limestone",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "ceiling": {
+              "presetId": "ceiling_hp_museum_coffered_limestone"
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "reveal",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "level03_museum_floor_premium_stone",
+          "wallMaterialKey": "service_elevator_metal",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": false,
+            "renderCeiling": false,
+            "collisionWalls": true,
+            "accentColor": "#f3f0df"
+          },
+          "aesthetic": {
+            "enabled": true,
+            "style": "exit",
+            "detail": "high"
+          },
+          "ambientPressure": 0.55
+        }
+      },
+      {
+        "id": "room_kqrkp0",
+        "label": "路由管制室",
+        "style": "museum",
+        "center": [
+          12.75,
+          -13
+        ],
+        "size": [
+          12.5,
+          7.4
+        ],
+        "env": {
+          "surfaceKitId": "hp:human_museum_gallery_shell_v1",
+          "floorPresetId": "floor_photo_marble",
+          "wallPresetId": "wall_hp_museum_limestone_panel",
+          "ceilingPresetId": "ceiling_hp_museum_coffered_limestone",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_photo_marble"
+            },
+            "wall": {
+              "presetId": "wall_hp_museum_limestone_panel"
+            },
+            "ceiling": {
+              "presetId": "ceiling_hp_museum_coffered_limestone"
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "boss",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "level03_museum_floor_premium_stone",
+          "wallMaterialKey": "level03_museum_wall_black_gallery",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#b84b43"
+          },
+          "aesthetic": {
+            "style": "museum",
+            "detail": "high"
+          },
+          "ambientPressure": 0.84
+        }
+      }
+    ],
+    "doors": [
+      {
+        "id": "level_03_lobby_door",
+        "fromRoomId": "level_03_entry_hall",
+        "toRoomId": "level_03_gallery_lobby",
+        "lockType": "none",
+        "sourceDoor": {
+          "label": "博物馆入口 → 主展厅",
+          "position": [
+            0,
+            0,
+            8.75
+          ],
+          "size": [
+            3.2,
+            3.2,
+            0.35
+          ],
+          "yaw": 0,
+          "defaultState": "closed",
+          "lock": {
+            "type": "none"
+          },
+          "visualKey": "museum_gallery_door",
+          "materialKey": "museum_wall",
+          "panelPosition": [
+            1.78,
+            0,
+            9.1
+          ],
+          "autoOpenOnApproach": true,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true
+          }
+        }
+      },
+      {
+        "id": "level_03_tool_door",
+        "fromRoomId": "level_03_gallery_lobby",
+        "toRoomId": "level_03_tool_exhibit",
+        "lockType": "none",
+        "sourceDoor": {
+          "label": "主展厅 → 工具展厅",
+          "position": [
+            -8.85,
+            0,
+            3.5
+          ],
+          "size": [
+            3.2,
+            3.2,
+            0.35
+          ],
+          "yaw": 1.5707963267948966,
+          "defaultState": "closed",
+          "lock": {
+            "type": "none"
+          },
+          "visualKey": "museum_gallery_door",
+          "materialKey": "museum_wall",
+          "panelPosition": [
+            -8.5,
+            0,
+            5.279999999999999
+          ],
+          "autoOpenOnApproach": true,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true
+          }
+        }
+      },
+      {
+        "id": "level_03_voice_door",
+        "fromRoomId": "level_03_gallery_lobby",
+        "toRoomId": "level_03_voice_exhibit",
+        "lockType": "puzzle_complete",
+        "puzzleKind": "circuit_grid",
+        "puzzleRoomId": "level_03_tool_exhibit",
+        "sourceDoor": {
+          "label": "主展厅 → 声纹展厅",
+          "position": [
+            8.85,
+            0,
+            3.5
+          ],
+          "size": [
+            3.2,
+            3.2,
+            0.35
+          ],
+          "yaw": 1.5707963267948966,
+          "defaultState": "locked",
+          "lock": {
+            "type": "puzzle_complete",
+            "puzzleId": "level_03_tool_calibration",
+            "lockedMessage": "先校准工具档案。",
+            "unlockedMessage": "工具档案确认，门已解锁。"
+          },
+          "visualKey": "museum_gallery_door",
+          "materialKey": "museum_wall",
+          "panelPosition": [
+            9.2,
+            0,
+            5.279999999999999
+          ],
+          "autoOpenOnApproach": false,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true
+          }
+        }
+      },
+      {
+        "id": "level_03_body_door",
+        "fromRoomId": "level_03_gallery_lobby",
+        "toRoomId": "level_03_body_exhibit",
+        "lockType": "key_item",
+        "keyRoomId": "level_03_voice_exhibit",
+        "sourceDoor": {
+          "label": "主展厅 → 身体展厅",
+          "position": [
+            0,
+            0,
+            -1.75
+          ],
+          "size": [
+            3.2,
+            3.2,
+            0.35
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "key_item",
+            "keyItemId": "key_level_03_body_door",
+            "lockedMessage": "缺少门禁片。去「声纹展厅」找找。",
+            "unlockedMessage": "门禁确认，门已解锁。"
+          },
+          "visualKey": "museum_gallery_door",
+          "materialKey": "terminal_red",
+          "panelPosition": [
+            1.78,
+            0,
+            -1.4
+          ],
+          "autoOpenOnApproach": false,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true
+          }
+        }
+      },
+      {
+        "id": "level_03_archive_door",
+        "fromRoomId": "level_03_body_exhibit",
+        "toRoomId": "level_03_central_archive",
+        "lockType": "puzzle_complete",
+        "puzzleKind": "color_sequence",
+        "puzzleRoomId": "level_03_gallery_lobby",
+        "sourceDoor": {
+          "label": "身体展厅 → 中央档案室",
+          "position": [
+            0,
+            0,
+            -8.25
+          ],
+          "size": [
+            3.2,
+            3.2,
+            0.35
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "puzzle_complete",
+            "puzzleId": "builder_color_lock",
+            "lockedMessage": "灯序尚未确认。",
+            "unlockedMessage": "灯序确认。"
+          },
+          "visualKey": "museum_gallery_door",
+          "materialKey": "terminal_cyan",
+          "panelPosition": [
+            1.78,
+            0,
+            -7.9
+          ],
+          "autoOpenOnApproach": false,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true
+          },
+          "openedDialogueTrigger": "level_03_archive_open"
+        }
+      },
+      {
+        "id": "level_03_official_exit_door",
+        "fromRoomId": "level_03_central_archive",
+        "toRoomId": "level_03_official_exit_room",
+        "lockType": "none",
+        "sourceDoor": {
+          "label": "中央档案室 → 闭馆电梯",
+          "position": [
+            0,
+            0,
+            -17.3
+          ],
+          "size": [
+            3.2,
+            3.2,
+            0.35
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "objective_complete",
+            "objectiveId": "obj_route_level_03_official_exit_door",
+            "lockedMessage": "先在右侧管制房间改接闭馆电梯路由。",
+            "unlockedMessage": "路由确认，闭馆电梯门已解锁。"
+          },
+          "skinKey": "service_elevator_hero",
+          "visualKey": "service_elevator_door",
+          "materialKey": "service_elevator_metal",
+          "panelPosition": [
+            1.78,
+            0,
+            -16.95
+          ],
+          "openSpeed": 1.35,
+          "autoOpenOnApproach": true,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true,
+            "hidePanelAfterOpen": true
+          },
+          "cameraImpact": {
+            "shake": 0.34,
+            "fovKick": 1.85
+          }
+        }
+      },
+      {
+        "id": "door_endnke",
+        "fromRoomId": "level_03_central_archive",
+        "toRoomId": "room_kqrkp0",
+        "lockType": "survive_wave",
+        "waveId": "wave_level_03_central_archive",
+        "sourceDoor": {
+          "label": "中央档案室 → 路由管制室",
+          "position": [
+            6.5,
+            0,
+            -13
+          ],
+          "size": [
+            3.2,
+            3.2,
+            0.35
+          ],
+          "yaw": 1.5707963267948966,
+          "defaultState": "locked",
+          "lock": {
+            "type": "survive_wave",
+            "waveId": "wave_level_03_central_archive",
+            "lockedMessage": "清掉「中央档案室」里的机器人，门才会开。",
+            "unlockedMessage": "威胁解除，门已解锁。"
+          },
+          "visualKey": "museum_gallery_door",
+          "materialKey": "terminal_red",
+          "panelPosition": [
+            6.85,
+            0,
+            -11.22
+          ],
+          "autoOpenOnApproach": false,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true
+          }
+        }
+      }
+    ],
+    "props": [
+      {
+        "id": "level_03_tool_human_origin_wall_art",
+        "modelKey": "age_museum_wall_art_human_origin",
+        "roomId": "level_03_tool_exhibit",
+        "position": [
+          -14.2,
+          6.56
+        ],
+        "rotationY": 3.141592653589793,
+        "scale": 0.94,
+        "elevation": 0.85,
+        "sourceProp": {
+          "y": 0.85,
+          "scale": 0.94,
+          "label": "人类起源壁画"
+        }
+      },
+      {
+        "id": "level_03_voice_robot_worker_wall_art",
+        "modelKey": "age_museum_wall_art_robot_worker",
+        "roomId": "level_03_voice_exhibit",
+        "position": [
+          14.2,
+          6.56
+        ],
+        "rotationY": 3.141592653589793,
+        "scale": 0.94,
+        "elevation": 0.85,
+        "sourceProp": {
+          "y": 0.85,
+          "scale": 0.94,
+          "label": "机器劳工壁画"
+        }
+      },
+      {
+        "id": "level_03_tool_last_human_tool_vitrine",
+        "modelKey": "room_museum_last_human_tool_vitrine",
+        "roomId": "level_03_tool_exhibit",
+        "position": [
+          -12.2,
+          2.2
+        ],
+        "rotationY": 0.05,
+        "scale": 1,
+        "elevation": 0.05,
+        "sourceProp": {
+          "y": 0.045,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              1.05,
+              0.59,
+              0.45
+            ]
+          },
+          "label": "最后人类工具柜"
+        }
+      },
+      {
+        "id": "level_03_voice_archive_case_asset",
+        "modelKey": "room_museum_voice_archive_case",
+        "roomId": "level_03_voice_exhibit",
+        "position": [
+          12.2,
+          2
+        ],
+        "rotationY": -0.08,
+        "scale": 1,
+        "elevation": 0.05,
+        "sourceProp": {
+          "y": 0.045,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.71,
+              0.86,
+              0.46
+            ]
+          },
+          "label": "声纹记忆玻璃柜"
+        }
+      },
+      {
+        "id": "level_03_body_skeleton_vitrine_asset",
+        "modelKey": "room_museum_skeleton_vitrine",
+        "roomId": "level_03_body_exhibit",
+        "position": [
+          -3.15,
+          -5.35
+        ],
+        "rotationY": -0.08,
+        "scale": 1,
+        "elevation": 0.05,
+        "sourceProp": {
+          "y": 0.045,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.81,
+              1.06,
+              0.45
+            ]
+          },
+          "label": "身体记忆玻璃柜"
+        }
+      },
+      {
+        "id": "level_03_lobby_glass_vitrine_context",
+        "modelKey": "room_museum_glass_vitrine_specimen",
+        "roomId": "level_03_gallery_lobby",
+        "position": [
+          -7.5,
+          7
+        ],
+        "rotationY": 2.356194490192345,
+        "scale": 0.88,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 0.88,
+          "collider": {
+            "halfSize": [
+              0.55,
+              0.8271999999999999,
+              0.47080000000000005
+            ]
+          },
+          "label": "玻璃陈列柜·发光标本"
+        }
+      },
+      {
+        "id": "level_03_body_display_plinth_context",
+        "modelKey": "room_l3_img2_display_plinth",
+        "roomId": "level_03_body_exhibit",
+        "position": [
+          4.1,
+          -6.85
+        ],
+        "rotationY": -0.28,
+        "scale": 0.72,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 0.72,
+          "collider": {
+            "halfSize": [
+              0.324,
+              0.531,
+              0.324
+            ]
+          },
+          "label": "展柜基座"
+        }
+      },
+      {
+        "id": "level_03_orb_red_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "roomId": "level_03_body_exhibit",
+        "position": [
+          -2.55,
+          -6.54
+        ],
+        "rotationY": -0.28,
+        "scale": 0.68,
+        "elevation": 0.05,
+        "sourceProp": {
+          "y": 0.045,
+          "scale": 0.68,
+          "collider": {
+            "halfSize": [
+              0.36,
+              0.46,
+              0.36
+            ]
+          },
+          "label": "红灯展台"
+        }
+      },
+      {
+        "id": "level_03_orb_blue_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "roomId": "level_03_voice_exhibit",
+        "position": [
+          14.5,
+          1.5
+        ],
+        "rotationY": -0.18,
+        "scale": 0.68,
+        "elevation": 0.05,
+        "sourceProp": {
+          "y": 0.045,
+          "scale": 0.68,
+          "collider": {
+            "halfSize": [
+              0.36,
+              0.46,
+              0.36
+            ]
+          },
+          "label": "蓝灯展台"
+        }
+      },
+      {
+        "id": "level_03_orb_green_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "roomId": "level_03_body_exhibit",
+        "position": [
+          2.55,
+          -6.54
+        ],
+        "rotationY": 0.15,
+        "scale": 0.68,
+        "elevation": 0.05,
+        "sourceProp": {
+          "y": 0.045,
+          "scale": 0.68,
+          "collider": {
+            "halfSize": [
+              0.36,
+              0.46,
+              0.36
+            ]
+          },
+          "label": "绿灯展台"
+        }
+      },
+      {
+        "id": "level_03_orb_yellow_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "roomId": "level_03_tool_exhibit",
+        "position": [
+          -14.5,
+          1.5
+        ],
+        "rotationY": -0.25,
+        "scale": 0.68,
+        "elevation": 0.05,
+        "sourceProp": {
+          "y": 0.045,
+          "scale": 0.68,
+          "collider": {
+            "halfSize": [
+              0.36,
+              0.46,
+              0.36
+            ]
+          },
+          "label": "黄灯展台"
+        }
+      },
+      {
+        "id": "level_03_orb_purple_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "roomId": "level_03_entry_hall",
+        "position": [
+          -4.5,
+          10
+        ],
+        "rotationY": 0.08,
+        "scale": 0.68,
+        "elevation": 0.05,
+        "sourceProp": {
+          "y": 0.045,
+          "scale": 0.68,
+          "collider": {
+            "halfSize": [
+              0.36,
+              0.46,
+              0.36
+            ]
+          },
+          "label": "紫灯展台"
+        }
+      },
+      {
+        "id": "level_03_body_last_human_wall_art",
+        "modelKey": "age_museum_wall_art_last_human",
+        "roomId": "level_03_body_exhibit",
+        "position": [
+          5.72,
+          -5.1
+        ],
+        "rotationY": -1.5707963267948966,
+        "scale": 1.02,
+        "elevation": 0.88,
+        "sourceProp": {
+          "y": 0.88,
+          "scale": 1.02,
+          "label": "最后人类壁画"
+        }
+      },
+      {
+        "id": "level_03_archive_protocol_diagram_wall_art",
+        "modelKey": "age_museum_wall_art_protocol_diagram",
+        "roomId": "level_03_central_archive",
+        "position": [
+          -6.22,
+          -13
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1.04,
+        "elevation": 0.88,
+        "sourceProp": {
+          "y": 0.88,
+          "scale": 1.04,
+          "label": "协议图解壁画"
+        }
+      },
+      {
+        "id": "prop_1ossov",
+        "modelKey": "room_museum_glass_vitrine_specimen",
+        "roomId": "room_kqrkp0",
+        "position": [
+          12,
+          -15.5
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.55,
+              0.8271999999999999,
+              0.47080000000000005
+            ]
+          },
+          "label": "证物玻璃柜"
+        }
+      },
+      {
+        "id": "level_03_official_exit_elevator_shell",
+        "modelKey": "service_elevator_interior_shell",
+        "roomId": "level_03_official_exit_room",
+        "position": [
+          0,
+          -20
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "闭馆电梯内壁",
+          "tags": [
+            "museum",
+            "elevator",
+            "interior_shell",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_threshold",
+        "modelKey": "door_threshold_service_elevator",
+        "roomId": "level_03_official_exit_room",
+        "position": [
+          0,
+          -17.89
+        ],
+        "rotationY": 0,
+        "scale": 1.05,
+        "elevation": 0.04,
+        "sourceProp": {
+          "y": 0.035,
+          "scale": [
+            1.15,
+            1,
+            1
+          ],
+          "label": "出口电梯门槛",
+          "tags": [
+            "museum",
+            "elevator",
+            "threshold",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "level_03_official_exit_call_buttons",
+        "modelKey": "service_elevator_call_buttons",
+        "roomId": "level_03_official_exit_room",
+        "position": [
+          2.82,
+          -20.7
+        ],
+        "rotationY": -1.5707963267948966,
+        "scale": 1,
+        "elevation": 1.42,
+        "sourceProp": {
+          "y": 1.42,
+          "scale": 1,
+          "label": "闭馆电梯呼叫按钮",
+          "tags": [
+            "museum",
+            "elevator",
+            "exit_call_buttons",
+            "button_panel"
+          ]
+        }
+      },
+      {
+        "id": "prop_3r5g00",
+        "modelKey": "room_cc0_bust",
+        "roomId": "level_03_entry_hall",
+        "position": [
+          -2,
+          9.5
+        ],
+        "rotationY": 0,
+        "scale": 1
+      },
+      {
+        "id": "prop_lvm57s",
+        "modelKey": "room_cc0_bull_head_plinth",
+        "roomId": "level_03_tool_exhibit",
+        "position": [
+          -9.5,
+          1
+        ],
+        "rotationY": 5.497787143782138,
+        "scale": 1
+      },
+      {
+        "id": "prop_67ear6",
+        "modelKey": "room_cc0_antique_ceramic_vase_01",
+        "roomId": "level_03_gallery_lobby",
+        "position": [
+          -2.5,
+          -1
+        ],
+        "rotationY": 0,
+        "scale": 1
+      }
+    ],
+    "pickups": [
+      {
+        "id": "key_level_03_body_door",
+        "kind": "key_item",
+        "roomId": "level_03_voice_exhibit",
+        "position": [
+          10,
+          6
+        ],
+        "linkedDoorId": "level_03_body_door",
+        "sourceKeyItem": {
+          "label": "身体展厅门禁片",
+          "y": 0,
+          "collectRadius": 1.5,
+          "visualKey": "large_yellow_key",
+          "materialKey": "access_card_gold",
+          "dialogueTrigger": "level_03_voice_chip_taken",
+          "rewardPulse": {
+            "label": "门禁片",
+            "detail": "身体展厅 的门可以打开了",
+            "rarity": "rare"
+          }
+        }
+      },
+      {
+        "id": "level_03_med_01",
+        "kind": "repairKit",
+        "roomId": "level_03_entry_hall",
+        "position": [
+          -4.5,
+          11.5
+        ]
+      },
+      {
+        "id": "level_03_cell_01",
+        "kind": "coreCell",
+        "roomId": "level_03_gallery_lobby",
+        "position": [
+          3.5,
+          0
+        ]
+      }
+    ],
+    "robots": [
+      {
+        "id": "robot_level_03_lobby_patrol_enemy_1",
+        "roomId": "level_03_gallery_lobby",
+        "archetype": "repair_drone",
+        "count": 3,
+        "combat": {
+          "healthMultiplier": 1.3
+        },
+        "position": [
+          0,
+          3.5
+        ],
+        "wave": {
+          "id": "level_03_lobby_patrol",
+          "label": "展厅安保",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_gallery_lobby",
+          "triggerDelay": 0.45,
+          "startDelay": 0.45,
+          "reward": "none",
+          "spawnGroupId": "level03_lobby_ring",
+          "spawnGroupLabel": "主展厅",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            3.5
+          ],
+          "spawnGroupRadius": 6.2,
+          "presentation": {
+            "id": "level_03_lobby_patrol",
+            "label": "展厅安保",
+            "objectiveTitle": "拿展项档案",
+            "objectiveDetail": "别停在主展厅",
+            "startMessage": "展厅安保启动。",
+            "startWarning": {
+              "label": "展厅安保",
+              "detail": "先拿档案"
+            },
+            "startWarningDuration": 2
+          }
+        }
+      },
+      {
+        "id": "robot_level_03_lobby_patrol_enemy_2",
+        "roomId": "level_03_gallery_lobby",
+        "archetype": "shield_tech",
+        "count": 1,
+        "combat": {
+          "healthMultiplier": 1.3
+        },
+        "position": [
+          0,
+          3.5
+        ],
+        "wave": {
+          "id": "level_03_lobby_patrol",
+          "label": "展厅安保",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_gallery_lobby",
+          "triggerDelay": 0.45,
+          "startDelay": 0.45,
+          "reward": "none",
+          "spawnGroupId": "level03_lobby_ring",
+          "spawnGroupLabel": "主展厅",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            3.5
+          ],
+          "spawnGroupRadius": 6.2,
+          "presentation": {
+            "id": "level_03_lobby_patrol",
+            "label": "展厅安保",
+            "objectiveTitle": "拿展项档案",
+            "objectiveDetail": "别停在主展厅",
+            "startMessage": "展厅安保启动。",
+            "startWarning": {
+              "label": "展厅安保",
+              "detail": "先拿档案"
+            },
+            "startWarningDuration": 2
+          }
+        }
+      },
+      {
+        "id": "robot_level_03_lobby_patrol_reinforcement_1",
+        "roomId": "level_03_gallery_lobby",
+        "archetype": "repair_drone",
+        "count": 1,
+        "combat": {
+          "healthMultiplier": 1.3
+        },
+        "position": [
+          0,
+          3.5
+        ],
+        "wave": {
+          "id": "level_03_lobby_patrol",
+          "label": "展厅安保",
+          "role": "reinforcement",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_gallery_lobby",
+          "triggerDelay": 0.45,
+          "startDelay": 0.45,
+          "reward": "none",
+          "spawnGroupId": "level03_lobby_ring",
+          "spawnGroupLabel": "主展厅",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            3.5
+          ],
+          "spawnGroupRadius": 6.2,
+          "presentation": {
+            "id": "level_03_lobby_patrol",
+            "label": "展厅安保",
+            "objectiveTitle": "拿展项档案",
+            "objectiveDetail": "别停在主展厅",
+            "startMessage": "展厅安保启动。",
+            "startWarning": {
+              "label": "展厅安保",
+              "detail": "先拿档案"
+            },
+            "startWarningDuration": 2
+          },
+          "reinforcement": {
+            "every": 6,
+            "startsAfter": 6,
+            "maxGroups": 5,
+            "maxAlive": 3
+          }
+        }
+      },
+      {
+        "id": "robot_wave_level_03_body_exhibit_enemy_1",
+        "roomId": "level_03_body_exhibit",
+        "archetype": "repair_drone",
+        "count": 2,
+        "combat": {
+          "healthMultiplier": 1.3
+        },
+        "position": [
+          0,
+          -5.6
+        ],
+        "wave": {
+          "id": "wave_level_03_body_exhibit",
+          "label": "身体展柜安保",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_body_exhibit",
+          "triggerDelay": 0.35,
+          "startDelay": 0.35,
+          "reward": "none",
+          "spawnGroupId": "sg_level_03_body_exhibit",
+          "spawnGroupLabel": "身体展厅",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            -5.6
+          ],
+          "spawnGroupRadius": 3.4,
+          "presentation": {
+            "id": "wave_level_03_body_exhibit",
+            "label": "身体展柜安保",
+            "objectiveTitle": "解开四色展柜",
+            "objectiveDetail": "第一色在声纹展厅",
+            "startMessage": "身体展柜安保启动。",
+            "startWarning": {
+              "label": "四色展柜",
+              "detail": "声纹黄，身体白蓝红"
+            },
+            "startWarningDuration": 2.1,
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 0.72
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_wave_level_03_body_exhibit_enemy_2",
+        "roomId": "level_03_body_exhibit",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "combat": {
+          "healthMultiplier": 1.3
+        },
+        "position": [
+          0,
+          -5.6
+        ],
+        "wave": {
+          "id": "wave_level_03_body_exhibit",
+          "label": "身体展柜安保",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_body_exhibit",
+          "triggerDelay": 0.35,
+          "startDelay": 0.35,
+          "reward": "none",
+          "spawnGroupId": "sg_level_03_body_exhibit",
+          "spawnGroupLabel": "身体展厅",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            -5.6
+          ],
+          "spawnGroupRadius": 3.4,
+          "presentation": {
+            "id": "wave_level_03_body_exhibit",
+            "label": "身体展柜安保",
+            "objectiveTitle": "解开四色展柜",
+            "objectiveDetail": "第一色在声纹展厅",
+            "startMessage": "身体展柜安保启动。",
+            "startWarning": {
+              "label": "四色展柜",
+              "detail": "声纹黄，身体白蓝红"
+            },
+            "startWarningDuration": 2.1,
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 0.72
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_wave_level_03_body_exhibit_reinforcement_1",
+        "roomId": "level_03_body_exhibit",
+        "archetype": "repair_drone",
+        "count": 1,
+        "combat": {
+          "healthMultiplier": 1.3
+        },
+        "position": [
+          0,
+          -5.6
+        ],
+        "wave": {
+          "id": "wave_level_03_body_exhibit",
+          "label": "身体展柜安保",
+          "role": "reinforcement",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_body_exhibit",
+          "triggerDelay": 0.35,
+          "startDelay": 0.35,
+          "reward": "none",
+          "spawnGroupId": "sg_level_03_body_exhibit",
+          "spawnGroupLabel": "身体展厅",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            -5.6
+          ],
+          "spawnGroupRadius": 3.4,
+          "presentation": {
+            "id": "wave_level_03_body_exhibit",
+            "label": "身体展柜安保",
+            "objectiveTitle": "解开四色展柜",
+            "objectiveDetail": "第一色在声纹展厅",
+            "startMessage": "身体展柜安保启动。",
+            "startWarning": {
+              "label": "四色展柜",
+              "detail": "声纹黄，身体白蓝红"
+            },
+            "startWarningDuration": 2.1,
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 0.72
+            }
+          },
+          "reinforcement": {
+            "every": 5.8,
+            "startsAfter": 5,
+            "maxGroups": 4,
+            "maxAlive": 3
+          }
+        }
+      },
+      {
+        "id": "robot_wave_level_03_central_archive_enemy_1",
+        "roomId": "level_03_central_archive",
+        "archetype": "custodian_elite",
+        "count": 1,
+        "tier": "boss",
+        "combat": {
+          "tierLabel": "策展主管",
+          "healthMultiplier": 0.44,
+          "damageMultiplier": 0.31,
+          "moveSpeedMultiplier": 1.05,
+          "attackCooldownMultiplier": 1.08,
+          "attackRangeMultiplier": 1.08,
+          "radiusMultiplier": 0.92,
+          "visual": {
+            "modelKey": "hp_enemy_shield_technician_horror",
+            "coreColor": "#ff6a52",
+            "warningColor": "#ffd36d",
+            "textureAtlasKey": "custodian_boss",
+            "scaleMultiplier": 0.94,
+            "lightIntensityMultiplier": 1.35
+          }
+        },
+        "position": [
+          0,
+          -9.85
+        ],
+        "wave": {
+          "id": "wave_level_03_central_archive",
+          "label": "策展主管",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_central_archive",
+          "triggerDelay": 0.55,
+          "startDelay": 0.55,
+          "interruptsActiveWave": true,
+          "reward": "none",
+          "completionDialogueTrigger": "level_03_curator_down_route",
+          "spawnGroupId": "sg_level_03_central_archive",
+          "spawnGroupLabel": "中央档案室门口",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            -9.85
+          ],
+          "spawnGroupRadius": 1.05,
+          "presentation": {
+            "id": "wave_level_03_central_archive",
+            "label": "策展主管",
+            "objectiveTitle": "击倒策展主管",
+            "objectiveDetail": "它守着右侧管制房间",
+            "startMessage": "中央档案室锁定。",
+            "startWarning": {
+              "label": "策展主管",
+              "detail": "击倒后去右侧管制房间"
+            },
+            "startWarningDuration": 2.35,
+            "startDialogueTrigger": "level_03_curator_spawn",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1
+            },
+            "startCamera": {
+              "shake": 0.5,
+              "fovKick": 2.8
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_wave_level_03_central_archive_enemy_2",
+        "roomId": "level_03_central_archive",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "combat": {
+          "healthMultiplier": 1.3
+        },
+        "position": [
+          0,
+          -9.85
+        ],
+        "wave": {
+          "id": "wave_level_03_central_archive",
+          "label": "策展主管",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_central_archive",
+          "triggerDelay": 0.55,
+          "startDelay": 0.55,
+          "interruptsActiveWave": true,
+          "reward": "none",
+          "completionDialogueTrigger": "level_03_curator_down_route",
+          "spawnGroupId": "sg_level_03_central_archive",
+          "spawnGroupLabel": "中央档案室门口",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            -9.85
+          ],
+          "spawnGroupRadius": 1.05,
+          "presentation": {
+            "id": "wave_level_03_central_archive",
+            "label": "策展主管",
+            "objectiveTitle": "击倒策展主管",
+            "objectiveDetail": "它守着右侧管制房间",
+            "startMessage": "中央档案室锁定。",
+            "startWarning": {
+              "label": "策展主管",
+              "detail": "击倒后去右侧管制房间"
+            },
+            "startWarningDuration": 2.35,
+            "startDialogueTrigger": "level_03_curator_spawn",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1
+            },
+            "startCamera": {
+              "shake": 0.5,
+              "fovKick": 2.8
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_wave_level_03_central_archive_reinforcement_1",
+        "roomId": "level_03_central_archive",
+        "archetype": "repair_drone",
+        "count": 1,
+        "combat": {
+          "healthMultiplier": 1.3
+        },
+        "position": [
+          0,
+          -9.85
+        ],
+        "wave": {
+          "id": "wave_level_03_central_archive",
+          "label": "策展主管",
+          "role": "reinforcement",
+          "triggerType": "room_entered",
+          "triggerId": "level_03_central_archive",
+          "triggerDelay": 0.55,
+          "startDelay": 0.55,
+          "interruptsActiveWave": true,
+          "reward": "none",
+          "completionDialogueTrigger": "level_03_curator_down_route",
+          "spawnGroupId": "sg_level_03_central_archive",
+          "spawnGroupLabel": "中央档案室门口",
+          "spawnGroupLayout": "around_ring",
+          "spawnGroupCenter": [
+            0,
+            -9.85
+          ],
+          "spawnGroupRadius": 1.05,
+          "presentation": {
+            "id": "wave_level_03_central_archive",
+            "label": "策展主管",
+            "objectiveTitle": "击倒策展主管",
+            "objectiveDetail": "它守着右侧管制房间",
+            "startMessage": "中央档案室锁定。",
+            "startWarning": {
+              "label": "策展主管",
+              "detail": "击倒后去右侧管制房间"
+            },
+            "startWarningDuration": 2.35,
+            "startDialogueTrigger": "level_03_curator_spawn",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1
+            },
+            "startCamera": {
+              "shake": 0.5,
+              "fovKick": 2.8
+            }
+          },
+          "reinforcement": {
+            "every": 8.5,
+            "startsAfter": 8,
+            "maxGroups": 999,
+            "maxAlive": 2,
+            "requiresEliteAlive": true,
+            "endless": true
+          }
+        }
+      }
+    ],
+    "puzzles": [
+      {
+        "id": "level_03_tool_calibration",
+        "kind": "circuit_grid",
+        "resultMode": "open_door",
+        "linkedDoorId": "level_03_voice_door",
+        "interactionId": "level_03_tool_case",
+        "sourceInteraction": {
+          "type": "terminal",
+          "radius": 1.9,
+          "visualKey": "none",
+          "materialKey": "terminal_cyan",
+          "label": "工具档案校准",
+          "hostPropId": "level_03_tool_last_human_tool_vitrine"
+        },
+        "sourcePuzzle": {
+          "id": "level_03_tool_calibration",
+          "type": "tool_calibration",
+          "label": "工具档案校准",
+          "roomId": "level_03_tool_exhibit",
+          "interactionId": "level_03_tool_case",
+          "repeatable": true,
+          "toolLabel": "实验铁棒",
+          "columns": 6,
+          "rows": 4,
+          "entry": {
+            "x": 0,
+            "y": 2,
+            "channel": "signal"
+          },
+          "targets": [
+            {
+              "x": 5,
+              "y": 1,
+              "channel": "stability"
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "channel": "force"
+            }
+          ],
+          "requiredCells": [
+            {
+              "x": 3,
+              "y": 2,
+              "channel": "protocol"
+            }
+          ],
+          "perfectMoveLimit": 5,
+          "maxMoveLimit": 10,
+          "timeLimitSec": 90,
+          "cells": [
+            {
+              "x": 0,
+              "y": 0,
+              "kind": "corner",
+              "rotation": 2
+            },
+            {
+              "x": 1,
+              "y": 0,
+              "kind": "straight",
+              "rotation": 0
+            },
+            {
+              "x": 2,
+              "y": 0,
+              "kind": "tee",
+              "rotation": 3
+            },
+            {
+              "x": 3,
+              "y": 0,
+              "kind": "blocked"
+            },
+            {
+              "x": 4,
+              "y": 0,
+              "kind": "corner",
+              "rotation": 1
+            },
+            {
+              "x": 5,
+              "y": 0,
+              "kind": "straight",
+              "rotation": 0
+            },
+            {
+              "x": 0,
+              "y": 1,
+              "kind": "tee",
+              "rotation": 2
+            },
+            {
+              "x": 1,
+              "y": 1,
+              "kind": "corner",
+              "rotation": 3
+            },
+            {
+              "x": 2,
+              "y": 1,
+              "kind": "straight",
+              "rotation": 0
+            },
+            {
+              "x": 3,
+              "y": 1,
+              "kind": "corner",
+              "rotation": 1
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "kind": "corner",
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 1,
+              "kind": "straight",
+              "rotation": 1
+            },
+            {
+              "x": 0,
+              "y": 2,
+              "kind": "straight",
+              "rotation": 1
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "kind": "straight",
+              "rotation": 1
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "kind": "straight",
+              "rotation": 1
+            },
+            {
+              "x": 3,
+              "y": 2,
+              "kind": "amplifier",
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "kind": "tee",
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 2,
+              "kind": "blocked"
+            },
+            {
+              "x": 0,
+              "y": 3,
+              "kind": "blocked"
+            },
+            {
+              "x": 1,
+              "y": 3,
+              "kind": "corner",
+              "rotation": 0
+            },
+            {
+              "x": 2,
+              "y": 3,
+              "kind": "tee",
+              "rotation": 0
+            },
+            {
+              "x": 3,
+              "y": 3,
+              "kind": "straight",
+              "rotation": 1
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "kind": "corner",
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "kind": "straight",
+              "rotation": 1
+            }
+          ],
+          "variants": [
+            {
+              "id": "museum_tool_route_01",
+              "solutionMoveCount": 5,
+              "rotationOverrides": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 1,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 1,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 3,
+                  "rotation": 3
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_02",
+              "solutionMoveCount": 4,
+              "rotationOverrides": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 1,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 3,
+                  "rotation": 3
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_03",
+              "solutionMoveCount": 6,
+              "rotationOverrides": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 1,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 2
+                },
+                {
+                  "x": 4,
+                  "y": 1,
+                  "rotation": 0
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_04",
+              "solutionMoveCount": 5,
+              "rotationOverrides": [
+                {
+                  "x": 1,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 3,
+                  "rotation": 2
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_05",
+              "solutionMoveCount": 4,
+              "rotationOverrides": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 1,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 5,
+                  "y": 1,
+                  "rotation": 0
+                },
+                {
+                  "x": 5,
+                  "y": 3,
+                  "rotation": 0
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_06",
+              "solutionMoveCount": 6,
+              "rotationOverrides": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 1,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 2
+                },
+                {
+                  "x": 4,
+                  "y": 1,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 3,
+                  "rotation": 3
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_07",
+              "solutionMoveCount": 5,
+              "rotationOverrides": [
+                {
+                  "x": 2,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 1,
+                  "rotation": 3
+                },
+                {
+                  "x": 5,
+                  "y": 3,
+                  "rotation": 0
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_08",
+              "solutionMoveCount": 4,
+              "rotationOverrides": [
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 1,
+                  "rotation": 0
+                },
+                {
+                  "x": 5,
+                  "y": 1,
+                  "rotation": 0
+                },
+                {
+                  "x": 5,
+                  "y": 3,
+                  "rotation": 0
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_09",
+              "solutionMoveCount": 6,
+              "rotationOverrides": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 1,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 3,
+                  "rotation": 3
+                }
+              ]
+            },
+            {
+              "id": "museum_tool_route_10",
+              "solutionMoveCount": 5,
+              "rotationOverrides": [
+                {
+                  "x": 0,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 2,
+                  "y": 2,
+                  "rotation": 0
+                },
+                {
+                  "x": 4,
+                  "y": 2,
+                  "rotation": 3
+                },
+                {
+                  "x": 4,
+                  "y": 1,
+                  "rotation": 0
+                },
+                {
+                  "x": 5,
+                  "y": 3,
+                  "rotation": 0
+                }
+              ]
+            }
+          ],
+          "success": {
+            "actions": [
+              {
+                "type": "open_door",
+                "doorId": "level_03_voice_door"
+              },
+              {
+                "type": "focus_reveal",
+                "reveal": {
+                  "kind": "door",
+                  "doorId": "level_03_voice_door"
+                }
+              }
+            ],
+            "dialogueTrigger": "level_03_tool_chip_taken",
+            "rewardPulse": {
+              "label": "工具校准完成",
+              "detail": "声纹展厅门已授权",
+              "rarity": "epic"
+            },
+            "rewardPulseDuration": 1.45,
+            "audio": {
+              "key": "system_exit_open",
+              "intensity": 0.78
+            }
+          },
+          "perfectBonus": {
+            "pickupType": "repairKit",
+            "rewardPulse": {
+              "label": "完美校准",
+              "detail": "额外治疗包弹出",
+              "rarity": "epic"
+            },
+            "rewardPulseDuration": 1.5
+          }
+        },
+        "roomId": "level_03_tool_exhibit",
+        "position": [
+          -12.2,
+          2.15
+        ],
+        "rotationY": 0
+      },
+      {
+        "id": "builder_color_lock",
+        "kind": "color_sequence",
+        "resultMode": "open_door",
+        "linkedDoorId": "level_03_archive_door",
+        "successOutputs": [
+          {
+            "id": "puzzle_out_level_03_curator",
+            "kind": "start_robots",
+            "robotRoomId": "level_03_central_archive",
+            "label": "唤醒策展主管"
+          }
+        ],
+        "interactionId": "builder_color_clue",
+        "sourceInteraction": {
+          "type": "terminal",
+          "radius": 1.55,
+          "visualKey": "puzzle_console_color_sequence",
+          "materialKey": "terminal_cyan",
+          "label": "灯序墙"
+        },
+        "sourcePuzzle": {
+          "id": "builder_color_lock",
+          "type": "hit_sequence",
+          "label": "灯序记忆锁",
+          "roomId": "level_03_body_exhibit",
+          "clue": {
+            "type": "pattern_panel",
+            "roomId": "level_03_gallery_lobby",
+            "interactionId": "builder_color_clue",
+            "sequence": [
+              "orb_red",
+              "orb_blue",
+              "orb_yellow",
+              "orb_green",
+              "orb_purple"
+            ],
+            "label": "墙面灯序只亮一次。",
+            "playback": {
+              "palette": [
+                "red",
+                "blue",
+                "yellow",
+                "green",
+                "purple",
+                "white",
+                "cyan"
+              ],
+              "stepMs": 560,
+              "gapMs": 130,
+              "requireReplayBeforeInput": true,
+              "reshuffleAfterFailures": 3,
+              "replayRequiredMessage": "回灯墙再看。",
+              "reshuffleMessage": "灯墙已换序。"
+            }
+          },
+          "input": {
+            "method": "weapon_hit",
+            "resetOnMistake": true,
+            "showProgressPulse": true
+          },
+          "targets": [
+            {
+              "id": "orb_red",
+              "label": "红色球",
+              "roomId": "level_03_body_exhibit",
+              "position": [
+                -2.55,
+                1.15,
+                -6.54
+              ],
+              "radius": 0.72,
+              "colorKey": "red",
+              "visualKey": "puzzle_orb_red",
+              "anchorPropId": "level_03_orb_red_pedestal"
+            },
+            {
+              "id": "orb_blue",
+              "label": "蓝色球",
+              "roomId": "level_03_voice_exhibit",
+              "position": [
+                14.5,
+                1.15,
+                1.5
+              ],
+              "radius": 0.72,
+              "colorKey": "blue",
+              "visualKey": "puzzle_orb_blue",
+              "anchorPropId": "level_03_orb_blue_pedestal"
+            },
+            {
+              "id": "orb_yellow",
+              "label": "黄色球",
+              "roomId": "level_03_tool_exhibit",
+              "position": [
+                -14.5,
+                1.15,
+                1.5
+              ],
+              "radius": 0.72,
+              "colorKey": "yellow",
+              "visualKey": "puzzle_orb_yellow",
+              "anchorPropId": "level_03_orb_yellow_pedestal"
+            },
+            {
+              "id": "orb_green",
+              "label": "绿色球",
+              "roomId": "level_03_body_exhibit",
+              "position": [
+                2.55,
+                1.15,
+                -6.54
+              ],
+              "radius": 0.72,
+              "colorKey": "green",
+              "visualKey": "puzzle_orb_green",
+              "anchorPropId": "level_03_orb_green_pedestal"
+            },
+            {
+              "id": "orb_purple",
+              "label": "紫色球",
+              "roomId": "level_03_entry_hall",
+              "position": [
+                -4.5,
+                1.15,
+                10
+              ],
+              "radius": 0.72,
+              "colorKey": "purple",
+              "visualKey": "puzzle_orb_purple",
+              "anchorPropId": "level_03_orb_purple_pedestal"
+            }
+          ],
+          "actors": [
+            {
+              "id": "orb_red",
+              "role": "orb:red",
+              "kind": "target",
+              "roomId": "level_03_body_exhibit",
+              "position": [
+                -2.55,
+                1.15,
+                -6.54
+              ],
+              "visualKey": "puzzle_orb_red",
+              "colorKey": "red",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "anchorPropId": "level_03_orb_red_pedestal",
+              "targetId": "orb_red"
+            },
+            {
+              "id": "orb_blue",
+              "role": "orb:blue",
+              "kind": "target",
+              "roomId": "level_03_voice_exhibit",
+              "position": [
+                14.5,
+                1.15,
+                1.5
+              ],
+              "visualKey": "puzzle_orb_blue",
+              "colorKey": "blue",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "anchorPropId": "level_03_orb_blue_pedestal",
+              "targetId": "orb_blue"
+            },
+            {
+              "id": "orb_yellow",
+              "role": "orb:yellow",
+              "kind": "target",
+              "roomId": "level_03_tool_exhibit",
+              "position": [
+                -14.5,
+                1.15,
+                1.5
+              ],
+              "visualKey": "puzzle_orb_yellow",
+              "colorKey": "yellow",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "anchorPropId": "level_03_orb_yellow_pedestal",
+              "targetId": "orb_yellow"
+            },
+            {
+              "id": "orb_green",
+              "role": "orb:green",
+              "kind": "target",
+              "roomId": "level_03_body_exhibit",
+              "position": [
+                2.55,
+                1.15,
+                -6.54
+              ],
+              "visualKey": "puzzle_orb_green",
+              "colorKey": "green",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "anchorPropId": "level_03_orb_green_pedestal",
+              "targetId": "orb_green"
+            },
+            {
+              "id": "orb_purple",
+              "role": "orb:purple",
+              "kind": "target",
+              "roomId": "level_03_entry_hall",
+              "position": [
+                -4.5,
+                1.15,
+                10
+              ],
+              "visualKey": "puzzle_orb_purple",
+              "colorKey": "purple",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "anchorPropId": "level_03_orb_purple_pedestal",
+              "targetId": "orb_purple"
+            }
+          ],
+          "fail": {
+            "message": "顺序错了，回灯墙。",
+            "resetDelay": 0.45
+          },
+          "success": {
+            "opensDoorId": "level_03_archive_door",
+            "rewardPulse": {
+              "label": "灯序确认",
+              "detail": "门禁顺序已记录",
+              "rarity": "epic"
+            },
+            "rewardPulseDuration": 1.6,
+            "audio": {
+              "key": "system_exit_open",
+              "intensity": 0.9
+            },
+            "actions": [
+              {
+                "type": "open_door",
+                "doorId": "level_03_archive_door"
+              },
+              {
+                "type": "spawn_warning",
+                "warning": {
+                  "label": "策展主管",
+                  "detail": "档案室门禁确认，重型单位启动"
+                },
+                "duration": 2.2
+              },
+              {
+                "type": "camera_impact",
+                "cameraImpact": {
+                  "shake": 0.3,
+                  "fovKick": 1.45,
+                  "rumble": 0.12,
+                  "rumbleDuration": 0.18
+                }
+              },
+              {
+                "type": "start_wave",
+                "waveId": "wave_level_03_central_archive",
+                "delay": 1.05
+              },
+              {
+                "type": "focus_reveal",
+                "reveal": {
+                  "kind": "door",
+                  "doorId": "level_03_archive_door",
+                  "durationSec": 2.8
+                }
+              }
+            ]
+          }
+        },
+        "roomId": "level_03_gallery_lobby",
+        "position": [
+          -7,
+          -0.5
+        ],
+        "rotationY": 0,
+        "components": [
+          {
+            "id": "orb_red",
+            "role": "orb_red",
+            "roomId": "level_03_body_exhibit",
+            "position": [
+              -2.55,
+              -6.54
+            ],
+            "sourceTarget": {
+              "id": "orb_red",
+              "label": "红色球",
+              "y": 1.15,
+              "radius": 0.72,
+              "visualKey": "puzzle_orb_red",
+              "anchorPropId": "level_03_orb_red_pedestal"
+            },
+            "sourceActor": {
+              "id": "orb_red",
+              "role": "orb:red",
+              "kind": "target",
+              "roomId": "level_03_body_exhibit",
+              "position": [
+                -2.55,
+                1.15,
+                -6.54
+              ],
+              "visualKey": "puzzle_orb_red",
+              "colorKey": "red",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "orb_red",
+              "anchorPropId": "level_03_orb_red_pedestal"
+            }
+          },
+          {
+            "id": "orb_blue",
+            "role": "orb_blue",
+            "roomId": "level_03_voice_exhibit",
+            "position": [
+              14.5,
+              1.5
+            ],
+            "sourceTarget": {
+              "id": "orb_blue",
+              "label": "蓝色球",
+              "y": 1.15,
+              "radius": 0.72,
+              "visualKey": "puzzle_orb_blue",
+              "anchorPropId": "level_03_orb_blue_pedestal"
+            },
+            "sourceActor": {
+              "id": "orb_blue",
+              "role": "orb:blue",
+              "kind": "target",
+              "roomId": "level_03_voice_exhibit",
+              "position": [
+                14.5,
+                1.15,
+                1.5
+              ],
+              "visualKey": "puzzle_orb_blue",
+              "colorKey": "blue",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "orb_blue",
+              "anchorPropId": "level_03_orb_blue_pedestal"
+            }
+          },
+          {
+            "id": "orb_yellow",
+            "role": "orb_yellow",
+            "roomId": "level_03_tool_exhibit",
+            "position": [
+              -14.5,
+              1.5
+            ],
+            "sourceTarget": {
+              "id": "orb_yellow",
+              "label": "黄色球",
+              "y": 1.15,
+              "radius": 0.72,
+              "visualKey": "puzzle_orb_yellow",
+              "anchorPropId": "level_03_orb_yellow_pedestal"
+            },
+            "sourceActor": {
+              "id": "orb_yellow",
+              "role": "orb:yellow",
+              "kind": "target",
+              "roomId": "level_03_tool_exhibit",
+              "position": [
+                -14.5,
+                1.15,
+                1.5
+              ],
+              "visualKey": "puzzle_orb_yellow",
+              "colorKey": "yellow",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "orb_yellow",
+              "anchorPropId": "level_03_orb_yellow_pedestal"
+            }
+          },
+          {
+            "id": "orb_green",
+            "role": "orb_green",
+            "roomId": "level_03_body_exhibit",
+            "position": [
+              2.55,
+              -6.54
+            ],
+            "sourceTarget": {
+              "id": "orb_green",
+              "label": "绿色球",
+              "y": 1.15,
+              "radius": 0.72,
+              "visualKey": "puzzle_orb_green",
+              "anchorPropId": "level_03_orb_green_pedestal"
+            },
+            "sourceActor": {
+              "id": "orb_green",
+              "role": "orb:green",
+              "kind": "target",
+              "roomId": "level_03_body_exhibit",
+              "position": [
+                2.55,
+                1.15,
+                -6.54
+              ],
+              "visualKey": "puzzle_orb_green",
+              "colorKey": "green",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "orb_green",
+              "anchorPropId": "level_03_orb_green_pedestal"
+            }
+          },
+          {
+            "id": "orb_purple",
+            "role": "orb_purple",
+            "roomId": "level_03_entry_hall",
+            "position": [
+              -4.5,
+              10
+            ],
+            "sourceTarget": {
+              "id": "orb_purple",
+              "label": "紫色球",
+              "y": 1.15,
+              "radius": 0.72,
+              "visualKey": "puzzle_orb_purple",
+              "anchorPropId": "level_03_orb_purple_pedestal"
+            },
+            "sourceActor": {
+              "id": "orb_purple",
+              "role": "orb:purple",
+              "kind": "target",
+              "roomId": "level_03_entry_hall",
+              "position": [
+                -4.5,
+                1.15,
+                10
+              ],
+              "visualKey": "puzzle_orb_purple",
+              "colorKey": "purple",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "orb_purple",
+              "anchorPropId": "level_03_orb_purple_pedestal"
+            }
+          }
+        ]
+      }
+    ],
+    "routeSwitches": [
+      {
+        "id": "route_z43akm",
+        "label": "管制路由台",
+        "roomId": "room_kqrkp0",
+        "keyRoomId": "level_03_gallery_lobby",
+        "keyPosition": [
+          -5.04,
+          0.86
+        ],
+        "position": [
+          9.35,
+          -15.65
+        ],
+        "rotationY": 0,
+        "outputs": [
+          {
+            "id": "route_out_yf",
+            "kind": "open_door",
+            "doorId": "level_03_official_exit_door",
+            "label": "开启中央档案室—闭馆电梯"
+          }
+        ]
+      }
+    ],
+    "exitRoomId": "level_03_official_exit_room",
+    "lighting": {
+      "ambient": 0.42,
+      "keyColor": "#dbefff",
+      "keyIntensity": 0.88,
+      "fog": 0.18,
+      "bloom": 0.28,
+      "shadow": 0.62
+    },
+    "sourceLevel": {
+      "levelId": "level_03_human_museum",
+      "mapId": "level_03_human_museum_map",
+      "dialogues": [
+        {
+          "id": "level_03_start_01",
+          "trigger": "level_start",
+          "speaker": "未知频道",
+          "line": "这里是博物馆。展品都在等你对号。",
+          "tone": "system",
+          "duration": 2.8
+        },
+        {
+          "id": "level_03_lobby_01",
+          "trigger": "level_03_lobby_entry",
+          "speaker": "展厅广播",
+          "line": "参观路线锁定：工具、声音、身体、协议。",
+          "tone": "threat",
+          "duration": 2.8
+        },
+        {
+          "id": "level_03_tool_01",
+          "trigger": "level_03_tool_chip_taken",
+          "speaker": "你",
+          "line": "这根铁棒不是展品，是用法。",
+          "tone": "player",
+          "duration": 2.9
+        },
+        {
+          "id": "level_03_voice_01",
+          "trigger": "level_03_voice_chip_taken",
+          "speaker": "求救声",
+          "line": "有人吗？请不要把这段声音删掉。",
+          "tone": "threat",
+          "duration": 2.7
+        },
+        {
+          "id": "level_03_body_done_01",
+          "trigger": "level_03_body_sequence_done",
+          "speaker": "展厅系统",
+          "line": "身体展项完成。编号仍未公开。",
+          "tone": "reveal",
+          "duration": 2.9
+        },
+        {
+          "id": "level_03_archive_open_01",
+          "trigger": "level_03_archive_open",
+          "speaker": "未知频道",
+          "line": "工具、声音和身体已对齐。中门开了。",
+          "tone": "system",
+          "duration": 2.7
+        },
+        {
+          "id": "level_03_curator_spawn_01",
+          "trigger": "level_03_curator_spawn",
+          "speaker": "策展主管",
+          "line": "展项离柜。开始重新标注。",
+          "tone": "threat",
+          "duration": 3
+        },
+        {
+          "id": "level_03_curator_half_01",
+          "trigger": "level_03_curator_half",
+          "speaker": "策展主管",
+          "line": "最后人类不是姓名，是一套行为协议。",
+          "tone": "reveal",
+          "duration": 3.1
+        },
+        {
+          "id": "level_03_curator_down_route_01",
+          "trigger": "level_03_curator_down_route",
+          "speaker": "未知频道",
+          "line": "管制房间开了。把闭馆电梯接上。",
+          "tone": "system",
+          "duration": 3
+        },
+        {
+          "id": "level_03_official_exit_01",
+          "trigger": "exit_entered",
+          "speaker": "档案残片",
+          "line": "人类博物馆：对象会靠近像自己的展品。",
+          "tone": "reveal",
+          "duration": 3
+        }
+      ],
+      "cinematicBeats": [
+        {
+          "id": "level_03_lobby_warning",
+          "waveId": "level_03_lobby_patrol",
+          "triggerAt": 1.2,
+          "spawnWarning": {
+            "label": "博物馆安保",
+            "detail": "拿档案，不要久站"
+          },
+          "spawnWarningDuration": 2.1,
+          "audio": {
+            "key": "assist_reorient",
+            "intensity": 0.7
+          }
+        },
+        {
+          "id": "level_03_curator_title",
+          "waveId": "wave_level_03_central_archive",
+          "triggerAt": 1,
+          "dialogueTrigger": "level_03_curator_spawn",
+          "spawnWarning": {
+            "label": "策展主管",
+            "detail": "击倒后去右侧管制房间"
+          },
+          "spawnWarningDuration": 2.4,
+          "cameraImpact": {
+            "shake": 0.62,
+            "fovKick": 3.2,
+            "rumble": 0.32,
+            "rumbleDuration": 0.24
+          },
+          "audio": {
+            "key": "elite_warning",
+            "intensity": 1
+          }
+        }
+      ],
+      "bossPhases": [
+        {
+          "id": "level_03_curator_half",
+          "actorId": "custodian_elite",
+          "tier": "boss",
+          "threshold": 0.5,
+          "actions": [
+            {
+              "type": "queue_dialogue",
+              "trigger": "level_03_curator_half"
+            },
+            {
+              "type": "set_environment_state",
+              "stateId": "level_03_archive_exposed"
+            },
+            {
+              "type": "camera_impact",
+              "cameraImpact": {
+                "shake": 0.42,
+                "fovKick": 2.1,
+                "rumble": 0.16,
+                "rumbleDuration": 0.2
+              }
+            }
+          ]
+        }
+      ],
+      "environmentStates": [
+        {
+          "id": "level_03_archive_exposed",
+          "label": "档案室暴露",
+          "roomId": "level_03_central_archive",
+          "tintColor": "#ff6a52",
+          "glowColor": "#ffd36d",
+          "intensity": 0.95,
+          "opacity": 0.13
+        }
+      ],
+      "enemyDeathBeats": [
+        {
+          "archetypeId": "custodian_elite",
+          "spawnWarning": {
+            "label": "策展主管倒下",
+            "detail": "右侧管制房间已解锁"
+          },
+          "spawnWarningDuration": 2.2,
+          "cameraImpact": {
+            "shake": 0.72,
+            "fovKick": 4.2,
+            "rumble": 0.45,
+            "rumbleDuration": 0.42
+          },
+          "dashBurst": {
+            "lifetime": 0.48,
+            "intensity": 2
+          }
+        }
+      ],
+      "economy": {
+        "memoryFragments": {
+          "default": 1,
+          "byArchetype": {
+            "custodian_elite": 18,
+            "signal_turret": 3,
+            "clamp_bot": 6,
+            "repair_drone": 3
+          }
+        },
+        "killStreakWindowSec": 3.8,
+        "memoryCacheMilestones": [
+          {
+            "amount": 10,
+            "label": "体力恢复",
+            "reward": "energy",
+            "rarity": "rare"
+          },
+          {
+            "amount": 28,
+            "label": "呼吸变稳",
+            "reward": "heat",
+            "rarity": "rare"
+          },
+          {
+            "amount": 52,
+            "label": "生命上限恢复",
+            "reward": "health",
+            "rarity": "epic"
+          }
+        ],
+        "curatedUpgradeRolls": [
+          [
+            "rail_double_line",
+            "wide_target_cone",
+            "thermal_buffer",
+            "field_medicine"
+          ]
+        ],
+        "tempoSurge": {
+          "eliteDuration": 6.5,
+          "normalThreshold": 5,
+          "tier2Threshold": 10,
+          "tier1Duration": 4.4,
+          "tier2Duration": 5.8,
+          "tier1HeatRefund": 7,
+          "tier2HeatRefund": 12,
+          "tier1EnergyRefund": 7,
+          "tier2EnergyRefund": 12
+        }
+      },
+      "revive": {
+        "maxRevives": 1,
+        "hpRatio": 0.7,
+        "memoryFragments": 12,
+        "reviveSurgeSec": 9.5,
+        "tempoSurgeSec": 5.5,
+        "blastRadius": 6.5,
+        "blastDamage": 80,
+        "blastKnockback": 6,
+        "rewardPulse": {
+          "label": "第二口气",
+          "detail": "+线索 + 短暂爆发",
+          "rarity": "story"
+        },
+        "rewardPulseDuration": 2.4,
+        "message": "你在博物馆地板上醒来。灯墙还在等你。"
+      }
+    }
+  },
+  "contract": {
+    "profileId": "human_museum",
+    "globalRules": [
+      "no_proxy_geometry",
+      "no_fallback_materials",
+      "source_role_traceability"
+    ],
+    "roleRules": [
+      "roomSurface",
+      "door",
+      "keyItem",
+      "interaction",
+      "puzzleStation",
+      "enemy",
+      "exitFixture"
+    ],
+    "levelOverrides": [
+      "builder_surfaces_preserve_official_doors",
+      "deny_legacy_exit_overlay"
+    ]
+  },
+  "advanced": {
+    "notes": [
+      "Proposed document built from the current /build localStorage draft.",
+      "Export this JSON or run a dev write step before it becomes repository source."
+    ]
+  }
+}

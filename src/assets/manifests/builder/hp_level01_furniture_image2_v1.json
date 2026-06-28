@@ -1,0 +1,280 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level01_furniture_image2_v1",
+  "label": "HP 维护舱家具包 01 (Image2)",
+  "sourceTool": "level01-image2-furniture",
+  "generatedAt": "2026-06-13",
+  "atlas": "src/assets/textures/environment/level01-furniture-image2/hp_level01_furniture_image2_atlas.png",
+  "assets": [
+    {
+      "modelKey": "room_l1_img2_repair_workbench",
+      "label": "维修台灯桌",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_repair_workbench_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_repair_workbench.glb",
+      "sizeMeters": [
+        2.0,
+        1.25,
+        0.91
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:anchor",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_parts_cabinet",
+      "label": "零件档案柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_parts_cabinet_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_parts_cabinet.glb",
+      "sizeMeters": [
+        1.246,
+        1.7,
+        0.593
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:interactive",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_battery_cart",
+      "label": "供能推车",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_battery_cart_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_battery_cart.glb",
+      "sizeMeters": [
+        0.9,
+        0.925,
+        0.66
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "crate",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:filler",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_diagnostic_locker",
+      "label": "诊断储物柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_diagnostic_locker_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_diagnostic_locker.glb",
+      "sizeMeters": [
+        0.7,
+        2.0,
+        0.649
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:interactive",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_folded_gurney",
+      "label": "折叠维护床",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_folded_gurney_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_folded_gurney.glb",
+      "sizeMeters": [
+        2.2,
+        0.9,
+        0.749
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:filler",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_service_stool",
+      "label": "值守矮凳",
+      "assetKind": "furniture",
+      "family": "chair",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_service_stool_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_service_stool.glb",
+      "sizeMeters": [
+        0.569,
+        0.605,
+        0.525
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "chair",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:filler",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_utility_crate",
+      "label": "工具箱",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_utility_crate_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_utility_crate.glb",
+      "sizeMeters": [
+        0.889,
+        0.79,
+        0.765
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "crate",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:filler",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_ceiling_service_light",
+      "label": "顶部维修灯",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_ceiling_service_light_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_ceiling_service_light.glb",
+      "sizeMeters": [
+        0.9,
+        0.225,
+        0.9
+      ],
+      "solid": false,
+      "mount": "ceiling",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:filler",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_sterile_tool_rack",
+      "label": "工具消毒充电架",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_sterile_tool_rack_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_sterile_tool_rack.glb",
+      "sizeMeters": [
+        1.07,
+        1.84,
+        0.451
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:interactive",
+        "style:hp-level01-maintenance"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_cable_reel_cart",
+      "label": "线缆卷盘推车",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "维修",
+      "source": "level01-image2-furniture",
+      "sourceAssetId": "hp_room_l1_img2_cable_reel_cart_v1",
+      "themeId": "hp_level01_maintenance_bay_image2",
+      "glbFile": "../../models-cooked/environment/level01-furniture-image2/room_l1_img2_cable_reel_cart.glb",
+      "sizeMeters": [
+        1.08,
+        0.917,
+        0.72
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "crate",
+      "tags": [
+        "lane:maintenance_bay",
+        "role:filler",
+        "style:hp-level01-maintenance"
+      ]
+    }
+  ]
+}

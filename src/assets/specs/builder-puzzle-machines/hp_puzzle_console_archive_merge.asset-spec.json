@@ -1,0 +1,62 @@
+{
+  "schema": "human-protocol/asset-spec@1",
+  "assetFamily": "builder-puzzle-machine",
+  "modelKey": "puzzle_console_archive_merge",
+  "displayName": "Identity Compression Cabinet",
+  "role": "Build-page and runtime puzzle console for archive_merge / 身份压缩柜.",
+  "scaleMeters": {
+    "width": 1.1,
+    "height": 1.63,
+    "depth": 0.52
+  },
+  "silhouette": [
+    "heavy grounded plinth",
+    "dark upright archive cabinet",
+    "amber target window",
+    "4x4 physical identity tile matrix",
+    "side clamp rails",
+    "lower card slot and release drawer"
+  ],
+  "materialSlots": [
+    "archive_deep_graphite_shell",
+    "archive_worn_ceramic_edge",
+    "archive_shell_surface_dark",
+    "archive_glass_surface",
+    "archive_status_warm",
+    "archive_block_cyan",
+    "archive_block_hot",
+    "archive_parts_flat"
+  ],
+  "textureSources": [
+    "src/assets/textures/environment/builder-puzzle-machines/hp_builder_machine_surface_atlas_image2.png",
+    "src/assets/textures/environment/builder-puzzle-machines/hp_builder_machine_parts_atlas_v2.png"
+  ],
+  "states": [
+    "idle",
+    "interactable",
+    "puzzle-open",
+    "solved"
+  ],
+  "collisionProxy": {
+    "type": "box",
+    "halfExtentsMeters": [0.54, 0.84, 0.26],
+    "notes": "Matches BuilderPuzzleRuntimeRegistry proceduralBoundsHalf for archive_merge."
+  },
+  "runtimeContent": [
+    "target value may be configured by archiveTargetValue",
+    "tile values and merge state are displayed by the 2D overlay/runtime, not baked into the GLB"
+  ],
+  "outputs": {
+    "glb": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_archive_merge.glb",
+    "blend": "src/assets/source_blend/builder-puzzle-machines/hp_puzzle_console_archive_merge_v2.blend",
+    "generator": "scripts/asset-build/generate-builder-puzzle-machine-glbs.py",
+    "evidenceRender": ".tmp/renders/machines/close-archive_merge.png",
+    "report": "src/assets/manifests/reports/archive_merge_cabinet_v2_blender_report.json"
+  },
+  "visualRequirements": [
+    "No large white medical-plastic front slab.",
+    "Dark graphite front should read before text or UI.",
+    "Amber/cyan lights are accents only.",
+    "The object remains compatible with existing puzzle_console_archive_merge config references."
+  ]
+}

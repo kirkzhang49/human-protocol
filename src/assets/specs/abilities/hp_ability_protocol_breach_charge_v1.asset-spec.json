@@ -1,0 +1,69 @@
+{
+  "assetId": "hp_ability_protocol_breach_charge_v1",
+  "modelKey": "ability_protocol_breach_charge_v1",
+  "displayName": "Protocol Breach Charge",
+  "role": "skill3_ultimate_bomb",
+  "license": {
+    "status": "project-owned",
+    "commercialUse": true,
+    "modification": true,
+    "attributionRequired": false,
+    "notes": "Original procedural Blender geometry and generated image2 atlas. No third-party mesh/texture is bundled."
+  },
+  "outputs": {
+    "glb": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_charge_v1.glb",
+    "sourceBlend": "src/assets/source_blend/abilities/hp_ability_protocol_breach_charge_v1.blend",
+    "image2Atlas": "src/assets/textures/abilities/skill3-protocol-breach-charge-image2/hp_ability_protocol_breach_charge_v1_atlas.png",
+    "preview": ".tmp/skill3-protocol-breach-charge/hp_ability_protocol_breach_charge_v1_preview.png"
+  },
+  "sizeMeters": [
+    0.268,
+    0.592,
+    0.268
+  ],
+  "designContract": {
+    "silhouette": "compact hand-held cylinder with pull ring and three cyan energy windows",
+    "firstPersonRead": "black/brass/cyan, readable at 20-35cm hand-held scale",
+    "worldRead": "upright deployed charge, not an energy pickup and not a white proxy",
+    "runtimeSwap": "intended for ultimateAbilityConfig viewmodelModelKey and deployedWorldModelKey"
+  },
+  "materialSlots": [
+    "skill3_black_rubber_grip",
+    "skill3_body_edge_dark",
+    "skill3_body_graphite",
+    "skill3_clamp_brass_warm",
+    "skill3_cyan_energy_glass",
+    "skill3_image2_energy_window_atlas",
+    "skill3_safety_pin_blacksteel"
+  ],
+  "nodeNames": [
+    "protocol_charge_graphite_core",
+    "protocol_charge_top_cap",
+    "protocol_charge_bottom_cap",
+    "protocol_charge_top_cyan_status_ring",
+    "protocol_charge_lower_cyan_status_ring",
+    "protocol_charge_brass_lock_ring_0",
+    "protocol_charge_brass_lock_ring_1",
+    "protocol_charge_brass_lock_ring_2",
+    "protocol_charge_vertical_brass_clamp_0",
+    "protocol_charge_vertical_brass_clamp_1",
+    "protocol_charge_vertical_brass_clamp_2",
+    "protocol_charge_vertical_brass_clamp_3",
+    "protocol_charge_image2_energy_window_0",
+    "protocol_charge_image2_energy_window_1",
+    "protocol_charge_image2_energy_window_2",
+    "protocol_charge_window_brass_edge_0_-1",
+    "protocol_charge_window_brass_edge_0_1",
+    "protocol_charge_window_brass_edge_1_-1",
+    "protocol_charge_window_brass_edge_1_1",
+    "protocol_charge_window_brass_edge_2_-1",
+    "protocol_charge_window_brass_edge_2_1",
+    "protocol_charge_top_arming_block",
+    "protocol_charge_pull_pin_crossbar",
+    "protocol_charge_pull_ring",
+    "protocol_charge_rubber_grip_band_front",
+    "protocol_charge_rubber_grip_band_back",
+    "protocol_charge_dark_side_plate_left",
+    "protocol_charge_dark_side_plate_right"
+  ]
+}

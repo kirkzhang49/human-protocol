@@ -1,0 +1,712 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "room_l1_img2_warning_barrier",
+  "family": "shared",
+  "bundleId": "shared/room_l1_img2_warning_barrier",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_warning_barrier.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_01_maintenance_bay"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 7752,
+    "triangleCount": 2584,
+    "byteLength": 310080,
+    "hash": "bfa32b5b2a918882",
+    "asset": {
+      "modelKey": "room_l1_img2_warning_barrier",
+      "sourceFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_warning_barrier.glb",
+      "rawFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_warning_barrier.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 7752,
+      "triangleCount": 2584,
+      "meshCount": 10,
+      "materialCount": 4,
+      "nodeCount": 11,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "back_side_stabilizer_+07",
+          "vertexOffset": 0,
+          "vertexCount": 756,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "back_side_stabilizer_-07",
+          "vertexOffset": 756,
+          "vertexCount": 756,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "front_yellow_cross_tube",
+          "vertexOffset": 1512,
+          "vertexCount": 1524,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "lower_hazard_plank",
+          "vertexOffset": 3036,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "rear_dark_spacer_panel",
+          "vertexOffset": 3600,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "round_guard_post_+08",
+          "vertexOffset": 4164,
+          "vertexCount": 948,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "round_guard_post_-08",
+          "vertexOffset": 5112,
+          "vertexCount": 948,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "upper_hazard_plank",
+          "vertexOffset": 6060,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "weighted_base_foot_+08",
+          "vertexOffset": 6624,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "weighted_base_foot_-08",
+          "vertexOffset": 7188,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.06,
+          0,
+          -0.245
+        ],
+        "center": [
+          0,
+          0.55,
+          0
+        ],
+        "size": [
+          2.12,
+          1.1,
+          0.49
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "8159db46299fc3c0",
+    "materials": [
+      {
+        "index": 707,
+        "id": "mat:builder-resource:l1-safety-graphite-powdercoat:3i8b3d",
+        "name": "l1_safety_graphite_powdercoat",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.055,
+          0.06,
+          0.065,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.72,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 708,
+        "id": "mat:builder-resource:l1-safety-rubber-black:79hd9m",
+        "name": "l1_safety_rubber_black",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.025,
+          0.025,
+          0.027,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.86,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 709,
+        "id": "mat:builder-resource:l1-safety-brushed-steel:1i2tkla",
+        "name": "l1_safety_brushed_steel",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.5,
+          0.54,
+          0.55,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.42,
+        "metallicFactor": 0.45,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 755,
+        "id": "mat:builder-resource:l1-image2-warning-barrier-tile:18vsde2",
+        "name": "l1_image2_warning_barrier_tile",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.58,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 5,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_safety_storage_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_warning_barrier/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_warning_barrier/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.345531,
+              "contrast": 0.488284,
+              "chroma": 0.091025,
+              "detail": 0.194501
+            },
+            "generated": false,
+            "layer": 57
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 57,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_warning_barrier/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+        "name": "hp_level01_safety_storage_image2_atlas",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_warning_barrier/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.345531,
+          "contrast": 0.488284,
+          "chroma": 0.091025,
+          "detail": 0.194501
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

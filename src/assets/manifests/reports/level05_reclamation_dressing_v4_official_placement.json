@@ -1,0 +1,765 @@
+{
+  "schema": "hp.level05.reclamation.dressingV4.officialPlacement.v1",
+  "generatedAt": "2026-06-28",
+  "sourceOfTruth": "src/game/config/levels/level05-reclamation-core/level.official.builder.json",
+  "syncedCampaignCopy": "data/ai/campaign/rb_l5.builder.json",
+  "syncedCampaignLevel": "data/ai/campaign/rb_l5.level.json",
+  "placementPrefix": "level_05_v4_dressing_",
+  "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+  "surfacePresets": {
+    "floor": "floor_level05_reclamation_cc0_metal_panel_v4",
+    "wall": "wall_level05_reclamation_cc0_graphite_panel_v4",
+    "ceiling": "ceiling_level05_reclamation_cc0_service_grid_v4"
+  },
+  "summary": {
+    "placements": 17,
+    "roomsTouched": [
+      "level_05_core_entry",
+      "level_05_lock_hub",
+      "level_05_north_lock",
+      "level_05_east_lock",
+      "level_05_west_lock",
+      "level_05_platform",
+      "level_05_archive_room"
+    ],
+    "officialPropCount": 42,
+    "campaignPropCount": 42,
+    "campaignLevelPropCount": 42,
+    "campaignCompileIssues": 0,
+    "nonExitRoomsWithV4Surface": 7
+  },
+  "placementPrinciples": [
+    "Ceiling and wall dressing carry most of the production-value increase without shrinking combat lanes.",
+    "Solid furniture stays against room edges or rear corners.",
+    "Platform beacons are non-solid and live at rear corners so boss movement and shooting lanes remain open.",
+    "The exit elevator room keeps its existing bright service-elevator surface logic."
+  ],
+  "surfaces": [
+    {
+      "roomId": "level_05_core_entry",
+      "style": "core",
+      "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+      "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+      "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+      "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+      "surfaceOverrides": {
+        "floor": {
+          "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "authored": true
+        },
+        "wall": {
+          "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "authored": true
+        },
+        "ceiling": {
+          "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "authored": true
+        }
+      }
+    },
+    {
+      "roomId": "level_05_lock_hub",
+      "style": "core",
+      "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+      "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+      "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+      "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+      "surfaceOverrides": {
+        "floor": {
+          "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "authored": true
+        },
+        "wall": {
+          "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "authored": true
+        },
+        "ceiling": {
+          "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "authored": true
+        }
+      }
+    },
+    {
+      "roomId": "level_05_north_lock",
+      "style": "core",
+      "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+      "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+      "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+      "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+      "surfaceOverrides": {
+        "floor": {
+          "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "authored": true
+        },
+        "wall": {
+          "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "authored": true
+        },
+        "ceiling": {
+          "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "authored": true
+        }
+      }
+    },
+    {
+      "roomId": "level_05_east_lock",
+      "style": "sterile",
+      "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+      "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+      "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+      "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+      "surfaceOverrides": {
+        "floor": {
+          "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "authored": true
+        },
+        "wall": {
+          "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "authored": true
+        },
+        "ceiling": {
+          "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "authored": true
+        }
+      }
+    },
+    {
+      "roomId": "level_05_west_lock",
+      "style": "core",
+      "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+      "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+      "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+      "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+      "surfaceOverrides": {
+        "floor": {
+          "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "authored": true
+        },
+        "wall": {
+          "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "authored": true
+        },
+        "ceiling": {
+          "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "authored": true
+        }
+      }
+    },
+    {
+      "roomId": "level_05_platform",
+      "style": "core",
+      "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+      "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+      "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+      "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+      "surfaceOverrides": {
+        "floor": {
+          "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "authored": true
+        },
+        "wall": {
+          "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "authored": true
+        },
+        "ceiling": {
+          "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "authored": true
+        }
+      }
+    },
+    {
+      "roomId": "level_05_archive_room",
+      "style": "museum",
+      "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+      "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+      "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+      "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+      "surfaceOverrides": {
+        "floor": {
+          "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "authored": true
+        },
+        "wall": {
+          "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "authored": true
+        },
+        "ceiling": {
+          "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "authored": true
+        }
+      }
+    },
+    {
+      "roomId": "level_05_identity_file",
+      "style": "exit",
+      "surfaceKitId": null,
+      "floorPresetId": "floor_dark_rubber",
+      "wallPresetId": "wall_dark_metal_panel",
+      "ceilingPresetId": "wall_dark_metal_panel",
+      "surfaceOverrides": null
+    }
+  ],
+  "placements": [
+    {
+      "id": "level_05_v4_dressing_entry_ceiling_service_lamp",
+      "modelKey": "room_l5_v4_ceiling_service_lamp",
+      "roomId": "level_05_core_entry",
+      "position": [
+        0,
+        17.25
+      ],
+      "rotationY": 0,
+      "scale": 1,
+      "elevation": 3.2,
+      "label": "入口顶部服务灯",
+      "role": "entry ceiling production light",
+      "mount": "ceiling",
+      "footprint": {
+        "label": "L5 V4 顶部服务灯",
+        "sizeMeters": [
+          1.76,
+          0.253,
+          0.365
+        ],
+        "family": "control_console",
+        "solid": false,
+        "mount": "ceiling"
+      },
+      "clearanceMeters": {
+        "left": 4.12,
+        "right": 4.12,
+        "back": 3.5675,
+        "front": 3.0675
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_entry_wall_pipe_manifold",
+      "modelKey": "room_l5_v4_wall_pipe_manifold",
+      "roomId": "level_05_core_entry",
+      "position": [
+        -4.62,
+        16.25
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.88,
+      "elevation": 1.22,
+      "label": "入口壁挂管汇",
+      "role": "left wall technical dressing",
+      "mount": "wall",
+      "footprint": {
+        "label": "L5 V4 壁挂管汇",
+        "sizeMeters": [
+          1.62,
+          1.08,
+          0.267
+        ],
+        "family": "wall_panel_or_picture_frame",
+        "solid": false,
+        "mount": "wall"
+      },
+      "clearanceMeters": {
+        "left": -0.3328,
+        "right": 8.9072,
+        "back": 2.6325,
+        "front": 4.1325
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_hub_ceiling_cable_tray",
+      "modelKey": "room_l5_v4_ceiling_cable_tray",
+      "roomId": "level_05_lock_hub",
+      "position": [
+        0.4,
+        7.35
+      ],
+      "rotationY": 0.08,
+      "scale": 1,
+      "elevation": 3.26,
+      "label": "中庭顶部线缆槽",
+      "role": "hub overhead cable run",
+      "mount": "ceiling",
+      "footprint": {
+        "label": "L5 V4 顶部线缆槽",
+        "sizeMeters": [
+          2.24,
+          0.297,
+          0.432
+        ],
+        "family": "wall_panel_or_picture_frame",
+        "solid": false,
+        "mount": "ceiling"
+      },
+      "clearanceMeters": {
+        "left": 8.28,
+        "right": 7.48,
+        "back": 5.634,
+        "front": 5.934
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_hub_floor_cable_bridge",
+      "modelKey": "room_l5_v4_floor_cable_bridge",
+      "roomId": "level_05_lock_hub",
+      "position": [
+        5.55,
+        6.05
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.92,
+      "elevation": 0.02,
+      "label": "中庭地面电缆桥",
+      "role": "low nonblocking service trunk",
+      "mount": "floor",
+      "footprint": {
+        "label": "L5 V4 地面电缆桥",
+        "sizeMeters": [
+          1.84,
+          0.205,
+          0.515
+        ],
+        "family": "storage_crate",
+        "solid": false,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 13.7036,
+        "right": 2.6036,
+        "back": 4.3131,
+        "front": 7.2131
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_hub_warning_beacon",
+      "modelKey": "room_l5_v4_warning_beacon_pylon",
+      "roomId": "level_05_lock_hub",
+      "position": [
+        -7.35,
+        3.15
+      ],
+      "rotationY": 0.2,
+      "scale": 0.9,
+      "elevation": 0,
+      "label": "中庭警示信标",
+      "role": "corner danger silhouette",
+      "mount": "floor",
+      "footprint": {
+        "label": "L5 V4 警示信标柱",
+        "sizeMeters": [
+          0.56,
+          1.16,
+          0.56
+        ],
+        "family": "control_console",
+        "solid": false,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 1.398,
+        "right": 16.098,
+        "back": 1.398,
+        "front": 10.098
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_north_sample_rack",
+      "modelKey": "room_l5_v4_sample_canister_rack",
+      "roomId": "level_05_north_lock",
+      "position": [
+        3.68,
+        -5.02
+      ],
+      "rotationY": -1.5708,
+      "scale": 0.86,
+      "elevation": 0,
+      "label": "北侧样本罐架",
+      "role": "brake-room wall rack",
+      "mount": "floor",
+      "footprint": {
+        "label": "L5 V4 样本罐架",
+        "sizeMeters": [
+          1.21,
+          1.72,
+          0.463
+        ],
+        "family": "display_case",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 7.6597,
+        "right": 0.2997,
+        "back": 0.7809,
+        "front": 6.3209
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_north_clamp_relay",
+      "modelKey": "room_l5_v4_clamp_relay_column",
+      "roomId": "level_05_north_lock",
+      "position": [
+        -3.76,
+        -4.95
+      ],
+      "rotationY": 0.15,
+      "scale": 0.88,
+      "elevation": 0,
+      "label": "北侧夹钳继电柱",
+      "role": "lock-room corner device",
+      "mount": "floor",
+      "footprint": {
+        "label": "L5 V4 夹钳继电柱",
+        "sizeMeters": [
+          0.835,
+          1.79,
+          0.706
+        ],
+        "family": "control_console",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 0.3726,
+        "right": 7.8926,
+        "back": 0.7394,
+        "front": 6.1394
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_east_ceiling_service_lamp",
+      "modelKey": "room_l5_v4_ceiling_service_lamp",
+      "roomId": "level_05_east_lock",
+      "position": [
+        13,
+        7.6
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.92,
+      "elevation": 3.26,
+      "label": "东侧顶部服务灯",
+      "role": "clinic-zone ceiling light",
+      "mount": "ceiling",
+      "footprint": {
+        "label": "L5 V4 顶部服务灯",
+        "sizeMeters": [
+          1.76,
+          0.253,
+          0.365
+        ],
+        "family": "control_console",
+        "solid": false,
+        "mount": "ceiling"
+      },
+      "clearanceMeters": {
+        "left": 3.1904,
+        "right": 3.1904,
+        "back": 3.9321,
+        "front": 3.7321
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_east_wall_pipe_manifold",
+      "modelKey": "room_l5_v4_wall_pipe_manifold",
+      "roomId": "level_05_east_lock",
+      "position": [
+        16.68,
+        6.1
+      ],
+      "rotationY": -1.5708,
+      "scale": 0.82,
+      "elevation": 1.18,
+      "label": "东侧壁挂管汇",
+      "role": "east wall sterile-service dressing",
+      "mount": "wall",
+      "footprint": {
+        "label": "L5 V4 壁挂管汇",
+        "sizeMeters": [
+          1.62,
+          1.08,
+          0.267
+        ],
+        "family": "wall_panel_or_picture_frame",
+        "solid": false,
+        "mount": "wall"
+      },
+      "clearanceMeters": {
+        "left": 7.0158,
+        "right": -0.3442,
+        "back": 2.4905,
+        "front": 5.2905
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_west_ceiling_cable_tray",
+      "modelKey": "room_l5_v4_ceiling_cable_tray",
+      "roomId": "level_05_west_lock",
+      "position": [
+        -13,
+        7.45
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.9,
+      "elevation": 3.26,
+      "label": "西侧顶部线缆槽",
+      "role": "west room overhead cable run",
+      "mount": "ceiling",
+      "footprint": {
+        "label": "L5 V4 顶部线缆槽",
+        "sizeMeters": [
+          2.24,
+          0.297,
+          0.432
+        ],
+        "family": "wall_panel_or_picture_frame",
+        "solid": false,
+        "mount": "ceiling"
+      },
+      "clearanceMeters": {
+        "left": 2.992,
+        "right": 2.992,
+        "back": 3.7556,
+        "front": 3.8556
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_west_crate_stack",
+      "modelKey": "room_l5_v4_maintenance_crate_stack",
+      "roomId": "level_05_west_lock",
+      "position": [
+        -16.25,
+        4.32
+      ],
+      "rotationY": 0.22,
+      "scale": 0.82,
+      "elevation": 0,
+      "label": "西侧维护箱堆",
+      "role": "edge storage mass",
+      "mount": "floor",
+      "footprint": {
+        "label": "L5 V4 维护箱堆",
+        "sizeMeters": [
+          1.09,
+          0.82,
+          0.766
+        ],
+        "family": "storage_crate",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 0.3031,
+        "right": 6.8031,
+        "back": 0.5059,
+        "front": 6.8659
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_west_wall_pipe_manifold",
+      "modelKey": "room_l5_v4_wall_pipe_manifold",
+      "roomId": "level_05_west_lock",
+      "position": [
+        -16.68,
+        8.25
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.82,
+      "elevation": 1.18,
+      "label": "西侧壁挂管汇",
+      "role": "west wall service dressing",
+      "mount": "wall",
+      "footprint": {
+        "label": "L5 V4 壁挂管汇",
+        "sizeMeters": [
+          1.62,
+          1.08,
+          0.267
+        ],
+        "family": "wall_panel_or_picture_frame",
+        "solid": false,
+        "mount": "wall"
+      },
+      "clearanceMeters": {
+        "left": -0.3442,
+        "right": 7.0158,
+        "back": 4.6405,
+        "front": 3.1405
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_platform_left_beacon",
+      "modelKey": "room_l5_v4_warning_beacon_pylon",
+      "roomId": "level_05_platform",
+      "position": [
+        -6.9,
+        -16.85
+      ],
+      "rotationY": -0.35,
+      "scale": 0.9,
+      "elevation": 0,
+      "label": "内台左警示信标",
+      "role": "arena rear corner beacon",
+      "mount": "floor",
+      "footprint": {
+        "label": "L5 V4 警示信标柱",
+        "sizeMeters": [
+          0.56,
+          1.16,
+          0.56
+        ],
+        "family": "control_console",
+        "solid": false,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 0.848,
+        "right": 14.648,
+        "back": 1.398,
+        "front": 11.098
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_platform_right_beacon",
+      "modelKey": "room_l5_v4_warning_beacon_pylon",
+      "roomId": "level_05_platform",
+      "position": [
+        6.9,
+        -16.85
+      ],
+      "rotationY": 0.35,
+      "scale": 0.9,
+      "elevation": 0,
+      "label": "内台右警示信标",
+      "role": "arena rear corner beacon",
+      "mount": "floor",
+      "footprint": {
+        "label": "L5 V4 警示信标柱",
+        "sizeMeters": [
+          0.56,
+          1.16,
+          0.56
+        ],
+        "family": "control_console",
+        "solid": false,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 14.648,
+        "right": 0.848,
+        "back": 1.398,
+        "front": 11.098
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_platform_ceiling_service_lamp",
+      "modelKey": "room_l5_v4_ceiling_service_lamp",
+      "roomId": "level_05_platform",
+      "position": [
+        0,
+        -12.25
+      ],
+      "rotationY": 0,
+      "scale": 1.08,
+      "elevation": 3.32,
+      "label": "内台顶部服务灯",
+      "role": "boss-platform overhead focus",
+      "mount": "ceiling",
+      "footprint": {
+        "label": "L5 V4 顶部服务灯",
+        "sizeMeters": [
+          1.76,
+          0.253,
+          0.365
+        ],
+        "family": "control_console",
+        "solid": false,
+        "mount": "ceiling"
+      },
+      "clearanceMeters": {
+        "left": 7.0496,
+        "right": 7.0496,
+        "back": 6.0529,
+        "front": 6.5529
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_archive_ceiling_service_lamp",
+      "modelKey": "room_l5_v4_ceiling_service_lamp",
+      "roomId": "level_05_archive_room",
+      "position": [
+        11.5,
+        -12
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.86,
+      "elevation": 3.24,
+      "label": "档案室顶部服务灯",
+      "role": "archive ceiling focus",
+      "mount": "ceiling",
+      "footprint": {
+        "label": "L5 V4 顶部服务灯",
+        "sizeMeters": [
+          1.76,
+          0.253,
+          0.365
+        ],
+        "family": "control_console",
+        "solid": false,
+        "mount": "ceiling"
+      },
+      "clearanceMeters": {
+        "left": 2.7432,
+        "right": 2.7432,
+        "back": 3.343,
+        "front": 3.343
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v4_dressing_archive_wall_pipe_manifold",
+      "modelKey": "room_l5_v4_wall_pipe_manifold",
+      "roomId": "level_05_archive_room",
+      "position": [
+        8.22,
+        -12.2
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.78,
+      "elevation": 1.16,
+      "label": "档案室壁挂管汇",
+      "role": "archive side-wall service dressing",
+      "mount": "wall",
+      "footprint": {
+        "label": "L5 V4 壁挂管汇",
+        "sizeMeters": [
+          1.62,
+          1.08,
+          0.267
+        ],
+        "family": "wall_panel_or_picture_frame",
+        "solid": false,
+        "mount": "wall"
+      },
+      "clearanceMeters": {
+        "left": -0.4118,
+        "right": 6.1482,
+        "back": 3.1959,
+        "front": 3.5959
+      },
+      "roomExists": true
+    }
+  ]
+}

@@ -1,0 +1,198 @@
+{
+  "schemaVersion": "hp.builder.v1",
+  "projectId": "rb_l2",
+  "title": "居住模拟间·重制",
+  "rooms": [
+    {
+      "id": "rb_l2_r0",
+      "label": "恢复前厅",
+      "style": "sterile",
+      "center": [
+        0,
+        -4
+      ],
+      "size": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "rb_l2_r1",
+      "label": "起居室",
+      "style": "residential",
+      "center": [
+        0,
+        -12.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l2_r2",
+      "label": "照护间",
+      "style": "residential",
+      "center": [
+        0,
+        -21.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l2_r3",
+      "label": "灯控间",
+      "style": "hazard",
+      "center": [
+        0,
+        -30.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l2_r4",
+      "label": "撤离电梯",
+      "style": "exit",
+      "center": [
+        0,
+        -38
+      ],
+      "size": [
+        12,
+        6
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "id": "rb_l2_d0",
+      "fromRoomId": "rb_l2_r0",
+      "toRoomId": "rb_l2_r1",
+      "lockType": "none"
+    },
+    {
+      "id": "rb_l2_d1",
+      "fromRoomId": "rb_l2_r1",
+      "toRoomId": "rb_l2_r2",
+      "lockType": "survive_wave",
+      "doorFamily": "industrial"
+    },
+    {
+      "id": "rb_l2_d2",
+      "fromRoomId": "rb_l2_r2",
+      "toRoomId": "rb_l2_r3",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "circuit_grid",
+      "puzzleRoomId": "rb_l2_r2",
+      "doorFamily": "clinic"
+    },
+    {
+      "id": "rb_l2_d3",
+      "fromRoomId": "rb_l2_r3",
+      "toRoomId": "rb_l2_r4",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "color_sequence",
+      "puzzleRoomId": "rb_l2_r3",
+      "doorFamily": "reclamation"
+    }
+  ],
+  "props": [],
+  "puzzles": [
+    {
+      "id": "rb_l2_pz2",
+      "kind": "circuit_grid",
+      "linkedDoorId": "rb_l2_d2",
+      "roomId": "rb_l2_r2",
+      "position": [
+        0,
+        -21.5
+      ],
+      "rotationY": 0
+    },
+    {
+      "id": "rb_l2_pz3",
+      "kind": "color_sequence",
+      "linkedDoorId": "rb_l2_d3",
+      "roomId": "rb_l2_r3",
+      "position": [
+        0,
+        -30.5
+      ],
+      "rotationY": 0,
+      "components": [
+        {
+          "id": "rb_l2_pz3_o0",
+          "role": "orb_cyan",
+          "roomId": "rb_l2_r3",
+          "position": [
+            -3.5,
+            -28.9
+          ]
+        },
+        {
+          "id": "rb_l2_pz3_o1",
+          "role": "orb_red",
+          "roomId": "rb_l2_r3",
+          "position": [
+            3.5,
+            -28.9
+          ]
+        },
+        {
+          "id": "rb_l2_pz3_o2",
+          "role": "orb_yellow",
+          "roomId": "rb_l2_r3",
+          "position": [
+            0,
+            -27.9
+          ]
+        }
+      ]
+    }
+  ],
+  "robots": [
+    {
+      "id": "rb_l2_rb0",
+      "roomId": "rb_l2_r2",
+      "archetype": "custodian_elite",
+      "count": 1
+    },
+    {
+      "id": "rb_l2_rb1",
+      "roomId": "rb_l2_r1",
+      "archetype": "repair_drone",
+      "count": 1
+    }
+  ],
+  "pickups": [
+    {
+      "id": "rb_l2_pk0",
+      "kind": "repairKit",
+      "roomId": "rb_l2_r1",
+      "position": [
+        -2,
+        -14.5
+      ]
+    }
+  ],
+  "story": {
+    "templateId": "false_family",
+    "victoryLine": "没有脸的照片：这里从来没有人住过。",
+    "transitionLine": "电梯门合拢，登记灯熄灭。"
+  },
+  "exitRoomId": "rb_l2_r4",
+  "lighting": {
+    "ambient": 0.58,
+    "keyColor": "#ffd9a8",
+    "keyIntensity": 0.9,
+    "fog": 0.32,
+    "bloom": 0.48,
+    "shadow": 0.5
+  }
+}

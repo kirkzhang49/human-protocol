@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "hp.blenderReport.v1",
+  "assetFamily": "gate_balance",
+  "modelKey": "puzzle_console_valve_matrix",
+  "generatedAt": "2026-06-24",
+  "generator": "scripts/asset-build/generate-gate-balance-console-glb.py",
+  "designPrompt": "Screen-gate puzzle terminal for Human Protocol valve_matrix: wide smoked titanium body, cyan glass display with three vertical shutter gate inlays, old-gold lower service rail, small side status module, grounded plinth and cable tails. It should read as a screen-based gate control device, not a route switch and not a valve-wheel manifold. No readable text, no numbers, no logos, no people, no gore.",
+  "outputs": {
+    "glb": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_valve_matrix.glb",
+    "blend": "src/assets/source_blend/builder-puzzle-machines/hp_puzzle_console_valve_matrix_gate_balance_v1.blend",
+    "spec": "src/assets/specs/builder-puzzle-machines/hp_puzzle_console_valve_matrix.asset-spec.json",
+    "render": "src/assets/manifests/reports/gate_balance_console_render_v1.png",
+    "screenAtlas": "src/assets/textures/environment/builder-puzzle-machines/hp_gate_balance_terminal_screen_atlas_v1.png",
+    "screenRegions": "src/assets/textures/environment/builder-puzzle-machines/hp_gate_balance_terminal_screen_atlas_v1.regions.json",
+    "overlayLayout": "src/assets/gui/gate-balance/gate_balance_overlay_layout_v1.json"
+  },
+  "boundsMeters": {
+    "min": [
+      -0.8025,
+      -0.316,
+      -0.18
+    ],
+    "max": [
+      0.91,
+      0.23,
+      1.354
+    ],
+    "size": [
+      1.7125,
+      0.546,
+      1.534
+    ]
+  },
+  "stats": {
+    "meshCount": 42,
+    "vertexCount": 4032,
+    "triangleCount": 7888
+  },
+  "materialSlots": [
+    "gb_smoked_titanium_body",
+    "gb_black_recess",
+    "gb_brushed_steel_trim",
+    "gb_old_gold_bus",
+    "gb_black_rubber",
+    "gb_cyan_glow",
+    "gb_gate_safe_glow",
+    "gb_gate_warning_glow",
+    "gb_terminal_screen_image2_atlas"
+  ],
+  "runtimeMustNotBake": [
+    "localized puzzle title",
+    "valve labels and numeric positions",
+    "gauge values and target deltas",
+    "timer",
+    "success/failure state",
+    "answer positions"
+  ]
+}

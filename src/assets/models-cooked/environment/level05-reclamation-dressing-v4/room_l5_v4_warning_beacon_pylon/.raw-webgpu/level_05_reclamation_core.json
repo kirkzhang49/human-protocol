@@ -1,0 +1,562 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_05_reclamation_core",
+  "modelKey": "room_l5_v4_warning_beacon_pylon",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_warning_beacon_pylon.glb",
+  "fileName": "room_l5_v4_warning_beacon_pylon.glb",
+  "sourceAsset": {
+    "modelKey": "room_l5_v4_warning_beacon_pylon",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_warning_beacon_pylon.glb",
+    "file": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_warning_beacon_pylon.glb",
+    "sizeMeters": [
+      0.56,
+      1.16,
+      0.56
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 30112,
+      "meshes": 8,
+      "nodes": 9,
+      "skins": 0,
+      "primitives": 8,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 19,
+      "bufferViews": 19,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 1256
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_warning_beacon_pylon.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 839094,
+    "vertexCount": 3768,
+    "triangleCount": 1256,
+    "meshCount": 8,
+    "materialCount": 4,
+    "nodeCount": 9,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.28,
+        0,
+        -0.28
+      ],
+      "center": [
+        0,
+        0.58,
+        0
+      ],
+      "size": [
+        0.56,
+        1.16,
+        0.56
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "black_weighted_base",
+        "vertexOffset": 839094,
+        "vertexCount": 576,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "brass_lower_collar",
+        "vertexOffset": 839670,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "dark_signal_mast",
+        "vertexOffset": 840198,
+        "vertexCount": 384,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "red_warning_lens",
+        "vertexOffset": 840582,
+        "vertexCount": 672,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_lens_cage_ring_bottom",
+        "vertexOffset": 841254,
+        "vertexCount": 672,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_lens_cage_ring_top",
+        "vertexOffset": 841926,
+        "vertexCount": 672,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "vertical_lens_guard_-016",
+        "vertexOffset": 842598,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "vertical_lens_guard_016",
+        "vertexOffset": 842730,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_05_v4_dressing_hub_warning_beacon",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_lock_hub",
+      "secondaryRoomId": null,
+      "position": [
+        -7.35,
+        0,
+        3.15
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.2,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:floor"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7.35,
+          0,
+          3.15
+        ],
+        "halfSize": [
+          0.252,
+          0.522,
+          0.252
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_v4_dressing_platform_left_beacon",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        -6.9,
+        0,
+        -16.85
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.35,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:floor"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -6.9,
+          0,
+          -16.85
+        ],
+        "halfSize": [
+          0.252,
+          0.522,
+          0.252
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_v4_dressing_platform_right_beacon",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_platform",
+      "secondaryRoomId": null,
+      "position": [
+        6.9,
+        0,
+        -16.85
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.35,
+        0
+      ],
+      "scale": [
+        0.9,
+        0.9,
+        0.9
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:floor"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.9,
+          0,
+          -16.85
+        ],
+        "halfSize": [
+          0.252,
+          0.522,
+          0.252
+        ]
+      }
+    }
+  ]
+}

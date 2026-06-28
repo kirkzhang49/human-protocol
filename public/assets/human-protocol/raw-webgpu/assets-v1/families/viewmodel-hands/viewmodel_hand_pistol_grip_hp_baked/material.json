@@ -1,0 +1,1128 @@
+{
+  "file": "material.json",
+  "hash": "ff9771a36151479b",
+  "materials": [
+    {
+      "index": 1271,
+      "id": "mat:builder-resource:m-hand-matte-black-sleeve:1rgn62b",
+      "name": "M_hand_matte_black_sleeve",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.052,
+        0.085,
+        0.085,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.82,
+      "metallicFactor": 0.04,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1272,
+      "id": "mat:builder-resource:m-sidearm-reload-fresh-energy-mag-body:7vv9tq",
+      "name": "M_sidearm_reload_fresh_energy_mag_body",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.385008,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.55,
+        0.98,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.385,
+        0.686,
+        0.7
+      ],
+      "emissiveStrength": 1.0626,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1273,
+      "id": "mat:builder-resource:m-sidearm-reload-fresh-mag-base:dixyq6",
+      "name": "M_sidearm_reload_fresh_mag_base",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.095,
+        0.145,
+        0.15,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.52,
+      "metallicFactor": 0.42,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1274,
+      "id": "mat:builder-resource:m-sidearm-reload-cyan-charge-contact:nr6jo7",
+      "name": "M_sidearm_reload_cyan_charge_contact",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.385008,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.55,
+        0.98,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.385,
+        0.686,
+        0.7
+      ],
+      "emissiveStrength": 1.0626,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1275,
+      "id": "mat:builder-resource:m-sidearm-warm-synthetic-skin-target-v13-math-range-baked:grl9je",
+      "name": "M_sidearm_warm_synthetic_skin_target_v13_math_range_baked",
+      "category": "builder-resource",
+      "visualRole": "exhibit_warm",
+      "semanticParams": [
+        6,
+        0.8,
+        0.34,
+        0.18
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.32,
+        0.405,
+        0.385,
+        0.72
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.02,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "BLEND",
+      "transparency": {
+        "mode": "blend",
+        "alpha": 0.72,
+        "source": "gltf-material.transparent+gltf-material.opacity"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1276,
+      "id": "mat:builder-resource:m-sidearm-reload-contact-frame:1oxk5yc",
+      "name": "M_sidearm_reload_contact_frame",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.095,
+        0.145,
+        0.15,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.52,
+      "metallicFactor": 0.42,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1277,
+      "id": "mat:builder-resource:m-left-reload-robot-hand-recessed-panel:vtnqev",
+      "name": "M_left_reload_robot_hand_recessed_panel",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.052,
+        0.085,
+        0.085,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.82,
+      "metallicFactor": 0.04,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1278,
+      "id": "mat:builder-resource:m-sidearm-warm-skin-panel-shadow:nd3pkw",
+      "name": "M_sidearm_warm_skin_panel_shadow",
+      "category": "builder-resource",
+      "visualRole": "exhibit_warm",
+      "semanticParams": [
+        6,
+        0.8,
+        0.34,
+        0.18
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.052,
+        0.085,
+        0.085,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.82,
+      "metallicFactor": 0.04,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1279,
+      "id": "mat:builder-resource:prop-sidearm-age-black-grip-wrap-v11:12hmo64",
+      "name": "prop_sidearm_age_black_grip_wrap_v11",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.027,
+        0.063,
+        0.082,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1280,
+      "id": "mat:builder-resource:prop-sidearm-age-titanium-panels-v11:14hniv9",
+      "name": "prop_sidearm_age_titanium_panels_v11",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.72,
+        0.79,
+        0.75,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1281,
+      "id": "mat:builder-resource:prop-dark-rubber:88j5vt",
+      "name": "prop_dark_rubber",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.027,
+        0.063,
+        0.082,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1282,
+      "id": "mat:builder-resource:prop-deep-machined-shadow-cut:i1zhlz",
+      "name": "prop_deep_machined_shadow_cut",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.027,
+        0.063,
+        0.082,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1283,
+      "id": "mat:builder-resource:prop-tempered-dull-worn-edge:4nuler",
+      "name": "prop_tempered_dull_worn_edge",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.72,
+        0.79,
+        0.75,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1284,
+      "id": "mat:builder-resource:prop-sidearm-age-smoked-cyan-glass-v11:1idcb2h",
+      "name": "prop_sidearm_age_smoked_cyan_glass_v11",
+      "category": "builder-resource",
+      "visualRole": "glass_shell",
+      "semanticParams": [
+        5,
+        0.82,
+        0.1856,
+        0.12
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.55,
+        0.98,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.385,
+        0.686,
+        0.7
+      ],
+      "emissiveStrength": 0.07,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1285,
+      "id": "mat:builder-resource:prop-matte-frame-polymer:xjtchb",
+      "name": "prop_matte_frame_polymer",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.027,
+        0.063,
+        0.082,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1286,
+      "id": "mat:builder-resource:prop-smoked-energy-glass:1pglzut",
+      "name": "prop_smoked_energy_glass",
+      "category": "builder-resource",
+      "visualRole": "glass_shell",
+      "semanticParams": [
+        5,
+        0.82,
+        0.1856,
+        0.12
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.55,
+        0.98,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.385,
+        0.686,
+        0.7
+      ],
+      "emissiveStrength": 0.07,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1287,
+      "id": "mat:builder-resource:prop-hand-rubbed-bright-steel-edge:pzdfo",
+      "name": "prop_hand_rubbed_bright_steel_edge",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.32,
+        0.405,
+        0.385,
+        0.72
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.02,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "BLEND",
+      "transparency": {
+        "mode": "blend",
+        "alpha": 0.72,
+        "source": "gltf-material.transparent+gltf-material.opacity"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1288,
+      "id": "mat:builder-resource:prop-cyan-emissive:1s784xz",
+      "name": "prop_cyan_emissive",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.385008,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.55,
+        0.98,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.385,
+        0.686,
+        0.7
+      ],
+      "emissiveStrength": 1.0626,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1289,
+      "id": "mat:builder-resource:prop-muted-copper-conductor:1nt9app",
+      "name": "prop_muted_copper_conductor",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.307958,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.725,
+        0.604,
+        0.329,
+        1
+      ],
+      "emissiveFactor": [
+        0.0725,
+        0.0604,
+        0.0329
+      ],
+      "emissiveStrength": 0.09948,
+      "roughnessFactor": 0.56,
+      "metallicFactor": 0.48,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1290,
+      "id": "mat:builder-resource:prop-oiled-gunmetal:1952foj",
+      "name": "prop_oiled_gunmetal",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.72,
+        0.79,
+        0.75,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1291,
+      "id": "mat:builder-resource:prop-oiled-dark-steel:1xc3g6t",
+      "name": "prop_oiled_dark_steel",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.027,
+        0.063,
+        0.082,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1292,
+      "id": "mat:builder-resource:prop-aged-bronze-micro-inlay:1ct1076",
+      "name": "prop_aged_bronze_micro_inlay",
+      "category": "builder-resource",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.427958,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.725,
+        0.604,
+        0.329,
+        1
+      ],
+      "emissiveFactor": [
+        0.0725,
+        0.0604,
+        0.0329
+      ],
+      "emissiveStrength": 0.09948,
+      "roughnessFactor": 0.56,
+      "metallicFactor": 0.48,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1293,
+      "id": "mat:builder-resource:prop-oiled-receiver-armor:g2ruw3",
+      "name": "prop_oiled_receiver_armor",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.72,
+        0.79,
+        0.75,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1294,
+      "id": "mat:builder-resource:prop-aged-amber-indicator:39238y",
+      "name": "prop_aged_amber_indicator",
+      "category": "builder-resource",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.427958,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.725,
+        0.604,
+        0.329,
+        1
+      ],
+      "emissiveFactor": [
+        0.0725,
+        0.0604,
+        0.0329
+      ],
+      "emissiveStrength": 0.09948,
+      "roughnessFactor": 0.56,
+      "metallicFactor": 0.48,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1295,
+      "id": "mat:builder-resource:prop-sidearm-age-slide-edge-v11:15tnido",
+      "name": "prop_sidearm_age_slide_edge_v11",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.72,
+        0.79,
+        0.75,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 1296,
+      "id": "mat:builder-resource:prop-black-oiled-shell:jcri3e",
+      "name": "prop_black_oiled_shell",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.027,
+        0.063,
+        0.082,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

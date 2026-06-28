@@ -1,0 +1,929 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_floor_tile_maintenance",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance.glb",
+  "fileName": "hp_room_floor_tile_maintenance.glb",
+  "sourceAsset": {
+    "modelKey": "room_floor_tile_maintenance",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance.glb",
+    "sizeMeters": [
+      3.2,
+      0.08,
+      2.25
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 7464,
+      "meshes": 2,
+      "nodes": 2,
+      "skins": 0,
+      "primitives": 2,
+      "materials": 2,
+      "textures": 2,
+      "images": 2,
+      "accessors": 7,
+      "bufferViews": 8,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_materials_unlit",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 432
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_floor_tile_maintenance.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 872622,
+    "vertexCount": 1296,
+    "triangleCount": 432,
+    "meshCount": 16,
+    "materialCount": 6,
+    "nodeCount": 16,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -2.125,
+        0.0005,
+        -1.525
+      ],
+      "center": [
+        0,
+        0.07575,
+        0
+      ],
+      "size": [
+        4.25,
+        0.1505,
+        3.05
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_slab_base",
+        "vertexOffset": 872622,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.018,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.018,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_large_grey_plate",
+        "vertexOffset": 872658,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.052,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.052,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_center_worn_path",
+        "vertexOffset": 872694,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.071,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.071,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_front_raised_border",
+        "vertexOffset": 872730,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.092,
+          1.28,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.092,
+          -1.28,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_back_raised_border",
+        "vertexOffset": 872766,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.092,
+          -1.28,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.092,
+          1.28,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_left_raised_border",
+        "vertexOffset": 872802,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.98,
+          0.092,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.98,
+          -0.092,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_right_raised_border",
+        "vertexOffset": 872838,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.98,
+          0.092,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.98,
+          -0.092,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_inner_panel_a",
+        "vertexOffset": 872874,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.05,
+          0.081,
+          0.52,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.05,
+          -0.081,
+          -0.52,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_inner_panel_b",
+        "vertexOffset": 872910,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.05,
+          0.081,
+          -0.52,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.05,
+          -0.081,
+          0.52,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_dark_cable_trench",
+        "vertexOffset": 872946,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.78,
+          0.101,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.78,
+          -0.101,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_cyan_line_a",
+        "vertexOffset": 872982,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.72,
+          0.115,
+          0.9,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.72,
+          -0.115,
+          -0.9,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_cyan_line_b",
+        "vertexOffset": 873018,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.82,
+          0.115,
+          -0.82,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.82,
+          -0.115,
+          0.82,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_round_fastener_-162_102",
+        "vertexOffset": 873054,
+        "vertexCount": 216,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1.62,
+          0.116,
+          1.02,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.62,
+          -1.02,
+          0.116,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_round_fastener_162_102",
+        "vertexOffset": 873270,
+        "vertexCount": 216,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1.62,
+          0.116,
+          1.02,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.62,
+          -1.02,
+          0.116,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_round_fastener_-162_-102",
+        "vertexOffset": 873486,
+        "vertexCount": 216,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -1.62,
+          0.116,
+          -1.02,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.62,
+          1.02,
+          0.116,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_floor_round_fastener_162_-102",
+        "vertexOffset": 873702,
+        "vertexCount": 216,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1.62,
+          0.116,
+          -1.02,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.62,
+          1.02,
+          0.116,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:level_02_exit_elevator_room:floor:0:0",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_02_exit_elevator_room",
+      "secondaryRoomId": null,
+      "position": [
+        -2.4,
+        -0.015,
+        -12.225
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.52,
+        1.02,
+        1.48
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.4,
+          -0.015,
+          -12.225
+        ],
+        "halfSize": [
+          2.432,
+          0.0408,
+          1.665
+        ]
+      }
+    },
+    {
+      "id": "shell:level_02_exit_elevator_room:floor:1:0",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_02_exit_elevator_room",
+      "secondaryRoomId": null,
+      "position": [
+        2.4,
+        -0.015,
+        -12.225
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1.52,
+        1.02,
+        1.48
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.4,
+          -0.015,
+          -12.225
+        ],
+        "halfSize": [
+          2.432,
+          0.0408,
+          1.665
+        ]
+      }
+    },
+    {
+      "id": "shell:level_02_exit_elevator_room:floor:0:1",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_02_exit_elevator_room",
+      "secondaryRoomId": null,
+      "position": [
+        -2.4,
+        -0.015,
+        -8.975
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1.52,
+        1.02,
+        1.48
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.4,
+          -0.015,
+          -8.975
+        ],
+        "halfSize": [
+          2.432,
+          0.0408,
+          1.665
+        ]
+      }
+    },
+    {
+      "id": "shell:level_02_exit_elevator_room:floor:1:1",
+      "source": "shell",
+      "role": "floor",
+      "roomId": "level_02_exit_elevator_room",
+      "secondaryRoomId": null,
+      "position": [
+        2.4,
+        -0.015,
+        -8.975
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.52,
+        1.02,
+        1.48
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.4,
+          -0.015,
+          -8.975
+        ],
+        "halfSize": [
+          2.432,
+          0.0408,
+          1.665
+        ]
+      }
+    }
+  ]
+}

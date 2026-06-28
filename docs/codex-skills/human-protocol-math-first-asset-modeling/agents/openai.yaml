@@ -1,0 +1,4 @@
+interface:
+  display_name: "Human Protocol Math-First Asset Modeling"
+  short_description: "Math-first game asset modeling"
+  default_prompt: "Use $human-protocol-math-first-asset-modeling to build and validate a config-ready Human Protocol asset."

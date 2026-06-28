@@ -1,0 +1,5810 @@
+{
+  "schemaVersion": "hp.official.builder.v1",
+  "documentId": "official_builder_level_04_memory_clinic_from_chrome_build_20260627",
+  "title": "记忆诊所 · 可编辑草稿",
+  "campaign": {
+    "levelId": "level_04_memory_clinic",
+    "title": "记忆诊所",
+    "ordinal": 4,
+    "packId": "human-protocol-base-demo",
+    "nextLevelId": "level_05_reclamation_core"
+  },
+  "project": {
+    "schemaVersion": "hp.builder.v1",
+    "projectId": "proj_import_level_04_memory_clinic",
+    "title": "记忆诊所 · 可编辑草稿",
+    "rooms": [
+      {
+        "id": "level_04_entry_decon",
+        "label": "入口消毒间",
+        "style": "sterile",
+        "center": [
+          0,
+          18
+        ],
+        "size": [
+          8,
+          5
+        ],
+        "env": {
+          "surfaceKitId": "hp:memory_clinic_shell_v1",
+          "floorPresetId": "floor_memory_clinic_tile",
+          "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "wall": {
+              "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "quiet",
+          "skinKey": "memory_clinic_sterile",
+          "floorMaterialKey": "memory_clinic_floor",
+          "wallMaterialKey": "memory_clinic_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#9ff3ff"
+          },
+          "aesthetic": {
+            "style": "sterile",
+            "detail": "high"
+          },
+          "ambientPressure": 0.32,
+          "entryDialogueTrigger": "level_start"
+        }
+      },
+      {
+        "id": "level_04_waiting_room",
+        "label": "候诊厅",
+        "style": "sterile",
+        "center": [
+          0,
+          10.5
+        ],
+        "size": [
+          16,
+          10
+        ],
+        "env": {
+          "surfaceKitId": "hp:memory_clinic_shell_v1",
+          "floorPresetId": "floor_memory_clinic_tile",
+          "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "wall": {
+              "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "uneasy",
+          "skinKey": "memory_clinic_sterile",
+          "floorMaterialKey": "memory_clinic_floor",
+          "wallMaterialKey": "memory_clinic_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#7ff2ff"
+          },
+          "aesthetic": {
+            "style": "sterile",
+            "detail": "high"
+          },
+          "ambientPressure": 0.54
+        }
+      },
+      {
+        "id": "level_04_childhood_chair",
+        "label": "童年椅室",
+        "style": "sterile",
+        "center": [
+          -11.5,
+          10.5
+        ],
+        "size": [
+          7,
+          7
+        ],
+        "env": {
+          "surfaceKitId": "hp:memory_clinic_shell_v1",
+          "floorPresetId": "floor_memory_clinic_tile",
+          "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "wall": {
+              "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "quiet",
+          "skinKey": "memory_clinic_sterile",
+          "floorMaterialKey": "memory_clinic_floor",
+          "wallMaterialKey": "memory_clinic_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#ffd58a"
+          },
+          "aesthetic": {
+            "style": "sterile",
+            "detail": "high"
+          },
+          "ambientPressure": 0.58
+        }
+      },
+      {
+        "id": "level_04_rescue_chair",
+        "label": "救援椅室",
+        "style": "sterile",
+        "center": [
+          11.5,
+          11
+        ],
+        "size": [
+          7,
+          7
+        ],
+        "env": {
+          "surfaceKitId": "hp:memory_clinic_shell_v1",
+          "floorPresetId": "floor_memory_clinic_tile",
+          "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "wall": {
+              "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "uneasy",
+          "skinKey": "memory_clinic_sterile",
+          "floorMaterialKey": "memory_clinic_floor",
+          "wallMaterialKey": "memory_clinic_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#8aeefc"
+          },
+          "aesthetic": {
+            "style": "sterile",
+            "detail": "high"
+          },
+          "ambientPressure": 0.62
+        }
+      },
+      {
+        "id": "level_04_body_chair",
+        "label": "身体椅室",
+        "style": "sterile",
+        "center": [
+          0,
+          1
+        ],
+        "size": [
+          10,
+          9
+        ],
+        "env": {
+          "surfaceKitId": "hp:memory_clinic_shell_v1",
+          "floorPresetId": "floor_memory_clinic_tile",
+          "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "wall": {
+              "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "reveal",
+          "skinKey": "memory_clinic_sterile",
+          "floorMaterialKey": "memory_clinic_floor",
+          "wallMaterialKey": "memory_clinic_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#ff6a52"
+          },
+          "aesthetic": {
+            "style": "sterile",
+            "detail": "high"
+          },
+          "ambientPressure": 0.76
+        }
+      },
+      {
+        "id": "level_04_therapy_theater",
+        "label": "治疗剧场",
+        "style": "core",
+        "center": [
+          0,
+          -8
+        ],
+        "size": [
+          14,
+          9
+        ],
+        "env": {
+          "surfaceKitId": "hp:reclamation_core_shell_v1",
+          "floorPresetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+          "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36,
+          "surfaceOverrides": {
+            "wall": {
+              "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "floor": {
+              "presetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            }
+          }
+        },
+        "sourceRoom": {
+          "mood": "boss",
+          "skinKey": "reclamation_core_chamber",
+          "floorMaterialKey": "memory_clinic_floor",
+          "wallMaterialKey": "memory_clinic_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#ff5b4c"
+          },
+          "aesthetic": {
+            "style": "hazard",
+            "detail": "high"
+          },
+          "ambientPressure": 0.9
+        }
+      },
+      {
+        "id": "level_04_exit_room",
+        "label": "出院电梯间",
+        "style": "exit",
+        "center": [
+          0,
+          -15.2
+        ],
+        "size": [
+          6.4,
+          5.4
+        ],
+        "env": {
+          "floorPresetId": "floor_dark_rubber",
+          "wallPresetId": "wall_dark_metal_panel",
+          "ceilingPresetId": "wall_dark_metal_panel",
+          "ceilingVisible": false,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36
+        },
+        "sourceRoom": {
+          "mood": "reveal",
+          "skinKey": "service_elevator_hero",
+          "floorMaterialKey": "service_elevator_metal",
+          "wallMaterialKey": "service_elevator_metal",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": false,
+            "renderCeiling": false,
+            "collisionWalls": true,
+            "accentColor": "#f3f0df"
+          },
+          "aesthetic": {
+            "enabled": true,
+            "style": "exit",
+            "detail": "high"
+          },
+          "ambientPressure": 0.55
+        }
+      },
+      {
+        "id": "room_q0q7rw",
+        "label": "留置档案间",
+        "style": "maintenance",
+        "center": [
+          0,
+          23.1
+        ],
+        "size": [
+          8,
+          5.2
+        ],
+        "shape": {
+          "kind": "polygon",
+          "points": [
+            [
+              -4,
+              -2.6
+            ],
+            [
+              4,
+              -2.6
+            ],
+            [
+              0,
+              2.6
+            ]
+          ]
+        },
+        "env": {
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_hp_museum_limestone_panel",
+              "authored": true
+            }
+          },
+          "floorPresetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+          "ceilingVisible": true,
+          "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+          "wallPresetId": "wall_hp_museum_limestone_panel"
+        },
+        "sourceRoom": {
+          "mood": "uneasy",
+          "floorMaterialKey": "memory_clinic_floor",
+          "wallMaterialKey": "level03_museum_wall_black_gallery",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#6fe3c2"
+          },
+          "aesthetic": {
+            "style": "maintenance",
+            "detail": "high"
+          }
+        }
+      }
+    ],
+    "doors": [
+      {
+        "id": "level_04_waiting_door",
+        "label": "诊所候诊门",
+        "fromRoomId": "level_04_entry_decon",
+        "toRoomId": "level_04_waiting_room",
+        "lockType": "switch_state",
+        "sourceDoor": {
+          "label": "诊所候诊门",
+          "position": [
+            0,
+            0,
+            15.5
+          ],
+          "size": [
+            3.2,
+            2.8,
+            0.36
+          ],
+          "yaw": 0,
+          "defaultState": "closed",
+          "lock": {
+            "type": "switch_state",
+            "switchId": "door_switch_wall_switch_ueamem",
+            "stateId": "state_2_open",
+            "manualOpen": false,
+            "lockedMessage": "需要先把「墙面门控把手」切到「打开」。",
+            "unlockedMessage": "门控状态确认，门已解锁。"
+          },
+          "visualKey": "clinic_memory_door",
+          "materialKey": "memory_clinic_wall",
+          "panelPosition": [
+            1.78,
+            0,
+            15.85
+          ],
+          "openSpeed": 1.15,
+          "autoOpenOnApproach": false,
+          "cameraImpact": {
+            "shake": 0.12,
+            "fovKick": 0.65
+          }
+        },
+        "wallDoorSwitchId": "wall_switch_ueamem",
+        "wallDoorSwitchStateId": "open"
+      },
+      {
+        "id": "level_04_childhood_door",
+        "label": "童年椅室门",
+        "fromRoomId": "level_04_waiting_room",
+        "toRoomId": "level_04_childhood_chair",
+        "lockType": "survive_wave",
+        "sourceDoor": {
+          "label": "童年椅室门",
+          "position": [
+            -8,
+            0,
+            10.5
+          ],
+          "size": [
+            2.35,
+            2.65,
+            0.32
+          ],
+          "yaw": 1.5707963267948966,
+          "defaultState": "locked",
+          "lock": {
+            "type": "survive_wave",
+            "waveId": "wave_l7kjqk",
+            "lockedMessage": "清掉「护盾技师 4、维修无人机 3」，门才会开。",
+            "unlockedMessage": "威胁解除，门已解锁。"
+          },
+          "visualKey": "clinic_memory_door",
+          "materialKey": "memory_clinic_wall",
+          "panelPosition": [
+            -7.6,
+            0,
+            12.2
+          ],
+          "openSpeed": 1.08,
+          "autoOpenOnApproach": false
+        },
+        "surviveRobotIds": [
+          "robot_clv6fn",
+          "robot_zfb2ir"
+        ],
+        "waveIds": [],
+        "surviveRobotId": "robot_clv6fn"
+      },
+      {
+        "id": "level_04_rescue_door",
+        "label": "救援椅室门",
+        "fromRoomId": "level_04_waiting_room",
+        "toRoomId": "level_04_rescue_chair",
+        "lockType": "switch_state",
+        "sourceDoor": {
+          "label": "救援椅室门",
+          "position": [
+            8,
+            0,
+            10.5
+          ],
+          "size": [
+            2.35,
+            2.65,
+            0.32
+          ],
+          "yaw": 1.5707963267948966,
+          "defaultState": "closed",
+          "lock": {
+            "type": "switch_state",
+            "switchId": "door_switch_wall_switch_273ih2",
+            "stateId": "state_2_open",
+            "manualOpen": false,
+            "lockedMessage": "需要先把「墙面门控把手」切到「打开」。",
+            "unlockedMessage": "门控状态确认，门已解锁。"
+          },
+          "visualKey": "clinic_memory_door",
+          "materialKey": "memory_clinic_wall",
+          "panelPosition": [
+            7.6,
+            0,
+            8.9
+          ],
+          "openSpeed": 1.08,
+          "autoOpenOnApproach": false
+        },
+        "wallDoorSwitchId": "wall_switch_273ih2",
+        "wallDoorSwitchStateId": "open"
+      },
+      {
+        "id": "level_04_body_door",
+        "label": "身体椅室门",
+        "fromRoomId": "level_04_waiting_room",
+        "toRoomId": "level_04_body_chair",
+        "lockType": "puzzle_complete",
+        "puzzleKind": "valve_matrix",
+        "puzzleRoomId": "level_04_rescue_chair",
+        "sourceDoor": {
+          "label": "身体椅室门",
+          "position": [
+            0,
+            0,
+            5.5
+          ],
+          "size": [
+            3.1,
+            2.8,
+            0.36
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "puzzle_complete",
+            "puzzleId": "pz_level_04_body_door",
+            "lockedMessage": "先在「救援椅室」的谜题台上完成闸门配平台。",
+            "unlockedMessage": "闸门配平台完成，门已解锁。"
+          },
+          "visualKey": "clinic_memory_door",
+          "materialKey": "memory_clinic_wall",
+          "panelPosition": [
+            2.2,
+            0,
+            5.86
+          ],
+          "openSpeed": 1.12,
+          "autoOpenOnApproach": false
+        }
+      },
+      {
+        "id": "level_04_theater_door",
+        "label": "治疗剧场门",
+        "fromRoomId": "level_04_body_chair",
+        "toRoomId": "level_04_therapy_theater",
+        "lockType": "puzzle_complete",
+        "puzzleKind": "color_sequence",
+        "puzzleRoomId": "level_04_entry_decon",
+        "sourceDoor": {
+          "label": "治疗剧场门",
+          "position": [
+            0,
+            0,
+            -3.5
+          ],
+          "size": [
+            4.2,
+            3.1,
+            0.42
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "puzzle_complete",
+            "puzzleId": "pz_level_04_theater_door",
+            "lockedMessage": "灯序尚未确认。",
+            "unlockedMessage": "灯序确认。"
+          },
+          "visualKey": "industrial_access_door",
+          "materialKey": "terminal_red",
+          "panelPosition": [
+            2.7,
+            0,
+            -3.12
+          ],
+          "openSpeed": 1.22,
+          "autoOpenOnApproach": false,
+          "cameraImpact": {
+            "shake": 0.22,
+            "fovKick": 1.2
+          }
+        }
+      },
+      {
+        "id": "level_04_exit_door",
+        "label": "出院电梯门",
+        "fromRoomId": "level_04_therapy_theater",
+        "toRoomId": "level_04_exit_room",
+        "lockType": "puzzle_complete",
+        "puzzleKind": "archive_merge",
+        "puzzleRoomId": "room_q0q7rw",
+        "sourceDoor": {
+          "label": "出院电梯门",
+          "position": [
+            0,
+            0,
+            -12.5
+          ],
+          "size": [
+            4.4,
+            3.25,
+            0.44
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "puzzle_complete",
+            "puzzleId": "pz_level_04_exit_door",
+            "lockedMessage": "先在「留置档案间」完成记忆压缩。",
+            "unlockedMessage": "记忆压缩柜完成，门已解锁。"
+          },
+          "skinKey": "service_elevator_hero",
+          "visualKey": "service_elevator_door",
+          "materialKey": "service_elevator_metal",
+          "panelPosition": [
+            2.82,
+            0,
+            -12.12
+          ],
+          "openSpeed": 1.35,
+          "autoOpenOnApproach": true,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true,
+            "hidePanelAfterOpen": true
+          },
+          "cameraImpact": {
+            "shake": 0.34,
+            "fovKick": 1.85
+          }
+        }
+      },
+      {
+        "id": "door_d42uh6",
+        "label": "留置档案间门",
+        "fromRoomId": "room_q0q7rw",
+        "toRoomId": "level_04_entry_decon",
+        "lockType": "survive_wave",
+        "sourceDoor": {
+          "label": "留置档案间门",
+          "position": [
+            0,
+            0,
+            20.5
+          ],
+          "size": [
+            3.2,
+            3.2,
+            0.35
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "survive_wave",
+            "waveId": "wave_l7kjqk_level_04_therapy_theater",
+            "lockedMessage": "清掉治疗剧场主管，门才会开。",
+            "unlockedMessage": "威胁解除，门已解锁。"
+          },
+          "visualKey": "yellow_access_door",
+          "materialKey": "terminal_red",
+          "panelPosition": [
+            1.78,
+            0,
+            20.85
+          ],
+          "autoOpenOnApproach": false
+        },
+        "surviveRobotIds": [
+          "robot_9b2zfb"
+        ],
+        "waveIds": [],
+        "surviveRobotId": "robot_9b2zfb"
+      }
+    ],
+    "props": [
+      {
+        "id": "level_04_memory_clinic_official_exit_elevator_exit_stage",
+        "modelKey": "service_elevator_exit_stage",
+        "roomId": "level_04_exit_room",
+        "position": [
+          0,
+          -15.2
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "出口电梯房间",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "exit_room_stage",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "level_04_memory_clinic_official_exit_elevator_interior_shell",
+        "modelKey": "service_elevator_interior_shell",
+        "roomId": "level_04_exit_room",
+        "position": [
+          0,
+          -15.2
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "出口电梯内壁",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "interior_shell",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "level_04_memory_clinic_official_exit_elevator_threshold",
+        "modelKey": "door_threshold_service_elevator",
+        "roomId": "level_04_exit_room",
+        "position": [
+          0,
+          -13.09
+        ],
+        "rotationY": 0,
+        "scale": 1.05,
+        "elevation": 0.04,
+        "sourceProp": {
+          "y": 0.035,
+          "scale": [
+            1.15,
+            1,
+            1
+          ],
+          "label": "出口电梯门槛",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "threshold",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "level_04_memory_clinic_official_exit_elevator_call_buttons",
+        "modelKey": "service_elevator_call_buttons",
+        "roomId": "level_04_exit_room",
+        "position": [
+          2.82,
+          -15.9
+        ],
+        "rotationY": -1.5707963267948966,
+        "scale": 1,
+        "elevation": 1.42,
+        "sourceProp": {
+          "y": 1.42,
+          "scale": 1,
+          "label": "出口电梯呼叫按钮",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "exit_call_buttons",
+            "button_panel"
+          ]
+        }
+      },
+      {
+        "id": "level_04_memory_clinic_official_exit_elevator_ascent_shaft_fx",
+        "modelKey": "service_elevator_ascent_shaft_fx",
+        "roomId": "level_04_exit_room",
+        "position": [
+          0,
+          -15.2
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "出口电梯上升井道",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "ascent_shaft_fx",
+            "cinematic_reveal"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_reception_counter",
+        "modelKey": "hp_l4_cineclinic_reception_counter",
+        "roomId": "level_04_waiting_room",
+        "position": [
+          -4.85,
+          14.25
+        ],
+        "rotationY": 3.141592653589793,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "候诊接待台",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "waiting_room",
+            "landmark"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_waiting_sofa_row",
+        "modelKey": "hp_l4_cineclinic_waiting_sofa_row",
+        "roomId": "level_04_waiting_room",
+        "position": [
+          -2.45,
+          11.55
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "候诊软座排",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "waiting_room",
+            "cover_low"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_lime_ottoman",
+        "modelKey": "hp_l4_cineclinic_lime_ottoman",
+        "roomId": "level_04_waiting_room",
+        "position": [
+          0.65,
+          10.35
+        ],
+        "rotationY": 0.39269908169872414,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "青柠模块脚凳",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "waiting_room",
+            "color_accent"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_side_table_planter",
+        "modelKey": "hp_l4_cineclinic_side_table_planter",
+        "roomId": "level_04_waiting_room",
+        "position": [
+          2.05,
+          10.65
+        ],
+        "rotationY": -0.3141592653589793,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "候诊小桌与无菌盆栽",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "waiting_room",
+            "soft_human_touch"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_triage_kiosk",
+        "modelKey": "hp_l4_cineclinic_triage_kiosk",
+        "roomId": "level_04_waiting_room",
+        "position": [
+          5.95,
+          14.05
+        ],
+        "rotationY": 3.141592653589793,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "分诊号码亭",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "waiting_room",
+            "future_puzzle_host"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_med_cabinet",
+        "modelKey": "hp_l4_cineclinic_med_cabinet",
+        "roomId": "level_04_waiting_room",
+        "position": [
+          -7.25,
+          8.15
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "无菌药品柜",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "waiting_room",
+            "wall_anchor"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_record_wall_cabinet",
+        "modelKey": "hp_l4_cineclinic_record_wall_cabinet",
+        "roomId": "level_04_waiting_room",
+        "position": [
+          7.5,
+          8
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "记忆档案壁柜",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "waiting_room",
+            "future_puzzle_host"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_memory_recliner",
+        "modelKey": "hp_l4_cineclinic_memory_recliner",
+        "roomId": "level_04_childhood_chair",
+        "position": [
+          -11.5,
+          10.55
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "记忆治疗躺椅",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "childhood_room",
+            "hero_prop",
+            "future_puzzle_host"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_scan_arch",
+        "modelKey": "hp_l4_cineclinic_scan_arch",
+        "roomId": "level_04_childhood_chair",
+        "position": [
+          -13.15,
+          10.55
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "记忆扫描拱",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "childhood_room",
+            "hero_support",
+            "non_solid_gate"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_projection_pod",
+        "modelKey": "hp_l4_cineclinic_projection_pod",
+        "roomId": "level_04_childhood_chair",
+        "position": [
+          -9.55,
+          8.35
+        ],
+        "rotationY": -2.25,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "记忆投影舱",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "childhood_room",
+            "narrative"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_rescue_speaker_panel",
+        "modelKey": "hp_l4_cineclinic_rescue_speaker_panel",
+        "roomId": "level_04_rescue_chair",
+        "position": [
+          14.78,
+          10.55
+        ],
+        "rotationY": 4.71238898038469,
+        "scale": 1,
+        "elevation": 1.35,
+        "sourceProp": {
+          "y": 1.35,
+          "scale": 1,
+          "label": "墙内救援声栅",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "rescue_room",
+            "wall_panel",
+            "voice_cue_host"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_cable_trolley",
+        "modelKey": "hp_l4_cineclinic_cable_trolley",
+        "roomId": "level_04_rescue_chair",
+        "position": [
+          9.55,
+          8.35
+        ],
+        "rotationY": 7.0685834705770345,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "神经电缆推车",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "rescue_room",
+            "side_cover"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_exam_table",
+        "modelKey": "hp_l4_cineclinic_exam_table",
+        "roomId": "level_04_body_chair",
+        "position": [
+          0,
+          1.2
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "高级检查床柜",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "body_room",
+            "hero_prop",
+            "future_puzzle_host"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_surgical_light",
+        "modelKey": "hp_l4_cineclinic_surgical_light",
+        "roomId": "level_04_body_chair",
+        "position": [
+          0,
+          1.2
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 2.05,
+        "sourceProp": {
+          "y": 2.05,
+          "scale": 1,
+          "label": "无影手术灯",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "body_room",
+            "ceiling",
+            "emissive"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_monitor_arm",
+        "modelKey": "hp_l4_cineclinic_monitor_arm",
+        "roomId": "level_04_body_chair",
+        "position": [
+          3.25,
+          1.15
+        ],
+        "rotationY": -1.5707963267948966,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "身体监视机械臂",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "body_room",
+            "future_puzzle_host"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_privacy_screen",
+        "modelKey": "hp_l4_cineclinic_privacy_screen",
+        "roomId": "level_04_body_chair",
+        "position": [
+          -3.15,
+          2.9
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "身体遮挡隐私屏",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "body_room",
+            "transparent",
+            "sightline_layer"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_observation_desk",
+        "modelKey": "hp_l4_cineclinic_observation_desk",
+        "roomId": "level_04_therapy_theater",
+        "position": [
+          -5,
+          -6
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "观察控制台",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "theater_room",
+            "control_console"
+          ]
+        }
+      },
+      {
+        "id": "level_04_cineclinic_theater_wall",
+        "modelKey": "hp_l4_cineclinic_theater_wall",
+        "roomId": "level_04_therapy_theater",
+        "position": [
+          -4.5,
+          -10
+        ],
+        "rotationY": 0.7853981633974483,
+        "scale": 1,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "治疗剧场背墙",
+          "tags": [
+            "hp:level04_memory_clinic_furniture_v1",
+            "furniture",
+            "cineclinic",
+            "pipeline_generated",
+            "theater_room",
+            "landmark",
+            "finale_backdrop",
+            "visual_backdrop_no_player_block"
+          ],
+          "collider": {
+            "halfSize": [
+              0.05,
+              0.05,
+              0.05
+            ],
+            "enemyNavigation": "ignore"
+          }
+        }
+      },
+      {
+        "id": "prop_ljs8ix",
+        "modelKey": "l4_story_rescue_loop_image2_v1",
+        "roomId": "level_04_therapy_theater",
+        "position": [
+          4,
+          -12.155
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 1.46,
+        "story": {
+          "title": "救援循环记录",
+          "clue": "画面每次都停在伸手的一秒。系统反复确认：对象会救人。",
+          "hint": "勇敢也可能是回放。"
+        }
+      },
+      {
+        "id": "prop_o1punf",
+        "modelKey": "l4_story_awakened_machine_image2_v1",
+        "roomId": "level_04_entry_decon",
+        "position": [
+          3.955,
+          18
+        ],
+        "rotationY": -1.5707963267948966,
+        "scale": 1,
+        "elevation": 1.2,
+        "story": {
+          "title": "醒来记录",
+          "clue": "诊疗床只保存醒来的声音，没有保存醒来前的人。",
+          "hint": "载入完成，不等于记起。"
+        }
+      },
+      {
+        "id": "prop_5rb8o0",
+        "modelKey": "l4_story_preserved_childhood_image2_v1",
+        "roomId": "level_04_rescue_chair",
+        "position": [
+          11.5,
+          14.155
+        ],
+        "rotationY": -3.141592653589793,
+        "scale": 1,
+        "elevation": 1.46,
+        "story": {
+          "title": "被保存的童年",
+          "clue": "玩具、鞋和门口光线被切成片段。对象会把它们拼成童年。",
+          "hint": "记忆会安慰，也会误导。"
+        }
+      },
+      {
+        "id": "prop_u7o99q",
+        "modelKey": "l4_story_h0_discharge_image2_v1",
+        "roomId": "room_q0q7rw",
+        "position": [
+          -2.135401147403414,
+          22.604154728771856
+        ],
+        "rotationY": 2.2264919530364327,
+        "scale": 1,
+        "elevation": 1.46,
+        "story": {
+          "title": "出院留置记录",
+          "clue": "出院门亮起时，系统没有删除这些片段，只把它们标为随行。",
+          "hint": "未关闭记录随对象离院。"
+        }
+      },
+      {
+        "id": "builder_exit_elevator_exit_stage",
+        "modelKey": "service_elevator_exit_stage",
+        "roomId": "level_04_exit_room",
+        "position": [
+          0,
+          -15.2
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "出口电梯房间",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "exit_room_stage",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_interior_shell",
+        "modelKey": "service_elevator_interior_shell",
+        "roomId": "level_04_exit_room",
+        "position": [
+          0,
+          -15.2
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "出口电梯内壁",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "interior_shell",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_threshold",
+        "modelKey": "door_threshold_service_elevator",
+        "roomId": "level_04_exit_room",
+        "position": [
+          0,
+          -13.09
+        ],
+        "rotationY": 0,
+        "scale": 1.05,
+        "elevation": 0.04,
+        "sourceProp": {
+          "y": 0.035,
+          "scale": [
+            1.15,
+            1,
+            1
+          ],
+          "label": "出口电梯门槛",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "threshold",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_call_buttons",
+        "modelKey": "service_elevator_call_buttons",
+        "roomId": "level_04_exit_room",
+        "position": [
+          2.82,
+          -15.9
+        ],
+        "rotationY": -1.5707963267948966,
+        "scale": 1,
+        "elevation": 1.42,
+        "sourceProp": {
+          "y": 1.42,
+          "scale": 1,
+          "label": "出口电梯呼叫按钮",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "exit_call_buttons",
+            "button_panel"
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_ascent_shaft_fx",
+        "modelKey": "service_elevator_ascent_shaft_fx",
+        "roomId": "level_04_exit_room",
+        "position": [
+          0,
+          -15.2
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "出口电梯上升井道",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "official",
+            "builderTrial",
+            "ascent_shaft_fx",
+            "cinematic_reveal"
+          ]
+        }
+      }
+    ],
+    "pickups": [
+      {
+        "id": "pickup_b857v1",
+        "kind": "repairKit",
+        "roomId": "level_04_entry_decon",
+        "position": [
+          -2.5,
+          18
+        ]
+      },
+      {
+        "id": "pickup_dajmao",
+        "kind": "repairKit",
+        "roomId": "level_04_childhood_chair",
+        "position": [
+          -14.5,
+          8
+        ]
+      },
+      {
+        "id": "pickup_a4psbf",
+        "kind": "repairKit",
+        "roomId": "level_04_body_chair",
+        "position": [
+          4,
+          -2.5
+        ]
+      },
+      {
+        "id": "pickup_gb8irn",
+        "kind": "coreCell",
+        "roomId": "level_04_entry_decon",
+        "position": [
+          2.5,
+          17
+        ]
+      },
+      {
+        "id": "pickup_ep1nbg",
+        "kind": "coreCell",
+        "roomId": "level_04_therapy_theater",
+        "position": [
+          5.5,
+          -11
+        ]
+      },
+      {
+        "id": "pickup_uxyiky",
+        "kind": "repairKit",
+        "roomId": "level_04_therapy_theater",
+        "position": [
+          6,
+          -5.5
+        ]
+      }
+    ],
+    "robots": [
+      {
+        "id": "robot_0hulc2",
+        "label": "夹钳机器人 1",
+        "roomId": "level_04_waiting_room",
+        "archetype": "clamp_bot",
+        "count": 2,
+        "position": [
+          -3,
+          7.5
+        ]
+      },
+      {
+        "id": "robot_we089t",
+        "label": "维修无人机 2",
+        "roomId": "level_04_waiting_room",
+        "archetype": "repair_drone",
+        "count": 2,
+        "position": [
+          3.5,
+          8
+        ]
+      },
+      {
+        "id": "robot_clv6fn",
+        "label": "护盾技师 3",
+        "roomId": "level_04_waiting_room",
+        "archetype": "shield_tech",
+        "count": 2,
+        "position": [
+          -4,
+          9.5
+        ],
+        "waveChain": {
+          "waveId": "wave_0z51v9",
+          "order": 1,
+          "label": "巡检单位"
+        }
+      },
+      {
+        "id": "robot_zfb2ir",
+        "label": "维修无人机 4",
+        "roomId": "level_04_waiting_room",
+        "archetype": "repair_drone",
+        "count": 2,
+        "position": [
+          0.5,
+          12.5
+        ],
+        "waveChain": {
+          "waveId": "wave_0z51v9",
+          "order": 1,
+          "label": "巡检单位"
+        }
+      },
+      {
+        "id": "robot_9b2zfb",
+        "label": "治疗剧场主管",
+        "roomId": "level_04_therapy_theater",
+        "archetype": "custodian_elite",
+        "count": 1,
+        "position": [
+          -1.5,
+          -9
+        ],
+        "waveChain": {
+          "waveId": "wave_yjxxy4",
+          "order": 1,
+          "label": "巡检单位"
+        },
+        "combat": {
+          "healthMultiplier": 0.55
+        }
+      },
+      {
+        "id": "robot_37oyli",
+        "label": "夹钳机器人 6",
+        "roomId": "level_04_therapy_theater",
+        "archetype": "clamp_bot",
+        "count": 2,
+        "position": [
+          3,
+          -9.5
+        ],
+        "waveChain": {
+          "waveId": "wave_yjxxy4",
+          "order": 1,
+          "label": "巡检单位",
+          "pressureLoop": {
+            "enabled": true,
+            "archetype": "clamp_bot",
+            "count": 1,
+            "startsAfter": 0.6,
+            "every": 7,
+            "maxAlive": 2
+          }
+        }
+      },
+      {
+        "id": "robot_3nsmej",
+        "label": "维修无人机 7",
+        "roomId": "room_q0q7rw",
+        "archetype": "repair_drone",
+        "count": 2,
+        "position": [
+          -1.5,
+          22
+        ],
+        "waveChain": {
+          "waveId": "wave_dw6lb3",
+          "order": 1,
+          "label": "巡检单位",
+          "pressureLoop": {
+            "enabled": true,
+            "archetype": "repair_drone",
+            "count": 1,
+            "startsAfter": 0.6,
+            "every": 7,
+            "maxAlive": 2
+          }
+        }
+      }
+    ],
+    "puzzles": [
+      {
+        "id": "pz_level_04_theater_door",
+        "kind": "color_sequence",
+        "linkedDoorId": "level_04_theater_door",
+        "roomId": "level_04_entry_decon",
+        "position": [
+          -3,
+          16.5
+        ],
+        "rotationY": 7.0685834705770345,
+        "components": [
+          {
+            "id": "pz_level_04_theater_door_component_1",
+            "role": "orb_red",
+            "roomId": "level_04_body_chair",
+            "position": [
+              -4,
+              -2.5
+            ]
+          },
+          {
+            "id": "pz_level_04_theater_door_component_2",
+            "role": "orb_blue",
+            "roomId": "level_04_childhood_chair",
+            "position": [
+              -12.5,
+              8
+            ]
+          },
+          {
+            "id": "pz_level_04_theater_door_component_3",
+            "role": "orb_green",
+            "roomId": "level_04_rescue_chair",
+            "position": [
+              14.5,
+              12
+            ]
+          },
+          {
+            "id": "pzc_bl61c7",
+            "role": "orb_yellow",
+            "roomId": "level_04_waiting_room",
+            "position": [
+              -7,
+              6.5
+            ]
+          }
+        ]
+      },
+      {
+        "id": "pz_level_04_body_door",
+        "kind": "valve_matrix",
+        "linkedDoorId": "level_04_body_door",
+        "roomId": "level_04_rescue_chair",
+        "position": [
+          11.5,
+          8
+        ],
+        "rotationY": 0,
+        "timeLimitSec": 30
+      },
+      {
+        "id": "pz_level_04_exit_door",
+        "kind": "archive_merge",
+        "linkedDoorId": "level_04_exit_door",
+        "roomId": "room_q0q7rw",
+        "position": [
+          0.5,
+          23
+        ],
+        "rotationY": 3.141592653589793,
+        "archiveTargetValue": 32,
+        "requiredStoryPropIds": [
+          "prop_ljs8ix",
+          "prop_o1punf",
+          "prop_5rb8o0",
+          "prop_u7o99q"
+        ]
+      }
+    ],
+    "wallDoorSwitches": [
+      {
+        "id": "wall_switch_ueamem",
+        "label": "墙面门控把手",
+        "roomId": "level_04_entry_decon",
+        "wallMount": {
+          "side": "north",
+          "offset": 0.78125,
+          "height": 1.34,
+          "inset": 0.18
+        },
+        "mode": "toggle",
+        "primaryDoorId": "level_04_waiting_door",
+        "initialStateId": "closed",
+        "oneShot": false,
+        "states": [
+          {
+            "id": "closed",
+            "label": "关闭",
+            "openDoorIds": [],
+            "closeDoorIds": [
+              "level_04_waiting_door"
+            ],
+            "message": "门控回到关闭。"
+          },
+          {
+            "id": "open",
+            "label": "打开",
+            "openDoorIds": [
+              "level_04_waiting_door"
+            ],
+            "closeDoorIds": [],
+            "message": "门控打开通路。"
+          }
+        ]
+      },
+      {
+        "id": "wall_switch_273ih2",
+        "label": "墙面门控把手",
+        "roomId": "level_04_childhood_chair",
+        "wallMount": {
+          "side": "north",
+          "offset": 0.18518518518518517,
+          "height": 1.34,
+          "inset": 0.18
+        },
+        "mode": "toggle",
+        "primaryDoorId": "level_04_rescue_door",
+        "initialStateId": "closed",
+        "oneShot": false,
+        "states": [
+          {
+            "id": "closed",
+            "label": "关闭",
+            "openDoorIds": [
+              "level_04_waiting_door"
+            ],
+            "closeDoorIds": [
+              "level_04_rescue_door"
+            ],
+            "message": "主门关闭，反向门打开。"
+          },
+          {
+            "id": "open",
+            "label": "打开",
+            "openDoorIds": [
+              "level_04_rescue_door"
+            ],
+            "closeDoorIds": [
+              "level_04_waiting_door"
+            ],
+            "message": "主门打开，反向门关闭。"
+          }
+        ],
+        "inverseDoorId": "level_04_waiting_door"
+      }
+    ],
+    "exitRoomId": "level_04_exit_room",
+    "lighting": {
+      "ambient": 0.42,
+      "keyColor": "#dbefff",
+      "keyIntensity": 0.88,
+      "fog": 0.18,
+      "bloom": 0.28,
+      "shadow": 0.62
+    },
+    "sourceLevel": {
+      "levelId": "level_04_memory_clinic",
+      "mapId": "level_04_memory_clinic_map",
+      "articles": [
+        {
+          "id": "article_l4_story_rescue_loop_image2_v1_prop_ljs8ix",
+          "roomId": "level_04_therapy_theater",
+          "interactionId": "story_prop_ljs8ix",
+          "systemLabel": "墙面档案",
+          "title": "救援循环记录",
+          "pages": [
+            {
+              "id": "record",
+              "body": "画面每次都停在伸手的一秒。系统反复确认：对象会救人。"
+            },
+            {
+              "id": "note",
+              "body": "勇敢也可能是回放。"
+            }
+          ],
+          "readReward": {
+            "label": "墙面档案",
+            "detail": "救援循环记录 已读取",
+            "rarity": "story"
+          },
+          "readRewardDuration": 1.35
+        },
+        {
+          "id": "article_l4_story_awakened_machine_image2_v1_prop_o1punf",
+          "roomId": "level_04_entry_decon",
+          "interactionId": "story_prop_o1punf",
+          "systemLabel": "墙面档案",
+          "title": "醒来记录",
+          "pages": [
+            {
+              "id": "record",
+              "body": "诊疗床只保存醒来的声音，没有保存醒来前的人。"
+            },
+            {
+              "id": "note",
+              "body": "载入完成，不等于记起。"
+            }
+          ],
+          "readReward": {
+            "label": "墙面档案",
+            "detail": "醒来记录 已读取",
+            "rarity": "story"
+          },
+          "readRewardDuration": 1.35
+        },
+        {
+          "id": "article_l4_story_preserved_childhood_image2_v1_prop_5rb8o0",
+          "roomId": "level_04_rescue_chair",
+          "interactionId": "story_prop_5rb8o0",
+          "systemLabel": "墙面档案",
+          "title": "被保存的童年",
+          "pages": [
+            {
+              "id": "record",
+              "body": "玩具、鞋和门口光线被切成片段。对象会把它们拼成童年。"
+            },
+            {
+              "id": "note",
+              "body": "记忆会安慰，也会误导。"
+            }
+          ],
+          "readReward": {
+            "label": "墙面档案",
+            "detail": "被保存的童年 已读取",
+            "rarity": "story"
+          },
+          "readRewardDuration": 1.35
+        },
+        {
+          "id": "article_l4_story_h0_discharge_image2_v1_prop_u7o99q",
+          "roomId": "room_q0q7rw",
+          "interactionId": "story_prop_u7o99q",
+          "systemLabel": "墙面档案",
+          "title": "出院留置记录",
+          "pages": [
+            {
+              "id": "record",
+              "body": "出院门亮起时，系统没有删除这些片段，只把它们标为随行。"
+            },
+            {
+              "id": "note",
+              "body": "未关闭记录随对象离院。"
+            }
+          ],
+          "readReward": {
+            "label": "墙面档案",
+            "detail": "出院留置记录 已读取",
+            "rarity": "story"
+          },
+          "readRewardDuration": 1.35
+        }
+      ],
+      "switches": [
+        {
+          "id": "door_switch_wall_switch_ueamem",
+          "roomId": "level_04_entry_decon",
+          "interactionId": "door_switch_wall_switch_ueamem_button",
+          "label": "墙面门控把手",
+          "initialStateId": "state_1_closed",
+          "oneShot": false,
+          "cycling": {
+            "mode": "next",
+            "wrap": true
+          },
+          "wallMount": {
+            "roomId": "level_04_entry_decon",
+            "side": "north",
+            "offset": 0.78125,
+            "height": 1.34,
+            "inset": 0.18
+          },
+          "presentation": {
+            "kind": "wall_lever",
+            "modelKey": "hp_wall_door_switch_button_v1",
+            "handPose": "lever_push_down",
+            "hideWeapon": true,
+            "useDurationSec": 0.82,
+            "commitAtSec": 0.42,
+            "doorRevealSec": 2,
+            "revealMode": "door_front"
+          },
+          "states": [
+            {
+              "id": "state_1_closed",
+              "label": "关闭",
+              "message": "门控回到关闭。",
+              "rewardPulse": {
+                "label": "墙面门控把手",
+                "detail": "关闭",
+                "rarity": "rare"
+              },
+              "rewardPulseDuration": 0.95,
+              "cameraImpact": {
+                "shake": 0.12,
+                "fovKick": 0.55
+              },
+              "actions": [
+                {
+                  "type": "close_door",
+                  "doorId": "level_04_waiting_door"
+                }
+              ]
+            },
+            {
+              "id": "state_2_open",
+              "label": "打开",
+              "message": "门控打开通路。",
+              "rewardPulse": {
+                "label": "墙面门控把手",
+                "detail": "打开",
+                "rarity": "rare"
+              },
+              "rewardPulseDuration": 0.95,
+              "cameraImpact": {
+                "shake": 0.12,
+                "fovKick": 0.55
+              },
+              "actions": [
+                {
+                  "type": "unlock_door",
+                  "doorId": "level_04_waiting_door"
+                },
+                {
+                  "type": "open_door",
+                  "doorId": "level_04_waiting_door"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "door_switch_wall_switch_273ih2",
+          "roomId": "level_04_childhood_chair",
+          "interactionId": "door_switch_wall_switch_273ih2_button",
+          "label": "墙面门控把手",
+          "initialStateId": "state_1_closed",
+          "oneShot": false,
+          "cycling": {
+            "mode": "next",
+            "wrap": true
+          },
+          "wallMount": {
+            "roomId": "level_04_childhood_chair",
+            "side": "north",
+            "offset": 0.18518518518518517,
+            "height": 1.34,
+            "inset": 0.18
+          },
+          "presentation": {
+            "kind": "wall_lever",
+            "modelKey": "hp_wall_door_switch_button_v1",
+            "handPose": "lever_push_down",
+            "hideWeapon": true,
+            "useDurationSec": 0.82,
+            "commitAtSec": 0.42,
+            "doorRevealSec": 2,
+            "revealMode": "door_front"
+          },
+          "states": [
+            {
+              "id": "state_1_closed",
+              "label": "关闭",
+              "message": "主门关闭，反向门打开。",
+              "rewardPulse": {
+                "label": "墙面门控把手",
+                "detail": "关闭",
+                "rarity": "rare"
+              },
+              "rewardPulseDuration": 0.95,
+              "cameraImpact": {
+                "shake": 0.12,
+                "fovKick": 0.55
+              },
+              "actions": [
+                {
+                  "type": "open_door",
+                  "doorId": "level_04_waiting_door"
+                },
+                {
+                  "type": "close_door",
+                  "doorId": "level_04_rescue_door"
+                }
+              ]
+            },
+            {
+              "id": "state_2_open",
+              "label": "打开",
+              "message": "主门打开，反向门关闭。",
+              "rewardPulse": {
+                "label": "墙面门控把手",
+                "detail": "打开",
+                "rarity": "rare"
+              },
+              "rewardPulseDuration": 0.95,
+              "cameraImpact": {
+                "shake": 0.12,
+                "fovKick": 0.55
+              },
+              "actions": [
+                {
+                  "type": "unlock_door",
+                  "doorId": "level_04_rescue_door"
+                },
+                {
+                  "type": "open_door",
+                  "doorId": "level_04_rescue_door"
+                },
+                {
+                  "type": "close_door",
+                  "doorId": "level_04_waiting_door"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "dialogues": [
+        {
+          "id": "level_04_start_01",
+          "trigger": "level_start",
+          "speaker": "诊所广播",
+          "line": "请沿白线前进。记忆校准不会疼。",
+          "tone": "system",
+          "duration": 2.8
+        },
+        {
+          "id": "level_04_exit_01",
+          "trigger": "level_04_exit_01",
+          "speaker": "出院电梯",
+          "line": "出院门已开。未关闭记录随行。",
+          "tone": "reveal",
+          "duration": 2.4
+        }
+      ],
+      "cinematicBeats": [],
+      "bossPhases": [],
+      "enemyDeathBeats": [],
+      "economy": {
+        "memoryFragments": {
+          "default": 1,
+          "byArchetype": {
+            "custodian_elite": 24,
+            "signal_turret": 3,
+            "clamp_bot": 2
+          }
+        },
+        "killStreakWindowSec": 3.8,
+        "memoryCacheMilestones": [
+          {
+            "amount": 10,
+            "label": "体力恢复",
+            "reward": "energy",
+            "rarity": "rare"
+          },
+          {
+            "amount": 28,
+            "label": "呼吸变稳",
+            "reward": "heat",
+            "rarity": "rare"
+          },
+          {
+            "amount": 52,
+            "label": "生命上限恢复",
+            "reward": "health",
+            "rarity": "epic"
+          }
+        ],
+        "curatedUpgradeRolls": [
+          [
+            "field_medicine",
+            "thermal_buffer",
+            "dash_shorter_cd",
+            "last_human_protocol"
+          ]
+        ],
+        "tempoSurge": {
+          "eliteDuration": 6.5,
+          "normalThreshold": 5,
+          "tier2Threshold": 10,
+          "tier1Duration": 4.4,
+          "tier2Duration": 5.8,
+          "tier1HeatRefund": 7,
+          "tier2HeatRefund": 12,
+          "tier1EnergyRefund": 7,
+          "tier2EnergyRefund": 12
+        }
+      },
+      "revive": {
+        "maxRevives": 1,
+        "hpRatio": 0.7,
+        "memoryFragments": 12,
+        "reviveSurgeSec": 9.5,
+        "tempoSurgeSec": 5.5,
+        "blastRadius": 6.5,
+        "blastDamage": 80,
+        "blastKnockback": 6,
+        "rewardPulse": {
+          "label": "第二口气",
+          "detail": "+线索 + 短暂爆发",
+          "rarity": "story"
+        },
+        "rewardPulseDuration": 2.4,
+        "message": "你从候诊厅地板上醒来。屏幕还在说你安全。"
+      }
+    },
+    "routeSwitches": []
+  },
+  "contract": {
+    "profileId": "memory_clinic",
+    "globalRules": [
+      "no_proxy_geometry",
+      "no_fallback_materials",
+      "source_role_traceability"
+    ],
+    "roleRules": [
+      "roomSurface",
+      "door",
+      "keyItem",
+      "interaction",
+      "puzzleStation",
+      "enemy",
+      "exitFixture"
+    ],
+    "levelOverrides": []
+  },
+  "advanced": {
+    "notes": [
+      "Promoted on 2026-06-27 from Chrome localhost:5174 builder save slot 0.",
+      "Downloads/记忆诊所-可编辑草稿.hp.config (3).json was not used because it no longer matched the current build draft counts.",
+      "Runtime override preserves the current generated playtest config while project remains the editable official blueprint.",
+      "Custodian elite boss healthMultiplier set to 0.55 per balancing request."
+    ],
+    "runtimeLevel": {
+      "id": "level_04_memory_clinic",
+      "title": "记忆诊所",
+      "authoringProfile": "internal",
+      "authoringMetadata": {
+        "builderEnvironment": {
+          "lighting": {
+            "ambient": 0.42,
+            "keyColor": "#dbefff",
+            "keyIntensity": 0.88,
+            "fog": 0.18,
+            "bloom": 0.28,
+            "shadow": 0.62
+          },
+          "rooms": {
+            "level_04_entry_decon": {
+              "surfaceKitId": "hp:memory_clinic_shell_v1",
+              "floorPresetId": "floor_memory_clinic_tile",
+              "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingVisible": true,
+              "wallHeight": 3.36,
+              "ceilingHeight": 3.36,
+              "surfaceOverrides": {
+                "wall": {
+                  "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "ceiling": {
+                  "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                }
+              }
+            },
+            "level_04_waiting_room": {
+              "surfaceKitId": "hp:memory_clinic_shell_v1",
+              "floorPresetId": "floor_memory_clinic_tile",
+              "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingVisible": true,
+              "wallHeight": 3.36,
+              "ceilingHeight": 3.36,
+              "surfaceOverrides": {
+                "wall": {
+                  "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "ceiling": {
+                  "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                }
+              }
+            },
+            "level_04_childhood_chair": {
+              "surfaceKitId": "hp:memory_clinic_shell_v1",
+              "floorPresetId": "floor_memory_clinic_tile",
+              "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingVisible": true,
+              "wallHeight": 3.36,
+              "ceilingHeight": 3.36,
+              "surfaceOverrides": {
+                "wall": {
+                  "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "ceiling": {
+                  "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                }
+              }
+            },
+            "level_04_rescue_chair": {
+              "surfaceKitId": "hp:memory_clinic_shell_v1",
+              "floorPresetId": "floor_memory_clinic_tile",
+              "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingVisible": true,
+              "wallHeight": 3.36,
+              "ceilingHeight": 3.36,
+              "surfaceOverrides": {
+                "wall": {
+                  "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "ceiling": {
+                  "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                }
+              }
+            },
+            "level_04_body_chair": {
+              "surfaceKitId": "hp:memory_clinic_shell_v1",
+              "floorPresetId": "floor_memory_clinic_tile",
+              "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingVisible": true,
+              "wallHeight": 3.36,
+              "ceilingHeight": 3.36,
+              "surfaceOverrides": {
+                "wall": {
+                  "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "ceiling": {
+                  "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                }
+              }
+            },
+            "level_04_therapy_theater": {
+              "surfaceKitId": "hp:reclamation_core_shell_v1",
+              "floorPresetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+              "wallPresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingVisible": true,
+              "wallHeight": 3.36,
+              "ceilingHeight": 3.36,
+              "surfaceOverrides": {
+                "wall": {
+                  "presetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "ceiling": {
+                  "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "floor": {
+                  "presetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                }
+              }
+            },
+            "level_04_exit_room": {
+              "floorPresetId": "floor_dark_rubber",
+              "wallPresetId": "wall_dark_metal_panel",
+              "ceilingPresetId": "wall_dark_metal_panel",
+              "ceilingVisible": false,
+              "wallHeight": 3.36,
+              "ceilingHeight": 3.36
+            },
+            "room_q0q7rw": {
+              "surfaceOverrides": {
+                "floor": {
+                  "presetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "ceiling": {
+                  "presetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+                  "authored": true
+                },
+                "wall": {
+                  "presetId": "wall_hp_museum_limestone_panel",
+                  "authored": true
+                }
+              },
+              "floorPresetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+              "ceilingVisible": true,
+              "ceilingPresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+              "wallPresetId": "wall_hp_museum_limestone_panel"
+            }
+          }
+        },
+        "builderStories": {
+          "prop_ljs8ix": {
+            "title": "救援循环记录",
+            "clue": "画面每次都停在伸手的一秒。系统反复确认：对象会救人。",
+            "hint": "勇敢也可能是回放。"
+          },
+          "prop_o1punf": {
+            "title": "醒来记录",
+            "clue": "诊疗床只保存醒来的声音，没有保存醒来前的人。",
+            "hint": "载入完成，不等于记起。"
+          },
+          "prop_5rb8o0": {
+            "title": "被保存的童年",
+            "clue": "玩具、鞋和门口光线被切成片段。对象会把它们拼成童年。",
+            "hint": "记忆会安慰，也会误导。"
+          },
+          "prop_u7o99q": {
+            "title": "出院留置记录",
+            "clue": "出院门亮起时，系统没有删除这些片段，只把它们标为随行。",
+            "hint": "未关闭记录随对象离院。"
+          }
+        },
+        "builderWallDoorSwitches": [
+          {
+            "id": "wall_switch_ueamem",
+            "label": "墙面门控把手",
+            "roomId": "level_04_entry_decon",
+            "wallMount": {
+              "side": "north",
+              "offset": 0.78125,
+              "height": 1.34,
+              "inset": 0.18
+            },
+            "mode": "toggle",
+            "primaryDoorId": "level_04_waiting_door",
+            "initialStateId": "closed",
+            "oneShot": false,
+            "states": [
+              {
+                "id": "closed",
+                "label": "关闭",
+                "openDoorIds": [],
+                "closeDoorIds": [
+                  "level_04_waiting_door"
+                ],
+                "message": "门控回到关闭。"
+              },
+              {
+                "id": "open",
+                "label": "打开",
+                "openDoorIds": [
+                  "level_04_waiting_door"
+                ],
+                "closeDoorIds": [],
+                "message": "门控打开通路。"
+              }
+            ]
+          },
+          {
+            "id": "wall_switch_273ih2",
+            "label": "墙面门控把手",
+            "roomId": "level_04_childhood_chair",
+            "wallMount": {
+              "side": "north",
+              "offset": 0.18518518518518517,
+              "height": 1.34,
+              "inset": 0.18
+            },
+            "mode": "toggle",
+            "primaryDoorId": "level_04_rescue_door",
+            "initialStateId": "closed",
+            "oneShot": false,
+            "states": [
+              {
+                "id": "closed",
+                "label": "关闭",
+                "openDoorIds": [
+                  "level_04_waiting_door"
+                ],
+                "closeDoorIds": [
+                  "level_04_rescue_door"
+                ],
+                "message": "主门关闭，反向门打开。"
+              },
+              {
+                "id": "open",
+                "label": "打开",
+                "openDoorIds": [
+                  "level_04_rescue_door"
+                ],
+                "closeDoorIds": [
+                  "level_04_waiting_door"
+                ],
+                "message": "主门打开，反向门关闭。"
+              }
+            ],
+            "inverseDoorId": "level_04_waiting_door"
+          }
+        ]
+      },
+      "articles": [
+        {
+          "id": "article_l4_story_rescue_loop_image2_v1_prop_ljs8ix",
+          "roomId": "level_04_therapy_theater",
+          "interactionId": "story_prop_ljs8ix",
+          "systemLabel": "墙面档案",
+          "title": "救援循环记录",
+          "pages": [
+            {
+              "id": "record",
+              "body": "画面每次都停在伸手的一秒。系统反复确认：对象会救人。"
+            },
+            {
+              "id": "note",
+              "body": "勇敢也可能是回放。"
+            }
+          ],
+          "readReward": {
+            "label": "墙面档案",
+            "detail": "救援循环记录 已读取",
+            "rarity": "story"
+          },
+          "readRewardDuration": 1.35
+        },
+        {
+          "id": "article_l4_story_awakened_machine_image2_v1_prop_o1punf",
+          "roomId": "level_04_entry_decon",
+          "interactionId": "story_prop_o1punf",
+          "systemLabel": "墙面档案",
+          "title": "醒来记录",
+          "pages": [
+            {
+              "id": "record",
+              "body": "诊疗床只保存醒来的声音，没有保存醒来前的人。"
+            },
+            {
+              "id": "note",
+              "body": "载入完成，不等于记起。"
+            }
+          ],
+          "readReward": {
+            "label": "墙面档案",
+            "detail": "醒来记录 已读取",
+            "rarity": "story"
+          },
+          "readRewardDuration": 1.35
+        },
+        {
+          "id": "article_l4_story_preserved_childhood_image2_v1_prop_5rb8o0",
+          "roomId": "level_04_rescue_chair",
+          "interactionId": "story_prop_5rb8o0",
+          "systemLabel": "墙面档案",
+          "title": "被保存的童年",
+          "pages": [
+            {
+              "id": "record",
+              "body": "玩具、鞋和门口光线被切成片段。对象会把它们拼成童年。"
+            },
+            {
+              "id": "note",
+              "body": "记忆会安慰，也会误导。"
+            }
+          ],
+          "readReward": {
+            "label": "墙面档案",
+            "detail": "被保存的童年 已读取",
+            "rarity": "story"
+          },
+          "readRewardDuration": 1.35
+        },
+        {
+          "id": "article_l4_story_h0_discharge_image2_v1_prop_u7o99q",
+          "roomId": "room_q0q7rw",
+          "interactionId": "story_prop_u7o99q",
+          "systemLabel": "墙面档案",
+          "title": "出院留置记录",
+          "pages": [
+            {
+              "id": "record",
+              "body": "出院门亮起时，系统没有删除这些片段，只把它们标为随行。"
+            },
+            {
+              "id": "note",
+              "body": "未关闭记录随对象离院。"
+            }
+          ],
+          "readReward": {
+            "label": "墙面档案",
+            "detail": "出院留置记录 已读取",
+            "rarity": "story"
+          },
+          "readRewardDuration": 1.35
+        }
+      ],
+      "spawnPoint": [
+        0,
+        0,
+        18
+      ],
+      "initialInventory": {
+        "hasRod": true,
+        "hasPistol": true,
+        "coreCells": 0,
+        "equipWeapon": "railLance"
+      },
+      "initialWaveStartDelay": 0,
+      "requiresStoryPickupsBeforeWaves": false,
+      "exit": {
+        "id": "builder_exit",
+        "position": [
+          0,
+          0,
+          -15.299999999999999
+        ],
+        "radius": 2.2,
+        "unlockedLabel": "撤离电梯",
+        "distanceLabel": "撤离电梯",
+        "unlockMessage": "撤离电梯已通电。",
+        "unlockDialogueTrigger": "builder_exit_unlocked",
+        "unlockWarning": {
+          "label": "出口已通电",
+          "detail": "撤离电梯可以使用了"
+        },
+        "cinematic": {
+          "type": "elevator_walk_in",
+          "duration": 9.65,
+          "walkInDuration": 1.55,
+          "doorOpenTime": 0.08,
+          "doorCloseTime": 2.15,
+          "buttonPressTime": 3.25,
+          "buttonPressDuration": 1.15,
+          "ascentStartTime": 3.55,
+          "ascentDuration": 4.8,
+          "whiteOutTime": 8.35,
+          "enterPosition": [
+            0,
+            0,
+            -14.85
+          ],
+          "lookAtPosition": [
+            2.82,
+            1.42,
+            -15.899999999999999
+          ],
+          "faceYaw": 1.2143593745747006,
+          "doorId": "level_04_exit_door",
+          "message": "撤离电梯正在接管关卡切换。"
+        },
+        "transitionMessage": "电梯下行。诊所把灯关掉，记录还在后台写入。",
+        "transitionDialogueTrigger": "builder_exit_transition",
+        "victoryMessage": "出院记录：记忆留置，对象继续前进。"
+      },
+      "map": {
+        "id": "level_04_memory_clinic_map",
+        "schemaVersion": "hp.map.v1",
+        "rooms": [
+          {
+            "id": "level_04_entry_decon",
+            "label": "入口消毒间",
+            "bounds": {
+              "center": [
+                0,
+                0,
+                18
+              ],
+              "size": [
+                8,
+                4,
+                5
+              ]
+            },
+            "mood": "quiet",
+            "skinKey": "memory_clinic_sterile",
+            "floorMaterialKey": "memory_clinic_floor",
+            "wallMaterialKey": "memory_clinic_wall",
+            "aesthetic": {
+              "style": "sterile",
+              "detail": "high"
+            },
+            "ambientPressure": 0.32,
+            "entryDialogueTrigger": "level_start",
+            "geometry": {
+              "renderFloor": true,
+              "renderWalls": true,
+              "renderCeiling": true,
+              "collisionWalls": true,
+              "accentColor": "#9ff3ff"
+            }
+          },
+          {
+            "id": "level_04_waiting_room",
+            "label": "候诊厅",
+            "bounds": {
+              "center": [
+                0,
+                0,
+                10.5
+              ],
+              "size": [
+                16,
+                4,
+                10
+              ]
+            },
+            "mood": "uneasy",
+            "skinKey": "memory_clinic_sterile",
+            "floorMaterialKey": "memory_clinic_floor",
+            "wallMaterialKey": "memory_clinic_wall",
+            "aesthetic": {
+              "style": "sterile",
+              "detail": "high"
+            },
+            "ambientPressure": 0.54,
+            "geometry": {
+              "renderFloor": true,
+              "renderWalls": true,
+              "renderCeiling": true,
+              "collisionWalls": true,
+              "accentColor": "#7ff2ff"
+            }
+          },
+          {
+            "id": "level_04_childhood_chair",
+            "label": "童年椅室",
+            "bounds": {
+              "center": [
+                -11.5,
+                0,
+                10.5
+              ],
+              "size": [
+                7,
+                4,
+                7
+              ]
+            },
+            "mood": "quiet",
+            "skinKey": "memory_clinic_sterile",
+            "floorMaterialKey": "memory_clinic_floor",
+            "wallMaterialKey": "memory_clinic_wall",
+            "aesthetic": {
+              "style": "sterile",
+              "detail": "high"
+            },
+            "ambientPressure": 0.58,
+            "geometry": {
+              "renderFloor": true,
+              "renderWalls": true,
+              "renderCeiling": true,
+              "collisionWalls": true,
+              "accentColor": "#ffd58a"
+            }
+          },
+          {
+            "id": "level_04_rescue_chair",
+            "label": "救援椅室",
+            "bounds": {
+              "center": [
+                11.5,
+                0,
+                11
+              ],
+              "size": [
+                7,
+                4,
+                7
+              ]
+            },
+            "mood": "uneasy",
+            "skinKey": "memory_clinic_sterile",
+            "floorMaterialKey": "memory_clinic_floor",
+            "wallMaterialKey": "memory_clinic_wall",
+            "aesthetic": {
+              "style": "sterile",
+              "detail": "high"
+            },
+            "ambientPressure": 0.62,
+            "geometry": {
+              "renderFloor": true,
+              "renderWalls": true,
+              "renderCeiling": true,
+              "collisionWalls": true,
+              "accentColor": "#8aeefc"
+            }
+          },
+          {
+            "id": "level_04_body_chair",
+            "label": "身体椅室",
+            "bounds": {
+              "center": [
+                0,
+                0,
+                1
+              ],
+              "size": [
+                10,
+                4,
+                9
+              ]
+            },
+            "mood": "reveal",
+            "skinKey": "memory_clinic_sterile",
+            "floorMaterialKey": "memory_clinic_floor",
+            "wallMaterialKey": "memory_clinic_wall",
+            "aesthetic": {
+              "style": "sterile",
+              "detail": "high"
+            },
+            "ambientPressure": 0.76,
+            "geometry": {
+              "renderFloor": true,
+              "renderWalls": true,
+              "renderCeiling": true,
+              "collisionWalls": true,
+              "accentColor": "#ff6a52"
+            }
+          },
+          {
+            "id": "level_04_therapy_theater",
+            "label": "治疗剧场",
+            "bounds": {
+              "center": [
+                0,
+                0,
+                -8
+              ],
+              "size": [
+                14,
+                4,
+                9
+              ]
+            },
+            "mood": "boss",
+            "skinKey": "reclamation_core_chamber",
+            "floorMaterialKey": "memory_clinic_floor",
+            "wallMaterialKey": "memory_clinic_wall",
+            "aesthetic": {
+              "style": "hazard",
+              "detail": "high"
+            },
+            "ambientPressure": 0.9,
+            "geometry": {
+              "renderFloor": true,
+              "renderWalls": true,
+              "renderCeiling": true,
+              "collisionWalls": true,
+              "accentColor": "#ff5b4c"
+            }
+          },
+          {
+            "id": "level_04_exit_room",
+            "label": "出院电梯间",
+            "bounds": {
+              "center": [
+                0,
+                0,
+                -15.2
+              ],
+              "size": [
+                6.4,
+                4,
+                5.4
+              ]
+            },
+            "mood": "reveal",
+            "skinKey": "service_elevator_hero",
+            "floorMaterialKey": "service_elevator_metal",
+            "wallMaterialKey": "service_elevator_metal",
+            "ambientPressure": 0.55,
+            "geometry": {
+              "renderFloor": true,
+              "renderWalls": false,
+              "renderCeiling": false,
+              "collisionWalls": true,
+              "accentColor": "#f3f0df"
+            },
+            "aesthetic": {
+              "enabled": true,
+              "style": "exit",
+              "detail": "high"
+            }
+          },
+          {
+            "id": "room_q0q7rw",
+            "label": "留置档案间",
+            "bounds": {
+              "center": [
+                0,
+                0,
+                23.1
+              ],
+              "size": [
+                8,
+                4,
+                5.2
+              ],
+              "shape": {
+                "points": [
+                  [
+                    -4,
+                    -2.6
+                  ],
+                  [
+                    4,
+                    -2.6
+                  ],
+                  [
+                    0,
+                    2.6
+                  ]
+                ]
+              }
+            },
+            "mood": "uneasy",
+            "skinKey": "human_museum_gallery",
+            "floorMaterialKey": "memory_clinic_floor",
+            "wallMaterialKey": "level03_museum_wall_black_gallery",
+            "aesthetic": {
+              "style": "museum",
+              "detail": "high"
+            },
+            "geometry": {
+              "renderFloor": true,
+              "renderWalls": true,
+              "renderCeiling": true,
+              "collisionWalls": true,
+              "accentColor": "#6fe3c2"
+            }
+          }
+        ],
+        "doors": [
+          {
+            "id": "level_04_waiting_door",
+            "label": "诊所候诊门",
+            "fromRoomId": "level_04_entry_decon",
+            "toRoomId": "level_04_waiting_room",
+            "position": [
+              0,
+              0,
+              15.5
+            ],
+            "size": [
+              3.2,
+              2.8,
+              0.36
+            ],
+            "yaw": 0,
+            "defaultState": "closed",
+            "lock": {
+              "type": "switch_state",
+              "switchId": "door_switch_wall_switch_ueamem",
+              "stateId": "state_2_open",
+              "manualOpen": false,
+              "lockedMessage": "需要先把「墙面门控把手」切到「打开」。",
+              "unlockedMessage": "门控状态确认，门已解锁。"
+            },
+            "visualKey": "clinic_memory_door",
+            "materialKey": "memory_clinic_wall",
+            "panelPosition": [
+              1.78,
+              0,
+              15.85
+            ],
+            "autoOpenOnApproach": false,
+            "openSpeed": 1.15,
+            "cameraImpact": {
+              "shake": 0.12,
+              "fovKick": 0.65
+            }
+          },
+          {
+            "id": "level_04_childhood_door",
+            "label": "童年椅室门",
+            "fromRoomId": "level_04_waiting_room",
+            "toRoomId": "level_04_childhood_chair",
+            "position": [
+              -8,
+              0,
+              10.5
+            ],
+            "size": [
+              2.35,
+              2.65,
+              0.32
+            ],
+            "yaw": 1.5707963267948966,
+            "defaultState": "locked",
+            "lock": {
+              "type": "survive_wave",
+              "waveId": "wave_0z51v9",
+              "lockedMessage": "清掉「护盾技师 3、维修无人机 4」，门才会开。",
+              "unlockedMessage": "威胁解除，门已解锁。"
+            },
+            "visualKey": "clinic_memory_door",
+            "materialKey": "memory_clinic_wall",
+            "panelPosition": [
+              -7.6,
+              0,
+              12.2
+            ],
+            "autoOpenOnApproach": false,
+            "openSpeed": 1.08
+          },
+          {
+            "id": "level_04_rescue_door",
+            "label": "救援椅室门",
+            "fromRoomId": "level_04_waiting_room",
+            "toRoomId": "level_04_rescue_chair",
+            "position": [
+              8,
+              0,
+              10.5
+            ],
+            "size": [
+              2.35,
+              2.65,
+              0.32
+            ],
+            "yaw": 1.5707963267948966,
+            "defaultState": "closed",
+            "lock": {
+              "type": "switch_state",
+              "switchId": "door_switch_wall_switch_273ih2",
+              "stateId": "state_2_open",
+              "manualOpen": false,
+              "lockedMessage": "需要先把「墙面门控把手」切到「打开」。",
+              "unlockedMessage": "门控状态确认，门已解锁。"
+            },
+            "visualKey": "clinic_memory_door",
+            "materialKey": "memory_clinic_wall",
+            "panelPosition": [
+              7.6,
+              0,
+              8.9
+            ],
+            "autoOpenOnApproach": false,
+            "openSpeed": 1.08
+          },
+          {
+            "id": "level_04_body_door",
+            "label": "身体椅室门",
+            "fromRoomId": "level_04_waiting_room",
+            "toRoomId": "level_04_body_chair",
+            "position": [
+              0,
+              0,
+              5.5
+            ],
+            "size": [
+              3.1,
+              2.8,
+              0.36
+            ],
+            "yaw": 0,
+            "defaultState": "locked",
+            "lock": {
+              "type": "puzzle_complete",
+              "puzzleId": "pz_level_04_body_door",
+              "lockedMessage": "先在「救援椅室」的谜题台上完成闸门配平台。",
+              "unlockedMessage": "闸门配平台完成，门已解锁。"
+            },
+            "visualKey": "clinic_memory_door",
+            "materialKey": "memory_clinic_wall",
+            "panelPosition": [
+              2.2,
+              0,
+              5.86
+            ],
+            "autoOpenOnApproach": false,
+            "openSpeed": 1.12
+          },
+          {
+            "id": "level_04_theater_door",
+            "label": "治疗剧场门",
+            "fromRoomId": "level_04_body_chair",
+            "toRoomId": "level_04_therapy_theater",
+            "position": [
+              0,
+              0,
+              -3.5
+            ],
+            "size": [
+              4.2,
+              3.1,
+              0.42
+            ],
+            "yaw": 0,
+            "defaultState": "locked",
+            "lock": {
+              "type": "puzzle_complete",
+              "puzzleId": "pz_level_04_theater_door",
+              "lockedMessage": "灯序尚未确认。",
+              "unlockedMessage": "灯序确认。"
+            },
+            "visualKey": "industrial_access_door",
+            "materialKey": "terminal_red",
+            "panelPosition": [
+              2.7,
+              0,
+              -3.12
+            ],
+            "autoOpenOnApproach": false,
+            "openSpeed": 1.22,
+            "cameraImpact": {
+              "shake": 0.22,
+              "fovKick": 1.2
+            }
+          },
+          {
+            "id": "level_04_exit_door",
+            "label": "出院电梯门",
+            "fromRoomId": "level_04_therapy_theater",
+            "toRoomId": "level_04_exit_room",
+            "position": [
+              0,
+              0,
+              -12.5
+            ],
+            "size": [
+              4.4,
+              3.25,
+              0.44
+            ],
+            "yaw": 0,
+            "defaultState": "locked",
+            "lock": {
+              "type": "puzzle_complete",
+              "puzzleId": "pz_level_04_exit_door",
+              "lockedMessage": "先在「留置档案间」完成记忆压缩。",
+              "unlockedMessage": "记忆压缩柜完成，门已解锁。"
+            },
+            "visualKey": "service_elevator_door",
+            "materialKey": "service_elevator_metal",
+            "panelPosition": [
+              2.82,
+              0,
+              -12.12
+            ],
+            "autoOpenOnApproach": true,
+            "skinKey": "service_elevator_hero",
+            "openSpeed": 1.35,
+            "openVisualPolicy": {
+              "hideClosedHardwareAfterOpen": true,
+              "hidePanelAfterOpen": true
+            },
+            "cameraImpact": {
+              "shake": 0.34,
+              "fovKick": 1.85
+            }
+          },
+          {
+            "id": "door_d42uh6",
+            "label": "留置档案间门",
+            "fromRoomId": "room_q0q7rw",
+            "toRoomId": "level_04_entry_decon",
+            "position": [
+              0,
+              0,
+              20.5
+            ],
+            "size": [
+              3.2,
+              3.2,
+              0.35
+            ],
+            "yaw": 0,
+            "defaultState": "locked",
+            "lock": {
+              "type": "survive_wave",
+              "waveId": "wave_yjxxy4",
+              "lockedMessage": "清掉治疗剧场主管，门才会开。",
+              "unlockedMessage": "威胁解除，门已解锁。"
+            },
+            "visualKey": "yellow_access_door",
+            "materialKey": "terminal_red",
+            "panelPosition": [
+              1.78,
+              0,
+              20.85
+            ],
+            "autoOpenOnApproach": false
+          }
+        ],
+        "keyItems": [],
+        "interactions": [
+          {
+            "id": "pz_level_04_body_door_panel",
+            "type": "terminal",
+            "roomId": "level_04_rescue_chair",
+            "position": [
+              11.5,
+              0,
+              8
+            ],
+            "yaw": 0,
+            "radius": 2.75,
+            "visualKey": "puzzle_console_valve_matrix",
+            "materialKey": "terminal_cyan",
+            "label": "闸门配平台"
+          },
+          {
+            "id": "pz_level_04_theater_door_panel",
+            "type": "terminal",
+            "roomId": "level_04_entry_decon",
+            "position": [
+              -3,
+              0,
+              16.5
+            ],
+            "yaw": 7.0685834705770345,
+            "radius": 1.55,
+            "visualKey": "puzzle_console_color_sequence",
+            "materialKey": "terminal_cyan",
+            "label": "灯序墙"
+          },
+          {
+            "id": "pz_level_04_exit_door_panel",
+            "type": "terminal",
+            "roomId": "room_q0q7rw",
+            "position": [
+              0.5,
+              0,
+              23
+            ],
+            "yaw": 3.141592653589793,
+            "radius": 1.7,
+            "visualKey": "puzzle_console_archive_merge",
+            "materialKey": "terminal_cyan",
+            "label": "记忆压缩柜",
+            "requiresObjectiveId": "obj_survive_wave_dw6lb3",
+            "requiresArticleIds": [
+              "article_l4_story_rescue_loop_image2_v1_prop_ljs8ix",
+              "article_l4_story_awakened_machine_image2_v1_prop_o1punf",
+              "article_l4_story_preserved_childhood_image2_v1_prop_5rb8o0",
+              "article_l4_story_h0_discharge_image2_v1_prop_u7o99q"
+            ]
+          },
+          {
+            "id": "door_switch_wall_switch_ueamem_button",
+            "type": "switch",
+            "roomId": "level_04_entry_decon",
+            "position": [
+              2.5,
+              1.34,
+              15.68
+            ],
+            "yaw": 0,
+            "radius": 2,
+            "visualKey": "wall_door_switch_button",
+            "materialKey": "terminal_cyan",
+            "label": "墙面门控把手",
+            "rewardPulse": {
+              "label": "墙面门控把手",
+              "detail": "门控已响应",
+              "rarity": "rare"
+            }
+          },
+          {
+            "id": "door_switch_wall_switch_273ih2_button",
+            "type": "switch",
+            "roomId": "level_04_childhood_chair",
+            "position": [
+              -11,
+              1.34,
+              7.18
+            ],
+            "yaw": 0,
+            "radius": 2,
+            "visualKey": "wall_door_switch_button",
+            "materialKey": "terminal_cyan",
+            "label": "墙面门控把手",
+            "rewardPulse": {
+              "label": "墙面门控把手",
+              "detail": "门控已响应",
+              "rarity": "rare"
+            }
+          },
+          {
+            "id": "use_builder_exit",
+            "type": "exit",
+            "roomId": "level_04_exit_room",
+            "position": [
+              2.82,
+              0,
+              -15.899999999999999
+            ],
+            "radius": 2.2,
+            "visualKey": "service_elevator_panel",
+            "materialKey": "terminal_cyan",
+            "label": "进入撤离电梯",
+            "opensDoorId": "level_04_exit_door"
+          },
+          {
+            "id": "story_prop_ljs8ix",
+            "type": "article",
+            "roomId": "level_04_therapy_theater",
+            "position": [
+              4,
+              0,
+              -12.155
+            ],
+            "radius": 1.5375,
+            "visualKey": "none",
+            "materialKey": "terminal_cyan",
+            "anchorPropId": "prop_ljs8ix",
+            "label": "救援循环记录"
+          },
+          {
+            "id": "story_prop_o1punf",
+            "type": "article",
+            "roomId": "level_04_entry_decon",
+            "position": [
+              3.955,
+              0,
+              18
+            ],
+            "radius": 1.5375,
+            "visualKey": "none",
+            "materialKey": "terminal_cyan",
+            "anchorPropId": "prop_o1punf",
+            "label": "醒来记录"
+          },
+          {
+            "id": "story_prop_5rb8o0",
+            "type": "article",
+            "roomId": "level_04_rescue_chair",
+            "position": [
+              11.5,
+              0,
+              14.155
+            ],
+            "radius": 1.5375,
+            "visualKey": "none",
+            "materialKey": "terminal_cyan",
+            "anchorPropId": "prop_5rb8o0",
+            "label": "被保存的童年"
+          },
+          {
+            "id": "story_prop_u7o99q",
+            "type": "article",
+            "roomId": "room_q0q7rw",
+            "position": [
+              -2.135401147403414,
+              0,
+              22.604154728771856
+            ],
+            "radius": 1.5375,
+            "visualKey": "none",
+            "materialKey": "terminal_cyan",
+            "anchorPropId": "prop_u7o99q",
+            "label": "出院留置记录"
+          }
+        ],
+        "pickups": [
+          {
+            "id": "pickup_b857v1",
+            "type": "repairKit",
+            "roomId": "level_04_entry_decon",
+            "position": [
+              -2.5,
+              0,
+              18
+            ],
+            "label": "治疗包"
+          },
+          {
+            "id": "pickup_dajmao",
+            "type": "repairKit",
+            "roomId": "level_04_childhood_chair",
+            "position": [
+              -14.5,
+              0,
+              8
+            ],
+            "label": "治疗包"
+          },
+          {
+            "id": "pickup_a4psbf",
+            "type": "repairKit",
+            "roomId": "level_04_body_chair",
+            "position": [
+              4,
+              0,
+              -2.5
+            ],
+            "label": "治疗包"
+          },
+          {
+            "id": "pickup_gb8irn",
+            "type": "coreCell",
+            "roomId": "level_04_entry_decon",
+            "position": [
+              2.5,
+              0,
+              17
+            ],
+            "label": "能量块"
+          },
+          {
+            "id": "pickup_ep1nbg",
+            "type": "coreCell",
+            "roomId": "level_04_therapy_theater",
+            "position": [
+              5.5,
+              0,
+              -11
+            ],
+            "label": "能量块"
+          },
+          {
+            "id": "pickup_uxyiky",
+            "type": "repairKit",
+            "roomId": "level_04_therapy_theater",
+            "position": [
+              6,
+              0,
+              -5.5
+            ],
+            "label": "治疗包"
+          }
+        ],
+        "props": [
+          {
+            "id": "level_04_cineclinic_reception_counter",
+            "roomId": "level_04_waiting_room",
+            "modelKey": "hp_l4_cineclinic_reception_counter",
+            "position": [
+              -4.85,
+              0,
+              14.25
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "scale": 1,
+            "label": "候诊接待台",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "waiting_room",
+              "landmark"
+            ],
+            "collider": {
+              "halfSize": [
+                1.6,
+                0.64,
+                0.43
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_waiting_sofa_row",
+            "roomId": "level_04_waiting_room",
+            "modelKey": "hp_l4_cineclinic_waiting_sofa_row",
+            "position": [
+              -2.45,
+              0,
+              11.55
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": 1,
+            "label": "候诊软座排",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "waiting_room",
+              "cover_low"
+            ],
+            "collider": {
+              "halfSize": [
+                1.275,
+                0.44,
+                0.41
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_lime_ottoman",
+            "roomId": "level_04_waiting_room",
+            "modelKey": "hp_l4_cineclinic_lime_ottoman",
+            "position": [
+              0.65,
+              0,
+              10.35
+            ],
+            "rotation": [
+              0,
+              0.39269908169872414,
+              0
+            ],
+            "scale": 1,
+            "label": "青柠模块脚凳",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "waiting_room",
+              "color_accent"
+            ],
+            "collider": {
+              "halfSize": [
+                0.43,
+                0.24,
+                0.43
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_side_table_planter",
+            "roomId": "level_04_waiting_room",
+            "modelKey": "hp_l4_cineclinic_side_table_planter",
+            "position": [
+              2.05,
+              0,
+              10.65
+            ],
+            "rotation": [
+              0,
+              -0.3141592653589793,
+              0
+            ],
+            "scale": 1,
+            "label": "候诊小桌与无菌盆栽",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "waiting_room",
+              "soft_human_touch"
+            ],
+            "collider": {
+              "halfSize": [
+                0.43,
+                0.41,
+                0.36
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_triage_kiosk",
+            "roomId": "level_04_waiting_room",
+            "modelKey": "hp_l4_cineclinic_triage_kiosk",
+            "position": [
+              5.95,
+              0,
+              14.05
+            ],
+            "rotation": [
+              0,
+              3.141592653589793,
+              0
+            ],
+            "scale": 1,
+            "label": "分诊号码亭",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "waiting_room",
+              "future_puzzle_host"
+            ],
+            "collider": {
+              "halfSize": [
+                0.39,
+                0.78,
+                0.29
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_med_cabinet",
+            "roomId": "level_04_waiting_room",
+            "modelKey": "hp_l4_cineclinic_med_cabinet",
+            "position": [
+              -7.25,
+              0,
+              8.15
+            ],
+            "rotation": [
+              0,
+              1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "无菌药品柜",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "waiting_room",
+              "wall_anchor"
+            ],
+            "collider": {
+              "halfSize": [
+                0.525,
+                0.97,
+                0.26
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_record_wall_cabinet",
+            "roomId": "level_04_waiting_room",
+            "modelKey": "hp_l4_cineclinic_record_wall_cabinet",
+            "position": [
+              7.5,
+              0,
+              8
+            ],
+            "rotation": [
+              0,
+              1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "记忆档案壁柜",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "waiting_room",
+              "future_puzzle_host"
+            ],
+            "collider": {
+              "halfSize": [
+                0.67,
+                0.68,
+                0.21
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_memory_recliner",
+            "roomId": "level_04_childhood_chair",
+            "modelKey": "hp_l4_cineclinic_memory_recliner",
+            "position": [
+              -11.5,
+              0,
+              10.55
+            ],
+            "rotation": [
+              0,
+              1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "记忆治疗躺椅",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "childhood_room",
+              "hero_prop",
+              "future_puzzle_host"
+            ],
+            "collider": {
+              "halfSize": [
+                0.71,
+                0.74,
+                0.91
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_scan_arch",
+            "roomId": "level_04_childhood_chair",
+            "modelKey": "hp_l4_cineclinic_scan_arch",
+            "position": [
+              -13.15,
+              0,
+              10.55
+            ],
+            "rotation": [
+              0,
+              1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "记忆扫描拱",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "childhood_room",
+              "hero_support",
+              "non_solid_gate"
+            ]
+          },
+          {
+            "id": "level_04_cineclinic_projection_pod",
+            "roomId": "level_04_childhood_chair",
+            "modelKey": "hp_l4_cineclinic_projection_pod",
+            "position": [
+              -9.55,
+              0,
+              8.35
+            ],
+            "rotation": [
+              0,
+              -2.25,
+              0
+            ],
+            "scale": 1,
+            "label": "记忆投影舱",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "childhood_room",
+              "narrative"
+            ],
+            "collider": {
+              "halfSize": [
+                0.49,
+                0.71,
+                0.63
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_rescue_speaker_panel",
+            "roomId": "level_04_rescue_chair",
+            "modelKey": "hp_l4_cineclinic_rescue_speaker_panel",
+            "position": [
+              14.635,
+              1.35,
+              10.55
+            ],
+            "rotation": [
+              0,
+              -1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "墙内救援声栅",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "rescue_room",
+              "wall_panel",
+              "voice_cue_host"
+            ]
+          },
+          {
+            "id": "level_04_cineclinic_cable_trolley",
+            "roomId": "level_04_rescue_chair",
+            "modelKey": "hp_l4_cineclinic_cable_trolley",
+            "position": [
+              9.55,
+              0,
+              8.35
+            ],
+            "rotation": [
+              0,
+              7.0685834705770345,
+              0
+            ],
+            "scale": 1,
+            "label": "神经电缆推车",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "rescue_room",
+              "side_cover"
+            ],
+            "collider": {
+              "halfSize": [
+                0.41,
+                0.68,
+                0.34
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_exam_table",
+            "roomId": "level_04_body_chair",
+            "modelKey": "hp_l4_cineclinic_exam_table",
+            "position": [
+              0,
+              0,
+              1.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": 1,
+            "label": "高级检查床柜",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "body_room",
+              "hero_prop",
+              "future_puzzle_host"
+            ],
+            "collider": {
+              "halfSize": [
+                1.14,
+                0.59,
+                0.46
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_surgical_light",
+            "roomId": "level_04_body_chair",
+            "modelKey": "hp_l4_cineclinic_surgical_light",
+            "position": [
+              0,
+              2.05,
+              1.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": 1,
+            "label": "无影手术灯",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "body_room",
+              "ceiling",
+              "emissive"
+            ]
+          },
+          {
+            "id": "level_04_cineclinic_monitor_arm",
+            "roomId": "level_04_body_chair",
+            "modelKey": "hp_l4_cineclinic_monitor_arm",
+            "position": [
+              3.25,
+              0,
+              1.15
+            ],
+            "rotation": [
+              0,
+              -1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "身体监视机械臂",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "body_room",
+              "future_puzzle_host"
+            ],
+            "collider": {
+              "halfSize": [
+                1.09,
+                0.89,
+                0.36
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_privacy_screen",
+            "roomId": "level_04_body_chair",
+            "modelKey": "hp_l4_cineclinic_privacy_screen",
+            "position": [
+              -3.15,
+              0,
+              2.9
+            ],
+            "rotation": [
+              0,
+              1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "身体遮挡隐私屏",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "body_room",
+              "transparent",
+              "sightline_layer"
+            ]
+          },
+          {
+            "id": "level_04_cineclinic_observation_desk",
+            "roomId": "level_04_therapy_theater",
+            "modelKey": "hp_l4_cineclinic_observation_desk",
+            "position": [
+              -5,
+              0,
+              -6
+            ],
+            "rotation": [
+              0,
+              1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "观察控制台",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "theater_room",
+              "control_console"
+            ],
+            "collider": {
+              "halfSize": [
+                0.86,
+                0.67,
+                0.58
+              ]
+            }
+          },
+          {
+            "id": "level_04_cineclinic_theater_wall",
+            "roomId": "level_04_therapy_theater",
+            "modelKey": "hp_l4_cineclinic_theater_wall",
+            "position": [
+              -4.5,
+              0,
+              -10
+            ],
+            "rotation": [
+              0,
+              0.7853981633974483,
+              0
+            ],
+            "scale": 1,
+            "label": "治疗剧场背墙",
+            "tags": [
+              "hp:level04_memory_clinic_furniture_v1",
+              "furniture",
+              "cineclinic",
+              "pipeline_generated",
+              "theater_room",
+              "landmark",
+              "finale_backdrop",
+              "visual_backdrop_no_player_block"
+            ],
+            "collider": {
+              "halfSize": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "enemyNavigation": "ignore"
+            }
+          },
+          {
+            "id": "prop_ljs8ix",
+            "roomId": "level_04_therapy_theater",
+            "modelKey": "l4_story_rescue_loop_image2_v1",
+            "position": [
+              4,
+              1.46,
+              -12.155
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": 1,
+            "label": "救援循环记录"
+          },
+          {
+            "id": "prop_o1punf",
+            "roomId": "level_04_entry_decon",
+            "modelKey": "l4_story_awakened_machine_image2_v1",
+            "position": [
+              3.6550000000000002,
+              1.2,
+              18
+            ],
+            "rotation": [
+              0,
+              -1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "醒来记录"
+          },
+          {
+            "id": "prop_5rb8o0",
+            "roomId": "level_04_rescue_chair",
+            "modelKey": "l4_story_preserved_childhood_image2_v1",
+            "position": [
+              11.5,
+              1.46,
+              14.155
+            ],
+            "rotation": [
+              0,
+              -3.141592653589793,
+              0
+            ],
+            "scale": 1,
+            "label": "被保存的童年"
+          },
+          {
+            "id": "prop_u7o99q",
+            "roomId": "room_q0q7rw",
+            "modelKey": "l4_story_h0_discharge_image2_v1",
+            "position": [
+              -2.135401147403414,
+              1.46,
+              22.604154728771856
+            ],
+            "rotation": [
+              0,
+              2.2264919530364327,
+              0
+            ],
+            "scale": 1,
+            "label": "出院留置记录"
+          },
+          {
+            "id": "builder_exit_elevator_exit_stage",
+            "roomId": "level_04_exit_room",
+            "modelKey": "service_elevator_exit_stage",
+            "position": [
+              0,
+              0,
+              -15.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": 1,
+            "label": "出口电梯房间",
+            "tags": [
+              "hp:official_exit_room_reference_v1",
+              "elevator",
+              "official",
+              "builderTrial",
+              "exit_room_stage",
+              "bright_exit"
+            ]
+          },
+          {
+            "id": "builder_exit_elevator_interior_shell",
+            "roomId": "level_04_exit_room",
+            "modelKey": "service_elevator_interior_shell",
+            "position": [
+              0,
+              0,
+              -15.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": 1,
+            "label": "出口电梯内壁",
+            "tags": [
+              "hp:official_exit_room_reference_v1",
+              "elevator",
+              "official",
+              "builderTrial",
+              "interior_shell",
+              "bright_exit"
+            ]
+          },
+          {
+            "id": "builder_exit_elevator_threshold",
+            "roomId": "level_04_exit_room",
+            "modelKey": "door_threshold_service_elevator",
+            "position": [
+              0,
+              0.035,
+              -13.09
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": [
+              1.15,
+              1,
+              1
+            ],
+            "label": "出口电梯门槛",
+            "tags": [
+              "hp:official_exit_room_reference_v1",
+              "elevator",
+              "official",
+              "builderTrial",
+              "threshold",
+              "bright_exit"
+            ]
+          },
+          {
+            "id": "builder_exit_elevator_call_buttons",
+            "roomId": "level_04_exit_room",
+            "modelKey": "service_elevator_call_buttons",
+            "position": [
+              2.82,
+              1.42,
+              -15.899999999999999
+            ],
+            "rotation": [
+              0,
+              -1.5707963267948966,
+              0
+            ],
+            "scale": 1,
+            "label": "出口电梯呼叫按钮",
+            "tags": [
+              "hp:official_exit_room_reference_v1",
+              "elevator",
+              "official",
+              "builderTrial",
+              "exit_call_buttons",
+              "button_panel"
+            ]
+          },
+          {
+            "id": "builder_exit_elevator_ascent_shaft_fx",
+            "roomId": "level_04_exit_room",
+            "modelKey": "service_elevator_ascent_shaft_fx",
+            "position": [
+              0,
+              0,
+              -15.2
+            ],
+            "rotation": [
+              0,
+              0,
+              0
+            ],
+            "scale": 1,
+            "label": "出口电梯上升井道",
+            "tags": [
+              "hp:official_exit_room_reference_v1",
+              "elevator",
+              "official",
+              "builderTrial",
+              "ascent_shaft_fx",
+              "cinematic_reveal"
+            ]
+          }
+        ],
+        "navigation": {
+          "criticalPathRoomIds": [
+            "level_04_entry_decon",
+            "level_04_waiting_room",
+            "level_04_body_chair",
+            "level_04_therapy_theater",
+            "level_04_exit_room"
+          ],
+          "optionalRoomIds": [
+            "level_04_childhood_chair",
+            "level_04_rescue_chair",
+            "room_q0q7rw"
+          ],
+          "maxBacktrackSeconds": 24,
+          "mobileReadableDoorCount": 4
+        }
+      },
+      "puzzles": [
+        {
+          "id": "pz_level_04_body_door",
+          "type": "valve_matrix",
+          "label": "闸门配平台",
+          "roomId": "level_04_rescue_chair",
+          "interactionId": "pz_level_04_body_door_panel",
+          "guidance": "调左闸、中闸、右闸，让密封压、轨道差、熔断温三块状态表全部进绿区。",
+          "valves": [
+            {
+              "id": "pz_level_04_body_door_gate_left",
+              "label": "左闸",
+              "min": 0,
+              "max": 8,
+              "initial": 2,
+              "gaugeShift": [
+                6,
+                2,
+                0
+              ]
+            },
+            {
+              "id": "pz_level_04_body_door_gate_mid",
+              "label": "中闸",
+              "min": 0,
+              "max": 8,
+              "initial": 1,
+              "gaugeShift": [
+                -2,
+                5,
+                2
+              ]
+            },
+            {
+              "id": "pz_level_04_body_door_gate_right",
+              "label": "右闸",
+              "min": 0,
+              "max": 8,
+              "initial": 0,
+              "gaugeShift": [
+                0,
+                -3,
+                7
+              ]
+            }
+          ],
+          "gauges": [
+            {
+              "id": "pz_level_04_body_door_gauge_seal_pressure",
+              "label": "密封压",
+              "base": 8,
+              "target": 30,
+              "tolerance": 2,
+              "unit": "bar"
+            },
+            {
+              "id": "pz_level_04_body_door_gauge_track_delta",
+              "label": "轨道差",
+              "base": 6,
+              "target": 27,
+              "tolerance": 2,
+              "unit": ""
+            },
+            {
+              "id": "pz_level_04_body_door_gauge_cutoff_temp",
+              "label": "熔断温",
+              "base": 36,
+              "target": 65,
+              "tolerance": 3,
+              "unit": "°"
+            }
+          ],
+          "solution": [
+            5,
+            4,
+            3
+          ],
+          "timeLimitSec": 30,
+          "success": {
+            "opensDoorId": "level_04_body_door",
+            "rewardPulse": {
+              "label": "闸门配平台完成",
+              "detail": "谜题门已解锁",
+              "rarity": "epic"
+            },
+            "rewardPulseDuration": 1.6,
+            "audio": {
+              "key": "system_exit_open",
+              "intensity": 0.9
+            },
+            "actions": [
+              {
+                "type": "open_door",
+                "doorId": "level_04_body_door"
+              },
+              {
+                "type": "focus_reveal",
+                "reveal": {
+                  "kind": "door",
+                  "doorId": "level_04_body_door"
+                }
+              }
+            ]
+          },
+          "fail": {
+            "message": "闸门防误触保护启动，三道闸门复位。",
+            "cameraImpact": {
+              "shake": 0.28,
+              "fovKick": 1.2
+            },
+            "audio": {
+              "key": "enemy_hit",
+              "intensity": 0.56
+            }
+          }
+        },
+        {
+          "id": "pz_level_04_theater_door",
+          "type": "hit_sequence",
+          "label": "灯序记忆锁",
+          "roomId": "level_04_body_chair",
+          "clue": {
+            "type": "pattern_panel",
+            "roomId": "level_04_entry_decon",
+            "interactionId": "pz_level_04_theater_door_panel",
+            "sequence": [
+              "pz_level_04_theater_door_component_1",
+              "pz_level_04_theater_door_component_2",
+              "pz_level_04_theater_door_component_3",
+              "pzc_bl61c7"
+            ],
+            "label": "墙面灯序只亮一次。",
+            "playback": {
+              "palette": [
+                "red",
+                "blue",
+                "yellow",
+                "green",
+                "purple",
+                "white",
+                "cyan"
+              ],
+              "stepMs": 560,
+              "gapMs": 130,
+              "requireReplayBeforeInput": true,
+              "reshuffleAfterFailures": 3,
+              "replayRequiredMessage": "回灯墙再看。",
+              "reshuffleMessage": "灯墙已换序。"
+            }
+          },
+          "input": {
+            "method": "weapon_hit",
+            "resetOnMistake": true,
+            "showProgressPulse": true
+          },
+          "targets": [
+            {
+              "id": "pz_level_04_theater_door_component_1",
+              "label": "红色球",
+              "roomId": "level_04_body_chair",
+              "position": [
+                -4,
+                1.15,
+                -2.5
+              ],
+              "radius": 0.72,
+              "colorKey": "red",
+              "visualKey": "puzzle_orb_red"
+            },
+            {
+              "id": "pz_level_04_theater_door_component_2",
+              "label": "蓝色球",
+              "roomId": "level_04_childhood_chair",
+              "position": [
+                -12.5,
+                1.15,
+                8
+              ],
+              "radius": 0.72,
+              "colorKey": "blue",
+              "visualKey": "puzzle_orb_blue"
+            },
+            {
+              "id": "pz_level_04_theater_door_component_3",
+              "label": "绿色球",
+              "roomId": "level_04_rescue_chair",
+              "position": [
+                14.5,
+                1.15,
+                12
+              ],
+              "radius": 0.72,
+              "colorKey": "green",
+              "visualKey": "puzzle_orb_green"
+            },
+            {
+              "id": "pzc_bl61c7",
+              "label": "黄色球",
+              "roomId": "level_04_waiting_room",
+              "position": [
+                -7,
+                1.15,
+                6.5
+              ],
+              "radius": 0.72,
+              "colorKey": "yellow",
+              "visualKey": "puzzle_orb_yellow"
+            }
+          ],
+          "actors": [
+            {
+              "id": "pz_level_04_theater_door_component_1",
+              "role": "orb:red",
+              "kind": "target",
+              "roomId": "level_04_body_chair",
+              "position": [
+                -4,
+                1.15,
+                -2.5
+              ],
+              "visualKey": "puzzle_orb_red",
+              "colorKey": "red",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "pz_level_04_theater_door_component_1"
+            },
+            {
+              "id": "pz_level_04_theater_door_component_2",
+              "role": "orb:blue",
+              "kind": "target",
+              "roomId": "level_04_childhood_chair",
+              "position": [
+                -12.5,
+                1.15,
+                8
+              ],
+              "visualKey": "puzzle_orb_blue",
+              "colorKey": "blue",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "pz_level_04_theater_door_component_2"
+            },
+            {
+              "id": "pz_level_04_theater_door_component_3",
+              "role": "orb:green",
+              "kind": "target",
+              "roomId": "level_04_rescue_chair",
+              "position": [
+                14.5,
+                1.15,
+                12
+              ],
+              "visualKey": "puzzle_orb_green",
+              "colorKey": "green",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "pz_level_04_theater_door_component_3"
+            },
+            {
+              "id": "pzc_bl61c7",
+              "role": "orb:yellow",
+              "kind": "target",
+              "roomId": "level_04_waiting_room",
+              "position": [
+                -7,
+                1.15,
+                6.5
+              ],
+              "visualKey": "puzzle_orb_yellow",
+              "colorKey": "yellow",
+              "inputMode": "weapon_hit",
+              "hitbox": {
+                "shape": "sphere",
+                "radius": 0.72
+              },
+              "targetId": "pzc_bl61c7"
+            }
+          ],
+          "fail": {
+            "message": "顺序错了，回灯墙。",
+            "resetDelay": 0.45
+          },
+          "success": {
+            "opensDoorId": "level_04_theater_door",
+            "rewardPulse": {
+              "label": "灯序确认",
+              "detail": "门禁顺序已记录",
+              "rarity": "epic"
+            },
+            "rewardPulseDuration": 1.6,
+            "audio": {
+              "key": "system_exit_open",
+              "intensity": 0.9
+            },
+            "actions": [
+              {
+                "type": "open_door",
+                "doorId": "level_04_theater_door"
+              },
+              {
+                "type": "focus_reveal",
+                "reveal": {
+                  "kind": "door",
+                  "doorId": "level_04_theater_door"
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "pz_level_04_exit_door",
+          "type": "archive_merge",
+          "label": "记忆压缩柜",
+          "roomId": "room_q0q7rw",
+          "interactionId": "pz_level_04_exit_door_panel",
+          "guidance": "相同记忆片可以合并。压到目标阶后，门禁记录放行。",
+          "gridSize": 4,
+          "targetValue": 32,
+          "moveLimit": 90,
+          "tileSkin": "museum",
+          "spawnTable": [
+            {
+              "value": 2,
+              "weight": 86
+            },
+            {
+              "value": 4,
+              "weight": 14
+            }
+          ],
+          "audio": {
+            "open": {
+              "key": "archive_panel_open",
+              "intensity": 0.66
+            },
+            "move": {
+              "key": "archive_tile_slide",
+              "intensity": 0.42
+            },
+            "merge": {
+              "key": "archive_tile_merge",
+              "intensity": 0.62
+            },
+            "highMerge": {
+              "key": "archive_identity_stamp",
+              "intensity": 0.78
+            },
+            "invalid": {
+              "key": "archive_denied",
+              "intensity": 0.38
+            },
+            "success": {
+              "key": "archive_unlock",
+              "intensity": 0.85
+            },
+            "fail": {
+              "key": "archive_rollback",
+              "intensity": 0.74
+            }
+          },
+          "success": {
+            "opensDoorId": "level_04_exit_door",
+            "rewardPulse": {
+              "label": "记忆压缩柜完成",
+              "detail": "谜题门已解锁",
+              "rarity": "epic"
+            },
+            "rewardPulseDuration": 1.6,
+            "audio": {
+              "key": "system_exit_open",
+              "intensity": 0.9
+            },
+            "actions": [
+              {
+                "type": "open_door",
+                "doorId": "level_04_exit_door"
+              },
+              {
+                "type": "focus_reveal",
+                "reveal": {
+                  "kind": "door",
+                  "doorId": "level_04_exit_door"
+                }
+              }
+            ]
+          },
+          "fail": {
+            "message": "压缩失败，档案回滚。",
+            "cameraImpact": {
+              "shake": 0.2,
+              "fovKick": 0.8
+            },
+            "audio": {
+              "key": "archive_rollback",
+              "intensity": 0.7
+            }
+          }
+        }
+      ],
+      "switches": [
+        {
+          "id": "door_switch_wall_switch_ueamem",
+          "roomId": "level_04_entry_decon",
+          "interactionId": "door_switch_wall_switch_ueamem_button",
+          "label": "墙面门控把手",
+          "initialStateId": "state_1_closed",
+          "oneShot": false,
+          "cycling": {
+            "mode": "next",
+            "wrap": true
+          },
+          "wallMount": {
+            "roomId": "level_04_entry_decon",
+            "side": "north",
+            "offset": 0.78125,
+            "height": 1.34,
+            "inset": 0.18
+          },
+          "presentation": {
+            "kind": "wall_lever",
+            "modelKey": "hp_wall_door_switch_button_v1",
+            "handPose": "lever_push_down",
+            "hideWeapon": true,
+            "useDurationSec": 0.82,
+            "commitAtSec": 0.42,
+            "doorRevealSec": 2,
+            "revealMode": "door_front"
+          },
+          "states": [
+            {
+              "id": "state_1_closed",
+              "label": "关闭",
+              "message": "门控回到关闭。",
+              "rewardPulse": {
+                "label": "墙面门控把手",
+                "detail": "关闭",
+                "rarity": "rare"
+              },
+              "rewardPulseDuration": 0.95,
+              "cameraImpact": {
+                "shake": 0.12,
+                "fovKick": 0.55
+              },
+              "actions": [
+                {
+                  "type": "close_door",
+                  "doorId": "level_04_waiting_door"
+                }
+              ]
+            },
+            {
+              "id": "state_2_open",
+              "label": "打开",
+              "message": "门控打开通路。",
+              "rewardPulse": {
+                "label": "墙面门控把手",
+                "detail": "打开",
+                "rarity": "rare"
+              },
+              "rewardPulseDuration": 0.95,
+              "cameraImpact": {
+                "shake": 0.12,
+                "fovKick": 0.55
+              },
+              "actions": [
+                {
+                  "type": "unlock_door",
+                  "doorId": "level_04_waiting_door"
+                },
+                {
+                  "type": "open_door",
+                  "doorId": "level_04_waiting_door"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "door_switch_wall_switch_273ih2",
+          "roomId": "level_04_childhood_chair",
+          "interactionId": "door_switch_wall_switch_273ih2_button",
+          "label": "墙面门控把手",
+          "initialStateId": "state_1_closed",
+          "oneShot": false,
+          "cycling": {
+            "mode": "next",
+            "wrap": true
+          },
+          "wallMount": {
+            "roomId": "level_04_childhood_chair",
+            "side": "north",
+            "offset": 0.18518518518518517,
+            "height": 1.34,
+            "inset": 0.18
+          },
+          "presentation": {
+            "kind": "wall_lever",
+            "modelKey": "hp_wall_door_switch_button_v1",
+            "handPose": "lever_push_down",
+            "hideWeapon": true,
+            "useDurationSec": 0.82,
+            "commitAtSec": 0.42,
+            "doorRevealSec": 2,
+            "revealMode": "door_front"
+          },
+          "states": [
+            {
+              "id": "state_1_closed",
+              "label": "关闭",
+              "message": "主门关闭，反向门打开。",
+              "rewardPulse": {
+                "label": "墙面门控把手",
+                "detail": "关闭",
+                "rarity": "rare"
+              },
+              "rewardPulseDuration": 0.95,
+              "cameraImpact": {
+                "shake": 0.12,
+                "fovKick": 0.55
+              },
+              "actions": [
+                {
+                  "type": "unlock_door",
+                  "doorId": "level_04_waiting_door"
+                },
+                {
+                  "type": "open_door",
+                  "doorId": "level_04_waiting_door"
+                },
+                {
+                  "type": "close_door",
+                  "doorId": "level_04_rescue_door"
+                }
+              ]
+            },
+            {
+              "id": "state_2_open",
+              "label": "打开",
+              "message": "主门打开，反向门关闭。",
+              "rewardPulse": {
+                "label": "墙面门控把手",
+                "detail": "打开",
+                "rarity": "rare"
+              },
+              "rewardPulseDuration": 0.95,
+              "cameraImpact": {
+                "shake": 0.12,
+                "fovKick": 0.55
+              },
+              "actions": [
+                {
+                  "type": "unlock_door",
+                  "doorId": "level_04_rescue_door"
+                },
+                {
+                  "type": "open_door",
+                  "doorId": "level_04_rescue_door"
+                },
+                {
+                  "type": "close_door",
+                  "doorId": "level_04_waiting_door"
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "objectiveChain": [
+        {
+          "id": "obj_survive_wave_dw6lb3",
+          "type": "survive_wave",
+          "title": "清剿「留置档案间」",
+          "detail": "击毁房间里的机器人，再继续操作。",
+          "requiredIds": [
+            "wave_dw6lb3"
+          ],
+          "completesWhen": {
+            "type": "wave_completed",
+            "id": "wave_dw6lb3"
+          },
+          "hudLabel": "清剿",
+          "guidance": {
+            "targetType": "wave",
+            "targetId": "wave_dw6lb3",
+            "label": "留置档案间",
+            "detail": "先清掉房间威胁",
+            "urgency": "danger"
+          },
+          "startsWhen": {
+            "type": "level_start"
+          },
+          "nextObjectiveId": "obj_survive_door_d42uh6"
+        },
+        {
+          "id": "obj_survive_door_d42uh6",
+          "type": "survive_wave",
+          "title": "清剿「留置档案间」",
+          "detail": "击毁房间里的机器人，门才会解锁。",
+          "requiredIds": [
+            "wave_yjxxy4"
+          ],
+          "completesWhen": {
+            "type": "wave_completed",
+            "id": "wave_yjxxy4"
+          },
+          "hudLabel": "清剿",
+          "guidance": {
+            "targetType": "wave",
+            "targetId": "wave_yjxxy4",
+            "label": "留置档案间",
+            "detail": "清掉门锁守卫",
+            "urgency": "danger"
+          },
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_survive_wave_dw6lb3"
+          },
+          "nextObjectiveId": "obj_open_door_d42uh6"
+        },
+        {
+          "id": "obj_open_door_d42uh6",
+          "type": "open_door",
+          "title": "打开留置档案间门",
+          "detail": "靠近门并打开它。",
+          "requiredIds": [
+            "door_d42uh6"
+          ],
+          "completesWhen": {
+            "type": "door_opened",
+            "id": "door_d42uh6"
+          },
+          "hudLabel": "开门",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_survive_door_d42uh6"
+          },
+          "nextObjectiveId": "obj_open_level_04_waiting_door"
+        },
+        {
+          "id": "obj_open_level_04_waiting_door",
+          "type": "open_door",
+          "title": "打开 诊所候诊门",
+          "detail": "靠近门并打开它。",
+          "requiredIds": [
+            "level_04_waiting_door"
+          ],
+          "completesWhen": {
+            "type": "door_opened",
+            "id": "level_04_waiting_door"
+          },
+          "hudLabel": "开门",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_open_door_d42uh6"
+          },
+          "nextObjectiveId": "obj_survive_wave_level_04_waiting_room"
+        },
+        {
+          "id": "obj_survive_wave_level_04_waiting_room",
+          "type": "survive_wave",
+          "title": "清剿「候诊厅」",
+          "detail": "击毁房间里的机器人，再继续操作。",
+          "requiredIds": [
+            "wave_level_04_waiting_room"
+          ],
+          "completesWhen": {
+            "type": "wave_completed",
+            "id": "wave_level_04_waiting_room"
+          },
+          "hudLabel": "清剿",
+          "guidance": {
+            "targetType": "wave",
+            "targetId": "wave_level_04_waiting_room",
+            "label": "候诊厅",
+            "detail": "先清掉房间威胁",
+            "urgency": "danger"
+          },
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_open_level_04_waiting_door"
+          },
+          "nextObjectiveId": "obj_survive_level_04_childhood_door"
+        },
+        {
+          "id": "obj_survive_level_04_childhood_door",
+          "type": "survive_wave",
+          "title": "清剿「候诊厅」",
+          "detail": "击毁房间里的机器人，门才会解锁。",
+          "requiredIds": [
+            "wave_0z51v9"
+          ],
+          "completesWhen": {
+            "type": "wave_completed",
+            "id": "wave_0z51v9"
+          },
+          "hudLabel": "清剿",
+          "guidance": {
+            "targetType": "wave",
+            "targetId": "wave_0z51v9",
+            "label": "候诊厅",
+            "detail": "清掉门锁守卫",
+            "urgency": "danger"
+          },
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_survive_wave_level_04_waiting_room"
+          },
+          "nextObjectiveId": "obj_open_level_04_childhood_door"
+        },
+        {
+          "id": "obj_open_level_04_childhood_door",
+          "type": "open_door",
+          "title": "打开 童年椅室门",
+          "detail": "靠近门并打开它。",
+          "requiredIds": [
+            "level_04_childhood_door"
+          ],
+          "completesWhen": {
+            "type": "door_opened",
+            "id": "level_04_childhood_door"
+          },
+          "hudLabel": "开门",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_survive_level_04_childhood_door"
+          },
+          "nextObjectiveId": "obj_open_level_04_rescue_door"
+        },
+        {
+          "id": "obj_open_level_04_rescue_door",
+          "type": "open_door",
+          "title": "打开 救援椅室门",
+          "detail": "靠近门并打开它。",
+          "requiredIds": [
+            "level_04_rescue_door"
+          ],
+          "completesWhen": {
+            "type": "door_opened",
+            "id": "level_04_rescue_door"
+          },
+          "hudLabel": "开门",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_open_level_04_childhood_door"
+          },
+          "nextObjectiveId": "obj_puzzle_level_04_body_door"
+        },
+        {
+          "id": "obj_puzzle_level_04_body_door",
+          "type": "custom",
+          "title": "配平闸门",
+          "detail": "在「救援椅室」的谜题台：调节三道闸门，让三块状态表同时进绿区。",
+          "requiredIds": [
+            "pz_level_04_body_door"
+          ],
+          "completesWhen": {
+            "type": "puzzle_completed",
+            "id": "pz_level_04_body_door"
+          },
+          "hudLabel": "闸门配平台",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_open_level_04_rescue_door"
+          },
+          "nextObjectiveId": "obj_open_level_04_body_door"
+        },
+        {
+          "id": "obj_open_level_04_body_door",
+          "type": "open_door",
+          "title": "打开 身体椅室门",
+          "detail": "靠近门并打开它。",
+          "requiredIds": [
+            "level_04_body_door"
+          ],
+          "completesWhen": {
+            "type": "door_opened",
+            "id": "level_04_body_door"
+          },
+          "hudLabel": "开门",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_puzzle_level_04_body_door"
+          },
+          "nextObjectiveId": "obj_puzzle_level_04_theater_door"
+        },
+        {
+          "id": "obj_puzzle_level_04_theater_door",
+          "type": "custom",
+          "title": "确认灯序",
+          "detail": "看灯墙亮序后按顺序击中色球。",
+          "requiredIds": [
+            "pz_level_04_theater_door"
+          ],
+          "completesWhen": {
+            "type": "puzzle_completed",
+            "id": "pz_level_04_theater_door"
+          },
+          "hudLabel": "灯序记忆锁",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_open_level_04_body_door"
+          },
+          "nextObjectiveId": "obj_open_level_04_theater_door"
+        },
+        {
+          "id": "obj_open_level_04_theater_door",
+          "type": "open_door",
+          "title": "打开 治疗剧场门",
+          "detail": "靠近门并打开它。",
+          "requiredIds": [
+            "level_04_theater_door"
+          ],
+          "completesWhen": {
+            "type": "door_opened",
+            "id": "level_04_theater_door"
+          },
+          "hudLabel": "开门",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_puzzle_level_04_theater_door"
+          },
+          "nextObjectiveId": "obj_puzzle_level_04_exit_door"
+        },
+        {
+          "id": "obj_puzzle_level_04_exit_door",
+          "type": "custom",
+          "title": "压缩记忆片",
+          "detail": "在「留置档案间」的谜题台：合并相同记忆片，达到档案目标阶。",
+          "requiredIds": [
+            "pz_level_04_exit_door"
+          ],
+          "completesWhen": {
+            "type": "puzzle_completed",
+            "id": "pz_level_04_exit_door"
+          },
+          "hudLabel": "记忆压缩柜",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_open_level_04_theater_door"
+          },
+          "nextObjectiveId": "obj_open_level_04_exit_door"
+        },
+        {
+          "id": "obj_open_level_04_exit_door",
+          "type": "open_door",
+          "title": "打开 出院电梯门",
+          "detail": "靠近门并打开它。",
+          "requiredIds": [
+            "level_04_exit_door"
+          ],
+          "completesWhen": {
+            "type": "door_opened",
+            "id": "level_04_exit_door"
+          },
+          "hudLabel": "开门",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_puzzle_level_04_exit_door"
+          },
+          "nextObjectiveId": "obj_reach_exit"
+        },
+        {
+          "id": "obj_reach_exit",
+          "type": "reach_exit",
+          "title": "进入撤离电梯",
+          "detail": "抵达出口，启动它。",
+          "requiredIds": [
+            "use_builder_exit"
+          ],
+          "completesWhen": {
+            "type": "interaction_completed",
+            "id": "use_builder_exit"
+          },
+          "hudLabel": "撤离",
+          "startsWhen": {
+            "type": "objective_completed",
+            "id": "obj_open_level_04_exit_door"
+          }
+        }
+      ],
+      "waves": [
+        {
+          "id": "wave_level_04_waiting_room",
+          "startDelay": 0,
+          "roomId": "level_04_waiting_room",
+          "trigger": {
+            "type": "room_entered",
+            "id": "level_04_waiting_room",
+            "delay": 0.4
+          },
+          "enemies": [
+            {
+              "archetype": "clamp_bot",
+              "count": 2,
+              "from": "sg_level_04_waiting_room"
+            },
+            {
+              "archetype": "repair_drone",
+              "count": 2,
+              "from": "sg_level_04_waiting_room"
+            }
+          ],
+          "interruptsActiveWave": true,
+          "reward": "none"
+        },
+        {
+          "id": "wave_0z51v9",
+          "startDelay": 0,
+          "roomId": "level_04_waiting_room",
+          "enemies": [
+            {
+              "archetype": "shield_tech",
+              "count": 2,
+              "from": "sg_level_04_waiting_room"
+            },
+            {
+              "archetype": "repair_drone",
+              "count": 2,
+              "from": "sg_level_04_waiting_room"
+            }
+          ],
+          "reward": "none"
+        },
+        {
+          "id": "wave_yjxxy4",
+          "startDelay": 0,
+          "roomId": "level_04_therapy_theater",
+          "trigger": {
+            "type": "room_entered",
+            "id": "level_04_therapy_theater",
+            "delay": 0.4
+          },
+          "enemies": [
+            {
+              "archetype": "custodian_elite",
+              "count": 1,
+              "from": "sg_level_04_therapy_theater",
+              "healthMultiplier": 0.55
+            },
+            {
+              "archetype": "clamp_bot",
+              "count": 2,
+              "from": "sg_level_04_therapy_theater"
+            }
+          ],
+          "interruptsActiveWave": true,
+          "reward": "none"
+        },
+        {
+          "id": "wave_yjxxy4_pressure_loop",
+          "startDelay": 0,
+          "roomId": "level_04_therapy_theater",
+          "nonBlocking": true,
+          "enemies": [
+            {
+              "archetype": "clamp_bot",
+              "count": 1,
+              "from": "sg_level_04_therapy_theater"
+            }
+          ],
+          "reward": "none"
+        },
+        {
+          "id": "wave_dw6lb3",
+          "startDelay": 0,
+          "roomId": "room_q0q7rw",
+          "trigger": {
+            "type": "room_entered",
+            "id": "room_q0q7rw",
+            "delay": 0.4
+          },
+          "enemies": [
+            {
+              "archetype": "repair_drone",
+              "count": 2,
+              "from": "sg_room_q0q7rw"
+            }
+          ],
+          "interruptsActiveWave": true,
+          "reward": "none"
+        },
+        {
+          "id": "wave_dw6lb3_pressure_loop",
+          "startDelay": 0,
+          "roomId": "room_q0q7rw",
+          "nonBlocking": true,
+          "enemies": [
+            {
+              "archetype": "repair_drone",
+              "count": 1,
+              "from": "sg_room_q0q7rw"
+            }
+          ],
+          "reward": "none"
+        }
+      ],
+      "events": [
+        {
+          "id": "builder_wave_level_04_waiting_room_to_wave_0z51v9_complete",
+          "trigger": {
+            "type": "wave_completed",
+            "id": "wave_level_04_waiting_room"
+          },
+          "once": true,
+          "actions": [
+            {
+              "type": "start_wave",
+              "waveId": "wave_0z51v9",
+              "delay": 0.45
+            }
+          ]
+        },
+        {
+          "id": "builder_wave_yjxxy4_pressure_loop_repeat",
+          "trigger": {
+            "type": "wave_completed",
+            "id": "wave_yjxxy4_pressure_loop"
+          },
+          "actions": [
+            {
+              "type": "start_wave",
+              "waveId": "wave_yjxxy4_pressure_loop",
+              "delay": 7,
+              "repeat": true
+            }
+          ]
+        },
+        {
+          "id": "builder_wave_yjxxy4_complete",
+          "trigger": {
+            "type": "wave_completed",
+            "id": "wave_yjxxy4"
+          },
+          "once": true,
+          "actions": [
+            {
+              "type": "start_wave",
+              "waveId": "wave_yjxxy4_pressure_loop",
+              "delay": 0.6
+            }
+          ]
+        },
+        {
+          "id": "builder_wave_dw6lb3_pressure_loop_repeat",
+          "trigger": {
+            "type": "wave_completed",
+            "id": "wave_dw6lb3_pressure_loop"
+          },
+          "actions": [
+            {
+              "type": "start_wave",
+              "waveId": "wave_dw6lb3_pressure_loop",
+              "delay": 7,
+              "repeat": true
+            }
+          ]
+        },
+        {
+          "id": "builder_wave_dw6lb3_complete",
+          "trigger": {
+            "type": "wave_completed",
+            "id": "wave_dw6lb3"
+          },
+          "once": true,
+          "actions": [
+            {
+              "type": "start_wave",
+              "waveId": "wave_dw6lb3_pressure_loop",
+              "delay": 0.6
+            }
+          ]
+        },
+        {
+          "id": "builder_unlock_exit_on_enter",
+          "trigger": {
+            "type": "room_entered",
+            "id": "level_04_exit_room"
+          },
+          "once": true,
+          "actions": [
+            {
+              "type": "unlock_exit"
+            }
+          ]
+        }
+      ],
+      "dialogues": [
+        {
+          "id": "level_04_start_01",
+          "trigger": "level_start",
+          "speaker": "诊所广播",
+          "line": "请沿白线前进。记忆校准不会疼。",
+          "tone": "system",
+          "duration": 2.8
+        },
+        {
+          "id": "level_04_exit_01",
+          "trigger": "level_04_exit_01",
+          "speaker": "出院电梯",
+          "line": "出院门已开。未关闭记录随行。",
+          "tone": "reveal",
+          "duration": 2.4
+        }
+      ],
+      "spawnGroups": [
+        {
+          "id": "front",
+          "label": "前方舱门",
+          "layout": "front"
+        },
+        {
+          "id": "front_arc",
+          "label": "前方舱门",
+          "layout": "front_arc"
+        },
+        {
+          "id": "side_rear",
+          "label": "侧后方夹击",
+          "layout": "side_rear"
+        },
+        {
+          "id": "front_gate",
+          "label": "正门重型单位",
+          "layout": "front_gate"
+        },
+        {
+          "id": "turret_rail",
+          "label": "左右轨道炮台",
+          "layout": "turret_rail"
+        },
+        {
+          "id": "around_ring",
+          "label": "四周通道",
+          "layout": "around_ring"
+        },
+        {
+          "id": "rear_ring",
+          "label": "后方追击队",
+          "layout": "rear_ring"
+        },
+        {
+          "id": "sg_level_04_waiting_room",
+          "label": "候诊厅内部",
+          "layout": "front",
+          "positions": [
+            [
+              -4,
+              0,
+              9.5
+            ],
+            [
+              0.5,
+              0,
+              12.5
+            ],
+            [
+              -4.48,
+              0,
+              7.699999999999999
+            ],
+            [
+              4.48,
+              0,
+              7.699999999999999
+            ],
+            [
+              -4.48,
+              0,
+              13.3
+            ],
+            [
+              4.48,
+              0,
+              13.3
+            ]
+          ]
+        },
+        {
+          "id": "sg_level_04_therapy_theater",
+          "label": "治疗剧场内部",
+          "layout": "front",
+          "positions": [
+            [
+              -1.5,
+              0,
+              -9
+            ],
+            [
+              3,
+              0,
+              -9.5
+            ],
+            [
+              -3.9200000000000004,
+              0,
+              -10.52
+            ],
+            [
+              3.9200000000000004,
+              0,
+              -10.52
+            ],
+            [
+              -3.9200000000000004,
+              0,
+              -5.4799999999999995
+            ],
+            [
+              3.9200000000000004,
+              0,
+              -5.4799999999999995
+            ]
+          ]
+        },
+        {
+          "id": "sg_room_q0q7rw",
+          "label": "留置档案间内部",
+          "layout": "front",
+          "positions": [
+            [
+              -1.5,
+              0,
+              22
+            ],
+            [
+              -2.24,
+              0,
+              21.644000000000002
+            ],
+            [
+              2.24,
+              0,
+              21.644000000000002
+            ],
+            [
+              0,
+              0,
+              22.233333333333334
+            ]
+          ]
+        }
+      ],
+      "cinematicBeats": [],
+      "pickups": {
+        "maxActiveDynamicPickups": 3,
+        "dynamicLifetimeSec": 22,
+        "storyPickups": [],
+        "collectRadii": {
+          "coreCell": 2.45,
+          "repairKit": 2.25,
+          "ironRod": 1.65,
+          "pistol": 1.65
+        },
+        "repairKit": {
+          "minMissingHealthToCollect": 3,
+          "healAmount": 24,
+          "rewardLabel": "拾取修复箱"
+        },
+        "coreCell": {
+          "maxHeld": 1,
+          "pickupLabel": "拾取应急电池",
+          "pickupDetailPrefix": "物品",
+          "useLabel": "应急电池释放",
+          "useDetail": "一次性清场冲击",
+          "preservedLabel": "电池余电",
+          "preservedDetail": "这枚电池没有完全耗尽",
+          "upgradeInsertedLabel": "应急电池装入",
+          "emptyUseReward": {
+            "label": "没有应急电池",
+            "detail": "电池很少，留给被包围时",
+            "rarity": "common"
+          }
+        },
+        "drops": {
+          "coreCell": {
+            "activeDropLimit": 1,
+            "pityKills": 18,
+            "minKillsForPity": 16,
+            "eliteChance": 0.72,
+            "archetypeChances": {
+              "clamp_bot": {
+                "minKills": 12,
+                "chance": 0.07
+              },
+              "repair_drone": {
+                "minKills": 16,
+                "chance": 0.018
+              }
+            }
+          },
+          "repairKit": {
+            "activeDropLimit": 1,
+            "minMissingHealth": 14,
+            "eliteChance": 0.22,
+            "baseChance": 0.012,
+            "archetypeChanceBonus": {
+              "clamp_bot": 0.02
+            },
+            "missingHealthThreshold": 0.34,
+            "missingHealthBonus": 0.03,
+            "lowHealthBonuses": [
+              {
+                "healthRatioAtMost": 0.4,
+                "bonus": 0.09
+              },
+              {
+                "healthRatioAtMost": 0.24,
+                "bonus": 0.16
+              }
+            ],
+            "lowHealthPity": [
+              {
+                "healthRatioAtMost": 0.22,
+                "kills": 4
+              },
+              {
+                "healthRatioAtMost": 0.32,
+                "kills": 7
+              }
+            ]
+          }
+        }
+      },
+      "economy": {
+        "memoryFragments": {
+          "default": 1,
+          "byArchetype": {
+            "custodian_elite": 24,
+            "signal_turret": 3,
+            "clamp_bot": 2
+          }
+        },
+        "killStreakWindowSec": 3.8,
+        "memoryCacheMilestones": [
+          {
+            "amount": 10,
+            "label": "体力恢复",
+            "reward": "energy",
+            "rarity": "rare"
+          },
+          {
+            "amount": 28,
+            "label": "呼吸变稳",
+            "reward": "heat",
+            "rarity": "rare"
+          },
+          {
+            "amount": 52,
+            "label": "生命上限恢复",
+            "reward": "health",
+            "rarity": "epic"
+          }
+        ],
+        "curatedUpgradeRolls": [
+          [
+            "field_medicine",
+            "thermal_buffer",
+            "dash_shorter_cd",
+            "last_human_protocol"
+          ]
+        ],
+        "tempoSurge": {
+          "eliteDuration": 6.5,
+          "normalThreshold": 5,
+          "tier2Threshold": 10,
+          "tier1Duration": 4.4,
+          "tier2Duration": 5.8,
+          "tier1HeatRefund": 7,
+          "tier2HeatRefund": 12,
+          "tier1EnergyRefund": 7,
+          "tier2EnergyRefund": 12
+        }
+      },
+      "revive": {
+        "maxRevives": 1,
+        "hpRatio": 0.7,
+        "memoryFragments": 12,
+        "reviveSurgeSec": 9.5,
+        "tempoSurgeSec": 5.5,
+        "blastRadius": 6.5,
+        "blastDamage": 80,
+        "blastKnockback": 6,
+        "rewardPulse": {
+          "label": "第二口气",
+          "detail": "+线索 + 短暂爆发",
+          "rarity": "story"
+        },
+        "rewardPulseDuration": 2.4,
+        "message": "你从候诊厅地板上醒来。屏幕还在说你安全。"
+      },
+      "combatLimits": {
+        "smallEnemyArchetypes": [
+          "repair_drone",
+          "clamp_bot"
+        ],
+        "eliteArchetypeId": "custodian_elite",
+        "smallEnemyDamageMultiplier": 1.3
+      },
+      "bossPhases": [],
+      "enemyDeathBeats": [],
+      "presentation": {
+        "defaultWaveStartMessage": "敌对单位正在部署。",
+        "reinforcementMessage": "增援单位已部署。",
+        "waveLabels": {
+          "wave_level_04_waiting_room": "候诊巡检",
+          "wave_0z51v9": "巡检单位",
+          "wave_yjxxy4": "巡检单位",
+          "wave_yjxxy4_pressure_loop": "残余巡检",
+          "wave_dw6lb3": "巡检单位",
+          "wave_dw6lb3_pressure_loop": "残余巡检"
+        },
+        "objectives": {
+          "upgrade": {
+            "title": "选一种活法",
+            "detail": "只能选一项",
+            "progressLabel": "升级上线",
+            "progressText": "选 1 个"
+          },
+          "preRod": {
+            "title": "捡起铁棒",
+            "detail": "别空手"
+          },
+          "prePistol": {
+            "title": "捡起手枪",
+            "detail": "拿到枪，门会锁"
+          },
+          "default": {
+            "title": "穿过记忆诊所",
+            "detail": "核对三段记忆"
+          },
+          "exitUnlocked": {
+            "title": "进入出院电梯",
+            "detail": "记录未关闭",
+            "progressLabel": "出院电梯",
+            "progressText": "进入"
+          }
+        },
+        "flow": {
+          "title": {
+            "system": "记忆诊所",
+            "heading": "记忆诊所 04",
+            "body": "这里不治疗伤口，只校准你相信过的记忆。",
+            "signalStrip": [
+              "候诊白线",
+              "童年回放",
+              "出院记录"
+            ],
+            "startButton": "进入诊所"
+          },
+          "death": {
+            "system": "急救失败",
+            "heading": "你倒下了",
+            "itchSuffix": "itch 版本无广告。",
+            "reviveOfferPrefix": "醒来后有几秒肾上腺素爆发。",
+            "cacheReadyText": "补给已备好。",
+            "reviveButtonRewarded": "看广告急救",
+            "reviveButtonLocal": "急救",
+            "restartButton": "重开本关",
+            "restartAfterReviveUsedButton": "重新开始"
+          },
+          "transition": {
+            "system": "出院电梯",
+            "heading": "记录未关闭"
+          },
+          "victory": {
+            "system": "治疗记录",
+            "heading": "记忆留置",
+            "body": "诊所没有治好你，只确认这些记忆会跟着你走。",
+            "doubleMemoryButton": "看广告 x2 积分",
+            "doubleMemoryClaimedButton": "x2 积分已领取",
+            "replayButton": "再次进入诊所"
+          }
+        },
+        "waves": [
+          {
+            "id": "wave_level_04_waiting_room",
+            "label": "候诊巡检",
+            "objectiveTitle": "清剿候诊厅",
+            "objectiveDetail": "击毁房间里的敌对单位。",
+            "startMessage": "候诊厅巡检单位被唤醒。",
+            "startWarning": {
+              "label": "敌对单位",
+              "detail": "候诊厅出现机器人"
+            },
+            "startWarningDuration": 1.8
+          },
+          {
+            "id": "wave_0z51v9",
+            "label": "巡检单位",
+            "objectiveTitle": "清剿候诊厅",
+            "objectiveDetail": "击毁房间里的敌对单位。",
+            "startMessage": "候诊厅巡检单位被唤醒。",
+            "startWarning": {
+              "label": "敌对单位",
+              "detail": "候诊厅出现机器人"
+            },
+            "startWarningDuration": 1.8
+          },
+          {
+            "id": "wave_yjxxy4",
+            "label": "巡检单位",
+            "objectiveTitle": "清剿治疗剧场",
+            "objectiveDetail": "击毁房间里的敌对单位。",
+            "startMessage": "治疗剧场主管上线。",
+            "startWarning": {
+              "label": "敌对单位",
+              "detail": "治疗剧场出现机器人"
+            },
+            "startWarningDuration": 1.8
+          },
+          {
+            "id": "wave_yjxxy4_pressure_loop",
+            "label": "残余巡检",
+            "objectiveTitle": "残余巡检",
+            "objectiveDetail": "持续出现的敌对单位不会阻塞门。",
+            "startMessage": "残余巡检继续。",
+            "startWarning": {
+              "label": "残余巡检",
+              "detail": "敌对单位继续出现"
+            },
+            "startWarningDuration": 1.2
+          },
+          {
+            "id": "wave_dw6lb3",
+            "label": "巡检单位",
+            "objectiveTitle": "清剿留置档案间",
+            "objectiveDetail": "击毁房间里的敌对单位。",
+            "startMessage": "留置档案间巡检单位被唤醒。",
+            "startWarning": {
+              "label": "敌对单位",
+              "detail": "留置档案间出现机器人"
+            },
+            "startWarningDuration": 1.8
+          },
+          {
+            "id": "wave_dw6lb3_pressure_loop",
+            "label": "残余巡检",
+            "objectiveTitle": "残余巡检",
+            "objectiveDetail": "持续出现的敌对单位不会阻塞门。",
+            "startMessage": "残余巡检继续。",
+            "startWarning": {
+              "label": "残余巡检",
+              "detail": "敌对单位继续出现"
+            },
+            "startWarningDuration": 1.2
+          }
+        ],
+        "spawnSourceLabels": {
+          "front": "前方入口",
+          "front_arc": "前方入口",
+          "side_rear": "侧后方夹击",
+          "front_gate": "正门重型单位",
+          "turret_rail": "左右轨道炮台",
+          "around_ring": "四周通道",
+          "rear_ring": "后方追击队",
+          "sg_level_04_waiting_room": "候诊厅内部",
+          "sg_level_04_therapy_theater": "治疗剧场内部",
+          "sg_room_q0q7rw": "留置档案间内部"
+        },
+        "reinforcementWarningDuration": 1.45,
+        "environmentPressure": {
+          "title": 0.16,
+          "death": 0.95,
+          "idle": 0.24,
+          "exitUnlocked": 0.84,
+          "byWave": {}
+        }
+      }
+    },
+    "runtimeHints": {
+      "promotedFrom": "chrome-localStorage:localhost:5174:human-protocol-builder-save-slots-v1[0]",
+      "draftSeq": "208519",
+      "saveSlotsSeq": "208530",
+      "sourceProjectSummary": {
+        "projectId": "proj_import_level_04_memory_clinic",
+        "title": "记忆诊所 · 可编辑草稿",
+        "rooms": 8,
+        "doors": 7,
+        "props": 32,
+        "robots": 7,
+        "puzzles": 3,
+        "bossRobots": [
+          {
+            "id": "robot_9b2zfb",
+            "label": "治疗剧场主管",
+            "roomId": "level_04_therapy_theater",
+            "combat": {
+              "healthMultiplier": 0.55
+            }
+          }
+        ]
+      },
+      "runtimeLevelSummary": {
+        "levelId": "level_04_memory_clinic",
+        "title": "记忆诊所",
+        "rooms": 8,
+        "doors": 7,
+        "props": 27,
+        "waves": 6,
+        "enemies": 15,
+        "boss": [
+          {
+            "waveId": "wave_yjxxy4",
+            "count": 1,
+            "healthMultiplier": 0.55,
+            "tier": null
+          }
+        ]
+      },
+      "sourceDraftHash": "ad114d227dc8a74c"
+    }
+  }
+}

@@ -1,0 +1,3203 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-index.v1",
+  "generatedAt": "derived-from-procedural-free-puzzle-orb-v1",
+  "sourceGeneratedAt": {
+    "builder_runtime_resources": "2026-06-20T18:42:28.905Z",
+    "level_01_maintenance_bay": "2026-06-14T12:50:00.437Z",
+    "level_02_residential_simulation": "2026-06-20T13:57:03.343Z",
+    "level_03_human_museum": "2026-06-20T14:02:18.376Z",
+    "assets_v1_free_puzzle_orbs": "derived-from-procedural-free-puzzle-orb-v1",
+    "assets_v1_glb_bridge": "derived-from-glb-bridge-v1"
+  },
+  "publicBase": "/assets/human-protocol/raw-webgpu/assets-v1",
+  "phase": "phase-1-l1-l2-official-critical-runtime-assets",
+  "sourcePackIds": [
+    "builder_runtime_resources",
+    "level_01_maintenance_bay",
+    "level_02_residential_simulation",
+    "level_03_human_museum",
+    "assets_v1_free_puzzle_orbs",
+    "assets_v1_glb_bridge"
+  ],
+  "assetCount": 61,
+  "geometryBytes": 60336480,
+  "defaults": {
+    "geometryFormat": "raw-float32",
+    "targetGeometryFormat": "meshopt",
+    "ordinaryTextureTarget": "512px WebP/AVIF",
+    "heroTextureTarget": "1024px WebP/AVIF",
+    "materialTexturePolicy": "Keep normal/ORM/emissive compressed and shared by URL when possible; duplicate only when an asset needs independent quality.",
+    "runtimePolicy": "assets-v1 first, legacy official/builder_runtime_resources fallback."
+  },
+  "compressionRoadmap": [
+    "Phase 1 keeps raw float32 geometry for byte-identical rendering while splitting the 100MB supplemental pack into cacheable per-asset files.",
+    "Phase 2 encodes geometry.raw.bin as geometry.meshopt.bin with bounds/material metadata unchanged.",
+    "Phase 3 moves repeated base-color/normal/ORM/emissive images into family atlases and converts ordinary furniture to 512px WebP/AVIF, hero decals/puzzle art to 1024px."
+  ],
+  "assets": {
+    "ability_protocol_breach_charge_v1": {
+      "modelKey": "ability_protocol_breach_charge_v1",
+      "family": "viewmodels",
+      "bundleId": "viewmodels/ability_protocol_breach_charge_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "viewmodel",
+      "roles": [
+        "viewmodel"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/viewmodels/ability_protocol_breach_charge_v1/manifest.json",
+      "material": "families/viewmodels/ability_protocol_breach_charge_v1/material.json",
+      "geometry": "families/viewmodels/ability_protocol_breach_charge_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 668400,
+      "vertexCount": 16710,
+      "triangleCount": 5570,
+      "hash": {
+        "geometry": "0abe8f6d44777efd",
+        "material": "0762ef077b724013"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_charge_v1.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "decal_human_reference_triptych": {
+      "modelKey": "decal_human_reference_triptych",
+      "family": "shared",
+      "bundleId": "shared/decal_human_reference_triptych",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/decal_human_reference_triptych/manifest.json",
+      "material": "families/shared/decal_human_reference_triptych/material.json",
+      "geometry": "families/shared/decal_human_reference_triptych/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 240,
+      "vertexCount": 6,
+      "triangleCount": 2,
+      "hash": {
+        "geometry": "80fa8c60211c431e",
+        "material": "d944924cc6074c62"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_glb_bridge",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#glb-bridge",
+        "sourceGeometry": "public/assets/human-protocol/raw-webgpu/assets-v1/**/geometry.raw.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01/hp_decal_human_reference_triptych.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_glb_bridge",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "door_industrial_access": {
+      "modelKey": "door_industrial_access",
+      "family": "shared",
+      "bundleId": "shared/door_industrial_access",
+      "version": 1,
+      "status": "ready",
+      "kind": "door",
+      "roles": [
+        "door"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/door_industrial_access/manifest.json",
+      "material": "families/shared/door_industrial_access/material.json",
+      "geometry": "families/shared/door_industrial_access/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 100320,
+      "vertexCount": 2508,
+      "triangleCount": 836,
+      "hash": {
+        "geometry": "5e98aa61d4d92b63",
+        "material": "3dba14c48a3bc1c0"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/doors/hp_door_industrial_access.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "door_residential_access": {
+      "modelKey": "door_residential_access",
+      "family": "shared",
+      "bundleId": "shared/door_residential_access",
+      "version": 1,
+      "status": "ready",
+      "kind": "door",
+      "roles": [
+        "door"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/shared/door_residential_access/manifest.json",
+      "material": "families/shared/door_residential_access/material.json",
+      "geometry": "families/shared/door_residential_access/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 28320,
+      "vertexCount": 708,
+      "triangleCount": 236,
+      "hash": {
+        "geometry": "1e91027c3274342c",
+        "material": "ef3b33dd4d36c7ad"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_glb_bridge",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#glb-bridge",
+        "sourceGeometry": "public/assets/human-protocol/raw-webgpu/assets-v1/**/geometry.raw.bin",
+        "rawFile": "src/assets/models-cooked/environment/doors/hp_door_residential_access.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_glb_bridge",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "door_service_elevator_inner_cyan": {
+      "modelKey": "door_service_elevator_inner_cyan",
+      "family": "shared",
+      "bundleId": "shared/door_service_elevator_inner_cyan",
+      "version": 1,
+      "status": "ready",
+      "kind": "door",
+      "roles": [
+        "door"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/shared/door_service_elevator_inner_cyan/manifest.json",
+      "material": "families/shared/door_service_elevator_inner_cyan/material.json",
+      "geometry": "families/shared/door_service_elevator_inner_cyan/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 36480,
+      "vertexCount": 912,
+      "triangleCount": 304,
+      "hash": {
+        "geometry": "b2600968fffb8626",
+        "material": "340f177e90704efc"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models/environment/level01/hp_door_service_elevator_inner_cyan.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "door_threshold_service_elevator": {
+      "modelKey": "door_threshold_service_elevator",
+      "family": "service-elevator",
+      "bundleId": "service-elevator/door_threshold_service_elevator",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "surface",
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/service-elevator/door_threshold_service_elevator/manifest.json",
+      "material": "families/service-elevator/door_threshold_service_elevator/material.json",
+      "geometry": "families/service-elevator/door_threshold_service_elevator/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 30240,
+      "vertexCount": 756,
+      "triangleCount": 252,
+      "hash": {
+        "geometry": "bd2eea071680922e",
+        "material": "065edcdefa8eca27"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models/environment/shells/hp_door_threshold_service_elevator.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hero_maintenance_repair_arm_cluster": {
+      "modelKey": "hero_maintenance_repair_arm_cluster",
+      "family": "level01-maintenance",
+      "bundleId": "level01-maintenance/hero_maintenance_repair_arm_cluster",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/level01-maintenance/hero_maintenance_repair_arm_cluster/manifest.json",
+      "material": "families/level01-maintenance/hero_maintenance_repair_arm_cluster/material.json",
+      "geometry": "families/level01-maintenance/hero_maintenance_repair_arm_cluster/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 469920,
+      "vertexCount": 11748,
+      "triangleCount": 3916,
+      "hash": {
+        "geometry": "3ce9c2e10b577038",
+        "material": "4cd50cec4b2c220b"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_glb_bridge",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#glb-bridge",
+        "sourceGeometry": "public/assets/human-protocol/raw-webgpu/assets-v1/**/geometry.raw.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01/hp_hero_maintenance_repair_arm_cluster.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_glb_bridge",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hero_maintenance_repair_bay": {
+      "modelKey": "hero_maintenance_repair_bay",
+      "family": "level01-maintenance",
+      "bundleId": "level01-maintenance/hero_maintenance_repair_bay",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/level01-maintenance/hero_maintenance_repair_bay/manifest.json",
+      "material": "families/level01-maintenance/hero_maintenance_repair_bay/material.json",
+      "geometry": "families/level01-maintenance/hero_maintenance_repair_bay/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 551040,
+      "vertexCount": 13776,
+      "triangleCount": 4592,
+      "hash": {
+        "geometry": "15da3810428bb991",
+        "material": "d33be46cb687fdde"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/environment/level01/hp_hero_maintenance_repair_bay.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_enemy_clamp_repair_horror": {
+      "modelKey": "hp_enemy_clamp_repair_horror",
+      "family": "enemies",
+      "bundleId": "enemies/hp_enemy_clamp_repair_horror",
+      "version": 1,
+      "status": "ready",
+      "kind": "enemy",
+      "roles": [
+        "enemy"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/enemies/hp_enemy_clamp_repair_horror/manifest.json",
+      "material": "families/enemies/hp_enemy_clamp_repair_horror/material.json",
+      "geometry": "families/enemies/hp_enemy_clamp_repair_horror/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 3061920,
+      "vertexCount": 76548,
+      "triangleCount": 25516,
+      "hash": {
+        "geometry": "5f78a7722c8e4228",
+        "material": "9495fb9cb7b2c619"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models-cooked/enemies/hp_enemy_clamp_repair_horror.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_enemy_custodian_foreman_horror": {
+      "modelKey": "hp_enemy_custodian_foreman_horror",
+      "family": "enemies",
+      "bundleId": "enemies/hp_enemy_custodian_foreman_horror",
+      "version": 1,
+      "status": "ready",
+      "kind": "enemy",
+      "roles": [
+        "enemy"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/enemies/hp_enemy_custodian_foreman_horror/manifest.json",
+      "material": "families/enemies/hp_enemy_custodian_foreman_horror/material.json",
+      "geometry": "families/enemies/hp_enemy_custodian_foreman_horror/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 3401280,
+      "vertexCount": 85032,
+      "triangleCount": 28344,
+      "hash": {
+        "geometry": "390142e5fa22ee01",
+        "material": "0b5078d92a98231d"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models-cooked/enemies/hp_enemy_custodian_foreman_horror.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_enemy_reclamation_mother_final_horror": {
+      "modelKey": "hp_enemy_reclamation_mother_final_horror",
+      "family": "enemies",
+      "bundleId": "enemies/hp_enemy_reclamation_mother_final_horror",
+      "version": 1,
+      "status": "ready",
+      "kind": "enemy",
+      "roles": [
+        "enemy"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/enemies/hp_enemy_reclamation_mother_final_horror/manifest.json",
+      "material": "families/enemies/hp_enemy_reclamation_mother_final_horror/material.json",
+      "geometry": "families/enemies/hp_enemy_reclamation_mother_final_horror/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 3424320,
+      "vertexCount": 85608,
+      "triangleCount": 28536,
+      "hash": {
+        "geometry": "d752b3187572a1d5",
+        "material": "85d7ee7ec23f6f47"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_enemy_repair_drone_horror": {
+      "modelKey": "hp_enemy_repair_drone_horror",
+      "family": "enemies",
+      "bundleId": "enemies/hp_enemy_repair_drone_horror",
+      "version": 1,
+      "status": "ready",
+      "kind": "enemy",
+      "roles": [
+        "enemy"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/enemies/hp_enemy_repair_drone_horror/manifest.json",
+      "material": "families/enemies/hp_enemy_repair_drone_horror/material.json",
+      "geometry": "families/enemies/hp_enemy_repair_drone_horror/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 2607840,
+      "vertexCount": 65196,
+      "triangleCount": 21732,
+      "hash": {
+        "geometry": "2fb92bf92e7b6ed7",
+        "material": "272fd9875152c991"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_enemy_shield_technician_horror": {
+      "modelKey": "hp_enemy_shield_technician_horror",
+      "family": "enemies",
+      "bundleId": "enemies/hp_enemy_shield_technician_horror",
+      "version": 1,
+      "status": "ready",
+      "kind": "enemy",
+      "roles": [
+        "enemy"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/enemies/hp_enemy_shield_technician_horror/manifest.json",
+      "material": "families/enemies/hp_enemy_shield_technician_horror/material.json",
+      "geometry": "families/enemies/hp_enemy_shield_technician_horror/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 3063360,
+      "vertexCount": 76584,
+      "triangleCount": 25528,
+      "hash": {
+        "geometry": "b1b127046155d349",
+        "material": "858feb148512f314"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models-cooked/enemies/hp_enemy_shield_technician_horror.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_furniture_residential_entry_bench_cubby_v1": {
+      "modelKey": "hp_furniture_residential_entry_bench_cubby_v1",
+      "family": "level02-false-home",
+      "bundleId": "level02-false-home/hp_furniture_residential_entry_bench_cubby_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-false-home/hp_furniture_residential_entry_bench_cubby_v1/manifest.json",
+      "material": "families/level02-false-home/hp_furniture_residential_entry_bench_cubby_v1/material.json",
+      "geometry": "families/level02-false-home/hp_furniture_residential_entry_bench_cubby_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 386880,
+      "vertexCount": 9672,
+      "triangleCount": 3224,
+      "hash": {
+        "geometry": "099ecf5213c258ff",
+        "material": "ab97aed3fdc8c98c"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_furniture_residential_entry_bench_cubby_v1.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_furniture_residential_fluted_sideboard_v1": {
+      "modelKey": "hp_furniture_residential_fluted_sideboard_v1",
+      "family": "level02-false-home",
+      "bundleId": "level02-false-home/hp_furniture_residential_fluted_sideboard_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-false-home/hp_furniture_residential_fluted_sideboard_v1/manifest.json",
+      "material": "families/level02-false-home/hp_furniture_residential_fluted_sideboard_v1/material.json",
+      "geometry": "families/level02-false-home/hp_furniture_residential_fluted_sideboard_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 262080,
+      "vertexCount": 6552,
+      "triangleCount": 2184,
+      "hash": {
+        "geometry": "ebe5939e80504dd8",
+        "material": "b1122f3c4c1672dc"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_furniture_residential_fluted_sideboard_v1.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_furniture_residential_oval_coffee_table_v1": {
+      "modelKey": "hp_furniture_residential_oval_coffee_table_v1",
+      "family": "level02-false-home",
+      "bundleId": "level02-false-home/hp_furniture_residential_oval_coffee_table_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/manifest.json",
+      "material": "families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/material.json",
+      "geometry": "families/level02-false-home/hp_furniture_residential_oval_coffee_table_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 608160,
+      "vertexCount": 15204,
+      "triangleCount": 5068,
+      "hash": {
+        "geometry": "49281e75dea049a1",
+        "material": "2ead974141c30d28"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_furniture_residential_oval_coffee_table_v1.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_furniture_residential_room_divider_shelf_v1": {
+      "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+      "family": "level02-false-home",
+      "bundleId": "level02-false-home/hp_furniture_residential_room_divider_shelf_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/manifest.json",
+      "material": "families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/material.json",
+      "geometry": "families/level02-false-home/hp_furniture_residential_room_divider_shelf_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 247200,
+      "vertexCount": 6180,
+      "triangleCount": 2060,
+      "hash": {
+        "geometry": "8462a54d9421284d",
+        "material": "d13af249145c59a3"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_l2_cc0_ceiling_lamp_polyhaven_v1": {
+      "modelKey": "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+      "family": "level02-false-home",
+      "bundleId": "level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/manifest.json",
+      "material": "families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/material.json",
+      "geometry": "families/level02-false-home/hp_l2_cc0_ceiling_lamp_polyhaven_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 832320,
+      "vertexCount": 20808,
+      "triangleCount": 6936,
+      "hash": {
+        "geometry": "0c54b04292e9589f",
+        "material": "dc2b022d624ea642"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ceiling_lamp_polyhaven_v1.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_l2_cc0_dining_chair_polyhaven_v1": {
+      "modelKey": "hp_l2_cc0_dining_chair_polyhaven_v1",
+      "family": "level02-false-home",
+      "bundleId": "level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/manifest.json",
+      "material": "families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/material.json",
+      "geometry": "families/level02-false-home/hp_l2_cc0_dining_chair_polyhaven_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 2067240,
+      "vertexCount": 51681,
+      "triangleCount": 17227,
+      "hash": {
+        "geometry": "c63a53c9b3bff80b",
+        "material": "c9232ae29ef89154"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_dining_chair_polyhaven_v1.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_l2_cc0_ottoman_polyhaven_v1": {
+      "modelKey": "hp_l2_cc0_ottoman_polyhaven_v1",
+      "family": "level02-false-home",
+      "bundleId": "level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/manifest.json",
+      "material": "families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/material.json",
+      "geometry": "families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 534000,
+      "vertexCount": 13350,
+      "triangleCount": 4450,
+      "hash": {
+        "geometry": "42d52ae877d2ed1c",
+        "material": "fa86253ff31ddee0"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "hp_l2_cc0_wall_mirror_polyhaven_v1": {
+      "modelKey": "hp_l2_cc0_wall_mirror_polyhaven_v1",
+      "family": "level02-false-home",
+      "bundleId": "level02-false-home/hp_l2_cc0_wall_mirror_polyhaven_v1",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-false-home/hp_l2_cc0_wall_mirror_polyhaven_v1/manifest.json",
+      "material": "families/level02-false-home/hp_l2_cc0_wall_mirror_polyhaven_v1/material.json",
+      "geometry": "families/level02-false-home/hp_l2_cc0_wall_mirror_polyhaven_v1/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 1303080,
+      "vertexCount": 32577,
+      "triangleCount": 10859,
+      "hash": {
+        "geometry": "7d34106676ad1f1a",
+        "material": "fab4c5c98bf2abc0"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_wall_mirror_polyhaven_v1.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "light_ceiling_flicker_cyan_2m": {
+      "modelKey": "light_ceiling_flicker_cyan_2m",
+      "family": "shared",
+      "bundleId": "shared/light_ceiling_flicker_cyan_2m",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/light_ceiling_flicker_cyan_2m/manifest.json",
+      "material": "families/shared/light_ceiling_flicker_cyan_2m/material.json",
+      "geometry": "families/shared/light_ceiling_flicker_cyan_2m/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 4320,
+      "vertexCount": 108,
+      "triangleCount": 36,
+      "hash": {
+        "geometry": "77f3f685ff6f5593",
+        "material": "d30000837ed5c471"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "light_wall_medical_strip_cyan_1m": {
+      "modelKey": "light_wall_medical_strip_cyan_1m",
+      "family": "level01-maintenance",
+      "bundleId": "level01-maintenance/light_wall_medical_strip_cyan_1m",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/level01-maintenance/light_wall_medical_strip_cyan_1m/manifest.json",
+      "material": "families/level01-maintenance/light_wall_medical_strip_cyan_1m/material.json",
+      "geometry": "families/level01-maintenance/light_wall_medical_strip_cyan_1m/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 2880,
+      "vertexCount": 72,
+      "triangleCount": 24,
+      "hash": {
+        "geometry": "f54f5f9eca778bf2",
+        "material": "e482135833be5d45"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models/environment/level01/hp_light_wall_medical_strip_cyan_1m.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "pickup_energy_cell_amber": {
+      "modelKey": "pickup_energy_cell_amber",
+      "family": "pickups",
+      "bundleId": "pickups/pickup_energy_cell_amber",
+      "version": 1,
+      "status": "ready",
+      "kind": "pickup",
+      "roles": [
+        "pickup"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/pickups/pickup_energy_cell_amber/manifest.json",
+      "material": "families/pickups/pickup_energy_cell_amber/material.json",
+      "geometry": "families/pickups/pickup_energy_cell_amber/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 443520,
+      "vertexCount": 11088,
+      "triangleCount": 3696,
+      "hash": {
+        "geometry": "f4fa62e99e170f83",
+        "material": "b62c737ac280f6f7"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_pickup_energy_cell_amber.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "pickup_iron_rod_viewmodel_battleworn": {
+      "modelKey": "pickup_iron_rod_viewmodel_battleworn",
+      "family": "viewmodels",
+      "bundleId": "viewmodels/pickup_iron_rod_viewmodel_battleworn",
+      "version": 1,
+      "status": "ready",
+      "kind": "viewmodel",
+      "roles": [
+        "pickup",
+        "viewmodel"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/viewmodels/pickup_iron_rod_viewmodel_battleworn/manifest.json",
+      "material": "families/viewmodels/pickup_iron_rod_viewmodel_battleworn/material.json",
+      "geometry": "families/viewmodels/pickup_iron_rod_viewmodel_battleworn/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 3919200,
+      "vertexCount": 97980,
+      "triangleCount": 32660,
+      "hash": {
+        "geometry": "1261339fef23b927",
+        "material": "ffceb2395fd7bb28"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/viewmodel/hp_viewmodel_iron_rod_wgpu_battleworn.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "pickup_large_yellow_key": {
+      "modelKey": "pickup_large_yellow_key",
+      "family": "pickups",
+      "bundleId": "pickups/pickup_large_yellow_key",
+      "version": 1,
+      "status": "ready",
+      "kind": "pickup",
+      "roles": [
+        "pickup"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/pickups/pickup_large_yellow_key/manifest.json",
+      "material": "families/pickups/pickup_large_yellow_key/material.json",
+      "geometry": "families/pickups/pickup_large_yellow_key/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 637920,
+      "vertexCount": 15948,
+      "triangleCount": 5316,
+      "hash": {
+        "geometry": "68c846986602b4a8",
+        "material": "a265b307f1707e98"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_03_human_museum",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_03_human_museum.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_03_human_museum_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_pickup_large_yellow_key.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_03_human_museum",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "pickup_medkit_white_red": {
+      "modelKey": "pickup_medkit_white_red",
+      "family": "pickups",
+      "bundleId": "pickups/pickup_medkit_white_red",
+      "version": 1,
+      "status": "ready",
+      "kind": "pickup",
+      "roles": [
+        "pickup"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/pickups/pickup_medkit_white_red/manifest.json",
+      "material": "families/pickups/pickup_medkit_white_red/material.json",
+      "geometry": "families/pickups/pickup_medkit_white_red/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 298080,
+      "vertexCount": 7452,
+      "triangleCount": 2484,
+      "hash": {
+        "geometry": "dd798abd4fcdf37d",
+        "material": "cbe7ca242db80d2d"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_pickup_medkit_white_red.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "pickup_sidearm_viewmodel_battleworn": {
+      "modelKey": "pickup_sidearm_viewmodel_battleworn",
+      "family": "viewmodels",
+      "bundleId": "viewmodels/pickup_sidearm_viewmodel_battleworn",
+      "version": 1,
+      "status": "ready",
+      "kind": "viewmodel",
+      "roles": [
+        "pickup",
+        "viewmodel"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/viewmodels/pickup_sidearm_viewmodel_battleworn/manifest.json",
+      "material": "families/viewmodels/pickup_sidearm_viewmodel_battleworn/material.json",
+      "geometry": "families/viewmodels/pickup_sidearm_viewmodel_battleworn/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 5065920,
+      "vertexCount": 126648,
+      "triangleCount": 42216,
+      "hash": {
+        "geometry": "dd066ee48f6248f3",
+        "material": "f5cfdc0438f790e4"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/viewmodel/hp_viewmodel_sidearm_wgpu_battleworn.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "puzzle_console_color_sequence": {
+      "modelKey": "puzzle_console_color_sequence",
+      "family": "puzzle",
+      "bundleId": "puzzle/puzzle_console_color_sequence",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "surface",
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/puzzle/puzzle_console_color_sequence/manifest.json",
+      "material": "families/puzzle/puzzle_console_color_sequence/material.json",
+      "geometry": "families/puzzle/puzzle_console_color_sequence/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 1209600,
+      "vertexCount": 30240,
+      "triangleCount": 10080,
+      "hash": {
+        "geometry": "f4778c25eba3a796",
+        "material": "de23d5b8ffcb2dd8"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_03_human_museum",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_03_human_museum.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_03_human_museum_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_color_sequence.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_03_human_museum",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "puzzle_orb_free_blue": {
+      "modelKey": "puzzle_orb_free_blue",
+      "family": "puzzle-orb",
+      "bundleId": "puzzle-orb/puzzle_orb_free_blue",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation",
+        "shared_free_puzzle_orb_family_v1"
+      ],
+      "manifest": "families/puzzle-orb/puzzle_orb_free_blue/manifest.json",
+      "material": "families/puzzle-orb/puzzle_orb_free_blue/material.json",
+      "geometry": "families/puzzle-orb/puzzle_orb_free_blue/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 336960,
+      "vertexCount": 8424,
+      "triangleCount": 2808,
+      "hash": {
+        "geometry": "ecf6d193879b47eb",
+        "material": "43d566fb8ced6d89"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_free_puzzle_orbs",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#procedural-free-puzzle-orbs",
+        "sourceGeometry": "procedural:free-puzzle-orb-v1",
+        "rawFile": null,
+        "rawSource": "procedural-free-puzzle-orb-v1",
+        "sourceLevels": [
+          "level_02_residential_simulation",
+          "shared_free_puzzle_orb_family_v1"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_free_puzzle_orbs",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "puzzle_orb_free_cyan": {
+      "modelKey": "puzzle_orb_free_cyan",
+      "family": "puzzle-orb",
+      "bundleId": "puzzle-orb/puzzle_orb_free_cyan",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "shared_free_puzzle_orb_family_v1"
+      ],
+      "manifest": "families/puzzle-orb/puzzle_orb_free_cyan/manifest.json",
+      "material": "families/puzzle-orb/puzzle_orb_free_cyan/material.json",
+      "geometry": "families/puzzle-orb/puzzle_orb_free_cyan/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 336960,
+      "vertexCount": 8424,
+      "triangleCount": 2808,
+      "hash": {
+        "geometry": "2dd5aef18d86de5c",
+        "material": "716a419f45643672"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_free_puzzle_orbs",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#procedural-free-puzzle-orbs",
+        "sourceGeometry": "procedural:free-puzzle-orb-v1",
+        "rawFile": null,
+        "rawSource": "procedural-free-puzzle-orb-v1",
+        "sourceLevels": [
+          "shared_free_puzzle_orb_family_v1"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_free_puzzle_orbs",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "puzzle_orb_free_green": {
+      "modelKey": "puzzle_orb_free_green",
+      "family": "puzzle-orb",
+      "bundleId": "puzzle-orb/puzzle_orb_free_green",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation",
+        "shared_free_puzzle_orb_family_v1"
+      ],
+      "manifest": "families/puzzle-orb/puzzle_orb_free_green/manifest.json",
+      "material": "families/puzzle-orb/puzzle_orb_free_green/material.json",
+      "geometry": "families/puzzle-orb/puzzle_orb_free_green/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 336960,
+      "vertexCount": 8424,
+      "triangleCount": 2808,
+      "hash": {
+        "geometry": "83900c7aea70f55a",
+        "material": "71e6131acb04f94c"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_free_puzzle_orbs",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#procedural-free-puzzle-orbs",
+        "sourceGeometry": "procedural:free-puzzle-orb-v1",
+        "rawFile": null,
+        "rawSource": "procedural-free-puzzle-orb-v1",
+        "sourceLevels": [
+          "level_02_residential_simulation",
+          "shared_free_puzzle_orb_family_v1"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_free_puzzle_orbs",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "puzzle_orb_free_purple": {
+      "modelKey": "puzzle_orb_free_purple",
+      "family": "puzzle-orb",
+      "bundleId": "puzzle-orb/puzzle_orb_free_purple",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "shared_free_puzzle_orb_family_v1"
+      ],
+      "manifest": "families/puzzle-orb/puzzle_orb_free_purple/manifest.json",
+      "material": "families/puzzle-orb/puzzle_orb_free_purple/material.json",
+      "geometry": "families/puzzle-orb/puzzle_orb_free_purple/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 336960,
+      "vertexCount": 8424,
+      "triangleCount": 2808,
+      "hash": {
+        "geometry": "3a7a70b6c8a6e372",
+        "material": "97af584bd7d58b97"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_free_puzzle_orbs",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#procedural-free-puzzle-orbs",
+        "sourceGeometry": "procedural:free-puzzle-orb-v1",
+        "rawFile": null,
+        "rawSource": "procedural-free-puzzle-orb-v1",
+        "sourceLevels": [
+          "shared_free_puzzle_orb_family_v1"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_free_puzzle_orbs",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "puzzle_orb_free_red": {
+      "modelKey": "puzzle_orb_free_red",
+      "family": "puzzle-orb",
+      "bundleId": "puzzle-orb/puzzle_orb_free_red",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation",
+        "shared_free_puzzle_orb_family_v1"
+      ],
+      "manifest": "families/puzzle-orb/puzzle_orb_free_red/manifest.json",
+      "material": "families/puzzle-orb/puzzle_orb_free_red/material.json",
+      "geometry": "families/puzzle-orb/puzzle_orb_free_red/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 336960,
+      "vertexCount": 8424,
+      "triangleCount": 2808,
+      "hash": {
+        "geometry": "43f402f2913f3383",
+        "material": "e982aaf80b126844"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_free_puzzle_orbs",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#procedural-free-puzzle-orbs",
+        "sourceGeometry": "procedural:free-puzzle-orb-v1",
+        "rawFile": null,
+        "rawSource": "procedural-free-puzzle-orb-v1",
+        "sourceLevels": [
+          "level_02_residential_simulation",
+          "shared_free_puzzle_orb_family_v1"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_free_puzzle_orbs",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "puzzle_orb_free_white": {
+      "modelKey": "puzzle_orb_free_white",
+      "family": "puzzle-orb",
+      "bundleId": "puzzle-orb/puzzle_orb_free_white",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "shared_free_puzzle_orb_family_v1"
+      ],
+      "manifest": "families/puzzle-orb/puzzle_orb_free_white/manifest.json",
+      "material": "families/puzzle-orb/puzzle_orb_free_white/material.json",
+      "geometry": "families/puzzle-orb/puzzle_orb_free_white/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 336960,
+      "vertexCount": 8424,
+      "triangleCount": 2808,
+      "hash": {
+        "geometry": "4a59abf9f8ee6c15",
+        "material": "2dfb88a0f736bc12"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_free_puzzle_orbs",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#procedural-free-puzzle-orbs",
+        "sourceGeometry": "procedural:free-puzzle-orb-v1",
+        "rawFile": null,
+        "rawSource": "procedural-free-puzzle-orb-v1",
+        "sourceLevels": [
+          "shared_free_puzzle_orb_family_v1"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_free_puzzle_orbs",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "puzzle_orb_free_yellow": {
+      "modelKey": "puzzle_orb_free_yellow",
+      "family": "puzzle-orb",
+      "bundleId": "puzzle-orb/puzzle_orb_free_yellow",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "shared_free_puzzle_orb_family_v1"
+      ],
+      "manifest": "families/puzzle-orb/puzzle_orb_free_yellow/manifest.json",
+      "material": "families/puzzle-orb/puzzle_orb_free_yellow/material.json",
+      "geometry": "families/puzzle-orb/puzzle_orb_free_yellow/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 336960,
+      "vertexCount": 8424,
+      "triangleCount": 2808,
+      "hash": {
+        "geometry": "ca1fa759adce1a37",
+        "material": "a25338b7cab395c6"
+      },
+      "quality": {
+        "tier": "hero-or-puzzle",
+        "baseColorTarget": 1024,
+        "normalTarget": 1024,
+        "ormTarget": 512,
+        "emissiveTarget": 1024,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "assets_v1_free_puzzle_orbs",
+        "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#procedural-free-puzzle-orbs",
+        "sourceGeometry": "procedural:free-puzzle-orb-v1",
+        "rawFile": null,
+        "rawSource": "procedural-free-puzzle-orb-v1",
+        "sourceLevels": [
+          "shared_free_puzzle_orb_family_v1"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "assets_v1_free_puzzle_orbs",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_chair_service": {
+      "modelKey": "room_chair_service",
+      "family": "shared",
+      "bundleId": "shared/room_chair_service",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_chair_service/manifest.json",
+      "material": "families/shared/room_chair_service/material.json",
+      "geometry": "families/shared/room_chair_service/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 439680,
+      "vertexCount": 10992,
+      "triangleCount": 3664,
+      "hash": {
+        "geometry": "0fef4c1f375fcb44",
+        "material": "bdf3371adf2dc621"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_room_chair_service.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_crate_stack": {
+      "modelKey": "room_crate_stack",
+      "family": "shared",
+      "bundleId": "shared/room_crate_stack",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_crate_stack/manifest.json",
+      "material": "families/shared/room_crate_stack/material.json",
+      "geometry": "families/shared/room_crate_stack/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 699840,
+      "vertexCount": 17496,
+      "triangleCount": 5832,
+      "hash": {
+        "geometry": "a10e853544ab9307",
+        "material": "1be0d432041cb6f8"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_room_crate_stack.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l01_p10": {
+      "modelKey": "room_l01_p10",
+      "family": "shared",
+      "bundleId": "shared/room_l01_p10",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_l01_p10/manifest.json",
+      "material": "families/shared/room_l01_p10/material.json",
+      "geometry": "families/shared/room_l01_p10/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 146400,
+      "vertexCount": 3660,
+      "triangleCount": 1220,
+      "hash": {
+        "geometry": "da90bbb2066bfd23",
+        "material": "4a56a19d0f352cd7"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/props/hp_room_l01_p10.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l09_p02": {
+      "modelKey": "room_l09_p02",
+      "family": "puzzle",
+      "bundleId": "puzzle/room_l09_p02",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/puzzle/room_l09_p02/manifest.json",
+      "material": "families/puzzle/room_l09_p02/material.json",
+      "geometry": "families/puzzle/room_l09_p02/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 285600,
+      "vertexCount": 7140,
+      "triangleCount": 2380,
+      "hash": {
+        "geometry": "4f29b811e01fe38f",
+        "material": "cac8f1f01caa5ec6"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/props/hp_room_l09_p02.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l09_p05": {
+      "modelKey": "room_l09_p05",
+      "family": "puzzle",
+      "bundleId": "puzzle/room_l09_p05",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/puzzle/room_l09_p05/manifest.json",
+      "material": "families/puzzle/room_l09_p05/material.json",
+      "geometry": "families/puzzle/room_l09_p05/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 250320,
+      "vertexCount": 6258,
+      "triangleCount": 2086,
+      "hash": {
+        "geometry": "892a45b2a58259f0",
+        "material": "4284040efc6c9faf"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/props/hp_room_l09_p05.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l09_p07": {
+      "modelKey": "room_l09_p07",
+      "family": "puzzle",
+      "bundleId": "puzzle/room_l09_p07",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/puzzle/room_l09_p07/manifest.json",
+      "material": "families/puzzle/room_l09_p07/material.json",
+      "geometry": "families/puzzle/room_l09_p07/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 152880,
+      "vertexCount": 3822,
+      "triangleCount": 1274,
+      "hash": {
+        "geometry": "ba127760ff1a6ceb",
+        "material": "92c7c0dc39942efc"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/props/hp_room_l09_p07.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l09_p09": {
+      "modelKey": "room_l09_p09",
+      "family": "puzzle",
+      "bundleId": "puzzle/room_l09_p09",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/puzzle/room_l09_p09/manifest.json",
+      "material": "families/puzzle/room_l09_p09/material.json",
+      "geometry": "families/puzzle/room_l09_p09/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 177600,
+      "vertexCount": 4440,
+      "triangleCount": 1480,
+      "hash": {
+        "geometry": "4772707dc460b1db",
+        "material": "d68f330ea9911c6a"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/props/hp_room_l09_p09.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l1_img2_body_reference_lightbox": {
+      "modelKey": "room_l1_img2_body_reference_lightbox",
+      "family": "shared",
+      "bundleId": "shared/room_l1_img2_body_reference_lightbox",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_l1_img2_body_reference_lightbox/manifest.json",
+      "material": "families/shared/room_l1_img2_body_reference_lightbox/material.json",
+      "geometry": "families/shared/room_l1_img2_body_reference_lightbox/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 203040,
+      "vertexCount": 5076,
+      "triangleCount": 1692,
+      "hash": {
+        "geometry": "29ce516363d59761",
+        "material": "f7ede958b0181b15"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_body_reference_lightbox.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l1_img2_cable_reel_cart": {
+      "modelKey": "room_l1_img2_cable_reel_cart",
+      "family": "shared",
+      "bundleId": "shared/room_l1_img2_cable_reel_cart",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_l1_img2_cable_reel_cart/manifest.json",
+      "material": "families/shared/room_l1_img2_cable_reel_cart/material.json",
+      "geometry": "families/shared/room_l1_img2_cable_reel_cart/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 616800,
+      "vertexCount": 15420,
+      "triangleCount": 5140,
+      "hash": {
+        "geometry": "e466d834388174bb",
+        "material": "8c221f83045b27ac"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01-furniture-image2/room_l1_img2_cable_reel_cart.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l1_img2_maintenance_privacy_screen": {
+      "modelKey": "room_l1_img2_maintenance_privacy_screen",
+      "family": "level01-maintenance",
+      "bundleId": "level01-maintenance/room_l1_img2_maintenance_privacy_screen",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/level01-maintenance/room_l1_img2_maintenance_privacy_screen/manifest.json",
+      "material": "families/level01-maintenance/room_l1_img2_maintenance_privacy_screen/material.json",
+      "geometry": "families/level01-maintenance/room_l1_img2_maintenance_privacy_screen/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 770880,
+      "vertexCount": 19272,
+      "triangleCount": 6424,
+      "hash": {
+        "geometry": "884b0c069ab6bcb7",
+        "material": "5ee871eb4c41bfca"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_maintenance_privacy_screen.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l1_img2_sterile_tool_rack": {
+      "modelKey": "room_l1_img2_sterile_tool_rack",
+      "family": "shared",
+      "bundleId": "shared/room_l1_img2_sterile_tool_rack",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_l1_img2_sterile_tool_rack/manifest.json",
+      "material": "families/shared/room_l1_img2_sterile_tool_rack/material.json",
+      "geometry": "families/shared/room_l1_img2_sterile_tool_rack/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 362400,
+      "vertexCount": 9060,
+      "triangleCount": 3020,
+      "hash": {
+        "geometry": "dce71f09981fbb5b",
+        "material": "0e97f03b6b8f9298"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01-furniture-image2/room_l1_img2_sterile_tool_rack.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l1_img2_sterile_wash_basin": {
+      "modelKey": "room_l1_img2_sterile_wash_basin",
+      "family": "shared",
+      "bundleId": "shared/room_l1_img2_sterile_wash_basin",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_l1_img2_sterile_wash_basin/manifest.json",
+      "material": "families/shared/room_l1_img2_sterile_wash_basin/material.json",
+      "geometry": "families/shared/room_l1_img2_sterile_wash_basin/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 165120,
+      "vertexCount": 4128,
+      "triangleCount": 1376,
+      "hash": {
+        "geometry": "1e6dc33868254da0",
+        "material": "8b0377dbf7189298"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_sterile_wash_basin.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l1_img2_wall_tool_board": {
+      "modelKey": "room_l1_img2_wall_tool_board",
+      "family": "shared",
+      "bundleId": "shared/room_l1_img2_wall_tool_board",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_l1_img2_wall_tool_board/manifest.json",
+      "material": "families/shared/room_l1_img2_wall_tool_board/material.json",
+      "geometry": "families/shared/room_l1_img2_wall_tool_board/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 560160,
+      "vertexCount": 14004,
+      "triangleCount": 4668,
+      "hash": {
+        "geometry": "03af52e9e379813f",
+        "material": "6480eca3b7d89180"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_wall_tool_board.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l1_img2_warning_barrier": {
+      "modelKey": "room_l1_img2_warning_barrier",
+      "family": "shared",
+      "bundleId": "shared/room_l1_img2_warning_barrier",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_l1_img2_warning_barrier/manifest.json",
+      "material": "families/shared/room_l1_img2_warning_barrier/material.json",
+      "geometry": "families/shared/room_l1_img2_warning_barrier/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 310080,
+      "vertexCount": 7752,
+      "triangleCount": 2584,
+      "hash": {
+        "geometry": "bfa32b5b2a918882",
+        "material": "8159db46299fc3c0"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_warning_barrier.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l2_img2_carekeeper_armchair": {
+      "modelKey": "room_l2_img2_carekeeper_armchair",
+      "family": "level02-image2",
+      "bundleId": "level02-image2/room_l2_img2_carekeeper_armchair",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-image2/room_l2_img2_carekeeper_armchair/manifest.json",
+      "material": "families/level02-image2/room_l2_img2_carekeeper_armchair/material.json",
+      "geometry": "families/level02-image2/room_l2_img2_carekeeper_armchair/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 1967040,
+      "vertexCount": 49176,
+      "triangleCount": 16392,
+      "hash": {
+        "geometry": "95988b108c72e715",
+        "material": "545a1742dc45f9b3"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_carekeeper_armchair.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l2_img2_family_portrait_console": {
+      "modelKey": "room_l2_img2_family_portrait_console",
+      "family": "level02-image2",
+      "bundleId": "level02-image2/room_l2_img2_family_portrait_console",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-image2/room_l2_img2_family_portrait_console/manifest.json",
+      "material": "families/level02-image2/room_l2_img2_family_portrait_console/material.json",
+      "geometry": "families/level02-image2/room_l2_img2_family_portrait_console/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 279360,
+      "vertexCount": 6984,
+      "triangleCount": 2328,
+      "hash": {
+        "geometry": "ef9b45d4b0a1b7d2",
+        "material": "66fbfd1e105b4bc1"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_family_portrait_console.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l2_img2_modular_sofa": {
+      "modelKey": "room_l2_img2_modular_sofa",
+      "family": "level02-image2",
+      "bundleId": "level02-image2/room_l2_img2_modular_sofa",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-image2/room_l2_img2_modular_sofa/manifest.json",
+      "material": "families/level02-image2/room_l2_img2_modular_sofa/material.json",
+      "geometry": "families/level02-image2/room_l2_img2_modular_sofa/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 1964640,
+      "vertexCount": 49116,
+      "triangleCount": 16372,
+      "hash": {
+        "geometry": "ba3962a981d5fb98",
+        "material": "af12a2a5e26a6868"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_modular_sofa.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_l2_img2_observation_dining_table": {
+      "modelKey": "room_l2_img2_observation_dining_table",
+      "family": "level02-image2",
+      "bundleId": "level02-image2/room_l2_img2_observation_dining_table",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/level02-image2/room_l2_img2_observation_dining_table/manifest.json",
+      "material": "families/level02-image2/room_l2_img2_observation_dining_table/material.json",
+      "geometry": "families/level02-image2/room_l2_img2_observation_dining_table/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 881760,
+      "vertexCount": 22044,
+      "triangleCount": 7348,
+      "hash": {
+        "geometry": "b4aadf0e688437f5",
+        "material": "83f88c090afb1c7a"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+        "rawSource": "registered",
+        "sourceLevels": [
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_locker_low": {
+      "modelKey": "room_locker_low",
+      "family": "shared",
+      "bundleId": "shared/room_locker_low",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/shared/room_locker_low/manifest.json",
+      "material": "families/shared/room_locker_low/material.json",
+      "geometry": "families/shared/room_locker_low/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 987360,
+      "vertexCount": 24684,
+      "triangleCount": 8228,
+      "hash": {
+        "geometry": "2d4123bb5e67d735",
+        "material": "94307f2bb1f7747a"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_room_locker_low.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "room_maintenance_supply_cabinet": {
+      "modelKey": "room_maintenance_supply_cabinet",
+      "family": "level01-maintenance",
+      "bundleId": "level01-maintenance/room_maintenance_supply_cabinet",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay"
+      ],
+      "manifest": "families/level01-maintenance/room_maintenance_supply_cabinet/manifest.json",
+      "material": "families/level01-maintenance/room_maintenance_supply_cabinet/material.json",
+      "geometry": "families/level01-maintenance/room_maintenance_supply_cabinet/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 1350720,
+      "vertexCount": 33768,
+      "triangleCount": 11256,
+      "hash": {
+        "geometry": "222a8ef11c31d3ab",
+        "material": "957c9736d257dede"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_01_maintenance_bay",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+        "rawFile": "src/assets/models/environment/props/hp_room_maintenance_supply_cabinet.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_01_maintenance_bay",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "service_elevator_call_buttons": {
+      "modelKey": "service_elevator_call_buttons",
+      "family": "service-elevator",
+      "bundleId": "service-elevator/service_elevator_call_buttons",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/service-elevator/service_elevator_call_buttons/manifest.json",
+      "material": "families/service-elevator/service_elevator_call_buttons/material.json",
+      "geometry": "families/service-elevator/service_elevator_call_buttons/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 37920,
+      "vertexCount": 948,
+      "triangleCount": 316,
+      "hash": {
+        "geometry": "d14de3125521a07d",
+        "material": "1e3aa9e8cef1f1f3"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_02_residential_simulation",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_02_residential_simulation.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_02_residential_simulation_geometry.bin",
+        "rawFile": "src/assets/models/environment/shells/hp_service_elevator_call_buttons.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_02_residential_simulation",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "service_elevator_interior_shell": {
+      "modelKey": "service_elevator_interior_shell",
+      "family": "service-elevator",
+      "bundleId": "service-elevator/service_elevator_interior_shell",
+      "version": 1,
+      "status": "ready",
+      "kind": "furniture",
+      "roles": [
+        "furniture"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/service-elevator/service_elevator_interior_shell/manifest.json",
+      "material": "families/service-elevator/service_elevator_interior_shell/material.json",
+      "geometry": "families/service-elevator/service_elevator_interior_shell/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 31680,
+      "vertexCount": 792,
+      "triangleCount": 264,
+      "hash": {
+        "geometry": "87b54a4adfe90a28",
+        "material": "80f48420943275d5"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "level_02_residential_simulation",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_02_residential_simulation.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_02_residential_simulation_geometry.bin",
+        "rawFile": "src/assets/models/environment/shells/hp_service_elevator_interior_shell.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "level_02_residential_simulation",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "viewmodel_hand_cylindrical_grip_hp_baked": {
+      "modelKey": "viewmodel_hand_cylindrical_grip_hp_baked",
+      "family": "viewmodel-hands",
+      "bundleId": "viewmodel-hands/viewmodel_hand_cylindrical_grip_hp_baked",
+      "version": 1,
+      "status": "ready",
+      "kind": "hand",
+      "roles": [
+        "hand"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/viewmodel-hands/viewmodel_hand_cylindrical_grip_hp_baked/manifest.json",
+      "material": "families/viewmodel-hands/viewmodel_hand_cylindrical_grip_hp_baked/material.json",
+      "geometry": "families/viewmodel-hands/viewmodel_hand_cylindrical_grip_hp_baked/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 4335360,
+      "vertexCount": 108384,
+      "triangleCount": 36128,
+      "hash": {
+        "geometry": "bb4c0b12384b1c09",
+        "material": "0d51fbda4a041555"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/viewmodel/hand-rod-onehand-v1-hp-baked.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    },
+    "viewmodel_hand_pistol_grip_hp_baked": {
+      "modelKey": "viewmodel_hand_pistol_grip_hp_baked",
+      "family": "viewmodel-hands",
+      "bundleId": "viewmodel-hands/viewmodel_hand_pistol_grip_hp_baked",
+      "version": 1,
+      "status": "ready",
+      "kind": "hand",
+      "roles": [
+        "hand"
+      ],
+      "sourceLevels": [
+        "level_01_maintenance_bay",
+        "level_02_residential_simulation"
+      ],
+      "manifest": "families/viewmodel-hands/viewmodel_hand_pistol_grip_hp_baked/manifest.json",
+      "material": "families/viewmodel-hands/viewmodel_hand_pistol_grip_hp_baked/material.json",
+      "geometry": "families/viewmodel-hands/viewmodel_hand_pistol_grip_hp_baked/geometry.raw.bin",
+      "geometryFormat": "raw-float32",
+      "futureGeometryFormat": "meshopt",
+      "geometryBytes": 5717760,
+      "vertexCount": 142944,
+      "triangleCount": 47648,
+      "hash": {
+        "geometry": "63053a1edddd6f0c",
+        "material": "ff9771a36151479b"
+      },
+      "quality": {
+        "tier": "ordinary-furniture",
+        "baseColorTarget": 512,
+        "normalTarget": 512,
+        "ormTarget": 512,
+        "emissiveTarget": 512,
+        "preferredMimeTypes": [
+          "image/avif",
+          "image/webp"
+        ]
+      },
+      "source": {
+        "sourcePackId": "builder_runtime_resources",
+        "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+        "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+        "rawFile": "src/assets/models/viewmodel/hand-sidearm-onehand-v1-hp-baked.glb",
+        "rawSource": "raw-models",
+        "sourceLevels": [
+          "level_01_maintenance_bay",
+          "level_02_residential_simulation"
+        ],
+        "refactor": "phase-1-split-from-legacy-raw-source-pack"
+      },
+      "fallback": {
+        "legacySourcePackId": "builder_runtime_resources",
+        "policy": "Use this bundle first; if it is absent or invalid, fall back to legacy Raw source plans."
+      }
+    }
+  }
+}

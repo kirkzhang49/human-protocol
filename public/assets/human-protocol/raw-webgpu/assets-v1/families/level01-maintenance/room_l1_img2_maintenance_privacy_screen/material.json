@@ -1,0 +1,173 @@
+{
+  "file": "material.json",
+  "hash": "5ee871eb4c41bfca",
+  "materials": [
+    {
+      "index": 709,
+      "id": "mat:builder-resource:l1-safety-brushed-steel:1i2tkla",
+      "name": "l1_safety_brushed_steel",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.5,
+        0.54,
+        0.55,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0.45,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 731,
+      "id": "mat:builder-resource:l1-safety-medical-white-polymer:dxwnu9",
+      "name": "l1_safety_medical_white_polymer",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.86,
+        0.86,
+        0.82,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.68,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 743,
+      "id": "mat:builder-resource:l1-image2-maintenance-privacy-screen-tile:f5uwcb",
+      "name": "l1_image2_maintenance_privacy_screen_tile",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.82,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_safety_storage_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_l1_img2_maintenance_privacy_screen/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_l1_img2_maintenance_privacy_screen/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.345531,
+            "contrast": 0.488284,
+            "chroma": 0.091025,
+            "detail": 0.194501
+          },
+          "generated": false,
+          "layer": 57
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 57,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_l1_img2_maintenance_privacy_screen/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+      "name": "hp_level01_safety_storage_image2_atlas",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/room_l1_img2_maintenance_privacy_screen/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.345531,
+        "contrast": 0.488284,
+        "chroma": 0.091025,
+        "detail": 0.194501
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

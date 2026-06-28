@@ -1,0 +1,1108 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level06_10_hero_v1",
+  "label": "Level 06-10 Hero Machines",
+  "sourceTool": "generate-level06-10-hero-assets.py",
+  "generatedAt": "2026-06-13",
+  "atlas": {
+    "mode": "per-asset",
+    "size": [
+      640,
+      640
+    ],
+    "regions": "src/assets/textures/environment/level06-10-hero/hp_level06_10_hero_atlas.regions.json"
+  },
+  "guiImage2": "src/assets/gui/level06-10-gui-image2-manifest.json",
+  "assets": [
+    {
+      "modelKey": "room_l610_hero_route_switch_console",
+      "label": "轨道路由控制台",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_hero_route_switch_console_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_hero_route_switch_console.glb",
+      "sizeMeters": [
+        1.86,
+        1.022,
+        0.836
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:07",
+        "theme:transit-switchyard",
+        "style:image2",
+        "kind:hero-machine",
+        "family:control_console",
+        "gui:level07_transit_route_switch"
+      ]
+    },
+    {
+      "modelKey": "room_l610_hero_lockdown_override_console",
+      "label": "封锁解除控制台",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_hero_lockdown_override_console_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_hero_lockdown_override_console.glb",
+      "sizeMeters": [
+        1.74,
+        1.095,
+        0.75
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:09",
+        "theme:containment-maintenance",
+        "style:image2",
+        "kind:hero-machine",
+        "family:control_console",
+        "gui:level09_lockdown_override"
+      ]
+    },
+    {
+      "modelKey": "room_l610_hero_final_protocol_console",
+      "label": "终极协议控制台",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_hero_final_protocol_console_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_hero_final_protocol_console.glb",
+      "sizeMeters": [
+        1.34,
+        1.39,
+        1.34
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:10",
+        "theme:core-terminal",
+        "style:image2",
+        "kind:hero-machine",
+        "family:control_console",
+        "gui:level10_final_protocol"
+      ]
+    },
+    {
+      "modelKey": "room_l610_hero_cryo_record_pod",
+      "label": "冷冻档案荚",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_hero_cryo_record_pod_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_hero_cryo_record_pod.glb",
+      "sizeMeters": [
+        0.82,
+        1.76,
+        0.82
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "column",
+      "tags": [
+        "level:06",
+        "theme:cryogenic-records",
+        "style:image2",
+        "kind:hero-machine",
+        "family:display_case",
+        "gui:level06_frozen_archive"
+      ]
+    },
+    {
+      "modelKey": "room_l610_hero_memory_projection_pedestal",
+      "label": "记忆投影展台",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_hero_memory_projection_pedestal_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_hero_memory_projection_pedestal.glb",
+      "sizeMeters": [
+        1.0,
+        1.295,
+        1.0
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:08",
+        "theme:memory-theater",
+        "style:image2",
+        "kind:hero-machine",
+        "family:display_case",
+        "gui:level08_identity_playback"
+      ]
+    },
+    {
+      "modelKey": "room_l610_track_relay_cabinet",
+      "label": "路由继电柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_track_relay_cabinet_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_track_relay_cabinet.glb",
+      "sizeMeters": [
+        0.92,
+        1.902,
+        0.6
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:07",
+        "theme:transit-switchyard",
+        "style:image2",
+        "kind:hero-machine",
+        "family:cabinet",
+        "gui:level07_transit_route_switch"
+      ]
+    },
+    {
+      "modelKey": "room_l610_pressure_containment_tank",
+      "label": "压力收容罐",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_pressure_containment_tank_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_pressure_containment_tank.glb",
+      "sizeMeters": [
+        1.14,
+        1.945,
+        1.0
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "column",
+      "tags": [
+        "level:09",
+        "theme:containment-maintenance",
+        "style:image2",
+        "kind:hero-machine",
+        "family:cabinet",
+        "gui:level09_lockdown_override"
+      ]
+    },
+    {
+      "modelKey": "room_l610_core_server_obelisk",
+      "label": "核心服务器方尖碑",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_core_server_obelisk_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_core_server_obelisk.glb",
+      "sizeMeters": [
+        0.72,
+        2.48,
+        0.72
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "column",
+      "tags": [
+        "level:10",
+        "theme:core-terminal",
+        "style:image2",
+        "kind:hero-machine",
+        "family:cabinet",
+        "gui:level10_final_protocol"
+      ]
+    },
+    {
+      "modelKey": "room_l610_specimen_glass_case",
+      "label": "标本展柜",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_specimen_glass_case_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_specimen_glass_case.glb",
+      "sizeMeters": [
+        0.82,
+        1.335,
+        0.82
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "display_case",
+      "tags": [
+        "level:08",
+        "theme:memory-theater",
+        "style:image2",
+        "kind:hero-machine",
+        "family:display_case"
+      ]
+    },
+    {
+      "modelKey": "room_l610_frozen_archive_terminal",
+      "label": "冷冻档案终端",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_frozen_archive_terminal_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_frozen_archive_terminal.glb",
+      "sizeMeters": [
+        1.32,
+        1.008,
+        0.72
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:06",
+        "theme:cryogenic-records",
+        "style:image2",
+        "kind:hero-machine",
+        "family:control_console",
+        "gui:level06_frozen_archive"
+      ]
+    },
+    {
+      "modelKey": "room_l610_sample_drawer_stack",
+      "label": "样本抽屉柜",
+      "assetKind": "furniture",
+      "family": "drawer_chest",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_sample_drawer_stack_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_sample_drawer_stack.glb",
+      "sizeMeters": [
+        0.92,
+        1.42,
+        0.638
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:06",
+        "theme:cryogenic-records",
+        "style:image2",
+        "kind:hero-machine",
+        "family:drawer_chest"
+      ]
+    },
+    {
+      "modelKey": "room_l610_medical_rail_wall",
+      "label": "医疗导轨墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_medical_rail_wall_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_medical_rail_wall.glb",
+      "sizeMeters": [
+        2.2,
+        2.4,
+        0.3
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:06",
+        "theme:cryogenic-records",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_cold_scan_pedestal",
+      "label": "冷扫描台",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_cold_scan_pedestal_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_cold_scan_pedestal.glb",
+      "sizeMeters": [
+        0.74,
+        0.98,
+        0.74
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:06",
+        "theme:cryogenic-records",
+        "style:image2",
+        "kind:hero-machine",
+        "family:display_case"
+      ]
+    },
+    {
+      "modelKey": "room_l610_defrost_valve_cart",
+      "label": "解冻阀门车",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_defrost_valve_cart_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_defrost_valve_cart.glb",
+      "sizeMeters": [
+        0.693,
+        0.905,
+        0.555
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "crate",
+      "tags": [
+        "level:06",
+        "theme:cryogenic-records",
+        "style:image2",
+        "kind:hero-machine",
+        "family:storage_crate"
+      ]
+    },
+    {
+      "modelKey": "room_l610_manual_lever_bank",
+      "label": "手动拉杆排",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_manual_lever_bank_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_manual_lever_bank.glb",
+      "sizeMeters": [
+        1.0,
+        0.997,
+        0.751
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:07",
+        "theme:transit-switchyard",
+        "style:image2",
+        "kind:hero-machine",
+        "family:control_console"
+      ]
+    },
+    {
+      "modelKey": "room_l610_floor_rail_crossing",
+      "label": "地轨交叉",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_floor_rail_crossing_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_floor_rail_crossing.glb",
+      "sizeMeters": [
+        1.8,
+        0.4,
+        1.8
+      ],
+      "solid": false,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:07",
+        "theme:transit-switchyard",
+        "style:image2",
+        "kind:hero-machine",
+        "family:storage_crate"
+      ]
+    },
+    {
+      "modelKey": "room_l610_signal_light_mast",
+      "label": "信号灯杆",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_signal_light_mast_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_signal_light_mast.glb",
+      "sizeMeters": [
+        0.461,
+        2.08,
+        0.42
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "level:07",
+        "theme:transit-switchyard",
+        "style:image2",
+        "kind:hero-machine",
+        "family:control_console"
+      ]
+    },
+    {
+      "modelKey": "room_l610_maintenance_barrier",
+      "label": "检修护栏",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_maintenance_barrier_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_maintenance_barrier.glb",
+      "sizeMeters": [
+        1.54,
+        1.02,
+        0.3
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:07",
+        "theme:transit-switchyard",
+        "style:image2",
+        "kind:hero-machine",
+        "family:storage_crate"
+      ]
+    },
+    {
+      "modelKey": "room_l610_identity_playback_terminal",
+      "label": "身份回放终端",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_identity_playback_terminal_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_identity_playback_terminal.glb",
+      "sizeMeters": [
+        1.1,
+        1.081,
+        0.642
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:08",
+        "theme:memory-theater",
+        "style:image2",
+        "kind:hero-machine",
+        "family:control_console",
+        "gui:level08_identity_playback"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_memory_screen",
+      "label": "记忆墙屏",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_memory_screen_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_memory_screen.glb",
+      "sizeMeters": [
+        1.84,
+        1.4,
+        0.27
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:08",
+        "theme:memory-theater",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame",
+        "gui:level08_identity_playback"
+      ]
+    },
+    {
+      "modelKey": "room_l610_archive_bench",
+      "label": "档案长椅",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_archive_bench_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_archive_bench.glb",
+      "sizeMeters": [
+        1.61,
+        0.47,
+        0.49
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "level:08",
+        "theme:memory-theater",
+        "style:image2",
+        "kind:hero-machine",
+        "family:sofa_bench"
+      ]
+    },
+    {
+      "modelKey": "room_l610_gallery_stanchion",
+      "label": "展馆护栏柱",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_gallery_stanchion_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_gallery_stanchion.glb",
+      "sizeMeters": [
+        0.28,
+        0.99,
+        0.28
+      ],
+      "solid": false,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "column",
+      "tags": [
+        "level:08",
+        "theme:memory-theater",
+        "style:image2",
+        "kind:hero-machine",
+        "family:display_case"
+      ]
+    },
+    {
+      "modelKey": "room_l610_emergency_breaker_crate",
+      "label": "应急断路箱",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_emergency_breaker_crate_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_emergency_breaker_crate.glb",
+      "sizeMeters": [
+        0.7,
+        0.78,
+        0.645
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "crate",
+      "tags": [
+        "level:09",
+        "theme:containment-maintenance",
+        "style:image2",
+        "kind:hero-machine",
+        "family:storage_crate"
+      ]
+    },
+    {
+      "modelKey": "room_l610_blast_door_segment",
+      "label": "爆破门段",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_blast_door_segment_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_blast_door_segment.glb",
+      "sizeMeters": [
+        2.4,
+        2.6,
+        0.45
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:09",
+        "theme:containment-maintenance",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_pipe_valve_cluster",
+      "label": "管阀组",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_pipe_valve_cluster_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_pipe_valve_cluster.glb",
+      "sizeMeters": [
+        1.0,
+        0.94,
+        0.59
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:09",
+        "theme:containment-maintenance",
+        "style:image2",
+        "kind:hero-machine",
+        "family:control_console"
+      ]
+    },
+    {
+      "modelKey": "room_l610_maintenance_tool_rack",
+      "label": "检修工具架",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_maintenance_tool_rack_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_maintenance_tool_rack.glb",
+      "sizeMeters": [
+        1.4,
+        1.6,
+        0.32
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:09",
+        "theme:containment-maintenance",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_human_echo_screen",
+      "label": "人类回声屏",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_human_echo_screen_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_human_echo_screen.glb",
+      "sizeMeters": [
+        1.0,
+        1.84,
+        0.398
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "display_case",
+      "tags": [
+        "level:10",
+        "theme:core-terminal",
+        "style:image2",
+        "kind:hero-machine",
+        "family:display_case",
+        "gui:level10_final_protocol"
+      ]
+    },
+    {
+      "modelKey": "room_l610_boss_terminal_door",
+      "label": "Boss终端门",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_boss_terminal_door_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_boss_terminal_door.glb",
+      "sizeMeters": [
+        3.0,
+        3.4,
+        0.802
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:10",
+        "theme:core-terminal",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame",
+        "gui:level10_final_protocol"
+      ]
+    },
+    {
+      "modelKey": "room_l610_protocol_cable_spine",
+      "label": "协议电缆脊",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_protocol_cable_spine_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_protocol_cable_spine.glb",
+      "sizeMeters": [
+        1.601,
+        0.31,
+        0.551
+      ],
+      "solid": false,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:10",
+        "theme:core-terminal",
+        "style:image2",
+        "kind:hero-machine",
+        "family:storage_crate"
+      ]
+    },
+    {
+      "modelKey": "room_l610_archive_core_pedestal",
+      "label": "档案核心台",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_archive_core_pedestal_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_archive_core_pedestal.glb",
+      "sizeMeters": [
+        0.56,
+        1.099,
+        0.56
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:10",
+        "theme:core-terminal",
+        "style:image2",
+        "kind:hero-machine",
+        "family:display_case"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_clinic_service",
+      "label": "诊疗服务墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_clinic_service_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_clinic_service.glb",
+      "sizeMeters": [
+        2.2,
+        2.5,
+        0.26
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:06",
+        "theme:wall-clinic-service",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_archive_cabinet",
+      "label": "档案柜墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_archive_cabinet_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_archive_cabinet.glb",
+      "sizeMeters": [
+        2.2,
+        2.5,
+        0.27
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:05",
+        "theme:wall-archive-cabinet",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_museum_brass",
+      "label": "博物馆黄铜墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_museum_brass_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_museum_brass.glb",
+      "sizeMeters": [
+        2.4,
+        2.5,
+        0.295
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:03",
+        "theme:wall-museum-brass",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_machine_relay",
+      "label": "机房继电墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_machine_relay_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_machine_relay.glb",
+      "sizeMeters": [
+        2.2,
+        2.5,
+        0.34
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:08",
+        "theme:wall-machine-relay",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_gallery_glass",
+      "label": "观察玻璃墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_gallery_glass_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_gallery_glass.glb",
+      "sizeMeters": [
+        2.4,
+        2.5,
+        0.33
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:02",
+        "theme:wall-gallery-glass",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_security_corridor",
+      "label": "安防走廊墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_security_corridor_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_security_corridor.glb",
+      "sizeMeters": [
+        2.2,
+        2.5,
+        0.505
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:07",
+        "theme:wall-security-corridor",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_terminal_boss",
+      "label": "终端Boss墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_terminal_boss_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_terminal_boss.glb",
+      "sizeMeters": [
+        2.4,
+        2.6,
+        0.325
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:10",
+        "theme:wall-terminal-boss",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l610_wall_damaged_transition",
+      "label": "损毁过渡墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "level06-10-hero-image2",
+      "sourceAssetId": "room_l610_wall_damaged_transition_v1",
+      "themeId": "hp_level06_10_hero",
+      "glbFile": "../../models-cooked/environment/level06-10-hero/room_l610_wall_damaged_transition.glb",
+      "sizeMeters": [
+        2.2,
+        2.5,
+        0.431
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "wallPreferred": "back",
+      "tags": [
+        "level:09",
+        "theme:wall-damaged-transition",
+        "style:image2",
+        "kind:hero-machine",
+        "family:wall_panel_or_picture_frame"
+      ]
+    }
+  ]
+}

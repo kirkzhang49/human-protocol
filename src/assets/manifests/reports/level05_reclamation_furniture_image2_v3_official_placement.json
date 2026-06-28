@@ -1,0 +1,744 @@
+{
+  "schema": "hp.level05.v3Furniture.officialPlacement.v1",
+  "generatedAt": "2026-06-27",
+  "sourceOfTruth": "src/game/config/levels/level05-reclamation-core/level.official.builder.json",
+  "syncedCampaignCopy": "data/ai/campaign/rb_l5.builder.json",
+  "placementPrefix": "level_05_v3_furniture_",
+  "summary": {
+    "placements": 20,
+    "roomsTouched": [
+      "level_05_core_entry",
+      "level_05_lock_hub",
+      "level_05_platform",
+      "level_05_north_lock",
+      "level_05_east_lock",
+      "level_05_west_lock",
+      "level_05_archive_room"
+    ],
+    "officialPropCount": 25,
+    "campaignPropCount": 25,
+    "campaignLevelPropCount": 25,
+    "campaignCompileIssues": 0
+  },
+  "placementPrinciples": [
+    "Hero/critical-path pieces sit in entry, hub, lock room, and platform.",
+    "Medical furniture clusters in the east lock room.",
+    "Archive/storage furniture clusters in the archive room and west lock room.",
+    "Large props stay off door centers and primary north-south/east-west lanes.",
+    "Wall-mounted cable organizer uses elevation 1.25m and non-floor placement intent."
+  ],
+  "placements": [
+    {
+      "id": "level_05_v3_furniture_intake_identity_gate",
+      "modelKey": "room_l5_v3_intake_identity_gate",
+      "roomId": "level_05_core_entry",
+      "position": [
+        0,
+        20.04
+      ],
+      "rotationY": 3.1416,
+      "scale": 1,
+      "elevation": 0,
+      "label": "入口身份门廊",
+      "role": "entry identity threshold",
+      "footprint": {
+        "label": "L5 V3 Intake Identity Gate",
+        "sizeMeters": [
+          2.98,
+          2.58,
+          0.328
+        ],
+        "family": "wall_panel_or_picture_frame",
+        "solid": false,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 3.51,
+        "right": 3.51,
+        "back": 6.376,
+        "front": 0.296
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_core_route_map_table",
+      "modelKey": "room_l5_v3_core_route_map_table",
+      "roomId": "level_05_lock_hub",
+      "position": [
+        -2.45,
+        7.8
+      ],
+      "rotationY": 0.08,
+      "scale": 0.92,
+      "elevation": 0,
+      "label": "中庭路线桌",
+      "role": "hub planning table",
+      "footprint": {
+        "label": "L5 V3 Core Route Map Table",
+        "sizeMeters": [
+          2,
+          0.988,
+          1.65
+        ],
+        "family": "desk",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 5.63,
+        "right": 10.53,
+        "back": 5.541,
+        "front": 4.941
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_crescent_low_sofa",
+      "modelKey": "room_l5_v3_crescent_low_sofa",
+      "roomId": "level_05_lock_hub",
+      "position": [
+        -6.15,
+        10.6
+      ],
+      "rotationY": 2.72,
+      "scale": 0.9,
+      "elevation": 0,
+      "label": "中庭低沙发",
+      "role": "quiet lounge silhouette",
+      "footprint": {
+        "label": "L5 V3 Crescent Low Sofa",
+        "sizeMeters": [
+          2.384,
+          0.72,
+          1.153
+        ],
+        "family": "sofa_bench",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 1.7772,
+        "right": 14.0772,
+        "back": 8.5811,
+        "front": 2.3812
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_anemone_lounge_chair",
+      "modelKey": "room_l5_v3_anemone_lounge_chair",
+      "roomId": "level_05_lock_hub",
+      "position": [
+        4.95,
+        10.15
+      ],
+      "rotationY": -0.72,
+      "scale": 0.92,
+      "elevation": 0,
+      "label": "中庭海葵椅",
+      "role": "single readable lounge chair",
+      "footprint": {
+        "label": "L5 V3 Anemone Lounge Chair",
+        "sizeMeters": [
+          1.04,
+          1.133,
+          1.04
+        ],
+        "family": "chair",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 13.4716,
+        "right": 3.5716,
+        "back": 8.1716,
+        "front": 2.8716
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_three_lock_monolith",
+      "modelKey": "room_l5_v3_three_lock_monolith",
+      "roomId": "level_05_platform",
+      "position": [
+        -5.95,
+        -9.2
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.94,
+      "elevation": 0,
+      "label": "三联门控柱",
+      "role": "critical-path lock sculpture",
+      "footprint": {
+        "label": "L5 V3 Three Lock Monolith",
+        "sizeMeters": [
+          1.689,
+          2.28,
+          0.448
+        ],
+        "family": "control_console",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 1.2562,
+        "right": 13.1562,
+        "back": 9.0894,
+        "front": 3.4894
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_reclamation_core_altar",
+      "modelKey": "room_l5_v3_reclamation_core_altar",
+      "roomId": "level_05_platform",
+      "position": [
+        0,
+        -12.4
+      ],
+      "rotationY": 0,
+      "scale": 1,
+      "elevation": 0,
+      "label": "回收核心祭台",
+      "role": "hero focal point",
+      "footprint": {
+        "label": "L5 V3 Reclamation Core Altar",
+        "sizeMeters": [
+          1.56,
+          1.232,
+          1.56
+        ],
+        "family": "display_case",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 7.22,
+        "right": 7.22,
+        "back": 5.32,
+        "front": 6.12
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_release_key_vault",
+      "modelKey": "room_l5_v3_release_key_vault",
+      "roomId": "level_05_north_lock",
+      "position": [
+        -3.55,
+        -2.45
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.92,
+      "elevation": 0,
+      "label": "释放钥匙柜",
+      "role": "lock-room vault",
+      "footprint": {
+        "label": "L5 V3 Release Key Vault",
+        "sizeMeters": [
+          1.82,
+          1.735,
+          0.69
+        ],
+        "family": "safe",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 0.1128,
+        "right": 7.2128,
+        "back": 3.2326,
+        "front": 3.6326
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_service_side_console",
+      "modelKey": "room_l5_v3_service_side_console",
+      "roomId": "level_05_north_lock",
+      "position": [
+        3.55,
+        -2.65
+      ],
+      "rotationY": -1.5708,
+      "scale": 0.94,
+      "elevation": 0,
+      "label": "制动侧控台",
+      "role": "lock-room service console",
+      "footprint": {
+        "label": "L5 V3 Service Side Console",
+        "sizeMeters": [
+          1.6,
+          1,
+          0.588
+        ],
+        "family": "control_console",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 7.298,
+        "right": 0.198,
+        "back": 3.0736,
+        "front": 3.8736
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_bio_recline_couch",
+      "modelKey": "room_l5_v3_bio_recline_couch",
+      "roomId": "level_05_east_lock",
+      "position": [
+        13.05,
+        10.55
+      ],
+      "rotationY": 3.1416,
+      "scale": 0.9,
+      "elevation": 0,
+      "label": "生物回收躺椅",
+      "role": "clinic body-position anchor",
+      "footprint": {
+        "label": "L5 V3 Bio Recline Couch",
+        "sizeMeters": [
+          2.55,
+          0.667,
+          1.17
+        ],
+        "family": "bed_or_exam_table",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 2.9025,
+        "right": 2.8025,
+        "back": 6.5235,
+        "front": 0.4235
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_memory_diagnostic_terminal",
+      "modelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "roomId": "level_05_east_lock",
+      "position": [
+        16.15,
+        7.25
+      ],
+      "rotationY": -1.5708,
+      "scale": 0.92,
+      "elevation": 0,
+      "label": "记忆诊断终端",
+      "role": "clinic diagnostic wall station",
+      "footprint": {
+        "label": "L5 V3 Memory Diagnostic Terminal",
+        "sizeMeters": [
+          1.24,
+          2.16,
+          0.579
+        ],
+        "family": "control_console",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 6.5796,
+        "right": 0.2796,
+        "back": 3.4837,
+        "front": 3.9837
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_tissue_freezer_cabinet",
+      "modelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "roomId": "level_05_east_lock",
+      "position": [
+        10.85,
+        4.75
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.9,
+      "elevation": 0,
+      "label": "组织冷柜",
+      "role": "clinic storage mass",
+      "footprint": {
+        "label": "L5 V3 Tissue Freezer Cabinet",
+        "sizeMeters": [
+          1.377,
+          1.755,
+          0.722
+        ],
+        "family": "cabinet",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 1.2303,
+        "right": 5.5304,
+        "back": 0.9251,
+        "front": 6.4251
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_surgical_light_stand",
+      "modelKey": "room_l5_v3_surgical_light_stand",
+      "roomId": "level_05_east_lock",
+      "position": [
+        14.95,
+        9.45
+      ],
+      "rotationY": -0.62,
+      "scale": 0.82,
+      "elevation": 0,
+      "label": "手术灯架",
+      "role": "clinic vertical silhouette",
+      "footprint": {
+        "label": "L5 V3 Surgical Light Stand",
+        "sizeMeters": [
+          1.438,
+          2.692,
+          0.864
+        ],
+        "family": "control_console",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 5.3604,
+        "right": 1.4604,
+        "back": 5.5958,
+        "front": 1.6958
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_corner_privacy_screen",
+      "modelKey": "room_l5_v3_corner_privacy_screen",
+      "roomId": "level_05_east_lock",
+      "position": [
+        15.95,
+        10.58
+      ],
+      "rotationY": -2.35,
+      "scale": 0.86,
+      "elevation": 0,
+      "label": "角落隐私屏风",
+      "role": "clinic corner dressing",
+      "footprint": {
+        "label": "L5 V3 Corner Privacy Screen",
+        "sizeMeters": [
+          2.149,
+          2.005,
+          0.415
+        ],
+        "family": "sofa_bench",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 6.0259,
+        "right": 0.1259,
+        "back": 6.9016,
+        "front": 0.7415
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_limb_calibration_rack",
+      "modelKey": "room_l5_v3_limb_calibration_rack",
+      "roomId": "level_05_west_lock",
+      "position": [
+        -16.25,
+        6.35
+      ],
+      "rotationY": 1.5708,
+      "scale": 0.9,
+      "elevation": 0,
+      "label": "肢体校准架",
+      "role": "reclamation machinery wall rack",
+      "footprint": {
+        "label": "L5 V3 Limb Calibration Rack",
+        "sizeMeters": [
+          1.52,
+          2.28,
+          0.545
+        ],
+        "family": "display_case",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 0.066,
+        "right": 6.566,
+        "back": 2.6047,
+        "front": 4.9047
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_cleaning_robot_dock",
+      "modelKey": "room_l5_v3_cleaning_robot_dock",
+      "roomId": "level_05_west_lock",
+      "position": [
+        -13.2,
+        10.45
+      ],
+      "rotationY": 3.1416,
+      "scale": 0.9,
+      "elevation": 0,
+      "label": "清洁机器人泊位",
+      "role": "low maintenance dock",
+      "footprint": {
+        "label": "L5 V3 Cleaning Robot Dock",
+        "sizeMeters": [
+          1.62,
+          0.445,
+          1.645
+        ],
+        "family": "storage_crate",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 3.071,
+        "right": 3.471,
+        "back": 6.2097,
+        "front": 0.3098
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_hanging_cable_organizer",
+      "modelKey": "room_l5_v3_hanging_cable_organizer",
+      "roomId": "level_05_west_lock",
+      "position": [
+        -9.75,
+        10.45
+      ],
+      "rotationY": -1.5708,
+      "scale": 0.82,
+      "elevation": 1.25,
+      "label": "悬挂线缆整理架",
+      "role": "wall-mounted cable dressing",
+      "wallMount": true,
+      "footprint": {
+        "label": "L5 V3 Hanging Cable Organizer",
+        "sizeMeters": [
+          1.56,
+          1.195,
+          0.551
+        ],
+        "family": "wall_panel_or_picture_frame",
+        "solid": false,
+        "mount": "wall"
+      },
+      "clearanceMeters": {
+        "left": 6.6104,
+        "right": 0.1104,
+        "back": 6.7241,
+        "front": 0.8241
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_human_archive_cabinet",
+      "modelKey": "room_l5_v3_human_archive_cabinet",
+      "roomId": "level_05_archive_room",
+      "position": [
+        14.35,
+        -12.3
+      ],
+      "rotationY": -1.5708,
+      "scale": 0.88,
+      "elevation": 0,
+      "label": "人类档案柜",
+      "role": "archive identity storage",
+      "footprint": {
+        "label": "L5 V3 Human Archive Cabinet",
+        "sizeMeters": [
+          1.26,
+          1.845,
+          0.75
+        ],
+        "family": "bookshelf",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 5.7956,
+        "right": 0.0956,
+        "back": 2.87,
+        "front": 3.47
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_curved_archive_shelf",
+      "modelKey": "room_l5_v3_curved_archive_shelf",
+      "roomId": "level_05_archive_room",
+      "position": [
+        11.55,
+        -15.05
+      ],
+      "rotationY": 3.1416,
+      "scale": 0.88,
+      "elevation": 0,
+      "label": "弧形档案架",
+      "role": "archive back-wall mass",
+      "footprint": {
+        "label": "L5 V3 Curved Archive Shelf",
+        "sizeMeters": [
+          1.822,
+          2.08,
+          0.595
+        ],
+        "family": "bookshelf",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 2.7483,
+        "right": 2.6483,
+        "back": 0.1882,
+        "front": 6.2882
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_specimen_drawer_stack",
+      "modelKey": "room_l5_v3_specimen_drawer_stack",
+      "roomId": "level_05_archive_room",
+      "position": [
+        9.25,
+        -14.45
+      ],
+      "rotationY": 2.38,
+      "scale": 0.86,
+      "elevation": 0,
+      "label": "样本抽屉组",
+      "role": "archive corner vertical stack",
+      "footprint": {
+        "label": "L5 V3 Specimen Drawer Stack",
+        "sizeMeters": [
+          1.015,
+          2.05,
+          0.6
+        ],
+        "family": "drawer_chest",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 0.8135,
+        "right": 5.3136,
+        "back": 0.792,
+        "front": 5.692
+      },
+      "roomExists": true
+    },
+    {
+      "id": "level_05_v3_furniture_evidence_coffee_table",
+      "modelKey": "room_l5_v3_evidence_coffee_table",
+      "roomId": "level_05_archive_room",
+      "position": [
+        11.15,
+        -10.15
+      ],
+      "rotationY": -0.15,
+      "scale": 0.88,
+      "elevation": 0,
+      "label": "证据咖啡桌",
+      "role": "low evidence-reading table",
+      "footprint": {
+        "label": "L5 V3 Evidence Coffee Table",
+        "sizeMeters": [
+          1.74,
+          0.66,
+          0.98
+        ],
+        "family": "desk",
+        "solid": true,
+        "mount": "floor"
+      },
+      "clearanceMeters": {
+        "left": 2.3844,
+        "right": 3.0844,
+        "back": 4.9188,
+        "front": 1.2188
+      },
+      "roomExists": true
+    }
+  ],
+  "surfaceAssessment": {
+    "currentStatus": [
+      "Level 5 already has builder surface presets per room.",
+      "Only the platform room has a known old runtime Image2 hero floor source; this is not a complete new v3 wall/floor/ceiling evidence chain.",
+      "Several core rooms still use procedural floor_reclamation_core_metal / wall_reclamation_core_panel; many ceilings reuse the wall preset."
+    ],
+    "recommendedPath": "Make a dedicated Image2 L5 v3 surface pack first. Use CC0 only if exact source URLs, authors, license pages, local archives, and redistribution notes are recorded before import.",
+    "proposedImage2Presets": {
+      "floor": "floor_level05_reclamation_core_image2_v3",
+      "wall": "wall_level05_reclamation_core_image2_v3",
+      "ceiling": "ceiling_level05_reclamation_core_image2_v3"
+    },
+    "rooms": [
+      {
+        "roomId": "level_05_core_entry",
+        "floorPresetId": "floor_level01_maintenance_image2_v1",
+        "wallPresetId": "wall_level01_maintenance_gunmetal_v1",
+        "ceilingPresetId": "ceiling_level01_maintenance_service_ribs_v1",
+        "surfaceKitId": "hp:industrial_panel_arena_shell_v4_image2_floor"
+      },
+      {
+        "roomId": "level_05_lock_hub",
+        "floorPresetId": "floor_reclamation_core_metal",
+        "wallPresetId": "wall_reclamation_core_panel",
+        "ceilingPresetId": "wall_reclamation_core_panel",
+        "surfaceKitId": "hp:reclamation_core_shell_v1"
+      },
+      {
+        "roomId": "level_05_north_lock",
+        "floorPresetId": "floor_reclamation_core_metal",
+        "wallPresetId": "wall_reclamation_core_panel",
+        "ceilingPresetId": "wall_reclamation_core_panel",
+        "surfaceKitId": "hp:reclamation_core_shell_v1"
+      },
+      {
+        "roomId": "level_05_east_lock",
+        "floorPresetId": "floor_level01_maintenance_image2_v1",
+        "wallPresetId": "wall_level01_maintenance_gunmetal_v1",
+        "ceilingPresetId": "ceiling_level01_maintenance_service_ribs_v1",
+        "surfaceKitId": "hp:industrial_panel_arena_shell_v4_image2_floor"
+      },
+      {
+        "roomId": "level_05_west_lock",
+        "floorPresetId": "floor_reclamation_core_metal",
+        "wallPresetId": "wall_reclamation_core_panel",
+        "ceilingPresetId": "wall_reclamation_core_panel",
+        "surfaceKitId": "hp:reclamation_core_shell_v1"
+      },
+      {
+        "roomId": "level_05_platform",
+        "floorPresetId": "floor_reclamation_core_metal",
+        "wallPresetId": "wall_reclamation_core_panel",
+        "ceilingPresetId": "wall_reclamation_core_panel",
+        "surfaceKitId": "hp:reclamation_core_shell_v1"
+      },
+      {
+        "roomId": "level_05_archive_room",
+        "floorPresetId": "floor_memory_clinic_tile",
+        "wallPresetId": "wall_memory_clinic_panel",
+        "ceilingPresetId": "wall_memory_clinic_panel",
+        "surfaceKitId": "hp:memory_clinic_shell_v1"
+      },
+      {
+        "roomId": "level_05_identity_file",
+        "floorPresetId": "floor_dark_rubber",
+        "wallPresetId": "wall_dark_metal_panel",
+        "ceilingPresetId": "wall_dark_metal_panel",
+        "surfaceKitId": null
+      }
+    ]
+  }
+}

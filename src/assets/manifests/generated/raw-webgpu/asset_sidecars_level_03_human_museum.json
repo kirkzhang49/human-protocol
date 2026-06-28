@@ -1,0 +1,413 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar-index.v1",
+  "levelId": "level_03_human_museum",
+  "generatedBy": "tools/raw-webgpu-compiler/compile-raw-webgpu-render-plan.mjs",
+  "sidecarCount": 45,
+  "sidecars": [
+    {
+      "modelKey": "age_museum_gallery_door",
+      "category": "door",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_gallery_door.glb",
+      "fileName": "age_museum_gallery_door.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_gallery_door/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "door_service_elevator_inner_cyan",
+      "category": "door",
+      "file": "src/assets/models-cooked/environment/level01/hp_door_service_elevator_inner_cyan.glb",
+      "fileName": "hp_door_service_elevator_inner_cyan.glb",
+      "sidecar": "src/assets/models-cooked/environment/level01/hp_door_service_elevator_inner_cyan/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_clamp_repair_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_clamp_repair_horror.glb",
+      "fileName": "hp_enemy_clamp_repair_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_clamp_repair_horror/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": "hp_enemy_clamp_repair_horror",
+      "ruleFileName": "hp_enemy_clamp_repair_horror.glb"
+    },
+    {
+      "modelKey": "hp_enemy_custodian_foreman_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_custodian_foreman_horror.glb",
+      "fileName": "hp_enemy_custodian_foreman_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_custodian_foreman_horror/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_reclamation_mother_final_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror.glb",
+      "fileName": "hp_enemy_reclamation_mother_final_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_repair_drone_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror.glb",
+      "fileName": "hp_enemy_repair_drone_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": "hp_enemy_repair_drone_horror",
+      "ruleFileName": "hp_enemy_repair_drone_horror.glb"
+    },
+    {
+      "modelKey": "hp_enemy_shield_technician_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_shield_technician_horror.glb",
+      "fileName": "hp_enemy_shield_technician_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_shield_technician_horror/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "ability_protocol_breach_charge_v1",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_charge_v1.glb",
+      "fileName": "hp_ability_protocol_breach_charge_v1.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_charge_v1/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "ability_protocol_breach_missile_v1",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_missile_v1.glb",
+      "fileName": "hp_ability_protocol_breach_missile_v1.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_missile_v1/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_blue",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_blue.glb",
+      "fileName": "age_museum_puzzle_orb_blue.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_blue/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_green",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_green.glb",
+      "fileName": "age_museum_puzzle_orb_green.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_green/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_purple",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_purple.glb",
+      "fileName": "age_museum_puzzle_orb_purple.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_purple/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_red",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_red.glb",
+      "fileName": "age_museum_puzzle_orb_red.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_red/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_yellow",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_yellow.glb",
+      "fileName": "age_museum_puzzle_orb_yellow.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_yellow/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "builder_route_switch_console",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_builder_route_switch_console.glb",
+      "fileName": "hp_builder_route_switch_console.glb",
+      "sidecar": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_builder_route_switch_console/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "puzzle_console_color_sequence",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_color_sequence.glb",
+      "fileName": "hp_puzzle_console_color_sequence.glb",
+      "sidecar": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_color_sequence/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "service_elevator_call_buttons",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/shells/hp_service_elevator_call_buttons.glb",
+      "fileName": "hp_service_elevator_call_buttons.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_service_elevator_call_buttons/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_energy_cell_amber",
+      "category": "pickup",
+      "file": "src/assets/models-cooked/environment/props/hp_pickup_energy_cell_amber.glb",
+      "fileName": "hp_pickup_energy_cell_amber.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_pickup_energy_cell_amber/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": "pickup_energy_cell_amber",
+      "ruleFileName": "hp_pickup_energy_cell_amber.glb"
+    },
+    {
+      "modelKey": "pickup_iron_rod_viewmodel_battleworn",
+      "category": "pickup",
+      "file": "src/assets/models/viewmodel/hp_viewmodel_iron_rod_wgpu_battleworn.glb",
+      "fileName": "hp_viewmodel_iron_rod_wgpu_battleworn.glb",
+      "sidecar": "src/assets/models/viewmodel/hp_viewmodel_iron_rod_wgpu_battleworn/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_large_yellow_key",
+      "category": "pickup",
+      "file": "src/assets/models-cooked/environment/props/hp_pickup_large_yellow_key.glb",
+      "fileName": "hp_pickup_large_yellow_key.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_pickup_large_yellow_key/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_medkit_white_red",
+      "category": "pickup",
+      "file": "src/assets/models-cooked/environment/props/hp_pickup_medkit_white_red.glb",
+      "fileName": "hp_pickup_medkit_white_red.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_pickup_medkit_white_red/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_route_output_orb_1",
+      "category": "pickup",
+      "file": "src/assets/models-cooked/environment/props/hp_pickup_route_output_orb_1.glb",
+      "fileName": "hp_pickup_route_output_orb_1.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_pickup_route_output_orb_1/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_sidearm_viewmodel_battleworn",
+      "category": "pickup",
+      "file": "src/assets/models/viewmodel/hp_viewmodel_sidearm_wgpu_battleworn.glb",
+      "fileName": "hp_viewmodel_sidearm_wgpu_battleworn.glb",
+      "sidecar": "src/assets/models/viewmodel/hp_viewmodel_sidearm_wgpu_battleworn/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_color_orb_pedestal",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_color_orb_pedestal.glb",
+      "fileName": "age_museum_color_orb_pedestal.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_color_orb_pedestal/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_wall_art_human_origin",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_wall_art_human_origin.glb",
+      "fileName": "age_museum_wall_art_human_origin.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_wall_art_human_origin/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_wall_art_last_human",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_wall_art_last_human.glb",
+      "fileName": "age_museum_wall_art_last_human.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_wall_art_last_human/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_wall_art_protocol_diagram",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_wall_art_protocol_diagram.glb",
+      "fileName": "age_museum_wall_art_protocol_diagram.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_wall_art_protocol_diagram/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_wall_art_robot_worker",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_wall_art_robot_worker.glb",
+      "fileName": "age_museum_wall_art_robot_worker.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_wall_art_robot_worker/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "door_threshold_service_elevator",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_door_threshold_service_elevator.glb",
+      "fileName": "hp_door_threshold_service_elevator.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_door_threshold_service_elevator/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cc0_antique_ceramic_vase_01",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/props/hp_room_cc0_antique_ceramic_vase_01.glb",
+      "fileName": "hp_room_cc0_antique_ceramic_vase_01.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_room_cc0_antique_ceramic_vase_01/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cc0_bull_head_plinth",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/props/hp_room_cc0_bull_head_plinth.glb",
+      "fileName": "hp_room_cc0_bull_head_plinth.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_room_cc0_bull_head_plinth/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cc0_bust",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/props/hp_room_cc0_bust.glb",
+      "fileName": "hp_room_cc0_bust.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_room_cc0_bust/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_corner_pillar_museum",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum.glb",
+      "fileName": "hp_room_corner_pillar_museum.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_floor_tile_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance.glb",
+      "fileName": "hp_room_floor_tile_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_l3_img2_display_plinth",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03-furniture-image2/room_l3_img2_display_plinth.glb",
+      "fileName": "room_l3_img2_display_plinth.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03-furniture-image2/room_l3_img2_display_plinth/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_museum_glass_vitrine_specimen",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/props/hp_room_museum_glass_vitrine_specimen.glb",
+      "fileName": "hp_room_museum_glass_vitrine_specimen.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_room_museum_glass_vitrine_specimen/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_museum_last_human_tool_vitrine",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03/hp_room_museum_last_human_tool_vitrine.glb",
+      "fileName": "hp_room_museum_last_human_tool_vitrine.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/hp_room_museum_last_human_tool_vitrine/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_museum_skeleton_vitrine",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03/hp_room_museum_skeleton_vitrine.glb",
+      "fileName": "hp_room_museum_skeleton_vitrine.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/hp_room_museum_skeleton_vitrine/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_museum_voice_archive_case",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level03/hp_room_museum_voice_archive_case.glb",
+      "fileName": "hp_room_museum_voice_archive_case.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/hp_room_museum_voice_archive_case/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_wall_wash_light_museum",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum.glb",
+      "fileName": "hp_room_wall_wash_light_museum.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "service_elevator_ascent_shaft_fx",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_service_elevator_ascent_shaft_fx.glb",
+      "fileName": "hp_service_elevator_ascent_shaft_fx.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_service_elevator_ascent_shaft_fx/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "service_elevator_exit_stage",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_service_elevator_exit_stage.glb",
+      "fileName": "hp_service_elevator_exit_stage.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_service_elevator_exit_stage/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "service_elevator_interior_shell",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_service_elevator_interior_shell.glb",
+      "fileName": "hp_service_elevator_interior_shell.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_service_elevator_interior_shell/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "viewmodel_hand_cylindrical_grip_hp_baked",
+      "category": "viewmodel",
+      "file": "src/assets/models/viewmodel/hand-rod-onehand-v1-hp-baked.glb",
+      "fileName": "hand-rod-onehand-v1-hp-baked.glb",
+      "sidecar": "src/assets/models/viewmodel/hand-rod-onehand-v1-hp-baked/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "viewmodel_hand_pistol_grip_hp_baked",
+      "category": "viewmodel",
+      "file": "src/assets/models/viewmodel/hand-sidearm-onehand-v1-hp-baked.glb",
+      "fileName": "hand-sidearm-onehand-v1-hp-baked.glb",
+      "sidecar": "src/assets/models/viewmodel/hand-sidearm-onehand-v1-hp-baked/.raw-webgpu/level_03_human_museum.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    }
+  ]
+}

@@ -1,0 +1,70 @@
+{
+  "atlas": "hp_level01_furniture_image2_atlas.png",
+  "atlasSize": [
+    512,
+    512
+  ],
+  "uvOrigin": "top-left",
+  "regions": {
+    "enamel.panel": [
+      0,
+      0,
+      256,
+      256
+    ],
+    "brushed.steel.strip": [
+      256,
+      0,
+      256,
+      80
+    ],
+    "diagnostic.screen.glass": [
+      256,
+      80,
+      256,
+      112
+    ],
+    "cyan.glass.lens": [
+      256,
+      192,
+      128,
+      128
+    ],
+    "hazard.edge.strip": [
+      384,
+      192,
+      128,
+      64
+    ],
+    "vent.grille": [
+      384,
+      256,
+      128,
+      128
+    ],
+    "rubber.gasket": [
+      256,
+      320,
+      128,
+      128
+    ],
+    "screw.cross": [
+      0,
+      256,
+      64,
+      64
+    ],
+    "edge.wear": [
+      64,
+      256,
+      192,
+      64
+    ],
+    "grime.corner": [
+      0,
+      320,
+      256,
+      128
+    ]
+  }
+}

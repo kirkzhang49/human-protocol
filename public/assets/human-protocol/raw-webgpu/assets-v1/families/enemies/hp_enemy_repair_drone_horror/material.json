@@ -1,0 +1,341 @@
+{
+  "file": "material.json",
+  "hash": "272fd9875152c991",
+  "materials": [
+    {
+      "index": 37,
+      "id": "mat:enemy:palettematerial001:olcxj9",
+      "name": "PaletteMaterial001",
+      "category": "enemy",
+      "visualRole": "robot_body",
+      "semanticParams": [
+        11,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.96,
+      "metallicFactor": 1,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "PaletteBaseColor",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/basecolor-07-palettebasecolor.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/basecolor-07-palettebasecolor.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.216636,
+            "contrast": 0.479623,
+            "chroma": 0.135625,
+            "detail": 0.110904
+          },
+          "generated": false,
+          "layer": 7
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/normal-46-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/normal-46-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.535889,
+            "contrast": 0.041851,
+            "chroma": 0.799856,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 46
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "PaletteMetallicRoughness",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/metallicroughness-54-palettemetallicroughness.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/metallicroughness-54-palettemetallicroughness.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.376364,
+            "contrast": 0.463612,
+            "chroma": 0.926391,
+            "detail": 0.097703
+          },
+          "generated": false,
+          "layer": 54
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/ao-48-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/ao-48-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.637209,
+            "contrast": 0.047632,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 48
+        }
+      ]
+    },
+    {
+      "index": 38,
+      "id": "mat:enemy:palettematerial003:2lurnc",
+      "name": "PaletteMaterial003",
+      "category": "enemy",
+      "visualRole": "robot_body",
+      "semanticParams": [
+        11,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.62,
+      "metallicFactor": 0.03,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "BLEND",
+      "transparency": {
+        "mode": "blend",
+        "alpha": 1,
+        "source": "gltf-material.transparent"
+      },
+      "doubleSided": false,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "PaletteBaseColor",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/basecolor-07-palettebasecolor.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/basecolor-07-palettebasecolor.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.216636,
+            "contrast": 0.479623,
+            "chroma": 0.135625,
+            "detail": 0.110904
+          },
+          "generated": false,
+          "layer": 7
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/normal-49-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/normal-49-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.535882,
+            "contrast": 0.050576,
+            "chroma": 0.799868,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 49
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/metallicroughness-50-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/metallicroughness-50-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.597344,
+            "contrast": 0.027945,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 50
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/ao-51-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/ao-51-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.644166,
+            "contrast": 0.049391,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 51
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 7,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/basecolor-07-palettebasecolor.webp",
+      "name": "PaletteBaseColor",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/basecolor-07-palettebasecolor.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.216636,
+        "contrast": 0.479623,
+        "chroma": 0.135625,
+        "detail": 0.110904
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 46,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/normal-46-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/normal-46-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.535889,
+        "contrast": 0.041851,
+        "chroma": 0.799856,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 48,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/ao-48-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/ao-48-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.637209,
+        "contrast": 0.047632,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 49,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/normal-49-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/normal-49-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.535882,
+        "contrast": 0.050576,
+        "chroma": 0.799868,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 50,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/metallicroughness-50-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/metallicroughness-50-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.597344,
+        "contrast": 0.027945,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 51,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/ao-51-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/ao-51-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.644166,
+        "contrast": 0.049391,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 54,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/metallicroughness-54-palettemetallicroughness.webp",
+      "name": "PaletteMetallicRoughness",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/enemies/hp_enemy_repair_drone_horror/textures/metallicroughness-54-palettemetallicroughness.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.376364,
+        "contrast": 0.463612,
+        "chroma": 0.926391,
+        "detail": 0.097703
+      }
+    }
+  ]
+}

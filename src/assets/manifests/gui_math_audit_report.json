@@ -1,0 +1,889 @@
+{
+  "generatedAt": "2026-06-19T17:11:26.075Z",
+  "sourcePdf": "/Users/zhengkaizhang/Downloads/面向3D艺术与游戏引擎 Agent 建模的高等数学、二进制编码与光影控制研究报告.pdf",
+  "thresholds": {
+    "minTouchTargetPx": 44,
+    "recommendedCombatTouchPx": 58,
+    "minOverlayButtonPx": 44,
+    "minProgressBarPx": 6,
+    "minBodyContrast": 4.5,
+    "minLargeTextContrast": 3,
+    "maxUiShadowLoss": 0.34,
+    "minUiShadowClamp": 0.66
+  },
+  "summary": {
+    "critical": 0,
+    "warning": 3,
+    "cssFiles": [
+      "src/styles/builder.css",
+      "src/styles/cockpit.css",
+      "src/styles/desktop.css",
+      "src/styles/dialogue.css",
+      "src/styles/global.css",
+      "src/styles/gui-math.css",
+      "src/styles/hud.css",
+      "src/styles/mobile.css",
+      "src/styles/overlays.css",
+      "src/styles/render-surge.css",
+      "src/styles/retention.css",
+      "src/styles/root-menu.css",
+      "src/styles/steam-gui.css"
+    ]
+  },
+  "formulas": {
+    "srgbToLinear": "c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4",
+    "relativeLuminance": "Y = 0.2126 R_linear + 0.7152 G_linear + 0.0722 B_linear",
+    "wcagContrast": "(max(Y1,Y2)+0.05)/(min(Y1,Y2)+0.05)",
+    "overlayCompositeLinear": "C_out = alpha*C_ui + (1-alpha)*C_scene",
+    "depthVisibility": "visible_ui = z_ui <= z_scene + epsilon",
+    "shadowCompare": "shadow = z_light > z_shadow + bias",
+    "readableShadowClamp": "shadow_ui = max(0.66, shadow_raw)",
+    "loadingProgress": "p = 0.72 + (0.92 - 0.72) * (1 - (1 - t)^3)"
+  },
+  "colorVars": {
+    "clr-cyan": "#7ff2ff",
+    "clr-teal": "#5ee8c8",
+    "clr-gold": "#c9a14f",
+    "clr-gold-bright": "#efd9a4",
+    "clr-success": "#5fd47a",
+    "clr-danger": "#ff5b4c",
+    "clr-warning": "#ffd24f",
+    "clr-bg-dark": "#0b0a08",
+    "clr-bg-surface": "#080705",
+    "clr-bg-card": "#14110b",
+    "clr-border-warm": "#2c2316",
+    "clr-border-warm-dark": "#322818",
+    "clr-text-primary": "#efe6d4",
+    "clr-text-secondary": "#c9bda4",
+    "clr-text-muted": "#9d8d6b",
+    "clr-text-hint": "#7a96ba",
+    "bg-sunken": "#060504",
+    "bg-app": "#0b0a08",
+    "bg-canvas": "#0d0b08",
+    "bg-panel": "#14110b",
+    "bg-raised": "#1b1710",
+    "bg-overlay": "#231d13",
+    "ring-focus": "#7fe7f1",
+    "surface-well": "#060504",
+    "bg": "#05070b",
+    "text": "#f3f7fb",
+    "muted": "#9aaec3",
+    "cyan": "#64d7ff",
+    "red": "#ff513d",
+    "orange": "#ff9b35",
+    "gui-bg": "#05070b",
+    "gui-text": "#f3f7fb",
+    "gui-muted": "#9aaec3",
+    "gui-cyan": "#64d7ff",
+    "gui-cyan-bright": "#78e6ff",
+    "gui-amber": "#ffd36d",
+    "gui-red": "#ff6655",
+    "gui-orange": "#ff9b35",
+    "rm-cyan-core": "#5fd0ff",
+    "rm-amber-core": "#ffc24d",
+    "rm-text": "#eaf6ff",
+    "ui-cyan": "#78e6ff",
+    "ui-amber": "#ffd36d",
+    "ui-red": "#ff6655"
+  },
+  "colorChecks": [
+    {
+      "token": "--text",
+      "color": "#f3f7fb",
+      "contrast": 18.72773541187546,
+      "min": 4.5
+    },
+    {
+      "token": "--muted",
+      "color": "#9aaec3",
+      "contrast": 8.847706542679793,
+      "min": 4.5
+    },
+    {
+      "token": "--cyan",
+      "color": "#64d7ff",
+      "contrast": 12.197678688302306,
+      "min": 3
+    },
+    {
+      "token": "--red",
+      "color": "#ff513d",
+      "contrast": 6.236440525237931,
+      "min": 3
+    },
+    {
+      "token": "--orange",
+      "color": "#ff9b35",
+      "contrast": 9.592173844645826,
+      "min": 3
+    }
+  ],
+  "zIndexes": [
+    {
+      "selector": ".builder-json",
+      "zIndex": 30
+    },
+    {
+      "selector": ".builder-plan-layer",
+      "zIndex": 2
+    },
+    {
+      "selector": ".builder-blueprint",
+      "zIndex": 5
+    },
+    {
+      "selector": ".builder-placement-banner",
+      "zIndex": 6
+    },
+    {
+      "selector": ".builder-toasts",
+      "zIndex": 6
+    },
+    {
+      "selector": ".builder-pack-pop",
+      "zIndex": 60
+    },
+    {
+      "selector": ".builder-brush-hud",
+      "zIndex": 6
+    },
+    {
+      "selector": ".builder-overlay-legend",
+      "zIndex": 6
+    },
+    {
+      "selector": ".builder-asset-card-fav, .builder-asset-card-bin",
+      "zIndex": 2
+    },
+    {
+      "selector": ".builder-preview3d::before",
+      "zIndex": 1
+    },
+    {
+      "selector": ".builder-preview3d::after",
+      "zIndex": 1
+    },
+    {
+      "selector": ".builder-preview3d-toolbar, .builder-preview3d-hint, .builder-roof-chip, .builder-stage-chip",
+      "zIndex": 6
+    },
+    {
+      "selector": ".builder-pack-primary-label",
+      "zIndex": 1
+    },
+    {
+      "selector": ".builder-stage-chip",
+      "zIndex": 5
+    },
+    {
+      "selector": ".builder-roof-chip",
+      "zIndex": 5
+    },
+    {
+      "selector": ".builder-cover-card > *, .builder-storytpl-preview > *, .builder-storytpl-apply > *, .builder-actions-primary .builder-pack-primary > *, .builder-insp-modetabs button.active > *, .builder-asset-card-main > *, .builder-cover-title i > *, .builder-cover-checks span > *",
+      "zIndex": 1
+    },
+    {
+      "selector": ".builder-cover-card::before, .builder-storytpl-preview::before, .builder-storytpl-apply::before, .builder-actions-primary .builder-pack-primary::before, .builder-insp-modetabs button.active::before, .builder-asset-card-main::before, .builder-cover-title i::before, .builder-cover-checks span::before",
+      "zIndex": 0
+    },
+    {
+      "selector": ".builder-stage::before",
+      "zIndex": 7
+    },
+    {
+      "selector": ".builder-project-fields .builder-lighting-card h3",
+      "zIndex": 1
+    },
+    {
+      "selector": ".builder-project-fields .builder-mood-row",
+      "zIndex": 1
+    },
+    {
+      "selector": ".builder-project-fields .builder-light-console",
+      "zIndex": 1
+    },
+    {
+      "selector": ".builder-save-backdrop",
+      "zIndex": 90
+    },
+    {
+      "selector": ".builder-template-picker",
+      "zIndex": 60
+    },
+    {
+      "selector": ".builder-stage.plan.with-peek .builder-stage-3d",
+      "zIndex": 6
+    },
+    {
+      "selector": ".builder-peek-label",
+      "zIndex": 3
+    },
+    {
+      "selector": ".builder-inspector.has-selection",
+      "zIndex": 18
+    },
+    {
+      "selector": ".builder-stage.split .builder-blueprint",
+      "zIndex": 9
+    },
+    {
+      "selector": ".builder-inspector-toggle",
+      "zIndex": 24
+    },
+    {
+      "selector": ".builder-inspector-shell.has-selection",
+      "zIndex": 18
+    },
+    {
+      "selector": ".builder-onboarding-overlay",
+      "zIndex": 80
+    },
+    {
+      "selector": ".builder-onboarding-panel header, .builder-onboarding-body, .builder-onboarding-actions, .builder-onboarding-panel footer",
+      "zIndex": 1
+    },
+    {
+      "selector": ".cockpit-scan-frame",
+      "zIndex": 7
+    },
+    {
+      "selector": ".desktop-aim-chip",
+      "zIndex": 15
+    },
+    {
+      "selector": ".dialogue-toast",
+      "zIndex": 19
+    },
+    {
+      "selector": ".raw-webgpu-viewmodel-layer",
+      "zIndex": 3
+    },
+    {
+      "selector": ".raw-three-enemy-oracle",
+      "zIndex": 2
+    },
+    {
+      "selector": ".raw-webgpu-fallback",
+      "zIndex": 3
+    },
+    {
+      "selector": ".landscape-guard",
+      "zIndex": 120
+    },
+    {
+      "selector": ".progress-training-button span, .progress-training-button strong, .progress-training-button em",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-kicker",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-title, .level-transfer-panel h2",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-radar",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-readout",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-bar",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-ticks",
+      "zIndex": 1
+    },
+    {
+      "selector": ".hud",
+      "zIndex": 16
+    },
+    {
+      "selector": ".lower-hud",
+      "zIndex": 15
+    },
+    {
+      "selector": ".critical-warning",
+      "zIndex": 18
+    },
+    {
+      "selector": ".boss-vitality",
+      "zIndex": 16
+    },
+    {
+      "selector": ".boss-vitality-frame",
+      "zIndex": 0
+    },
+    {
+      "selector": ".boss-vitality::before",
+      "zIndex": 1
+    },
+    {
+      "selector": ".boss-vitality::after",
+      "zIndex": 3
+    },
+    {
+      "selector": ".boss-vitality-copy",
+      "zIndex": 2
+    },
+    {
+      "selector": ".boss-vitality-meter",
+      "zIndex": 2
+    },
+    {
+      "selector": ".boss-vitality-readout",
+      "zIndex": 2
+    },
+    {
+      "selector": ".boss-vitality-armor",
+      "zIndex": 2
+    },
+    {
+      "selector": ".lower-hud",
+      "zIndex": 14
+    },
+    {
+      "selector": ".desktop-action-slot .weapon-glyph",
+      "zIndex": 3
+    },
+    {
+      "selector": ".desktop-action-slot.active",
+      "zIndex": 2
+    },
+    {
+      "selector": ".desktop-cooldown-ring",
+      "zIndex": 1
+    },
+    {
+      "selector": ".desktop-key-chip",
+      "zIndex": 4
+    },
+    {
+      "selector": ".desktop-action-readout span, .desktop-dash-readout span",
+      "zIndex": 1
+    },
+    {
+      "selector": ".desktop-action-readout strong, .desktop-dash-readout strong",
+      "zIndex": 1
+    },
+    {
+      "selector": ".config-graph-panel",
+      "zIndex": 95
+    },
+    {
+      "selector": ".mobile-controls",
+      "zIndex": 12
+    },
+    {
+      "selector": ".mobile-dash-button strong",
+      "zIndex": 1
+    },
+    {
+      "selector": ".mobile-dash-icon",
+      "zIndex": 1
+    },
+    {
+      "selector": ".mobile-action-icon",
+      "zIndex": 1
+    },
+    {
+      "selector": ".mobile-action.selected",
+      "zIndex": 2
+    },
+    {
+      "selector": ".threat-ring",
+      "zIndex": 8
+    },
+    {
+      "selector": ".pwa-toast",
+      "zIndex": 60
+    },
+    {
+      "selector": ".flow-overlay, .upgrade-overlay, .choice-overlay",
+      "zIndex": 20
+    },
+    {
+      "selector": ".exit-cinematic-overlay",
+      "zIndex": 18
+    },
+    {
+      "selector": ".level-transfer-panel h2",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-radar",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-readout",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-bar",
+      "zIndex": 1
+    },
+    {
+      "selector": ".level-transfer-ticks",
+      "zIndex": 1
+    },
+    {
+      "selector": ".config-pack-panel",
+      "zIndex": 1
+    },
+    {
+      "selector": ".overlay-title",
+      "zIndex": 1
+    },
+    {
+      "selector": ".choice-detail",
+      "zIndex": 1
+    },
+    {
+      "selector": ".pause-overlay",
+      "zIndex": 34
+    },
+    {
+      "selector": ".system-settings-button",
+      "zIndex": 31
+    },
+    {
+      "selector": ".code-lock-overlay",
+      "zIndex": 36
+    },
+    {
+      "selector": ".museum-story-art-frame::after",
+      "zIndex": 1
+    },
+    {
+      "selector": ".critical-warning",
+      "zIndex": 9
+    },
+    {
+      "selector": ".mission-cue",
+      "zIndex": 14
+    },
+    {
+      "selector": ".interaction-cue",
+      "zIndex": 15
+    },
+    {
+      "selector": ".tool-calibration-overlay",
+      "zIndex": 38
+    },
+    {
+      "selector": ".tool-calibration-weapon-art",
+      "zIndex": 1
+    },
+    {
+      "selector": ".tool-calibration-board",
+      "zIndex": 1
+    },
+    {
+      "selector": ".tool-calibration-cell.entry::before",
+      "zIndex": 4
+    },
+    {
+      "selector": ".tool-calibration-cell.required::after, .tool-calibration-cell.target::after",
+      "zIndex": 4
+    },
+    {
+      "selector": ".tool-calibration-tile-complete",
+      "zIndex": 1
+    },
+    {
+      "selector": ".tool-calibration-tile-frame",
+      "zIndex": 1
+    },
+    {
+      "selector": ".tool-calibration-tile-inner",
+      "zIndex": 2
+    },
+    {
+      "selector": ".cyber-puzzle-overlay",
+      "zIndex": 38
+    },
+    {
+      "selector": ".sequence-playback-overlay",
+      "zIndex": 39
+    },
+    {
+      "selector": ".sequence-playback-close",
+      "zIndex": 3
+    },
+    {
+      "selector": ".archive-merge-overlay",
+      "zIndex": 40
+    },
+    {
+      "selector": ".archive-merge-close",
+      "zIndex": 2
+    },
+    {
+      "selector": ".archive-merge-head",
+      "zIndex": 1
+    },
+    {
+      "selector": ".archive-merge-stage",
+      "zIndex": 1
+    },
+    {
+      "selector": ".archive-merge-tile.pulse",
+      "zIndex": 3
+    },
+    {
+      "selector": ".archive-merge-tile-art",
+      "zIndex": 1
+    },
+    {
+      "selector": ".archive-merge-tile-value",
+      "zIndex": 2
+    },
+    {
+      "selector": ".gallery-reading-overlay",
+      "zIndex": 40
+    },
+    {
+      "selector": ".gallery-reading-close",
+      "zIndex": 2
+    },
+    {
+      "selector": ".gallery-reading-head",
+      "zIndex": 1
+    },
+    {
+      "selector": ".gallery-reading-guidance",
+      "zIndex": 1
+    },
+    {
+      "selector": ".gallery-reading-stage",
+      "zIndex": 1
+    },
+    {
+      "selector": ".route-switch-overlay",
+      "zIndex": 40
+    },
+    {
+      "selector": ".route-switch-panel::after",
+      "zIndex": 0
+    },
+    {
+      "selector": ".route-switch-close",
+      "zIndex": 3
+    },
+    {
+      "selector": ".route-switch-head",
+      "zIndex": 2
+    },
+    {
+      "selector": ".route-switch-stage",
+      "zIndex": 1
+    },
+    {
+      "selector": ".route-switch-dial",
+      "zIndex": 1
+    },
+    {
+      "selector": ".route-switch-deck",
+      "zIndex": 2
+    },
+    {
+      "selector": ".route-switch-foot",
+      "zIndex": 2
+    },
+    {
+      "selector": ".render-surge",
+      "zIndex": 8
+    },
+    {
+      "selector": ".run-progress",
+      "zIndex": 13
+    },
+    {
+      "selector": ".reward-pulse",
+      "zIndex": 16
+    },
+    {
+      "selector": ".progress-training-button span, .progress-training-button strong, .progress-training-button em",
+      "zIndex": 1
+    },
+    {
+      "selector": ".root-menu-flow",
+      "zIndex": 1
+    },
+    {
+      "selector": ".root-menu-overlay",
+      "zIndex": 2
+    },
+    {
+      "selector": ".root-menu-vignette",
+      "zIndex": 3
+    },
+    {
+      "selector": ".root-menu-top",
+      "zIndex": 7
+    },
+    {
+      "selector": ".root-menu-exit",
+      "zIndex": 7
+    },
+    {
+      "selector": ".rm-slot-layer",
+      "zIndex": 6
+    },
+    {
+      "selector": ".rm-slot-scrim",
+      "zIndex": -1
+    },
+    {
+      "selector": ".root-menu-modal-scrim",
+      "zIndex": 20
+    },
+    {
+      "selector": ".rm-loading",
+      "zIndex": 40
+    },
+    {
+      "selector": ".app-shell::before, .app-shell::after",
+      "zIndex": 6
+    },
+    {
+      "selector": ".hud",
+      "zIndex": 15
+    },
+    {
+      "selector": ".lower-hud",
+      "zIndex": 15
+    },
+    {
+      "selector": ".cockpit-vignette",
+      "zIndex": 5
+    },
+    {
+      "selector": ".cockpit-scan-frame",
+      "zIndex": 8
+    }
+  ],
+  "guiAssets": [
+    {
+      "key": "hudFrame",
+      "path": "src/assets/gui/hp-gui-hud-frame-age-v3.png",
+      "exists": true,
+      "bytes": 174503,
+      "cssSelectors": [
+        ".hud"
+      ]
+    },
+    {
+      "key": "objectiveStrip",
+      "path": "src/assets/gui/hp-gui-objective-nav-image2-v1.png",
+      "exists": true,
+      "bytes": 33005,
+      "cssSelectors": [
+        ".run-progress"
+      ]
+    },
+    {
+      "key": "objectiveStripMobile",
+      "path": "src/assets/gui/hp-gui-objective-nav-image2-v1.png",
+      "exists": true,
+      "bytes": 33005,
+      "cssSelectors": [
+        ".run-progress"
+      ]
+    },
+    {
+      "key": "loadingPanel",
+      "path": "src/assets/gui/hp-gui-flow-entry-panel-age-v5.png",
+      "exists": true,
+      "bytes": 26740,
+      "cssSelectors": [
+        ".level-transfer-panel"
+      ]
+    },
+    {
+      "key": "flowEntryPanel",
+      "path": "src/assets/gui/hp-gui-flow-entry-panel-age-v5.png",
+      "exists": true,
+      "bytes": 26740,
+      "cssSelectors": [
+        ".flow-panel"
+      ]
+    },
+    {
+      "key": "flowVictoryPanel",
+      "path": "src/assets/gui/hp-gui-flow-victory-panel-age-v5.png",
+      "exists": true,
+      "bytes": 9281,
+      "cssSelectors": [
+        ".flow-panel-victory"
+      ]
+    },
+    {
+      "key": "flowDeathPanel",
+      "path": "src/assets/gui/hp-gui-flow-death-panel-age-v5.png",
+      "exists": true,
+      "bytes": 4757,
+      "cssSelectors": [
+        ".flow-panel-death"
+      ]
+    },
+    {
+      "key": "buttonWide",
+      "path": "src/assets/gui/hp-gui-button-wide-age-v5.png",
+      "exists": true,
+      "bytes": 553,
+      "cssSelectors": [
+        ".flow-panel button"
+      ]
+    },
+    {
+      "key": "buttonSmall",
+      "path": "src/assets/gui/hp-gui-button-small-age-v5.png",
+      "exists": true,
+      "bytes": 526,
+      "cssSelectors": [
+        ".flow-panel .progress-training-button"
+      ]
+    },
+    {
+      "key": "statChip",
+      "path": "src/assets/gui/hp-gui-stat-chip-age-v5.png",
+      "exists": true,
+      "bytes": 497,
+      "cssSelectors": [
+        ".flow-stats span"
+      ]
+    },
+    {
+      "key": "dialogueToast",
+      "path": "src/assets/gui/hp-gui-dialogue-toast-age-v3.png",
+      "exists": true,
+      "bytes": 64988,
+      "cssSelectors": [
+        ".dialogue-toast"
+      ]
+    },
+    {
+      "key": "weaponCluster",
+      "path": "src/assets/gui/hp-gui-weapon-cluster-age-v3.png",
+      "exists": true,
+      "bytes": 178715,
+      "cssSelectors": []
+    },
+    {
+      "key": "mobileAction",
+      "path": "src/assets/gui/hp-gui-mobile-action-age-v3.png",
+      "exists": true,
+      "bytes": 96345,
+      "cssSelectors": [
+        ".mobile-action",
+        ".desktop-action-slot"
+      ]
+    },
+    {
+      "key": "joystickPlate",
+      "path": "src/assets/gui/hp-gui-joystick-plate-age-v3.png",
+      "exists": true,
+      "bytes": 86172,
+      "cssSelectors": [
+        ".joystick"
+      ]
+    },
+    {
+      "key": "interactPill",
+      "path": "src/assets/gui/hp-gui-interact-pill-age-v3.png",
+      "exists": true,
+      "bytes": 48063,
+      "cssSelectors": [
+        ".mobile-interact-button"
+      ]
+    },
+    {
+      "key": "keyChip",
+      "path": "src/assets/gui/hp-gui-key-chip-age-v3.png",
+      "exists": true,
+      "bytes": 28336,
+      "cssSelectors": [
+        ".desktop-key-chip"
+      ]
+    },
+    {
+      "key": "statusPill",
+      "path": "src/assets/gui/hp-gui-status-pill-age-v3.png",
+      "exists": true,
+      "bytes": 32094,
+      "cssSelectors": [
+        ".desktop-action-readout",
+        ".desktop-dash-readout",
+        ".desktop-reload-caption"
+      ]
+    }
+  ],
+  "image2GuiSpec": {
+    "targetResolution": "author at 2x UI scale, export with transparent alpha",
+    "sourceOfTruth": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/asset-lab/math/gui/HUMAN_PROTOCOL_IMAGE2_GUI_MATH_SYSTEM.md",
+    "safeZone": {
+      "landscape": "keep critical labels inside inset max(24px, env(safe-area-inset-*)); leave right/bottom combat controls unobstructed",
+      "portrait": "landscape guard owns z-index 120 and should hide gameplay GUI behind it"
+    },
+    "linearCompositing": {
+      "srgbToLinear": "c <= 0.04045 ? c / 12.92 : ((c + 0.055) / 1.055) ** 2.4",
+      "uiComposite": "C = alpha * C_ui_linear + (1 - alpha) * C_scene_linear",
+      "shadowClamp": "readabilityShadow = max(0.66, 1 - shadowLoss)"
+    },
+    "depthAwareOverlay": {
+      "visibility": "visible_ui = z_ui <= z_scene + epsilon",
+      "epsilonMeters": 0.03,
+      "mode": "overlay samples scene exposure/depth stats; world-space panels may write depth"
+    }
+  },
+  "issues": [
+    {
+      "severity": "warning",
+      "code": "overlay-button-height",
+      "message": ".flow-panel .config-pack-actions button min-height 36px < 44px",
+      "selector": ".flow-panel .config-pack-actions button",
+      "height": 36,
+      "minHeight": 36
+    },
+    {
+      "severity": "warning",
+      "code": "overlay-button-height",
+      "message": ".flow-panel .config-pack-body > button min-height 36px < 44px",
+      "selector": ".flow-panel .config-pack-body > button",
+      "height": 36,
+      "minHeight": 36
+    },
+    {
+      "severity": "warning",
+      "code": "letter-spacing-nonzero",
+      "message": "Non-zero letter-spacing appears 75 time(s); keep compact GUI text at 0 unless specifically art-directed",
+      "selector": "css",
+      "values": [
+        "0.06em",
+        "0.08em",
+        "0.12em",
+        "0.04em",
+        "0.1em",
+        "0.16em",
+        "0.14em",
+        "0.03em",
+        "var(--track-eyebrow)",
+        "0.02em",
+        "0.01em",
+        "0.005em",
+        "0.05em",
+        "0.22em",
+        "0.24em",
+        "0.28em",
+        "0.3em",
+        "0.34em"
+      ]
+    }
+  ]
+}

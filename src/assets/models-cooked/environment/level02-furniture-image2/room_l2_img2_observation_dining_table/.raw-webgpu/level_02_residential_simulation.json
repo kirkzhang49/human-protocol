@@ -1,0 +1,414 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_l2_img2_observation_dining_table",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+  "fileName": "room_l2_img2_observation_dining_table.glb",
+  "sourceAsset": {
+    "modelKey": "room_l2_img2_observation_dining_table",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+    "file": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+    "sizeMeters": [
+      1.895,
+      0.727,
+      0.957
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 2086608,
+      "meshes": 7,
+      "nodes": 8,
+      "skins": 0,
+      "primitives": 7,
+      "materials": 4,
+      "textures": 1,
+      "images": 1,
+      "accessors": 23,
+      "bufferViews": 24,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 7348
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_observation_dining_table.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 1000854,
+    "vertexCount": 22044,
+    "triangleCount": 7348,
+    "meshCount": 7,
+    "materialCount": 4,
+    "nodeCount": 8,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.947396,
+        0,
+        -0.478647
+      ],
+      "center": [
+        0,
+        0.36375,
+        0
+      ],
+      "size": [
+        1.894793,
+        0.7275,
+        0.957294
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "table_flowing_walnut_pedestal_a",
+        "vertexOffset": 1000854,
+        "vertexCount": 3876,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.009216,
+          -0.05,
+          -0.012838,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.009216,
+          0.05,
+          0.012838,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "table_flowing_walnut_pedestal_b",
+        "vertexOffset": 1004730,
+        "vertexCount": 3876,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.009216,
+          -0.05,
+          -0.012838,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.009216,
+          0.05,
+          0.012838,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "table_gallery_live_edge_walnut_top",
+        "vertexOffset": 1008606,
+        "vertexCount": 6900,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.009216,
+          -0.05,
+          -0.012838,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.009216,
+          0.05,
+          0.012838,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "table_smoked_chrome_sculptural_arc_a",
+        "vertexOffset": 1015506,
+        "vertexCount": 180,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.009216,
+          -0.05,
+          -0.012838,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.009216,
+          0.05,
+          0.012838,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "table_smoked_chrome_sculptural_arc_b",
+        "vertexOffset": 1015686,
+        "vertexCount": 180,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.009216,
+          -0.05,
+          -0.012838,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.009216,
+          0.05,
+          0.012838,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "table_soft_shadow_underlip",
+        "vertexOffset": 1015866,
+        "vertexCount": 6900,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.009216,
+          -0.05,
+          -0.012838,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.009216,
+          0.05,
+          0.012838,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "table_underside_hidden_service_seam",
+        "vertexOffset": 1022766,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.410784,
+          0.61,
+          0.447162,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.410784,
+          -0.61,
+          -0.447162,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_3zo4a7",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        -3,
+        0,
+        -2.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.785398,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3,
+          0,
+          -2.5
+        ],
+        "halfSize": [
+          0.9475,
+          0.3635,
+          0.4785
+        ]
+      }
+    }
+  ]
+}

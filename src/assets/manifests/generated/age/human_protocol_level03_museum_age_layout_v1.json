@@ -1,0 +1,2198 @@
+{
+  "schemaVersion": "human_protocol_level03_age_layout_handoff_v1",
+  "generatedBy": "generate-human-museum-age-layout.py",
+  "styleBibleRef": "human-protocol/level03-age-museum-v1",
+  "image2": {
+    "file": "public/assets/room/textures/hp_image2_level03_museum_roomgraph_v1.png",
+    "absolutePath": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/public/assets/room/textures/hp_image2_level03_museum_roomgraph_v1.png",
+    "purpose": "top-down art/layout direction for the current level 03 physical room graph"
+  },
+  "roomGraph": {
+    "id": "human_protocol_level03_museum_roomgraph_v1",
+    "sourceGameConfig": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/src/game/config/levels/levels03To05.ts",
+    "rooms": [
+      {
+        "id": "level_03_entry_hall",
+        "label": "博物馆入口",
+        "bounds": {
+          "center": [
+            0.0,
+            0,
+            12.0
+          ],
+          "size": [
+            12.0,
+            4,
+            7.0
+          ]
+        },
+        "role": "entry",
+        "mood": "uneasy"
+      },
+      {
+        "id": "level_03_gallery_lobby",
+        "label": "主展厅",
+        "bounds": {
+          "center": [
+            0.0,
+            0,
+            6.55
+          ],
+          "size": [
+            18.0,
+            4,
+            18.1
+          ]
+        },
+        "role": "long_gallery",
+        "mood": "combat"
+      },
+      {
+        "id": "level_03_tool_exhibit",
+        "label": "工具展厅",
+        "bounds": {
+          "center": [
+            -12.2,
+            0,
+            3.5
+          ],
+          "size": [
+            7.0,
+            4,
+            7.0
+          ]
+        },
+        "role": "small_side_gallery",
+        "mood": "quiet"
+      },
+      {
+        "id": "level_03_voice_exhibit",
+        "label": "声纹展厅",
+        "bounds": {
+          "center": [
+            12.2,
+            0,
+            3.5
+          ],
+          "size": [
+            7.0,
+            4,
+            7.0
+          ]
+        },
+        "role": "small_side_gallery",
+        "mood": "uneasy"
+      },
+      {
+        "id": "level_03_body_exhibit",
+        "label": "身体展厅",
+        "bounds": {
+          "center": [
+            0.0,
+            0,
+            -5.0
+          ],
+          "size": [
+            12.0,
+            4,
+            7.0
+          ]
+        },
+        "role": "medium_gallery",
+        "mood": "reveal"
+      },
+      {
+        "id": "level_03_central_archive",
+        "label": "中央档案室",
+        "bounds": {
+          "center": [
+            0.0,
+            0,
+            -12.15
+          ],
+          "size": [
+            13.0,
+            4,
+            17.8
+          ]
+        },
+        "role": "long_archive",
+        "mood": "boss"
+      },
+      {
+        "id": "level_03_exit_room",
+        "label": "后展厅门",
+        "bounds": {
+          "center": [
+            0.0,
+            0,
+            -19.0
+          ],
+          "size": [
+            7.0,
+            4,
+            4.5
+          ]
+        },
+        "role": "exit",
+        "mood": "reveal"
+      }
+    ],
+    "doors": [
+      {
+        "id": "level_03_lobby_door",
+        "fromRoomId": "level_03_entry_hall",
+        "toRoomId": "level_03_gallery_lobby",
+        "position": [
+          0,
+          9
+        ],
+        "width": 4.8,
+        "yaw": 0,
+        "defaultState": "open"
+      },
+      {
+        "id": "level_03_tool_door",
+        "fromRoomId": "level_03_gallery_lobby",
+        "toRoomId": "level_03_tool_exhibit",
+        "position": [
+          -9,
+          3.5
+        ],
+        "width": 3.6,
+        "yaw": 1.5707963267948966,
+        "defaultState": "open"
+      },
+      {
+        "id": "level_03_voice_door",
+        "fromRoomId": "level_03_gallery_lobby",
+        "toRoomId": "level_03_voice_exhibit",
+        "position": [
+          9,
+          3.5
+        ],
+        "width": 3.6,
+        "yaw": 1.5707963267948966,
+        "defaultState": "locked"
+      },
+      {
+        "id": "level_03_body_door",
+        "fromRoomId": "level_03_gallery_lobby",
+        "toRoomId": "level_03_body_exhibit",
+        "position": [
+          0,
+          -2
+        ],
+        "width": 4.2,
+        "yaw": 0,
+        "defaultState": "locked"
+      },
+      {
+        "id": "level_03_archive_door",
+        "fromRoomId": "level_03_body_exhibit",
+        "toRoomId": "level_03_central_archive",
+        "position": [
+          0,
+          -8.5
+        ],
+        "width": 4.6,
+        "yaw": 0,
+        "defaultState": "locked"
+      },
+      {
+        "id": "level_03_exit_door",
+        "fromRoomId": "level_03_central_archive",
+        "toRoomId": "level_03_exit_room",
+        "position": [
+          0,
+          -17.3
+        ],
+        "width": 4.5,
+        "yaw": 0,
+        "defaultState": "locked"
+      }
+    ],
+    "criticalPath": [
+      [
+        0.0,
+        0,
+        14.4
+      ],
+      [
+        0.0,
+        0,
+        9.0
+      ],
+      [
+        0.0,
+        0,
+        5.6
+      ],
+      [
+        0.0,
+        0,
+        -2.0
+      ],
+      [
+        0.0,
+        0,
+        -5.0
+      ],
+      [
+        0.0,
+        0,
+        -8.5
+      ],
+      [
+        0.0,
+        0,
+        -12.2
+      ],
+      [
+        0.0,
+        0,
+        -17.3
+      ],
+      [
+        0.0,
+        0,
+        -19.2
+      ]
+    ],
+    "clearanceMeters": {
+      "criticalPath": 1.35,
+      "playerCorridor": 2.25
+    }
+  },
+  "furnitureSpecs": [
+    {
+      "id": "age_museum_display_case_tool",
+      "category": "furniture",
+      "file": "age_museum_display_case_tool.glb",
+      "sockets": [
+        "age_museum_display_case_tool_socket_interaction",
+        "age_museum_display_case_tool_socket_snap_floor",
+        "age_museum_display_case_tool_socket_top_exhibit"
+      ],
+      "movingParts": [],
+      "materialSlots": [
+        "room_metal_dark",
+        "room_metal_worn",
+        "room_panel_white",
+        "room_plastic_black",
+        "room_rubber",
+        "room_glass_screen",
+        "room_emissive_cyan",
+        "room_emissive_green",
+        "room_emissive_red",
+        "room_warning_orange",
+        "room_dust_shadow",
+        "room_trim_light",
+        "room_label_dark",
+        "room_grime_soft",
+        "room_glass_reflect",
+        "room_glass_energy_shell",
+        "room_edge_wear_bright",
+        "room_warning_black",
+        "room_copper_wire",
+        "room_paint_base_warm_gray",
+        "room_paint_secondary_deep_teal",
+        "room_accent_protocol_gold",
+        "room_accent_archive_blue",
+        "room_accent_medical_red",
+        "room_accent_energy_teal",
+        "room_image2_key_wrap_v1",
+        "room_image2_medkit_wrap_v1",
+        "room_image2_energy_pack_wrap_v1",
+        "room_image2_repair_cabinet_wrap_v1"
+      ],
+      "affordanceTypes": [
+        "scan",
+        "palmSupport"
+      ],
+      "readableFaces": [
+        {
+          "faceId": "front_label",
+          "nodeName": "age_museum_display_case_tool_front_label_readable_face",
+          "normalLocal": [
+            0,
+            -1,
+            0
+          ],
+          "minUseDistanceMeters": 1.0,
+          "maxUseDistanceMeters": 4.8
+        }
+      ],
+      "supportPolicy": {
+        "type": "floor",
+        "requiresGroundContact": true,
+        "maxBottomGapMeters": 0.035
+      },
+      "canonicalViews": [
+        "entry_eye",
+        "use_distance",
+        "topdown",
+        "side_support"
+      ],
+      "failureLabels": [
+        "cyan_overuse",
+        "white_slab",
+        "pretty_but_nonfunctional",
+        "layout_clearance_blocked"
+      ],
+      "repairFamilies": [
+        "palette_trim",
+        "furniture_support_refine",
+        "layout_clearance",
+        "light_rig_rebalance"
+      ],
+      "styleBibleRef": "human-protocol/level03-age-museum-v1",
+      "placementRules": {
+        "criticalPathClearanceMeters": 1.35,
+        "interactionReachMeters": 2.25,
+        "doNotOccludePickupsOrClues": true,
+        "museumSightlinePriority": "front_readable_face"
+      }
+    },
+    {
+      "id": "age_museum_voice_booth",
+      "category": "furniture",
+      "file": "age_museum_voice_booth.glb",
+      "sockets": [
+        "age_museum_voice_booth_socket_interaction",
+        "age_museum_voice_booth_socket_light",
+        "age_museum_voice_booth_socket_snap_floor"
+      ],
+      "movingParts": [
+        "age_museum_voice_booth_listening_panel_glass"
+      ],
+      "materialSlots": [
+        "room_metal_dark",
+        "room_metal_worn",
+        "room_panel_white",
+        "room_plastic_black",
+        "room_rubber",
+        "room_glass_screen",
+        "room_emissive_cyan",
+        "room_emissive_green",
+        "room_emissive_red",
+        "room_warning_orange",
+        "room_dust_shadow",
+        "room_trim_light",
+        "room_label_dark",
+        "room_grime_soft",
+        "room_glass_reflect",
+        "room_glass_energy_shell",
+        "room_edge_wear_bright",
+        "room_warning_black",
+        "room_copper_wire",
+        "room_paint_base_warm_gray",
+        "room_paint_secondary_deep_teal",
+        "room_accent_protocol_gold",
+        "room_accent_archive_blue",
+        "room_accent_medical_red",
+        "room_accent_energy_teal",
+        "room_image2_key_wrap_v1",
+        "room_image2_medkit_wrap_v1",
+        "room_image2_energy_pack_wrap_v1",
+        "room_image2_repair_cabinet_wrap_v1"
+      ],
+      "affordanceTypes": [
+        "scan",
+        "press"
+      ],
+      "readableFaces": [
+        {
+          "faceId": "voice_label",
+          "nodeName": "age_museum_voice_booth_voice_label_readable_face",
+          "normalLocal": [
+            0,
+            -1,
+            0
+          ],
+          "minUseDistanceMeters": 1.0,
+          "maxUseDistanceMeters": 4.5
+        }
+      ],
+      "supportPolicy": {
+        "type": "floor",
+        "requiresGroundContact": true,
+        "maxBottomGapMeters": 0.035
+      },
+      "canonicalViews": [
+        "entry_eye",
+        "use_distance",
+        "topdown",
+        "side_support"
+      ],
+      "failureLabels": [
+        "cyan_overuse",
+        "white_slab",
+        "pretty_but_nonfunctional",
+        "layout_clearance_blocked"
+      ],
+      "repairFamilies": [
+        "palette_trim",
+        "furniture_support_refine",
+        "layout_clearance",
+        "light_rig_rebalance"
+      ],
+      "styleBibleRef": "human-protocol/level03-age-museum-v1",
+      "placementRules": {
+        "criticalPathClearanceMeters": 1.35,
+        "interactionReachMeters": 2.25,
+        "doNotOccludePickupsOrClues": true,
+        "museumSightlinePriority": "front_readable_face"
+      }
+    },
+    {
+      "id": "age_museum_body_reference_case",
+      "category": "furniture",
+      "file": "age_museum_body_reference_case.glb",
+      "sockets": [
+        "age_museum_body_reference_case_socket_interaction",
+        "age_museum_body_reference_case_socket_pickup_display",
+        "age_museum_body_reference_case_socket_snap_floor"
+      ],
+      "movingParts": [],
+      "materialSlots": [
+        "room_metal_dark",
+        "room_metal_worn",
+        "room_panel_white",
+        "room_plastic_black",
+        "room_rubber",
+        "room_glass_screen",
+        "room_emissive_cyan",
+        "room_emissive_green",
+        "room_emissive_red",
+        "room_warning_orange",
+        "room_dust_shadow",
+        "room_trim_light",
+        "room_label_dark",
+        "room_grime_soft",
+        "room_glass_reflect",
+        "room_glass_energy_shell",
+        "room_edge_wear_bright",
+        "room_warning_black",
+        "room_copper_wire",
+        "room_paint_base_warm_gray",
+        "room_paint_secondary_deep_teal",
+        "room_accent_protocol_gold",
+        "room_accent_archive_blue",
+        "room_accent_medical_red",
+        "room_accent_energy_teal",
+        "room_image2_key_wrap_v1",
+        "room_image2_medkit_wrap_v1",
+        "room_image2_energy_pack_wrap_v1",
+        "room_image2_repair_cabinet_wrap_v1"
+      ],
+      "affordanceTypes": [
+        "scan",
+        "pickup"
+      ],
+      "readableFaces": [
+        {
+          "faceId": "body_label",
+          "nodeName": "age_museum_body_reference_case_body_label_readable_face",
+          "normalLocal": [
+            0,
+            -1,
+            0
+          ],
+          "minUseDistanceMeters": 1.0,
+          "maxUseDistanceMeters": 4.8
+        }
+      ],
+      "supportPolicy": {
+        "type": "floor",
+        "requiresGroundContact": true,
+        "maxBottomGapMeters": 0.035
+      },
+      "canonicalViews": [
+        "entry_eye",
+        "use_distance",
+        "topdown",
+        "side_support"
+      ],
+      "failureLabels": [
+        "cyan_overuse",
+        "white_slab",
+        "pretty_but_nonfunctional",
+        "layout_clearance_blocked"
+      ],
+      "repairFamilies": [
+        "palette_trim",
+        "furniture_support_refine",
+        "layout_clearance",
+        "light_rig_rebalance"
+      ],
+      "styleBibleRef": "human-protocol/level03-age-museum-v1",
+      "placementRules": {
+        "criticalPathClearanceMeters": 1.35,
+        "interactionReachMeters": 2.25,
+        "doNotOccludePickupsOrClues": true,
+        "museumSightlinePriority": "front_readable_face"
+      }
+    },
+    {
+      "id": "age_museum_archive_column",
+      "category": "readable",
+      "file": "age_museum_archive_column.glb",
+      "sockets": [
+        "age_museum_archive_column_socket_interaction",
+        "age_museum_archive_column_socket_light",
+        "age_museum_archive_column_socket_snap_floor"
+      ],
+      "movingParts": [],
+      "materialSlots": [
+        "room_metal_dark",
+        "room_metal_worn",
+        "room_panel_white",
+        "room_plastic_black",
+        "room_rubber",
+        "room_glass_screen",
+        "room_emissive_cyan",
+        "room_emissive_green",
+        "room_emissive_red",
+        "room_warning_orange",
+        "room_dust_shadow",
+        "room_trim_light",
+        "room_label_dark",
+        "room_grime_soft",
+        "room_glass_reflect",
+        "room_glass_energy_shell",
+        "room_edge_wear_bright",
+        "room_warning_black",
+        "room_copper_wire",
+        "room_paint_base_warm_gray",
+        "room_paint_secondary_deep_teal",
+        "room_accent_protocol_gold",
+        "room_accent_archive_blue",
+        "room_accent_medical_red",
+        "room_accent_energy_teal",
+        "room_image2_key_wrap_v1",
+        "room_image2_medkit_wrap_v1",
+        "room_image2_energy_pack_wrap_v1",
+        "room_image2_repair_cabinet_wrap_v1"
+      ],
+      "affordanceTypes": [
+        "scan",
+        "read"
+      ],
+      "readableFaces": [
+        {
+          "faceId": "archive_label",
+          "nodeName": "age_museum_archive_column_archive_label_readable_face",
+          "normalLocal": [
+            0,
+            -1,
+            0
+          ],
+          "minUseDistanceMeters": 1.0,
+          "maxUseDistanceMeters": 5.2
+        }
+      ],
+      "supportPolicy": {
+        "type": "floor",
+        "requiresGroundContact": true,
+        "maxBottomGapMeters": 0.035
+      },
+      "canonicalViews": [
+        "entry_eye",
+        "use_distance",
+        "readable_face_close",
+        "dark_state",
+        "lit_state"
+      ],
+      "failureLabels": [
+        "screen_unreadable",
+        "readable_face_misaligned",
+        "lighting_mood_wrong"
+      ],
+      "repairFamilies": [
+        "screen_legibility_boost",
+        "readable_face_reorient",
+        "light_rig_rebalance"
+      ],
+      "styleBibleRef": "human-protocol/level03-age-museum-v1",
+      "placementRules": {
+        "criticalPathClearanceMeters": 1.35,
+        "interactionReachMeters": 2.25,
+        "doNotOccludePickupsOrClues": true,
+        "museumSightlinePriority": "front_readable_face"
+      }
+    },
+    {
+      "id": "age_museum_low_barrier",
+      "category": "furniture",
+      "file": "age_museum_low_barrier.glb",
+      "sockets": [
+        "age_museum_low_barrier_socket_snap_floor",
+        "age_museum_low_barrier_socket_cover_edge"
+      ],
+      "movingParts": [],
+      "materialSlots": [
+        "room_metal_dark",
+        "room_metal_worn",
+        "room_panel_white",
+        "room_plastic_black",
+        "room_rubber",
+        "room_glass_screen",
+        "room_emissive_cyan",
+        "room_emissive_green",
+        "room_emissive_red",
+        "room_warning_orange",
+        "room_dust_shadow",
+        "room_trim_light",
+        "room_label_dark",
+        "room_grime_soft",
+        "room_glass_reflect",
+        "room_glass_energy_shell",
+        "room_edge_wear_bright",
+        "room_warning_black",
+        "room_copper_wire",
+        "room_paint_base_warm_gray",
+        "room_paint_secondary_deep_teal",
+        "room_accent_protocol_gold",
+        "room_accent_archive_blue",
+        "room_accent_medical_red",
+        "room_accent_energy_teal",
+        "room_image2_key_wrap_v1",
+        "room_image2_medkit_wrap_v1",
+        "room_image2_energy_pack_wrap_v1",
+        "room_image2_repair_cabinet_wrap_v1"
+      ],
+      "affordanceTypes": [
+        "palmSupport"
+      ],
+      "readableFaces": [],
+      "supportPolicy": {
+        "type": "floor",
+        "requiresGroundContact": true,
+        "maxBottomGapMeters": 0.035
+      },
+      "canonicalViews": [
+        "entry_eye",
+        "use_distance",
+        "topdown",
+        "side_support"
+      ],
+      "failureLabels": [
+        "cyan_overuse",
+        "white_slab",
+        "pretty_but_nonfunctional",
+        "layout_clearance_blocked"
+      ],
+      "repairFamilies": [
+        "palette_trim",
+        "furniture_support_refine",
+        "layout_clearance",
+        "light_rig_rebalance"
+      ],
+      "styleBibleRef": "human-protocol/level03-age-museum-v1",
+      "placementRules": {
+        "criticalPathClearanceMeters": 1.35,
+        "interactionReachMeters": 2.25,
+        "doNotOccludePickupsOrClues": true,
+        "museumSightlinePriority": "front_readable_face"
+      }
+    },
+    {
+      "id": "age_museum_wall_label_panel",
+      "category": "readable",
+      "file": "age_museum_wall_label_panel.glb",
+      "sockets": [
+        "age_museum_wall_label_panel_socket_wall_mount",
+        "age_museum_wall_label_panel_socket_interaction"
+      ],
+      "movingParts": [],
+      "materialSlots": [
+        "room_metal_dark",
+        "room_metal_worn",
+        "room_panel_white",
+        "room_plastic_black",
+        "room_rubber",
+        "room_glass_screen",
+        "room_emissive_cyan",
+        "room_emissive_green",
+        "room_emissive_red",
+        "room_warning_orange",
+        "room_dust_shadow",
+        "room_trim_light",
+        "room_label_dark",
+        "room_grime_soft",
+        "room_glass_reflect",
+        "room_glass_energy_shell",
+        "room_edge_wear_bright",
+        "room_warning_black",
+        "room_copper_wire",
+        "room_paint_base_warm_gray",
+        "room_paint_secondary_deep_teal",
+        "room_accent_protocol_gold",
+        "room_accent_archive_blue",
+        "room_accent_medical_red",
+        "room_accent_energy_teal",
+        "room_image2_key_wrap_v1",
+        "room_image2_medkit_wrap_v1",
+        "room_image2_energy_pack_wrap_v1",
+        "room_image2_repair_cabinet_wrap_v1"
+      ],
+      "affordanceTypes": [
+        "read",
+        "scan"
+      ],
+      "readableFaces": [
+        {
+          "faceId": "main_label",
+          "nodeName": "age_museum_wall_label_panel_readable_face",
+          "normalLocal": [
+            0,
+            -1,
+            0
+          ],
+          "minUseDistanceMeters": 0.8,
+          "maxUseDistanceMeters": 4.2
+        }
+      ],
+      "supportPolicy": {
+        "type": "wall_mount",
+        "requiresGroundContact": false,
+        "maxBottomGapMeters": 0.035
+      },
+      "canonicalViews": [
+        "entry_eye",
+        "use_distance",
+        "readable_face_close",
+        "dark_state",
+        "lit_state"
+      ],
+      "failureLabels": [
+        "screen_unreadable",
+        "readable_face_misaligned",
+        "lighting_mood_wrong"
+      ],
+      "repairFamilies": [
+        "screen_legibility_boost",
+        "readable_face_reorient",
+        "light_rig_rebalance"
+      ],
+      "styleBibleRef": "human-protocol/level03-age-museum-v1",
+      "placementRules": {
+        "criticalPathClearanceMeters": 1.35,
+        "interactionReachMeters": 2.25,
+        "doNotOccludePickupsOrClues": true,
+        "museumSightlinePriority": "front_readable_face"
+      }
+    },
+    {
+      "id": "age_museum_color_orb_pedestal",
+      "category": "pickup",
+      "file": "age_museum_color_orb_pedestal.glb",
+      "sockets": [
+        "age_museum_color_orb_pedestal_socket_pickup_orb",
+        "age_museum_color_orb_pedestal_socket_hit_target",
+        "age_museum_color_orb_pedestal_socket_snap_floor"
+      ],
+      "movingParts": [],
+      "materialSlots": [
+        "room_metal_dark",
+        "room_metal_worn",
+        "room_panel_white",
+        "room_plastic_black",
+        "room_rubber",
+        "room_glass_screen",
+        "room_emissive_cyan",
+        "room_emissive_green",
+        "room_emissive_red",
+        "room_warning_orange",
+        "room_dust_shadow",
+        "room_trim_light",
+        "room_label_dark",
+        "room_grime_soft",
+        "room_glass_reflect",
+        "room_glass_energy_shell",
+        "room_edge_wear_bright",
+        "room_warning_black",
+        "room_copper_wire",
+        "room_paint_base_warm_gray",
+        "room_paint_secondary_deep_teal",
+        "room_accent_protocol_gold",
+        "room_accent_archive_blue",
+        "room_accent_medical_red",
+        "room_accent_energy_teal",
+        "room_image2_key_wrap_v1",
+        "room_image2_medkit_wrap_v1",
+        "room_image2_energy_pack_wrap_v1",
+        "room_image2_repair_cabinet_wrap_v1"
+      ],
+      "affordanceTypes": [
+        "pickup",
+        "scan"
+      ],
+      "readableFaces": [],
+      "supportPolicy": {
+        "type": "floor",
+        "requiresGroundContact": true,
+        "maxBottomGapMeters": 0.035
+      },
+      "canonicalViews": [
+        "entry_eye",
+        "use_distance",
+        "topdown",
+        "side_support"
+      ],
+      "failureLabels": [
+        "pickup_visibility_low",
+        "pretty_but_nonfunctional",
+        "cyan_overuse"
+      ],
+      "repairFamilies": [
+        "pickup_exposure_boost",
+        "emissive_rebalance",
+        "palette_trim"
+      ],
+      "styleBibleRef": "human-protocol/level03-age-museum-v1",
+      "placementRules": {
+        "criticalPathClearanceMeters": 1.35,
+        "interactionReachMeters": 2.25,
+        "doNotOccludePickupsOrClues": true,
+        "museumSightlinePriority": "front_readable_face"
+      }
+    },
+    {
+      "id": "age_museum_floor_route_inlay",
+      "category": "architecture",
+      "file": "age_museum_floor_route_inlay.glb",
+      "sockets": [
+        "age_museum_floor_route_inlay_socket_snap_floor"
+      ],
+      "movingParts": [],
+      "materialSlots": [
+        "room_metal_dark",
+        "room_metal_worn",
+        "room_panel_white",
+        "room_plastic_black",
+        "room_rubber",
+        "room_glass_screen",
+        "room_emissive_cyan",
+        "room_emissive_green",
+        "room_emissive_red",
+        "room_warning_orange",
+        "room_dust_shadow",
+        "room_trim_light",
+        "room_label_dark",
+        "room_grime_soft",
+        "room_glass_reflect",
+        "room_glass_energy_shell",
+        "room_edge_wear_bright",
+        "room_warning_black",
+        "room_copper_wire",
+        "room_paint_base_warm_gray",
+        "room_paint_secondary_deep_teal",
+        "room_accent_protocol_gold",
+        "room_accent_archive_blue",
+        "room_accent_medical_red",
+        "room_accent_energy_teal",
+        "room_image2_key_wrap_v1",
+        "room_image2_medkit_wrap_v1",
+        "room_image2_energy_pack_wrap_v1",
+        "room_image2_repair_cabinet_wrap_v1"
+      ],
+      "affordanceTypes": [],
+      "readableFaces": [],
+      "supportPolicy": {
+        "type": "floor",
+        "requiresGroundContact": true,
+        "maxBottomGapMeters": 0.02
+      },
+      "canonicalViews": [
+        "entry_eye",
+        "use_distance",
+        "topdown",
+        "side_support"
+      ],
+      "failureLabels": [
+        "cyan_overuse",
+        "white_slab",
+        "pretty_but_nonfunctional",
+        "layout_clearance_blocked"
+      ],
+      "repairFamilies": [
+        "palette_trim",
+        "furniture_support_refine",
+        "layout_clearance",
+        "light_rig_rebalance"
+      ],
+      "styleBibleRef": "human-protocol/level03-age-museum-v1",
+      "placementRules": {
+        "criticalPathClearanceMeters": 1.35,
+        "interactionReachMeters": 2.25,
+        "doNotOccludePickupsOrClues": true,
+        "museumSightlinePriority": "front_readable_face"
+      }
+    }
+  ],
+  "affordanceSpec": {
+    "id": "human_protocol_level03_museum_affordance_spec_v1",
+    "interactiveAssets": [
+      {
+        "placementId": "age_l03_tool_case",
+        "modelKey": "age_museum_display_case_tool",
+        "affordanceTypes": [
+          "scan",
+          "palmSupport"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "front_label",
+            "nodeName": "age_museum_display_case_tool_front_label_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 1.0,
+            "maxUseDistanceMeters": 4.8
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_tool_label",
+        "modelKey": "age_museum_wall_label_panel",
+        "affordanceTypes": [
+          "read",
+          "scan"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "main_label",
+            "nodeName": "age_museum_wall_label_panel_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 0.8,
+            "maxUseDistanceMeters": 4.2
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_voice_booth",
+        "modelKey": "age_museum_voice_booth",
+        "affordanceTypes": [
+          "scan",
+          "press"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "voice_label",
+            "nodeName": "age_museum_voice_booth_voice_label_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 1.0,
+            "maxUseDistanceMeters": 4.5
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_voice_label",
+        "modelKey": "age_museum_wall_label_panel",
+        "affordanceTypes": [
+          "read",
+          "scan"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "main_label",
+            "nodeName": "age_museum_wall_label_panel_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 0.8,
+            "maxUseDistanceMeters": 4.2
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_body_case",
+        "modelKey": "age_museum_body_reference_case",
+        "affordanceTypes": [
+          "scan",
+          "pickup"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "body_label",
+            "nodeName": "age_museum_body_reference_case_body_label_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 1.0,
+            "maxUseDistanceMeters": 4.8
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_orb_yellow_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "affordanceTypes": [
+          "pickup",
+          "scan"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_orb_white_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "affordanceTypes": [
+          "pickup",
+          "scan"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_orb_blue_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "affordanceTypes": [
+          "pickup",
+          "scan"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_orb_red_pedestal",
+        "modelKey": "age_museum_color_orb_pedestal",
+        "affordanceTypes": [
+          "pickup",
+          "scan"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_archive_column_north",
+        "modelKey": "age_museum_archive_column",
+        "affordanceTypes": [
+          "scan",
+          "read"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "archive_label",
+            "nodeName": "age_museum_archive_column_archive_label_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 1.0,
+            "maxUseDistanceMeters": 5.2
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_archive_column_south",
+        "modelKey": "age_museum_archive_column",
+        "affordanceTypes": [
+          "scan",
+          "read"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "archive_label",
+            "nodeName": "age_museum_archive_column_archive_label_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 1.0,
+            "maxUseDistanceMeters": 5.2
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_archive_column_center",
+        "modelKey": "age_museum_archive_column",
+        "affordanceTypes": [
+          "scan",
+          "read"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "archive_label",
+            "nodeName": "age_museum_archive_column_archive_label_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 1.0,
+            "maxUseDistanceMeters": 5.2
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_archive_label",
+        "modelKey": "age_museum_wall_label_panel",
+        "affordanceTypes": [
+          "read",
+          "scan"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "main_label",
+            "nodeName": "age_museum_wall_label_panel_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 0.8,
+            "maxUseDistanceMeters": 4.2
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_exit_label",
+        "modelKey": "age_museum_wall_label_panel",
+        "affordanceTypes": [
+          "read",
+          "scan"
+        ],
+        "readableFaces": [
+          {
+            "faceId": "main_label",
+            "nodeName": "age_museum_wall_label_panel_readable_face",
+            "normalLocal": [
+              0,
+              -1,
+              0
+            ],
+            "minUseDistanceMeters": 0.8,
+            "maxUseDistanceMeters": 4.2
+          }
+        ],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_low_barrier_01",
+        "modelKey": "age_museum_low_barrier",
+        "affordanceTypes": [
+          "palmSupport"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_low_barrier_02",
+        "modelKey": "age_museum_low_barrier",
+        "affordanceTypes": [
+          "palmSupport"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_low_barrier_03",
+        "modelKey": "age_museum_low_barrier",
+        "affordanceTypes": [
+          "palmSupport"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_low_barrier_04",
+        "modelKey": "age_museum_low_barrier",
+        "affordanceTypes": [
+          "palmSupport"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_low_barrier_05",
+        "modelKey": "age_museum_low_barrier",
+        "affordanceTypes": [
+          "palmSupport"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      },
+      {
+        "placementId": "age_l03_low_barrier_06",
+        "modelKey": "age_museum_low_barrier",
+        "affordanceTypes": [
+          "palmSupport"
+        ],
+        "readableFaces": [],
+        "useDistanceMeters": 2.25
+      }
+    ]
+  },
+  "placements": [
+    {
+      "id": "age_l03_tool_case",
+      "modelKey": "age_museum_display_case_tool",
+      "roomId": "level_03_tool_exhibit",
+      "position": [
+        -12.2,
+        0.045,
+        2.15
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1.02,
+      "role": "tool_archive_exhibit",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 12.2,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_tool_label",
+      "modelKey": "age_museum_wall_label_panel",
+      "roomId": "level_03_tool_exhibit",
+      "position": [
+        -12.25,
+        0.045,
+        6.58
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": 0.96,
+      "role": "readable_wall_label",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 12.25,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_voice_booth",
+      "modelKey": "age_museum_voice_booth",
+      "roomId": "level_03_voice_exhibit",
+      "position": [
+        12.2,
+        0.045,
+        2.05
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": 1.0,
+      "role": "voice_archive_exhibit",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 12.2,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_voice_label",
+      "modelKey": "age_museum_wall_label_panel",
+      "roomId": "level_03_voice_exhibit",
+      "position": [
+        12.25,
+        0.045,
+        6.58
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": 0.96,
+      "role": "readable_wall_label",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 12.25,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_body_case",
+      "modelKey": "age_museum_body_reference_case",
+      "roomId": "level_03_body_exhibit",
+      "position": [
+        -3.15,
+        0.045,
+        -5.35
+      ],
+      "rotation": [
+        0,
+        -0.08,
+        0
+      ],
+      "scale": 1.02,
+      "role": "body_archive_exhibit",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 3.15,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_body_route",
+      "modelKey": "age_museum_floor_route_inlay",
+      "roomId": "level_03_body_exhibit",
+      "position": [
+        0.0,
+        0.045,
+        -6.92
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.12,
+        1,
+        0.88
+      ],
+      "role": "floor_clue_inlay",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_orb_yellow_pedestal",
+      "modelKey": "age_museum_color_orb_pedestal",
+      "roomId": "level_03_voice_exhibit",
+      "position": [
+        13.6,
+        0.045,
+        2.75
+      ],
+      "rotation": [
+        0,
+        -0.25,
+        0
+      ],
+      "scale": 0.58,
+      "role": "hit_orb_support",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 13.6,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_orb_white_pedestal",
+      "modelKey": "age_museum_color_orb_pedestal",
+      "roomId": "level_03_body_exhibit",
+      "position": [
+        -1.95,
+        0.045,
+        -6.65
+      ],
+      "rotation": [
+        0,
+        0.15,
+        0
+      ],
+      "scale": 0.68,
+      "role": "hit_orb_support",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 1.95,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_orb_blue_pedestal",
+      "modelKey": "age_museum_color_orb_pedestal",
+      "roomId": "level_03_body_exhibit",
+      "position": [
+        2.05,
+        0.045,
+        -6.82
+      ],
+      "rotation": [
+        0,
+        -0.18,
+        0
+      ],
+      "scale": 0.68,
+      "role": "hit_orb_support",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 2.05,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_orb_red_pedestal",
+      "modelKey": "age_museum_color_orb_pedestal",
+      "roomId": "level_03_body_exhibit",
+      "position": [
+        2.7,
+        0.045,
+        -5.2
+      ],
+      "rotation": [
+        0,
+        -0.28,
+        0
+      ],
+      "scale": 0.68,
+      "role": "hit_orb_support",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 2.7,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_archive_column_north",
+      "modelKey": "age_museum_archive_column",
+      "roomId": "level_03_central_archive",
+      "position": [
+        -3.95,
+        0.045,
+        -11.0
+      ],
+      "rotation": [
+        0,
+        0.18,
+        0
+      ],
+      "scale": 0.94,
+      "role": "archive_anchor",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 3.95,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_archive_column_south",
+      "modelKey": "age_museum_archive_column",
+      "roomId": "level_03_central_archive",
+      "position": [
+        3.95,
+        0.045,
+        -14.0
+      ],
+      "rotation": [
+        0,
+        -2.96,
+        0
+      ],
+      "scale": 0.94,
+      "role": "archive_anchor",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 3.95,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_archive_column_center",
+      "modelKey": "age_museum_archive_column",
+      "roomId": "level_03_central_archive",
+      "position": [
+        0.0,
+        0.045,
+        -13.2
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": 1.02,
+      "role": "boss_archive_anchor",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_archive_label",
+      "modelKey": "age_museum_wall_label_panel",
+      "roomId": "level_03_central_archive",
+      "position": [
+        0.0,
+        0.045,
+        -9.72
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": 1.0,
+      "role": "readable_wall_label",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_exit_label",
+      "modelKey": "age_museum_wall_label_panel",
+      "roomId": "level_03_exit_room",
+      "position": [
+        0.0,
+        0.045,
+        -20.72
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": 1.0,
+      "role": "exit_readable_label",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 1.52,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_route_inlay_11_8",
+      "modelKey": "age_museum_floor_route_inlay",
+      "roomId": "level_03_gallery_lobby",
+      "position": [
+        0.0,
+        0.045,
+        11.8
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.18,
+        1,
+        0.72
+      ],
+      "role": "floor_route_inlay",
+      "readableTowards": "topdown",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_route_inlay_7_2",
+      "modelKey": "age_museum_floor_route_inlay",
+      "roomId": "level_03_gallery_lobby",
+      "position": [
+        0.0,
+        0.045,
+        7.2
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.18,
+        1,
+        0.72
+      ],
+      "role": "floor_route_inlay",
+      "readableTowards": "topdown",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_route_inlay_2_8",
+      "modelKey": "age_museum_floor_route_inlay",
+      "roomId": "level_03_gallery_lobby",
+      "position": [
+        0.0,
+        0.045,
+        2.8
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.18,
+        1,
+        0.72
+      ],
+      "role": "floor_route_inlay",
+      "readableTowards": "topdown",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_route_inlay_m2_8",
+      "modelKey": "age_museum_floor_route_inlay",
+      "roomId": "level_03_body_exhibit",
+      "position": [
+        0.0,
+        0.045,
+        -2.8
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.18,
+        1,
+        0.72
+      ],
+      "role": "floor_route_inlay",
+      "readableTowards": "topdown",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_route_inlay_m7_6",
+      "modelKey": "age_museum_floor_route_inlay",
+      "roomId": "level_03_body_exhibit",
+      "position": [
+        0.0,
+        0.045,
+        -7.6
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.18,
+        1,
+        0.72
+      ],
+      "role": "floor_route_inlay",
+      "readableTowards": "topdown",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_route_inlay_m12_5",
+      "modelKey": "age_museum_floor_route_inlay",
+      "roomId": "level_03_central_archive",
+      "position": [
+        0.0,
+        0.045,
+        -12.5
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.18,
+        1,
+        0.72
+      ],
+      "role": "floor_route_inlay",
+      "readableTowards": "topdown",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_route_inlay_m16_3",
+      "modelKey": "age_museum_floor_route_inlay",
+      "roomId": "level_03_central_archive",
+      "position": [
+        0.0,
+        0.045,
+        -16.3
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.18,
+        1,
+        0.72
+      ],
+      "role": "floor_route_inlay",
+      "readableTowards": "topdown",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 0.0,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_low_barrier_01",
+      "modelKey": "age_museum_low_barrier",
+      "roomId": "level_03_gallery_lobby",
+      "position": [
+        -5.8,
+        0.045,
+        5.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": 0.92,
+      "role": "sightline_barrier",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 5.8,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_low_barrier_02",
+      "modelKey": "age_museum_low_barrier",
+      "roomId": "level_03_gallery_lobby",
+      "position": [
+        5.8,
+        0.045,
+        5.2
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": 0.92,
+      "role": "sightline_barrier",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 5.8,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_low_barrier_03",
+      "modelKey": "age_museum_low_barrier",
+      "roomId": "level_03_gallery_lobby",
+      "position": [
+        -5.8,
+        0.045,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": 0.92,
+      "role": "sightline_barrier",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 5.8,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_low_barrier_04",
+      "modelKey": "age_museum_low_barrier",
+      "roomId": "level_03_gallery_lobby",
+      "position": [
+        5.8,
+        0.045,
+        0.6
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": 0.92,
+      "role": "sightline_barrier",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 5.8,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_low_barrier_05",
+      "modelKey": "age_museum_low_barrier",
+      "roomId": "level_03_central_archive",
+      "position": [
+        -4.8,
+        0.045,
+        -12.0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": 0.92,
+      "role": "sightline_barrier",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 4.8,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    },
+    {
+      "id": "age_l03_low_barrier_06",
+      "modelKey": "age_museum_low_barrier",
+      "roomId": "level_03_central_archive",
+      "position": [
+        4.8,
+        0.045,
+        -12.0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": 0.92,
+      "role": "sightline_barrier",
+      "readableTowards": "main_path",
+      "solverMetrics": {
+        "distanceToCriticalPathMeters": 4.8,
+        "criticalPathClearance": "pass",
+        "supportGrounding": "pass",
+        "styleBudgetSafety": "pass"
+      }
+    }
+  ],
+  "lightingRig": {
+    "id": "hp_level03_museum_lighting_rig_age_v1",
+    "style": "dark marble museum with restrained brass strips, warm gallery pools, cyan only on active interactables",
+    "dominantPalette": {
+      "floor": "#111718",
+      "wall": "#131819",
+      "trim": "#b9924a",
+      "warmLight": "#f1d99a",
+      "localCyan": "#7fdde8"
+    },
+    "cyanBudget": {
+      "maxAreaShare": 0.08,
+      "use": "interaction pins, not room wash"
+    },
+    "lights": [
+      {
+        "id": "level_03_entry_hall_museum_warm_ceiling_wash",
+        "roomId": "level_03_entry_hall",
+        "type": "ceilingStrip",
+        "position": [
+          0.0,
+          3.38,
+          12.0
+        ],
+        "color": "#f1d99a",
+        "intensity": 0.55,
+        "radius": 6.96,
+        "failureLabelsGuarded": [
+          "lighting_mood_wrong",
+          "cyan_overuse"
+        ],
+        "repairFamily": "light_rig_rebalance"
+      },
+      {
+        "id": "level_03_gallery_lobby_museum_warm_ceiling_wash",
+        "roomId": "level_03_gallery_lobby",
+        "type": "ceilingStrip",
+        "position": [
+          0.0,
+          3.38,
+          6.55
+        ],
+        "color": "#f1d99a",
+        "intensity": 0.55,
+        "radius": 10.5,
+        "failureLabelsGuarded": [
+          "lighting_mood_wrong",
+          "cyan_overuse"
+        ],
+        "repairFamily": "light_rig_rebalance"
+      },
+      {
+        "id": "level_03_tool_exhibit_museum_warm_ceiling_wash",
+        "roomId": "level_03_tool_exhibit",
+        "type": "ceilingStrip",
+        "position": [
+          -12.2,
+          3.38,
+          3.5
+        ],
+        "color": "#f1d99a",
+        "intensity": 0.55,
+        "radius": 4.06,
+        "failureLabelsGuarded": [
+          "lighting_mood_wrong",
+          "cyan_overuse"
+        ],
+        "repairFamily": "light_rig_rebalance"
+      },
+      {
+        "id": "level_03_voice_exhibit_museum_warm_ceiling_wash",
+        "roomId": "level_03_voice_exhibit",
+        "type": "ceilingStrip",
+        "position": [
+          12.2,
+          3.38,
+          3.5
+        ],
+        "color": "#f1d99a",
+        "intensity": 0.55,
+        "radius": 4.06,
+        "failureLabelsGuarded": [
+          "lighting_mood_wrong",
+          "cyan_overuse"
+        ],
+        "repairFamily": "light_rig_rebalance"
+      },
+      {
+        "id": "level_03_body_exhibit_museum_warm_ceiling_wash",
+        "roomId": "level_03_body_exhibit",
+        "type": "ceilingStrip",
+        "position": [
+          0.0,
+          3.38,
+          -5.0
+        ],
+        "color": "#f1d99a",
+        "intensity": 0.55,
+        "radius": 6.96,
+        "failureLabelsGuarded": [
+          "lighting_mood_wrong",
+          "cyan_overuse"
+        ],
+        "repairFamily": "light_rig_rebalance"
+      },
+      {
+        "id": "level_03_central_archive_museum_warm_ceiling_wash",
+        "roomId": "level_03_central_archive",
+        "type": "ceilingStrip",
+        "position": [
+          0.0,
+          3.38,
+          -12.15
+        ],
+        "color": "#f1d99a",
+        "intensity": 0.42,
+        "radius": 10.32,
+        "failureLabelsGuarded": [
+          "lighting_mood_wrong",
+          "cyan_overuse"
+        ],
+        "repairFamily": "light_rig_rebalance"
+      },
+      {
+        "id": "level_03_exit_room_museum_warm_ceiling_wash",
+        "roomId": "level_03_exit_room",
+        "type": "ceilingStrip",
+        "position": [
+          0.0,
+          3.38,
+          -19.0
+        ],
+        "color": "#f1d99a",
+        "intensity": 0.55,
+        "radius": 4.06,
+        "failureLabelsGuarded": [
+          "lighting_mood_wrong",
+          "cyan_overuse"
+        ],
+        "repairFamily": "light_rig_rebalance"
+      },
+      {
+        "id": "age_l03_tool_case_local_read_light",
+        "roomId": "level_03_tool_exhibit",
+        "type": "localPool",
+        "position": [
+          -12.2,
+          2.25,
+          2.6
+        ],
+        "color": "#d6ebe8",
+        "intensity": 0.46,
+        "radius": 3.2,
+        "failureLabelsGuarded": [
+          "screen_unreadable",
+          "pickup_visibility_low"
+        ],
+        "repairFamily": "screen_legibility_boost"
+      },
+      {
+        "id": "age_l03_voice_booth_local_read_light",
+        "roomId": "level_03_voice_exhibit",
+        "type": "localPool",
+        "position": [
+          12.2,
+          2.25,
+          2.5
+        ],
+        "color": "#d6ebe8",
+        "intensity": 0.46,
+        "radius": 3.2,
+        "failureLabelsGuarded": [
+          "screen_unreadable",
+          "pickup_visibility_low"
+        ],
+        "repairFamily": "screen_legibility_boost"
+      },
+      {
+        "id": "age_l03_body_case_local_read_light",
+        "roomId": "level_03_body_exhibit",
+        "type": "localPool",
+        "position": [
+          -3.15,
+          2.25,
+          -4.8999999999999995
+        ],
+        "color": "#d6ebe8",
+        "intensity": 0.46,
+        "radius": 3.2,
+        "failureLabelsGuarded": [
+          "screen_unreadable",
+          "pickup_visibility_low"
+        ],
+        "repairFamily": "screen_legibility_boost"
+      },
+      {
+        "id": "age_l03_archive_column_center_local_read_light",
+        "roomId": "level_03_central_archive",
+        "type": "localPool",
+        "position": [
+          0.0,
+          2.25,
+          -12.75
+        ],
+        "color": "#d6ebe8",
+        "intensity": 0.46,
+        "radius": 3.2,
+        "failureLabelsGuarded": [
+          "screen_unreadable",
+          "pickup_visibility_low"
+        ],
+        "repairFamily": "screen_legibility_boost"
+      }
+    ]
+  },
+  "qaReport": {
+    "status": "pass",
+    "gates": {
+      "criticalPathClearance": "pass",
+      "interactionReachability": "pass",
+      "supportGrounding": "pass",
+      "socketPresenceForInteractiveAssets": "pass",
+      "readableFaceVisibilityForTerminalsAndReadables": "pass",
+      "pickupVisibilityForPickupAssets": "pass",
+      "clueContrastForScreens": "diagnostic-pass",
+      "styleBudgetSafety": "pass"
+    },
+    "failures": [],
+    "notes": [
+      "clueContrastForScreens remains diagnostic until rendered in the game lighting pass.",
+      "All furniture placements use registered AGE GLB assets and manifest affordances.",
+      "Critical player lane keeps at least 1.35m clearance except floor inlays, which are non-blocking."
+    ]
+  },
+  "gameConsumption": {
+    "mode": "copy placements and lightingRig into Human Protocol level_03 config only after QA acceptance",
+    "oldFurniturePolicy": "do not delete source assets; remove old ad-hoc placements from the level config when consuming this handoff"
+  }
+}

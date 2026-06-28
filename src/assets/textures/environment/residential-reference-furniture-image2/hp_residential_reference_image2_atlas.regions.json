@@ -1,0 +1,76 @@
+{
+  "schema": "human-protocol/residential-reference-image2-atlas-regions@1",
+  "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+  "atlasSize": [
+    2048,
+    2048
+  ],
+  "regions": {
+    "warm_walnut_ribbed": {
+      "x": 16,
+      "y": 16,
+      "w": 496,
+      "h": 496,
+      "role": "fluted walnut pedestal and sideboard ribs"
+    },
+    "pale_oak_slats": {
+      "x": 544,
+      "y": 16,
+      "w": 496,
+      "h": 496,
+      "role": "entry bench wall slats and pale wood frames"
+    },
+    "warm_stone_oval": {
+      "x": 1072,
+      "y": 16,
+      "w": 496,
+      "h": 368,
+      "role": "rounded coffee table and sideboard stone tops"
+    },
+    "ivory_boucle_clean": {
+      "x": 1600,
+      "y": 16,
+      "w": 368,
+      "h": 368,
+      "role": "bench cushions and folded soft goods"
+    },
+    "warm_white_lacquer": {
+      "x": 16,
+      "y": 560,
+      "w": 496,
+      "h": 496,
+      "role": "clean utility cabinet lacquer"
+    },
+    "muted_book_spines": {
+      "x": 544,
+      "y": 560,
+      "w": 496,
+      "h": 288,
+      "role": "restrained room-divider books"
+    },
+    "shadow_gap_panel": {
+      "x": 1072,
+      "y": 560,
+      "w": 384,
+      "h": 384,
+      "role": "hidden control shadow gaps and rear service plates"
+    },
+    "woven_basket_oak": {
+      "x": 1488,
+      "y": 560,
+      "w": 384,
+      "h": 384,
+      "role": "entry/utility storage basket"
+    }
+  },
+  "sourceTiles": {
+    "warm_walnut_ribbed": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_walnut_ribbed.png",
+    "pale_oak_slats": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/pale_oak_slats.png",
+    "warm_stone_oval": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_stone_oval.png",
+    "ivory_boucle_clean": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/ivory_boucle_clean.png",
+    "warm_white_lacquer": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_white_lacquer.png",
+    "muted_book_spines": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/muted_book_spines.png",
+    "shadow_gap_panel": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/shadow_gap_panel.png",
+    "woven_basket_oak": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/woven_basket_oak.png"
+  }
+}

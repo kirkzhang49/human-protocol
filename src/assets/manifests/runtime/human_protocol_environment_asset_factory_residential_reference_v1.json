@@ -1,0 +1,217 @@
+{
+  "schema": "human-protocol/environment-asset-factory/manifest@1",
+  "id": "human_protocol_environment_asset_factory_residential_reference_v1",
+  "generatedAt": "2026-06-19",
+  "styleProfile": "residential_simulation",
+  "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend",
+  "report": "src/assets/manifests/reports/residential_reference_furniture_batch01_blender_report.json",
+  "textureSources": {
+    "type": "image2-base-color-png",
+    "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+    "atlasRegions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+    "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+    "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+    "glbTextureAudit": "src/assets/manifests/reports/residential_reference_furniture_glb_texture_audit.json",
+    "sourceTilesDir": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources",
+    "sourceProvenance": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.json",
+    "sourceProvenanceHuman": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.md",
+    "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+    "generatingAccount": "kirkzhang49@gmail.com",
+    "generationDate": "2026-06-19",
+    "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+    "licenseClassification": "owned-generated-output",
+    "releaseClearanceStatus": "cleared-for-project-use-call-id-not-exposed",
+    "generationCallIdStatus": "not-exposed-by-built-in-codex-image-tool"
+  },
+  "referenceImages": [
+    "/Users/zhengkaizhang/Desktop/Screenshot 2026-06-19 at 2.53.26 PM.png",
+    "/Users/zhengkaizhang/Desktop/Screenshot 2026-06-19 at 2.53.52 PM.png"
+  ],
+  "assets": [
+    {
+      "modelKey": "hp_furniture_residential_oval_coffee_table_v1",
+      "label": "住宅圆角茶几",
+      "assetFamily": "residential_coffee_table",
+      "assetClass": "residential-furniture",
+      "readiness": "source-ready",
+      "role": "Reusable residential showroom furniture with restrained Human Protocol control cues.",
+      "silhouette": "low rounded oval stone top with twin fluted walnut pedestals",
+      "hiddenControlHint": "single underside shadow gap only",
+      "pathPlan": {
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_oval_coffee_table_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_residential_oval_coffee_table_v1.glb",
+        "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_oval_coffee_table_v1.png",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend"
+      },
+      "textureEvidence": {
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "glbTextureAudit": "src/assets/manifests/reports/residential_reference_furniture_glb_texture_audit.json",
+        "requireGlbBaseColorTexture": true,
+        "sourceProvenance": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.json",
+        "sourceProvenanceHuman": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.md",
+        "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+        "generatingAccount": "kirkzhang49@gmail.com",
+        "generationDate": "2026-06-19",
+        "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+        "licenseClassification": "owned-generated-output",
+        "releaseClearanceStatus": "cleared-for-project-use-call-id-not-exposed",
+        "generationCallIdStatus": "not-exposed-by-built-in-codex-image-tool"
+      },
+      "integration": {
+        "viewer": "work/level2-furniture-viewer.html",
+        "builderCatalog": "pending visual approval",
+        "officialLevelPolicy": "Reference by modelKey only after builder/catalog/thumbnail/Raw WGPU gates are completed."
+      }
+    },
+    {
+      "modelKey": "hp_furniture_residential_fluted_sideboard_v1",
+      "label": "住宅竖纹边柜",
+      "assetFamily": "residential_sideboard",
+      "assetClass": "residential-furniture",
+      "readiness": "source-ready",
+      "role": "Reusable residential showroom furniture with restrained Human Protocol control cues.",
+      "silhouette": "long low sideboard, vertical fluted doors, warm stone slab top",
+      "hiddenControlHint": "rear access plate and toe shadow",
+      "pathPlan": {
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_fluted_sideboard_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_residential_fluted_sideboard_v1.glb",
+        "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_fluted_sideboard_v1.png",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend"
+      },
+      "textureEvidence": {
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "glbTextureAudit": "src/assets/manifests/reports/residential_reference_furniture_glb_texture_audit.json",
+        "requireGlbBaseColorTexture": true,
+        "sourceProvenance": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.json",
+        "sourceProvenanceHuman": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.md",
+        "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+        "generatingAccount": "kirkzhang49@gmail.com",
+        "generationDate": "2026-06-19",
+        "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+        "licenseClassification": "owned-generated-output",
+        "releaseClearanceStatus": "cleared-for-project-use-call-id-not-exposed",
+        "generationCallIdStatus": "not-exposed-by-built-in-codex-image-tool"
+      },
+      "integration": {
+        "viewer": "work/level2-furniture-viewer.html",
+        "builderCatalog": "pending visual approval",
+        "officialLevelPolicy": "Reference by modelKey only after builder/catalog/thumbnail/Raw WGPU gates are completed."
+      }
+    },
+    {
+      "modelKey": "hp_furniture_residential_entry_bench_cubby_v1",
+      "label": "玄关储物换鞋凳",
+      "assetFamily": "residential_entry_bench",
+      "assetClass": "residential-furniture",
+      "readiness": "source-ready",
+      "role": "Reusable residential showroom furniture with restrained Human Protocol control cues.",
+      "silhouette": "entry bench with cushion, cubbies, and tall fluted wall back",
+      "hiddenControlHint": "over-regular lower service shadow gap",
+      "pathPlan": {
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_entry_bench_cubby_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_residential_entry_bench_cubby_v1.glb",
+        "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_entry_bench_cubby_v1.png",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend"
+      },
+      "textureEvidence": {
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "glbTextureAudit": "src/assets/manifests/reports/residential_reference_furniture_glb_texture_audit.json",
+        "requireGlbBaseColorTexture": true,
+        "sourceProvenance": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.json",
+        "sourceProvenanceHuman": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.md",
+        "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+        "generatingAccount": "kirkzhang49@gmail.com",
+        "generationDate": "2026-06-19",
+        "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+        "licenseClassification": "owned-generated-output",
+        "releaseClearanceStatus": "cleared-for-project-use-call-id-not-exposed",
+        "generationCallIdStatus": "not-exposed-by-built-in-codex-image-tool"
+      },
+      "integration": {
+        "viewer": "work/level2-furniture-viewer.html",
+        "builderCatalog": "pending visual approval",
+        "officialLevelPolicy": "Reference by modelKey only after builder/catalog/thumbnail/Raw WGPU gates are completed."
+      }
+    },
+    {
+      "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+      "label": "半高隔断书架",
+      "assetFamily": "residential_room_divider_shelf",
+      "assetClass": "residential-furniture",
+      "readiness": "source-ready",
+      "role": "Reusable residential showroom furniture with restrained Human Protocol control cues.",
+      "silhouette": "open warm wood shelf grid with restrained books and display bowl",
+      "hiddenControlHint": "small rear maintenance inset",
+      "pathPlan": {
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+        "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_room_divider_shelf_v1.png",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend"
+      },
+      "textureEvidence": {
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "glbTextureAudit": "src/assets/manifests/reports/residential_reference_furniture_glb_texture_audit.json",
+        "requireGlbBaseColorTexture": true,
+        "sourceProvenance": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.json",
+        "sourceProvenanceHuman": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.md",
+        "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+        "generatingAccount": "kirkzhang49@gmail.com",
+        "generationDate": "2026-06-19",
+        "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+        "licenseClassification": "owned-generated-output",
+        "releaseClearanceStatus": "cleared-for-project-use-call-id-not-exposed",
+        "generationCallIdStatus": "not-exposed-by-built-in-codex-image-tool"
+      },
+      "integration": {
+        "viewer": "work/level2-furniture-viewer.html",
+        "builderCatalog": "pending visual approval",
+        "officialLevelPolicy": "Reference by modelKey only after builder/catalog/thumbnail/Raw WGPU gates are completed."
+      }
+    },
+    {
+      "modelKey": "hp_furniture_residential_cleaner_closet_v1",
+      "label": "家政清洁储物柜",
+      "assetFamily": "residential_cleaner_closet",
+      "assetClass": "residential-furniture",
+      "readiness": "source-ready",
+      "role": "Reusable residential showroom furniture with restrained Human Protocol control cues.",
+      "silhouette": "tall warm-white utility closet with fluted door and lower basket niche",
+      "hiddenControlHint": "heavy rear service panel and overbuilt plinth",
+      "pathPlan": {
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_cleaner_closet_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_residential_cleaner_closet_v1.glb",
+        "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_cleaner_closet_v1.png",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend"
+      },
+      "textureEvidence": {
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "glbTextureAudit": "src/assets/manifests/reports/residential_reference_furniture_glb_texture_audit.json",
+        "requireGlbBaseColorTexture": true,
+        "sourceProvenance": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.json",
+        "sourceProvenanceHuman": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.md",
+        "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+        "generatingAccount": "kirkzhang49@gmail.com",
+        "generationDate": "2026-06-19",
+        "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+        "licenseClassification": "owned-generated-output",
+        "releaseClearanceStatus": "cleared-for-project-use-call-id-not-exposed",
+        "generationCallIdStatus": "not-exposed-by-built-in-codex-image-tool"
+      },
+      "integration": {
+        "viewer": "work/level2-furniture-viewer.html",
+        "builderCatalog": "pending visual approval",
+        "officialLevelPolicy": "Reference by modelKey only after builder/catalog/thumbnail/Raw WGPU gates are completed."
+      }
+    }
+  ]
+}

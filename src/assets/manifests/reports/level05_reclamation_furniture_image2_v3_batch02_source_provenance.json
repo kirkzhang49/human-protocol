@@ -1,0 +1,1331 @@
+{
+  "schemaVersion": "hp.image2.sourceProvenance.v1",
+  "packId": "hp_level05_reclamation_furniture_image2_v3_batch02",
+  "revision": "v3-batch02-clean-chair-sofa-front-organic-supports-area-uv",
+  "generatedAt": "2026-06-27",
+  "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "classification": "owned-generated-output",
+  "generatingAccount": "Codex built-in image_gen; account not exposed",
+  "generationCallId": "not-exposed-by-codex-imagegen",
+  "image2Sources": {
+    "chair": {
+      "modelKey": "room_l5_v3_anemone_lounge_chair",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_05aefb923c70497b016a400caaca74819abc1adfcf30978fc4.png",
+      "prompt": "Orthographic Image2 parts sheet for an anemone lounge chair with ribbed black cushions, white ceramic shell petals, graphite swivel base, brass bearing ring, cyan glass beads, gaskets, screws."
+    },
+    "sofa": {
+      "modelKey": "room_l5_v3_crescent_low_sofa",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_02c3eff2071b3773016a400d0181a08199b180fb446b50562e.png",
+      "prompt": "Orthographic Image2 parts sheet for a crescent low sofa with curved black ribbed cushions, white ceramic outer shells, graphite plinth, brass caps, cyan glass slits and connector parts."
+    },
+    "coffee": {
+      "modelKey": "room_l5_v3_evidence_coffee_table",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_02c3eff2071b3773016a400d38393c819988823d7636a28140.png",
+      "prompt": "Orthographic Image2 parts sheet for an evidence coffee table with smoked black glass top, cyan route glow, white ceramic rims, graphite slabs, brass feet, gaskets and screws."
+    },
+    "cabinet": {
+      "modelKey": "room_l5_v3_human_archive_cabinet",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_02c3eff2071b3773016a400d78d214819981e2caca47642fa1.png",
+      "prompt": "Orthographic Image2 parts sheet for a human archive cabinet with tall white ceramic curved doors, smoked graphite shelves, black padded bolsters, brass handles, cyan glass strips and seals."
+    },
+    "console": {
+      "modelKey": "room_l5_v3_service_side_console",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_02c3eff2071b3773016a400db4f5908199b291093701d31302.png",
+      "prompt": "Orthographic Image2 parts sheet for a service side console with black smoked glass tray, white ceramic side panels, graphite ribbed lower cabinet, brass rails and cyan glass status capsules."
+    }
+  },
+  "atlas": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/hp_level05_reclamation_furniture_image2_v3_batch02_atlas.png",
+  "regions": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/hp_level05_reclamation_furniture_image2_v3_batch02_atlas.regions.json",
+  "cutoutDirectory": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts",
+  "audit": [
+    {
+      "modelKey": "room_l5_v3_anemone_lounge_chair",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_anemone_lounge_chair.glb",
+      "bytes": 8125088,
+      "sizeMeters": [
+        1.04,
+        1.133,
+        1.04
+      ],
+      "expectedNamedParts": 18,
+      "geometryNodes": 18,
+      "vertices": 9052,
+      "triangles": 15888,
+      "materialsWithBaseColorTexture": 18,
+      "uvNodes": 18,
+      "areaUvNodes": 18,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "areaUvCoverageRatio": 1.0,
+      "materials": [
+        {
+          "node": "graphite_swivel_base",
+          "material": "chair_graphite_swivel_base",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_bearing_ring",
+          "material": "chair_brass_bearing_ring",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "continuous_white_ceramic_seat_bowl",
+          "material": "chair_white_ceramic_petal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "single_soft_black_seat_basin",
+          "material": "chair_black_ribbed_cushion",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_outer_petal_0",
+          "material": "chair_white_ceramic_petal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "ribbed_black_soft_petal_0",
+          "material": "chair_black_ribbed_cushion",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_outer_petal_1",
+          "material": "chair_white_ceramic_petal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "ribbed_black_soft_petal_1",
+          "material": "chair_black_ribbed_cushion",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_outer_petal_2",
+          "material": "chair_white_ceramic_petal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "ribbed_black_soft_petal_2",
+          "material": "chair_black_ribbed_cushion",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_outer_petal_3",
+          "material": "chair_white_ceramic_petal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "ribbed_black_soft_petal_3",
+          "material": "chair_black_ribbed_cushion",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_outer_petal_4",
+          "material": "chair_white_ceramic_petal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "ribbed_black_soft_petal_4",
+          "material": "chair_black_ribbed_cushion",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_outer_petal_5",
+          "material": "chair_white_ceramic_petal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "ribbed_black_soft_petal_5",
+          "material": "chair_black_ribbed_cushion",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_outer_petal_6",
+          "material": "chair_white_ceramic_petal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "ribbed_black_soft_petal_6",
+          "material": "chair_black_ribbed_cushion",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        }
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_crescent_low_sofa",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_crescent_low_sofa.glb",
+      "bytes": 7872044,
+      "sizeMeters": [
+        2.384,
+        0.72,
+        1.153
+      ],
+      "expectedNamedParts": 7,
+      "geometryNodes": 7,
+      "vertices": 900,
+      "triangles": 1772,
+      "materialsWithBaseColorTexture": 7,
+      "uvNodes": 7,
+      "areaUvNodes": 7,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "areaUvCoverageRatio": 1.0,
+      "materials": [
+        {
+          "node": "single_curved_graphite_plinth",
+          "material": "sofa_graphite_plinth",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "continuous_white_ceramic_under_shell",
+          "material": "sofa_white_ceramic_arc",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "continuous_black_crescent_seat",
+          "material": "sofa_black_ribbed_crescent",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_rear_shell",
+          "material": "sofa_white_ceramic_arc",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "soft_black_back_cushion_band",
+          "material": "sofa_black_ribbed_crescent",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "rounded_ceramic_end_cap_-1.02",
+          "material": "sofa_white_ceramic_arc",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "rounded_ceramic_end_cap_1.02",
+          "material": "sofa_white_ceramic_arc",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        }
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_evidence_coffee_table",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_evidence_coffee_table.glb",
+      "bytes": 7846840,
+      "sizeMeters": [
+        1.74,
+        0.66,
+        0.98
+      ],
+      "expectedNamedParts": 18,
+      "geometryNodes": 12,
+      "vertices": 528,
+      "triangles": 672,
+      "materialsWithBaseColorTexture": 12,
+      "uvNodes": 12,
+      "areaUvNodes": 12,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "areaUvCoverageRatio": 1.0,
+      "materials": [
+        {
+          "node": "smoked_glass_top",
+          "material": "coffee_black_glass_top",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "front_ceramic_rim",
+          "material": "coffee_white_ceramic_rim",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "back_ceramic_rim",
+          "material": "coffee_white_ceramic_rim",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "graphite_pedestal",
+          "material": "coffee_graphite_pedestal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "top_collar_bridge",
+          "material": "coffee_graphite_pedestal",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "visible_brass_support_-0.62",
+          "material": "coffee_brass_connector",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "visible_brass_support_0.62",
+          "material": "coffee_brass_connector",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "cyan_route_capsule_under_glass",
+          "material": "coffee_cyan_capsule",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_00_coffee_screw_corner",
+          "material": "coffee_screw_corner",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_01_coffee_screw_corner",
+          "material": "coffee_screw_corner",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_02_coffee_screw_corner",
+          "material": "coffee_screw_corner",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_03_coffee_screw_corner",
+          "material": "coffee_screw_corner",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        }
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_human_archive_cabinet",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_human_archive_cabinet.glb",
+      "bytes": 7898156,
+      "sizeMeters": [
+        1.26,
+        1.845,
+        0.75
+      ],
+      "expectedNamedParts": 44,
+      "geometryNodes": 44,
+      "vertices": 2032,
+      "triangles": 2624,
+      "materialsWithBaseColorTexture": 44,
+      "uvNodes": 44,
+      "areaUvNodes": 44,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "areaUvCoverageRatio": 1.0,
+      "materials": [
+        {
+          "node": "graphite_shelf_body",
+          "material": "cabinet_graphite_shelf",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "flush_black_archive_backing_panel",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "thick_graphite_top_cap",
+          "material": "cabinet_graphite_shelf",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "weighted_graphite_bottom_plinth",
+          "material": "cabinet_graphite_shelf",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_archive_door_-0.3",
+          "material": "cabinet_white_ceramic_door",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "black_inner_door_seal_-0.3",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "long_brass_archive_door_pull_-0.3",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "curved_white_archive_door_0.3",
+          "material": "cabinet_white_ceramic_door",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "black_inner_door_seal_0.3",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "long_brass_archive_door_pull_0.3",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "smoked_shelf_front_0.45",
+          "material": "cabinet_smoked_glass_front",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "thin_black_glass_upper_gasket_0.45",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "thin_black_glass_lower_gasket_0.45",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "smoked_shelf_front_0.82",
+          "material": "cabinet_smoked_glass_front",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "thin_black_glass_upper_gasket_0.82",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "thin_black_glass_lower_gasket_0.82",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "smoked_shelf_front_1.19",
+          "material": "cabinet_smoked_glass_front",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "thin_black_glass_upper_gasket_1.19",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "thin_black_glass_lower_gasket_1.19",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "black_side_bolster_-0.56",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "round_brass_hinge_knuckle_-0.56_0.35",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "round_brass_hinge_knuckle_-0.56_0.92",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "round_brass_hinge_knuckle_-0.56_1.49",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "black_side_bolster_0.56",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "round_brass_hinge_knuckle_0.56_0.35",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "round_brass_hinge_knuckle_0.56_0.92",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "round_brass_hinge_knuckle_0.56_1.49",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_archive_handle_0.42",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_handle_mount_-0.29_0.42",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_handle_mount_0.29_0.42",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_archive_handle_0.92",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_handle_mount_-0.29_0.92",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_handle_mount_0.29_0.92",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_archive_handle_1.42",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_handle_mount_-0.29_1.42",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_handle_mount_0.29_1.42",
+          "material": "cabinet_brass_handle",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "cyan_vertical_status_strip",
+          "material": "cabinet_cyan_strip",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "center_archive_door_split_shadow",
+          "material": "cabinet_black_padded_bolster",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "small_recessed_archive_foot_-0.4",
+          "material": "cabinet_graphite_shelf",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "small_recessed_archive_foot_0.4",
+          "material": "cabinet_graphite_shelf",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_00_cabinet_screw_hinge",
+          "material": "cabinet_screw_hinge",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_01_cabinet_screw_hinge",
+          "material": "cabinet_screw_hinge",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_02_cabinet_screw_hinge",
+          "material": "cabinet_screw_hinge",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_03_cabinet_screw_hinge",
+          "material": "cabinet_screw_hinge",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        }
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_service_side_console",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_service_side_console.glb",
+      "bytes": 7859956,
+      "sizeMeters": [
+        1.6,
+        1.0,
+        0.588
+      ],
+      "expectedNamedParts": 18,
+      "geometryNodes": 16,
+      "vertices": 808,
+      "triangles": 984,
+      "materialsWithBaseColorTexture": 16,
+      "uvNodes": 16,
+      "areaUvNodes": 16,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "areaUvCoverageRatio": 1.0,
+      "materials": [
+        {
+          "node": "ribbed_console_body",
+          "material": "console_graphite_ribbed_body",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "smoked_glass_service_tray",
+          "material": "console_black_glass_tray",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "white_side_panel_-0.72",
+          "material": "console_white_ceramic_side",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "white_side_panel_0.72",
+          "material": "console_white_ceramic_side",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_front_rail_0.22",
+          "material": "console_brass_rail",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "brass_front_rail_0.72",
+          "material": "console_brass_rail",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "cyan_status_capsule_0",
+          "material": "console_cyan_capsule",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "cyan_status_capsule_1",
+          "material": "console_cyan_capsule",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "cyan_status_capsule_2",
+          "material": "console_cyan_capsule",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "cyan_status_capsule_3",
+          "material": "console_cyan_capsule",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "front_rubber_foot_-0.48",
+          "material": "console_screw_foot",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "front_rubber_foot_0.48",
+          "material": "console_screw_foot",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_00_console_screw_foot",
+          "material": "console_screw_foot",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_01_console_screw_foot",
+          "material": "console_screw_foot",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_02_console_screw_foot",
+          "material": "console_screw_foot",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        },
+        {
+          "node": "screw_03_console_screw_foot",
+          "material": "console_screw_foot",
+          "baseColorTexture": true,
+          "hasUv": true,
+          "uvSpan": [
+            0.125,
+            0.125
+          ],
+          "uvArea": 0.015625,
+          "areaMapped": true
+        }
+      ]
+    }
+  ],
+  "qaGate": [
+    "Each model owns an independent Image2 parts sheet.",
+    "Each atlas region has a transparent cutout PNG with alpha stats.",
+    "GLB audit requires baseColorTexture and area UV coverage.",
+    "No center-sampled UV nodes are allowed.",
+    "Chair and sofa polish pass replaces block arrays with continuous bowls, curved arcs, and soft cushion lobes.",
+    "Chair front cleanup removes the exposed front gasket bar, cyan bead row, root gasket tabs, and screw brackets from the player-facing face.",
+    "Sofa front cleanup removes exposed status slit, brass foot caps, and screw plates from the player-facing face.",
+    "Assets are not placed into official Level 5 until user approves."
+  ]
+}

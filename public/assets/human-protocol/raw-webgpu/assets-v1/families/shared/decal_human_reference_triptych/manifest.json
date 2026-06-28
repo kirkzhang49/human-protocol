@@ -1,0 +1,205 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "decal_human_reference_triptych",
+  "family": "shared",
+  "bundleId": "shared/decal_human_reference_triptych",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "assets_v1_glb_bridge",
+    "sourcePlan": "scripts/asset-build/generate-raw-webgpu-assets-v1.mjs#glb-bridge",
+    "sourceGeometry": "public/assets/human-protocol/raw-webgpu/assets-v1/**/geometry.raw.bin",
+    "rawFile": "src/assets/models-cooked/environment/level01/hp_decal_human_reference_triptych.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_01_maintenance_bay"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "hero-or-puzzle",
+    "baseColorTarget": 1024,
+    "normalTarget": 1024,
+    "ormTarget": 512,
+    "emissiveTarget": 1024,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 6,
+    "triangleCount": 2,
+    "byteLength": 240,
+    "hash": "80fa8c60211c431e",
+    "asset": {
+      "modelKey": "decal_human_reference_triptych",
+      "sourceFile": "src/assets/models-cooked/environment/level01/hp_decal_human_reference_triptych.glb",
+      "rawFile": "src/assets/models-cooked/environment/level01/hp_decal_human_reference_triptych.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 6,
+      "triangleCount": 2,
+      "meshCount": 1,
+      "materialCount": 1,
+      "nodeCount": 1,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "hp_decal_human_reference_triptych_image2_poster_root",
+          "vertexOffset": 0,
+          "vertexCount": 6,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1.23,
+          -0.61,
+          0
+        ],
+        "center": [
+          0,
+          0,
+          0
+        ],
+        "size": [
+          2.46,
+          1.22,
+          0
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "d944924cc6074c62",
+    "materials": [
+      {
+        "index": 2,
+        "id": "mat:room:hp-decal-human-reference-triptych-image2-poster:03bf787",
+        "name": "hp_decal_human_reference_triptych_image2_poster",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.035,
+          0.12,
+          0.15
+        ],
+        "emissiveStrength": 0.183,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_decal_human_reference_triptych_image2_poster_texture",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-tsbw91.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-tsbw91.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.202691,
+              "contrast": 0.277978,
+              "chroma": 0.199009,
+              "detail": 0.277605
+            },
+            "generated": false,
+            "layer": 1
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 1024,
+    "baseColorTextures": [
+      {
+        "layer": 1,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-tsbw91.webp",
+        "name": "hp_decal_human_reference_triptych_image2_poster_texture",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/glb-bridge-textures/tex-tsbw91.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.202691,
+          "contrast": 0.277978,
+          "chroma": 0.199009,
+          "detail": 0.277605
+        }
+      }
+    ],
+    "materialTextureSize": 1024,
+    "materialTextures": []
+  }
+}

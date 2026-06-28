@@ -1,0 +1,24 @@
+{
+  "assetId": "route_switch_rotary_controller_image2_source_v2",
+  "generatedDate": "2026-06-21",
+  "tool": "built-in image_gen",
+  "model": "not-exposed-by-built-in-image-gen",
+  "toolCallId": "not-exposed-by-built-in-image-gen",
+  "generatedImagesDirectory": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd",
+  "originalGeneratedPath": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd/ig_093b54f8a06731d8016a38ab2c9e248199942179a67ccfd9db.png",
+  "projectSourcePath": "src/assets/gui/route-switch/image2-sources/route_switch_rotary_controller_image2_source_v2.png",
+  "licenseLabel": "owned-generated-output",
+  "termsLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "sourceRole": "Image2 source sheet for 2D route-switch rotary overlay controls",
+  "prompt": "Use case: ui-mockup\nAsset type: Human Protocol game GUI Image2 source sheet for route-switch rotary output buttons\nPrimary request: Create a production-ready bitmap source sheet of mechanical rotary output selector parts for a dark robot-facility routing console. This is a sprite/atlas source sheet, not an in-game screenshot.\nScene/backdrop: perfectly flat pure black #000000 background only, no gradients, no floor, no shadows cast onto the background.\nSubject: multiple isolated mechanical GUI parts with generous padding: 12 circular rotary knob animation frames in a clean grid, all the same size and same outer silhouette, with a raised pointer/notch and three small copper-gold grip bars rotating clockwise between frames; one cyan enabled knob, one amber selected knob, one desaturated gray locked knob with a simple mechanical lock-face motif; matching lower target nameplate plates with no text, cyan enabled plate, amber selected plate, gray disabled plate; small screws, gasket rings, glass highlights, brushed smoked titanium, old brass/gold trim, medical cyan emissive lines.\nStyle/medium: high-end sci-fi hard-surface game UI bitmap asset, Image2-style painted pixels, premium facility tool, Human Protocol horror escape-room tone, clean survival interface.\nComposition/framing: 2048x2048 square source sheet, orthographic/front-facing, each part isolated and easy to crop, consistent scale, no perspective distortion, no overlapping parts.\nLighting/mood: restrained cyan glow and amber selected glow, dark smoked metal, subtle edge wear, quiet service-machine intent.\nColor palette: smoked titanium black, cold gray-white, medical cyan, old brass/gold accents; red only absent.\nMaterials/textures: brushed metal, rubber gasket, smoked glass, inset screws, bevel highlights, tiny scratches, copper bus detail, dark recesses.\nText: none.\nConstraints: no Chinese text, no English text, no numbers, no UI instructions, no logo, no watermark, no full console poster, no complete screenshot, no flat SVG look, no neon overload, no color balls. Keep all live labels blank so React/CSS can render text later.",
+  "derivativeOutputs": [
+    "src/assets/gui/route-switch/route_switch_output_rotary_buttons_image2_v1.png",
+    "src/assets/gui/route-switch/route_switch_output_rotary_buttons_image2_v1.regions.json"
+  ],
+  "derivativeScript": "scripts/asset-build/cut-route-switch-rotary-buttons-image2.mjs",
+  "notes": [
+    "The generated source uses a flat black background so the build script can key background pixels to alpha.",
+    "Runtime text is not baked into the bitmap source or atlas.",
+    "Four source-painted amber knob frames are used by the overlay rotating state."
+  ]
+}

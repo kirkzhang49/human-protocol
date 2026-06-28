@@ -1,0 +1,121 @@
+{
+  "schema": "human-protocol/image2-source-provenance@1",
+  "packId": "hp_level05_reclamation_furniture_image2_v3_batch04",
+  "sourceId": "level05-reclamation-furniture-image2-v3-batch04",
+  "generatedAt": "2026-06-27",
+  "generationTool": "built-in image_gen / Image2-style generated bitmap source sheet",
+  "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "sourceSheets": [
+    {
+      "modelKey": "room_l5_v3_curved_archive_shelf",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/image2-sources/curved_archive_shelf_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a31-55ca-7093-99a0-fb6383b0c4c2/ig_0ba53dd428fe7763016a400cd0d0c48199ba48a40e7445dc40.png",
+      "prompt": "Orthographic parts sheet for a curved archive/display shelf: white ceramic curved shell, black shelf liners, brass edge trims, graphite ribs, cyan status beads, screw caps, gaskets, bracket feet; 3x3 parts grid; no text.",
+      "toolCallId": "not-exposed-by-built-in-image-gen"
+    },
+    {
+      "modelKey": "room_l5_v3_hanging_cable_organizer",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/image2-sources/hanging_cable_organizer_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a31-55ca-7093-99a0-fb6383b0c4c2/ig_0ba53dd428fe7763016a400d0c3d8881998261a95a3420bea8.png",
+      "prompt": "Orthographic parts sheet for a wall-mounted cable organizer: graphite backplate, shallow cabinet body, cyan cable clips, bundled black cables, black gaskets, brass latches, white ceramic caps, screws, cable tray; 3x3 parts grid; no text.",
+      "toolCallId": "not-exposed-by-built-in-image-gen"
+    },
+    {
+      "modelKey": "room_l5_v3_surgical_light_stand",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/image2-sources/surgical_light_stand_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a31-55ca-7093-99a0-fb6383b0c4c2/ig_0ba53dd428fe7763016a400d49336c8199968f4f90cff9f4fb.png",
+      "prompt": "Orthographic parts sheet for a floor standing surgical/exam light: circular ring lamp, cyan-white lens segments, brass hinge knuckles, white armature tubes, graphite telescoping pole, black collars, tripod base, screw caps; 3x3 parts grid; no text.",
+      "toolCallId": "not-exposed-by-built-in-image-gen"
+    },
+    {
+      "modelKey": "room_l5_v3_specimen_drawer_stack",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/image2-sources/specimen_drawer_stack_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a31-55ca-7093-99a0-fb6383b0c4c2/ig_0ba53dd428fe7763016a400d881ea88199aa3d0481621a3064.png",
+      "prompt": "Orthographic parts sheet for a tall narrow specimen drawer cabinet: graphite shell, many white ceramic drawer faces, blank brass label slots, black gaskets, cyan status beads, brass pulls, side rails, base plinth, screws; 3x3 parts grid; no text.",
+      "toolCallId": "not-exposed-by-built-in-image-gen"
+    },
+    {
+      "modelKey": "room_l5_v3_corner_privacy_screen",
+      "copiedTo": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/image2-sources/corner_privacy_screen_parts_image2.png",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a31-55ca-7093-99a0-fb6383b0c4c2/ig_0ba53dd428fe7763016a400dc3ff7c8199adfef704d3c1f00c.png",
+      "prompt": "Orthographic parts sheet for a corner folding privacy screen: black soft padded faces, white ceramic frames, graphite hinge spine, cyan status beads, brass hinge pins, black gasket strips, weighted feet; 3x3 parts grid; no text.",
+      "toolCallId": "not-exposed-by-built-in-image-gen"
+    }
+  ],
+  "atlas": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/hp_level05_reclamation_furniture_image2_v3_batch04_atlas.png",
+  "regions": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/hp_level05_reclamation_furniture_image2_v3_batch04_atlas.regions.json",
+  "cutoutDirectory": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/image2-cutouts",
+  "contactSheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/hp_level05_reclamation_furniture_image2_v3_batch04_contact_sheet.png",
+  "assets": [
+    {
+      "modelKey": "room_l5_v3_curved_archive_shelf",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_curved_archive_shelf.glb",
+      "materialsWithBaseColorTexture": 9,
+      "areaUvNodes": 24,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 24,
+      "sizeMeters": [
+        1.822,
+        2.08,
+        0.595
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_hanging_cable_organizer",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_hanging_cable_organizer.glb",
+      "materialsWithBaseColorTexture": 11,
+      "areaUvNodes": 37,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 37,
+      "sizeMeters": [
+        1.56,
+        1.195,
+        0.551
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_surgical_light_stand",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_surgical_light_stand.glb",
+      "materialsWithBaseColorTexture": 12,
+      "areaUvNodes": 27,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 27,
+      "sizeMeters": [
+        1.438,
+        2.692,
+        0.864
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_specimen_drawer_stack",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_specimen_drawer_stack.glb",
+      "materialsWithBaseColorTexture": 9,
+      "areaUvNodes": 37,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 37,
+      "sizeMeters": [
+        1.015,
+        2.05,
+        0.6
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_corner_privacy_screen",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_corner_privacy_screen.glb",
+      "materialsWithBaseColorTexture": 9,
+      "areaUvNodes": 34,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 34,
+      "sizeMeters": [
+        2.149,
+        2.005,
+        0.415
+      ]
+    }
+  ]
+}

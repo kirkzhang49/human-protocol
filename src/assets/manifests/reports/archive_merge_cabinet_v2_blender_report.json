@@ -1,0 +1,42 @@
+{
+  "schema": "human-protocol/blender-asset-report@1",
+  "modelKey": "puzzle_console_archive_merge",
+  "generatedAt": "2026-06-25T23:19:35-07:00",
+  "generator": "scripts/asset-build/generate-builder-puzzle-machine-glbs.py",
+  "generatorCommand": "/Applications/Blender.app/Contents/MacOS/Blender --background --python scripts/asset-build/generate-builder-puzzle-machine-glbs.py -- puzzle_console_archive_merge",
+  "sourceBlend": "src/assets/source_blend/builder-puzzle-machines/hp_puzzle_console_archive_merge_v2.blend",
+  "glb": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_archive_merge.glb",
+  "evidenceRender": ".tmp/renders/machines/close-archive_merge.png",
+  "inspection": {
+    "nodeCount": 102,
+    "meshCount": 102,
+    "materialCount": 16,
+    "imageCount": 2,
+    "statsFromEvidenceRender": {
+      "vertices": 18815,
+      "triangles": 15060
+    }
+  },
+  "textureEvidence": [
+    {
+      "name": "hp_builder_machine_surface_atlas_image2",
+      "use": "dark powdercoat, black recess, amber glass and brass material surfaces"
+    },
+    {
+      "name": "hp_builder_machine_parts_atlas_v2",
+      "use": "brass strip, micro ticks and screw inlays"
+    }
+  ],
+  "designNotes": [
+    "Replaces the old bright front-panel read with a dark graphite archive machine.",
+    "Keeps the existing config-facing model key so placed archive_merge puzzles do not need migration.",
+    "Large visual identity is carried by geometry and atlas-backed material panels, not a full UI poster.",
+    "Runtime fallback bake was updated to use its own dark shell material instead of caller-provided generic body material."
+  ],
+  "qa": [
+    "Generated focused GLB with Blender.",
+    "Rendered evidence image with render-puzzle-machine-evidence.py.",
+    "Audited GLB JSON for material/image presence.",
+    "Added unit coverage for archive_merge fallback material independence."
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "sourceBoard": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/asset-lab/math/gui/extracted-age-v5/human-protocol-age-gui-resource-board-v5-safe-desktop-mobile.png",
+  "wgpuArchive": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/asset-lab/math/gui/extracted-age-v5",
+  "rule": "Image2 PNG owns plate ornament; HTML/CSS/React owns text, bars, glyphs, progress, language, and touch boxes.",
+  "assets": {
+    "hudFrame": "src/assets/gui/hp-gui-hud-frame-age-v3.png",
+    "objectiveStrip": "src/assets/gui/hp-gui-objective-nav-image2-v1.png",
+    "objectiveStripMobile": "src/assets/gui/hp-gui-objective-nav-image2-v1.png",
+    "loadingPanel": "src/assets/gui/hp-gui-flow-entry-panel-age-v5.png",
+    "flowEntryPanel": "src/assets/gui/hp-gui-flow-entry-panel-age-v5.png",
+    "flowVictoryPanel": "src/assets/gui/hp-gui-flow-victory-panel-age-v5.png",
+    "flowDeathPanel": "src/assets/gui/hp-gui-flow-death-panel-age-v5.png",
+    "buttonWide": "src/assets/gui/hp-gui-button-wide-age-v5.png",
+    "buttonSmall": "src/assets/gui/hp-gui-button-small-age-v5.png",
+    "statChip": "src/assets/gui/hp-gui-stat-chip-age-v5.png",
+    "dialogueToast": "src/assets/gui/hp-gui-dialogue-toast-age-v3.png",
+    "weaponCluster": "src/assets/gui/hp-gui-weapon-cluster-age-v3.png",
+    "mobileAction": "src/assets/gui/hp-gui-mobile-action-age-v3.png",
+    "joystickPlate": "src/assets/gui/hp-gui-joystick-plate-age-v3.png",
+    "interactPill": "src/assets/gui/hp-gui-interact-pill-age-v3.png",
+    "keyChip": "src/assets/gui/hp-gui-key-chip-age-v3.png",
+    "statusPill": "src/assets/gui/hp-gui-status-pill-age-v3.png"
+  },
+  "cssBindings": {
+    "hudFrame": [".hud"],
+    "objectiveStrip": [".run-progress"],
+    "objectiveStripMobile": [".run-progress"],
+    "loadingPanel": [".level-transfer-panel"],
+    "flowEntryPanel": [".flow-panel"],
+    "flowVictoryPanel": [".flow-panel-victory"],
+    "flowDeathPanel": [".flow-panel-death"],
+    "buttonWide": [".flow-panel button"],
+    "buttonSmall": [".flow-panel .progress-training-button"],
+    "statChip": [".flow-stats span"],
+    "dialogueToast": [".dialogue-toast"],
+    "mobileAction": [".mobile-action", ".desktop-action-slot"],
+    "joystickPlate": [".joystick"],
+    "interactPill": [".mobile-interact-button"],
+    "keyChip": [".desktop-key-chip"],
+    "statusPill": [".desktop-action-readout", ".desktop-dash-readout", ".desktop-reload-caption"]
+  },
+  "math": {
+    "gridAlignmentPx": 8,
+    "minLiveTextSafeZoneRatio": 0.62,
+    "maxOrnamentDensity": 0.18,
+    "minTouchTargetPx": 44,
+    "recommendedCombatTouchPx": 58,
+    "minBodyContrast": 4.5,
+    "minUiShadowClamp": 0.66
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schemaVersion": "hp.image2.provenance.v1",
+  "family": "gate_balance_three_row_gui",
+  "license": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "classification": "owned-generated-output",
+  "sourceKind": "OpenAI/Codex Image2 bitmap source",
+  "sourceFiles": [
+    "src/assets/gui/gate-balance-three-row/image2-sources/gate_balance_three_row_frame_image2_source_v1_chromakey.png",
+    "src/assets/gui/gate-balance-three-row/image2-sources/gate_balance_three_row_parts_image2_source_v1_chromakey.png",
+    "src/assets/gui/gate-balance-three-row/image2-sources/gate_balance_three_row_image2_source_v1.png",
+    "src/assets/gui/gate-balance-three-row/gate_balance_three_row_frame_image2_v1.png",
+    "src/assets/gui/gate-balance-three-row/gate_balance_three_row_parts_image2_v1.png",
+    "src/assets/gui/gate-balance-three-row/gate_balance_three_row_parts_image2_v1.regions.json",
+    "src/assets/gui/gate-balance-three-row/gate_balance_three_row_layout_v1.json"
+  ],
+  "script": "scripts/asset-build/compose-gate-balance-three-row-image2-gui-v1.py",
+  "generatorCallId": "not-exposed-by-codex-imagegen-user-provided-clipboard-source",
+  "runtimePolicy": "Do not bake localized strings, live values, button glyphs, or interaction state into image files."
+}

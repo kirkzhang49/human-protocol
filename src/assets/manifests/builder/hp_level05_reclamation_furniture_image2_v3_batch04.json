@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level05_reclamation_furniture_image2_v3_batch04",
+  "label": "HP Level 05 Reclamation Core Furniture v3 Batch 04 (Storage Wall Light Dressing)",
+  "sourceTool": "generate-level05-reclamation-furniture-image2-v3-batch04-assets.py",
+  "generatedAt": "2026-06-27",
+  "revision": "batch04-light-stand-no-gap-joint-polish-v2",
+  "atlas": {
+    "image": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/hp_level05_reclamation_furniture_image2_v3_batch04_atlas.png",
+    "regions": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/hp_level05_reclamation_furniture_image2_v3_batch04_atlas.regions.json",
+    "size": [
+      2048,
+      2048
+    ]
+  },
+  "assets": [
+    {
+      "modelKey": "room_l5_v3_curved_archive_shelf",
+      "label": "L5 V3 Curved Archive Shelf",
+      "assetKind": "furniture",
+      "family": "bookshelf",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch04",
+      "sourceAssetId": "room_l5_v3_curved_archive_shelf_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_curved_archive_shelf.glb",
+      "sizeMeters": [
+        1.822,
+        2.08,
+        0.595
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "books",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch04",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:bookshelf"
+      ],
+      "supportSurfaces": [
+        {
+          "id": "curved_archive_shelf_top",
+          "kind": "shelf",
+          "localCenter": [
+            0,
+            1.706,
+            0
+          ],
+          "size": [
+            1.13,
+            0.309
+          ],
+          "maxChildHeight": 0.45
+        }
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_hanging_cable_organizer",
+      "label": "L5 V3 Hanging Cable Organizer",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch04",
+      "sourceAssetId": "room_l5_v3_hanging_cable_organizer_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_hanging_cable_organizer.glb",
+      "sizeMeters": [
+        1.56,
+        1.195,
+        0.551
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch04",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:wall_panel_or_picture_frame"
+      ],
+      "wallPreferred": "back"
+    },
+    {
+      "modelKey": "room_l5_v3_surgical_light_stand",
+      "label": "L5 V3 Surgical Light Stand",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch04",
+      "sourceAssetId": "room_l5_v3_surgical_light_stand_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_surgical_light_stand.glb",
+      "sizeMeters": [
+        1.438,
+        2.692,
+        0.864
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch04",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:control_console"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_specimen_drawer_stack",
+      "label": "L5 V3 Specimen Drawer Stack",
+      "assetKind": "furniture",
+      "family": "drawer_chest",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch04",
+      "sourceAssetId": "room_l5_v3_specimen_drawer_stack_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_specimen_drawer_stack.glb",
+      "sizeMeters": [
+        1.015,
+        2.05,
+        0.6
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 3,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch04",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:drawer_chest"
+      ],
+      "supportSurfaces": [
+        {
+          "id": "specimen_drawer_stack_top",
+          "kind": "smallPropTop",
+          "localCenter": [
+            0,
+            1.681,
+            0
+          ],
+          "size": [
+            0.629,
+            0.312
+          ],
+          "maxChildHeight": 0.45
+        }
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_corner_privacy_screen",
+      "label": "L5 V3 Corner Privacy Screen",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch04",
+      "sourceAssetId": "room_l5_v3_corner_privacy_screen_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_corner_privacy_screen.glb",
+      "sizeMeters": [
+        2.149,
+        2.005,
+        0.415
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch04",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:sofa_bench"
+      ]
+    }
+  ]
+}

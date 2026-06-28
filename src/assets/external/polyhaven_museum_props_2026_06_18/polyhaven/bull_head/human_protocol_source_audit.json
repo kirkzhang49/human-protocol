@@ -1,0 +1,36 @@
+{
+  "source": "Poly Haven",
+  "assetId": "bull_head",
+  "sourceUrl": "https://polyhaven.com/a/bull_head",
+  "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/bull_head/bull_head_1k.gltf",
+  "license": "CC0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "resolution": "1k glTF",
+  "files": {
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/bull_head/bull_head_1k.gltf",
+    "md5": "70fd4511a7243912f29c6582d6ff7c7b",
+    "size": 2738,
+    "include": {
+      "textures/bull_head_nor_gl_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bull_head/bull_head_nor_gl_1k.jpg",
+        "md5": "9ab75f904e335a55bda347c8bf6e5969",
+        "size": 534294
+      },
+      "textures/bull_head_diff_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bull_head/bull_head_diff_1k.jpg",
+        "md5": "e1be9a04ace9bb61444ee2260ae736e8",
+        "size": 398303
+      },
+      "textures/bull_head_arm_1k.jpg": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/bull_head/bull_head_arm_1k.jpg",
+        "md5": "645d805064a7c65cb4fc1806ceef909b",
+        "size": 684843
+      },
+      "bull_head.bin": {
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/bull_head/bull_head.bin",
+        "md5": "811c673a613a915a576ef629fa0c14e4",
+        "size": 401192
+      }
+    }
+  }
+}

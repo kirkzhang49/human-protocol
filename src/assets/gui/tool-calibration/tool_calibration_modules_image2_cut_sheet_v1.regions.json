@@ -1,0 +1,27 @@
+{
+  "atlasSize": [
+    1440,
+    820
+  ],
+  "source": "src/assets/gui/tool-calibration/image2-sources/tool_calibration_hardware_modules_image2_source_v1.png",
+  "regions": {
+    "cyan_glass_canister": [
+      36,
+      44,
+      420,
+      700
+    ],
+    "vertical_calibration_core": [
+      492,
+      44,
+      420,
+      700
+    ],
+    "round_energy_core": [
+      948,
+      44,
+      420,
+      700
+    ]
+  }
+}

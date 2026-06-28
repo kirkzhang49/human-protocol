@@ -1,0 +1,128 @@
+{
+  "atlasSize": [
+    2048,
+    2048
+  ],
+  "regions": {
+    "smoked_powdercoat_panel": [
+      16,
+      16,
+      480,
+      480
+    ],
+    "aged_medical_plastic_panel": [
+      528,
+      16,
+      480,
+      480
+    ],
+    "brushed_brass_panel": [
+      1040,
+      16,
+      480,
+      480
+    ],
+    "cyan_smoked_glass_panel": [
+      1552,
+      16,
+      480,
+      480
+    ],
+    "amber_archive_glass_panel": [
+      16,
+      528,
+      480,
+      480
+    ],
+    "dark_rubber_panel": [
+      528,
+      528,
+      480,
+      480
+    ],
+    "copper_bus_panel": [
+      1040,
+      528,
+      480,
+      480
+    ],
+    "black_recess_panel": [
+      1552,
+      528,
+      480,
+      480
+    ],
+    "edge_wear_gold_alpha": [
+      16,
+      1056,
+      992,
+      200
+    ],
+    "edge_wear_cyan_alpha": [
+      1040,
+      1056,
+      992,
+      200
+    ],
+    "hazard_stripe_alpha": [
+      16,
+      1280,
+      992,
+      200
+    ],
+    "cable_scuff_alpha": [
+      1040,
+      1280,
+      992,
+      200
+    ],
+    "micro_ticks_alpha": [
+      16,
+      1504,
+      992,
+      200
+    ],
+    "panel_scratches_alpha": [
+      1040,
+      1504,
+      992,
+      200
+    ],
+    "screw_cross_alpha": [
+      16,
+      1728,
+      256,
+      256
+    ],
+    "screw_hex_alpha": [
+      288,
+      1728,
+      256,
+      256
+    ],
+    "rubber_gasket_alpha": [
+      560,
+      1728,
+      256,
+      256
+    ],
+    "lens_highlight_alpha": [
+      832,
+      1728,
+      256,
+      256
+    ],
+    "grime_corner_alpha": [
+      1104,
+      1728,
+      256,
+      256
+    ],
+    "blank_nameplate_alpha": [
+      1376,
+      1728,
+      656,
+      256
+    ]
+  }
+}

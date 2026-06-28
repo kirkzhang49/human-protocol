@@ -1,0 +1,40 @@
+{
+  "atlasSize": [
+    1532,
+    811
+  ],
+  "source": "src/assets/gui/route-switch/image2-sources/route_switch_console_redraw_source_v3.png",
+  "regions": {
+    "output_bay_cyan": [
+      20,
+      20,
+      347,
+      489
+    ],
+    "output_bay_amber": [
+      387,
+      20,
+      346,
+      489
+    ],
+    "output_bay_green": [
+      753,
+      20,
+      347,
+      489
+    ],
+    "output_bay_violet": [
+      1120,
+      20,
+      346,
+      489
+    ],
+    "route_backplate": [
+      20,
+      529,
+      1492,
+      262
+    ]
+  },
+  "notes": "Cropped and packed from a purpose-built Image2 redraw source sheet. Script removes flat black background only; it does not draw primary art."
+}

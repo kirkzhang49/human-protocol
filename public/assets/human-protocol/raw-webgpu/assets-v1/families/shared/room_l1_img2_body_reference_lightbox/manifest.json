@@ -1,0 +1,713 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "room_l1_img2_body_reference_lightbox",
+  "family": "shared",
+  "bundleId": "shared/room_l1_img2_body_reference_lightbox",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_body_reference_lightbox.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_01_maintenance_bay"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 5076,
+    "triangleCount": 1692,
+    "byteLength": 203040,
+    "hash": "29ce516363d59761",
+    "asset": {
+      "modelKey": "room_l1_img2_body_reference_lightbox",
+      "sourceFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_body_reference_lightbox.glb",
+      "rawFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_body_reference_lightbox.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 5076,
+      "triangleCount": 1692,
+      "meshCount": 9,
+      "materialCount": 5,
+      "nodeCount": 10,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "abstract_body_reference_image2_panel",
+          "vertexOffset": 0,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "bottom_cyan_structure_light",
+          "vertexOffset": 564,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "lightbox_dark_inner_gasket",
+          "vertexOffset": 1128,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "side_wall_clip_+06_04",
+          "vertexOffset": 1692,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "side_wall_clip_+06_10",
+          "vertexOffset": 2256,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "side_wall_clip_-06_04",
+          "vertexOffset": 2820,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "side_wall_clip_-06_10",
+          "vertexOffset": 3384,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "top_cyan_structure_light",
+          "vertexOffset": 3948,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "wall_spacer_back_plate",
+          "vertexOffset": 4512,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.5875,
+          0,
+          -0.079
+        ],
+        "center": [
+          0,
+          0.72,
+          0
+        ],
+        "size": [
+          1.175,
+          1.44,
+          0.158
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "f7ede958b0181b15",
+    "materials": [
+      {
+        "index": 708,
+        "id": "mat:builder-resource:l1-safety-rubber-black:79hd9m",
+        "name": "l1_safety_rubber_black",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.025,
+          0.025,
+          0.027,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.86,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 709,
+        "id": "mat:builder-resource:l1-safety-brushed-steel:1i2tkla",
+        "name": "l1_safety_brushed_steel",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.5,
+          0.54,
+          0.55,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.42,
+        "metallicFactor": 0.45,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 729,
+        "id": "mat:builder-resource:l1-image2-body-reference-lightbox-tile:yqlltx",
+        "name": "l1_image2_body_reference_lightbox_tile",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.55,
+          0.55,
+          0.55
+        ],
+        "emissiveStrength": 0.99,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level01_safety_storage_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_body_reference_lightbox/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_body_reference_lightbox/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.345531,
+              "contrast": 0.488284,
+              "chroma": 0.091025,
+              "detail": 0.194501
+            },
+            "generated": false,
+            "layer": 57
+          }
+        ]
+      },
+      {
+        "index": 730,
+        "id": "mat:builder-resource:l1-safety-cyan-indicator:4mojkc",
+        "name": "l1_safety_cyan_indicator",
+        "category": "builder-resource",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.43536,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.4,
+          0.95,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.4,
+          0.95,
+          1
+        ],
+        "emissiveStrength": 1.692,
+        "roughnessFactor": 0.35,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 731,
+        "id": "mat:builder-resource:l1-safety-medical-white-polymer:dxwnu9",
+        "name": "l1_safety_medical_white_polymer",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.86,
+          0.86,
+          0.82,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.68,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 57,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_body_reference_lightbox/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+        "name": "hp_level01_safety_storage_image2_atlas",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_body_reference_lightbox/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.345531,
+          "contrast": 0.488284,
+          "chroma": 0.091025,
+          "detail": 0.194501
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

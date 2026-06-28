@@ -1,0 +1,74 @@
+{
+  "assetPack": "human_protocol_cc0_museum_ceiling_surfaces_v1",
+  "generatedBy": "scripts/asset-build/ingest-cc0-museum-ceiling-surfaces.py",
+  "license": {
+    "source": "ambientCG",
+    "license": "CC0 1.0 Universal",
+    "commercialUse": true,
+    "attributionRequired": false,
+    "licenseUrl": "https://docs.ambientcg.com/license/"
+  },
+  "blueprint": {
+    "role": "build-page museum ceiling material presets",
+    "surfaceType": "ceiling",
+    "textureSizePx": 512,
+    "runtimePath": "BuilderEnvironment.builderCeilingPresets -> builder runtime surface overrides",
+    "physicalGeometry": "no separate fixture mesh; practical ceiling lights remain runtime lighting only"
+  },
+  "surfaces": [
+    {
+      "presetId": "ceiling_cc0_museum_plaster003_gallery_v1",
+      "label": "CC0 博物馆细腻石膏顶",
+      "sourceAsset": "Plaster003",
+      "sourceUrl": "https://ambientcg.com/view?id=Plaster003",
+      "sourceLocalPath": "src/assets/external/hp_surface_candidates_2026_06_18/ambientcg/ceilings/Plaster003",
+      "role": "quiet plaster gallery ceiling for museum rooms",
+      "outputs": {
+        "color": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_plaster003_gallery_v1_color.webp",
+        "normal": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_plaster003_gallery_v1_normal.webp",
+        "roughness": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_plaster003_gallery_v1_rough.webp"
+      },
+      "qaEvidence": {
+        "sourceMapsPresent": true,
+        "compressedWebp": true,
+        "intendedBuilderCatalog": true
+      }
+    },
+    {
+      "presetId": "ceiling_cc0_museum_tiles078_stone_v1",
+      "label": "CC0 博物馆暖石材板顶",
+      "sourceAsset": "Tiles078",
+      "sourceUrl": "https://ambientcg.com/view?id=Tiles078",
+      "sourceLocalPath": "src/assets/external/hp_surface_candidates_2026_06_18/ambientcg/ceilings/Tiles078",
+      "role": "warm stone slab ceiling for premium exhibit halls",
+      "outputs": {
+        "color": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_tiles078_stone_v1_color.webp",
+        "normal": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_tiles078_stone_v1_normal.webp",
+        "roughness": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_tiles078_stone_v1_rough.webp"
+      },
+      "qaEvidence": {
+        "sourceMapsPresent": true,
+        "compressedWebp": true,
+        "intendedBuilderCatalog": true
+      }
+    },
+    {
+      "presetId": "ceiling_cc0_museum_marble020_rotunda_v1",
+      "label": "CC0 博物馆暖白大理石顶",
+      "sourceAsset": "Marble020",
+      "sourceUrl": "https://ambientcg.com/view?id=Marble020",
+      "sourceLocalPath": "src/assets/external/hp_surface_candidates_2026_06_18/ambientcg/ceilings/Marble020",
+      "role": "soft marble rotunda ceiling surface with visible stone veining",
+      "outputs": {
+        "color": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_marble020_rotunda_v1_color.webp",
+        "normal": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_marble020_rotunda_v1_normal.webp",
+        "roughness": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_museum_marble020_rotunda_v1_rough.webp"
+      },
+      "qaEvidence": {
+        "sourceMapsPresent": true,
+        "compressedWebp": true,
+        "intendedBuilderCatalog": true
+      }
+    }
+  ]
+}

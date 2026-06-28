@@ -1,0 +1,558 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_residential_ceiling_softbox",
+  "category": "room",
+  "file": "src/assets/models-runtime/environment/level02/hp_room_residential_ceiling_softbox.glb",
+  "fileName": "hp_room_residential_ceiling_softbox.glb",
+  "sourceAsset": {
+    "modelKey": "room_residential_ceiling_softbox",
+    "category": "room",
+    "url": "/src/assets/models-runtime/environment/level02/hp_room_residential_ceiling_softbox.glb",
+    "file": "src/assets/models-runtime/environment/level02/hp_room_residential_ceiling_softbox.glb",
+    "sizeMeters": [
+      3.811,
+      0.185,
+      1.126
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 116644,
+      "meshes": 8,
+      "nodes": 9,
+      "skins": 0,
+      "primitives": 8,
+      "materials": 5,
+      "textures": 2,
+      "images": 1,
+      "accessors": 29,
+      "bufferViews": 30,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 864
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level02/hp_room_residential_ceiling_softbox.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 491058,
+    "vertexCount": 2592,
+    "triangleCount": 864,
+    "meshCount": 8,
+    "materialCount": 5,
+    "nodeCount": 9,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -1.905595,
+        0.014767,
+        -0.562994
+      ],
+      "center": [
+        0,
+        0.10706,
+        0
+      ],
+      "size": [
+        3.81119,
+        0.184587,
+        1.125988
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "cyan_service_edge_left",
+        "vertexOffset": 491058,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.638812,
+          0.077527,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.638812,
+          -0.077527,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "cyan_service_edge_right",
+        "vertexOffset": 491382,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.638812,
+          0.077527,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.638812,
+          -0.077527,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "frosted_light_diffuser",
+        "vertexOffset": 491706,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.066451,
+          0.02252,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.066451,
+          -0.02252,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "softbox_dark_upper_housing",
+        "vertexOffset": 492030,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.10706,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.10706,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "softbox_internal_baffle_0",
+        "vertexOffset": 492354,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.952797,
+          0.044301,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.952797,
+          -0.044301,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "softbox_internal_baffle_1",
+        "vertexOffset": 492678,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.044301,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.044301,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "softbox_internal_baffle_2",
+        "vertexOffset": 493002,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.952797,
+          0.044301,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.952797,
+          -0.044301,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "warm_domestic_edge_center",
+        "vertexOffset": 493326,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.079372,
+          0.405356,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.079372,
+          -0.405356,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_02_foyer_ceiling_softbox",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_recovery_foyer",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.16,
+        12.18
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.05,
+        1,
+        0.92
+      ],
+      "tags": [
+        "residential_simulation",
+        "light",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.16,
+          12.18
+        ],
+        "halfSize": [
+          2.000775,
+          0.0925,
+          0.51796
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_living_ceiling_softbox",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.12,
+        0.55
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.42,
+        1,
+        1.12
+      ],
+      "tags": [
+        "residential_simulation",
+        "light",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.12,
+          0.55
+        ],
+        "halfSize": [
+          2.70581,
+          0.0925,
+          0.63056
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_light_room_ceiling_softbox",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_light_room",
+      "secondaryRoomId": null,
+      "position": [
+        -13,
+        3.12,
+        0.4
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.86,
+        1,
+        0.78
+      ],
+      "tags": [
+        "residential_simulation",
+        "light",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -13,
+          3.12,
+          0.4
+        ],
+        "halfSize": [
+          1.63873,
+          0.0925,
+          0.43914
+        ]
+      }
+    }
+  ]
+}

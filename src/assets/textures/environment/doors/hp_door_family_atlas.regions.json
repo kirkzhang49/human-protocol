@@ -1,0 +1,118 @@
+{
+  "atlas": "hp_door_family_atlas.png",
+  "atlasSize": [
+    2048,
+    2048
+  ],
+  "format": "[x, y, w, h] in pixels, top-left origin",
+  "regions": {
+    "wood_laminate": [
+      8,
+      8,
+      320,
+      320
+    ],
+    "cream_laminate": [
+      344,
+      8,
+      320,
+      320
+    ],
+    "brushed_steel": [
+      680,
+      8,
+      320,
+      80
+    ],
+    "observation_lens": [
+      680,
+      96,
+      160,
+      160
+    ],
+    "white_ceramic": [
+      8,
+      520,
+      320,
+      320
+    ],
+    "frosted_glass": [
+      344,
+      520,
+      240,
+      320
+    ],
+    "rubber_gasket": [
+      600,
+      520,
+      80,
+      320
+    ],
+    "graphite_door": [
+      8,
+      1048,
+      320,
+      320
+    ],
+    "aged_brass": [
+      344,
+      1048,
+      640,
+      80
+    ],
+    "amber_glass": [
+      8,
+      1380,
+      320,
+      120
+    ],
+    "archive_scan_lens": [
+      344,
+      1380,
+      160,
+      160
+    ],
+    "cyan_status_strip": [
+      680,
+      272,
+      240,
+      60
+    ],
+    "ind_steel_leaf": [
+      8,
+      1548,
+      320,
+      320
+    ],
+    "ind_iron_frame": [
+      344,
+      1548,
+      200,
+      320
+    ],
+    "ind_hazard_stripe": [
+      560,
+      1548,
+      320,
+      80
+    ],
+    "ind_louvered_vent": [
+      560,
+      1640,
+      240,
+      160
+    ],
+    "ind_lock_bar": [
+      560,
+      1812,
+      240,
+      60
+    ],
+    "ind_cyan_lens": [
+      344,
+      1880,
+      160,
+      160
+    ]
+  }
+}

@@ -1,0 +1,2287 @@
+{
+  "id": "builder_level_ation_core",
+  "title": "回收核心 · 可编辑草稿",
+  "authoringProfile": "generated",
+  "authoringMetadata": {
+    "builderEnvironment": {
+      "lighting": {
+        "ambient": 0.42,
+        "keyColor": "#dbefff",
+        "keyIntensity": 0.88,
+        "fog": 0.18,
+        "bloom": 0.28,
+        "shadow": 0.62
+      },
+      "rooms": {
+        "level_05_core_entry": {
+          "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+          "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.53,
+          "ceilingHeight": 3.53,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+              "authored": true
+            }
+          }
+        },
+        "level_05_lock_hub": {
+          "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+          "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.6,
+          "ceilingHeight": 3.6,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+              "authored": true
+            }
+          }
+        },
+        "level_05_north_lock": {
+          "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+          "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.6,
+          "ceilingHeight": 3.6,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+              "authored": true
+            }
+          }
+        },
+        "level_05_east_lock": {
+          "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+          "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.6,
+          "ceilingHeight": 3.6,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+              "authored": true
+            }
+          }
+        },
+        "level_05_west_lock": {
+          "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+          "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.6,
+          "ceilingHeight": 3.6,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+              "authored": true
+            }
+          }
+        },
+        "level_05_platform": {
+          "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+          "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.6,
+          "ceilingHeight": 3.6,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+              "authored": true
+            }
+          }
+        },
+        "level_05_archive_room": {
+          "surfaceKitId": "hp:reclamation_core_shell_v4_cc0",
+          "floorPresetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+          "wallPresetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+          "ceilingPresetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+          "ceilingVisible": true,
+          "wallHeight": 3.6,
+          "ceilingHeight": 3.6,
+          "surfaceOverrides": {
+            "floor": {
+              "presetId": "floor_level05_reclamation_cc0_metal_panel_v4",
+              "authored": true
+            },
+            "wall": {
+              "presetId": "wall_level05_reclamation_cc0_graphite_panel_v4",
+              "authored": true
+            },
+            "ceiling": {
+              "presetId": "ceiling_level05_reclamation_cc0_service_grid_v4",
+              "authored": true
+            }
+          }
+        },
+        "level_05_identity_file": {
+          "floorPresetId": "floor_dark_rubber",
+          "wallPresetId": "wall_dark_metal_panel",
+          "ceilingPresetId": "wall_dark_metal_panel",
+          "ceilingVisible": false,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36
+        }
+      }
+    }
+  },
+  "spawnPoint": [
+    0,
+    0,
+    17
+  ],
+  "initialInventory": {
+    "hasRod": true,
+    "hasPistol": true,
+    "coreCells": 0,
+    "equipWeapon": "railLance"
+  },
+  "initialWaveStartDelay": 0,
+  "requiresStoryPickupsBeforeWaves": false,
+  "exit": {
+    "id": "builder_exit",
+    "position": [
+      0,
+      0,
+      -21.3
+    ],
+    "radius": 2.2,
+    "unlockedLabel": "撤离电梯",
+    "distanceLabel": "撤离电梯",
+    "unlockMessage": "撤离电梯已通电。",
+    "unlockDialogueTrigger": "builder_exit_unlocked",
+    "unlockWarning": {
+      "label": "出口已通电",
+      "detail": "撤离电梯可以使用了"
+    },
+    "cinematic": {
+      "type": "elevator_walk_in",
+      "duration": 9.65,
+      "walkInDuration": 1.55,
+      "doorOpenTime": 0.08,
+      "doorCloseTime": 2.15,
+      "buttonPressTime": 3.25,
+      "buttonPressDuration": 1.15,
+      "ascentStartTime": 3.55,
+      "ascentDuration": 4.8,
+      "whiteOutTime": 8.35,
+      "enterPosition": [
+        0,
+        0,
+        -20.849999999999998
+      ],
+      "lookAtPosition": [
+        2.82,
+        1.42,
+        -21.9
+      ],
+      "faceYaw": 1.2143593745747,
+      "doorId": "level_05_identity_door",
+      "message": "撤离电梯正在接管关卡切换。"
+    },
+    "transitionMessage": "电梯下行。这间密室没有挽留你。",
+    "transitionDialogueTrigger": "builder_exit_transition",
+    "victoryMessage": "离场记录：对象自行离开，房间保持原样。"
+  },
+  "map": {
+    "id": "level_05_reclamation_core_map",
+    "schemaVersion": "hp.map.v1",
+    "presentation": {
+      "lightingPreset": "hp:reclamation_core_v1",
+      "shellKit": "hp:reclamation_core_shell_v4_cc0"
+    },
+    "rooms": [
+      {
+        "id": "level_05_core_entry",
+        "label": "回收核心入口",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            17
+          ],
+          "size": [
+            10,
+            4,
+            7
+          ]
+        },
+        "mood": "uneasy",
+        "skinKey": "reclamation_core_chamber",
+        "floorMaterialKey": "reclamation_core_floor",
+        "wallMaterialKey": "reclamation_core_wall",
+        "aesthetic": {
+          "style": "hazard",
+          "detail": "high"
+        },
+        "ambientPressure": 0.48,
+        "entryDialogueTrigger": "level_start",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#ffd36d"
+        }
+      },
+      {
+        "id": "level_05_lock_hub",
+        "label": "回收中庭",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            7.5
+          ],
+          "size": [
+            18,
+            4,
+            12
+          ]
+        },
+        "mood": "reveal",
+        "skinKey": "reclamation_core_chamber",
+        "floorMaterialKey": "reclamation_core_floor",
+        "wallMaterialKey": "reclamation_core_wall",
+        "aesthetic": {
+          "style": "hazard",
+          "detail": "high"
+        },
+        "ambientPressure": 0.7,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#ffd36d"
+        }
+      },
+      {
+        "id": "level_05_north_lock",
+        "label": "北侧制动间",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -2.25
+          ],
+          "size": [
+            9,
+            4,
+            7.5
+          ]
+        },
+        "mood": "quiet",
+        "skinKey": "reclamation_core_chamber",
+        "floorMaterialKey": "reclamation_core_floor",
+        "wallMaterialKey": "reclamation_core_wall",
+        "aesthetic": {
+          "style": "hazard",
+          "detail": "high"
+        },
+        "ambientPressure": 0.66,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#7ff2ff"
+        }
+      },
+      {
+        "id": "level_05_east_lock",
+        "label": "东侧供能间",
+        "bounds": {
+          "center": [
+            13,
+            0,
+            7.5
+          ],
+          "size": [
+            8,
+            4,
+            8
+          ]
+        },
+        "mood": "combat",
+        "skinKey": "reclamation_core_chamber",
+        "floorMaterialKey": "reclamation_core_floor",
+        "wallMaterialKey": "reclamation_core_wall",
+        "aesthetic": {
+          "style": "hazard",
+          "detail": "high"
+        },
+        "ambientPressure": 0.72,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#9ff3ff"
+        }
+      },
+      {
+        "id": "level_05_west_lock",
+        "label": "西侧回收间",
+        "bounds": {
+          "center": [
+            -13,
+            0,
+            7.5
+          ],
+          "size": [
+            8,
+            4,
+            8
+          ]
+        },
+        "mood": "combat",
+        "skinKey": "reclamation_core_chamber",
+        "floorMaterialKey": "reclamation_core_floor",
+        "wallMaterialKey": "reclamation_core_wall",
+        "aesthetic": {
+          "style": "hazard",
+          "detail": "high"
+        },
+        "ambientPressure": 0.8,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#ff6a52"
+        }
+      },
+      {
+        "id": "level_05_platform",
+        "label": "回收内台",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -12
+          ],
+          "size": [
+            16,
+            4,
+            13
+          ]
+        },
+        "mood": "boss",
+        "skinKey": "reclamation_core_chamber",
+        "floorMaterialKey": "reclamation_core_floor",
+        "wallMaterialKey": "reclamation_core_wall",
+        "aesthetic": {
+          "style": "hazard",
+          "detail": "high"
+        },
+        "ambientPressure": 0.92,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#ff5b4c"
+        }
+      },
+      {
+        "id": "level_05_archive_room",
+        "label": "实验档案室",
+        "bounds": {
+          "center": [
+            11.5,
+            0,
+            -12
+          ],
+          "size": [
+            7,
+            4,
+            7
+          ]
+        },
+        "mood": "quiet",
+        "skinKey": "reclamation_core_chamber",
+        "floorMaterialKey": "reclamation_core_floor",
+        "wallMaterialKey": "reclamation_core_wall",
+        "aesthetic": {
+          "style": "hazard",
+          "detail": "high"
+        },
+        "ambientPressure": 0.62,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#eafcff"
+        }
+      },
+      {
+        "id": "level_05_identity_file",
+        "label": "归档电梯间",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -21.2
+          ],
+          "size": [
+            6.4,
+            4,
+            5.4
+          ]
+        },
+        "mood": "reveal",
+        "skinKey": "service_elevator_hero",
+        "floorMaterialKey": "service_elevator_metal",
+        "wallMaterialKey": "service_elevator_metal",
+        "ambientPressure": 0.55,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": false,
+          "renderCeiling": false,
+          "collisionWalls": true,
+          "accentColor": "#f3f0df"
+        },
+        "aesthetic": {
+          "enabled": true,
+          "style": "exit",
+          "detail": "high"
+        }
+      }
+    ],
+    "doors": [
+      {
+        "id": "level_05_hub_door",
+        "label": "回收中庭闸门",
+        "fromRoomId": "level_05_core_entry",
+        "toRoomId": "level_05_lock_hub",
+        "position": [
+          0,
+          0,
+          13.5
+        ],
+        "size": [
+          4.2,
+          3.1,
+          0.42
+        ],
+        "yaw": 0,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "reclamation_archive_door",
+        "materialKey": "reclamation_core_wall",
+        "panelPosition": [
+          2.7,
+          0,
+          13.86
+        ],
+        "autoOpenOnApproach": true,
+        "openSpeed": 1.18,
+        "cameraImpact": {
+          "shake": 0.2,
+          "fovKick": 1.2
+        }
+      },
+      {
+        "id": "level_05_north_door",
+        "label": "北制动门",
+        "fromRoomId": "level_05_lock_hub",
+        "toRoomId": "level_05_north_lock",
+        "position": [
+          0,
+          0,
+          1.5
+        ],
+        "size": [
+          3.1,
+          2.85,
+          0.36
+        ],
+        "yaw": 0,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "reclamation_archive_door",
+        "materialKey": "reclamation_core_wall",
+        "panelPosition": [
+          2.1,
+          0,
+          1.86
+        ],
+        "autoOpenOnApproach": true,
+        "openSpeed": 1.08
+      },
+      {
+        "id": "level_05_east_door",
+        "label": "东供能门",
+        "fromRoomId": "level_05_lock_hub",
+        "toRoomId": "level_05_east_lock",
+        "position": [
+          9,
+          0,
+          7.5
+        ],
+        "size": [
+          2.8,
+          2.75,
+          0.34
+        ],
+        "yaw": 1.5707963267948966,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "reclamation_archive_door",
+        "materialKey": "reclamation_core_wall",
+        "panelPosition": [
+          8.64,
+          0,
+          9.25
+        ],
+        "autoOpenOnApproach": true,
+        "openSpeed": 1.08
+      },
+      {
+        "id": "level_05_west_door",
+        "label": "西回收门",
+        "fromRoomId": "level_05_lock_hub",
+        "toRoomId": "level_05_west_lock",
+        "position": [
+          -9,
+          0,
+          7.5
+        ],
+        "size": [
+          2.8,
+          2.75,
+          0.34
+        ],
+        "yaw": 1.5707963267948966,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "reclamation_archive_door",
+        "materialKey": "reclamation_core_wall",
+        "panelPosition": [
+          -8.64,
+          0,
+          5.75
+        ],
+        "autoOpenOnApproach": true,
+        "openSpeed": 1.08
+      },
+      {
+        "id": "level_05_platform_door",
+        "label": "回收内台闸门",
+        "fromRoomId": "level_05_north_lock",
+        "toRoomId": "level_05_platform",
+        "position": [
+          0,
+          0,
+          -5.5
+        ],
+        "size": [
+          4.6,
+          3.2,
+          0.45
+        ],
+        "yaw": 0,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "reclamation_archive_door",
+        "materialKey": "terminal_red",
+        "panelPosition": [
+          3,
+          0,
+          -5.14
+        ],
+        "autoOpenOnApproach": true,
+        "openSpeed": 1.22,
+        "cameraImpact": {
+          "shake": 0.28,
+          "fovKick": 1.4
+        }
+      },
+      {
+        "id": "level_05_archive_door",
+        "label": "实验档案室门",
+        "fromRoomId": "level_05_platform",
+        "toRoomId": "level_05_archive_room",
+        "position": [
+          8,
+          0,
+          -12
+        ],
+        "size": [
+          2.6,
+          2.65,
+          0.32
+        ],
+        "yaw": 1.5707963267948966,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "clinic_memory_door",
+        "materialKey": "memory_clinic_wall",
+        "panelPosition": [
+          7.64,
+          0,
+          -10.25
+        ],
+        "autoOpenOnApproach": true,
+        "openSpeed": 1.05
+      },
+      {
+        "id": "level_05_identity_door",
+        "label": "归档电梯门",
+        "fromRoomId": "level_05_platform",
+        "toRoomId": "level_05_identity_file",
+        "position": [
+          0,
+          0,
+          -18.5
+        ],
+        "size": [
+          4.8,
+          3.3,
+          0.46
+        ],
+        "yaw": 0,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "service_elevator_door",
+        "materialKey": "service_elevator_metal",
+        "panelPosition": [
+          3.05,
+          0,
+          -18.14
+        ],
+        "autoOpenOnApproach": true,
+        "skinKey": "service_elevator_hero",
+        "openSpeed": 1.35,
+        "openVisualPolicy": {
+          "hideClosedHardwareAfterOpen": true,
+          "hidePanelAfterOpen": true
+        },
+        "cameraImpact": {
+          "shake": 0.34,
+          "fovKick": 1.85
+        }
+      }
+    ],
+    "keyItems": [],
+    "interactions": [
+      {
+        "id": "use_builder_exit",
+        "type": "exit",
+        "roomId": "level_05_identity_file",
+        "position": [
+          2.82,
+          0,
+          -21.9
+        ],
+        "radius": 2.2,
+        "visualKey": "service_elevator_panel",
+        "materialKey": "terminal_cyan",
+        "label": "进入撤离电梯",
+        "opensDoorId": "level_05_identity_door"
+      }
+    ],
+    "props": [
+      {
+        "id": "level_05_v3_furniture_intake_identity_gate",
+        "roomId": "level_05_core_entry",
+        "modelKey": "room_l5_v3_intake_identity_gate",
+        "position": [
+          0,
+          0,
+          20.04
+        ],
+        "rotation": [
+          0,
+          3.1416,
+          0
+        ],
+        "scale": 1,
+        "label": "入口身份门廊",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ]
+      },
+      {
+        "id": "level_05_v3_furniture_core_route_map_table",
+        "roomId": "level_05_lock_hub",
+        "modelKey": "room_l5_v3_core_route_map_table",
+        "position": [
+          -2.45,
+          0,
+          7.8
+        ],
+        "rotation": [
+          0,
+          0.08,
+          0
+        ],
+        "scale": 0.92,
+        "label": "中庭路线桌",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.92,
+            0.45448,
+            0.759
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_crescent_low_sofa",
+        "roomId": "level_05_lock_hub",
+        "modelKey": "room_l5_v3_crescent_low_sofa",
+        "position": [
+          -6.15,
+          0,
+          10.6
+        ],
+        "rotation": [
+          0,
+          2.72,
+          0
+        ],
+        "scale": 0.9,
+        "label": "中庭低沙发",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            1.0728,
+            0.324,
+            0.51885
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_anemone_lounge_chair",
+        "roomId": "level_05_lock_hub",
+        "modelKey": "room_l5_v3_anemone_lounge_chair",
+        "position": [
+          4.95,
+          0,
+          10.15
+        ],
+        "rotation": [
+          0,
+          -0.72,
+          0
+        ],
+        "scale": 0.92,
+        "label": "中庭海葵椅",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.47840000000000005,
+            0.52118,
+            0.47840000000000005
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_three_lock_monolith",
+        "roomId": "level_05_platform",
+        "modelKey": "room_l5_v3_three_lock_monolith",
+        "position": [
+          -5.95,
+          0,
+          -9.2
+        ],
+        "rotation": [
+          0,
+          1.5708,
+          0
+        ],
+        "scale": 0.94,
+        "label": "三联门控柱",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.79383,
+            1.0715999999999999,
+            0.21056
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_reclamation_core_altar",
+        "roomId": "level_05_platform",
+        "modelKey": "room_l5_v3_reclamation_core_altar",
+        "position": [
+          0,
+          0,
+          -12.4
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "回收核心祭台",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.78,
+            0.616,
+            0.78
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_release_key_vault",
+        "roomId": "level_05_north_lock",
+        "modelKey": "room_l5_v3_release_key_vault",
+        "position": [
+          -3.55,
+          0,
+          -2.45
+        ],
+        "rotation": [
+          0,
+          1.5708,
+          0
+        ],
+        "scale": 0.92,
+        "label": "释放钥匙柜",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.8372,
+            0.7981,
+            0.3174
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_service_side_console",
+        "roomId": "level_05_north_lock",
+        "modelKey": "room_l5_v3_service_side_console",
+        "position": [
+          3.55,
+          0,
+          -2.65
+        ],
+        "rotation": [
+          0,
+          -1.5708,
+          0
+        ],
+        "scale": 0.94,
+        "label": "制动侧控台",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.752,
+            0.47,
+            0.27636
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_bio_recline_couch",
+        "roomId": "level_05_east_lock",
+        "modelKey": "room_l5_v3_bio_recline_couch",
+        "position": [
+          13.05,
+          0,
+          10.55
+        ],
+        "rotation": [
+          0,
+          3.1416,
+          0
+        ],
+        "scale": 0.9,
+        "label": "生物回收躺椅",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            1.1475,
+            0.30015000000000003,
+            0.5265
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_memory_diagnostic_terminal",
+        "roomId": "level_05_east_lock",
+        "modelKey": "room_l5_v3_memory_diagnostic_terminal",
+        "position": [
+          16.15,
+          0,
+          7.25
+        ],
+        "rotation": [
+          0,
+          -1.5708,
+          0
+        ],
+        "scale": 0.92,
+        "label": "记忆诊断终端",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.5704,
+            0.9936000000000001,
+            0.26633999999999997
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_tissue_freezer_cabinet",
+        "roomId": "level_05_east_lock",
+        "modelKey": "room_l5_v3_tissue_freezer_cabinet",
+        "position": [
+          10.85,
+          0,
+          4.75
+        ],
+        "rotation": [
+          0,
+          1.5708,
+          0
+        ],
+        "scale": 0.9,
+        "label": "组织冷柜",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.61965,
+            0.78975,
+            0.3249
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_surgical_light_stand",
+        "roomId": "level_05_east_lock",
+        "modelKey": "room_l5_v3_surgical_light_stand",
+        "position": [
+          14.95,
+          0,
+          9.45
+        ],
+        "rotation": [
+          0,
+          -0.62,
+          0
+        ],
+        "scale": 0.82,
+        "label": "手术灯架",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.58958,
+            1.10372,
+            0.35424
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_corner_privacy_screen",
+        "roomId": "level_05_east_lock",
+        "modelKey": "room_l5_v3_corner_privacy_screen",
+        "position": [
+          15.95,
+          0,
+          10.58
+        ],
+        "rotation": [
+          0,
+          -2.35,
+          0
+        ],
+        "scale": 0.86,
+        "label": "角落隐私屏风",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.92407,
+            0.86215,
+            0.17845
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_limb_calibration_rack",
+        "roomId": "level_05_west_lock",
+        "modelKey": "room_l5_v3_limb_calibration_rack",
+        "position": [
+          -16.25,
+          0,
+          6.35
+        ],
+        "rotation": [
+          0,
+          1.5708,
+          0
+        ],
+        "scale": 0.9,
+        "label": "肢体校准架",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.684,
+            1.026,
+            0.24525000000000002
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_cleaning_robot_dock",
+        "roomId": "level_05_west_lock",
+        "modelKey": "room_l5_v3_cleaning_robot_dock",
+        "position": [
+          -13.2,
+          0,
+          10.45
+        ],
+        "rotation": [
+          0,
+          3.1416,
+          0
+        ],
+        "scale": 0.9,
+        "label": "清洁机器人泊位",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.7290000000000001,
+            0.20025,
+            0.7402500000000001
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_hanging_cable_organizer",
+        "roomId": "level_05_west_lock",
+        "modelKey": "room_l5_v3_hanging_cable_organizer",
+        "position": [
+          -9.53091,
+          1.25,
+          10.45
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 0.82,
+        "label": "悬挂线缆整理架",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:wall"
+        ]
+      },
+      {
+        "id": "level_05_v3_furniture_human_archive_cabinet",
+        "roomId": "level_05_archive_room",
+        "modelKey": "room_l5_v3_human_archive_cabinet",
+        "position": [
+          14.35,
+          0,
+          -12.3
+        ],
+        "rotation": [
+          0,
+          -1.5708,
+          0
+        ],
+        "scale": 0.88,
+        "label": "人类档案柜",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.5544,
+            0.8118,
+            0.33
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_curved_archive_shelf",
+        "roomId": "level_05_archive_room",
+        "modelKey": "room_l5_v3_curved_archive_shelf",
+        "position": [
+          11.55,
+          0,
+          -15.05
+        ],
+        "rotation": [
+          0,
+          3.1416,
+          0
+        ],
+        "scale": 0.88,
+        "label": "弧形档案架",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.8016800000000001,
+            0.9152,
+            0.2618
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_specimen_drawer_stack",
+        "roomId": "level_05_archive_room",
+        "modelKey": "room_l5_v3_specimen_drawer_stack",
+        "position": [
+          9.25,
+          0,
+          -14.45
+        ],
+        "rotation": [
+          0,
+          2.38,
+          0
+        ],
+        "scale": 0.86,
+        "label": "样本抽屉组",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.43644999999999995,
+            0.8815,
+            0.258
+          ]
+        }
+      },
+      {
+        "id": "level_05_v3_furniture_evidence_coffee_table",
+        "roomId": "level_05_archive_room",
+        "modelKey": "room_l5_v3_evidence_coffee_table",
+        "position": [
+          11.15,
+          0,
+          -10.15
+        ],
+        "rotation": [
+          0,
+          -0.15,
+          0
+        ],
+        "scale": 0.88,
+        "label": "证据咖啡桌",
+        "tags": [
+          "hp:level05_v3_furniture_image2",
+          "source:image2",
+          "license:owned-generated-output",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.7656,
+            0.2904,
+            0.43119999999999997
+          ]
+        }
+      },
+      {
+        "id": "level_05_v4_dressing_entry_ceiling_service_lamp",
+        "roomId": "level_05_core_entry",
+        "modelKey": "room_l5_v4_ceiling_service_lamp",
+        "position": [
+          0,
+          3.2,
+          17.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "入口顶部服务灯",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:ceiling"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_entry_wall_pipe_manifold",
+        "roomId": "level_05_core_entry",
+        "modelKey": "room_l5_v4_wall_pipe_manifold",
+        "position": [
+          -4.57752,
+          1.22,
+          16.25
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 0.88,
+        "label": "入口壁挂管汇",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:wall"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_hub_ceiling_cable_tray",
+        "roomId": "level_05_lock_hub",
+        "modelKey": "room_l5_v4_ceiling_cable_tray",
+        "position": [
+          0.4,
+          3.26,
+          7.35
+        ],
+        "rotation": [
+          0,
+          0.08,
+          0
+        ],
+        "scale": 1,
+        "label": "中庭顶部线缆槽",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:ceiling"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_hub_floor_cable_bridge",
+        "roomId": "level_05_lock_hub",
+        "modelKey": "room_l5_v4_floor_cable_bridge",
+        "position": [
+          5.55,
+          0.02,
+          6.05
+        ],
+        "rotation": [
+          0,
+          1.5708,
+          0
+        ],
+        "scale": 0.92,
+        "label": "中庭地面电缆桥",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:floor"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_hub_warning_beacon",
+        "roomId": "level_05_lock_hub",
+        "modelKey": "room_l5_v4_warning_beacon_pylon",
+        "position": [
+          -7.35,
+          0,
+          3.15
+        ],
+        "rotation": [
+          0,
+          0.2,
+          0
+        ],
+        "scale": 0.9,
+        "label": "中庭警示信标",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:floor"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_north_sample_rack",
+        "roomId": "level_05_north_lock",
+        "modelKey": "room_l5_v4_sample_canister_rack",
+        "position": [
+          3.68,
+          0,
+          -5.02
+        ],
+        "rotation": [
+          0,
+          -1.5708,
+          0
+        ],
+        "scale": 0.86,
+        "label": "北侧样本罐架",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.5203,
+            0.7395999999999999,
+            0.19909000000000002
+          ]
+        }
+      },
+      {
+        "id": "level_05_v4_dressing_north_clamp_relay",
+        "roomId": "level_05_north_lock",
+        "modelKey": "room_l5_v4_clamp_relay_column",
+        "position": [
+          -3.76,
+          0,
+          -4.95
+        ],
+        "rotation": [
+          0,
+          0.15,
+          0
+        ],
+        "scale": 0.88,
+        "label": "北侧夹钳继电柱",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.3674,
+            0.7876,
+            0.31063999999999997
+          ]
+        }
+      },
+      {
+        "id": "level_05_v4_dressing_east_ceiling_service_lamp",
+        "roomId": "level_05_east_lock",
+        "modelKey": "room_l5_v4_ceiling_service_lamp",
+        "position": [
+          13,
+          3.26,
+          7.6
+        ],
+        "rotation": [
+          0,
+          1.5708,
+          0
+        ],
+        "scale": 0.92,
+        "label": "东侧顶部服务灯",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:ceiling"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_east_wall_pipe_manifold",
+        "roomId": "level_05_east_lock",
+        "modelKey": "room_l5_v4_wall_pipe_manifold",
+        "position": [
+          16.58553,
+          1.18,
+          6.1
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 0.82,
+        "label": "东侧壁挂管汇",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:wall"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_west_ceiling_cable_tray",
+        "roomId": "level_05_west_lock",
+        "modelKey": "room_l5_v4_ceiling_cable_tray",
+        "position": [
+          -13,
+          3.26,
+          7.45
+        ],
+        "rotation": [
+          0,
+          1.5708,
+          0
+        ],
+        "scale": 0.9,
+        "label": "西侧顶部线缆槽",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:ceiling"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_west_crate_stack",
+        "roomId": "level_05_west_lock",
+        "modelKey": "room_l5_v4_maintenance_crate_stack",
+        "position": [
+          -16.25,
+          0,
+          4.32
+        ],
+        "rotation": [
+          0,
+          0.22,
+          0
+        ],
+        "scale": 0.82,
+        "label": "西侧维护箱堆",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:floor"
+        ],
+        "collider": {
+          "halfSize": [
+            0.4469,
+            0.33619999999999994,
+            0.31406
+          ]
+        }
+      },
+      {
+        "id": "level_05_v4_dressing_west_wall_pipe_manifold",
+        "roomId": "level_05_west_lock",
+        "modelKey": "room_l5_v4_wall_pipe_manifold",
+        "position": [
+          -16.58553,
+          1.18,
+          8.25
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 0.82,
+        "label": "西侧壁挂管汇",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:wall"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_platform_left_beacon",
+        "roomId": "level_05_platform",
+        "modelKey": "room_l5_v4_warning_beacon_pylon",
+        "position": [
+          -6.9,
+          0,
+          -16.85
+        ],
+        "rotation": [
+          0,
+          -0.35,
+          0
+        ],
+        "scale": 0.9,
+        "label": "内台左警示信标",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:floor"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_platform_right_beacon",
+        "roomId": "level_05_platform",
+        "modelKey": "room_l5_v4_warning_beacon_pylon",
+        "position": [
+          6.9,
+          0,
+          -16.85
+        ],
+        "rotation": [
+          0,
+          0.35,
+          0
+        ],
+        "scale": 0.9,
+        "label": "内台右警示信标",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:floor"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_platform_ceiling_service_lamp",
+        "roomId": "level_05_platform",
+        "modelKey": "room_l5_v4_ceiling_service_lamp",
+        "position": [
+          0,
+          3.32,
+          -12.25
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1.08,
+        "label": "内台顶部服务灯",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:ceiling"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_archive_ceiling_service_lamp",
+        "roomId": "level_05_archive_room",
+        "modelKey": "room_l5_v4_ceiling_service_lamp",
+        "position": [
+          11.5,
+          3.24,
+          -12
+        ],
+        "rotation": [
+          0,
+          1.5708,
+          0
+        ],
+        "scale": 0.86,
+        "label": "档案室顶部服务灯",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:ceiling"
+        ]
+      },
+      {
+        "id": "level_05_v4_dressing_archive_wall_pipe_manifold",
+        "roomId": "level_05_archive_room",
+        "modelKey": "room_l5_v4_wall_pipe_manifold",
+        "position": [
+          8.40913,
+          1.16,
+          -12.2
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 0.78,
+        "label": "档案室壁挂管汇",
+        "tags": [
+          "hp:level05_v4_dressing",
+          "source:deterministic-math-script",
+          "license:project-owned-clean",
+          "placement:art_directed",
+          "mount:wall"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_exit_stage",
+        "roomId": "level_05_identity_file",
+        "modelKey": "service_elevator_exit_stage",
+        "position": [
+          0,
+          0,
+          -21.2
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "出口电梯房间",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "official",
+          "builderTrial",
+          "exit_room_stage",
+          "bright_exit"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_interior_shell",
+        "roomId": "level_05_identity_file",
+        "modelKey": "service_elevator_interior_shell",
+        "position": [
+          0,
+          0,
+          -21.2
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "出口电梯内壁",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "official",
+          "builderTrial",
+          "interior_shell",
+          "bright_exit"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_threshold",
+        "roomId": "level_05_identity_file",
+        "modelKey": "door_threshold_service_elevator",
+        "position": [
+          0,
+          0.035,
+          -19.09
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1.15,
+          1,
+          1
+        ],
+        "label": "出口电梯门槛",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "official",
+          "builderTrial",
+          "threshold",
+          "bright_exit"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_call_buttons",
+        "roomId": "level_05_identity_file",
+        "modelKey": "service_elevator_call_buttons",
+        "position": [
+          2.82,
+          1.42,
+          -21.9
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "出口电梯呼叫按钮",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "official",
+          "builderTrial",
+          "exit_call_buttons",
+          "button_panel"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_ascent_shaft_fx",
+        "roomId": "level_05_identity_file",
+        "modelKey": "service_elevator_ascent_shaft_fx",
+        "position": [
+          0,
+          0,
+          -21.2
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "出口电梯上升井道",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "official",
+          "builderTrial",
+          "ascent_shaft_fx",
+          "cinematic_reveal"
+        ]
+      }
+    ],
+    "navigation": {
+      "criticalPathRoomIds": [
+        "level_05_core_entry",
+        "level_05_lock_hub",
+        "level_05_north_lock",
+        "level_05_platform",
+        "level_05_identity_file"
+      ],
+      "optionalRoomIds": [
+        "level_05_east_lock",
+        "level_05_west_lock",
+        "level_05_archive_room"
+      ],
+      "maxBacktrackSeconds": 24,
+      "mobileReadableDoorCount": 4
+    }
+  },
+  "puzzles": [],
+  "objectiveChain": [
+    {
+      "id": "obj_reach_exit",
+      "type": "reach_exit",
+      "title": "进入撤离电梯",
+      "detail": "抵达出口，启动它。",
+      "requiredIds": [
+        "use_builder_exit"
+      ],
+      "completesWhen": {
+        "type": "interaction_completed",
+        "id": "use_builder_exit"
+      },
+      "hudLabel": "撤离",
+      "startsWhen": {
+        "type": "level_start"
+      }
+    }
+  ],
+  "waves": [],
+  "events": [
+    {
+      "id": "builder_unlock_exit_on_enter",
+      "trigger": {
+        "type": "room_entered",
+        "id": "level_05_identity_file"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "unlock_exit"
+        }
+      ]
+    }
+  ],
+  "dialogues": [
+    {
+      "id": "level_05_start_01",
+      "trigger": "level_start",
+      "speaker": "核心广播",
+      "line": "回收核心空置。归档电梯仍可用。",
+      "tone": "system",
+      "duration": 2.8
+    },
+    {
+      "id": "level_05_exit_01",
+      "trigger": "level_05_exit_01",
+      "speaker": "归档电梯",
+      "line": "归档流程接管。",
+      "tone": "reveal",
+      "duration": 2.4
+    }
+  ],
+  "spawnGroups": [
+    {
+      "id": "front",
+      "label": "前方舱门",
+      "layout": "front"
+    },
+    {
+      "id": "front_arc",
+      "label": "前方舱门",
+      "layout": "front_arc"
+    },
+    {
+      "id": "side_rear",
+      "label": "侧后方夹击",
+      "layout": "side_rear"
+    },
+    {
+      "id": "front_gate",
+      "label": "正门重型单位",
+      "layout": "front_gate"
+    },
+    {
+      "id": "turret_rail",
+      "label": "左右轨道炮台",
+      "layout": "turret_rail"
+    },
+    {
+      "id": "around_ring",
+      "label": "四周通道",
+      "layout": "around_ring"
+    },
+    {
+      "id": "rear_ring",
+      "label": "后方追击队",
+      "layout": "rear_ring"
+    }
+  ],
+  "cinematicBeats": [],
+  "pickups": {
+    "maxActiveDynamicPickups": 3,
+    "dynamicLifetimeSec": 22,
+    "storyPickups": [],
+    "collectRadii": {
+      "coreCell": 2.45,
+      "repairKit": 2.25,
+      "ironRod": 1.65,
+      "pistol": 1.65,
+      "breachMissile": 1.85
+    },
+    "repairKit": {
+      "minMissingHealthToCollect": 3,
+      "healAmount": 24,
+      "rewardLabel": "拾取修复箱"
+    },
+    "coreCell": {
+      "maxHeld": 1,
+      "pickupLabel": "拾取应急电池",
+      "pickupDetailPrefix": "物品",
+      "useLabel": "应急电池释放",
+      "useDetail": "一次性清场冲击",
+      "preservedLabel": "电池余电",
+      "preservedDetail": "这枚电池没有完全耗尽",
+      "upgradeInsertedLabel": "应急电池装入",
+      "emptyUseReward": {
+        "label": "没有应急电池",
+        "detail": "电池很少，留给被包围时",
+        "rarity": "common"
+      }
+    },
+    "drops": {
+      "coreCell": {
+        "activeDropLimit": 1,
+        "pityKills": 18,
+        "minKillsForPity": 16,
+        "eliteChance": 0.72,
+        "archetypeChances": {
+          "clamp_bot": {
+            "minKills": 12,
+            "chance": 0.07
+          },
+          "repair_drone": {
+            "minKills": 16,
+            "chance": 0.018
+          }
+        }
+      },
+      "repairKit": {
+        "activeDropLimit": 1,
+        "minMissingHealth": 14,
+        "eliteChance": 0.22,
+        "baseChance": 0.012,
+        "archetypeChanceBonus": {
+          "clamp_bot": 0.02
+        },
+        "missingHealthThreshold": 0.34,
+        "missingHealthBonus": 0.03,
+        "lowHealthBonuses": [
+          {
+            "healthRatioAtMost": 0.4,
+            "bonus": 0.09
+          },
+          {
+            "healthRatioAtMost": 0.24,
+            "bonus": 0.16
+          }
+        ],
+        "lowHealthPity": [
+          {
+            "healthRatioAtMost": 0.22,
+            "kills": 4
+          },
+          {
+            "healthRatioAtMost": 0.32,
+            "kills": 7
+          }
+        ]
+      }
+    }
+  },
+  "economy": {
+    "memoryFragments": {
+      "default": 1,
+      "byArchetype": {
+        "custodian_elite": 40,
+        "signal_turret": 3,
+        "clamp_bot": 2,
+        "shield_tech": 5
+      }
+    },
+    "killStreakWindowSec": 3.8,
+    "memoryCacheMilestones": [
+      {
+        "amount": 10,
+        "label": "体力恢复",
+        "reward": "energy",
+        "rarity": "rare"
+      },
+      {
+        "amount": 28,
+        "label": "呼吸变稳",
+        "reward": "heat",
+        "rarity": "rare"
+      },
+      {
+        "amount": 52,
+        "label": "生命上限恢复",
+        "reward": "health",
+        "rarity": "epic"
+      }
+    ],
+    "curatedUpgradeRolls": [
+      [
+        "last_human_protocol",
+        "core_plating",
+        "thermal_buffer",
+        "field_medicine",
+        "rail_overcharge"
+      ],
+      [
+        "shock_repair_ping",
+        "core_cell_preserve",
+        "pulse_chain_mark",
+        "dash_shorter_cd",
+        "last_human_protocol"
+      ]
+    ],
+    "tempoSurge": {
+      "eliteDuration": 6.5,
+      "normalThreshold": 5,
+      "tier2Threshold": 10,
+      "tier1Duration": 4.4,
+      "tier2Duration": 5.8,
+      "tier1HeatRefund": 7,
+      "tier2HeatRefund": 12,
+      "tier1EnergyRefund": 7,
+      "tier2EnergyRefund": 12
+    }
+  },
+  "revive": {
+    "maxRevives": 1,
+    "hpRatio": 0.7,
+    "memoryFragments": 12,
+    "reviveSurgeSec": 9.5,
+    "tempoSurgeSec": 5.5,
+    "blastRadius": 6.5,
+    "blastDamage": 80,
+    "blastKnockback": 6,
+    "rewardPulse": {
+      "label": "第二口气",
+      "detail": "+线索 + 短暂爆发",
+      "rarity": "story"
+    },
+    "rewardPulseDuration": 2.4,
+    "message": "你在回收中庭醒来。北、东、西的灯已经暗过一次。"
+  },
+  "combatLimits": {
+    "smallEnemyArchetypes": [
+      "repair_drone",
+      "clamp_bot"
+    ],
+    "eliteArchetypeId": "custodian_elite",
+    "smallEnemyDamageMultiplier": 1.3
+  },
+  "bossPhases": [],
+  "enemyDeathBeats": [],
+  "presentation": {
+    "defaultWaveStartMessage": "敌对单位正在部署。",
+    "reinforcementMessage": "增援单位已部署。",
+    "waveLabels": {},
+    "objectives": {
+      "upgrade": {
+        "title": "选一种活法",
+        "detail": "只能选一项",
+        "progressLabel": "升级上线",
+        "progressText": "选 1 个"
+      },
+      "preRod": {
+        "title": "捡起铁棒",
+        "detail": "别空手"
+      },
+      "prePistol": {
+        "title": "捡起手枪",
+        "detail": "拿到枪，门会锁"
+      },
+      "default": {
+        "title": "继续前进",
+        "detail": "目标还没完成"
+      },
+      "exitUnlocked": {
+        "title": "进入出口",
+        "detail": "进电梯",
+        "progressLabel": "撤离",
+        "progressText": "走"
+      }
+    },
+    "flow": {
+      "title": {
+        "system": "异常生命信号",
+        "heading": "人类协议",
+        "body": "你醒在一段不该有人的协议里。",
+        "signalStrip": [
+          "生命体征",
+          "门禁",
+          "无线电噪声"
+        ],
+        "startButton": "开始"
+      },
+      "death": {
+        "system": "急救失败",
+        "heading": "你倒下了",
+        "itchSuffix": "itch 版本无广告。",
+        "reviveOfferPrefix": "醒来后有几秒肾上腺素爆发。",
+        "cacheReadyText": "补给已备好。",
+        "reviveButtonRewarded": "看广告急救",
+        "reviveButtonLocal": "急救",
+        "restartButton": "重开本关",
+        "restartAfterReviveUsedButton": "重新开始"
+      },
+      "transition": {
+        "system": "出口",
+        "heading": "继续下行"
+      },
+      "victory": {
+        "system": "档案片段",
+        "heading": "记录完成",
+        "body": "门合上了，下一层仍在亮。",
+        "doubleMemoryButton": "看广告 x2 积分",
+        "doubleMemoryClaimedButton": "x2 积分已领取",
+        "replayButton": "再次进入"
+      }
+    },
+    "waves": [],
+    "spawnSourceLabels": {
+      "front": "前方入口",
+      "front_arc": "前方入口",
+      "side_rear": "侧后方夹击",
+      "front_gate": "正门重型单位",
+      "turret_rail": "左右轨道炮台",
+      "around_ring": "四周通道",
+      "rear_ring": "后方追击队"
+    },
+    "reinforcementWarningDuration": 1.45,
+    "environmentPressure": {
+      "title": 0.16,
+      "death": 0.95,
+      "idle": 0.24,
+      "exitUnlocked": 0.84,
+      "byWave": {}
+    }
+  }
+}

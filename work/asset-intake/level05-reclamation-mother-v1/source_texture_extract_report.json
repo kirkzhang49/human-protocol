@@ -1,0 +1,15 @@
+{
+  "glbPath": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/work/asset-intake/level05-reclamation-mother-v1/reclamation_mother_source_meshopt.glb",
+  "extracted": [
+    {
+      "index": 0,
+      "name": "reference_rgb_721f9d39-316f-43d0-ac83-588c2d94df81",
+      "mimeType": "image/jpeg",
+      "bufferView": 0,
+      "byteLength": 2584915,
+      "sha256": "efbb412ae0ed145bfa82a3b8892d5a6534cedb3ffcc39ea65c1024a1f72f9fce",
+      "file": "/Users/zhengkaizhang/Documents/smallGames-main/games/human-protocol/work/asset-intake/level05-reclamation-mother-v1/textures/00_reclamation_mother_source_color.jpg"
+    }
+  ],
+  "generatedAt": "2026-06-28T01:19:02.905Z"
+}

@@ -1,0 +1,82 @@
+{
+  "source": "Poly Haven",
+  "assetId": "ornate_mirror_01",
+  "sourceUrl": "https://polyhaven.com/a/ornate_mirror_01",
+  "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/ornate_mirror_01/ornate_mirror_01_1k.gltf",
+  "license": "CC0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "resolution": "1k glTF",
+  "apiInfo": {
+    "type": 2,
+    "tags": [
+      "decor",
+      "decoration",
+      "ornate",
+      "fancy",
+      "wealthy",
+      "mansion",
+      "manor",
+      "vintage",
+      "victorian",
+      "floral",
+      "gold",
+      "mirror"
+    ],
+    "name": "Ornate Mirror 01",
+    "categories": [
+      "decorative",
+      "wall decoration",
+      "furniture"
+    ],
+    "authors": {
+      "James Ray Cock": "All"
+    },
+    "date_published": 1630454400,
+    "staging": null,
+    "sponsors": [
+      "42579608"
+    ],
+    "max_resolution": [
+      8192,
+      8192
+    ],
+    "polycount": 14246,
+    "texel_density": 7970.298501672059,
+    "dimensions": [
+      486.4957332611084,
+      25.958335027098656,
+      744.1554069519043
+    ],
+    "files_hash": "dce07cbb7de9a3c517163291f4bc452fbd11624c",
+    "description": "Free 8K model - Victorian-style arched mirror with gilded floral crest, carved rope trim and aged, speckled glass showing subtle patina.",
+    "download_count": 31723,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/ornate_mirror_01.png?width=256&height=256"
+  },
+  "files": {
+    "include": {
+      "textures/ornate_mirror_01_arm_1k.jpg": {
+        "size": 126947,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ornate_mirror_01/ornate_mirror_01_arm_1k.jpg",
+        "md5": "0e7d993bec7cc5913bf73f51821b09ad"
+      },
+      "ornate_mirror_01.bin": {
+        "size": 372772,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/ornate_mirror_01/ornate_mirror_01.bin",
+        "md5": "0be4cf0dda17d51c4a279ce4912b1b3f"
+      },
+      "textures/ornate_mirror_01_diff_1k.jpg": {
+        "size": 115752,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ornate_mirror_01/ornate_mirror_01_diff_1k.jpg",
+        "md5": "d2103c8f1e72c86d7911a06da6161cd1"
+      },
+      "textures/ornate_mirror_01_nor_gl_1k.jpg": {
+        "size": 59073,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/ornate_mirror_01/ornate_mirror_01_nor_gl_1k.jpg",
+        "md5": "bea34985dd1cc0d3dd20478df6b1e7b3"
+      }
+    },
+    "size": 2697,
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/ornate_mirror_01/ornate_mirror_01_1k.gltf",
+    "md5": "834501c79f6045083367606fd8f30c9f"
+  }
+}

@@ -1,0 +1,600 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_residential_floor_path_inlay",
+  "category": "room",
+  "file": "src/assets/models-runtime/environment/level02/hp_room_residential_floor_path_inlay.glb",
+  "fileName": "hp_room_residential_floor_path_inlay.glb",
+  "sourceAsset": {
+    "modelKey": "room_residential_floor_path_inlay",
+    "category": "room",
+    "url": "/src/assets/models-runtime/environment/level02/hp_room_residential_floor_path_inlay.glb",
+    "file": "src/assets/models-runtime/environment/level02/hp_room_residential_floor_path_inlay.glb",
+    "sizeMeters": [
+      4.719,
+      0.056,
+      0.704
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 174472,
+      "meshes": 9,
+      "nodes": 10,
+      "skins": 0,
+      "primitives": 9,
+      "materials": 6,
+      "textures": 2,
+      "images": 2,
+      "accessors": 31,
+      "bufferViews": 33,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 972
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level02/hp_room_residential_floor_path_inlay.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 493650,
+    "vertexCount": 2916,
+    "triangleCount": 972,
+    "meshCount": 9,
+    "materialCount": 6,
+    "nodeCount": 10,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -2.35927,
+        0.002813,
+        -0.351802
+      ],
+      "center": [
+        0,
+        0.04107,
+        0
+      ],
+      "size": [
+        4.718539,
+        0.076514,
+        0.703604
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "brushed_route_plate",
+        "vertexOffset": 493650,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.057385,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.057385,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "cyan_last_route_segment",
+        "vertexOffset": 493974,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.321191,
+          0.073138,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.321191,
+          -0.073138,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "floor_path_cross_rib_0",
+        "vertexOffset": 494298,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.981786,
+          0.074826,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.981786,
+          -0.074826,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "floor_path_cross_rib_1",
+        "vertexOffset": 494622,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.660595,
+          0.074826,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.660595,
+          -0.074826,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "floor_path_cross_rib_2",
+        "vertexOffset": 494946,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.660595,
+          0.074826,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.660595,
+          -0.074826,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "floor_path_cross_rib_3",
+        "vertexOffset": 495270,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.981786,
+          0.074826,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.981786,
+          -0.074826,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "long_dark_floor_inlay_backer",
+        "vertexOffset": 495594,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.030943,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.030943,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "warm_first_route_segment",
+        "vertexOffset": 495918,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.321191,
+          0.072013,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.321191,
+          -0.072013,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "white_middle_route_segment",
+        "vertexOffset": 496242,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.072575,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.072575,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_02_living_floor_path_inlay",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        0.045,
+        -3.05
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.16,
+        1,
+        0.92
+      ],
+      "tags": [
+        "residential_simulation",
+        "floor_identity",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          0.045,
+          -3.05
+        ],
+        "halfSize": [
+          2.73702,
+          0.028,
+          0.32384
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_living_foreground_floor_path_inlay",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        0.046,
+        4.28
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.86,
+        1,
+        0.72
+      ],
+      "tags": [
+        "residential_simulation",
+        "floor_identity",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          0.046,
+          4.28
+        ],
+        "halfSize": [
+          2.02917,
+          0.028,
+          0.25344
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_light_room_floor_path_inlay",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_light_room",
+      "secondaryRoomId": null,
+      "position": [
+        -13,
+        0.047,
+        -0.46
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.68,
+        1,
+        0.72
+      ],
+      "tags": [
+        "residential_simulation",
+        "puzzle_floor_anchor",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -13,
+          0.047,
+          -0.46
+        ],
+        "halfSize": [
+          1.60446,
+          0.028,
+          0.25344
+        ]
+      }
+    }
+  ]
+}

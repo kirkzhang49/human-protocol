@@ -1,0 +1,506 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "age_museum_color_orb_pedestal",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level03/age_museum_color_orb_pedestal.glb",
+  "fileName": "age_museum_color_orb_pedestal.glb",
+  "sourceAsset": {
+    "modelKey": "age_museum_color_orb_pedestal",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level03/age_museum_color_orb_pedestal.glb",
+    "file": "src/assets/models-cooked/environment/level03/age_museum_color_orb_pedestal.glb",
+    "sizeMeters": [
+      0.92,
+      1.02,
+      0.92
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 72824,
+      "meshes": 5,
+      "nodes": 9,
+      "skins": 0,
+      "primitives": 5,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 20,
+      "bufferViews": 20,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 1740
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level03/age_museum_color_orb_pedestal.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 34308,
+    "vertexCount": 5220,
+    "triangleCount": 1740,
+    "meshCount": 5,
+    "materialCount": 4,
+    "nodeCount": 9,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.42,
+        0,
+        -0.42
+      ],
+      "center": [
+        0,
+        0.48,
+        0
+      ],
+      "size": [
+        0.84,
+        0.96,
+        0.84
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_color_orb_pedestal_hit_target_plate",
+        "vertexOffset": 34308,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.88,
+          0.12,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.88,
+          -0.12,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_color_orb_pedestal_old_gold_support_ring",
+        "vertexOffset": 34632,
+        "vertexCount": 1716,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.33,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.33,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_color_orb_pedestal_pedestal_stem",
+        "vertexOffset": 36348,
+        "vertexCount": 1140,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.61,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.61,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_color_orb_pedestal_round_black_base",
+        "vertexOffset": 37488,
+        "vertexCount": 1716,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.13,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.13,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "age_museum_color_orb_pedestal_small_pickup_exposure_gold_line",
+        "vertexOffset": 39204,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.88,
+          0.147,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.88,
+          -0.147,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_03_orb_red_pedestal",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -2.55,
+        0.045,
+        -6.54
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.28,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.55,
+          0.045,
+          -6.54
+        ],
+        "halfSize": [
+          0.3128,
+          0.3468,
+          0.3128
+        ]
+      }
+    },
+    {
+      "id": "prop:level_03_orb_blue_pedestal",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        14.5,
+        0.045,
+        1.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.18,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          14.5,
+          0.045,
+          1.5
+        ],
+        "halfSize": [
+          0.3128,
+          0.3468,
+          0.3128
+        ]
+      }
+    },
+    {
+      "id": "prop:level_03_orb_green_pedestal",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        2.55,
+        0.045,
+        -6.54
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.15,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          2.55,
+          0.045,
+          -6.54
+        ],
+        "halfSize": [
+          0.3128,
+          0.3468,
+          0.3128
+        ]
+      }
+    },
+    {
+      "id": "prop:level_03_orb_yellow_pedestal",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -14.5,
+        0.045,
+        1.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.25,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -14.5,
+          0.045,
+          1.5
+        ],
+        "halfSize": [
+          0.3128,
+          0.3468,
+          0.3128
+        ]
+      }
+    },
+    {
+      "id": "prop:level_03_orb_purple_pedestal",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -4.5,
+        0.045,
+        10
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.08,
+        0
+      ],
+      "scale": [
+        0.68,
+        0.68,
+        0.68
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -4.5,
+          0.045,
+          10
+        ],
+        "halfSize": [
+          0.3128,
+          0.3468,
+          0.3128
+        ]
+      }
+    }
+  ]
+}

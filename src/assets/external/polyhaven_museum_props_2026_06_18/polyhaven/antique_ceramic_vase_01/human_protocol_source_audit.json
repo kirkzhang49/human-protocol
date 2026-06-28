@@ -1,0 +1,36 @@
+{
+  "source": "Poly Haven",
+  "assetId": "antique_ceramic_vase_01",
+  "sourceUrl": "https://polyhaven.com/a/antique_ceramic_vase_01",
+  "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/antique_ceramic_vase_01/antique_ceramic_vase_01_1k.gltf",
+  "license": "CC0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "resolution": "1k glTF",
+  "files": {
+    "include": {
+      "textures/antique_ceramic_vase_01_nor_gl_1k.jpg": {
+        "size": 33062,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/antique_ceramic_vase_01/antique_ceramic_vase_01_nor_gl_1k.jpg",
+        "md5": "07fef9d384b8e73d1b03604103ed0b65"
+      },
+      "antique_ceramic_vase_01.bin": {
+        "size": 217216,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/8k/antique_ceramic_vase_01/antique_ceramic_vase_01.bin",
+        "md5": "0758bc04ce9826b1ae61c931aed19715"
+      },
+      "textures/antique_ceramic_vase_01_diff_1k.jpg": {
+        "size": 192337,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/antique_ceramic_vase_01/antique_ceramic_vase_01_diff_1k.jpg",
+        "md5": "a3de8212967f9e230364c5948e1581a5"
+      },
+      "textures/antique_ceramic_vase_01_arm_1k.jpg": {
+        "size": 80537,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/antique_ceramic_vase_01/antique_ceramic_vase_01_arm_1k.jpg",
+        "md5": "ca1d7269913774a351bdf10058d7f06f"
+      }
+    },
+    "size": 2789,
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/antique_ceramic_vase_01/antique_ceramic_vase_01_1k.gltf",
+    "md5": "b5a82c883c3a29b54eccd2f8400bd479"
+  }
+}

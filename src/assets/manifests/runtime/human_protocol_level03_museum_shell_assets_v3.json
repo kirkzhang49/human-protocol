@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "hp.level03-museum-shell-assets.v3",
+  "generatedBy": "scripts/asset-build/blender-generate-level03-museum-shell-assets.py",
+  "purpose": "Replace Level 3 museum floor and ceiling shells with brighter dedicated image2 skins and geometry tuned for playable museum-horror lighting.",
+  "sourceBlend": "src/assets/source_blend/level03/human_protocol_level03_museum_shell_assets_v3.blend",
+  "textures": [
+    "src/assets/textures/environment/level03/level03_image2_museum_floor_tile_skin_v3.png",
+    "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v3.png"
+  ],
+  "models": [
+    {
+      "modelKey": "room_floor_tile_museum",
+      "file": "src/assets/models/environment/shells/hp_room_floor_tile_museum.glb",
+      "primaryTexture": "src/assets/textures/environment/level03/level03_image2_museum_floor_tile_skin_v3.png",
+      "qualityNotes": [
+        "image2 top face uses explicit 0-1 UVs instead of generic atlas overlays",
+        "polished dark stone-metal panels include cyan reflection guides, brass inlays, seams, and soft light pools",
+        "raised trims and shadow lanes create contact grounding for props and pickups"
+      ]
+    },
+    {
+      "modelKey": "room_ceiling_panel_museum",
+      "file": "src/assets/models/environment/shells/hp_room_ceiling_panel_museum.glb",
+      "primaryTexture": "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v3.png",
+      "qualityNotes": [
+        "image2 underside face uses explicit 0-1 UVs for visible grid skin",
+        "deep coffer beams and controlled cyan blades match Level 1 reference lighting language",
+        "warm pin housings preserve museum exhibit readability without bright flat white panels"
+      ]
+    }
+  ],
+  "configReady": {
+    "shellKit": "hp:human_museum_gallery_shell_v1",
+    "lightingPreset": "hp:human_museum_gallery_lighting_v1",
+    "level": "level_03_human_museum"
+  }
+}

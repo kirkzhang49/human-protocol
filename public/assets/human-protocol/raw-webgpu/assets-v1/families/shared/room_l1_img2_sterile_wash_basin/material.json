@@ -1,0 +1,575 @@
+{
+  "file": "material.json",
+  "hash": "8b0377dbf7189298",
+  "materials": [
+    {
+      "index": 737,
+      "id": "mat:builder-resource:l1-workcell-image2-worn-black-panel:1vz92z3",
+      "name": "l1_workcell_image2_worn_black_panel",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.82,
+      "metallicFactor": 0.35,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    },
+    {
+      "index": 738,
+      "id": "mat:builder-resource:l1-workcell-image2-cyan-diagnostic-glass:ddd1wc",
+      "name": "l1_workcell_image2_cyan_diagnostic_glass",
+      "category": "builder-resource",
+      "visualRole": "glass_shell",
+      "semanticParams": [
+        5,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        0.78
+      ],
+      "emissiveFactor": [
+        0,
+        0.099,
+        0.135
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.32,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "BLEND",
+      "transparency": {
+        "mode": "blend",
+        "alpha": 0.78,
+        "source": "gltf-material.transparent+gltf-material.opacity"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    },
+    {
+      "index": 739,
+      "id": "mat:builder-resource:l1-workcell-image2-dark-powdercoat:spmbuw",
+      "name": "l1_workcell_image2_dark_powdercoat",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.45,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    },
+    {
+      "index": 740,
+      "id": "mat:builder-resource:l1-workcell-image2-brushed-steel:v0cthr",
+      "name": "l1_workcell_image2_brushed_steel",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0.85,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    },
+    {
+      "index": 741,
+      "id": "mat:builder-resource:l1-workcell-image2-off-white-enamel:1v2r3jh",
+      "name": "l1_workcell_image2_off_white_enamel",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.66,
+      "metallicFactor": 0.12,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    },
+    {
+      "index": 742,
+      "id": "mat:builder-resource:l1-workcell-image2-hazard-stripe:rc66rs",
+      "name": "l1_workcell_image2_hazard_stripe",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.12,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    },
+    {
+      "index": 744,
+      "id": "mat:builder-resource:l1-workcell-image2-rubber-wheel-tread:hv0q78",
+      "name": "l1_workcell_image2_rubber_wheel_tread",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.9,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    },
+    {
+      "index": 750,
+      "id": "mat:builder-resource:l1-workcell-image2-scuffed-white-panel:suvdxb",
+      "name": "l1_workcell_image2_scuffed_white_panel",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.74,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 1,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    },
+    {
+      "index": 751,
+      "id": "mat:builder-resource:l1-workcell-image2-stainless-basin:124caof",
+      "name": "l1_workcell_image2_stainless_basin",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.36,
+      "metallicFactor": 0.92,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_workcell_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.334168,
+            "contrast": 0.271294,
+            "chroma": 0.168254,
+            "detail": 0.09374
+          },
+          "generated": false,
+          "layer": 60
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 60,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+      "name": "hp_level01_workcell_image2_atlas",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_sterile_wash_basin/textures/basecolor-60-hp-level01-workcell-image2-atlas.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.334168,
+        "contrast": 0.271294,
+        "chroma": 0.168254,
+        "detail": 0.09374
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

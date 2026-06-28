@@ -1,0 +1,2045 @@
+{
+  "file": "material.json",
+  "hash": "de23d5b8ffcb2dd8",
+  "materials": [
+    {
+      "index": 46,
+      "id": "mat:interaction:powder-coated-dark-body:14q6qha",
+      "name": "powder_coated_dark_body",
+      "category": "interaction",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.055,
+        0.07,
+        0.08,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.64,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-01-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-01-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536075,
+            "contrast": 0.017213,
+            "chroma": 0.790762,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 1
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-14-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-14-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.563132,
+            "contrast": 0.017671,
+            "chroma": 0.792367,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 14
+        }
+      ]
+    },
+    {
+      "index": 47,
+      "id": "mat:interaction:soft-black-trim:9m28wp",
+      "name": "soft_black_trim",
+      "category": "interaction",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.018,
+        0.024,
+        0.028,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.48,
+      "metallicFactor": 0.32,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-37-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-37-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536078,
+            "contrast": 0.017126,
+            "chroma": 0.790736,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 37
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-62-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-62-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.464357,
+            "contrast": 0.017957,
+            "chroma": 0.636289,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 62
+        }
+      ]
+    },
+    {
+      "index": 48,
+      "id": "mat:interaction:worn-brass-edges:1poops3",
+      "name": "worn_brass_edges",
+      "category": "interaction",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.42,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0.900546,
+        0.668353,
+        0.183206,
+        0.843625
+      ],
+      "baseColorFactor": [
+        0.56,
+        0.38,
+        0.14,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.36,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-17-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-17-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": null,
+          "generated": false,
+          "layer": 17
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-18-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-18-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": null,
+          "generated": false,
+          "layer": 18
+        }
+      ]
+    },
+    {
+      "index": 50,
+      "id": "mat:interaction:dead-black-screen:a0mkgm",
+      "name": "dead_black_screen",
+      "category": "interaction",
+      "visualRole": "switch_active",
+      "semanticParams": [
+        18,
+        0.84,
+        0.364,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0.102488,
+        0.632714,
+        0.725362,
+        0.501004
+      ],
+      "baseColorFactor": [
+        0.12,
+        0.72,
+        0.84,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0.3,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.05,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-65-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-65-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536096,
+            "contrast": 0.007079,
+            "chroma": 0.779659,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 65
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-66-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-66-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.26449,
+            "contrast": 0.009579,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 66
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-67-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-67-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0,
+            "contrast": 0,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 67
+        }
+      ]
+    },
+    {
+      "index": 52,
+      "id": "mat:interaction:red-fault-lens:14fxrd3",
+      "name": "red_fault_lens",
+      "category": "interaction",
+      "visualRole": "switch_inactive",
+      "semanticParams": [
+        19,
+        0.86,
+        0.3064,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0.777931,
+        0.122099,
+        0.083334,
+        0.643719
+      ],
+      "baseColorFactor": [
+        0.88,
+        0.16,
+        0.1,
+        1
+      ],
+      "emissiveFactor": [
+        0.55,
+        0.066,
+        0.044
+      ],
+      "emissiveStrength": 0.08,
+      "roughnessFactor": 0.36,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-45-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-45-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536102,
+            "contrast": 0.006578,
+            "chroma": 0.779484,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 45
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-69-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-69-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.346088,
+            "contrast": 0.009258,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 69
+        }
+      ]
+    },
+    {
+      "index": 54,
+      "id": "mat:interaction:amber-status-lens:18pssq8",
+      "name": "amber_status_lens",
+      "category": "interaction",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.484512,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0.900546,
+        0.668353,
+        0.183206,
+        0.843625
+      ],
+      "baseColorFactor": [
+        0.75,
+        0.43,
+        0.12,
+        1
+      ],
+      "emissiveFactor": [
+        0.8,
+        0.416,
+        0.128
+      ],
+      "emissiveStrength": 0.8064,
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-47-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-47-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536101,
+            "contrast": 0.01123,
+            "chroma": 0.781724,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 47
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-71-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-71-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.190648,
+            "contrast": 0.008712,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 71
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-72-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-72-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.145292,
+            "contrast": 0.063628,
+            "chroma": 0.19057,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 72
+        }
+      ]
+    },
+    {
+      "index": 55,
+      "id": "mat:interaction:blue-memory-lens:1jzz4i1",
+      "name": "blue_memory_lens",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.343296,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0.060802,
+        0.544582,
+        0.595571,
+        0.355801
+      ],
+      "baseColorFactor": [
+        0.08,
+        0.24,
+        0.8,
+        1
+      ],
+      "emissiveFactor": [
+        0.11,
+        0.242,
+        0.55
+      ],
+      "emissiveStrength": 0.5412,
+      "roughnessFactor": 0.2,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536093,
+            "contrast": 0.003117,
+            "chroma": 0.778473,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 73
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-74-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-74-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.174332,
+            "contrast": 0.005337,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 74
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-75-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-75-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.44792,
+            "contrast": 0.086603,
+            "chroma": 0.554942,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 75
+        }
+      ]
+    },
+    {
+      "index": 56,
+      "id": "mat:interaction:green-ready-lens:1nralel",
+      "name": "green_ready_lens",
+      "category": "interaction",
+      "visualRole": "switch_active",
+      "semanticParams": [
+        18,
+        0.84,
+        0.348,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0.102488,
+        0.632714,
+        0.725362,
+        0.501004
+      ],
+      "baseColorFactor": [
+        0.12,
+        0.72,
+        0.84,
+        1
+      ],
+      "emissiveFactor": [
+        0.099,
+        0.495,
+        0.209
+      ],
+      "emissiveStrength": 0.1,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-09-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-09-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536114,
+            "contrast": 0.006601,
+            "chroma": 0.779515,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 9
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-10-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-10-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.264132,
+            "contrast": 0.009391,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 10
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-76-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-76-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0,
+            "contrast": 0,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 76
+        }
+      ]
+    },
+    {
+      "index": 58,
+      "id": "mat:interaction:cool-worn-edge-highlight:1s51n8z",
+      "name": "cool_worn_edge_highlight",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0.060802,
+        0.544582,
+        0.595571,
+        0.355801
+      ],
+      "baseColorFactor": [
+        0.34,
+        0.39,
+        0.4,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0.48,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536093,
+            "contrast": 0.003117,
+            "chroma": 0.778473,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 73
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-79-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-79-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.394341,
+            "contrast": 0.005519,
+            "chroma": 0.750315,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 79
+        }
+      ]
+    },
+    {
+      "index": 59,
+      "id": "mat:interaction:matte-black-rubber-feet:1qo9vlv",
+      "name": "matte_black_rubber_feet",
+      "category": "interaction",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.006,
+        0.008,
+        0.009,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.82,
+      "metallicFactor": 0.02,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-37-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-37-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536078,
+            "contrast": 0.017126,
+            "chroma": 0.790736,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 37
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-80-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-80-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.803951,
+            "contrast": 0.017329,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 80
+        }
+      ]
+    },
+    {
+      "index": 120,
+      "id": "mat:interaction:sequence-tube-gloss:18p2x5k",
+      "name": "sequence_tube_gloss",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3684,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0.060802,
+        0.544582,
+        0.595571,
+        0.355801
+      ],
+      "baseColorFactor": [
+        0.82,
+        0.86,
+        0.92,
+        1
+      ],
+      "emissiveFactor": [
+        0.45,
+        0.475,
+        0.5
+      ],
+      "emissiveStrength": 0.855,
+      "roughnessFactor": 0.08,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536093,
+            "contrast": 0.003117,
+            "chroma": 0.778473,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 73
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-145-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-145-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.054652,
+            "contrast": 0.005392,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 145
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-146-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-146-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.696343,
+            "contrast": 0.294039,
+            "chroma": 0.109032,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 146
+        }
+      ]
+    },
+    {
+      "index": 121,
+      "id": "mat:interaction:purple-sequence-lens:owmdrt",
+      "name": "purple_sequence_lens",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.353328,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0.060802,
+        0.544582,
+        0.595571,
+        0.355801
+      ],
+      "baseColorFactor": [
+        0.38,
+        0.16,
+        0.68,
+        1
+      ],
+      "emissiveFactor": [
+        0.385,
+        0.176,
+        0.55
+      ],
+      "emissiveStrength": 0.6666,
+      "roughnessFactor": 0.2,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536093,
+            "contrast": 0.003117,
+            "chroma": 0.778473,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 73
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-74-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-74-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.174332,
+            "contrast": 0.005337,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 74
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-147-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-147-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.542879,
+            "contrast": 0.108752,
+            "chroma": 0.573082,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 147
+        }
+      ]
+    },
+    {
+      "index": 122,
+      "id": "mat:interaction:white-sequence-lens:wonryj",
+      "name": "white_sequence_lens",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.362669,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0.060802,
+        0.544582,
+        0.595571,
+        0.355801
+      ],
+      "baseColorFactor": [
+        0.86,
+        0.88,
+        0.8,
+        1
+      ],
+      "emissiveFactor": [
+        0.456,
+        0.456,
+        0.3936
+      ],
+      "emissiveStrength": 0.78336,
+      "roughnessFactor": 0.18,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-148-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-148-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536104,
+            "contrast": 0.003165,
+            "chroma": 0.778663,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 148
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-149-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-149-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.15399,
+            "contrast": 0.005411,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 149
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-150-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-150-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.637968,
+            "contrast": 0.283726,
+            "chroma": 0.137145,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 150
+        }
+      ]
+    },
+    {
+      "index": 123,
+      "id": "mat:interaction:muted-cyan-glass:1m7hty9",
+      "name": "muted_cyan_glass",
+      "category": "interaction",
+      "visualRole": "switch_active",
+      "semanticParams": [
+        18,
+        0.84,
+        0.348,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0.102488,
+        0.632714,
+        0.725362,
+        0.501004
+      ],
+      "baseColorFactor": [
+        0.12,
+        0.72,
+        0.84,
+        1
+      ],
+      "emissiveFactor": [
+        0.2375,
+        0.874,
+        0.95
+      ],
+      "emissiveStrength": 0.1,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-09-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-09-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536114,
+            "contrast": 0.006601,
+            "chroma": 0.779515,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 9
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-10-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-10-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.264132,
+            "contrast": 0.009391,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 10
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-11-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-11-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0,
+            "contrast": 0,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 11
+        }
+      ]
+    },
+    {
+      "index": 124,
+      "id": "mat:interaction:sequence-surf-matte:bc9f9m",
+      "name": "sequence_surf_matte",
+      "category": "interaction",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.56,
+        0.3,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.26,
+        0.86,
+        0.74,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.62,
+      "metallicFactor": 0.12,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_builder_machine_surface_atlas_image2",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-08-hp-builder-machine-surface-atlas-image2.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-08-hp-builder-machine-surface-atlas-image2.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.190858,
+            "contrast": 0.339553,
+            "chroma": 0.190068,
+            "detail": 0.26029
+          },
+          "generated": false,
+          "layer": 8
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-148-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-148-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536104,
+            "contrast": 0.003165,
+            "chroma": 0.778663,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 148
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-151-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-151-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.594487,
+            "contrast": 0.005567,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 151
+        }
+      ]
+    },
+    {
+      "index": 125,
+      "id": "mat:interaction:sequence-surf-metal:i7vh8q",
+      "name": "sequence_surf_metal",
+      "category": "interaction",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.74,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.26,
+        0.86,
+        0.74,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_builder_machine_surface_atlas_image2",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-08-hp-builder-machine-surface-atlas-image2.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-08-hp-builder-machine-surface-atlas-image2.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.190858,
+            "contrast": 0.339553,
+            "chroma": 0.190068,
+            "detail": 0.26029
+          },
+          "generated": false,
+          "layer": 8
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-19-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-19-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": null,
+          "generated": false,
+          "layer": 19
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-20-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-20-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": null,
+          "generated": false,
+          "layer": 20
+        }
+      ]
+    },
+    {
+      "index": 126,
+      "id": "mat:interaction:sequence-parts-flat:1tql5r0",
+      "name": "sequence_parts_flat",
+      "category": "interaction",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.55,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_builder_machine_parts_atlas_v2",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-07-hp-builder-machine-parts-atlas-v2.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-07-hp-builder-machine-parts-atlas-v2.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.144233,
+            "contrast": 0.269739,
+            "chroma": 0.182101,
+            "detail": 0.161637
+          },
+          "generated": false,
+          "layer": 7
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-152-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-152-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.5361,
+            "contrast": 0.008349,
+            "chroma": 0.780628,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 152
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-153-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-153-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.532029,
+            "contrast": 0.011174,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 153
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 7,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-07-hp-builder-machine-parts-atlas-v2.webp",
+      "name": "hp_builder_machine_parts_atlas_v2",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-07-hp-builder-machine-parts-atlas-v2.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.144233,
+        "contrast": 0.269739,
+        "chroma": 0.182101,
+        "detail": 0.161637
+      }
+    },
+    {
+      "layer": 8,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-08-hp-builder-machine-surface-atlas-image2.webp",
+      "name": "hp_builder_machine_surface_atlas_image2",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/basecolor-08-hp-builder-machine-surface-atlas-image2.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.190858,
+        "contrast": 0.339553,
+        "chroma": 0.190068,
+        "detail": 0.26029
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 1,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-01-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-01-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536075,
+        "contrast": 0.017213,
+        "chroma": 0.790762,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 9,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-09-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-09-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536114,
+        "contrast": 0.006601,
+        "chroma": 0.779515,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 10,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-10-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-10-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.264132,
+        "contrast": 0.009391,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 11,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-11-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-11-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 14,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-14-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-14-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.563132,
+        "contrast": 0.017671,
+        "chroma": 0.792367,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 17,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-17-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-17-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.55,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0
+      }
+    },
+    {
+      "layer": 18,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-18-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-18-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.55,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0
+      }
+    },
+    {
+      "layer": 19,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-19-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-19-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.55,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0
+      }
+    },
+    {
+      "layer": 20,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-20-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-20-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.55,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0
+      }
+    },
+    {
+      "layer": 37,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-37-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-37-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536078,
+        "contrast": 0.017126,
+        "chroma": 0.790736,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 45,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-45-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-45-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536102,
+        "contrast": 0.006578,
+        "chroma": 0.779484,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 47,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-47-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-47-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536101,
+        "contrast": 0.01123,
+        "chroma": 0.781724,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 62,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-62-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-62-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.464357,
+        "contrast": 0.017957,
+        "chroma": 0.636289,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 65,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-65-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-65-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536096,
+        "contrast": 0.007079,
+        "chroma": 0.779659,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 66,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-66-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-66-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.26449,
+        "contrast": 0.009579,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 67,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-67-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-67-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 69,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-69-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-69-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.346088,
+        "contrast": 0.009258,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 71,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-71-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-71-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.190648,
+        "contrast": 0.008712,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 72,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-72-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-72-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.145292,
+        "contrast": 0.063628,
+        "chroma": 0.19057,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 73,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-73-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536093,
+        "contrast": 0.003117,
+        "chroma": 0.778473,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 74,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-74-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-74-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.174332,
+        "contrast": 0.005337,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 75,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-75-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-75-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.44792,
+        "contrast": 0.086603,
+        "chroma": 0.554942,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 76,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-76-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-76-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 79,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-79-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-79-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.394341,
+        "contrast": 0.005519,
+        "chroma": 0.750315,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 80,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-80-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-80-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.803951,
+        "contrast": 0.017329,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 145,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-145-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-145-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.054652,
+        "contrast": 0.005392,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 146,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-146-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-146-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.696343,
+        "contrast": 0.294039,
+        "chroma": 0.109032,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 147,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-147-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-147-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.542879,
+        "contrast": 0.108752,
+        "chroma": 0.573082,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 148,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-148-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-148-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536104,
+        "contrast": 0.003165,
+        "chroma": 0.778663,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 149,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-149-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-149-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.15399,
+        "contrast": 0.005411,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 150,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-150-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/emissive-150-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.637968,
+        "contrast": 0.283726,
+        "chroma": 0.137145,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 151,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-151-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-151-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.594487,
+        "contrast": 0.005567,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 152,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-152-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/normal-152-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.5361,
+        "contrast": 0.008349,
+        "chroma": 0.780628,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 153,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-153-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/puzzle/puzzle_console_color_sequence/textures/metallicroughness-153-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.532029,
+        "contrast": 0.011174,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    }
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "hp.level06-10.gui-image2.v1",
+  "generator": "scripts/asset-build/generate-level06-10-gui-image2.py",
+  "textPolicy": "No baked gameplay text; runtime owns copy and puzzle answers.",
+  "atlasContract": {
+    "atlasSize": [
+      2048,
+      2048
+    ],
+    "regionFormat": "[x, y, w, h]",
+    "backgroundSize": [
+      1280,
+      720
+    ]
+  },
+  "kits": [
+    {
+      "kitId": "level06_frozen_archive",
+      "label": "Frozen Archive Terminal",
+      "role": "cryo-record puzzle terminal",
+      "level": "level06",
+      "special": "waveform",
+      "states": [
+        "locked",
+        "active",
+        "solved",
+        "error"
+      ],
+      "background": "src/assets/gui/level06/frozen_archive_background_image2.png",
+      "parts": "src/assets/gui/level06/frozen_archive_parts_image2.png",
+      "regions": "src/assets/gui/level06/frozen_archive_parts_image2.regions.json"
+    },
+    {
+      "kitId": "level07_transit_route_switch",
+      "label": "Transit Route Switch",
+      "role": "route-switch rail console",
+      "level": "level07",
+      "special": "route_map",
+      "states": [
+        "locked",
+        "active",
+        "solved",
+        "disabled"
+      ],
+      "background": "src/assets/gui/level07/transit_route_switch_background_image2.png",
+      "parts": "src/assets/gui/level07/transit_route_switch_parts_image2.png",
+      "regions": "src/assets/gui/level07/transit_route_switch_parts_image2.regions.json"
+    },
+    {
+      "kitId": "level08_identity_playback",
+      "label": "Identity Playback Terminal",
+      "role": "memory-theater choice terminal",
+      "level": "level08",
+      "special": "portrait",
+      "states": [
+        "locked",
+        "active",
+        "choice",
+        "solved"
+      ],
+      "background": "src/assets/gui/level08/identity_playback_background_image2.png",
+      "parts": "src/assets/gui/level08/identity_playback_parts_image2.png",
+      "regions": "src/assets/gui/level08/identity_playback_parts_image2.regions.json"
+    },
+    {
+      "kitId": "level09_lockdown_override",
+      "label": "Lockdown Override",
+      "role": "containment pressure console",
+      "level": "level09",
+      "special": "pressure",
+      "states": [
+        "locked",
+        "active",
+        "danger",
+        "solved"
+      ],
+      "background": "src/assets/gui/level09/lockdown_override_background_image2.png",
+      "parts": "src/assets/gui/level09/lockdown_override_parts_image2.png",
+      "regions": "src/assets/gui/level09/lockdown_override_parts_image2.regions.json"
+    },
+    {
+      "kitId": "level10_final_protocol",
+      "label": "Final Protocol Console",
+      "role": "core terminal final sync",
+      "level": "level10",
+      "special": "protocol_ring",
+      "states": [
+        "locked",
+        "active",
+        "choice",
+        "solved"
+      ],
+      "background": "src/assets/gui/level10/final_protocol_background_image2.png",
+      "parts": "src/assets/gui/level10/final_protocol_parts_image2.png",
+      "regions": "src/assets/gui/level10/final_protocol_parts_image2.regions.json"
+    }
+  ]
+}

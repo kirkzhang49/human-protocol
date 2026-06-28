@@ -1,0 +1,56 @@
+{
+  "atlasSize": [
+    1024,
+    1024
+  ],
+  "regions": {
+    "screen_back": [
+      0,
+      0,
+      768,
+      432
+    ],
+    "screen_gate_idle": [
+      0,
+      448,
+      220,
+      160
+    ],
+    "screen_gate_focus": [
+      232,
+      448,
+      220,
+      160
+    ],
+    "screen_gate_balanced": [
+      464,
+      448,
+      220,
+      160
+    ],
+    "screen_status_bar": [
+      0,
+      624,
+      520,
+      64
+    ],
+    "screen_warning_bar": [
+      536,
+      624,
+      320,
+      64
+    ],
+    "terminal_cyan_glass": [
+      0,
+      704,
+      220,
+      112
+    ],
+    "terminal_amber_glass": [
+      232,
+      704,
+      220,
+      112
+    ]
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "ClassificationResult",
+  "type": "object",
+  "required": ["arc", "arcConfidence", "roomRoles", "difficulty", "difficultyOverall", "pacing", "visualCompleteness", "puzzleStructure", "riskTags", "motifsHit"],
+  "properties": {
+    "arc": {
+      "enum": ["maintenance", "fake_home", "museum", "clinic", "reclamation", "cyber", "surveillance", "power", "counterfeit_home", "black_clinic", "smoke", "unknown"]
+    },
+    "arcConfidence": { "type": "number" },
+    "roomRoles": { "type": "object" },
+    "difficulty": {
+      "type": "object",
+      "required": ["exploration", "puzzle", "combat", "routeComplexity"]
+    },
+    "difficultyOverall": { "type": "number" },
+    "pacing": { "type": "array", "items": { "type": "string" } },
+    "visualCompleteness": { "type": "number" },
+    "puzzleStructure": {
+      "type": "object",
+      "required": ["count", "chainDepth", "kinds", "gatingPattern"],
+      "properties": {
+        "count": { "type": "integer" },
+        "chainDepth": { "type": "integer" },
+        "kinds": { "type": "array", "items": { "type": "string" } },
+        "gatingPattern": { "type": "array", "items": { "type": "string" } }
+      }
+    },
+    "riskTags": { "type": "array", "items": { "type": "string" } },
+    "motifsHit": { "type": "array", "items": { "type": "string" } }
+  }
+}

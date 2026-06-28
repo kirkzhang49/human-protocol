@@ -1,0 +1,24 @@
+{
+  "assetId": "route_switch_target_badges_ancient_image2_source_v1",
+  "generatedDate": "2026-06-21",
+  "tool": "built-in image_gen",
+  "model": "not-exposed-by-built-in-image-gen",
+  "toolCallId": "not-exposed-by-built-in-image-gen",
+  "generatedImagesDirectory": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd",
+  "originalGeneratedPath": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd/ig_0ac3be3dc979b332016a38c2d63b64819aa479b1b7d8af92d6.png",
+  "projectSourcePath": "src/assets/gui/route-switch/image2-sources/route_switch_target_badges_ancient_image2_source_v1.png",
+  "licenseLabel": "owned-generated-output",
+  "termsLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "sourceRole": "Image2 ancient target-badge source sheet for the route-switch overlay output choices",
+  "promptSummary": "A no-text 2x2 source sheet of four isolated ancient mechanical route target medallions: sealed vault door, archive/oracle terminal, archaic robot mask, and branching output gate. Flat black crop-friendly background, old brass, oxidized bronze, black iron, stone enamel, restrained amber light, no blue line-dot icon language.",
+  "derivativeOutputs": [
+    "src/assets/gui/route-switch/route_switch_icon_language_image2_v1.png",
+    "src/assets/gui/route-switch/route_switch_icon_language_image2_v1.regions.json"
+  ],
+  "derivativeScript": "scripts/asset-build/cut-route-switch-icon-language-image2.mjs",
+  "notes": [
+    "This source replaces the previous output-kind symbols whose blue line/dot language read too modern.",
+    "The four generated target medallions are cut into the existing icon-language atlas as icon_door, icon_terminal, icon_robot, and icon_gate.",
+    "No text, numbers, logos, or UI instructions are baked into the source or atlas."
+  ]
+}

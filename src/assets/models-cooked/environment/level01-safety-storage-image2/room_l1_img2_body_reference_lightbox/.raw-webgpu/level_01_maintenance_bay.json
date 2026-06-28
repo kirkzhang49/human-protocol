@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_01_maintenance_bay",
+  "modelKey": "room_l1_img2_body_reference_lightbox",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_body_reference_lightbox.glb",
+  "fileName": "room_l1_img2_body_reference_lightbox.glb",
+  "sourceAsset": {
+    "modelKey": "room_l1_img2_body_reference_lightbox",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_body_reference_lightbox.glb",
+    "file": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_body_reference_lightbox.glb",
+    "sizeMeters": [
+      1.175,
+      1.44,
+      0.158
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 1954088,
+      "meshes": 9,
+      "nodes": 10,
+      "skins": 0,
+      "primitives": 9,
+      "materials": 5,
+      "textures": 2,
+      "images": 1,
+      "accessors": 30,
+      "bufferViews": 31,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 1692
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level01-safety-storage-image2/room_l1_img2_body_reference_lightbox.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 702636,
+    "vertexCount": 5076,
+    "triangleCount": 1692,
+    "meshCount": 9,
+    "materialCount": 5,
+    "nodeCount": 10,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.5875,
+        0,
+        -0.079
+      ],
+      "center": [
+        0,
+        0.72,
+        0
+      ],
+      "size": [
+        1.175,
+        1.44,
+        0.158
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "abstract_body_reference_image2_panel",
+        "vertexOffset": 702636,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "bottom_cyan_structure_light",
+        "vertexOffset": 703200,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lightbox_dark_inner_gasket",
+        "vertexOffset": 703764,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "side_wall_clip_+06_04",
+        "vertexOffset": 704328,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "side_wall_clip_+06_10",
+        "vertexOffset": 704892,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "side_wall_clip_-06_04",
+        "vertexOffset": 705456,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "side_wall_clip_-06_10",
+        "vertexOffset": 706020,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "top_cyan_structure_light",
+        "vertexOffset": 706584,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "wall_spacer_back_plate",
+        "vertexOffset": 707148,
+        "vertexCount": 564,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_ys3x9p",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "maintenance_bay_floor",
+      "secondaryRoomId": null,
+      "position": [
+        8.616,
+        1.5,
+        4.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.616,
+          1.5,
+          4.5
+        ],
+        "halfSize": [
+          0.5875,
+          0.72,
+          0.079
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,96 @@
+{
+  "schema": "human-protocol/viewmodel-scripted-derived@1",
+  "assets": [
+    {
+      "asset": "iron_rod",
+      "strategy": "scripted-derived visual mesh: meshopt source decoded, simplified, imported into Blender only for sockets and handoff source.",
+      "input": "work/scripted-derived/viewmodel_iron_rod_reference_raw_for_blender.glb",
+      "file": "src/assets/models/viewmodel/prototypes/hp_viewmodel_iron_rod_scripted_derived.glb",
+      "sourceBlend": "src/assets/source_blend/viewmodel/hp_viewmodel_iron_rod_scripted_derived.blend",
+      "preOptimizationBytes": 5168468,
+      "bytes": 799128,
+      "meshObjects": 1,
+      "materials": [
+        "iron_rod_scripted_reference_texture_material"
+      ],
+      "verticesApprox": 48850,
+      "trianglesApprox": 77499,
+      "images": 3,
+      "textures": 3,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "boundsMin": [
+        -0.08329,
+        -0.49002,
+        -0.11088
+      ],
+      "boundsMax": [
+        0.08335,
+        0.49005,
+        0.11067
+      ],
+      "dimensions": [
+        0.16664,
+        0.98007,
+        0.22155
+      ],
+      "sockets": [
+        "iron_rod_right_hand_grip_socket",
+        "iron_rod_hit_tip_socket",
+        "iron_rod_hit_base_socket",
+        "iron_rod_trail_start_socket",
+        "iron_rod_trail_mid_socket",
+        "iron_rod_trail_end_socket",
+        "iron_rod_emissive_core_socket"
+      ]
+    },
+    {
+      "asset": "sidearm",
+      "strategy": "scripted-derived visual mesh: meshopt source decoded, simplified, imported into Blender only for sockets and handoff source.",
+      "input": "work/scripted-derived/viewmodel_sidearm_reference_raw_for_blender.glb",
+      "file": "src/assets/models/viewmodel/prototypes/hp_viewmodel_sidearm_scripted_derived.glb",
+      "sourceBlend": "src/assets/source_blend/viewmodel/hp_viewmodel_sidearm_scripted_derived.blend",
+      "preOptimizationBytes": 5384636,
+      "bytes": 933848,
+      "meshObjects": 1,
+      "materials": [
+        "sidearm_scripted_reference_texture_material"
+      ],
+      "verticesApprox": 56562,
+      "trianglesApprox": 76195,
+      "images": 3,
+      "textures": 3,
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "boundsMin": [
+        -0.12144,
+        -0.48941,
+        -0.32446
+      ],
+      "boundsMax": [
+        0.12164,
+        0.48907,
+        0.32285
+      ],
+      "dimensions": [
+        0.24307,
+        0.97849,
+        0.64731
+      ],
+      "sockets": [
+        "sidearm_muzzle_socket",
+        "sidearm_right_hand_grip_socket",
+        "sidearm_trigger_contact_socket",
+        "sidearm_grip_front_contact_socket",
+        "sidearm_grip_back_contact_socket",
+        "sidearm_heat_core_socket"
+      ]
+    }
+  ]
+}

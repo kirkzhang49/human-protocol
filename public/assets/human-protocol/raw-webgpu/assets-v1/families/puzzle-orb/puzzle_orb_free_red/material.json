@@ -1,0 +1,182 @@
+{
+  "file": "material.json",
+  "hash": "e982aaf80b126844",
+  "materials": [
+    {
+      "index": 2,
+      "id": "mat:procedural-free-orb:2:puzzle-orb-free-red-smoked-titanium-base",
+      "name": "puzzle_orb_free_red:smoked_titanium_base",
+      "category": "interaction",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.82,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.003677,
+        0.006049,
+        0.007499,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.72,
+      "metallicFactor": 0.38,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 3,
+      "id": "mat:procedural-free-orb:3:puzzle-orb-free-red-aged-brass-trim",
+      "name": "puzzle_orb_free_red:aged_brass_trim",
+      "category": "interaction",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.86,
+        0.42,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.467784,
+        0.234551,
+        0.039546,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0.58,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    },
+    {
+      "index": 4,
+      "id": "mat:procedural-free-orb:4:puzzle-orb-free-red-colored-glass-shell",
+      "name": "puzzle_orb_free_red:colored_glass_shell",
+      "category": "interaction",
+      "visualRole": "glass_shell",
+      "semanticParams": [
+        5,
+        0.78,
+        0.1976,
+        0.12
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.814847,
+        0.266356,
+        0.234551,
+        1
+      ],
+      "emissiveFactor": [
+        1,
+        0.104616,
+        0.072272
+      ],
+      "emissiveStrength": 0.22,
+      "roughnessFactor": 0.18,
+      "metallicFactor": 0.04,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 5,
+      "id": "mat:procedural-free-orb:5:puzzle-orb-free-red-sequence-core-red",
+      "name": "puzzle_orb_free_red:sequence_core_red",
+      "category": "interaction",
+      "visualRole": "danger_red",
+      "semanticParams": [
+        9,
+        0.82,
+        0.3256,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        0.104616,
+        0.072272,
+        1
+      ],
+      "emissiveFactor": [
+        1,
+        0.104616,
+        0.072272
+      ],
+      "emissiveStrength": 0.82,
+      "roughnessFactor": 0.22,
+      "metallicFactor": 0.08,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "procedural-free-puzzle-orb-v1"
+      },
+      "doubleSided": false,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

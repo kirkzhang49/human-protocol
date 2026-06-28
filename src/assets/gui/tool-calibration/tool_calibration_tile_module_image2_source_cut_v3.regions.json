@@ -1,0 +1,25 @@
+{
+  "atlasSize": [
+    1280,
+    900
+  ],
+  "sources": [
+    "src/assets/gui/tool-calibration/image2-sources/tool_calibration_complete_ui_image2_source_v3_no_hand.png",
+    "src/assets/gui/tool-calibration/image2-sources/tool_calibration_hardware_modules_image2_source_v1.png"
+  ],
+  "regions": {
+    "tile_board_source_cut": [
+      54,
+      52,
+      840,
+      810
+    ],
+    "cyan_glass_module_source_cut": [
+      944,
+      168,
+      240,
+      526
+    ]
+  },
+  "notes": "Source-backed cut sheet for richer cyan tubes, energy cores, edge-lit tiles, and black-gold modules. Runtime text/state remains live."
+}

@@ -1,0 +1,328 @@
+{
+  "schemaVersion": "hp.asset-math-report.v1",
+  "packId": "hp_level04_memory_clinic_furniture_v1",
+  "generatedBy": "generate-level04-memory-clinic-furniture-v1.py",
+  "objective": "L4 memory clinic furniture readability, collision and mobile footprint sanity",
+  "assets": [
+    {
+      "modelKey": "hp_l4_cineclinic_decon_gate",
+      "score": 0.911,
+      "sizeMeters": [
+        2.65,
+        2.62,
+        0.72
+      ],
+      "footprintArea": 1.908,
+      "partCount": 13,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_reception_counter",
+      "score": 0.904,
+      "sizeMeters": [
+        3.2,
+        1.28,
+        0.86
+      ],
+      "footprintArea": 2.752,
+      "partCount": 13,
+      "penalties": {
+        "navigation": 0.012,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_waiting_sofa_row",
+      "score": 0.881,
+      "sizeMeters": [
+        2.55,
+        0.88,
+        0.82
+      ],
+      "footprintArea": 2.091,
+      "partCount": 14,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_lime_ottoman",
+      "score": 0.856,
+      "sizeMeters": [
+        0.86,
+        0.48,
+        0.86
+      ],
+      "footprintArea": 0.74,
+      "partCount": 8,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_side_table_planter",
+      "score": 0.859,
+      "sizeMeters": [
+        0.86,
+        0.82,
+        0.72
+      ],
+      "footprintArea": 0.619,
+      "partCount": 10,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_triage_kiosk",
+      "score": 0.893,
+      "sizeMeters": [
+        0.78,
+        1.56,
+        0.58
+      ],
+      "footprintArea": 0.452,
+      "partCount": 8,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_med_cabinet",
+      "score": 0.901,
+      "sizeMeters": [
+        1.05,
+        1.94,
+        0.52
+      ],
+      "footprintArea": 0.546,
+      "partCount": 11,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_record_wall_cabinet",
+      "score": 0.919,
+      "sizeMeters": [
+        1.34,
+        1.36,
+        0.42
+      ],
+      "footprintArea": 0.563,
+      "partCount": 29,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_exam_table",
+      "score": 0.859,
+      "sizeMeters": [
+        2.28,
+        1.18,
+        0.92
+      ],
+      "footprintArea": 2.098,
+      "partCount": 12,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_memory_recliner",
+      "score": 0.907,
+      "sizeMeters": [
+        1.42,
+        1.48,
+        1.82
+      ],
+      "footprintArea": 2.584,
+      "partCount": 16,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_scan_arch",
+      "score": 0.903,
+      "sizeMeters": [
+        1.96,
+        2.05,
+        0.82
+      ],
+      "footprintArea": 1.607,
+      "partCount": 12,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_projection_pod",
+      "score": 0.896,
+      "sizeMeters": [
+        0.98,
+        1.42,
+        1.26
+      ],
+      "footprintArea": 1.235,
+      "partCount": 11,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_rescue_speaker_panel",
+      "score": 0.894,
+      "sizeMeters": [
+        1.24,
+        0.72,
+        0.12
+      ],
+      "footprintArea": 0.149,
+      "partCount": 11,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_cable_trolley",
+      "score": 0.897,
+      "sizeMeters": [
+        0.82,
+        1.36,
+        0.68
+      ],
+      "footprintArea": 0.558,
+      "partCount": 12,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_observation_desk",
+      "score": 0.899,
+      "sizeMeters": [
+        1.72,
+        1.34,
+        1.16
+      ],
+      "footprintArea": 1.995,
+      "partCount": 11,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_surgical_light",
+      "score": 0.898,
+      "sizeMeters": [
+        1.06,
+        1.22,
+        0.92
+      ],
+      "footprintArea": 0.975,
+      "partCount": 14,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_monitor_arm",
+      "score": 0.906,
+      "sizeMeters": [
+        2.18,
+        1.78,
+        0.72
+      ],
+      "footprintArea": 1.57,
+      "partCount": 13,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_privacy_screen",
+      "score": 0.901,
+      "sizeMeters": [
+        1.86,
+        1.92,
+        0.32
+      ],
+      "footprintArea": 0.595,
+      "partCount": 11,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_sedation_gate",
+      "score": 0.908,
+      "sizeMeters": [
+        1.92,
+        2.36,
+        0.72
+      ],
+      "footprintArea": 1.382,
+      "partCount": 13,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_theater_wall",
+      "score": 0.931,
+      "sizeMeters": [
+        5.05,
+        2.32,
+        0.42
+      ],
+      "footprintArea": 2.121,
+      "partCount": 14,
+      "penalties": {
+        "navigation": 0.0,
+        "oversized": false
+      },
+      "recommendation": "apply"
+    }
+  ]
+}

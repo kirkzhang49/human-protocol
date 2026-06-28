@@ -1,0 +1,372 @@
+{
+  "schemaVersion": "hp.asset.blueprint-handoff.v1",
+  "specId": "level03_hero_exhibits_webgpu_v1",
+  "createdAt": "2026-06-16",
+  "ownerLane": "level03-human-museum-hero-exhibits",
+  "acceptanceTarget": "Raw WebGPU + deep-bake first; Three.js preview is auxiliary only",
+  "userProblem": "Level 3 tool, sound, and body exhibits read too transparent/flat. Core exhibit content must become more opaque and material-rich; glass should be an outer shell only, not the main visible body.",
+  "nonGoals": [
+    "Do not touch runtime bug-fix files for skill 3, elevator semicircles, or router color in this asset pass.",
+    "Do not create a third unrelated modelKey family for the same three exhibits.",
+    "Do not paste a full UI poster over a 3D object face."
+  ],
+  "pipelineDiscovered": {
+    "coreRulebook": "docs/human-protocol-asset-agent-md.md",
+    "blueprintPipeline": "docs/human-protocol-blueprint-first-asset-pipeline.md",
+    "internalAssetFactory": "docs/human-protocol-internal-asset-factory-v1.md",
+    "existingOfficialLayout": "src/assets/manifests/generated/age/human_protocol_level03_museum_age_layout_v1.json",
+    "existingRuntimeManifest": "src/assets/manifests/runtime/human_protocol_level03_museum_assets_v2.json",
+    "existingTrialGenerator": "scripts/asset-build/generate-level03-exhibit-trial-assets.mjs",
+    "existingImage2GeneratorToReuseOrFork": "scripts/asset-build/blender-generate-level03-museum-assets.py",
+    "existingOfficialRegistry": "src/assets/registry/environment/level03.ts",
+    "existingRawCookManifest": "src/assets/manifests/generated/raw-webgpu/raw_cooked_glb_loader_manifest_level_03_human_museum.json",
+    "existingRawRenderPlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_03_human_museum.json",
+    "existingBuilderRuntimeCookPlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json"
+  },
+  "integrationPolicy": {
+    "canonicalOfficialKeys": [
+      "age_museum_display_case_tool",
+      "age_museum_voice_booth",
+      "age_museum_body_reference_case"
+    ],
+    "builderKeysToMapOrAliasAfterGeneration": [
+      "room_museum_last_human_tool_vitrine",
+      "room_museum_display_case_tool",
+      "room_museum_voice_booth",
+      "room_museum_voice_archive_case",
+      "room_museum_body_reference_case",
+      "room_museum_skeleton_vitrine"
+    ],
+    "recommendation": "Replace or regenerate the canonical age_museum_* GLBs in place for official Level 3, then make build/runtime pack resolve the same art family through aliases or catalog replacement. Do not let official and build use visually divergent exhibit families.",
+    "officialOutputDirectory": "src/assets/models-cooked/environment/level03",
+    "sourceBlendDirectory": "src/assets/source_blend/level03",
+    "textureDirectory": "src/assets/textures/environment/level03-hero-exhibits-webgpu-v1",
+    "builderPackManifestCandidate": "src/assets/manifests/builder/hp_level03_hero_exhibits_webgpu_v1.json"
+  },
+  "sharedImage2Atlas": {
+    "atlasPng": "src/assets/textures/environment/level03-hero-exhibits-webgpu-v1/level03_hero_exhibits_webgpu_v1_atlas.png",
+    "regionsJson": "src/assets/textures/environment/level03-hero-exhibits-webgpu-v1/level03_hero_exhibits_webgpu_v1_atlas.regions.json",
+    "preferredSize": [1024, 1024],
+    "requiredSourceParts": [
+      "smoked_glass_edge_glints",
+      "aged_brass_trim_scratches",
+      "black_stone_plinth_grain",
+      "dark_tool_metal_wear",
+      "black_rubber_grip_ridges",
+      "cyan_waveform_lens",
+      "warm_exhibit_underlight",
+      "human_body_bone_surface",
+      "museum_label_plate_no_live_text",
+      "dust_contact_shadow"
+    ],
+    "image2Rules": [
+      "Use cut parts, trim strips, glints, wear, grilles, and label plates; do not bake full puzzle/story text.",
+      "No single image2 decal should cover more than 35 percent of a primary face.",
+      "Live text, interaction prompts, and state labels remain runtime/config-owned."
+    ]
+  },
+  "rawWebgpuMaterialContract": {
+    "opaqueCoreRequired": true,
+    "outerGlassOnly": true,
+    "glassAlphaRange": [0.18, 0.34],
+    "innerCoreAlpha": 1.0,
+    "whiteFallbackIsFailure": true,
+    "materialRoles": {
+      "museum_black_stone": "structural_dark",
+      "museum_aged_brass": "route_gold",
+      "museum_smoked_outer_glass": "glass_shell",
+      "museum_exhibit_core_opaque": "neutral_surface",
+      "museum_label_plate": "screen_label",
+      "museum_cyan_emissive": "cyan_emissive",
+      "museum_warm_underlight": "exhibit_warm",
+      "museum_fault_red": "danger_red"
+    },
+    "cookProofRequired": [
+      "The canonical modelKey appears in raw_cooked_glb_loader_manifest_level_03_human_museum.json.",
+      "The canonical modelKey appears in render_plan_level_03_human_museum.json.",
+      "Any build/runtime alias appears in render_plan_builder_runtime_resources.json after pack compile.",
+      "Raw material pipeline shows glass_shell only for the outer glass slot; exhibit core slots are opaque."
+    ]
+  },
+  "assets": [
+    {
+      "assetId": "level03_tool_exhibit_vitrine",
+      "role": "Last Human tool exhibit: the player reads that human tools were archived as dangerous artifacts.",
+      "canonicalModelKey": "age_museum_display_case_tool",
+      "buildAliasKeys": [
+        "room_museum_last_human_tool_vitrine",
+        "room_museum_display_case_tool"
+      ],
+      "currentOfficialFile": "src/assets/models-cooked/environment/level03/age_museum_display_case_tool.glb",
+      "proposedGlbFile": "src/assets/models-cooked/environment/level03/age_museum_display_case_tool.glb",
+      "sourceBlend": "src/assets/source_blend/level03/age_museum_display_case_tool_v2.blend",
+      "scaleMeters": [2.36, 1.42, 0.82],
+      "silhouette": "Low horizontal brass-and-black vitrine with a heavy rod and sidearm clearly visible inside; reads as a tool reliquary from 6 meters.",
+      "readableFaces": [
+        {
+          "faceId": "front_label",
+          "normalLocal": [0, -1, 0],
+          "minUseDistanceMeters": 1.0,
+          "maxUseDistanceMeters": 4.8
+        },
+        {
+          "faceId": "top_tool_view",
+          "normalLocal": [0, 1, 0],
+          "minUseDistanceMeters": 1.2,
+          "maxUseDistanceMeters": 5.2
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": "museum_black_stone",
+          "role": "structural_dark",
+          "alpha": 1.0,
+          "textureRegions": ["black_stone_plinth_grain", "dust_contact_shadow"]
+        },
+        {
+          "slot": "museum_aged_brass",
+          "role": "route_gold",
+          "alpha": 1.0,
+          "textureRegions": ["aged_brass_trim_scratches"]
+        },
+        {
+          "slot": "museum_smoked_outer_glass",
+          "role": "glass_shell",
+          "alpha": 0.26,
+          "textureRegions": ["smoked_glass_edge_glints"],
+          "note": "Glass must not be the main shape; it wraps the opaque tool core."
+        },
+        {
+          "slot": "museum_tool_metal_opaque",
+          "role": "neutral_surface",
+          "alpha": 1.0,
+          "textureRegions": ["dark_tool_metal_wear"]
+        },
+        {
+          "slot": "museum_tool_rubber_opaque",
+          "role": "neutral_surface",
+          "alpha": 1.0,
+          "textureRegions": ["black_rubber_grip_ridges"]
+        },
+        {
+          "slot": "museum_warm_underlight",
+          "role": "exhibit_warm",
+          "alpha": 1.0,
+          "textureRegions": ["warm_exhibit_underlight"]
+        },
+        {
+          "slot": "museum_label_plate",
+          "role": "screen_label",
+          "alpha": 1.0,
+          "textureRegions": ["museum_label_plate_no_live_text"]
+        }
+      ],
+      "geometryRequirements": [
+        "Rod and sidearm are separate opaque meshes, not painted silhouettes.",
+        "Tool contact grooves are 2-4 mm raised/recessed geometry so they survive lower texture resolution.",
+        "At least four brass corner posts and a raised front label plate establish museum quality.",
+        "No large white or flat cyan panels."
+      ],
+      "collisionPlacement": {
+        "solid": true,
+        "collisionProxy": "box",
+        "pivot": "bottom-center",
+        "supportPolicy": "floor-grounded",
+        "maxBottomGapMeters": 0.02,
+        "interactionReachMeters": 2.25,
+        "criticalPathClearanceMeters": 1.35
+      },
+      "webgpuRisk": "Current official asset can read as transparent/flat because the exhibit identity is dominated by glass and generic material slots. The rebuild must make the tools opaque and give Raw WebGPU distinct material roles."
+    },
+    {
+      "assetId": "level03_sound_exhibit_booth",
+      "role": "Human voice/sound exhibit: a preserved listening booth that makes voice feel physical and valuable.",
+      "canonicalModelKey": "age_museum_voice_booth",
+      "buildAliasKeys": [
+        "room_museum_voice_booth",
+        "room_museum_voice_archive_case"
+      ],
+      "currentOfficialFile": "src/assets/models-cooked/environment/level03/age_museum_voice_booth.glb",
+      "proposedGlbFile": "src/assets/models-cooked/environment/level03/age_museum_voice_booth.glb",
+      "sourceBlend": "src/assets/source_blend/level03/age_museum_voice_booth_v2.blend",
+      "scaleMeters": [1.55, 1.92, 0.72],
+      "silhouette": "Tall arched archive booth with opaque acoustic back, brass frame, horn or capsule module, and a cyan waveform lens; reads as sound/voice from 5 meters.",
+      "readableFaces": [
+        {
+          "faceId": "voice_label",
+          "normalLocal": [0, -1, 0],
+          "minUseDistanceMeters": 1.0,
+          "maxUseDistanceMeters": 4.5
+        },
+        {
+          "faceId": "waveform_lens",
+          "normalLocal": [0, -1, 0],
+          "minUseDistanceMeters": 1.0,
+          "maxUseDistanceMeters": 5.0
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": "museum_black_stone",
+          "role": "structural_dark",
+          "alpha": 1.0,
+          "textureRegions": ["black_stone_plinth_grain"]
+        },
+        {
+          "slot": "museum_aged_brass",
+          "role": "route_gold",
+          "alpha": 1.0,
+          "textureRegions": ["aged_brass_trim_scratches"]
+        },
+        {
+          "slot": "museum_smoked_outer_glass",
+          "role": "glass_shell",
+          "alpha": 0.22,
+          "textureRegions": ["smoked_glass_edge_glints"]
+        },
+        {
+          "slot": "museum_voice_waveform_opaque_lens",
+          "role": "cyan_emissive",
+          "alpha": 1.0,
+          "textureRegions": ["cyan_waveform_lens"],
+          "note": "The waveform must be an opaque/emissive inlay behind glass, not a translucent full-face pane."
+        },
+        {
+          "slot": "museum_warm_underlight",
+          "role": "exhibit_warm",
+          "alpha": 1.0,
+          "textureRegions": ["warm_exhibit_underlight"]
+        },
+        {
+          "slot": "museum_label_plate",
+          "role": "screen_label",
+          "alpha": 1.0,
+          "textureRegions": ["museum_label_plate_no_live_text"]
+        }
+      ],
+      "geometryRequirements": [
+        "Use an opaque acoustic back slab, horn/capsule module, waveform bars, and reel/cable details.",
+        "Waveform bars must be separate raised strips or inlaid lens geometry.",
+        "Glass front is thin and partial; it must not wash out the booth.",
+        "Keep cyan restrained and local to the waveform/status lens."
+      ],
+      "collisionPlacement": {
+        "solid": true,
+        "collisionProxy": "box",
+        "pivot": "bottom-center",
+        "supportPolicy": "floor-grounded",
+        "maxBottomGapMeters": 0.02,
+        "interactionReachMeters": 2.25,
+        "criticalPathClearanceMeters": 1.35
+      },
+      "webgpuRisk": "If the waveform is only transparent glass/emission, Raw WebGPU lighting can turn it into a pale slab. It needs opaque inlays plus explicit cyan_emissive role."
+    },
+    {
+      "assetId": "level03_body_exhibit_case",
+      "role": "Human body exhibit: the museum treats the human body as archived evidence, with readable anatomy that is not hidden by glass.",
+      "canonicalModelKey": "age_museum_body_reference_case",
+      "buildAliasKeys": [
+        "room_museum_body_reference_case",
+        "room_museum_skeleton_vitrine"
+      ],
+      "currentOfficialFile": "src/assets/models-cooked/environment/level03/age_museum_body_reference_case.glb",
+      "proposedGlbFile": "src/assets/models-cooked/environment/level03/age_museum_body_reference_case.glb",
+      "sourceBlend": "src/assets/source_blend/level03/age_museum_body_reference_case_v2.blend",
+      "scaleMeters": [2.35, 2.18, 0.78],
+      "silhouette": "Tall museum body vitrine with an opaque bone/body reference figure, brass frame, measuring rails, warm heart marker, and only a thin outer glass cover.",
+      "readableFaces": [
+        {
+          "faceId": "body_label",
+          "normalLocal": [0, -1, 0],
+          "minUseDistanceMeters": 1.0,
+          "maxUseDistanceMeters": 4.8
+        },
+        {
+          "faceId": "body_core",
+          "normalLocal": [0, -1, 0],
+          "minUseDistanceMeters": 1.2,
+          "maxUseDistanceMeters": 5.6
+        }
+      ],
+      "materialSlots": [
+        {
+          "slot": "museum_black_stone",
+          "role": "structural_dark",
+          "alpha": 1.0,
+          "textureRegions": ["black_stone_plinth_grain"]
+        },
+        {
+          "slot": "museum_aged_brass",
+          "role": "route_gold",
+          "alpha": 1.0,
+          "textureRegions": ["aged_brass_trim_scratches"]
+        },
+        {
+          "slot": "museum_smoked_outer_glass",
+          "role": "glass_shell",
+          "alpha": 0.2,
+          "textureRegions": ["smoked_glass_edge_glints"]
+        },
+        {
+          "slot": "museum_body_bone_opaque",
+          "role": "neutral_surface",
+          "alpha": 1.0,
+          "textureRegions": ["human_body_bone_surface"],
+          "note": "The anatomy/core mesh must be opaque and readable before glass is considered."
+        },
+        {
+          "slot": "museum_cyan_measure_lines",
+          "role": "cyan_emissive",
+          "alpha": 1.0,
+          "textureRegions": ["cyan_waveform_lens"]
+        },
+        {
+          "slot": "museum_warm_heart_marker",
+          "role": "exhibit_warm",
+          "alpha": 1.0,
+          "textureRegions": ["warm_exhibit_underlight"]
+        },
+        {
+          "slot": "museum_label_plate",
+          "role": "screen_label",
+          "alpha": 1.0,
+          "textureRegions": ["museum_label_plate_no_live_text"]
+        }
+      ],
+      "geometryRequirements": [
+        "Body/skeleton must be actual opaque geometry: head, spine, ribs, pelvis, arms, legs, and a small heart marker.",
+        "Measuring rails and catalog ticks should be raised geometry or emissive strips.",
+        "Back panel must be dark/opaque so the body reads in low light.",
+        "Outer glass should be partial and thin; do not put the body drawing on transparent glass as the main art."
+      ],
+      "collisionPlacement": {
+        "solid": true,
+        "collisionProxy": "box",
+        "pivot": "bottom-center",
+        "supportPolicy": "floor-grounded",
+        "maxBottomGapMeters": 0.02,
+        "interactionReachMeters": 2.25,
+        "criticalPathClearanceMeters": 1.35
+      },
+      "webgpuRisk": "The old body pass uses translucent body/glass roles heavily. The rebuild must split opaque anatomy from transparent cover so Raw WebGPU cannot flatten it into a pale panel."
+    }
+  ],
+  "nextGenerationPlan": {
+    "safeFirstStep": "Fork or extend scripts/asset-build/blender-generate-level03-museum-assets.py into scripts/asset-build/blender-generate-level03-hero-exhibits-v2.py so it reads this spec, writes three canonical age_museum_* GLBs, writes one shared atlas, and emits hp_level03_hero_exhibits_webgpu_v1.json.",
+    "preferredCommand": "BLENDER=/Applications/Blender.app/Contents/MacOS/Blender $BLENDER --background --python scripts/asset-build/blender-generate-level03-hero-exhibits-v2.py -- --spec src/assets/specs/level03/level03_hero_exhibits_webgpu_v1.asset-spec.json",
+    "afterGenerationCommands": [
+      "node scripts/asset-build/build-raw-webgpu-cooked-loader-manifest.mjs",
+      "node scripts/asset-build/build-raw-webgpu-material-pipeline.mjs",
+      "node scripts/asset-build/rebuild-raw-webgpu-levels.mjs",
+      "npm run qa:builder:wgpu-assets",
+      "npm run assets:environment:validate",
+      "npm run build"
+    ],
+    "manualQaViews": [
+      "Level 3 official Raw WebGPU: tool exhibit at use distance",
+      "Level 3 official Raw WebGPU: voice exhibit at use distance",
+      "Level 3 official Raw WebGPU: body exhibit at use distance",
+      "Build deep-bake runtime Level 3: same three exhibit families, no white fallback and no over-transparent core"
+    ]
+  }
+}

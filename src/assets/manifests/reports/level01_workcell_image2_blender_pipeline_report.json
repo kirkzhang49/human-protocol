@@ -1,0 +1,70 @@
+{
+  "schemaVersion": "hp.blender.pipelineReport.v1",
+  "assetFamily": "hp_level01_workcell_image2_v1",
+  "generatedAt": "2026-06-20",
+  "sourceBlend": "src/assets/source_blend/level01-workcell-image2/human_protocol_level01_workcell_image2_lane_a.blend",
+  "atlas": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.png",
+  "regions": "src/assets/textures/environment/level01-workcell-image2/hp_level01_workcell_image2_atlas.regions.json",
+  "outputs": [
+    {
+      "modelKey": "room_l1_img2_mobile_repair_cart",
+      "glb": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_mobile_repair_cart.glb",
+      "sizeMeters": [
+        1.12,
+        0.98,
+        0.72
+      ],
+      "determinism": "scripted Blender geometry with fixed primitive dimensions, bevel modifiers, and weighted normals",
+      "pivot": "root empty at floor center; geometry grounded at z=0"
+    },
+    {
+      "modelKey": "room_l1_img2_hydraulic_lift_table",
+      "glb": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_hydraulic_lift_table.glb",
+      "sizeMeters": [
+        2.25,
+        0.86,
+        1.02
+      ],
+      "determinism": "scripted Blender geometry with fixed primitive dimensions, bevel modifiers, and weighted normals",
+      "pivot": "root empty at floor center; geometry grounded at z=0"
+    },
+    {
+      "modelKey": "room_l1_img2_wall_tool_board",
+      "glb": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_wall_tool_board.glb",
+      "sizeMeters": [
+        1.62,
+        1.02,
+        0.12
+      ],
+      "determinism": "scripted Blender geometry with fixed primitive dimensions, bevel modifiers, and weighted normals",
+      "pivot": "root empty at floor center; geometry grounded at z=0"
+    },
+    {
+      "modelKey": "room_l1_img2_prosthetic_parts_cabinet",
+      "glb": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_prosthetic_parts_cabinet.glb",
+      "sizeMeters": [
+        1.36,
+        1.62,
+        0.58
+      ],
+      "determinism": "scripted Blender geometry with fixed primitive dimensions, bevel modifiers, and weighted normals",
+      "pivot": "root empty at floor center; geometry grounded at z=0"
+    },
+    {
+      "modelKey": "room_l1_img2_sterile_wash_basin",
+      "glb": "src/assets/models-cooked/environment/level01-workcell-image2/room_l1_img2_sterile_wash_basin.glb",
+      "sizeMeters": [
+        1.45,
+        1.02,
+        0.62
+      ],
+      "determinism": "scripted Blender geometry with fixed primitive dimensions, bevel modifiers, and weighted normals",
+      "pivot": "root empty at floor center; geometry grounded at z=0"
+    }
+  ],
+  "qaNotes": [
+    "No prompt-to-3D output is used as final model geometry.",
+    "Large surfaces follow the Image2 board material roles: dark metal, off-white enamel, hazard striping, restrained cyan glass, steel/rubber.",
+    "All child objects are named by asset function for GLB inspection and Raw WebGPU sidecar extraction."
+  ]
+}

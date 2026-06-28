@@ -1,0 +1,24 @@
+{
+  "id": "hp_gui_elevator_dialogue_avatars_image2_v1",
+  "type": "image2-gui-asset-report",
+  "date": "2026-06-28",
+  "usage": "Campaign elevator transition dialogue speaker avatars.",
+  "assets": [
+    {
+      "speaker": "self",
+      "projectPath": "src/assets/gui/hp-gui-elevator-avatar-self-image2-v1.png",
+      "generatedPath": "/Users/zhengkaizhang/.codex/generated_images/019f0e8f-6858-7ae1-b8c6-fbeaca3fe669/ig_068007b060c6b394016a413d5aefac819ab33ae7fcc6c34019.png",
+      "promptSummary": "Black faceless human-shaped sci-fi UI portrait placeholder with cyan rim light and amber accents."
+    },
+    {
+      "speaker": "echo",
+      "projectPath": "src/assets/gui/hp-gui-elevator-avatar-echo-image2-v1.png",
+      "generatedPath": "/Users/zhengkaizhang/.codex/generated_images/019f0e8f-6858-7ae1-b8c6-fbeaca3fe669/ig_068007b060c6b394016a413d93d898819ab2fda63996c1a080.png",
+      "promptSummary": "Abstract internal machine-voice sci-fi UI portrait placeholder with a luminous question-mark circuit core."
+    }
+  ],
+  "postProcessing": {
+    "tool": "sips",
+    "operation": "Downscaled source generations to 512px square PNG project assets."
+  }
+}

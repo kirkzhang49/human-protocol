@@ -1,0 +1,61 @@
+{
+  "schema": "human-protocol/route-switch-router-console-image2-blender-report@1",
+  "generatedBy": "scripts/asset-build/generate-builder-puzzle-machine-glbs.py -- builder_route_switch_console",
+  "generationDate": "2026-06-21",
+  "blenderVersion": "5.1.2",
+  "modelKey": "builder_route_switch_console",
+  "sourceBlend": "src/assets/source_blend/builder-puzzle-machines/hp_builder_route_switch_console_image2_v2.blend",
+  "cookedGlb": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_builder_route_switch_console.glb",
+  "textureAtlas": "src/assets/textures/environment/builder-puzzle-machines/hp_route_switch_console_image2_atlas_v1.png",
+  "textureRegions": "src/assets/textures/environment/builder-puzzle-machines/hp_route_switch_console_image2_atlas_v1.regions.json",
+  "image2Source": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/route_switch_router_console_image2_source_v1.png",
+  "preview": ".tmp/renders/machines/close-route_switch.png",
+  "playAssertions": {
+    "playerReads": "A low route-control console with a shared four-slot output rack, four physical selector modules, top rotary dial, and amber authorization key lamp.",
+    "playerAction": "Interact with the 3D console to open the 2D Image2 route-switch overlay, then choose an output.",
+    "worldResult": "Runtime route-switch state opens or reveals the configured door, puzzle, robot room, or output target.",
+    "runtimeMustNotBake": "selected output, target labels, localization, current authorization state, and reveal timing"
+  },
+  "glbInspection": {
+    "nodes": 82,
+    "meshes": 82,
+    "materials": 13,
+    "images": [
+      "hp_route_switch_console_image2_atlas_v1",
+      "hp_builder_machine_surface_atlas_image2",
+      "hp_builder_machine_parts_atlas_v2"
+    ],
+    "texturedMaterials": [
+      "route_switch_image2_metal",
+      "route_surf_matte",
+      "route_surf_metal",
+      "route_switch_image2_lit",
+      "route_parts_flat"
+    ],
+    "routeSpecificMaterials": [
+      "route_console_dead_black_feet",
+      "route_console_blackened_steel_trim",
+      "route_console_oiled_iron_body",
+      "route_console_aged_bronze_edges",
+      "route_switch_image2_metal",
+      "route_console_smoked_glass",
+      "route_switch_image2_lit",
+      "route_console_cyan_glass",
+      "route_console_amber_key_lamp"
+    ],
+    "emissiveMaterials": [
+      "route_console_smoked_glass",
+      "route_switch_image2_lit",
+      "route_console_cyan_glass",
+      "route_console_amber_key_lamp"
+    ],
+    "triangles": 11942,
+    "vertices": 13617
+  },
+  "integrationDecision": "Keep the canonical `builder_route_switch_console` modelKey and replace the cooked GLB art behind it, so official runtime, builder preview, and Raw WebGPU resource paths continue to share the same semantic key.",
+  "runtimeStateBoundary": {
+    "routeOutputMeaning": "2D overlay/config owned; the GLB uses empty badge bezels.",
+    "selectedState": "runtime/UI owned; the GLB stays neutral.",
+    "authorization": "GameWorld/key ownership; the GLB bakes only a neutral amber key lens."
+  }
+}

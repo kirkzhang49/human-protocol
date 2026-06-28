@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "hp.gateBalance.image2Layout.v2",
+  "canvas": [
+    1792,
+    1024
+  ],
+  "sourceImage": "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_image2_source_v2.png",
+  "background": "src/assets/gui/gate-balance/gate_balance_overlay_background_image2_v2.png",
+  "parts": "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v2.png",
+  "regionsFile": "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v2.regions.json",
+  "runtimeMustNotBake": [
+    "localized title and instructions",
+    "gate labels",
+    "gate numeric positions",
+    "gauge values and target deltas",
+    "timer",
+    "success/failure state",
+    "button text and accessibility labels"
+  ],
+  "regions": {
+    "titleBlock": [
+      140,
+      78,
+      460,
+      92
+    ],
+    "closeButton": [
+      1474,
+      82,
+      156,
+      78
+    ],
+    "guidance": [
+      140,
+      180,
+      620,
+      30
+    ],
+    "syncLabel": [
+      650,
+      118,
+      105,
+      26
+    ],
+    "syncBar": [
+      650,
+      151,
+      782,
+      42
+    ],
+    "syncCount": [
+      1438,
+      149,
+      92,
+      42
+    ],
+    "stage": [
+      118,
+      198,
+      1556,
+      500
+    ],
+    "gateLeft": [
+      240,
+      218,
+      390,
+      340
+    ],
+    "gateMid": [
+      700,
+      218,
+      390,
+      340
+    ],
+    "gateRight": [
+      1160,
+      218,
+      390,
+      340
+    ],
+    "stageCaption": [
+      500,
+      548,
+      790,
+      32
+    ],
+    "gaugeSeal": [
+      202,
+      578,
+      420,
+      132
+    ],
+    "gaugeTrack": [
+      686,
+      578,
+      420,
+      132
+    ],
+    "gaugeTemp": [
+      1168,
+      578,
+      420,
+      132
+    ],
+    "controlLeft": [
+      158,
+      735,
+      480,
+      112
+    ],
+    "controlMid": [
+      646,
+      735,
+      480,
+      112
+    ],
+    "controlRight": [
+      1134,
+      735,
+      480,
+      112
+    ],
+    "controlLeftMinus": [
+      182,
+      748,
+      74,
+      74
+    ],
+    "controlLeftLabel": [
+      284,
+      742,
+      190,
+      22
+    ],
+    "controlLeftValue": [
+      284,
+      762,
+      190,
+      58
+    ],
+    "controlLeftPlus": [
+      492,
+      748,
+      74,
+      74
+    ],
+    "controlMidMinus": [
+      670,
+      748,
+      74,
+      74
+    ],
+    "controlMidLabel": [
+      772,
+      742,
+      190,
+      22
+    ],
+    "controlMidValue": [
+      772,
+      762,
+      190,
+      58
+    ],
+    "controlMidPlus": [
+      980,
+      748,
+      74,
+      74
+    ],
+    "controlRightMinus": [
+      1158,
+      748,
+      74,
+      74
+    ],
+    "controlRightLabel": [
+      1260,
+      742,
+      190,
+      22
+    ],
+    "controlRightValue": [
+      1260,
+      762,
+      190,
+      58
+    ],
+    "controlRightPlus": [
+      1468,
+      748,
+      74,
+      74
+    ],
+    "statusText": [
+      190,
+      872,
+      520,
+      38
+    ],
+    "resetButton": [
+      820,
+      856,
+      188,
+      70
+    ],
+    "lockButton": [
+      1192,
+      856,
+      420,
+      70
+    ],
+    "timer": [
+      1542,
+      172,
+      90,
+      34
+    ],
+    "error": [
+      650,
+      196,
+      680,
+      30
+    ]
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "atlas": "hp_level05_furniture_image2_atlas.png",
+  "atlasSize": [
+    1024,
+    1024
+  ],
+  "format": "[x, y, w, h] in pixels, top-left origin",
+  "regions": {
+    "graphite_powdercoat": [
+      8,
+      8,
+      320,
+      320
+    ],
+    "black_recess_plate": [
+      344,
+      8,
+      320,
+      320
+    ],
+    "amber_archive_glass": [
+      680,
+      8,
+      320,
+      320
+    ],
+    "aged_brass_rail": [
+      8,
+      344,
+      640,
+      80
+    ],
+    "copper_bus_bar": [
+      8,
+      440,
+      640,
+      60
+    ],
+    "cyan_identity_scan_strip": [
+      664,
+      344,
+      240,
+      60
+    ],
+    "drawer_front": [
+      8,
+      516,
+      320,
+      200
+    ],
+    "edge_wear": [
+      344,
+      516,
+      256,
+      80
+    ],
+    "white_identity_ceramic_plate": [
+      616,
+      424,
+      200,
+      200
+    ],
+    "rubber_cable_socket": [
+      344,
+      612,
+      160,
+      160
+    ],
+    "circular_core_lens": [
+      520,
+      624,
+      200,
+      200
+    ]
+  }
+}

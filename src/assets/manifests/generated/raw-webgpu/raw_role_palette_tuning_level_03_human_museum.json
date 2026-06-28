@@ -1,0 +1,143 @@
+{
+  "schemaVersion": "hp.raw-webgpu.role-palette.v1",
+  "algorithm": "cpp-final-frame-role-palette-solver-v3",
+  "source": "scripts/optimizer/raw-webgpu-role-palette-solver.cpp",
+  "kind": "tuning",
+  "candidatesEvaluated": 10000000,
+  "score": 79.057764,
+  "currentScore": 64.593814,
+  "improvement": 14.463951,
+  "penalties": {
+    "cyanWash": 0.197775,
+    "glass": 0.000000,
+    "accent": 0.000000
+  },
+  "roles": {
+    "ceiling_surface": {
+      "targetColor": [0.158615, 0.209725, 0.220037],
+      "mix": 0.894695,
+      "meanOutputColor": [0.268676, 0.335761, 0.342000],
+      "finalFrameColor": [0.446632, 0.534861, 0.548639],
+      "score": 0.820642
+    },
+    "cyan_emissive": {
+      "targetColor": [0.060802, 0.544582, 0.595571],
+      "mix": 0.355801,
+      "meanOutputColor": [0.299410, 0.718831, 0.764672],
+      "finalFrameColor": [0.665186, 0.779929, 0.828915],
+      "score": 1.000000
+    },
+    "danger_red": {
+      "targetColor": [0.746228, 0.112185, 0.068858],
+      "mix": 0.699423,
+      "meanOutputColor": [1.200000, 0.225105, 0.106914],
+      "finalFrameColor": [0.910107, 0.495100, 0.203377],
+      "score": 0.933521
+    },
+    "door_access_cyan": {
+      "targetColor": [0.105419, 0.563870, 0.696934],
+      "mix": 0.529683,
+      "meanOutputColor": [0.104453, 0.579923, 0.727653],
+      "finalFrameColor": [0.472164, 0.730000, 0.804833],
+      "score": 1.000000
+    },
+    "door_locked_red": {
+      "targetColor": [0.757298, 0.094526, 0.074315],
+      "mix": 0.692826,
+      "meanOutputColor": [0.895982, 0.122634, 0.087178],
+      "finalFrameColor": [0.894162, 0.285669, 0.081129],
+      "score": 0.915826
+    },
+    "exhibit_warm": {
+      "targetColor": [0.725769, 0.519167, 0.287673],
+      "mix": 0.714073,
+      "meanOutputColor": [0.698428, 0.589665, 0.418605],
+      "finalFrameColor": [0.779619, 0.743288, 0.649094],
+      "score": 0.882133
+    },
+    "floor_surface": {
+      "targetColor": [0.291292, 0.328093, 0.270228],
+      "mix": 0.830740,
+      "meanOutputColor": [0.472784, 0.527275, 0.462098],
+      "finalFrameColor": [0.646013, 0.683727, 0.650871],
+      "score": 0.644270
+    },
+    "glass_shell": {
+      "targetColor": [0.025767, 0.035967, 0.043186],
+      "mix": 0.936420,
+      "meanOutputColor": [0.135056, 0.198124, 0.234945],
+      "finalFrameColor": [0.208511, 0.369426, 0.439662],
+      "score": 0.960817
+    },
+    "neutral_surface": {
+      "targetColor": [0.379483, 0.375365, 0.324261],
+      "mix": 0.758736,
+      "meanOutputColor": [0.550369, 0.554103, 0.490594],
+      "finalFrameColor": [0.715370, 0.721684, 0.695910],
+      "score": 0.709979
+    },
+    "pickup_energy": {
+      "targetColor": [0.933457, 0.528008, 0.141901],
+      "mix": 0.805827,
+      "meanOutputColor": [1.048757, 0.603781, 0.157095],
+      "finalFrameColor": [0.870683, 0.771174, 0.266751],
+      "score": 1.000000
+    },
+    "pickup_health": {
+      "targetColor": [0.885173, 0.820319, 0.667964],
+      "mix": 0.628035,
+      "meanOutputColor": [0.650601, 0.438454, 0.370413],
+      "finalFrameColor": [0.783264, 0.680806, 0.633076],
+      "score": 0.898815
+    },
+    "pickup_key": {
+      "targetColor": [0.935071, 0.674785, 0.149650],
+      "mix": 0.788404,
+      "meanOutputColor": [1.015520, 0.736724, 0.166749],
+      "finalFrameColor": [0.859756, 0.808453, 0.278769],
+      "score": 0.999993
+    },
+    "robot_body": {
+      "targetColor": [0.610510, 0.605309, 0.529672],
+      "mix": 0.117358,
+      "meanOutputColor": [1.001232, 1.000561, 0.990813],
+      "finalFrameColor": [0.837312, 0.823453, 0.846131],
+      "score": 0.639635
+    },
+    "route_gold": {
+      "targetColor": [0.900546, 0.668353, 0.183206],
+      "mix": 0.843625,
+      "meanOutputColor": [0.779788, 0.600030, 0.199168],
+      "finalFrameColor": [0.823246, 0.772358, 0.370984],
+      "score": 1.000000
+    },
+    "screen_label": {
+      "targetColor": [0.134643, 0.581737, 0.700120],
+      "mix": 0.432416,
+      "meanOutputColor": [0.172884, 0.366733, 0.400452],
+      "finalFrameColor": [0.446577, 0.637893, 0.688816],
+      "score": 1.000000
+    },
+    "structural_dark": {
+      "targetColor": [0.043367, 0.042572, 0.048587],
+      "mix": 0.639259,
+      "meanOutputColor": [0.184256, 0.198250, 0.203797],
+      "finalFrameColor": [0.283323, 0.314835, 0.330883],
+      "score": 1.000000
+    },
+    "switch_active": {
+      "targetColor": [0.102488, 0.632714, 0.725362],
+      "mix": 0.501004,
+      "meanOutputColor": [0.132618, 0.720570, 0.787211],
+      "finalFrameColor": [0.499207, 0.770770, 0.824190],
+      "score": 1.000000
+    },
+    "switch_inactive": {
+      "targetColor": [0.777931, 0.122099, 0.083334],
+      "mix": 0.643719,
+      "meanOutputColor": [0.997445, 0.165813, 0.110589],
+      "finalFrameColor": [0.901604, 0.402690, 0.209725],
+      "score": 0.999131
+    }
+  }
+}

@@ -1,0 +1,260 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar-index.v1",
+  "levelId": "level_06_cyberpunk_foyer",
+  "generatedBy": "tools/raw-webgpu-compiler/compile-raw-webgpu-render-plan.mjs",
+  "sidecarCount": 28,
+  "sidecars": [
+    {
+      "modelKey": "door_industrial_access",
+      "category": "door",
+      "file": "src/assets/models-cooked/environment/doors/hp_door_industrial_access.glb",
+      "fileName": "hp_door_industrial_access.glb",
+      "sidecar": "src/assets/models-cooked/environment/doors/hp_door_industrial_access/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "door_service_elevator_inner_cyan",
+      "category": "door",
+      "file": "src/assets/models-cooked/environment/level01/hp_door_service_elevator_inner_cyan.glb",
+      "fileName": "hp_door_service_elevator_inner_cyan.glb",
+      "sidecar": "src/assets/models-cooked/environment/level01/hp_door_service_elevator_inner_cyan/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_clamp_repair_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_clamp_repair_horror.glb",
+      "fileName": "hp_enemy_clamp_repair_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_clamp_repair_horror/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": "hp_enemy_clamp_repair_horror",
+      "ruleFileName": "hp_enemy_clamp_repair_horror.glb"
+    },
+    {
+      "modelKey": "hp_enemy_custodian_foreman_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_custodian_foreman_horror.glb",
+      "fileName": "hp_enemy_custodian_foreman_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_custodian_foreman_horror/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_reclamation_mother_final_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror.glb",
+      "fileName": "hp_enemy_reclamation_mother_final_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_repair_drone_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror.glb",
+      "fileName": "hp_enemy_repair_drone_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": "hp_enemy_repair_drone_horror",
+      "ruleFileName": "hp_enemy_repair_drone_horror.glb"
+    },
+    {
+      "modelKey": "hp_enemy_shield_technician_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_shield_technician_horror.glb",
+      "fileName": "hp_enemy_shield_technician_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_shield_technician_horror/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_terminal_wall",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/terminals/hp_room_terminal_wall.glb",
+      "fileName": "hp_room_terminal_wall.glb",
+      "sidecar": "src/assets/models-cooked/environment/terminals/hp_room_terminal_wall/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "switch_panel_wall_cyan",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/props/hp_switch_panel_wall_cyan.glb",
+      "fileName": "hp_switch_panel_wall_cyan.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_switch_panel_wall_cyan/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "terminal_archive_reader",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/terminals/hp_terminal_archive_reader.glb",
+      "fileName": "hp_terminal_archive_reader.glb",
+      "sidecar": "src/assets/models-cooked/environment/terminals/hp_terminal_archive_reader/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "terminal_puzzle_big_screen",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/terminals/hp_terminal_puzzle_big_screen.glb",
+      "fileName": "hp_terminal_puzzle_big_screen.glb",
+      "sidecar": "src/assets/models-cooked/environment/terminals/hp_terminal_puzzle_big_screen/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_energy_cell_amber",
+      "category": "pickup",
+      "file": "src/assets/models-cooked/environment/props/hp_pickup_energy_cell_amber.glb",
+      "fileName": "hp_pickup_energy_cell_amber.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_pickup_energy_cell_amber/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": "pickup_energy_cell_amber",
+      "ruleFileName": "hp_pickup_energy_cell_amber.glb"
+    },
+    {
+      "modelKey": "pickup_medkit_white_red",
+      "category": "pickup",
+      "file": "src/assets/models-cooked/environment/props/hp_pickup_medkit_white_red.glb",
+      "fileName": "hp_pickup_medkit_white_red.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_pickup_medkit_white_red/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "light_wall_medical_strip_cyan_1m",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level01/hp_light_wall_medical_strip_cyan_1m.glb",
+      "fileName": "hp_light_wall_medical_strip_cyan_1m.glb",
+      "sidecar": "src/assets/models-cooked/environment/level01/hp_light_wall_medical_strip_cyan_1m/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_ceiling_panel_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_ceiling_panel_maintenance.glb",
+      "fileName": "hp_room_ceiling_panel_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_ceiling_panel_maintenance/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_corner_pillar_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_maintenance.glb",
+      "fileName": "hp_room_corner_pillar_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_maintenance/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_cable_pit_cover",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_cable_pit_cover.glb",
+      "fileName": "hp_room_cyber_cable_pit_cover.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_cable_pit_cover/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_cable_trunk",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_cable_trunk.glb",
+      "fileName": "hp_room_cyber_cable_trunk.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_cable_trunk/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_gate_turnstile",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_gate_turnstile.glb",
+      "fileName": "hp_room_cyber_gate_turnstile.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_gate_turnstile/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_hazard_barrier",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_hazard_barrier.glb",
+      "fileName": "hp_room_cyber_hazard_barrier.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_hazard_barrier/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_holo_pylon",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_holo_pylon.glb",
+      "fileName": "hp_room_cyber_holo_pylon.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_holo_pylon/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_mural_circuit_city",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_mural_circuit_city.glb",
+      "fileName": "hp_room_cyber_mural_circuit_city.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_mural_circuit_city/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_security_desk",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_security_desk.glb",
+      "fileName": "hp_room_cyber_security_desk.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_security_desk/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_substation_console",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_substation_console.glb",
+      "fileName": "hp_room_cyber_substation_console.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_substation_console/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_cyber_vending_unit",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_vending_unit.glb",
+      "fileName": "hp_room_cyber_vending_unit.glb",
+      "sidecar": "src/assets/models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_vending_unit/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_floor_tile_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance.glb",
+      "fileName": "hp_room_floor_tile_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_wall_panel_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_wall_panel_maintenance.glb",
+      "fileName": "hp_room_wall_panel_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_wall_panel_maintenance/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_wall_wash_light_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_maintenance.glb",
+      "fileName": "hp_room_wall_wash_light_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_maintenance/.raw-webgpu/level_06_cyberpunk_foyer.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    }
+  ]
+}

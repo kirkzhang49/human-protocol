@@ -1,0 +1,98 @@
+{
+  "schema": "human-protocol/level05-reclamation-mother-stitch-only@1",
+  "generatedAt": "2026-06-28T04:22:10.833379+00:00",
+  "purpose": "Keep the earlier source-like fragmented silhouette and only stitch topology-level gaps; no visible invented rods, balls, armor panels, or redesign links.",
+  "assetAuthorship": {
+    "meshMethod": "source-like decimated shell split into rigid joint chunks, with same-source dark inner shell filling cut gaps",
+    "textures": "none; source UVs/images/materials removed",
+    "externalTextureDependency": false,
+    "visibleConnectorGeometry": "none except front gameplay core lens; no rods, balls, armor panels, or redesign links"
+  },
+  "stitchOnlyProxy": {
+    "sourceVertices": 7807,
+    "sourcePolygons": 4824,
+    "decimateRatio": 0.3,
+    "verticesAfterStitch": 3513,
+    "polygonsAfterStitch": 1403,
+    "verticesBeforeStitch": 4539,
+    "facesBeforeStitch": 1447,
+    "verticesWeldedApprox": 1026,
+    "tinyComponentsRemoved": 64,
+    "stitchMethod": "vertex weld, small-boundary hole fill, normal consistency, tiny detached component removal; no invented visible rods or armor plates",
+    "verticesAfterExport": 6764,
+    "trianglesAfterExport": 4968,
+    "articulatedPartMeshes": [
+      "back",
+      "head",
+      "left_foot",
+      "left_forearm",
+      "left_shin",
+      "left_thigh",
+      "left_upper_arm",
+      "right_foot",
+      "right_forearm",
+      "right_shin",
+      "right_thigh",
+      "right_upper_arm",
+      "torso"
+    ],
+    "gapFillMesh": "mesh_stitch_articulated_inner_gap_fill"
+  },
+  "derivedAsset": {
+    "modelKeyCandidate": "hp_enemy_reclamation_mother_stitch_articulated_v3",
+    "glb": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_articulated_v3.glb",
+    "sourceBlend": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_articulated_v3.blend",
+    "preview": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_articulated_v3_front_preview.png",
+    "status": "visual-candidate-not-yet-registered-in-level5",
+    "requiredSockets": [
+      "core_glass_weakpoint",
+      "missile_hit_socket",
+      "skill3_lockon_socket",
+      "boss_vfx_center_socket",
+      "floor_contact_socket",
+      "warning_emissive_slots"
+    ],
+    "meshObjects": 16,
+    "verticesApprox": 6764,
+    "trianglesApprox": 4968,
+    "boundsMinBlender": [
+      -1.1062,
+      -0.869,
+      -0.0578
+    ],
+    "boundsMaxBlender": [
+      1.0192,
+      0.6432,
+      2.7804
+    ],
+    "dimensionsBlender": [
+      2.1253,
+      1.5122,
+      2.8382
+    ],
+    "glbScan": {
+      "isGlb": true,
+      "jsonFound": true,
+      "nodes": 40,
+      "meshes": 16,
+      "materials": 5,
+      "textures": 0,
+      "images": 0,
+      "animations": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "forbiddenMarkerMatches": []
+    }
+  }
+}

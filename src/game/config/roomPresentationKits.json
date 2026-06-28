@@ -1,0 +1,4177 @@
+{
+  "roomKits": {
+    "hp:maintenance_combat_bay_v1": {
+      "id": "hp:maintenance_combat_bay_v1",
+      "archetype": "large_combat_arena",
+      "shellKit": "hp:industrial_panel_arena_shell_v1",
+      "lightingPreset": "hp:cyan_lockdown_arena_v1",
+      "doorKit": "hp:elevator_exit_lockable_v1",
+      "defaultPropSet": "hp:repair_bay_props_v1",
+      "layoutAnchorSet": "hp:large_arena_anchors_v1",
+      "spawnLayout": "hp:perimeter_wave_spawns_v1",
+      "pickupLayout": "hp:readable_center_pickups_v1",
+      "previewCamera": "hp:wide_room_showcase_v1",
+      "overrides": {
+        "propDensity": "medium",
+        "floorWear": 0.58,
+        "ceilingLightIntensity": 1.08,
+        "doorStateStyle": "lockdown_red_to_cyan",
+        "pickupVisibility": "critical_items_high"
+      }
+    },
+    "hp:maintenance_combat_bay_v2": {
+      "id": "hp:maintenance_combat_bay_v2",
+      "archetype": "large_combat_arena",
+      "shellKit": "hp:industrial_panel_arena_shell_v2",
+      "lightingPreset": "hp:cyan_lockdown_arena_v2",
+      "doorKit": "hp:elevator_exit_lockable_v1",
+      "defaultPropSet": "hp:repair_bay_props_v1",
+      "layoutAnchorSet": "hp:large_arena_anchors_v1",
+      "spawnLayout": "hp:perimeter_wave_spawns_v1",
+      "pickupLayout": "hp:readable_center_pickups_v1",
+      "previewCamera": "hp:wide_room_showcase_clean_v2",
+      "overrides": {
+        "propDensity": "medium",
+        "floorWear": 0.5,
+        "ceilingLightIntensity": 1.04,
+        "doorStateStyle": "lockdown_red_to_cyan",
+        "pickupVisibility": "critical_items_high"
+      }
+    },
+    "hp:maintenance_combat_bay_v3_art_pass": {
+      "id": "hp:maintenance_combat_bay_v3_art_pass",
+      "archetype": "large_combat_arena",
+      "shellKit": "hp:industrial_panel_arena_shell_v3_art_pass",
+      "lightingPreset": "hp:cyan_lockdown_arena_v3_art_pass",
+      "doorKit": "hp:elevator_exit_lockable_v1",
+      "defaultPropSet": "hp:repair_bay_props_v1",
+      "layoutAnchorSet": "hp:large_arena_anchors_v1",
+      "spawnLayout": "hp:perimeter_wave_spawns_v1",
+      "pickupLayout": "hp:readable_center_pickups_v1",
+      "previewCamera": "hp:wide_room_showcase_clean_v3",
+      "overrides": {
+        "propDensity": "medium",
+        "floorWear": 0.46,
+        "ceilingLightIntensity": 0.94,
+        "doorStateStyle": "lockdown_red_to_cyan",
+        "pickupVisibility": "critical_items_high"
+      }
+    },
+    "hp:human_museum_gallery_v1": {
+      "id": "hp:human_museum_gallery_v1",
+      "archetype": "story_lab",
+      "shellKit": "hp:human_museum_gallery_shell_v1",
+      "lightingPreset": "hp:human_museum_gallery_lighting_v1",
+      "doorKit": "hp:museum_gallery_door_v1",
+      "defaultPropSet": "hp:human_museum_props_v1",
+      "layoutAnchorSet": "hp:large_arena_anchors_v1",
+      "spawnLayout": "hp:perimeter_wave_spawns_v1",
+      "pickupLayout": "hp:readable_center_pickups_v1",
+      "previewCamera": "hp:human_museum_showcase_v1",
+      "overrides": {
+        "propDensity": "dense",
+        "floorWear": 0.42,
+        "ceilingLightIntensity": 1.08,
+        "doorStateStyle": "museum_image2_physical_motion",
+        "pickupVisibility": "critical_items_high"
+      }
+    }
+  },
+  "shellKits": {
+    "hp:industrial_panel_arena_shell_v1": {
+      "id": "hp:industrial_panel_arena_shell_v1",
+      "floorModelKey": "room_floor_tile_maintenance",
+      "wallModelKey": "room_wall_panel_maintenance",
+      "ceilingModelKey": "room_ceiling_panel_maintenance",
+      "cornerPillarModelKey": "room_corner_pillar_maintenance",
+      "wallWashLightModelKey": "room_wall_wash_light_maintenance",
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    },
+    "hp:industrial_panel_arena_shell_v2": {
+      "id": "hp:industrial_panel_arena_shell_v2",
+      "floorModelKey": "room_floor_tile_maintenance",
+      "wallModelKey": "room_wall_panel_maintenance",
+      "ceilingModelKey": "room_ceiling_panel_maintenance",
+      "cornerPillarModelKey": "room_corner_pillar_maintenance",
+      "wallWashLightModelKey": "room_wall_wash_light_maintenance",
+      "floorRenderMode": "hero_arena_panels",
+      "ceilingRenderMode": "deep_grid",
+      "floorBaseColor": "#071014",
+      "floorPanelColor": "#2c3a3f",
+      "floorTrimColor": "#10191d",
+      "floorAccentColor": "#82f3ff",
+      "ceilingBaseColor": "#02070a",
+      "ceilingBeamColor": "#061219",
+      "ceilingPanelColor": "#25343a",
+      "ceilingAccentColor": "#88f4ff",
+      "guideLineOpacity": 0.33,
+      "ceilingLightOpacity": 0.5,
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    },
+    "hp:industrial_panel_arena_shell_v3_art_pass": {
+      "id": "hp:industrial_panel_arena_shell_v3_art_pass",
+      "floorModelKey": "room_floor_tile_maintenance",
+      "wallModelKey": "room_wall_panel_maintenance",
+      "ceilingModelKey": "room_ceiling_panel_maintenance",
+      "cornerPillarModelKey": "room_corner_pillar_maintenance",
+      "wallWashLightModelKey": "room_wall_wash_light_maintenance",
+      "floorRenderMode": "hero_arena_panels",
+      "ceilingRenderMode": "deep_grid",
+      "floorBaseColor": "#050b0f",
+      "floorPanelColor": "#27353a",
+      "floorTrimColor": "#0b1216",
+      "floorAccentColor": "#6fe9f7",
+      "floorReflectionOpacity": 0.305,
+      "floorReflectionStrength": 0.5836,
+      "floorReflectionBlur": [
+        420,
+        150
+      ],
+      "ceilingBaseColor": "#010508",
+      "ceilingBeamColor": "#030b11",
+      "ceilingPanelColor": "#1c292f",
+      "ceilingAccentColor": "#7beeff",
+      "guideLineOpacity": 0.2573,
+      "ceilingLightOpacity": 0.4723,
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    },
+    "hp:industrial_panel_arena_shell_v4_image2_floor": {
+      "id": "hp:industrial_panel_arena_shell_v4_image2_floor",
+      "floorModelKey": "room_floor_tile_maintenance",
+      "wallModelKey": "room_wall_panel_maintenance",
+      "ceilingModelKey": "room_ceiling_panel_maintenance",
+      "cornerPillarModelKey": "room_corner_pillar_maintenance",
+      "wallWashLightModelKey": "room_wall_wash_light_maintenance",
+      "floorRenderMode": "hero_arena_panels",
+      "ceilingRenderMode": "deep_grid",
+      "floorBaseColor": "#03080b",
+      "floorPanelColor": "#233840",
+      "floorTrimColor": "#070e12",
+      "floorAccentColor": "#8df6ff",
+      "floorReflectionOpacity": 0.34,
+      "floorReflectionStrength": 0.62,
+      "floorReflectionBlur": [
+        380,
+        132
+      ],
+      "ceilingBaseColor": "#010508",
+      "ceilingBeamColor": "#030a0f",
+      "ceilingPanelColor": "#1a2a31",
+      "ceilingAccentColor": "#8df6ff",
+      "guideLineOpacity": 0.315,
+      "ceilingLightOpacity": 0.492,
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    },
+    "hp:residential_false_home_shell_v1": {
+      "id": "hp:residential_false_home_shell_v1",
+      "floorModelKey": "room_floor_tile_residential",
+      "wallModelKey": "room_wall_panel_residential",
+      "ceilingModelKey": "room_ceiling_panel_residential",
+      "cornerPillarModelKey": "room_corner_pillar_residential",
+      "wallWashLightModelKey": "room_wall_wash_light_residential",
+      "floorRenderMode": "hero_arena_panels",
+      "ceilingRenderMode": "deep_grid",
+      "floorBaseColor": "#090907",
+      "floorPanelColor": "#443826",
+      "floorTrimColor": "#24190d",
+      "floorAccentColor": "#b7ded2",
+      "floorReflectionOpacity": 0.255,
+      "floorReflectionStrength": 0.49,
+      "floorReflectionBlur": [
+        360,
+        124
+      ],
+      "ceilingBaseColor": "#060605",
+      "ceilingBeamColor": "#151610",
+      "ceilingPanelColor": "#33342a",
+      "ceilingAccentColor": "#c7e5d8",
+      "guideLineOpacity": 0.15,
+      "ceilingLightOpacity": 0.43,
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    },
+    "hp:human_museum_gallery_shell_v1": {
+      "id": "hp:human_museum_gallery_shell_v1",
+      "floorModelKey": "room_floor_tile_museum",
+      "wallModelKey": "room_wall_panel_museum",
+      "ceilingModelKey": "room_ceiling_panel_museum",
+      "cornerPillarModelKey": "room_corner_pillar_museum",
+      "wallWashLightModelKey": "room_wall_wash_light_museum",
+      "floorRenderMode": "model_single",
+      "ceilingRenderMode": "model_panel",
+      "floorBaseColor": "#181715",
+      "floorPanelColor": "#24211b",
+      "floorTrimColor": "#0b0d0d",
+      "floorAccentColor": "#c9a253",
+      "floorReflectionOpacity": 0.27,
+      "floorReflectionStrength": 0.46,
+      "floorReflectionBlur": [
+        240,
+        82
+      ],
+      "ceilingBaseColor": "#b9b4a6",
+      "ceilingBeamColor": "#1a1915",
+      "ceilingPanelColor": "#d0c8b7",
+      "ceilingAccentColor": "#d6a253",
+      "guideLineOpacity": 0.1,
+      "ceilingLightOpacity": 0.56,
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    },
+    "hp:memory_clinic_shell_v1": {
+      "id": "hp:memory_clinic_shell_v1",
+      "floorModelKey": "room_floor_tile_clinic",
+      "wallModelKey": "room_wall_panel_clinic",
+      "ceilingModelKey": "room_ceiling_panel_clinic",
+      "cornerPillarModelKey": "room_corner_pillar_clinic",
+      "wallWashLightModelKey": "room_wall_wash_light_clinic",
+      "floorRenderMode": "hero_arena_panels",
+      "ceilingRenderMode": "deep_grid",
+      "floorBaseColor": "#dbe5e3",
+      "floorPanelColor": "#edf7f5",
+      "floorTrimColor": "#aab8b5",
+      "floorAccentColor": "#7ff2ff",
+      "floorReflectionOpacity": 0.2,
+      "floorReflectionStrength": 0.36,
+      "floorReflectionBlur": [
+        300,
+        104
+      ],
+      "ceilingBaseColor": "#0b1418",
+      "ceilingBeamColor": "#15242a",
+      "ceilingPanelColor": "#273940",
+      "ceilingAccentColor": "#9ff3ff",
+      "guideLineOpacity": 0.2,
+      "ceilingLightOpacity": 0.46,
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    },
+    "hp:reclamation_core_shell_v1": {
+      "id": "hp:reclamation_core_shell_v1",
+      "floorModelKey": "room_floor_tile_core",
+      "wallModelKey": "room_wall_panel_core",
+      "ceilingModelKey": "room_ceiling_panel_core",
+      "cornerPillarModelKey": "room_corner_pillar_core",
+      "wallWashLightModelKey": "room_wall_wash_light_core",
+      "floorRenderMode": "hero_arena_panels",
+      "ceilingRenderMode": "deep_grid",
+      "floorBaseColor": "#070609",
+      "floorPanelColor": "#21191e",
+      "floorTrimColor": "#0f0b0e",
+      "floorAccentColor": "#ff5b4c",
+      "floorReflectionOpacity": 0.24,
+      "floorReflectionStrength": 0.44,
+      "floorReflectionBlur": [
+        340,
+        116
+      ],
+      "ceilingBaseColor": "#050406",
+      "ceilingBeamColor": "#100b0f",
+      "ceilingPanelColor": "#261b20",
+      "ceilingAccentColor": "#ff5b4c",
+      "guideLineOpacity": 0.22,
+      "ceilingLightOpacity": 0.42,
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    },
+    "hp:reclamation_core_shell_v4_cc0": {
+      "id": "hp:reclamation_core_shell_v4_cc0",
+      "floorModelKey": "room_floor_tile_core",
+      "wallModelKey": "room_wall_panel_core",
+      "ceilingModelKey": "room_ceiling_panel_core",
+      "cornerPillarModelKey": "room_corner_pillar_core",
+      "wallWashLightModelKey": "room_wall_wash_light_core",
+      "floorRenderMode": "hero_arena_panels",
+      "ceilingRenderMode": "deep_grid",
+      "floorBaseColor": "#050a0d",
+      "floorPanelColor": "#172026",
+      "floorTrimColor": "#071018",
+      "floorAccentColor": "#66e5ef",
+      "floorReflectionOpacity": 0.3,
+      "floorReflectionStrength": 0.56,
+      "floorReflectionBlur": [
+        360,
+        124
+      ],
+      "ceilingBaseColor": "#030608",
+      "ceilingBeamColor": "#0a1115",
+      "ceilingPanelColor": "#12191e",
+      "ceilingAccentColor": "#7feeff",
+      "guideLineOpacity": 0.24,
+      "ceilingLightOpacity": 0.48,
+      "scalePolicy": "fit_room_bounds",
+      "doorOpeningPolicy": "cut_visual_and_collision_segments"
+    }
+  },
+  "lightingPresets": {
+    "hp:reclamation_core_v1": {
+      "id": "hp:reclamation_core_v1",
+      "mood": "reveal",
+      "ambient": {
+        "color": "#5a727a",
+        "intensity": 0.13
+      },
+      "hemisphereIntensity": 0.34,
+      "directional": {
+        "color": "#cfe6ef",
+        "intensity": 0.62,
+        "position": [
+          -5,
+          11,
+          6
+        ]
+      },
+      "fog": {
+        "color": "#04080a",
+        "near": 30,
+        "far": 96
+      },
+      "bloom": {
+        "intensity": 0.42,
+        "threshold": 0.55
+      },
+      "lights": [
+        {
+          "id": "level05_entry_ceiling_area",
+          "type": "area",
+          "roomId": "level_05_core_entry",
+          "roomRelative": [
+            0,
+            2.85,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            0.0
+          ],
+          "color": "#cfe9f0",
+          "intensity": 0.92,
+          "lockdownIntensity": 0.74,
+          "width": 8.0,
+          "height": 1.2,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level05_entry_cyan_point",
+          "type": "point",
+          "roomId": "level_05_core_entry",
+          "roomRelative": [
+            -0.3,
+            1.9,
+            -0.1
+          ],
+          "color": "#6fe2ee",
+          "intensity": 0.85,
+          "lockdownIntensity": 0.68,
+          "distance": 8.0,
+          "decay": 2.0
+        },
+        {
+          "id": "level05_entry_floor_glow",
+          "type": "floor_glow",
+          "roomId": "level_05_core_entry",
+          "roomRelative": [
+            0,
+            0.06,
+            0.0
+          ],
+          "scaleRoomRelative": [
+            0.5,
+            0.34
+          ],
+          "color": "#7fb8c0",
+          "opacity": 0.05,
+          "lockdownOpacity": 0.04
+        },
+        {
+          "id": "level05_hub_ceiling_area",
+          "type": "area",
+          "roomId": "level_05_lock_hub",
+          "roomRelative": [
+            0,
+            2.9,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            0.0
+          ],
+          "color": "#f0ead0",
+          "intensity": 1.0,
+          "lockdownIntensity": 0.82,
+          "width": 9.0,
+          "height": 1.2,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level05_hub_amber_left",
+          "type": "point",
+          "roomId": "level_05_lock_hub",
+          "roomRelative": [
+            -0.28,
+            1.95,
+            -0.12
+          ],
+          "color": "#ffd36d",
+          "intensity": 0.85,
+          "lockdownIntensity": 0.68,
+          "distance": 9.0,
+          "decay": 1.95
+        },
+        {
+          "id": "level05_hub_amber_right",
+          "type": "point",
+          "roomId": "level_05_lock_hub",
+          "roomRelative": [
+            0.3,
+            1.95,
+            0.14
+          ],
+          "color": "#ffcf63",
+          "intensity": 0.78,
+          "lockdownIntensity": 0.62,
+          "distance": 8.5,
+          "decay": 1.95
+        },
+        {
+          "id": "level05_hub_column_spot",
+          "type": "spot",
+          "roomId": "level_05_lock_hub",
+          "roomRelative": [
+            0,
+            3.0,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            0.0
+          ],
+          "color": "#fff0cf",
+          "intensity": 0.95,
+          "lockdownIntensity": 0.78,
+          "distance": 11.0,
+          "angle": 0.5,
+          "penumbra": 0.8,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level05_hub_floor_glow",
+          "type": "floor_glow",
+          "roomId": "level_05_lock_hub",
+          "roomRelative": [
+            0,
+            0.06,
+            0.0
+          ],
+          "scaleRoomRelative": [
+            0.5,
+            0.3
+          ],
+          "color": "#c9a85a",
+          "opacity": 0.07,
+          "lockdownOpacity": 0.05
+        },
+        {
+          "id": "level05_north_ceiling_area",
+          "type": "area",
+          "roomId": "level_05_north_lock",
+          "roomRelative": [
+            0,
+            2.8,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            0.0
+          ],
+          "color": "#cfeff5",
+          "intensity": 0.82,
+          "lockdownIntensity": 0.66,
+          "width": 4.2,
+          "height": 1.0,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level05_north_cyan_point",
+          "type": "point",
+          "roomId": "level_05_north_lock",
+          "roomRelative": [
+            0.2,
+            1.7,
+            -0.1
+          ],
+          "color": "#8aeefc",
+          "intensity": 0.6,
+          "lockdownIntensity": 0.48,
+          "distance": 5.5,
+          "decay": 2.05
+        },
+        {
+          "id": "level05_east_ceiling_area",
+          "type": "area",
+          "roomId": "level_05_east_lock",
+          "roomRelative": [
+            0,
+            2.8,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            0.0
+          ],
+          "color": "#d2eef2",
+          "intensity": 0.82,
+          "lockdownIntensity": 0.66,
+          "width": 3.8,
+          "height": 1.0,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level05_east_cyan_point",
+          "type": "point",
+          "roomId": "level_05_east_lock",
+          "roomRelative": [
+            -0.18,
+            1.75,
+            0.12
+          ],
+          "color": "#7fe6ef",
+          "intensity": 0.6,
+          "lockdownIntensity": 0.48,
+          "distance": 5.5,
+          "decay": 2.05
+        },
+        {
+          "id": "level05_west_ceiling_area",
+          "type": "area",
+          "roomId": "level_05_west_lock",
+          "roomRelative": [
+            0,
+            2.8,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            0.0
+          ],
+          "color": "#f0d2cc",
+          "intensity": 0.8,
+          "lockdownIntensity": 0.64,
+          "width": 3.8,
+          "height": 1.0,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level05_west_red_point",
+          "type": "point",
+          "roomId": "level_05_west_lock",
+          "roomRelative": [
+            0.18,
+            1.75,
+            -0.12
+          ],
+          "color": "#ff6a52",
+          "intensity": 0.7,
+          "lockdownIntensity": 0.56,
+          "distance": 6.0,
+          "decay": 2.0
+        },
+        {
+          "id": "level05_west_floor_glow",
+          "type": "floor_glow",
+          "roomId": "level_05_west_lock",
+          "roomRelative": [
+            0,
+            0.06,
+            0.0
+          ],
+          "scaleRoomRelative": [
+            0.46,
+            0.44
+          ],
+          "color": "#c8514a",
+          "opacity": 0.05,
+          "lockdownOpacity": 0.04
+        },
+        {
+          "id": "level05_platform_ceiling_area",
+          "type": "area",
+          "roomId": "level_05_platform",
+          "roomRelative": [
+            0,
+            2.95,
+            0.12
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            0.02
+          ],
+          "color": "#d6e6ea",
+          "intensity": 0.85,
+          "lockdownIntensity": 0.68,
+          "width": 9.0,
+          "height": 1.2,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level05_platform_altar_spot",
+          "type": "spot",
+          "roomId": "level_05_platform",
+          "roomRelative": [
+            0,
+            3.05,
+            -0.12
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            -0.12
+          ],
+          "color": "#ffe9d2",
+          "intensity": 1.0,
+          "lockdownIntensity": 0.82,
+          "distance": 12.0,
+          "angle": 0.46,
+          "penumbra": 0.75,
+          "decay": 1.85,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level05_platform_red_left",
+          "type": "point",
+          "roomId": "level_05_platform",
+          "roomRelative": [
+            -0.3,
+            1.95,
+            -0.18
+          ],
+          "color": "#ff5b4c",
+          "intensity": 0.92,
+          "lockdownIntensity": 0.74,
+          "distance": 9.0,
+          "decay": 1.95
+        },
+        {
+          "id": "level05_platform_red_right",
+          "type": "point",
+          "roomId": "level_05_platform",
+          "roomRelative": [
+            0.3,
+            1.95,
+            -0.18
+          ],
+          "color": "#ff6a55",
+          "intensity": 0.86,
+          "lockdownIntensity": 0.7,
+          "distance": 9.0,
+          "decay": 1.95
+        },
+        {
+          "id": "level05_platform_floor_glow",
+          "type": "floor_glow",
+          "roomId": "level_05_platform",
+          "roomRelative": [
+            0,
+            0.06,
+            -0.05
+          ],
+          "scaleRoomRelative": [
+            0.5,
+            0.34
+          ],
+          "color": "#c8514a",
+          "opacity": 0.06,
+          "lockdownOpacity": 0.05
+        },
+        {
+          "id": "level05_archive_ceiling_area",
+          "type": "area",
+          "roomId": "level_05_archive_room",
+          "roomRelative": [
+            0,
+            2.8,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            0.0
+          ],
+          "color": "#d9f4fa",
+          "intensity": 0.9,
+          "lockdownIntensity": 0.78,
+          "width": 3.8,
+          "height": 1.0,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level05_archive_cyan_point",
+          "type": "point",
+          "roomId": "level_05_archive_room",
+          "roomRelative": [
+            -0.18,
+            1.8,
+            0.1
+          ],
+          "color": "#8aeefc",
+          "intensity": 0.62,
+          "lockdownIntensity": 0.5,
+          "distance": 5.5,
+          "decay": 2.0
+        },
+        {
+          "id": "level05_identity_ceiling_area",
+          "type": "area",
+          "roomId": "level_05_identity_file",
+          "roomRelative": [
+            0,
+            2.9,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            0.0
+          ],
+          "color": "#fff3df",
+          "intensity": 1.05,
+          "lockdownIntensity": 1.05,
+          "width": 5.0,
+          "height": 1.1
+        },
+        {
+          "id": "level05_identity_warm_point",
+          "type": "point",
+          "roomId": "level_05_identity_file",
+          "roomRelative": [
+            0,
+            1.9,
+            0.08
+          ],
+          "color": "#ffe9c8",
+          "intensity": 1.0,
+          "lockdownIntensity": 1.0,
+          "distance": 7.0,
+          "decay": 1.9
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.7,
+        "heroPropShadowBias": -0.0001,
+        "directionalBias": -0.00014
+      }
+    },
+    "hp:memory_clinic_sterile_v1": {
+      "id": "hp:memory_clinic_sterile_v1",
+      "mood": "reveal",
+      "ambient": {
+        "color": "#5d7a82",
+        "intensity": 0.12
+      },
+      "hemisphereIntensity": 0.32,
+      "directional": {
+        "color": "#cfeefa",
+        "intensity": 0.6,
+        "position": [
+          -4.5,
+          11,
+          6.5
+        ]
+      },
+      "fog": {
+        "color": "#04080b",
+        "near": 30,
+        "far": 92
+      },
+      "bloom": {
+        "intensity": 0.4,
+        "threshold": 0.55
+      },
+      "lights": [
+        {
+          "id": "level04_waiting_ceiling_area",
+          "type": "area",
+          "roomId": "level_04_waiting_room",
+          "roomRelative": [
+            0,
+            2.85,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            0.0
+          ],
+          "color": "#dff6ff",
+          "intensity": 1.05,
+          "lockdownIntensity": 0.86,
+          "width": 9.0,
+          "height": 1.2,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level04_waiting_cyan_spill_left",
+          "type": "point",
+          "roomId": "level_04_waiting_room",
+          "roomRelative": [
+            -0.32,
+            1.95,
+            -0.16
+          ],
+          "color": "#67e9f2",
+          "intensity": 0.92,
+          "lockdownIntensity": 0.74,
+          "distance": 8.0,
+          "decay": 2.0
+        },
+        {
+          "id": "level04_waiting_cyan_spill_right",
+          "type": "point",
+          "roomId": "level_04_waiting_room",
+          "roomRelative": [
+            0.34,
+            1.95,
+            0.12
+          ],
+          "color": "#7fe6ef",
+          "intensity": 0.78,
+          "lockdownIntensity": 0.62,
+          "distance": 7.5,
+          "decay": 2.0
+        },
+        {
+          "id": "level04_waiting_floor_glow",
+          "type": "floor_glow",
+          "roomId": "level_04_waiting_room",
+          "roomRelative": [
+            0,
+            0.06,
+            0.04
+          ],
+          "scaleRoomRelative": [
+            0.5,
+            0.34
+          ],
+          "color": "#9fd2da",
+          "opacity": 0.05,
+          "lockdownOpacity": 0.04
+        },
+        {
+          "id": "level04_childhood_ceiling_area",
+          "type": "area",
+          "roomId": "level_04_childhood_chair",
+          "roomRelative": [
+            0,
+            2.8,
+            0.04
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            0.02
+          ],
+          "color": "#ffe6bd",
+          "intensity": 0.8,
+          "lockdownIntensity": 0.64,
+          "width": 3.6,
+          "height": 1.0,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level04_childhood_projector_spot",
+          "type": "spot",
+          "roomId": "level_04_childhood_chair",
+          "roomRelative": [
+            -0.16,
+            2.95,
+            -0.18
+          ],
+          "targetRoomRelative": [
+            0.0,
+            0.06,
+            0.04
+          ],
+          "color": "#ffd58a",
+          "intensity": 0.98,
+          "lockdownIntensity": 0.8,
+          "distance": 7.0,
+          "angle": 0.5,
+          "penumbra": 0.8,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level04_childhood_warm_point",
+          "type": "point",
+          "roomId": "level_04_childhood_chair",
+          "roomRelative": [
+            0.2,
+            1.65,
+            0.2
+          ],
+          "color": "#ffcaa0",
+          "intensity": 0.52,
+          "lockdownIntensity": 0.42,
+          "distance": 5.0,
+          "decay": 2.1
+        },
+        {
+          "id": "level04_rescue_ceiling_area",
+          "type": "area",
+          "roomId": "level_04_rescue_chair",
+          "roomRelative": [
+            0,
+            2.8,
+            0.04
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            0.02
+          ],
+          "color": "#cfeff5",
+          "intensity": 0.82,
+          "lockdownIntensity": 0.66,
+          "width": 3.6,
+          "height": 1.0,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level04_rescue_cyan_spot",
+          "type": "spot",
+          "roomId": "level_04_rescue_chair",
+          "roomRelative": [
+            0.16,
+            2.95,
+            -0.18
+          ],
+          "targetRoomRelative": [
+            0.0,
+            0.06,
+            0.04
+          ],
+          "color": "#9af0ff",
+          "intensity": 0.98,
+          "lockdownIntensity": 0.8,
+          "distance": 7.0,
+          "angle": 0.5,
+          "penumbra": 0.8,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level04_rescue_cold_point",
+          "type": "point",
+          "roomId": "level_04_rescue_chair",
+          "roomRelative": [
+            -0.22,
+            1.7,
+            0.18
+          ],
+          "color": "#7fe0ef",
+          "intensity": 0.52,
+          "lockdownIntensity": 0.42,
+          "distance": 5.0,
+          "decay": 2.1
+        },
+        {
+          "id": "level04_body_ceiling_area",
+          "type": "area",
+          "roomId": "level_04_body_chair",
+          "roomRelative": [
+            0,
+            2.85,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.06,
+            0.0
+          ],
+          "color": "#d6eef2",
+          "intensity": 0.9,
+          "lockdownIntensity": 0.72,
+          "width": 6.0,
+          "height": 1.1,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level04_body_surgical_spot",
+          "type": "spot",
+          "roomId": "level_04_body_chair",
+          "roomRelative": [
+            0,
+            3.05,
+            0.014
+          ],
+          "targetRoomRelative": [
+            0,
+            0.05,
+            0.014
+          ],
+          "color": "#eafcff",
+          "intensity": 1.16,
+          "lockdownIntensity": 0.95,
+          "distance": 9.0,
+          "angle": 0.42,
+          "penumbra": 0.7,
+          "decay": 1.85,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level04_body_red_accent",
+          "type": "point",
+          "roomId": "level_04_body_chair",
+          "roomRelative": [
+            -0.2,
+            1.7,
+            -0.42
+          ],
+          "color": "#ff6a52",
+          "intensity": 0.7,
+          "lockdownIntensity": 0.56,
+          "distance": 6.5,
+          "decay": 2.0
+        },
+        {
+          "id": "level04_body_floor_glow",
+          "type": "floor_glow",
+          "roomId": "level_04_body_chair",
+          "roomRelative": [
+            0,
+            0.06,
+            0.0
+          ],
+          "scaleRoomRelative": [
+            0.46,
+            0.34
+          ],
+          "color": "#d65a48",
+          "opacity": 0.05,
+          "lockdownOpacity": 0.04
+        },
+        {
+          "id": "level04_theater_ceiling_area",
+          "type": "area",
+          "roomId": "level_04_therapy_theater",
+          "roomRelative": [
+            0,
+            2.9,
+            0.16
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            0.04
+          ],
+          "color": "#cfe8ee",
+          "intensity": 0.84,
+          "lockdownIntensity": 0.68,
+          "width": 8.0,
+          "height": 1.2,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level04_theater_stage_spot",
+          "type": "spot",
+          "roomId": "level_04_therapy_theater",
+          "roomRelative": [
+            0,
+            3.0,
+            -0.16
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            -0.34
+          ],
+          "color": "#ffd0c4",
+          "intensity": 0.9,
+          "lockdownIntensity": 0.74,
+          "distance": 12.0,
+          "angle": 0.5,
+          "penumbra": 0.8,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level04_theater_red_left",
+          "type": "point",
+          "roomId": "level_04_therapy_theater",
+          "roomRelative": [
+            -0.3,
+            1.9,
+            -0.18
+          ],
+          "color": "#ff5b4c",
+          "intensity": 0.92,
+          "lockdownIntensity": 0.74,
+          "distance": 9.0,
+          "decay": 1.95
+        },
+        {
+          "id": "level04_theater_red_right",
+          "type": "point",
+          "roomId": "level_04_therapy_theater",
+          "roomRelative": [
+            0.3,
+            1.9,
+            -0.18
+          ],
+          "color": "#ff6a55",
+          "intensity": 0.86,
+          "lockdownIntensity": 0.7,
+          "distance": 9.0,
+          "decay": 1.95
+        },
+        {
+          "id": "level04_theater_floor_glow",
+          "type": "floor_glow",
+          "roomId": "level_04_therapy_theater",
+          "roomRelative": [
+            0,
+            0.06,
+            -0.04
+          ],
+          "scaleRoomRelative": [
+            0.5,
+            0.34
+          ],
+          "color": "#c8514a",
+          "opacity": 0.06,
+          "lockdownOpacity": 0.05
+        },
+        {
+          "id": "level04_exit_ceiling_area",
+          "type": "area",
+          "roomId": "level_04_exit_room",
+          "roomRelative": [
+            0,
+            2.9,
+            0.0
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            0.0
+          ],
+          "color": "#fff3df",
+          "intensity": 1.05,
+          "lockdownIntensity": 1.05,
+          "width": 4.5,
+          "height": 1.1
+        },
+        {
+          "id": "level04_exit_warm_point",
+          "type": "point",
+          "roomId": "level_04_exit_room",
+          "roomRelative": [
+            0,
+            1.9,
+            0.08
+          ],
+          "color": "#ffe9c8",
+          "intensity": 1.0,
+          "lockdownIntensity": 1.0,
+          "distance": 7.0,
+          "decay": 1.9
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.7,
+        "heroPropShadowBias": -0.0001,
+        "directionalBias": -0.00014
+      }
+    },
+    "hp:cyan_lockdown_arena_v1": {
+      "id": "hp:cyan_lockdown_arena_v1",
+      "mood": "combat",
+      "ambient": {
+        "color": "#5f7f88",
+        "intensity": 0.22
+      },
+      "fog": {
+        "color": "#05090d",
+        "near": 20,
+        "far": 62
+      },
+      "bloom": {
+        "intensity": 0.82,
+        "threshold": 0.34
+      },
+      "lights": [
+        {
+          "id": "ceiling_key_left",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.24,
+            2.2,
+            0.3
+          ],
+          "color": "#8df6ff",
+          "intensity": 3.05,
+          "lockdownIntensity": 2.1,
+          "distance": 10.5,
+          "decay": 1.55,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "ceiling_key_center",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.07,
+            2.65,
+            0.13
+          ],
+          "color": "#c7fbff",
+          "intensity": 2.45,
+          "lockdownIntensity": 1.55,
+          "distance": 12.5,
+          "decay": 1.65,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "left_wall_cyan",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.38,
+            1.65,
+            0.13
+          ],
+          "color": "#54e8ff",
+          "intensity": 2.25,
+          "lockdownIntensity": 1.45,
+          "distance": 9.5,
+          "decay": 1.8
+        },
+        {
+          "id": "screen_spill",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            2.05,
+            0.46
+          ],
+          "color": "#94f5ff",
+          "intensity": 1.8,
+          "lockdownIntensity": 1.28,
+          "distance": 8.5,
+          "decay": 1.65
+        },
+        {
+          "id": "door_status_spill",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.23,
+            1.65,
+            -0.05
+          ],
+          "color": "#ff5648",
+          "lockedColor": "#ff5648",
+          "unlockedColor": "#64f6ff",
+          "doorId": "service_elevator_door",
+          "intensity": 1.45,
+          "lockdownIntensity": 1.25,
+          "distance": 8,
+          "decay": 1.85
+        },
+        {
+          "id": "floor_guides",
+          "type": "floor_glow",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            0.065,
+            0
+          ],
+          "scaleRoomRelative": [
+            0.64,
+            0.34
+          ],
+          "color": "#75ebff",
+          "opacity": 0.056,
+          "lockdownOpacity": 0.036
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.38,
+        "heroPropShadowBias": -0.00008
+      }
+    },
+    "hp:cyan_lockdown_arena_v2": {
+      "id": "hp:cyan_lockdown_arena_v2",
+      "mood": "combat",
+      "ambient": {
+        "color": "#6f8f98",
+        "intensity": 0.18
+      },
+      "fog": {
+        "color": "#03080b",
+        "near": 26,
+        "far": 78
+      },
+      "bloom": {
+        "intensity": 0.62,
+        "threshold": 0.48
+      },
+      "lights": [
+        {
+          "id": "ceiling_soft_left_v2",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.28,
+            2.8,
+            0.22
+          ],
+          "color": "#89f4ff",
+          "intensity": 1.62,
+          "lockdownIntensity": 1.1,
+          "distance": 12,
+          "decay": 1.55,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "ceiling_soft_right_v2",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.24,
+            2.85,
+            -0.06
+          ],
+          "color": "#a8f8ff",
+          "intensity": 1.34,
+          "lockdownIntensity": 0.92,
+          "distance": 13.5,
+          "decay": 1.6,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "left_wall_readability_v2",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.4,
+            1.8,
+            0.12
+          ],
+          "color": "#62e8ff",
+          "intensity": 1.18,
+          "lockdownIntensity": 0.8,
+          "distance": 9,
+          "decay": 1.75
+        },
+        {
+          "id": "screen_spill_v2",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.02,
+            2,
+            0.46
+          ],
+          "color": "#9af5ff",
+          "intensity": 1.62,
+          "lockdownIntensity": 1.05,
+          "distance": 8,
+          "decay": 1.65
+        },
+        {
+          "id": "elevator_status_spill_v2",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            1.55,
+            -0.43
+          ],
+          "color": "#ff5448",
+          "lockedColor": "#ff5448",
+          "unlockedColor": "#68f4ff",
+          "doorId": "service_elevator_door",
+          "intensity": 1.24,
+          "lockdownIntensity": 1.05,
+          "distance": 7,
+          "decay": 1.8
+        },
+        {
+          "id": "floor_guides_v2",
+          "type": "floor_glow",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            0.058,
+            0.04
+          ],
+          "scaleRoomRelative": [
+            0.42,
+            0.24
+          ],
+          "color": "#74ebff",
+          "opacity": 0.026,
+          "lockdownOpacity": 0.018
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.5,
+        "heroPropShadowBias": -0.00008
+      }
+    },
+    "hp:cyan_lockdown_arena_v3_art_pass": {
+      "id": "hp:cyan_lockdown_arena_v3_art_pass",
+      "mood": "combat",
+      "ambient": {
+        "color": "#5f7f86",
+        "intensity": 0.0672
+      },
+      "hemisphereIntensity": 0.2733,
+      "directional": {
+        "color": "#b8fbff",
+        "intensity": 0.7269,
+        "position": [
+          -5.5,
+          11,
+          7.5
+        ]
+      },
+      "fog": {
+        "color": "#020609",
+        "near": 34,
+        "far": 96
+      },
+      "bloom": {
+        "intensity": 0.5864,
+        "threshold": 0.5239
+      },
+      "lights": [
+        {
+          "id": "screen_key_pool_v3",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            2.05,
+            0.45
+          ],
+          "color": "#a7f8ff",
+          "intensity": 1.5317,
+          "lockdownIntensity": 1.0109,
+          "distance": 7.8,
+          "decay": 2.05
+        },
+        {
+          "id": "repair_bay_operating_light_v3",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.34,
+            2.55,
+            0.26
+          ],
+          "color": "#d1fdff",
+          "intensity": 1.5823,
+          "lockdownIntensity": 0.9812,
+          "distance": 6.8,
+          "decay": 2.1,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "left_wall_cyan_slash_v3",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.46,
+            1.7,
+            0.06
+          ],
+          "color": "#55d8e8",
+          "intensity": 0.8977,
+          "lockdownIntensity": 0.5476,
+          "distance": 7.8,
+          "decay": 2.25
+        },
+        {
+          "id": "ceiling_cold_rim_v3",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.26,
+            3.05,
+            -0.22
+          ],
+          "color": "#7deeff",
+          "intensity": 1.0693,
+          "lockdownIntensity": 0.6844,
+          "distance": 9.8,
+          "decay": 2.1,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "math_soft_cyan_medical_area_v4",
+          "type": "area",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.256,
+            2.35,
+            0.316
+          ],
+          "targetRoomRelative": [
+            -0.155,
+            0.72,
+            0.392
+          ],
+          "color": "#5ce8ff",
+          "intensity": 2.3791,
+          "lockdownIntensity": 2.0197,
+          "width": 3.6714,
+          "height": 1.1395,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "math_elevator_lockdown_area_v4",
+          "type": "area",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            2.2,
+            -0.344
+          ],
+          "targetRoomRelative": [
+            0,
+            0.18,
+            -0.468
+          ],
+          "color": "#ff2b22",
+          "lockedColor": "#ff3b32",
+          "unlockedColor": "#69f0ff",
+          "doorId": "service_elevator_door",
+          "intensity": 2.071,
+          "lockdownIntensity": 2.6686,
+          "width": 4.1662,
+          "height": 1.6522
+        },
+        {
+          "id": "math_repair_low_contact_v4",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.155,
+            0.95,
+            0.356
+          ],
+          "color": "#42e0ff",
+          "intensity": 0.9724,
+          "lockdownIntensity": 0.739,
+          "distance": 5.8,
+          "decay": 1.86
+        },
+        {
+          "id": "math_floor_red_reflection_v4",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.022,
+            0.5,
+            -0.248
+          ],
+          "color": "#ff2920",
+          "lockedColor": "#ff2920",
+          "unlockedColor": "#4deaff",
+          "doorId": "service_elevator_door",
+          "intensity": 0.4089,
+          "lockdownIntensity": 0.8244,
+          "distance": 6,
+          "decay": 2.05
+        },
+        {
+          "id": "screen_to_floor_spot_v3",
+          "type": "spot",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.03,
+            3.08,
+            -0.02
+          ],
+          "targetRoomRelative": [
+            0.02,
+            0.06,
+            0.16
+          ],
+          "color": "#c9ffff",
+          "intensity": 2.5545,
+          "lockdownIntensity": 1.6604,
+          "distance": 13.5,
+          "angle": 0.46,
+          "penumbra": 0.82,
+          "decay": 1.72,
+          "castShadow": true,
+          "shadowBias": -0.00022,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "repair_table_spot_v3",
+          "type": "spot",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.28,
+            2.72,
+            0.25
+          ],
+          "targetRoomRelative": [
+            -0.11,
+            0.08,
+            0.2
+          ],
+          "color": "#d8ffff",
+          "intensity": 1.4991,
+          "lockdownIntensity": 0.9894,
+          "distance": 9.5,
+          "angle": 0.5,
+          "penumbra": 0.7,
+          "decay": 1.82,
+          "castShadow": true,
+          "shadowBias": -0.0002,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "elevator_status_spot_v3",
+          "type": "spot",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.02,
+            2.35,
+            -0.4
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            -0.43
+          ],
+          "color": "#ff5148",
+          "lockedColor": "#ff5148",
+          "unlockedColor": "#69f0ff",
+          "doorId": "service_elevator_door",
+          "intensity": 1.0219,
+          "lockdownIntensity": 0.7863,
+          "distance": 8.5,
+          "angle": 0.36,
+          "penumbra": 0.64,
+          "decay": 1.9,
+          "castShadow": false
+        },
+        {
+          "id": "elevator_status_small_v3",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            1.5,
+            -0.43
+          ],
+          "color": "#ff5148",
+          "lockedColor": "#ff5148",
+          "unlockedColor": "#69f0ff",
+          "doorId": "service_elevator_door",
+          "intensity": 0.7134,
+          "lockdownIntensity": 0.5993,
+          "distance": 6.2,
+          "decay": 2.25
+        },
+        {
+          "id": "floor_guides_v3",
+          "type": "floor_glow",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            0.058,
+            0.02
+          ],
+          "scaleRoomRelative": [
+            0.34,
+            0.18
+          ],
+          "color": "#65ddec",
+          "opacity": 0.0208,
+          "lockdownOpacity": 0.0104
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.78,
+        "heroPropShadowBias": -0.00012,
+        "directionalBias": -0.00016
+      }
+    },
+    "hp:cyan_lockdown_arena_v5_age_director": {
+      "id": "hp:cyan_lockdown_arena_v5_age_director",
+      "mood": "combat",
+      "ambient": {
+        "color": "#5e7d84",
+        "intensity": 0.0544
+      },
+      "hemisphereIntensity": 0.2286,
+      "directional": {
+        "color": "#b8fbff",
+        "intensity": 0.6233,
+        "position": [
+          -5.5,
+          11,
+          7.5
+        ]
+      },
+      "fog": {
+        "color": "#020609",
+        "near": 32.2843,
+        "far": 88.5045
+      },
+      "bloom": {
+        "intensity": 0.497,
+        "threshold": 0.5345
+      },
+      "lights": [
+        {
+          "id": "screen_memory_pool_v5",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            2.08,
+            0.45
+          ],
+          "color": "#9af7ff",
+          "intensity": 0.7355,
+          "lockdownIntensity": 0.5149,
+          "distance": 7.6,
+          "decay": 2.05
+        },
+        {
+          "id": "repair_surgical_area_v5",
+          "type": "area",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.26,
+            2.42,
+            0.33
+          ],
+          "targetRoomRelative": [
+            -0.16,
+            0.72,
+            0.39
+          ],
+          "color": "#d8ffff",
+          "intensity": 1.3952,
+          "lockdownIntensity": 1.058,
+          "width": 3.9,
+          "height": 1.18,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "maintenance_low_cold_bounce_v6",
+          "type": "area",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.08,
+            2.18,
+            0.2
+          ],
+          "targetRoomRelative": [
+            -0.05,
+            0.12,
+            0.08
+          ],
+          "color": "#9bc9cc",
+          "intensity": 0.32,
+          "lockdownIntensity": 0.22,
+          "width": 9.6,
+          "height": 1.35
+        },
+        {
+          "id": "repair_left_white_beam_v6",
+          "type": "spot",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.44,
+            3.02,
+            0.47
+          ],
+          "targetRoomRelative": [
+            -0.19,
+            0.48,
+            0.385
+          ],
+          "color": "#f3ffff",
+          "intensity": 0.9781,
+          "lockdownIntensity": 0.7629,
+          "distance": 9.2,
+          "angle": 0.29,
+          "penumbra": 0.62,
+          "decay": 1.78,
+          "castShadow": true,
+          "shadowBias": -0.0002,
+          "beamOpacity": 0.03,
+          "beamRadius": 0.34,
+          "beamLengthScale": 0.62,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "repair_right_white_beam_v6",
+          "type": "spot",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.045,
+            2.92,
+            0.465
+          ],
+          "targetRoomRelative": [
+            -0.17,
+            0.42,
+            0.405
+          ],
+          "color": "#eaffff",
+          "intensity": 0.7569,
+          "lockdownIntensity": 0.5601,
+          "distance": 8.8,
+          "angle": 0.27,
+          "penumbra": 0.58,
+          "decay": 1.82,
+          "castShadow": true,
+          "shadowBias": -0.0002,
+          "beamOpacity": 0.026,
+          "beamRadius": 0.3,
+          "beamLengthScale": 0.6,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "weapon_pickup_floor_pool_v5",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.235,
+            0.82,
+            0.348
+          ],
+          "color": "#74f4ff",
+          "intensity": 0.2958,
+          "lockdownIntensity": 0.2544,
+          "distance": 5.7,
+          "decay": 1.9
+        },
+        {
+          "id": "ceiling_spine_cold_rim_v5",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.06,
+            3.05,
+            -0.08
+          ],
+          "color": "#8ef0ff",
+          "intensity": 0.5797,
+          "lockdownIntensity": 0.4174,
+          "distance": 10,
+          "decay": 2.1,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "elevator_state_area_v5",
+          "type": "area",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            2.34,
+            -0.392
+          ],
+          "targetRoomRelative": [
+            0,
+            0.22,
+            -0.462
+          ],
+          "color": "#ff3a32",
+          "lockedColor": "#ff4a3d",
+          "unlockedColor": "#6df1ff",
+          "doorId": "service_elevator_door",
+          "intensity": 1.1846,
+          "lockdownIntensity": 1.5134,
+          "width": 4.45,
+          "height": 1.58
+        },
+        {
+          "id": "elevator_floor_state_reflection_v5",
+          "type": "point",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            0.52,
+            -0.335
+          ],
+          "color": "#ff342b",
+          "lockedColor": "#ff342b",
+          "unlockedColor": "#56efff",
+          "doorId": "service_elevator_door",
+          "intensity": 0.3351,
+          "lockdownIntensity": 0.6294,
+          "distance": 6.4,
+          "decay": 2.05
+        },
+        {
+          "id": "hero_screen_floor_spot_v5",
+          "type": "spot",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.04,
+            3.08,
+            -0.015
+          ],
+          "targetRoomRelative": [
+            0.02,
+            0.06,
+            0.16
+          ],
+          "color": "#c9ffff",
+          "intensity": 1.3572,
+          "lockdownIntensity": 0.9229,
+          "distance": 13.5,
+          "angle": 0.46,
+          "penumbra": 0.82,
+          "decay": 1.72,
+          "castShadow": false,
+          "shadowBias": -0.00022,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "repair_table_shadow_spot_v5",
+          "type": "spot",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.3,
+            2.72,
+            0.28
+          ],
+          "targetRoomRelative": [
+            -0.15,
+            0.1,
+            0.4
+          ],
+          "color": "#deffff",
+          "intensity": 0.4862,
+          "lockdownIntensity": 0.389,
+          "distance": 8.6,
+          "angle": 0.44,
+          "penumbra": 0.76,
+          "decay": 1.82,
+          "castShadow": false,
+          "shadowBias": -0.0002,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "elevator_status_spot_v5",
+          "type": "spot",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            2.42,
+            -0.43
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            -0.462
+          ],
+          "color": "#ff5a4f",
+          "lockedColor": "#ff5a4f",
+          "unlockedColor": "#72f3ff",
+          "doorId": "service_elevator_door",
+          "intensity": 0.7663,
+          "lockdownIntensity": 0.751,
+          "distance": 8.8,
+          "angle": 0.34,
+          "penumbra": 0.62,
+          "decay": 1.9,
+          "castShadow": false
+        },
+        {
+          "id": "floor_guides_v5",
+          "type": "floor_glow",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            0.058,
+            0.02
+          ],
+          "scaleRoomRelative": [
+            0.38,
+            0.2
+          ],
+          "color": "#68e9f5",
+          "opacity": 0.0176,
+          "lockdownOpacity": 0.0128
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.8,
+        "heroPropShadowBias": -0.00012,
+        "directionalBias": -0.00016
+      }
+    },
+    "hp:residential_simulation_false_home_story_v1": {
+      "id": "hp:residential_simulation_false_home_story_v1",
+      "mood": "reveal",
+      "ambient": {
+        "color": "#887760",
+        "intensity": 0.205
+      },
+      "hemisphereIntensity": 0.76,
+      "directional": {
+        "color": "#fff0cf",
+        "intensity": 0.94,
+        "position": [
+          -5.4,
+          10.2,
+          5.8
+        ]
+      },
+      "fog": {
+        "color": "#060706",
+        "near": 24,
+        "far": 96.8
+      },
+      "bloom": {
+        "intensity": 0.46,
+        "threshold": 0.52
+      },
+      "lights": [
+        {
+          "id": "level02_foyer_false_home_warm_area",
+          "type": "area",
+          "roomId": "level_02_recovery_foyer",
+          "roomRelative": [
+            -0.06,
+            2.42,
+            0.16
+          ],
+          "targetRoomRelative": [
+            -0.04,
+            0.26,
+            -0.02
+          ],
+          "color": "#ffd7a4",
+          "intensity": 0.9894,
+          "lockdownIntensity": 0.72,
+          "width": 4.4,
+          "height": 1.18
+        },
+        {
+          "id": "level02_foyer_cyan_service_leak",
+          "type": "point",
+          "roomId": "level_02_recovery_foyer",
+          "roomRelative": [
+            0.28,
+            1.9,
+            -0.44
+          ],
+          "color": "#66edf4",
+          "intensity": 1.354,
+          "lockdownIntensity": 1.02,
+          "distance": 8.4,
+          "decay": 2.05
+        },
+        {
+          "id": "level02_living_maintenance_ceiling_area",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            2.76,
+            0.2
+          ],
+          "targetRoomRelative": [
+            -0.02,
+            0.14,
+            0.04
+          ],
+          "color": "#efffe9",
+          "intensity": 1.18,
+          "lockdownIntensity": 0.98,
+          "width": 8.2,
+          "height": 1.18,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level02_living_cold_screen_spill",
+          "type": "spot",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0.02,
+            3.05,
+            -0.34
+          ],
+          "targetRoomRelative": [
+            0.02,
+            0.08,
+            -0.12
+          ],
+          "color": "#b7fbff",
+          "intensity": 1.02,
+          "lockdownIntensity": 0.78,
+          "distance": 13.5,
+          "angle": 0.44,
+          "penumbra": 0.78,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level02_living_floor_reflection_pool",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.062,
+            0.04
+          ],
+          "scaleRoomRelative": [
+            0.5,
+            0.3
+          ],
+          "color": "#9bcfc0",
+          "opacity": 0.018,
+          "lockdownOpacity": 0.014
+        },
+        {
+          "id": "level02_living_false_home_warm_rug_glow",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.02,
+            0.063,
+            0.16
+          ],
+          "scaleRoomRelative": [
+            0.56,
+            0.34
+          ],
+          "color": "#e7b36d",
+          "opacity": 0.13,
+          "lockdownOpacity": 0.074
+        },
+        {
+          "id": "level02_living_right_tv_cyan_spill",
+          "type": "point",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0.466,
+            1.68,
+            0.06
+          ],
+          "color": "#86f4ff",
+          "intensity": 0.78,
+          "lockdownIntensity": 0.52,
+          "distance": 7.8,
+          "decay": 2
+        },
+        {
+          "id": "level02_living_floor_path_route_glow",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.066,
+            -0.2
+          ],
+          "scaleRoomRelative": [
+            0.42,
+            0.08
+          ],
+          "color": "#8bddd0",
+          "opacity": 0.032,
+          "lockdownOpacity": 0.022
+        },
+        {
+          "id": "level02_living_foreground_softbox_wash",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.04,
+            2.42,
+            0.35
+          ],
+          "targetRoomRelative": [
+            -0.02,
+            0.18,
+            0.17
+          ],
+          "color": "#ffdcb0",
+          "intensity": 1.12,
+          "lockdownIntensity": 0.62,
+          "width": 7,
+          "height": 0.78
+        },
+        {
+          "id": "level02_living_sofa_warm_key",
+          "type": "point",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.08,
+            1.06,
+            0.12
+          ],
+          "color": "#ffc988",
+          "intensity": 1.1,
+          "lockdownIntensity": 0.55,
+          "distance": 7.8,
+          "decay": 2.15
+        },
+        {
+          "id": "level02_living_left_portrait_warm_area",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.46,
+            1.72,
+            0.31
+          ],
+          "targetRoomRelative": [
+            -0.28,
+            0.38,
+            0.18
+          ],
+          "color": "#ffd6a1",
+          "intensity": 1.18,
+          "lockdownIntensity": 0.58,
+          "width": 3.9,
+          "height": 0.86
+        },
+        {
+          "id": "level02_care_boss_backlight",
+          "type": "spot",
+          "roomId": "level_02_care_room",
+          "roomRelative": [
+            0.02,
+            2.85,
+            0.4
+          ],
+          "targetRoomRelative": [
+            0,
+            0.18,
+            0
+          ],
+          "color": "#80eef7",
+          "intensity": 0.9807,
+          "lockdownIntensity": 0.76,
+          "distance": 8.4,
+          "angle": 0.5,
+          "penumbra": 0.68,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level02_care_hidden_warm_service_slot",
+          "type": "point",
+          "roomId": "level_02_care_room",
+          "roomRelative": [
+            0.28,
+            1.2,
+            -0.22
+          ],
+          "color": "#caa064",
+          "intensity": 0.42,
+          "lockdownIntensity": 0.32,
+          "distance": 4.8,
+          "decay": 2.2
+        },
+        {
+          "id": "level02_light_room_tricolor_wash",
+          "type": "area",
+          "roomId": "level_02_light_room",
+          "roomRelative": [
+            0,
+            2.35,
+            0.12
+          ],
+          "targetRoomRelative": [
+            0,
+            0.15,
+            -0.02
+          ],
+          "color": "#c9fbff",
+          "intensity": 1.2516,
+          "lockdownIntensity": 0.9,
+          "width": 4.6,
+          "height": 1.26
+        },
+        {
+          "id": "level02_family_exit_story_state_spill",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            2.05,
+            -0.47
+          ],
+          "targetRoomRelative": [
+            0,
+            0.12,
+            -0.46
+          ],
+          "color": "#ff5148",
+          "lockedColor": "#ff5148",
+          "unlockedColor": "#68f3ff",
+          "doorId": "level_02_family_exit_door",
+          "intensity": 0.26,
+          "lockdownIntensity": 0.34,
+          "width": 4.4,
+          "height": 1.38
+        },
+        {
+          "id": "level02_family_exit_floor_red_trace",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.064,
+            -0.39
+          ],
+          "scaleRoomRelative": [
+            0.34,
+            0.14
+          ],
+          "color": "#ff5148",
+          "lockedColor": "#ff5148",
+          "unlockedColor": "#68f3ff",
+          "doorId": "level_02_family_exit_door",
+          "opacity": 0.016,
+          "lockdownOpacity": 0.014
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.72,
+        "heroPropShadowBias": -0.0001,
+        "directionalBias": -0.00014
+      }
+    },
+    "hp:residential_simulation_readable_home_v2": {
+      "id": "hp:residential_simulation_readable_home_v2",
+      "mood": "quiet",
+      "ambient": {
+        "color": "#cbd8d3",
+        "intensity": 0.2147
+      },
+      "hemisphereIntensity": 0.8086,
+      "directional": {
+        "color": "#f5fff9",
+        "intensity": 0.8968,
+        "position": [
+          -3.8,
+          11.6,
+          7.4
+        ]
+      },
+      "fog": {
+        "color": "#102020",
+        "near": 30,
+        "far": 118.34
+      },
+      "bloom": {
+        "intensity": 0.3376,
+        "threshold": 0.63
+      },
+      "lights": [
+        {
+          "id": "level02_foyer_false_home_warm_area",
+          "type": "area",
+          "roomId": "level_02_recovery_foyer",
+          "roomRelative": [
+            -0.06,
+            2.42,
+            0.16
+          ],
+          "targetRoomRelative": [
+            -0.04,
+            0.26,
+            -0.02
+          ],
+          "color": "#fff4df",
+          "intensity": 1.399,
+          "lockdownIntensity": 0.92,
+          "width": 4.4,
+          "height": 1.18
+        },
+        {
+          "id": "level02_foyer_cyan_service_leak",
+          "type": "point",
+          "roomId": "level_02_recovery_foyer",
+          "roomRelative": [
+            0.28,
+            1.9,
+            -0.44
+          ],
+          "color": "#a9eef5",
+          "intensity": 0.6371,
+          "lockdownIntensity": 0.46,
+          "distance": 7.2,
+          "decay": 2.05
+        },
+        {
+          "id": "level02_living_maintenance_ceiling_area",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.12,
+            2.85,
+            0.22
+          ],
+          "targetRoomRelative": [
+            -0.03,
+            0.12,
+            0.04
+          ],
+          "color": "#f3fffb",
+          "intensity": 1.2866,
+          "lockdownIntensity": 1.02,
+          "width": 7.6,
+          "height": 1.5,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level02_living_cold_screen_spill",
+          "type": "spot",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0.02,
+            3.05,
+            -0.34
+          ],
+          "targetRoomRelative": [
+            0.02,
+            0.08,
+            -0.12
+          ],
+          "color": "#d8fbff",
+          "intensity": 0.6371,
+          "lockdownIntensity": 0.52,
+          "distance": 12.2,
+          "angle": 0.5,
+          "penumbra": 0.82,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level02_living_furniture_soft_key",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.3,
+            2.18,
+            0.02
+          ],
+          "targetRoomRelative": [
+            -0.1,
+            0.28,
+            0.02
+          ],
+          "color": "#fff8ec",
+          "intensity": 1.0051,
+          "lockdownIntensity": 0.82,
+          "width": 6.8,
+          "height": 1.15
+        },
+        {
+          "id": "level02_living_floor_reflection_pool",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.062,
+            0.04
+          ],
+          "scaleRoomRelative": [
+            0.58,
+            0.36
+          ],
+          "color": "#d3fbff",
+          "opacity": 0.0324,
+          "lockdownOpacity": 0.026
+        },
+        {
+          "id": "level02_care_boss_backlight",
+          "type": "spot",
+          "roomId": "level_02_care_room",
+          "roomRelative": [
+            0.02,
+            2.85,
+            0.4
+          ],
+          "targetRoomRelative": [
+            0,
+            0.18,
+            0
+          ],
+          "color": "#b9fbff",
+          "intensity": 0.8056,
+          "lockdownIntensity": 0.6,
+          "distance": 8.4,
+          "angle": 0.5,
+          "penumbra": 0.68,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level02_care_hidden_warm_service_slot",
+          "type": "point",
+          "roomId": "level_02_care_room",
+          "roomRelative": [
+            0.28,
+            1.2,
+            -0.22
+          ],
+          "color": "#e4c48c",
+          "intensity": 0.36,
+          "lockdownIntensity": 0.28,
+          "distance": 4.8,
+          "decay": 2.2
+        },
+        {
+          "id": "level02_light_room_tricolor_wash",
+          "type": "area",
+          "roomId": "level_02_light_room",
+          "roomRelative": [
+            0,
+            2.35,
+            0.12
+          ],
+          "targetRoomRelative": [
+            0,
+            0.15,
+            -0.02
+          ],
+          "color": "#f5ffff",
+          "intensity": 1.0384,
+          "lockdownIntensity": 0.84,
+          "width": 4.6,
+          "height": 1.26
+        },
+        {
+          "id": "level02_light_room_blue_lamp_pool",
+          "type": "point",
+          "roomId": "level_02_light_room",
+          "roomRelative": [
+            0.22,
+            1.42,
+            -0.08
+          ],
+          "color": "#9af3ff",
+          "intensity": 0.3651,
+          "lockdownIntensity": 0.3,
+          "distance": 4.8,
+          "decay": 2.05
+        },
+        {
+          "id": "level02_family_exit_story_state_spill",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            2.05,
+            -0.47
+          ],
+          "targetRoomRelative": [
+            0,
+            0.12,
+            -0.46
+          ],
+          "color": "#ff6a5e",
+          "lockedColor": "#ff6a5e",
+          "unlockedColor": "#75f6ff",
+          "doorId": "level_02_family_exit_door",
+          "intensity": 0.4457,
+          "lockdownIntensity": 0.5,
+          "width": 5.3,
+          "height": 1.38
+        },
+        {
+          "id": "level02_family_exit_floor_red_trace",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.064,
+            -0.39
+          ],
+          "scaleRoomRelative": [
+            0.34,
+            0.14
+          ],
+          "color": "#ff6a5e",
+          "lockedColor": "#ff6a5e",
+          "unlockedColor": "#75f6ff",
+          "doorId": "level_02_family_exit_door",
+          "opacity": 0.0518,
+          "lockdownOpacity": 0.048
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.6567,
+        "heroPropShadowBias": -0.0001,
+        "directionalBias": -0.00012
+      }
+    },
+    "hp:residential_simulation_bright_ceiling_v3": {
+      "id": "hp:residential_simulation_bright_ceiling_v3",
+      "mood": "quiet",
+      "ambient": {
+        "color": "#d6dedb",
+        "intensity": 0.2429
+      },
+      "hemisphereIntensity": 0.9679,
+      "directional": {
+        "color": "#f7fffb",
+        "intensity": 0.9305,
+        "position": [
+          -3.8,
+          11.6,
+          7.4
+        ]
+      },
+      "fog": {
+        "color": "#132423",
+        "near": 32,
+        "far": 126.22
+      },
+      "bloom": {
+        "intensity": 0.3078,
+        "threshold": 0.64
+      },
+      "lights": [
+        {
+          "id": "level02_foyer_false_home_warm_area",
+          "type": "area",
+          "roomId": "level_02_recovery_foyer",
+          "roomRelative": [
+            -0.06,
+            2.42,
+            0.16
+          ],
+          "targetRoomRelative": [
+            -0.04,
+            0.26,
+            -0.02
+          ],
+          "color": "#fff6e4",
+          "intensity": 1.0147,
+          "lockdownIntensity": 0.86,
+          "width": 4.4,
+          "height": 1.18
+        },
+        {
+          "id": "level02_foyer_cyan_service_leak",
+          "type": "point",
+          "roomId": "level_02_recovery_foyer",
+          "roomRelative": [
+            0.28,
+            1.9,
+            -0.44
+          ],
+          "color": "#a9eef5",
+          "intensity": 0.5361,
+          "lockdownIntensity": 0.4,
+          "distance": 7.2,
+          "decay": 2.05
+        },
+        {
+          "id": "level02_living_maintenance_ceiling_area",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.12,
+            2.85,
+            0.22
+          ],
+          "targetRoomRelative": [
+            -0.03,
+            0.12,
+            0.04
+          ],
+          "color": "#fbfffd",
+          "intensity": 1.648,
+          "lockdownIntensity": 1.18,
+          "width": 8.2,
+          "height": 1.68,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level02_living_cold_screen_spill",
+          "type": "spot",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0.02,
+            3.05,
+            -0.34
+          ],
+          "targetRoomRelative": [
+            0.02,
+            0.08,
+            -0.12
+          ],
+          "color": "#d8fbff",
+          "intensity": 0.5361,
+          "lockdownIntensity": 0.44,
+          "distance": 12.2,
+          "angle": 0.5,
+          "penumbra": 0.82,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level02_living_furniture_soft_key",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.3,
+            2.18,
+            0.02
+          ],
+          "targetRoomRelative": [
+            -0.1,
+            0.28,
+            0.02
+          ],
+          "color": "#fff8ec",
+          "intensity": 1.1492,
+          "lockdownIntensity": 0.9,
+          "width": 6.8,
+          "height": 1.15
+        },
+        {
+          "id": "level02_living_floor_reflection_pool",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.062,
+            0.04
+          ],
+          "scaleRoomRelative": [
+            0.58,
+            0.36
+          ],
+          "color": "#d8fbff",
+          "opacity": 0.0305,
+          "lockdownOpacity": 0.024
+        },
+        {
+          "id": "level02_care_boss_backlight",
+          "type": "spot",
+          "roomId": "level_02_care_room",
+          "roomRelative": [
+            0.02,
+            2.85,
+            0.4
+          ],
+          "targetRoomRelative": [
+            0,
+            0.18,
+            0
+          ],
+          "color": "#b9fbff",
+          "intensity": 0.7454,
+          "lockdownIntensity": 0.58,
+          "distance": 8.4,
+          "angle": 0.5,
+          "penumbra": 0.68,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level02_care_hidden_warm_service_slot",
+          "type": "point",
+          "roomId": "level_02_care_room",
+          "roomRelative": [
+            0.28,
+            1.2,
+            -0.22
+          ],
+          "color": "#e4c48c",
+          "intensity": 0.34,
+          "lockdownIntensity": 0.26,
+          "distance": 4.8,
+          "decay": 2.2
+        },
+        {
+          "id": "level02_light_room_tricolor_wash",
+          "type": "area",
+          "roomId": "level_02_light_room",
+          "roomRelative": [
+            0,
+            2.35,
+            0.12
+          ],
+          "targetRoomRelative": [
+            0,
+            0.15,
+            -0.02
+          ],
+          "color": "#fbffff",
+          "intensity": 1.264,
+          "lockdownIntensity": 0.92,
+          "width": 4.6,
+          "height": 1.26
+        },
+        {
+          "id": "level02_light_room_blue_lamp_pool",
+          "type": "point",
+          "roomId": "level_02_light_room",
+          "roomRelative": [
+            0.22,
+            1.42,
+            -0.08
+          ],
+          "color": "#9af3ff",
+          "intensity": 0.4116,
+          "lockdownIntensity": 0.32,
+          "distance": 4.8,
+          "decay": 2.05
+        },
+        {
+          "id": "level02_family_exit_story_state_spill",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            2.05,
+            -0.47
+          ],
+          "targetRoomRelative": [
+            0,
+            0.12,
+            -0.46
+          ],
+          "color": "#ff6a5e",
+          "lockedColor": "#ff6a5e",
+          "unlockedColor": "#75f6ff",
+          "doorId": "level_02_family_exit_door",
+          "intensity": 0.4336,
+          "lockdownIntensity": 0.48,
+          "width": 5.3,
+          "height": 1.38
+        },
+        {
+          "id": "level02_family_exit_floor_red_trace",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.064,
+            -0.39
+          ],
+          "scaleRoomRelative": [
+            0.34,
+            0.14
+          ],
+          "color": "#ff6a5e",
+          "lockedColor": "#ff6a5e",
+          "unlockedColor": "#75f6ff",
+          "doorId": "level_02_family_exit_door",
+          "opacity": 0.0559,
+          "lockdownOpacity": 0.05
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.6495,
+        "heroPropShadowBias": -0.0001,
+        "directionalBias": -0.00012
+      }
+    },
+    "hp:residential_simulation_pbr_home_v4": {
+      "id": "hp:residential_simulation_pbr_home_v4",
+      "mood": "quiet",
+      "ambient": {
+        "color": "#d8e1de",
+        "intensity": 0.2737
+      },
+      "hemisphereIntensity": 1.0202,
+      "directional": {
+        "color": "#f8fffc",
+        "intensity": 1.0237,
+        "position": [
+          -3.8,
+          11.6,
+          7.4
+        ]
+      },
+      "fog": {
+        "color": "#132423",
+        "near": 32,
+        "far": 127.51
+      },
+      "bloom": {
+        "intensity": 0.3239,
+        "threshold": 0.65
+      },
+      "lights": [
+        {
+          "id": "level02_foyer_false_home_warm_area",
+          "type": "area",
+          "roomId": "level_02_recovery_foyer",
+          "roomRelative": [
+            -0.06,
+            2.42,
+            0.16
+          ],
+          "targetRoomRelative": [
+            -0.04,
+            0.26,
+            -0.02
+          ],
+          "color": "#fff6e4",
+          "intensity": 0.9664,
+          "lockdownIntensity": 0.82,
+          "width": 4.4,
+          "height": 1.18
+        },
+        {
+          "id": "level02_foyer_cyan_service_leak",
+          "type": "point",
+          "roomId": "level_02_recovery_foyer",
+          "roomRelative": [
+            0.28,
+            1.9,
+            -0.44
+          ],
+          "color": "#a9eef5",
+          "intensity": 0.4747,
+          "lockdownIntensity": 0.36,
+          "distance": 7.2,
+          "decay": 2.05
+        },
+        {
+          "id": "level02_living_maintenance_ceiling_area",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.12,
+            2.85,
+            0.22
+          ],
+          "targetRoomRelative": [
+            -0.03,
+            0.12,
+            0.04
+          ],
+          "color": "#fbfffd",
+          "intensity": 1.8451,
+          "lockdownIntensity": 1.26,
+          "width": 8.2,
+          "height": 1.68,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level02_living_cold_screen_spill",
+          "type": "spot",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0.02,
+            3.05,
+            -0.34
+          ],
+          "targetRoomRelative": [
+            0.02,
+            0.08,
+            -0.12
+          ],
+          "color": "#d8fbff",
+          "intensity": 0.4747,
+          "lockdownIntensity": 0.38,
+          "distance": 12.2,
+          "angle": 0.5,
+          "penumbra": 0.82,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level02_living_furniture_soft_key",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            -0.3,
+            2.18,
+            0.02
+          ],
+          "targetRoomRelative": [
+            -0.1,
+            0.28,
+            0.02
+          ],
+          "color": "#fff8ec",
+          "intensity": 1.2717,
+          "lockdownIntensity": 0.98,
+          "width": 6.8,
+          "height": 1.15
+        },
+        {
+          "id": "level02_living_floor_reflection_pool",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.062,
+            0.04
+          ],
+          "scaleRoomRelative": [
+            0.58,
+            0.36
+          ],
+          "color": "#d8fbff",
+          "opacity": 0.0359,
+          "lockdownOpacity": 0.027
+        },
+        {
+          "id": "level02_care_boss_backlight",
+          "type": "spot",
+          "roomId": "level_02_care_room",
+          "roomRelative": [
+            0.02,
+            2.85,
+            0.4
+          ],
+          "targetRoomRelative": [
+            0,
+            0.18,
+            0
+          ],
+          "color": "#b9fbff",
+          "intensity": 0.8064,
+          "lockdownIntensity": 0.62,
+          "distance": 8.4,
+          "angle": 0.5,
+          "penumbra": 0.68,
+          "decay": 1.9,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "level02_care_hidden_warm_service_slot",
+          "type": "point",
+          "roomId": "level_02_care_room",
+          "roomRelative": [
+            0.28,
+            1.2,
+            -0.22
+          ],
+          "color": "#e4c48c",
+          "intensity": 0.3,
+          "lockdownIntensity": 0.23,
+          "distance": 4.8,
+          "decay": 2.2
+        },
+        {
+          "id": "level02_light_room_tricolor_wash",
+          "type": "area",
+          "roomId": "level_02_light_room",
+          "roomRelative": [
+            0,
+            2.35,
+            0.12
+          ],
+          "targetRoomRelative": [
+            0,
+            0.15,
+            -0.02
+          ],
+          "color": "#fbffff",
+          "intensity": 1.185,
+          "lockdownIntensity": 0.88,
+          "width": 4.6,
+          "height": 1.26
+        },
+        {
+          "id": "level02_light_room_blue_lamp_pool",
+          "type": "point",
+          "roomId": "level_02_light_room",
+          "roomRelative": [
+            0.22,
+            1.42,
+            -0.08
+          ],
+          "color": "#9af3ff",
+          "intensity": 0.3563,
+          "lockdownIntensity": 0.28,
+          "distance": 4.8,
+          "decay": 2.05
+        },
+        {
+          "id": "level02_family_exit_story_state_spill",
+          "type": "area",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            2.05,
+            -0.47
+          ],
+          "targetRoomRelative": [
+            0,
+            0.12,
+            -0.46
+          ],
+          "color": "#ff6a5e",
+          "lockedColor": "#ff6a5e",
+          "unlockedColor": "#75f6ff",
+          "doorId": "level_02_family_exit_door",
+          "intensity": 0.3217,
+          "lockdownIntensity": 0.36,
+          "width": 5.3,
+          "height": 1.38
+        },
+        {
+          "id": "level02_family_exit_floor_red_trace",
+          "type": "floor_glow",
+          "roomId": "level_02_living_room",
+          "roomRelative": [
+            0,
+            0.064,
+            -0.39
+          ],
+          "scaleRoomRelative": [
+            0.34,
+            0.14
+          ],
+          "color": "#ff6a5e",
+          "lockedColor": "#ff6a5e",
+          "unlockedColor": "#75f6ff",
+          "doorId": "level_02_family_exit_door",
+          "opacity": 0.047,
+          "lockdownOpacity": 0.043
+        }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.7407,
+        "heroPropShadowBias": -0.0001,
+        "directionalBias": -0.00012
+      }
+    },
+    "hp:human_museum_gallery_lighting_v1": {
+      "id": "hp:human_museum_gallery_lighting_v1",
+      "mood": "combat",
+      "ambient": {
+        "color": "#8a8278",
+        "intensity": 0.55
+      },
+      "hemisphereIntensity": 0.62,
+      "directional": {
+        "color": "#e8d4ad",
+        "intensity": 0.95,
+        "position": [
+          -5.8,
+          10.4,
+          6.2
+        ]
+      },
+      "fog": {
+        "color": "#070706",
+        "near": 24,
+        "far": 76
+      },
+      "bloom": {
+        "intensity": 0.18,
+        "threshold": 0.72
+      },
+      "lights": [
+        {
+          "id": "museum_entry_softbox",
+          "type": "area",
+          "roomId": "level_03_entry_hall",
+          "roomRelative": [
+            0,
+            2.85,
+            0.08
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            -0.05
+          ],
+          "color": "#f2d6aa",
+          "intensity": 0.86,
+          "lockdownIntensity": 0.62,
+          "width": 5.8,
+          "height": 1.38,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "museum_gallery_main_softbox",
+          "type": "area",
+          "roomId": "level_03_gallery_lobby",
+          "roomRelative": [
+            0,
+            2.95,
+            0.08
+          ],
+          "targetRoomRelative": [
+            0,
+            0.08,
+            -0.04
+          ],
+          "color": "#f1d6aa",
+          "intensity": 1.02,
+          "lockdownIntensity": 0.76,
+          "width": 9.2,
+          "height": 1.82,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "museum_gallery_left_wall_cyan_depth",
+          "type": "point",
+          "roomId": "level_03_gallery_lobby",
+          "roomRelative": [
+            -0.42,
+            1.65,
+            0.1
+          ],
+          "color": "#9f998b",
+          "intensity": 0.08,
+          "lockdownIntensity": 0.06,
+          "distance": 6.8,
+          "decay": 1.85
+        },
+        {
+          "id": "museum_gallery_right_wall_warm_read",
+          "type": "point",
+          "roomId": "level_03_gallery_lobby",
+          "roomRelative": [
+            0.38,
+            1.55,
+            -0.18
+          ],
+          "color": "#deb982",
+          "intensity": 0.34,
+          "lockdownIntensity": 0.24,
+          "distance": 6.8,
+          "decay": 1.9
+        },
+        {
+          "id": "museum_gallery_case_warm_pool",
+          "type": "point",
+          "roomId": "level_03_gallery_lobby",
+          "roomRelative": [
+            -0.22,
+            1.45,
+            0.22
+          ],
+          "color": "#e0b77c",
+          "intensity": 0.4,
+          "lockdownIntensity": 0.28,
+          "distance": 6.8,
+          "decay": 1.9
+        },
+        {
+          "id": "museum_gallery_warm_exhibit_pin",
+          "type": "point",
+          "roomId": "level_03_gallery_lobby",
+          "roomRelative": [
+            -0.34,
+            1.32,
+            0.22
+          ],
+          "color": "#e6c99c",
+          "intensity": 0.22,
+          "lockdownIntensity": 0.16,
+          "distance": 4.8,
+          "decay": 2.05
+        },
+        {
+          "id": "museum_tool_exhibit_cyan_case",
+          "type": "point",
+          "roomId": "level_03_tool_exhibit",
+          "roomRelative": [
+            0,
+            1.35,
+            0.04
+          ],
+          "color": "#dfb876",
+          "intensity": 0.46,
+          "lockdownIntensity": 0.34,
+          "distance": 5.4,
+          "decay": 2
+        },
+        {
+          "id": "museum_tool_wall_art_warm_key",
+          "type": "spot",
+          "roomId": "level_03_tool_exhibit",
+          "roomRelative": [
+            -0.42,
+            2.46,
+            0.36
+          ],
+          "targetRoomRelative": [
+            -0.42,
+            1.22,
+            0.43
+          ],
+          "color": "#efd6ad",
+          "intensity": 0.44,
+          "lockdownIntensity": 0.34,
+          "distance": 5.8,
+          "angle": 0.48,
+          "penumbra": 0.82,
+          "decay": 1.72,
+          "castShadow": false
+        },
+        {
+          "id": "museum_tool_yellow_clue_pin",
+          "type": "point",
+          "roomId": "level_03_tool_exhibit",
+          "roomRelative": [
+            0.12,
+            1.58,
+            0.3
+          ],
+          "color": "#e4bc68",
+          "intensity": 0.26,
+          "lockdownIntensity": 0.18,
+          "distance": 4.8,
+          "decay": 2.15
+        },
+        {
+          "id": "museum_voice_booth_cyan_pool",
+          "type": "point",
+          "roomId": "level_03_voice_exhibit",
+          "roomRelative": [
+            0,
+            1.42,
+            0.02
+          ],
+          "color": "#deb985",
+          "intensity": 0.46,
+          "lockdownIntensity": 0.34,
+          "distance": 5.2,
+          "decay": 2
+        },
+        {
+          "id": "museum_voice_wall_art_warm_key",
+          "type": "spot",
+          "roomId": "level_03_voice_exhibit",
+          "roomRelative": [
+            0.42,
+            2.46,
+            0.36
+          ],
+          "targetRoomRelative": [
+            0.42,
+            1.22,
+            0.43
+          ],
+          "color": "#efd6ad",
+          "intensity": 0.44,
+          "lockdownIntensity": 0.34,
+          "distance": 5.8,
+          "angle": 0.48,
+          "penumbra": 0.82,
+          "decay": 1.72,
+          "castShadow": false
+        },
+        {
+          "id": "museum_body_reference_softbox",
+          "type": "area",
+          "roomId": "level_03_body_exhibit",
+          "roomRelative": [
+            -0.26,
+            2.45,
+            -0.05
+          ],
+          "targetRoomRelative": [
+            -0.26,
+            0.1,
+            -0.05
+          ],
+          "color": "#f0d4aa",
+          "intensity": 0.82,
+          "lockdownIntensity": 0.6,
+          "width": 6.4,
+          "height": 1.4,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "museum_body_reference_low_white_pool",
+          "type": "point",
+          "roomId": "level_03_body_exhibit",
+          "roomRelative": [
+            -0.26,
+            1.2,
+            -0.06
+          ],
+          "color": "#c8c0ae",
+          "intensity": 0.28,
+          "lockdownIntensity": 0.2,
+          "distance": 4.8,
+          "decay": 2.05
+        },
+        {
+          "id": "museum_body_wall_art_warm_key",
+          "type": "spot",
+          "roomId": "level_03_body_exhibit",
+          "roomRelative": [
+            0.36,
+            2.42,
+            0.18
+          ],
+          "targetRoomRelative": [
+            0.43,
+            1.22,
+            0.02
+          ],
+          "color": "#eed7b2",
+          "intensity": 0.42,
+          "lockdownIntensity": 0.32,
+          "distance": 5.4,
+          "angle": 0.5,
+          "penumbra": 0.84,
+          "decay": 1.76,
+          "castShadow": false
+        },
+        {
+          "id": "museum_body_orb_floor_readability",
+          "type": "floor_glow",
+          "roomId": "level_03_body_exhibit",
+          "roomRelative": [
+            0,
+            0.064,
+            -0.16
+          ],
+          "scaleRoomRelative": [
+            0.52,
+            0.22
+          ],
+          "color": "#cdbb86",
+          "opacity": 0.018,
+          "lockdownOpacity": 0.014
+        },
+        {
+          "id": "museum_archive_red_warning_rim",
+          "type": "point",
+          "roomId": "level_03_central_archive",
+          "roomRelative": [
+            0.28,
+            1.65,
+            0.02
+          ],
+          "color": "#b98d55",
+          "intensity": 0.12,
+          "lockdownIntensity": 0.1,
+          "distance": 5.6,
+          "decay": 2.15
+        },
+        {
+          "id": "museum_archive_cyan_archive_core",
+          "type": "point",
+          "roomId": "level_03_central_archive",
+          "roomRelative": [
+            0,
+            1.72,
+            0.08
+          ],
+          "color": "#d6b374",
+          "intensity": 0.3,
+          "lockdownIntensity": 0.22,
+          "distance": 5.4,
+          "decay": 2
+        },
+        {
+          "id": "museum_archive_ceiling_spot",
+          "type": "spot",
+          "roomId": "level_03_central_archive",
+          "roomRelative": [
+            -0.22,
+            2.8,
+            0.2
+          ],
+          "targetRoomRelative": [
+            0,
+            0.28,
+            0.02
+          ],
+          "color": "#efd7b0",
+          "intensity": 0.52,
+          "lockdownIntensity": 0.4,
+          "distance": 8.2,
+          "angle": 0.55,
+          "penumbra": 0.72,
+          "decay": 1.85,
+          "castShadow": true,
+          "shadowBias": -0.00018
+        },
+        {
+          "id": "museum_archive_wall_art_warm_key",
+          "type": "spot",
+          "roomId": "level_03_central_archive",
+          "roomRelative": [
+            -0.38,
+            2.48,
+            0.18
+          ],
+          "targetRoomRelative": [
+            -0.43,
+            1.24,
+            0.02
+          ],
+          "color": "#ead2ad",
+          "intensity": 0.44,
+          "lockdownIntensity": 0.34,
+          "distance": 6.2,
+          "angle": 0.48,
+          "penumbra": 0.84,
+          "decay": 1.72,
+          "castShadow": false
+        },
+        {
+          "id": "museum_archive_boss_back_cyan_rim",
+          "type": "spot",
+          "roomId": "level_03_central_archive",
+          "roomRelative": [
+            0.32,
+            2.55,
+            -0.34
+          ],
+          "targetRoomRelative": [
+            0.02,
+            1.28,
+            0.04
+          ],
+          "color": "#9fefff",
+          "intensity": 0.38,
+          "lockdownIntensity": 0.3,
+          "distance": 7.2,
+          "angle": 0.42,
+          "penumbra": 0.76,
+          "decay": 1.9,
+          "beamOpacity": 0.018,
+          "beamRadius": 0.24,
+          "beamLengthScale": 0.72,
+          "castShadow": false
+        },
+        {
+          "id": "museum_archive_boss_low_amber_armor_kick",
+          "type": "point",
+          "roomId": "level_03_central_archive",
+          "roomRelative": [
+            -0.26,
+            1.05,
+            -0.12
+          ],
+          "color": "#d19452",
+          "intensity": 0.32,
+          "lockdownIntensity": 0.24,
+          "distance": 4.8,
+          "decay": 2
+        },
+        {
+          "id": "museum_archive_boss_contact_floor_trace",
+          "type": "floor_glow",
+          "roomId": "level_03_central_archive",
+          "roomRelative": [
+            0,
+            0.064,
+            -0.1
+          ],
+          "scaleRoomRelative": [
+            0.46,
+            0.3
+          ],
+          "color": "#b88449",
+          "opacity": 0.018,
+          "lockdownOpacity": 0.012
+        },
+        {
+          "id": "level_03_official_exit_state_floor_trace",
+          "type": "floor_glow",
+          "roomId": "level_03_official_exit_room",
+          "roomRelative": [
+            0,
+            0.064,
+            -0.18
+          ],
+          "scaleRoomRelative": [
+            0.5,
+            0.24
+          ],
+          "color": "#b99b5e",
+          "lockedColor": "#b99b5e",
+          "unlockedColor": "#ead8a6",
+          "doorId": "level_03_official_exit_door",
+          "opacity": 0.01,
+          "lockdownOpacity": 0.008
+        },
+        {
+          "id": "level_03_official_exit_elevator_cyan_softbox",
+          "type": "area",
+          "roomId": "level_03_official_exit_room",
+          "roomRelative": [
+            0,
+            2.92,
+            -0.04
+          ],
+          "targetRoomRelative": [
+            0,
+            0.1,
+            -0.02
+          ],
+          "color": "#f1ead8",
+          "intensity": 0.3,
+          "lockdownIntensity": 0.24,
+          "width": 4.6,
+          "height": 1.45,
+          "overrideScale": "ceilingLightIntensity"
+        },
+        {
+          "id": "level_03_official_exit_back_wall_cyan_portal",
+          "type": "spot",
+          "roomId": "level_03_official_exit_room",
+          "roomRelative": [
+            0,
+            2.35,
+            -0.48
+          ],
+          "targetRoomRelative": [
+            0,
+            1.15,
+            -0.48
+          ],
+          "color": "#b7d8dc",
+          "intensity": 0.16,
+          "lockdownIntensity": 0.13,
+          "distance": 6.4,
+          "angle": 0.62,
+          "penumbra": 0.88,
+          "decay": 1.72,
+          "beamOpacity": 0.024,
+          "beamRadius": 0.42,
+          "beamLengthScale": 0.82,
+          "castShadow": false
+        },
+        {
+          "id": "level_03_official_exit_door_gold_edge",
+          "type": "point",
+          "roomId": "level_03_official_exit_room",
+          "roomRelative": [
+            0,
+            1.55,
+            0.34
+          ],
+          "color": "#f0cc82",
+          "intensity": 1.02,
+          "lockdownIntensity": 0.68,
+          "distance": 4.8,
+          "decay": 1.95
+        },
+        {
+          "id": "level_03_official_exit_button_cyan_read",
+          "type": "point",
+          "roomId": "level_03_official_exit_room",
+          "roomRelative": [
+            0.42,
+            1.42,
+            -0.12
+          ],
+          "color": "#a8f6ff",
+          "intensity": 0.18,
+          "lockdownIntensity": 0.15,
+          "distance": 3.4,
+          "decay": 2.05
+        },
+        {
+          "id": "level_03_official_exit_cyan_floor_pool",
+          "type": "floor_glow",
+          "roomId": "level_03_official_exit_room",
+          "roomRelative": [
+            0,
+            0.065,
+            -0.08
+          ],
+          "scaleRoomRelative": [
+            0.78,
+            0.52
+          ],
+          "color": "#63cbd6",
+          "opacity": 0.006,
+          "lockdownOpacity": 0.005
+        },
+        { "id": "museum_b01_statue_key", "type": "spot", "roomId": "level_03_entry_hall", "roomRelative": [-0.3833, 2.78, 0.2571], "targetRoomRelative": [-0.3833, 1.3, 0.2571], "color": "#eedcbb", "intensity": 0.8, "lockdownIntensity": 0.56, "distance": 5.2, "angle": 0.62, "penumbra": 0.82, "decay": 1.7, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_cloche_key", "type": "spot", "roomId": "level_03_entry_hall", "roomRelative": [0.375, 2.78, 0.2571], "targetRoomRelative": [0.375, 0.45, 0.2571], "color": "#eedcbb", "intensity": 0.8, "lockdownIntensity": 0.56, "distance": 5.2, "angle": 0.56, "penumbra": 0.82, "decay": 1.7, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_specimen_jar_key", "type": "spot", "roomId": "level_03_entry_hall", "roomRelative": [0.3833, 2.78, -0.1429], "targetRoomRelative": [0.3833, 1.1, -0.1429], "color": "#eedcbb", "intensity": 0.8, "lockdownIntensity": 0.56, "distance": 5.2, "angle": 0.58, "penumbra": 0.82, "decay": 1.7, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_lectern_key", "type": "spot", "roomId": "level_03_entry_hall", "roomRelative": [-0.1667, 2.78, -0.2429], "targetRoomRelative": [-0.1667, 0.65, -0.2429], "color": "#eedcbb", "intensity": 0.78, "lockdownIntensity": 0.54, "distance": 5.0, "angle": 0.56, "penumbra": 0.82, "decay": 1.7, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_rope_key", "type": "spot", "roomId": "level_03_entry_hall", "roomRelative": [0.2167, 2.7, -0.2], "targetRoomRelative": [0.2167, 0.55, -0.2], "color": "#eedcbb", "intensity": 0.62, "lockdownIntensity": 0.44, "distance": 4.8, "angle": 0.62, "penumbra": 0.84, "decay": 1.74, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_glass_vitrine_key", "type": "spot", "roomId": "level_03_gallery_lobby", "roomRelative": [-0.4444, 2.9, -0.0455], "targetRoomRelative": [-0.4444, 1.15, -0.0455], "color": "#eedcbb", "intensity": 0.64, "lockdownIntensity": 0.46, "distance": 5.2, "angle": 0.56, "penumbra": 0.82, "decay": 1.74, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_archive_cabinet_key", "type": "spot", "roomId": "level_03_gallery_lobby", "roomRelative": [-0.4444, 2.9, 0.3727], "targetRoomRelative": [-0.4444, 0.9, 0.3727], "color": "#eedcbb", "intensity": 0.64, "lockdownIntensity": 0.46, "distance": 5.2, "angle": 0.56, "penumbra": 0.82, "decay": 1.74, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_skeleton_key", "type": "spot", "roomId": "level_03_gallery_lobby", "roomRelative": [-0.4333, 2.95, -0.4273], "targetRoomRelative": [-0.4333, 1.25, -0.4273], "color": "#eedcbb", "intensity": 0.66, "lockdownIntensity": 0.46, "distance": 5.4, "angle": 0.56, "penumbra": 0.82, "decay": 1.72, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_bench_key", "type": "spot", "roomId": "level_03_gallery_lobby", "roomRelative": [0.4222, 2.9, 0], "targetRoomRelative": [0.4222, 0.28, 0], "color": "#eedcbb", "intensity": 0.6, "lockdownIntensity": 0.42, "distance": 5.0, "angle": 0.6, "penumbra": 0.84, "decay": 1.74, "castShadow": false, "semanticRole": "exhibit_key" },
+        { "id": "museum_b01_sarcophagus_key", "type": "spot", "roomId": "level_03_gallery_lobby", "roomRelative": [0.4111, 2.85, -0.4273], "targetRoomRelative": [0.4111, 0.5, -0.4273], "color": "#eedcbb", "intensity": 0.64, "lockdownIntensity": 0.46, "distance": 5.2, "angle": 0.62, "penumbra": 0.82, "decay": 1.72, "castShadow": false, "semanticRole": "exhibit_key" }
+      ],
+      "shadows": {
+        "enabled": true,
+        "contactShadowStrength": 0.62,
+        "heroPropShadowBias": -0.00012,
+        "directionalBias": -0.00014
+      }
+    }
+  },
+  "doorKits": {
+    "hp:residential_hidden_door_quiet_v1": {
+      "id": "hp:residential_hidden_door_quiet_v1",
+      "archetype": "security_door",
+      "doorModelKey": "room_door_security",
+      "panelModelKey": "terminal_code_keypad",
+      "stateMaterials": {
+        "locked": "terminal_red",
+        "closed": "residential_wall",
+        "open": "residential_wall"
+      },
+      "statusColors": {
+        "locked": "#b9483f",
+        "unlocked": "#d6b678",
+        "open": "#7fe2d4"
+      },
+      "statusGlow": {
+        "lockedIntensity": 0.34,
+        "unlockedIntensity": 0.22,
+        "openIntensity": 0.32,
+        "opacityLocked": 0.34,
+        "opacityUnlocked": 0.18
+      },
+      "openAnimation": {
+        "type": "vertical_lift",
+        "axis": "y",
+        "distance": 0.92
+      },
+      "statusLightAnchor": "side_panel",
+      "panelAnchor": "right_frame"
+    },
+    "hp:elevator_exit_lockable_v1": {
+      "id": "hp:elevator_exit_lockable_v1",
+      "archetype": "elevator_exit",
+      "doorModelKey": "door_service_elevator_inner_cyan",
+      "thresholdModelKey": "door_threshold_service_elevator",
+      "panelModelKey": "none",
+      "stateMaterials": {
+        "locked": "terminal_red",
+        "closed": "service_elevator_metal",
+        "open": "terminal_cyan"
+      },
+      "statusColors": {
+        "locked": "#ff5148",
+        "unlocked": "#69f0ff",
+        "open": "#9af7ff"
+      },
+      "statusGlow": {
+        "lockedIntensity": 0.9,
+        "unlockedIntensity": 1.15,
+        "openIntensity": 1.38,
+        "opacityLocked": 0.78,
+        "opacityUnlocked": 0.86
+      },
+      "openAnimation": {
+        "type": "vertical_lift",
+        "axis": "y",
+        "distance": 3.25
+      },
+      "statusLightAnchor": "top_bar",
+      "panelAnchor": "right_frame"
+    },
+    "hp:museum_gallery_door_v1": {
+      "id": "hp:museum_gallery_door_v1",
+      "archetype": "security_door",
+      "doorModelKey": "age_museum_gallery_door",
+      "thresholdModelKey": "door_threshold_service_elevator",
+      "panelModelKey": "none",
+      "stateMaterials": {
+        "locked": "terminal_red",
+        "closed": "level03_museum_wall_black_gallery",
+        "open": "yellow_access_metal"
+      },
+      "statusColors": {
+        "locked": "#b84b43",
+        "unlocked": "#c6a15a",
+        "open": "#d6a64a"
+      },
+      "statusGlow": {
+        "lockedIntensity": 0.34,
+        "unlockedIntensity": 0.26,
+        "openIntensity": 0.34,
+        "opacityLocked": 0.28,
+        "opacityUnlocked": 0.2
+      },
+      "openAnimation": {
+        "type": "vertical_lift",
+        "axis": "y",
+        "distance": 3.55
+      },
+      "statusLightAnchor": "top_bar",
+      "panelAnchor": "right_frame"
+    }
+  },
+  "propSets": {
+    "hp:repair_bay_props_v1": {
+      "id": "hp:repair_bay_props_v1",
+      "requiredModelKeys": [
+        "hero_maintenance_repair_bay",
+        "hero_maintenance_repair_arm_cluster",
+        "terminal_puzzle_big_screen",
+        "room_maintenance_supply_cabinet",
+        "room_table_utility"
+      ],
+      "optionalModelKeys": [
+        "room_locker_low",
+        "room_fuse_box",
+        "room_terminal_wall",
+        "pickup_medkit_white_red",
+        "pickup_energy_cell_amber",
+        "pickup_large_yellow_key"
+      ]
+    },
+    "hp:residential_simulation_props_v1": {
+      "id": "hp:residential_simulation_props_v1",
+      "requiredModelKeys": [
+        "room_lounge_sofa_residential",
+        "room_lounge_low_table_residential",
+        "room_fake_family_photo_wall",
+        "room_residential_rug_panel",
+        "terminal_family_light_control_pedestal"
+      ],
+      "optionalModelKeys": [
+        "light_residential_lamp_warm",
+        "light_residential_lamp_white",
+        "light_residential_lamp_blue",
+        "room_carekeeper_service_closet",
+        "room_service_robot_dock_residential",
+        "room_residential_ceiling_softbox",
+        "room_residential_floor_path_inlay",
+        "room_residential_observation_window",
+        "room_residential_recovery_bed",
+        "room_residential_service_wall_rupture",
+        "room_residential_tv_wall_director"
+      ]
+    },
+    "hp:human_museum_props_v1": {
+      "id": "hp:human_museum_props_v1",
+      "requiredModelKeys": [
+        "room_museum_display_case_tool",
+        "room_museum_voice_booth",
+        "room_museum_body_reference_case",
+        "room_museum_archive_column",
+        "room_museum_low_barrier",
+        "room_museum_wall_label_panel",
+        "room_museum_color_orb_pedestal",
+        "room_museum_floor_route_inlay"
+      ],
+      "optionalModelKeys": [
+        "pickup_medkit_white_red",
+        "pickup_energy_cell_amber",
+        "pickup_large_yellow_key",
+        "room_ceiling_strip_light",
+        "room_wall_panel_museum",
+        "room_floor_tile_museum"
+      ]
+    }
+  },
+  "layoutAnchorSets": {
+    "hp:large_arena_anchors_v1": {
+      "id": "hp:large_arena_anchors_v1",
+      "anchors": [
+        {
+          "id": "rear_hero_screen",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            1.55,
+            0.46
+          ],
+          "yaw": 0,
+          "role": "hero_wall"
+        },
+        {
+          "id": "exit_door",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0,
+            0,
+            -0.42
+          ],
+          "yaw": 0,
+          "role": "exit"
+        },
+        {
+          "id": "left_service_cluster",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.36,
+            0,
+            0.24
+          ],
+          "yaw": 0.25,
+          "role": "prop_cluster"
+        },
+        {
+          "id": "center_low_table",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.28,
+            0,
+            0.28
+          ],
+          "yaw": -0.28,
+          "role": "cover_prop"
+        },
+        {
+          "id": "floor_pickup_a",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.21,
+            0,
+            0.3
+          ],
+          "yaw": 0,
+          "role": "pickup_readable"
+        },
+        {
+          "id": "floor_pickup_b",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.26,
+            0,
+            0.29
+          ],
+          "yaw": 0,
+          "role": "pickup_readable"
+        },
+        {
+          "id": "spawn_northwest",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.36,
+            0,
+            0.36
+          ],
+          "yaw": 0,
+          "role": "enemy_spawn"
+        },
+        {
+          "id": "spawn_northeast",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.34,
+            0,
+            0.34
+          ],
+          "yaw": 0,
+          "role": "enemy_spawn"
+        },
+        {
+          "id": "spawn_southwest",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            -0.34,
+            0,
+            -0.22
+          ],
+          "yaw": 3.141592653589793,
+          "role": "enemy_spawn"
+        },
+        {
+          "id": "spawn_southeast",
+          "roomId": "maintenance_bay_floor",
+          "roomRelative": [
+            0.32,
+            0,
+            -0.26
+          ],
+          "yaw": 3.141592653589793,
+          "role": "enemy_spawn"
+        }
+      ]
+    }
+  },
+  "spawnLayouts": {
+    "hp:perimeter_wave_spawns_v1": {
+      "id": "hp:perimeter_wave_spawns_v1",
+      "anchors": [
+        "spawn_northwest",
+        "spawn_northeast",
+        "spawn_southwest",
+        "spawn_southeast"
+      ],
+      "maxSimultaneousGroups": 3,
+      "minDistanceFromPlayerStart": 8,
+      "lineOfSightPolicy": "partial_cover"
+    }
+  },
+  "pickupLayouts": {
+    "hp:readable_center_pickups_v1": {
+      "id": "hp:readable_center_pickups_v1",
+      "anchors": [
+        "floor_pickup_a",
+        "floor_pickup_b"
+      ],
+      "visibilityPolicy": "glow_beacon_when_critical",
+      "avoidCombatLaneRadius": 1.2,
+      "dynamicSpacingRadius": 0.86,
+      "dropScatterRadius": 0.34,
+      "energyGlowColor": "#66efff",
+      "energyGlowIntensity": 1.68,
+      "repairBeaconColor": "#ff8a74"
+    },
+    "hp:human_museum_archive_pickups_v1": {
+      "id": "hp:human_museum_archive_pickups_v1",
+      "anchors": [
+        "floor_pickup_a",
+        "floor_pickup_b"
+      ],
+      "visibilityPolicy": "glow_beacon_when_critical",
+      "avoidCombatLaneRadius": 1.2,
+      "dynamicSpacingRadius": 0.86,
+      "dropScatterRadius": 0.34,
+      "energyGlowColor": "#d8b66a",
+      "energyGlowIntensity": 1.18,
+      "repairBeaconColor": "#d49b7a"
+    }
+  },
+  "previewCameras": {
+    "hp:wide_room_showcase_v1": {
+      "id": "hp:wide_room_showcase_v1",
+      "positionMode": "room_relative_xz",
+      "roomId": "maintenance_bay_floor",
+      "position": [
+        -0.34,
+        2.15,
+        0.36
+      ],
+      "target": [
+        0.05,
+        1.25,
+        -0.15
+      ],
+      "fov": 60,
+      "purpose": "art_qa"
+    },
+    "hp:wide_room_showcase_clean_v2": {
+      "id": "hp:wide_room_showcase_clean_v2",
+      "positionMode": "room_relative_xz",
+      "roomId": "maintenance_bay_floor",
+      "position": [
+        -0.34,
+        2.12,
+        0.34
+      ],
+      "target": [
+        0.06,
+        1.24,
+        -0.16
+      ],
+      "fov": 59,
+      "purpose": "art_qa"
+    },
+    "hp:wide_room_showcase_clean_v3": {
+      "id": "hp:wide_room_showcase_clean_v3",
+      "positionMode": "room_relative_xz",
+      "roomId": "maintenance_bay_floor",
+      "position": [
+        -0.35,
+        2.1,
+        0.35
+      ],
+      "target": [
+        0.04,
+        1.18,
+        -0.16
+      ],
+      "fov": 58,
+      "purpose": "art_qa"
+    },
+    "hp:maintenance_repair_bay_showcase_v1": {
+      "id": "hp:maintenance_repair_bay_showcase_v1",
+      "positionMode": "room_relative_xz",
+      "roomId": "maintenance_bay_floor",
+      "position": [
+        0.15,
+        1.9,
+        0.49
+      ],
+      "target": [
+        -0.16,
+        0.78,
+        0.4
+      ],
+      "fov": 50,
+      "purpose": "art_qa"
+    },
+    "hp:residential_living_showcase_v1": {
+      "id": "hp:residential_living_showcase_v1",
+      "positionMode": "room_relative_xz",
+      "roomId": "level_02_living_room",
+      "position": [
+        -0.38,
+        1.78,
+        0.42
+      ],
+      "target": [
+        0.02,
+        0.9,
+        -0.18
+      ],
+      "fov": 59,
+      "purpose": "art_qa"
+    },
+    "hp:human_museum_showcase_v1": {
+      "id": "hp:human_museum_showcase_v1",
+      "positionMode": "room_relative_xz",
+      "roomId": "level_03_gallery_lobby",
+      "position": [
+        -0.38,
+        2.05,
+        0.36
+      ],
+      "target": [
+        0.04,
+        1.12,
+        -0.18
+      ],
+      "fov": 58,
+      "purpose": "art_qa"
+    }
+  }
+}

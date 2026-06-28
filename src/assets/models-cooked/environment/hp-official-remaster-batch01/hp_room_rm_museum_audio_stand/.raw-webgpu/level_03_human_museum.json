@@ -1,0 +1,462 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_rm_museum_audio_stand",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_audio_stand.glb",
+  "fileName": "hp_room_rm_museum_audio_stand.glb",
+  "sourceAsset": {
+    "modelKey": "room_rm_museum_audio_stand",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_audio_stand.glb",
+    "file": "src/assets/models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_audio_stand.glb",
+    "sizeMeters": [
+      0.7,
+      1.689,
+      0.7
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 26232,
+      "meshes": 8,
+      "nodes": 8,
+      "skins": 0,
+      "primitives": 8,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 32,
+      "bufferViews": 32,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_unlit"
+      ],
+      "estimatedTriangles": 290
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_audio_stand.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 808482,
+    "vertexCount": 870,
+    "triangleCount": 290,
+    "meshCount": 8,
+    "materialCount": 4,
+    "nodeCount": 8,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.35,
+        0,
+        -0.35
+      ],
+      "center": [
+        0,
+        0.802713,
+        0
+      ],
+      "size": [
+        0.7,
+        1.605427,
+        0.7
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "contact_shadow",
+        "vertexOffset": 808482,
+        "vertexCount": 6,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.012,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -0.012,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "stand_base",
+        "vertexOffset": 808488,
+        "vertexCount": 192,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.04,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.04,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "stand_post",
+        "vertexOffset": 808680,
+        "vertexCount": 120,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.63,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.63,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "dial_box",
+        "vertexOffset": 808800,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.16,
+          0.02,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.16,
+          -0.02,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "dial",
+        "vertexOffset": 808836,
+        "vertexCount": 168,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1.16,
+          0.1,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -0.1,
+          1.16,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "horn_throat",
+        "vertexOffset": 809004,
+        "vertexCount": 144,
+        "bindMatrix": [
+          0.955336,
+          -0.226026,
+          -0.190379,
+          0,
+          0.29552,
+          0.730682,
+          0.615445,
+          0,
+          0,
+          -0.644218,
+          0.764842,
+          0,
+          0.04,
+          1.38,
+          -0.04,
+          1
+        ],
+        "inverseBindMatrix": [
+          0.955336,
+          0.29552,
+          0,
+          0,
+          -0.226026,
+          0.730682,
+          -0.644218,
+          0,
+          -0.190379,
+          0.615445,
+          0.764842,
+          0,
+          0.266088,
+          -0.995544,
+          0.919614,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "horn_bell",
+        "vertexOffset": 809148,
+        "vertexCount": 168,
+        "bindMatrix": [
+          0.955336,
+          -0.226026,
+          -0.190379,
+          0,
+          0.29552,
+          0.730682,
+          0.615445,
+          0,
+          0,
+          -0.644218,
+          0.764842,
+          0,
+          0.13,
+          1.5,
+          -0.12,
+          1
+        ],
+        "inverseBindMatrix": [
+          0.955336,
+          0.29552,
+          0,
+          0,
+          -0.226026,
+          0.730682,
+          -0.644218,
+          0,
+          -0.190379,
+          0.615445,
+          0.764842,
+          0,
+          0.192,
+          -1.060587,
+          1.058108,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "whisper_dot",
+        "vertexOffset": 809316,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.1,
+          1.1,
+          0.09,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.1,
+          -1.1,
+          -0.09,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_03_rm_audio_stand",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        11.2,
+        0,
+        1.6
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -0.6,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "official",
+        "level03",
+        "remaster"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          11.2,
+          0,
+          1.6
+        ],
+        "halfSize": [
+          0.35,
+          0.8445,
+          0.35
+        ]
+      }
+    }
+  ]
+}

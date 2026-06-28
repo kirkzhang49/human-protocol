@@ -1,0 +1,171 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_01_maintenance_bay",
+  "modelKey": "decal_human_spine_reference",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level01/hp_decal_human_spine_reference.glb",
+  "fileName": "hp_decal_human_spine_reference.glb",
+  "sourceAsset": {
+    "modelKey": "decal_human_spine_reference",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level01/hp_decal_human_spine_reference.glb",
+    "file": "src/assets/models-cooked/environment/level01/hp_decal_human_spine_reference.glb",
+    "sizeMeters": [
+      1,
+      1,
+      0.02
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 13788,
+      "meshes": 1,
+      "nodes": 1,
+      "skins": 0,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 1,
+      "images": 1,
+      "accessors": 4,
+      "bufferViews": 5,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 2
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level01/hp_decal_human_spine_reference.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 2112,
+    "vertexCount": 6,
+    "triangleCount": 2,
+    "meshCount": 1,
+    "materialCount": 1,
+    "nodeCount": 1,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.5,
+        -0.5,
+        0
+      ],
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        0
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_decal_human_spine_reference_image2_poster_root",
+        "vertexOffset": 2112,
+        "vertexCount": 6,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "decal:level_01_wall_human_spine_reference",
+      "source": "map.decals",
+      "role": "decal_human_spine_reference",
+      "roomId": "maintenance_bay_floor",
+      "secondaryRoomId": null,
+      "position": [
+        -2.62,
+        1.74,
+        4.55
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.68,
+        1,
+        1
+      ],
+      "tags": [
+        "official",
+        "level01",
+        "wall_reference",
+        "configurable"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": {
+        "decalId": "level_01_wall_human_spine_reference",
+        "decalKind": "human_spine_reference",
+        "opacity": 0.84
+      },
+      "estimatedBounds": {
+        "center": [
+          -2.62,
+          1.74,
+          4.55
+        ],
+        "halfSize": [
+          0.34,
+          0.5,
+          0.01
+        ]
+      }
+    }
+  ]
+}

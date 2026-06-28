@@ -1,0 +1,1389 @@
+{
+  "schema": "human-protocol/furniture-asset-factory@1",
+  "id": "human_protocol_furniture_asset_factory_v1",
+  "purpose": "Blueprint-first furniture and museum prop production pipeline for web, future Electron, and the Human Protocol WebGPU runtime pack.",
+  "sourceResearch": {
+    "title": "GPT 驱动的 3D 家具资产与游戏道具生产方案研究报告",
+    "absorbedPolicy": "GPT/Image2 assist concept, specs, scripts, metadata, and QA. Blender/source geometry and repo manifests remain the production source of truth."
+  },
+  "pathConventions": {
+    "image2Sources": "src/assets/textures/environment/{family}/image2-sources",
+    "textures": "src/assets/textures/environment/{family}",
+    "blenderScripts": "scripts/asset-build",
+    "sourceBlend": "src/assets/source_blend/{level-or-family}",
+    "rawModels": "src/assets/models/environment/props",
+    "cookedModels": "src/assets/models-cooked/environment/props",
+    "builderThumbnails": "src/assets/thumbnails/builder/core",
+    "runtimeManifests": "src/assets/manifests/runtime",
+    "qaReports": "src/assets/manifests/reports"
+  },
+  "registryTargets": [
+    {
+      "id": "environmentPropsRegistry",
+      "path": "src/assets/registry/environment/props.ts",
+      "contains": "modelKey: \"{modelKey}\""
+    },
+    {
+      "id": "builderAssetCatalog",
+      "path": "src/build/BuilderAssetCatalog.ts",
+      "contains": "modelKey: \"{modelKey}\""
+    },
+    {
+      "id": "builderAssetFootprints",
+      "path": "src/build/BuilderAssetFootprints.tsx",
+      "contains": "{modelKey}:"
+    }
+  ],
+  "requiredBlueprintFields": [
+    "assetFamily",
+    "modelKey",
+    "assetClass",
+    "readiness",
+    "role",
+    "scaleMeters",
+    "silhouette",
+    "materialSlots",
+    "textureSources",
+    "states",
+    "collisionProxy",
+    "runtimeContent",
+    "lodPolicy",
+    "pathPlan",
+    "integration",
+    "qaEvidence"
+  ],
+  "readinessPolicy": {
+    "blueprint-ready": "Specification is complete. Generated files may be pending.",
+    "source-ready": "Image2 source art, Blender script, or source blend exists.",
+    "raw-ready": "Raw GLB exists and still needs cooking/registration or visual acceptance.",
+    "runtime-ready": "Cooked GLB, registry, builder catalog, thumbnail, and Raw WebGPU sidecar are present.",
+    "build-ready": "Cooked GLB, registry, builder catalog, builder footprint, and thumbnail are present. Raw WebGPU sidecar is required only after official/build runtime baking promotes it to runtime-ready."
+  },
+  "qualityBudgets": {
+    "webDefault": {
+      "maxTextureSize": 1024,
+      "preferredTextureFormats": [
+        "webp",
+        "ktx2"
+      ],
+      "materialSlots": "1-3",
+      "transparentSurfaces": "minimize overdraw; use glass edges and faint tint instead of large opaque panels"
+    },
+    "electronDefault": {
+      "maxTextureSize": 2048,
+      "preferredTextureFormats": [
+        "webp",
+        "ktx2"
+      ],
+      "runtimePolicy": "bundle cooked packs; preserve same manifest contract as web"
+    },
+    "webgpuPackTarget": {
+      "meshCompression": "meshopt or engine-native packed buffers",
+      "textureCompression": "ktx2/webp by platform profile",
+      "requiredMetadata": [
+        "boundsMeters",
+        "pivot",
+        "lods",
+        "collider",
+        "materials",
+        "license",
+        "source"
+      ]
+    }
+  },
+  "pipelineStages": [
+    {
+      "id": "01_blueprint",
+      "owner": "config-manifest",
+      "outputs": [
+        "modelKey",
+        "scaleMeters",
+        "materialSlots",
+        "collisionProxy",
+        "pathPlan"
+      ],
+      "gate": "npm run assets:furniture:pipeline"
+    },
+    {
+      "id": "02_image2_concept",
+      "owner": "asset-art",
+      "outputs": [
+        "source boards",
+        "texture evidence",
+        "prompt/provenance notes"
+      ],
+      "gate": "source images are referenced or procedural-material-only is declared"
+    },
+    {
+      "id": "03_math_search",
+      "owner": "asset-tech-art",
+      "outputs": [
+        "parameter report",
+        "selected scale/material/readability values"
+      ],
+      "gate": "report records scores, candidates, penalties, and chosen params when search is used"
+    },
+    {
+      "id": "04_blender_generation",
+      "owner": "asset-tech-art",
+      "outputs": [
+        "source blend",
+        "raw GLB",
+        "named parts",
+        "material slots"
+      ],
+      "gate": "asset has grounded pivot, meter scale, bevels, weighted normals, and no visible proxy cubes"
+    },
+    {
+      "id": "05_runtime_cook",
+      "owner": "asset-build",
+      "outputs": [
+        "cooked GLB",
+        "runtime cooking report"
+      ],
+      "gate": "npm run cook:runtime-glb -- --only=environment/props/<file>.glb"
+    },
+    {
+      "id": "06_registry_integration",
+      "owner": "config-runtime",
+      "outputs": [
+        "environment props registry",
+        "builder catalog",
+        "builder footprint"
+      ],
+      "gate": "asset resolves by modelKey, not renderer hardcode"
+    },
+    {
+      "id": "07_raw_webgpu_acceptance",
+      "owner": "runtime-pack",
+      "outputs": [
+        "Raw WebGPU render plan",
+        "sidecar",
+        "builder runtime resource index"
+      ],
+      "gate": "qa:visual-bake-contract and qa:builder:wgpu-assets pass when official/build content uses the asset"
+    }
+  ],
+  "blueprints": [
+    {
+      "assetFamily": "museum_glass_vitrine",
+      "modelKey": "room_museum_glass_vitrine_specimen",
+      "assetClass": "hero-display-case",
+      "readiness": "runtime-ready",
+      "role": "Reusable museum glass display case seed asset for specimen and exhibit layouts.",
+      "scaleMeters": {
+        "width": 1.25,
+        "height": 1.88,
+        "depth": 1.07,
+        "readDistance": 4
+      },
+      "silhouette": [
+        "rectangular glass volume",
+        "dark plinth",
+        "thin metallic vertical frame",
+        "small illuminated specimen volume"
+      ],
+      "materialSlots": [
+        {
+          "name": "base",
+          "intent": "dark stone/metal plinth"
+        },
+        {
+          "name": "trim",
+          "intent": "old brass and smoked titanium"
+        },
+        {
+          "name": "glass",
+          "intent": "nearly transparent cyan-tinted case"
+        },
+        {
+          "name": "emissive",
+          "intent": "restrained cyan exhibit light"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png"
+      ],
+      "states": [
+        "static",
+        "powered"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.625,
+          0.94,
+          0.535
+        ],
+        "notes": "Case should block body movement but not cover nearby pickups."
+      },
+      "runtimeContent": {
+        "baked": [
+          "frame",
+          "glass",
+          "base",
+          "static specimen silhouette"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 3,
+        "web": "LOD0/1/2 or meshopt simplified cooked GLB",
+        "electron": "same modelKey with higher texture profile allowed later"
+      },
+      "pathPlan": {
+        "sourceBlend": "src/assets/source_blend/level03/human_protocol_level03_museum_assets_v2.blend",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_room_museum_glass_vitrine_specimen.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/room_museum_glass_vitrine_specimen.webp",
+        "rawWebgpuSidecar": "src/assets/models-cooked/environment/props/hp_room_museum_glass_vitrine_specimen/.raw-webgpu/level_03_human_museum.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "display_case",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Reference by modelKey from LevelDefinition props or room kit only."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:pipeline",
+          "npm run qa:visual-bake-contract",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending per visual change"
+      }
+    },
+    {
+      "assetFamily": "museum_gallery_bench",
+      "modelKey": "room_museum_gallery_bench",
+      "assetClass": "standard-furniture",
+      "readiness": "runtime-ready",
+      "role": "Museum bench seed asset for quiet gallery room layouts and navigation-safe seating props.",
+      "scaleMeters": {
+        "width": 1.6,
+        "height": 0.49,
+        "depth": 0.42,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "long horizontal seat",
+        "thin metal supports",
+        "low plinth contact"
+      ],
+      "materialSlots": [
+        {
+          "name": "seat",
+          "intent": "dark leather or aged wood surface"
+        },
+        {
+          "name": "supports",
+          "intent": "smoked metal supports"
+        },
+        {
+          "name": "trim",
+          "intent": "small brass/cyan accent"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png"
+      ],
+      "states": [
+        "static"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.8,
+          0.245,
+          0.21
+        ],
+        "notes": "Low furniture should not create stuck corners near doors."
+      },
+      "runtimeContent": {
+        "baked": [
+          "seat",
+          "supports"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "LOD0/1 or meshopt simplification",
+        "electron": "same as web"
+      },
+      "pathPlan": {
+        "sourceBlend": "src/assets/source_blend/level03/human_protocol_level03_museum_assets_v2.blend",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_room_museum_gallery_bench.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/room_museum_gallery_bench.webp",
+        "rawWebgpuSidecar": "src/assets/models-cooked/environment/props/hp_room_museum_gallery_bench/.raw-webgpu/level_03_human_museum.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "table",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Reference by modelKey from LevelDefinition props or room kit only."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:pipeline"
+        ],
+        "browserReview": "pending per visual change"
+      }
+    },
+    {
+      "assetFamily": "museum_archive_cabinet",
+      "modelKey": "room_museum_archive_cabinet_drawers_brass",
+      "assetClass": "standard-cabinet",
+      "readiness": "runtime-ready",
+      "role": "Archive drawer cabinet seed asset for museum/library/storage spaces.",
+      "scaleMeters": {
+        "width": 0.6,
+        "height": 1.38,
+        "depth": 0.758,
+        "readDistance": 3
+      },
+      "silhouette": [
+        "upright drawer stack",
+        "brass handles",
+        "dark cabinet body"
+      ],
+      "materialSlots": [
+        {
+          "name": "cabinet",
+          "intent": "dark metal or varnished old wood"
+        },
+        {
+          "name": "handles",
+          "intent": "brass drawer pulls"
+        },
+        {
+          "name": "labelStrips",
+          "intent": "small archive labels without readable dynamic text"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png"
+      ],
+      "states": [
+        "static"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.3,
+          0.69,
+          0.379
+        ],
+        "notes": "Cabinet can sit against walls and should not protrude into door thresholds."
+      },
+      "runtimeContent": {
+        "baked": [
+          "drawer grid",
+          "handles",
+          "non-readable label rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 3,
+        "web": "drawer/handle detail may simplify at distance",
+        "electron": "same geometry, optional higher texture budget"
+      },
+      "pathPlan": {
+        "sourceBlend": "src/assets/source_blend/level03/human_protocol_level03_museum_assets_v2.blend",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_room_museum_archive_cabinet_drawers_brass.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/room_museum_archive_cabinet_drawers_brass.webp",
+        "rawWebgpuSidecar": "src/assets/models-cooked/environment/props/hp_room_museum_archive_cabinet_drawers_brass/.raw-webgpu/level_03_human_museum.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "cabinet",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Reference by modelKey from LevelDefinition props or room kit only."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:pipeline"
+        ],
+        "browserReview": "pending per visual change"
+      }
+    },
+    {
+      "assetFamily": "museum_statue_pedestal",
+      "modelKey": "room_museum_statue_pedestal",
+      "assetClass": "sculpture-plinth",
+      "readiness": "runtime-ready",
+      "role": "Museum plinth/statue seed asset for sculpture display and composition anchors.",
+      "scaleMeters": {
+        "width": 0.736,
+        "height": 2.412,
+        "depth": 0.736,
+        "readDistance": 5
+      },
+      "silhouette": [
+        "vertical sculpture mass",
+        "square plinth",
+        "narrow museum profile"
+      ],
+      "materialSlots": [
+        {
+          "name": "stone",
+          "intent": "museum stone or plaster body"
+        },
+        {
+          "name": "base",
+          "intent": "dark plinth"
+        },
+        {
+          "name": "trim",
+          "intent": "minimal brass/cyan exhibit accent"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png"
+      ],
+      "states": [
+        "static"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.368,
+          1.206,
+          0.368
+        ],
+        "notes": "Use sparingly in navigation spaces because height can hide enemies."
+      },
+      "runtimeContent": {
+        "baked": [
+          "plinth",
+          "static sculpture silhouette"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 3,
+        "web": "simplify sculpture detail aggressively after 5m",
+        "electron": "same modelKey with optional higher texture profile"
+      },
+      "pathPlan": {
+        "sourceBlend": "src/assets/source_blend/level03/human_protocol_level03_museum_assets_v2.blend",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_room_museum_statue_pedestal.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/room_museum_statue_pedestal.webp",
+        "rawWebgpuSidecar": "src/assets/models-cooked/environment/props/hp_room_museum_statue_pedestal/.raw-webgpu/level_03_human_museum.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "pedestal",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Reference by modelKey from LevelDefinition props or room kit only."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:pipeline"
+        ],
+        "browserReview": "pending per visual change"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_glass_display_case",
+      "modelKey": "hp_furniture_museum_glass_display_case_v1",
+      "assetClass": "hero-display-case",
+      "readiness": "build-ready",
+      "role": "玻璃展示柜 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 1.42,
+        "height": 2.03,
+        "depth": 0.845,
+        "readDistance": 4.5
+      },
+      "silhouette": [
+        "transparent glass volume",
+        "dark plinth",
+        "thin brass posts",
+        "internal specimen core"
+      ],
+      "materialSlots": [
+        {
+          "name": "glass",
+          "intent": "near-clear cyan museum glass with edge glints"
+        },
+        {
+          "name": "base",
+          "intent": "black stone or smoked titanium plinth"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass/dark metal frame details"
+        },
+        {
+          "name": "emissive",
+          "intent": "restrained cyan exhibit light"
+        },
+        {
+          "name": "displayObject",
+          "intent": "contained artifact/specimen geometry"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static",
+        "powered"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.71,
+          1.015,
+          0.423
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 3,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_museum_glass_display_case_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_museum_glass_display_case_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_museum_glass_display_case_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "display_case",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_horizontal_tool_case",
+      "modelKey": "hp_furniture_museum_horizontal_tool_case_v1",
+      "assetClass": "hero-display-case",
+      "readiness": "build-ready",
+      "role": "横向武器/工具柜 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 2.36,
+        "height": 0.93,
+        "depth": 0.82,
+        "readDistance": 4.5
+      },
+      "silhouette": [
+        "long low glass box",
+        "contained rod/tool silhouettes",
+        "heavy base",
+        "cyan internal strip"
+      ],
+      "materialSlots": [
+        {
+          "name": "glass",
+          "intent": "near-clear cyan museum glass with edge glints"
+        },
+        {
+          "name": "base",
+          "intent": "black stone or smoked titanium plinth"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass/dark metal frame details"
+        },
+        {
+          "name": "emissive",
+          "intent": "restrained cyan exhibit light"
+        },
+        {
+          "name": "displayObject",
+          "intent": "contained artifact/specimen geometry"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static",
+        "powered"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          1.18,
+          0.465,
+          0.41
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 3,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_museum_horizontal_tool_case_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_museum_horizontal_tool_case_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_museum_horizontal_tool_case_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "display_case",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_gallery_bench",
+      "modelKey": "hp_furniture_museum_gallery_bench_v1",
+      "assetClass": "standard-furniture",
+      "readiness": "build-ready",
+      "role": "博物馆长椅 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 2,
+        "height": 0.51,
+        "depth": 0.48,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "long dark seat",
+        "thin brass rail",
+        "low metal legs"
+      ],
+      "materialSlots": [
+        {
+          "name": "body",
+          "intent": "dark Human Protocol facility hard-surface body"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass and smoked metal accents"
+        },
+        {
+          "name": "emissive",
+          "intent": "small cyan state/detail light where appropriate"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          1,
+          0.255,
+          0.24
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_museum_gallery_bench_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_museum_gallery_bench_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_museum_gallery_bench_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "table",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_archive_cabinet",
+      "modelKey": "hp_furniture_archive_cabinet_v1",
+      "assetClass": "standard-cabinet",
+      "readiness": "build-ready",
+      "role": "档案柜 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 0.98,
+        "height": 1.64,
+        "depth": 0.646,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "upright drawer stack",
+        "brass pulls",
+        "archive label rhythm"
+      ],
+      "materialSlots": [
+        {
+          "name": "body",
+          "intent": "dark Human Protocol facility hard-surface body"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass and smoked metal accents"
+        },
+        {
+          "name": "emissive",
+          "intent": "small cyan state/detail light where appropriate"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.49,
+          0.82,
+          0.323
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_archive_cabinet_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_archive_cabinet_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_archive_cabinet_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "cabinet",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_maintenance_cart",
+      "modelKey": "hp_furniture_maintenance_cart_v1",
+      "assetClass": "standard-furniture",
+      "readiness": "build-ready",
+      "role": "金属检修推车 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 1.092,
+        "height": 0.996,
+        "depth": 0.685,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "two metal shelves",
+        "push handle",
+        "small wheels",
+        "cyan canisters"
+      ],
+      "materialSlots": [
+        {
+          "name": "body",
+          "intent": "dark Human Protocol facility hard-surface body"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass and smoked metal accents"
+        },
+        {
+          "name": "emissive",
+          "intent": "small cyan state/detail light where appropriate"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.546,
+          0.498,
+          0.343
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_maintenance_cart_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_maintenance_cart_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_maintenance_cart_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "table",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_display_plinth",
+      "modelKey": "hp_furniture_display_plinth_v1",
+      "assetClass": "sculpture-plinth",
+      "readiness": "build-ready",
+      "role": "展示底座 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 0.86,
+        "height": 0.928,
+        "depth": 0.86,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "square stone pedestal",
+        "pale display core",
+        "thin brass top plate"
+      ],
+      "materialSlots": [
+        {
+          "name": "body",
+          "intent": "dark Human Protocol facility hard-surface body"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass and smoked metal accents"
+        },
+        {
+          "name": "emissive",
+          "intent": "small cyan state/detail light where appropriate"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.43,
+          0.464,
+          0.43
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_display_plinth_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_display_plinth_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_display_plinth_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "pedestal",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_wall_archive_cabinet",
+      "modelKey": "hp_furniture_wall_archive_cabinet_v1",
+      "assetClass": "wall-mounted-cabinet",
+      "readiness": "build-ready",
+      "role": "壁挂资料柜 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 1.28,
+        "height": 1.12,
+        "depth": 0.278,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "shallow wall cabinet",
+        "document slots",
+        "bottom cable rail"
+      ],
+      "materialSlots": [
+        {
+          "name": "body",
+          "intent": "dark Human Protocol facility hard-surface body"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass and smoked metal accents"
+        },
+        {
+          "name": "emissive",
+          "intent": "small cyan state/detail light where appropriate"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.64,
+          0.56,
+          0.139
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_wall_archive_cabinet_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_wall_archive_cabinet_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_wall_archive_cabinet_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "wall_panel",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_lab_table",
+      "modelKey": "hp_furniture_lab_table_v1",
+      "assetClass": "standard-furniture",
+      "readiness": "build-ready",
+      "role": "实验桌 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 1.82,
+        "height": 0.944,
+        "depth": 0.784,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "sterile tabletop",
+        "dark underframe",
+        "glass tray",
+        "sample core"
+      ],
+      "materialSlots": [
+        {
+          "name": "body",
+          "intent": "dark Human Protocol facility hard-surface body"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass and smoked metal accents"
+        },
+        {
+          "name": "emissive",
+          "intent": "small cyan state/detail light where appropriate"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static",
+        "powered"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.91,
+          0.472,
+          0.392
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_lab_table_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_lab_table_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_lab_table_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "table",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_cold_ceiling_light_slot",
+      "modelKey": "hp_furniture_cold_ceiling_light_slot_v1",
+      "assetClass": "ceiling-fixture",
+      "readiness": "build-ready",
+      "role": "冷光天花灯槽 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 2.05,
+        "height": 0.15,
+        "depth": 0.38,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "long recessed housing",
+        "cyan diffuser",
+        "brass ceiling caps"
+      ],
+      "materialSlots": [
+        {
+          "name": "housing",
+          "intent": "dark recessed metal housing"
+        },
+        {
+          "name": "diffuser",
+          "intent": "cold cyan light diffuser"
+        },
+        {
+          "name": "trim",
+          "intent": "small brass mounting caps"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static",
+        "powered"
+      ],
+      "collisionProxy": {
+        "type": "thin-box",
+        "blockPlayer": false,
+        "halfSizeMeters": [
+          1.025,
+          0.075,
+          0.19
+        ],
+        "notes": "Ceiling fixture should be mounted above navigation; keep non-solid in builder catalog."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_cold_ceiling_light_slot_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_cold_ceiling_light_slot_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_cold_ceiling_light_slot_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "lamp",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    },
+    {
+      "assetFamily": "furniture_factory_specimen_plinth_combo",
+      "modelKey": "hp_furniture_specimen_plinth_combo_v1",
+      "assetClass": "sculpture-plinth",
+      "readiness": "build-ready",
+      "role": "小型雕塑/标本底座组合 asset from furniture factory batch 01 for build-page placement and future official room kit use.",
+      "scaleMeters": {
+        "width": 0.92,
+        "height": 1.366,
+        "depth": 0.92,
+        "readDistance": 3.5
+      },
+      "silhouette": [
+        "black plinth",
+        "small transparent case",
+        "cyan specimen core",
+        "brass orbit ring"
+      ],
+      "materialSlots": [
+        {
+          "name": "body",
+          "intent": "dark Human Protocol facility hard-surface body"
+        },
+        {
+          "name": "trim",
+          "intent": "aged brass and smoked metal accents"
+        },
+        {
+          "name": "emissive",
+          "intent": "small cyan state/detail light where appropriate"
+        }
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_furniture_material_atlas_v1.png",
+        "src/assets/textures/environment/wgpu-room-props/hp_image2_environment_surfaces_atlas_v1.png",
+        "src/assets/textures/environment/level03/level03_image2_museum_stone_panel.png",
+        "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      ],
+      "states": [
+        "static",
+        "powered"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "blockPlayer": true,
+        "halfSizeMeters": [
+          0.46,
+          0.683,
+          0.46
+        ],
+        "notes": "Simple box collider for build-page placement; adjust sourceProp collider if promoted into official level layout."
+      },
+      "runtimeContent": {
+        "baked": [
+          "geometry",
+          "material slots",
+          "static detail rhythm"
+        ],
+        "dynamic": []
+      },
+      "lodPolicy": {
+        "levels": 2,
+        "web": "meshopt cooked static environment GLB",
+        "electron": "same modelKey; optional future higher texture profile"
+      },
+      "pathPlan": {
+        "blenderScript": "scripts/asset-build/blender-generate-furniture-factory-batch01.py",
+        "sourceBlend": "src/assets/source_blend/furniture/human_protocol_furniture_factory_batch01.blend",
+        "rawGlb": "src/assets/models/environment/props/hp_furniture_specimen_plinth_combo_v1.glb",
+        "cookedGlb": "src/assets/models-cooked/environment/props/hp_furniture_specimen_plinth_combo_v1.glb",
+        "thumbnail": "src/assets/thumbnails/builder/core/hp_furniture_specimen_plinth_combo_v1.webp",
+        "blenderReport": "src/assets/manifests/reports/furniture_factory_batch01_blender_report.json"
+      },
+      "integration": {
+        "builderCatalog": "src/build/BuilderAssetCatalog.ts",
+        "builderFootprint": "pedestal",
+        "assetRegistry": "src/assets/registry/environment/props.ts",
+        "officialLevelPolicy": "Use from LevelDefinition props or reusable room kits only; promote to runtime-ready after Raw WebGPU sidecar exists."
+      },
+      "qaEvidence": {
+        "commands": [
+          "npm run assets:furniture:batch01:blender",
+          "npm run cook:runtime-glb",
+          "npm run assets:furniture:pipeline",
+          "npm run qa:builder:wgpu-assets"
+        ],
+        "browserReview": "pending build-page browser review after Raw WebGPU resource pack rebuild"
+      }
+    }
+  ]
+}

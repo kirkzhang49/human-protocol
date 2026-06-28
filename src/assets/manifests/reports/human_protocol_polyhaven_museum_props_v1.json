@@ -1,0 +1,140 @@
+{
+  "schemaVersion": "human-protocol.asset-report.polyhaven-museum-props.v1",
+  "assetFamily": "polyhaven_museum_props_2026_06_18",
+  "licensePolicy": {
+    "source": "Poly Haven",
+    "license": "CC0",
+    "commercialUseAllowed": true,
+    "modificationAllowed": true,
+    "redistributionAllowedInBundledGame": true,
+    "attributionRequired": false,
+    "licenseUrl": "https://polyhaven.com/license"
+  },
+  "assets": [
+    {
+      "modelKey": "room_cc0_bust",
+      "label": "大理石胸像",
+      "sourceAssetId": "marble_bust_01",
+      "sourceUrl": "https://polyhaven.com/a/marble_bust_01",
+      "author": "Rico Cilliers",
+      "license": "CC0",
+      "role": "large marble bust scaled as a standalone museum floor sculpture",
+      "rawGlb": "src/assets/external/polyhaven_museum_props_2026_06_18/raw-glb/hp_room_cc0_bust.glb",
+      "sourceBlend": "src/assets/source_blend/polyhaven-museum-props/human_protocol_room_cc0_bust.blend",
+      "sizeMeters": [
+        0.712,
+        1.35,
+        0.786
+      ],
+      "bytesRaw": 897436,
+      "collisionProxy": {
+        "type": "box",
+        "sizeMeters": [
+          0.712,
+          1.35,
+          0.786
+        ]
+      }
+    },
+    {
+      "modelKey": "room_cc0_horse_statue_plinth",
+      "label": "瓷马雕塑展台",
+      "sourceAssetId": "horse_statue_01",
+      "sourceUrl": "https://polyhaven.com/a/horse_statue_01",
+      "author": "Rico Cilliers",
+      "license": "CC0",
+      "role": "porcelain horse statue scaled as a standalone museum floor sculpture",
+      "rawGlb": "src/assets/external/polyhaven_museum_props_2026_06_18/raw-glb/hp_room_cc0_horse_statue_plinth.glb",
+      "sourceBlend": "src/assets/source_blend/polyhaven-museum-props/human_protocol_room_cc0_horse_statue_plinth.blend",
+      "sizeMeters": [
+        0.997,
+        1.22,
+        0.997
+      ],
+      "bytesRaw": 1220232,
+      "collisionProxy": {
+        "type": "box",
+        "sizeMeters": [
+          0.997,
+          1.22,
+          0.997
+        ]
+      }
+    },
+    {
+      "modelKey": "room_cc0_bull_head_plinth",
+      "label": "青铜牛头雕塑",
+      "sourceAssetId": "bull_head",
+      "sourceUrl": "https://polyhaven.com/a/bull_head",
+      "author": "Tina",
+      "license": "CC0",
+      "role": "ornate bronze animal-head sculpture scaled for standalone museum display",
+      "rawGlb": "src/assets/external/polyhaven_museum_props_2026_06_18/raw-glb/hp_room_cc0_bull_head_plinth.glb",
+      "sourceBlend": "src/assets/source_blend/polyhaven-museum-props/human_protocol_room_cc0_bull_head_plinth.blend",
+      "sizeMeters": [
+        0.965,
+        1.28,
+        0.965
+      ],
+      "bytesRaw": 2100316,
+      "collisionProxy": {
+        "type": "box",
+        "sizeMeters": [
+          0.965,
+          1.28,
+          0.965
+        ]
+      }
+    },
+    {
+      "modelKey": "room_cc0_brass_vase_02",
+      "label": "青铜纹饰花瓶",
+      "sourceAssetId": "brass_vase_02",
+      "sourceUrl": "https://polyhaven.com/a/brass_vase_02",
+      "author": "Rico Cilliers",
+      "license": "CC0",
+      "role": "ornate brass vase artifact scaled for standalone museum display",
+      "rawGlb": "src/assets/external/polyhaven_museum_props_2026_06_18/raw-glb/hp_room_cc0_brass_vase_02.glb",
+      "sourceBlend": "src/assets/source_blend/polyhaven-museum-props/human_protocol_room_cc0_brass_vase_02.blend",
+      "sizeMeters": [
+        0.465,
+        1.16,
+        0.465
+      ],
+      "bytesRaw": 1905028,
+      "collisionProxy": {
+        "type": "box",
+        "sizeMeters": [
+          0.465,
+          1.16,
+          0.465
+        ]
+      }
+    },
+    {
+      "modelKey": "room_cc0_antique_ceramic_vase_01",
+      "label": "古陶彩绘花瓶",
+      "sourceAssetId": "antique_ceramic_vase_01",
+      "sourceUrl": "https://polyhaven.com/a/antique_ceramic_vase_01",
+      "author": "James Ray Cock",
+      "license": "CC0",
+      "role": "painted antique ceramic vase artifact scaled for standalone museum display",
+      "rawGlb": "src/assets/external/polyhaven_museum_props_2026_06_18/raw-glb/hp_room_cc0_antique_ceramic_vase_01.glb",
+      "sourceBlend": "src/assets/source_blend/polyhaven-museum-props/human_protocol_room_cc0_antique_ceramic_vase_01.blend",
+      "sizeMeters": [
+        0.627,
+        1.12,
+        0.627
+      ],
+      "bytesRaw": 602776,
+      "collisionProxy": {
+        "type": "box",
+        "sizeMeters": [
+          0.627,
+          1.12,
+          0.627
+        ]
+      }
+    }
+  ]
+}

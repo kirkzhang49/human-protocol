@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "hp.routeOutputOrbKeys.image2Report.v2",
+  "assetFamily": "route_output_orb_keys_image2_api_wrap_v2",
+  "sourcePolicy": "Image2/API generated four-panel wrap sheet, copied repo-locally and used as source evidence. The script crops and bakes the API art; it does not draw the source texture.",
+  "image2Api": {
+    "originalGeneratedPath": "/Users/zhengkaizhang/.codex/generated_images/019f0b84-6b3f-7141-a1a1-21484d6226cf/ig_0c257fac35b406fa016a40a480d748819895b172f406002d27.png",
+    "repoSourcePath": "src/assets/textures/environment/route-output-orbs/image2-sources/hp_route_output_orb_keys_image2_api_wrap_sheet_v2.png",
+    "prompt": "Generate a flat texture atlas, not a 3D render. Wide horizontal PNG, exactly four equal panels side by side, each panel is a seamless equirectangular sphere-wrap texture for a small sci-fi orb. Do not show a sphere, dome, perspective, shadows, or mockup scene. It must look like flat material artwork designed to wrap around a UV sphere. No readable words, no logos. Use thin dark gutters between panels. Panel 1 cyan, panel 2 amber gold, panel 3 green, panel 4 violet. Each panel: dark smoked titanium base, brass-gold equator stripe across the middle, curved latitude/longitude circuit arcs, repeated glowing medallion icons around the equator, small luminous dots, fine micro circuit traces, subtle glass highlights. Output glyphs are geometric not text: panel 1 has simple vertical bar motifs, panel 2 has double routed S-path motifs, panel 3 has triple bracket path motifs, panel 4 has forked H-path motifs. Make the artwork premium, clean, tileable horizontally within each panel, suitable to bake as a texture on an inner sphere inside a transparent glass key orb.",
+    "toolCallId": "not-exposed-by-codex-imagegen-tool",
+    "generationDate": "2026-06-27",
+    "commercialStatus": "openai-generated-output-user-owned-subject-to-openai-terms"
+  },
+  "derivativeScript": "scripts/asset-build/generate-route-output-orb-keys-image2.py",
+  "sourceBlend": "src/assets/source_blend/pickups/hp_route_output_orb_keys_image2_v1.blend",
+  "contactSheet": "src/assets/manifests/reports/hp_route_output_orb_keys_image2_contact_sheet.png",
+  "styleReferences": [
+    "src/assets/gui/route-switch/route_switch_output_rotary_buttons_image2_v1.png",
+    "src/assets/gui/route-switch/route_switch_icon_language_image2_v1.png"
+  ],
+  "runtimeContract": "visualKey route_output_orb_N maps to modelKey pickup_route_output_orb_N and unlocks only output N.",
+  "mobileBudget": {
+    "intendedCountNearRouteConsole": "1-4",
+    "sizeMeters": [
+      0.46,
+      0.55,
+      0.46
+    ],
+    "readability": "Image2/API wrapped inner sphere uses texture-driven emission, a small colored light core, a restrained inner emissive equator, and a short-range embedded point light inside a very low-opacity clear shell."
+  },
+  "lightingContract": "Each GLB carries route_orb_N_inner_ball_light emissive geometry plus a low-energy route_orb_N_embedded_inner_point_light; runtime also adds a short-distance ball-center light for consistent Three/WebGPU readability without washing out previews.",
+  "assets": [
+    {
+      "index": 1,
+      "visualKey": "route_output_orb_1",
+      "modelKey": "pickup_route_output_orb_1",
+      "glb": "src/assets/models-cooked/environment/props/hp_pickup_route_output_orb_1.glb",
+      "image2ApiWrapLayer": "src/assets/textures/environment/route-output-orbs/image2-sources/hp_route_output_orb_1_image2_api_wrap_v2.png",
+      "accent": "#72e8ff",
+      "triangleCount": 15036,
+      "sha256": {
+        "glb": "e81bd9875a692c58aa444068d8d60277b3c7c154f7dd109be182cf7d545d7376",
+        "image2ApiWrapLayer": "b10b3442136a35dcc6033ce47ddb22d4ef92cc1dc932e3eda522eae5fb69aaa6"
+      }
+    },
+    {
+      "index": 2,
+      "visualKey": "route_output_orb_2",
+      "modelKey": "pickup_route_output_orb_2",
+      "glb": "src/assets/models-cooked/environment/props/hp_pickup_route_output_orb_2.glb",
+      "image2ApiWrapLayer": "src/assets/textures/environment/route-output-orbs/image2-sources/hp_route_output_orb_2_image2_api_wrap_v2.png",
+      "accent": "#ffd76b",
+      "triangleCount": 15036,
+      "sha256": {
+        "glb": "ed1b02c5b6434e24f9dffaa5cd8356336434925623ea63066436e7b62e1843e9",
+        "image2ApiWrapLayer": "2e71337b409546c3d1a68a42dc04db4bcc9600b59d61ce518fdb3de8880a74ee"
+      }
+    },
+    {
+      "index": 3,
+      "visualKey": "route_output_orb_3",
+      "modelKey": "pickup_route_output_orb_3",
+      "glb": "src/assets/models-cooked/environment/props/hp_pickup_route_output_orb_3.glb",
+      "image2ApiWrapLayer": "src/assets/textures/environment/route-output-orbs/image2-sources/hp_route_output_orb_3_image2_api_wrap_v2.png",
+      "accent": "#71dc92",
+      "triangleCount": 15036,
+      "sha256": {
+        "glb": "d9560230797f8dcf80b09fe1e55658cdf9436009d183cf3fe3a6e3a6f6554af2",
+        "image2ApiWrapLayer": "bda56c1e3e0cd0e31055723fc4fc065437c3ecc1a0ac00aa31fa3b4b9c7fcdc2"
+      }
+    },
+    {
+      "index": 4,
+      "visualKey": "route_output_orb_4",
+      "modelKey": "pickup_route_output_orb_4",
+      "glb": "src/assets/models-cooked/environment/props/hp_pickup_route_output_orb_4.glb",
+      "image2ApiWrapLayer": "src/assets/textures/environment/route-output-orbs/image2-sources/hp_route_output_orb_4_image2_api_wrap_v2.png",
+      "accent": "#b995ff",
+      "triangleCount": 15036,
+      "sha256": {
+        "glb": "9afceb36ecfd9532a84696fb1583025a64e90f8e4081ae066036785413ad913c",
+        "image2ApiWrapLayer": "e974f06e0d3c4ca3e332483ca70c4dd198314c0b3ac57039dbe92076e2e13e51"
+      }
+    }
+  ]
+}

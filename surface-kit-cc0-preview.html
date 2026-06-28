@@ -1,0 +1,347 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Human Protocol Surface Kit Preview</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #090d10;
+      --panel: #111820;
+      --line: rgba(179, 220, 232, 0.22);
+      --text: #e8f5f8;
+      --muted: #91a7ae;
+      --cyan: #7ff2ff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at 15% 8%, rgba(127, 242, 255, 0.12), transparent 28rem),
+        linear-gradient(180deg, #080b0e 0%, #0c1116 48%, #07090b 100%);
+      color: var(--text);
+    }
+
+    main {
+      width: min(1240px, calc(100vw - 32px));
+      margin: 0 auto;
+      padding: 32px 0 44px;
+    }
+
+    header {
+      display: grid;
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: clamp(24px, 4vw, 42px);
+      font-weight: 760;
+      letter-spacing: 0;
+    }
+
+    .note {
+      max-width: 980px;
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .section-title {
+      margin: 30px 0 14px;
+      font-size: 15px;
+      font-weight: 760;
+      color: #cbe8ee;
+      letter-spacing: 0;
+    }
+
+    .kit-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(190px, 1fr));
+      gap: 14px;
+    }
+
+    .texture-grid {
+      display: grid;
+      grid-template-columns: repeat(5, minmax(170px, 1fr));
+      gap: 12px;
+    }
+
+    .kit-card,
+    .texture-card {
+      border: 1px solid var(--line);
+      border-radius: 8px;
+      background: rgba(15, 22, 28, 0.82);
+      overflow: hidden;
+      box-shadow: 0 20px 42px rgba(0, 0, 0, 0.24);
+    }
+
+    .kit-card {
+      min-height: 332px;
+    }
+
+    .kit-label,
+    .texture-label {
+      padding: 12px 13px 13px;
+      display: grid;
+      gap: 4px;
+      border-top: 1px solid rgba(179, 220, 232, 0.12);
+    }
+
+    .kit-label strong,
+    .texture-label strong {
+      font-size: 13px;
+      font-weight: 760;
+    }
+
+    .kit-label span,
+    .texture-label span {
+      color: var(--muted);
+      font-size: 11px;
+      line-height: 1.45;
+      word-break: break-word;
+    }
+
+    .room-stage {
+      position: relative;
+      height: 240px;
+      overflow: hidden;
+      background:
+        linear-gradient(180deg, rgba(255, 255, 255, 0.04), transparent 50%),
+        radial-gradient(circle at 50% 105%, rgba(127, 242, 255, 0.1), transparent 58%);
+      isolation: isolate;
+    }
+
+    .room {
+      position: absolute;
+      left: 50%;
+      top: 22px;
+      width: 245px;
+      height: 198px;
+      transform: translateX(-50%);
+    }
+
+    .plane {
+      position: absolute;
+      border: 1px solid rgba(233, 250, 255, 0.18);
+      background-color: var(--base);
+      background-image:
+        linear-gradient(rgba(255, 255, 255, 0.05), rgba(0, 0, 0, 0.1)),
+        var(--image),
+        var(--pattern);
+      background-size: auto, var(--scale, 120px) var(--scale, 120px), 36px 36px;
+      background-blend-mode: soft-light, multiply, normal;
+      box-shadow: inset 0 0 42px rgba(0, 0, 0, 0.42);
+    }
+
+    .floor {
+      left: 18px;
+      top: 106px;
+      width: 210px;
+      height: 100px;
+      --base: var(--floor-base);
+      --image: var(--floor-image);
+      --pattern: var(--floor-pattern);
+      transform: perspective(480px) rotateX(58deg) rotateZ(-14deg) skewX(-12deg);
+      transform-origin: 50% 0%;
+      filter: saturate(1.04) contrast(1.04);
+      z-index: 2;
+    }
+
+    .wall-back {
+      left: 39px;
+      top: 38px;
+      width: 188px;
+      height: 100px;
+      --base: var(--wall-base);
+      --image: var(--wall-image);
+      --pattern: var(--wall-pattern);
+      transform: skewX(-12deg);
+      z-index: 1;
+    }
+
+    .wall-side {
+      left: 206px;
+      top: 62px;
+      width: 58px;
+      height: 106px;
+      --base: var(--wall-base);
+      --image: var(--wall-image);
+      --pattern: var(--wall-pattern);
+      transform: skewY(31deg);
+      filter: brightness(0.78);
+      z-index: 3;
+    }
+
+    .ceiling-strip {
+      position: absolute;
+      left: 65px;
+      top: 30px;
+      width: 136px;
+      height: 8px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 22px var(--accent), 0 0 46px color-mix(in srgb, var(--accent), transparent 52%);
+      opacity: 0.82;
+      z-index: 4;
+    }
+
+    .route-line {
+      position: absolute;
+      left: 66px;
+      top: 151px;
+      width: 120px;
+      height: 3px;
+      border-radius: 999px;
+      background: var(--accent);
+      box-shadow: 0 0 14px var(--accent);
+      opacity: 0.72;
+      transform: skewX(-28deg);
+      z-index: 5;
+    }
+
+    .texture-card {
+      display: grid;
+      min-height: 194px;
+    }
+
+    .swatch {
+      min-height: 134px;
+      background-color: #20272d;
+      background-image:
+        linear-gradient(135deg, rgba(255, 255, 255, 0.12), transparent 45%, rgba(0, 0, 0, 0.2)),
+        var(--img);
+      background-size: auto, cover;
+      background-position: center;
+      transform: perspective(720px) rotateX(54deg) rotateZ(-15deg) translateY(-12px) scale(1.08);
+      transform-origin: 50% 65%;
+      border-bottom: 1px solid rgba(179, 220, 232, 0.14);
+      box-shadow: inset 0 -38px 60px rgba(0, 0, 0, 0.32);
+    }
+
+    .procedural {
+      background-size: auto, 72px 72px;
+      image-rendering: auto;
+    }
+
+    .mesh {
+      --floor-pattern:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+      --wall-pattern:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.04) 1px, transparent 1px);
+    }
+
+    .wood {
+      --floor-pattern: repeating-linear-gradient(90deg, rgba(255, 219, 156, 0.12) 0 4px, transparent 4px 18px);
+      --wall-pattern: repeating-linear-gradient(90deg, rgba(255, 219, 156, 0.1) 0 3px, transparent 3px 22px);
+    }
+
+    .stone {
+      --floor-pattern:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.09) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.07) 1px, transparent 1px);
+      --wall-pattern:
+        linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+    }
+
+    .clinic {
+      --floor-pattern:
+        linear-gradient(90deg, rgba(30, 90, 100, 0.16) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(30, 90, 100, 0.12) 1px, transparent 1px);
+      --wall-pattern:
+        linear-gradient(90deg, rgba(159, 243, 255, 0.1) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(159, 243, 255, 0.08) 1px, transparent 1px);
+    }
+
+    .core {
+      --floor-pattern:
+        repeating-linear-gradient(45deg, rgba(255, 91, 76, 0.14) 0 5px, transparent 5px 18px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.06) 1px, transparent 1px);
+      --wall-pattern:
+        linear-gradient(90deg, rgba(255, 91, 76, 0.14) 1px, transparent 1px),
+        linear-gradient(0deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+    }
+
+    @media (max-width: 1120px) {
+      .kit-grid { grid-template-columns: repeat(3, minmax(220px, 1fr)); }
+      .texture-grid { grid-template-columns: repeat(3, minmax(190px, 1fr)); }
+    }
+
+    @media (max-width: 720px) {
+      main { width: min(100vw - 20px, 520px); padding-top: 20px; }
+      .kit-grid,
+      .texture-grid { grid-template-columns: 1fr; }
+      .kit-card { min-height: 312px; }
+      .room-stage { height: 218px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <header>
+      <h1>Human Protocol 表面套件预览</h1>
+      <p class="note">这个页面只展示当前 repo 里已有、已接入或已登记的 CC0 / procedural-safe 表面素材。上面是 L1-L5 官方 surface kit 的平面 3D 切片；下面是可在 build 里继续吸收的照片/PBR 材质样本。</p>
+    </header>
+
+    <h2 class="section-title">L1-L5 官方 Surface Kit</h2>
+    <section class="kit-grid" aria-label="Official surface kit preview">
+      <article class="kit-card mesh" style="--floor-base:#17231f;--wall-base:#1c2b27;--accent:#7ff2ff;--floor-image:url('src/assets/textures/environment/builder-surfaces/metal_plate_color.webp');--wall-image:url('src/assets/textures/environment/shared-pbr/pbr_steel_brushed_basecolor.png');--scale:92px;">
+        <div class="room-stage"><div class="room"><div class="plane wall-back"></div><div class="plane wall-side"></div><div class="plane floor"></div><div class="ceiling-strip"></div><div class="route-line"></div></div></div>
+        <div class="kit-label"><strong>L1 维修舱金属套件</strong><span>floor_maintenance_metal / wall_maintenance_metal / room_*_maintenance</span></div>
+      </article>
+
+      <article class="kit-card wood" style="--floor-base:#261d12;--wall-base:#2d2418;--accent:#d8a86b;--floor-image:url('src/assets/textures/environment/builder-surfaces/wood_floor_color.webp');--wall-image:url('src/assets/textures/environment/shared-pbr/pbr_wood_walnut_basecolor.png');--scale:118px;">
+        <div class="room-stage"><div class="room"><div class="plane wall-back"></div><div class="plane wall-side"></div><div class="plane floor"></div><div class="ceiling-strip"></div><div class="route-line"></div></div></div>
+        <div class="kit-label"><strong>L2 居住模拟木墙套件</strong><span>floor_residential_wood / wall_residential_wood / room_*_residential</span></div>
+      </article>
+
+      <article class="kit-card stone" style="--floor-base:#1d2030;--wall-base:#242838;--accent:#d4b06a;--floor-image:url('src/assets/textures/environment/builder-surfaces/stone_pavers_color.webp');--wall-image:url('src/assets/textures/environment/shared-pbr/pbr_dark_marble_basecolor.png');--scale:112px;">
+        <div class="room-stage"><div class="room"><div class="plane wall-back"></div><div class="plane wall-side"></div><div class="plane floor"></div><div class="ceiling-strip"></div><div class="route-line"></div></div></div>
+        <div class="kit-label"><strong>L3 人类博物馆石墙套件</strong><span>floor_museum_stone / wall_museum_stone / room_*_museum</span></div>
+      </article>
+
+      <article class="kit-card clinic" style="--floor-base:#dbe5e3;--wall-base:#23343a;--accent:#9ff3ff;--floor-image:url('src/assets/textures/environment/shared-pbr/pbr_white_marble_basecolor.png');--wall-image:url('src/assets/textures/environment/shared-pbr/pbr_glass_frosted_basecolor.png');--scale:96px;">
+        <div class="room-stage"><div class="room"><div class="plane wall-back"></div><div class="plane wall-side"></div><div class="plane floor"></div><div class="ceiling-strip"></div><div class="route-line"></div></div></div>
+        <div class="kit-label"><strong>L4 记忆诊所瓷板套件</strong><span>floor_memory_clinic_tile / wall_memory_clinic_panel / room_*_clinic</span></div>
+      </article>
+
+      <article class="kit-card core" style="--floor-base:#121014;--wall-base:#21191e;--accent:#ff5b4c;--floor-image:url('src/assets/textures/environment/builder-surfaces/metal_plate_color.webp');--wall-image:url('src/assets/textures/environment/shared-pbr/pbr_steel_brushed_basecolor.png');--scale:88px;">
+        <div class="room-stage"><div class="room"><div class="plane wall-back"></div><div class="plane wall-side"></div><div class="plane floor"></div><div class="ceiling-strip"></div><div class="route-line"></div></div></div>
+        <div class="kit-label"><strong>L5 回收核心暗金属套件</strong><span>floor_reclamation_core_metal / wall_reclamation_core_panel / room_*_core</span></div>
+      </article>
+    </section>
+
+    <h2 class="section-title">Build 里已有的 CC0 / Photo Surface 样本</h2>
+    <section class="texture-grid" aria-label="Builder CC0 photo surface textures">
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/builder-surfaces/wood_floor_color.webp');"></div><div class="texture-label"><strong>实木地板·照片</strong><span>builder-surfaces / wood_floor_color.webp</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/builder-surfaces/white_marble_color.webp');"></div><div class="texture-label"><strong>白大理石·照片</strong><span>builder-surfaces / white_marble_color.webp</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/builder-surfaces/hex_tile_color.webp');"></div><div class="texture-label"><strong>六角砖·照片</strong><span>builder-surfaces / hex_tile_color.webp</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/builder-surfaces/stone_pavers_color.webp');"></div><div class="texture-label"><strong>石板路面·照片</strong><span>builder-surfaces / stone_pavers_color.webp</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/builder-surfaces/brick_wall_color.webp');"></div><div class="texture-label"><strong>红砖墙·照片</strong><span>builder-surfaces / brick_wall_color.webp</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/builder-surfaces/concrete_color.webp');"></div><div class="texture-label"><strong>清水混凝土·照片</strong><span>builder-surfaces / concrete_color.webp</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/builder-surfaces/dark_marble_color.webp');"></div><div class="texture-label"><strong>深色大理石·照片</strong><span>builder-surfaces / dark_marble_color.webp</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/builder-surfaces/metal_plate_color.webp');"></div><div class="texture-label"><strong>金属板墙·照片</strong><span>builder-surfaces / metal_plate_color.webp</span></div></article>
+    </section>
+
+    <h2 class="section-title">Ledger 里已登记的 ambientCG CC0 / procedural-safe PBR</h2>
+    <section class="texture-grid" aria-label="Registered CC0 PBR samples">
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/shared-pbr/pbr_steel_brushed_basecolor.png');"></div><div class="texture-label"><strong>steel_brushed</strong><span>ambientCG Metal032 / CC0</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/shared-pbr/pbr_brass_aged_basecolor.png');"></div><div class="texture-label"><strong>brass_aged</strong><span>ambientCG Metal007 / CC0</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/shared-pbr/pbr_stone_concrete_basecolor.png');"></div><div class="texture-label"><strong>stone_concrete</strong><span>ambientCG Concrete034 / CC0</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/shared-pbr/pbr_dark_marble_basecolor.png');"></div><div class="texture-label"><strong>dark_marble</strong><span>ambientCG Marble006 / CC0</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/shared-pbr/pbr_white_marble_basecolor.png');"></div><div class="texture-label"><strong>white_marble</strong><span>ambientCG Marble020 / CC0</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/shared-pbr/pbr_wood_walnut_basecolor.png');"></div><div class="texture-label"><strong>wood_walnut</strong><span>ambientCG Wood062 / CC0</span></div></article>
+      <article class="texture-card"><div class="swatch" style="--img:url('src/assets/textures/environment/shared-pbr/pbr_glass_frosted_basecolor.png');"></div><div class="texture-label"><strong>glass_frosted</strong><span>procedural-safe / no third-party scan</span></div></article>
+    </section>
+  </main>
+</body>
+</html>

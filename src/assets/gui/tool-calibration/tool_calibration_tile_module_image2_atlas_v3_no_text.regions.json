@@ -1,0 +1,110 @@
+{
+  "atlasSize": [
+    888,
+    888
+  ],
+  "sources": [
+    "src/assets/gui/tool-calibration/image2-sources/tool_calibration_complete_ui_image2_source_v3_no_hand.png",
+    "src/assets/gui/tool-calibration/image2-sources/tool_calibration_hardware_modules_image2_source_v1.png"
+  ],
+  "sourcePolicy": "Image2 crops only; script packs and writes regions. No local-drawn tile art.",
+  "regions": {
+    "source_tile_straight_off": [
+      24,
+      24,
+      192,
+      192
+    ],
+    "source_tile_corner_off": [
+      240,
+      24,
+      192,
+      192
+    ],
+    "source_tile_tee_off": [
+      456,
+      24,
+      192,
+      192
+    ],
+    "source_tile_blocked": [
+      672,
+      24,
+      192,
+      192
+    ],
+    "source_tile_turn_off": [
+      24,
+      240,
+      192,
+      192
+    ],
+    "source_tile_straight_on": [
+      240,
+      240,
+      192,
+      192
+    ],
+    "source_tile_corner_on": [
+      456,
+      240,
+      192,
+      192
+    ],
+    "source_tile_tee_on": [
+      672,
+      240,
+      192,
+      192
+    ],
+    "source_tile_cross_on": [
+      24,
+      456,
+      192,
+      192
+    ],
+    "source_tile_socket_empty": [
+      240,
+      456,
+      192,
+      192
+    ],
+    "source_tile_corner_alt": [
+      456,
+      456,
+      192,
+      192
+    ],
+    "source_tile_tee_alt": [
+      672,
+      456,
+      192,
+      192
+    ],
+    "source_tile_straight_alt": [
+      24,
+      672,
+      192,
+      192
+    ],
+    "source_tile_turn_alt": [
+      240,
+      672,
+      192,
+      192
+    ],
+    "cyan_glass_module": [
+      456,
+      672,
+      192,
+      192
+    ],
+    "round_energy_core_module": [
+      672,
+      672,
+      192,
+      192
+    ]
+  },
+  "notes": "No baked text tiles selected from the Image2 source; use this atlas before the broader source cut sheet when runtime text/state ownership matters."
+}

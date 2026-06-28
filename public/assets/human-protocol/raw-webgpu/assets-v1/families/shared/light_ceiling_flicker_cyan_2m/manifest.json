@@ -1,0 +1,298 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "light_ceiling_flicker_cyan_2m",
+  "family": "shared",
+  "bundleId": "shared/light_ceiling_flicker_cyan_2m",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+    "rawSource": "raw-models",
+    "sourceLevels": [
+      "level_01_maintenance_bay"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 108,
+    "triangleCount": 36,
+    "byteLength": 4320,
+    "hash": "77f3f685ff6f5593",
+    "asset": {
+      "modelKey": "light_ceiling_flicker_cyan_2m",
+      "sourceFile": "src/assets/models-cooked/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+      "rawFile": "src/assets/models/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+      "rawSource": "raw-models",
+      "vertexOffset": 0,
+      "vertexCount": 108,
+      "triangleCount": 36,
+      "meshCount": 3,
+      "materialCount": 2,
+      "nodeCount": 4,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "ceiling_light_cyan_lens_broken_a",
+          "vertexOffset": 0,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.48,
+            0,
+            0.095,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.48,
+            0,
+            -0.095,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "ceiling_light_cyan_lens_broken_b",
+          "vertexOffset": 36,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.52,
+            0,
+            0.095,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.52,
+            0,
+            -0.095,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "ceiling_light_dark_housing",
+          "vertexOffset": 72,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -1,
+          -0.06,
+          -0.09
+        ],
+        "center": [
+          0,
+          0,
+          0.00875
+        ],
+        "size": [
+          2,
+          0.12,
+          0.1975
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "d30000837ed5c471",
+    "materials": [
+      {
+        "index": 64,
+        "id": "mat:builder-resource:mat-cyan-medical-emissive:1h1wcfc",
+        "name": "mat_cyan_medical_emissive",
+        "category": "builder-resource",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.432,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.12,
+          0.65,
+          0.75,
+          1
+        ],
+        "emissiveFactor": [
+          0.25,
+          0.95,
+          1
+        ],
+        "emissiveStrength": 1.65,
+        "roughnessFactor": 0.18,
+        "metallicFactor": 0.1,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 65,
+        "id": "mat:builder-resource:mat-dark-gunmetal:1n9qe9z",
+        "name": "mat_dark_gunmetal",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.025,
+          0.032,
+          0.038,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.28,
+        "metallicFactor": 0.86,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

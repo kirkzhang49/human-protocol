@@ -1,0 +1,1722 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "service_elevator_interior_shell",
+  "family": "service-elevator",
+  "bundleId": "service-elevator/service_elevator_interior_shell",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "level_02_residential_simulation",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_02_residential_simulation.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_02_residential_simulation_geometry.bin",
+    "rawFile": "src/assets/models/environment/shells/hp_service_elevator_interior_shell.glb",
+    "rawSource": "raw-models",
+    "sourceLevels": [
+      "level_01_maintenance_bay",
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 792,
+    "triangleCount": 264,
+    "byteLength": 31680,
+    "hash": "87b54a4adfe90a28",
+    "asset": {
+      "modelKey": "service_elevator_interior_shell",
+      "sourceFile": "src/assets/models-cooked/environment/shells/hp_service_elevator_interior_shell.glb",
+      "rawFile": "src/assets/models/environment/shells/hp_service_elevator_interior_shell.glb",
+      "rawSource": "raw-models",
+      "vertexOffset": 0,
+      "vertexCount": 792,
+      "triangleCount": 264,
+      "meshCount": 22,
+      "materialCount": 7,
+      "nodeCount": 22,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_back_wall",
+          "vertexOffset": 0,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.56,
+            -2.46,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.56,
+            2.46,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_back_inset",
+          "vertexOffset": 36,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.58,
+            -2.36,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.58,
+            2.36,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_back_panel_left",
+          "vertexOffset": 72,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.24,
+            1.54,
+            -2.3,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.24,
+            -1.54,
+            2.3,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_back_panel_right",
+          "vertexOffset": 108,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.24,
+            1.54,
+            -2.3,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.24,
+            -1.54,
+            2.3,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_back_center_seam",
+          "vertexOffset": 144,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.58,
+            -2.245,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.58,
+            2.245,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_back_top_rail",
+          "vertexOffset": 180,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            2.92,
+            -2.24,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -2.92,
+            2.24,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_back_low_rail",
+          "vertexOffset": 216,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.24,
+            -2.24,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.24,
+            2.24,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_left_wall",
+          "vertexOffset": 252,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -3.04,
+            1.54,
+            -0.06,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            3.04,
+            -1.54,
+            0.06,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_right_wall",
+          "vertexOffset": 288,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            3.04,
+            1.54,
+            -0.06,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -3.04,
+            -1.54,
+            0.06,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_left_inset",
+          "vertexOffset": 324,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.94,
+            1.58,
+            -0.1,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.94,
+            -1.58,
+            0.1,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_right_inset",
+          "vertexOffset": 360,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.94,
+            1.58,
+            -0.1,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.94,
+            -1.58,
+            0.1,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_ceiling_shadow",
+          "vertexOffset": 396,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            3.18,
+            -0.08,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -3.18,
+            0.08,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_ceiling_center_plate",
+          "vertexOffset": 432,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            3.08,
+            -0.36,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -3.08,
+            0.36,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_front_top_lintel",
+          "vertexOffset": 468,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            2.94,
+            2.22,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -2.94,
+            -2.22,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_cyan_vertical_-242",
+          "vertexOffset": 504,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.42,
+            1.54,
+            -2.185,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.42,
+            -1.54,
+            2.185,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_cyan_vertical_0",
+          "vertexOffset": 540,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.54,
+            -2.185,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.54,
+            2.185,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_cyan_vertical_242",
+          "vertexOffset": 576,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.42,
+            1.54,
+            -2.185,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.42,
+            -1.54,
+            2.185,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_cyan_horizontal_112",
+          "vertexOffset": 612,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.12,
+            -2.18,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.12,
+            2.18,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_cyan_horizontal_216",
+          "vertexOffset": 648,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            2.16,
+            -2.18,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -2.16,
+            2.18,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_left_cyan_floor_line",
+          "vertexOffset": 684,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.88,
+            0.21,
+            -0.2,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.88,
+            -0.21,
+            0.2,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_right_cyan_floor_line",
+          "vertexOffset": 720,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.88,
+            0.21,
+            -0.2,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.88,
+            -0.21,
+            0.2,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "service_elevator_shell_amber_status_tick",
+          "vertexOffset": 756,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.98,
+            0.58,
+            -2.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.98,
+            -0.58,
+            2.17,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -3.13,
+          0,
+          -2.55
+        ],
+        "center": [
+          0,
+          1.63,
+          -0.105
+        ],
+        "size": [
+          6.26,
+          3.26,
+          4.89
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "80f48420943275d5",
+    "materials": [
+      {
+        "index": 115,
+        "id": "mat:room:room-material:l7j24g",
+        "name": "room_material",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.022174,
+          0.03434,
+          0.046665,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.42,
+        "metallicFactor": 0.78,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": false,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536087,
+              "contrast": 0.007298,
+              "chroma": 0.779627,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 19
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.720974,
+              "contrast": 0.011264,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 20
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801883,
+              "contrast": 0.017336,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 21
+          }
+        ]
+      },
+      {
+        "index": 116,
+        "id": "mat:room:room-material:s55x1l",
+        "name": "room_material",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.005605,
+          0.009721,
+          0.014444,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.64,
+        "metallicFactor": 0.58,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": false,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536087,
+              "contrast": 0.007298,
+              "chroma": 0.779627,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 19
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.720974,
+              "contrast": 0.011264,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 20
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801883,
+              "contrast": 0.017336,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 21
+          }
+        ]
+      },
+      {
+        "index": 117,
+        "id": "mat:room:room-material:amfxp8",
+        "name": "room_material",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.078187,
+          0.111932,
+          0.132868,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.36,
+        "metallicFactor": 0.72,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": false,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536087,
+              "contrast": 0.007298,
+              "chroma": 0.779627,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 19
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.720974,
+              "contrast": 0.011264,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 20
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801883,
+              "contrast": 0.017336,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 21
+          }
+        ]
+      },
+      {
+        "index": 118,
+        "id": "mat:room:room-material:12inzb7",
+        "name": "room_material",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.001518,
+          0.003347,
+          0.005182,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.7,
+        "metallicFactor": 0.62,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": false,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536087,
+              "contrast": 0.007298,
+              "chroma": 0.779627,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 19
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.720974,
+              "contrast": 0.011264,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 20
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801883,
+              "contrast": 0.017336,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 21
+          }
+        ]
+      },
+      {
+        "index": 119,
+        "id": "mat:room:room-material:v6h0nz",
+        "name": "room_material",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.250158,
+          0.391572,
+          0.412543,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 0.78,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": false,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536087,
+              "contrast": 0.007298,
+              "chroma": 0.779627,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 19
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.720974,
+              "contrast": 0.011264,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 20
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801883,
+              "contrast": 0.017336,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 21
+          }
+        ]
+      },
+      {
+        "index": 120,
+        "id": "mat:room:room-material:1e79skg",
+        "name": "room_material",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.165132,
+          0.887923,
+          1,
+          0.64
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.74,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "BLEND",
+        "transparency": {
+          "mode": "blend",
+          "alpha": 0.64,
+          "source": "gltf-material.transparent+gltf-material.opacity"
+        },
+        "doubleSided": false,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536087,
+              "contrast": 0.007298,
+              "chroma": 0.779627,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 19
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.720974,
+              "contrast": 0.011264,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 20
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801883,
+              "contrast": 0.017336,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 21
+          }
+        ]
+      },
+      {
+        "index": 121,
+        "id": "mat:room:room-material:1ur0swt",
+        "name": "room_material",
+        "category": "room",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.651406,
+          0.3564,
+          0.068478,
+          0.42
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.74,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "BLEND",
+        "transparency": {
+          "mode": "blend",
+          "alpha": 0.42,
+          "source": "gltf-material.transparent+gltf-material.opacity"
+        },
+        "doubleSided": false,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536087,
+              "contrast": 0.007298,
+              "chroma": 0.779627,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 19
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.720974,
+              "contrast": 0.011264,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 20
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.801883,
+              "contrast": 0.017336,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 21
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [],
+    "materialTextureSize": 512,
+    "materialTextures": [
+      {
+        "layer": 19,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/normal-19-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536087,
+          "contrast": 0.007298,
+          "chroma": 0.779627,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 20,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/metallicroughness-20-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.720974,
+          "contrast": 0.011264,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 21,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/service-elevator/service_elevator_interior_shell/textures/ao-21-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.801883,
+          "contrast": 0.017336,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      }
+    ]
+  }
+}

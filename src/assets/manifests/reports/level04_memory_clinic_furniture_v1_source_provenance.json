@@ -1,0 +1,366 @@
+{
+  "schemaVersion": "hp.asset-source-provenance.v1",
+  "packId": "hp_level04_memory_clinic_furniture_v1",
+  "generatedAt": "2026-06-23T16:51:26+00:00",
+  "sourceTool": "generate-level04-memory-clinic-furniture-v1.py",
+  "licenseClassification": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "masterImage2Atlas": {
+    "projectPath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+    "originalGeneratedPath": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+    "sourceTool": "built-in image_gen",
+    "promptId": "level04_memory_clinic_furniture_v2_imagegen_master_atlas_prompt",
+    "grid": [
+      4,
+      4
+    ],
+    "callId": "not-exposed-by-built-in-image_gen",
+    "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+    "generationDate": "2026-06-23T16:51:26+00:00",
+    "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md"
+  },
+  "sourceImages": {
+    "ceramic_white": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/ceramic_white_panel.png",
+      "prompt": "Seamless sci-fi hospital white ceramic enamel material tile, subtle molded panel seams, premium clean room finish, no text, no logo.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 0,
+        "row": 0,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "ceramic_white_material_prompt"
+    },
+    "smoked_titanium": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/smoked_titanium_panel.png",
+      "prompt": "Seamless smoked titanium medical equipment material tile, dark graphite metal, subtle brushed grain, premium sci-fi hospital, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 0,
+        "row": 1,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "smoked_titanium_material_prompt"
+    },
+    "frosted_glass": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/frosted_medical_glass.png",
+      "prompt": "Frosted medical glass material tile, pale blue translucent reflections, soft diagonal glare, clean futuristic clinic, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 2,
+        "row": 1,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "frosted_glass_material_prompt"
+    },
+    "cyan_screen": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/cyan_runtime_screen_glass.png",
+      "prompt": "Dark cyan runtime screen glass material tile, abstract scanlines and grid glow, no readable text, no numbers, no symbols.",
+      "classification": "self-authored-procedural-bitmap-with-preserved-image-prompt",
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "sourceTool": "self-authored procedural bitmap",
+      "callId": "not-applicable-self-authored-procedural-bitmap",
+      "promptLedgerId": "cyan_screen_material_prompt"
+    },
+    "black_glass_screen": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/black_glass_blank_screen.png",
+      "prompt": "Blank dark black glass screen material tile, glossy beveled medical display, no text, no numbers, no symbols.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 3,
+        "row": 1,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "black_glass_screen_material_prompt"
+    },
+    "blue_cushion": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/medical_blue_cushion.png",
+      "prompt": "Premium medical blue upholstery material tile, soft stitched texture, high-end exam chair cushion, no text, no logo.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 2,
+        "row": 0,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "blue_cushion_material_prompt"
+    },
+    "lime_cushion": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/sterile_lime_cushion.png",
+      "prompt": "Restrained lime green hospital waiting-room upholstery material tile, premium soft fabric, modern clinic accent, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 3,
+        "row": 0,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "lime_cushion_material_prompt"
+    },
+    "soft_gray_cushion": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/soft_gray_cushion.png",
+      "prompt": "Soft warm gray clinic upholstery material tile, premium waiting-room sofa fabric, subtle weave, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 3,
+        "row": 3,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "soft_gray_cushion_material_prompt"
+    },
+    "warm_wood": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/pale_clinic_wood_veneer.png",
+      "prompt": "Pale clinic wood veneer material tile, high-end hospital side table surface, subtle grain, no brand, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 2,
+        "row": 2,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "warm_wood_material_prompt"
+    },
+    "rubber_black": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/matte_black_rubber_cable.png",
+      "prompt": "Matte black rubber cable material tile, subtle scuffed surface, medical equipment cable, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 1,
+        "row": 1,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "rubber_black_material_prompt"
+    },
+    "dark_acoustic_mesh": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/dark_acoustic_mesh.png",
+      "prompt": "Dark acoustic speaker mesh material tile, tiny black perforations, premium sci-fi clinic grille, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 2,
+        "row": 3,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "dark_acoustic_mesh_material_prompt"
+    },
+    "translucent_curtain": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/translucent_privacy_curtain.png",
+      "prompt": "Semi-transparent white medical privacy curtain material tile, frosted fabric, premium sci-fi hospital, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 3,
+        "row": 2,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "translucent_curtain_material_prompt"
+    },
+    "surgical_lens": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/surgical_lens_cluster.png",
+      "prompt": "Surgical lamp lens material tile, frosted optical glass, cyan-white glow, no text, no logo.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 0,
+        "row": 3,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "surgical_lens_material_prompt"
+    },
+    "red_fault": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/tiny_red_fault_light.png",
+      "prompt": "Tiny red fault light material tile, abstract emergency glow, no readable markings, no text.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 1,
+        "row": 2,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "red_fault_material_prompt"
+    },
+    "cyan_emissive": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/cyan_status_light_strip.png",
+      "prompt": "Cyan medical status light strip material tile, abstract glow, no text, no numbers.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 0,
+        "row": 2,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "cyan_emissive_material_prompt"
+    },
+    "plant_green": {
+      "sourcePath": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/sterile_planter_green.png",
+      "prompt": "Sterile small clinic planter leaf material tile, subtle green leaves, no text, no logo.",
+      "classification": "openai-generated-output-user-owned-subject-to-openai-terms",
+      "sourceMaster": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources/level04_memory_clinic_furniture_v2_imagegen_material_atlas_master.png",
+      "sourceMasterOriginal": "/Users/zhengkaizhang/.codex/generated_images/019ef50c-9bcf-75b0-a424-f1de17a0088b/ig_0914481077cff558016a3ab5941380819abe59679032e68323.png",
+      "sourceTool": "built-in image_gen",
+      "sourceCell": {
+        "col": 1,
+        "row": 3,
+        "grid": [
+          4,
+          4
+        ]
+      },
+      "generationDate": "2026-06-23T16:51:26+00:00",
+      "callId": "not-exposed-by-built-in-image_gen",
+      "generatedImageId": "ig_0914481077cff558016a3ab5941380819abe59679032e68323",
+      "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+      "promptLedgerId": "plant_green_material_prompt"
+    }
+  },
+  "atlas": {
+    "image": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+    "regions": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json"
+  },
+  "derivativeOutputs": {
+    "builderManifest": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+    "runtimeManifest": "src/assets/manifests/runtime/human_protocol_level04_memory_clinic_furniture_v1.json",
+    "glbDirectory": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1",
+    "sourceBlendDirectory": "src/assets/source_blend/level04-memory-clinic-furniture-v1",
+    "contactSheet": ".tmp/level04-memory-clinic-furniture-v1/level04-memory-clinic-furniture-v1-contact-sheet.png"
+  },
+  "generatingAccount": "not-recorded-in-this-run",
+  "termsSnapshot": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+  "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_furniture_v1_prompt_ledger.json",
+  "ragMemory": {
+    "index": "docs/rag/human-protocol-asset-memory-index.md",
+    "summary": "src/assets/manifests/reports/asset-rag-memory/level04-memory-clinic-furniture-v1.md",
+    "jsonl": "src/assets/manifests/reports/asset-rag-memory/level04-memory-clinic-furniture-v1.jsonl"
+  }
+}

@@ -1,0 +1,424 @@
+{
+  "schema": "human-protocol/furniture-asset-factory-qa@1",
+  "generatedAt": "2026-06-19T08:02:12.405Z",
+  "manifest": "src/assets/manifests/runtime/human_protocol_furniture_asset_factory_v1.json",
+  "counts": {
+    "blueprints": 14,
+    "buildReady": 10,
+    "runtimeReady": 4,
+    "pendingAssets": 0,
+    "errors": 0,
+    "warnings": 0,
+    "checks": 4
+  },
+  "checks": [
+    {
+      "message": "manifest schema is correct",
+      "pass": true,
+      "detail": {
+        "schema": "human-protocol/furniture-asset-factory@1"
+      }
+    },
+    {
+      "message": "pipeline stages exist",
+      "pass": true,
+      "detail": {
+        "stages": [
+          "01_blueprint",
+          "02_image2_concept",
+          "03_math_search",
+          "04_blender_generation",
+          "05_runtime_cook",
+          "06_registry_integration",
+          "07_raw_webgpu_acceptance"
+        ]
+      }
+    },
+    {
+      "message": "registry targets exist",
+      "pass": true,
+      "detail": {
+        "targets": [
+          "environmentPropsRegistry",
+          "builderAssetCatalog",
+          "builderAssetFootprints"
+        ]
+      }
+    },
+    {
+      "message": "blueprints array is not empty",
+      "pass": true,
+      "detail": {
+        "count": 14
+      }
+    }
+  ],
+  "assets": [
+    {
+      "modelKey": "room_museum_glass_vitrine_specimen",
+      "readiness": "runtime-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "room_museum_gallery_bench",
+      "readiness": "runtime-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "room_museum_archive_cabinet_drawers_brass",
+      "readiness": "runtime-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "room_museum_statue_pedestal",
+      "readiness": "runtime-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_museum_glass_display_case_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_museum_horizontal_tool_case_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_museum_gallery_bench_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_archive_cabinet_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_maintenance_cart_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_display_plinth_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_wall_archive_cabinet_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_lab_table_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_cold_ceiling_light_slot_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    },
+    {
+      "modelKey": "hp_furniture_specimen_plinth_combo_v1",
+      "readiness": "build-ready",
+      "status": "pass",
+      "missingFields": [],
+      "pendingPaths": [],
+      "missingPaths": [],
+      "registry": [
+        {
+          "id": "environmentPropsRegistry",
+          "path": "src/assets/registry/environment/props.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetCatalog",
+          "path": "src/build/BuilderAssetCatalog.ts",
+          "found": true
+        },
+        {
+          "id": "builderAssetFootprints",
+          "path": "src/build/BuilderAssetFootprints.tsx",
+          "found": true
+        }
+      ],
+      "warnings": []
+    }
+  ],
+  "errors": [],
+  "warnings": []
+}

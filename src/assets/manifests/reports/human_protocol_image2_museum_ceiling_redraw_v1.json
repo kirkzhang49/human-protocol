@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "hp.image2-ceiling-redraw.v1",
+  "sourceTool": "Image2 prompt target + project texture bake",
+  "prompt": "premium Human Protocol museum ceiling texture, dark warm limestone coffered panels, aged brass trim, inset frosted cyan glass light slots, orthographic square top-down, no text, no logos, no hanging lamps, no office ceiling, no plain grey panel",
+  "sourceImage": "src/assets/textures/environment/level03/image2-museum-ceiling-redraw-v1/hp_image2_museum_ceiling_redraw_source_v1.png",
+  "runtimeMaps": {
+    "color": "src/assets/textures/environment/builder-surfaces/image2_ceiling_museum_redraw_coffer_v1_color.webp",
+    "normal": "src/assets/textures/environment/builder-surfaces/image2_ceiling_museum_redraw_coffer_v1_normal.webp",
+    "roughness": "src/assets/textures/environment/builder-surfaces/image2_ceiling_museum_redraw_coffer_v1_rough.webp"
+  },
+  "copyright": {
+    "status": "project-ai-provenance-recorded",
+    "backup": "source PNG stored in repo",
+    "commercialClearance": "pending final Image2/OpenAI account terms audit before release"
+  }
+}

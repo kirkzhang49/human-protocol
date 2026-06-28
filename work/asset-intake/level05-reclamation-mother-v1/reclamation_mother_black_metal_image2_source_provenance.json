@@ -1,0 +1,284 @@
+{
+  "schemaVersion": "hp.image2.sourceProvenance.v1",
+  "assetFamily": "hp_enemy_reclamation_mother_black_metal_image2_atlas_v1",
+  "modelKeyCandidate": "hp_enemy_reclamation_mother_stitch_articulated_v4_front_fill",
+  "generatedAt": "2026-06-27",
+  "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "classification": "owned-generated-output",
+  "generatingAccount": "Codex built-in image_gen; account not exposed",
+  "generationCallId": "not-exposed-by-codex-imagegen",
+  "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_06bd023061efe8f2016a40b8cacdec819ab5e5cedc698cde13.png",
+  "repoSource": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.png",
+  "runtimeAtlas": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_runtime_1024.png",
+  "regions": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.regions.json",
+  "contactSheet": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_regions_contact_sheet.png",
+  "prompt": "Create a premium sci-fi black metal material atlas for a boss robot's black torso and inner frame panels: smoked graphite armor, black brushed titanium, dark rubber gasket strips, subtle gunmetal scratches, tiny edge wear, restrained cyan-blue micro emissive grooves, and small warm brass worn edges. No text, logos, watermark, UI, character, or scene; suitable as UV texture on black mesh panels.",
+  "toolPolicy": "Image2 source is cut into named UV regions, embedded as GLB baseColorTexture, and not pasted as a full-object poster.",
+  "textureReport": {
+    "enabled": true,
+    "sourceAtlas": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.png",
+    "sourceAtlasSha256": "2808af0a72fb4bc56988f7627fed84e0e2dee1accbd0611833a72aff1e33e26b",
+    "runtimeAtlas": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_runtime_1024.png",
+    "regions": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.regions.json",
+    "contactSheet": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_regions_contact_sheet.png",
+    "runtimeAtlasSha256": "76f4c8cbca78b1bdf51f56e2580404e554500c4f1fc81d46a5ecab1d05ca693f",
+    "pbrMaps": {
+      "roughness": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_roughness_v1_runtime_1024.png",
+      "roughnessSha256": "bee3d7c5c918840da08c13b4f32bfc5eaacf3b24c63a303933b90cb38f01a8e0",
+      "metallic": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_metallic_v1_runtime_1024.png",
+      "metallicSha256": "5ffb6091a283da70e0d5ad0d32656711c78922c9691e291590fa609aadb4f424",
+      "normal": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_normal_v1_runtime_1024.png",
+      "normalSha256": "67382d455bb01bcec98d802495156744f657ed529d0999fc4be6ab778cb5e8a7",
+      "occlusion": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_occlusion_v1_runtime_1024.png",
+      "occlusionSha256": "b045c720054506900c9a0151f4877dc99630ede66bbacee7ac4ec318c23fade9",
+      "normalStrength": 0.24
+    },
+    "materialSlots": [
+      "mat_black_inner_frame"
+    ],
+    "regionCount": 8,
+    "uv": {
+      "uvObjectCount": 50,
+      "uvPolygonCount": 6265,
+      "objects": [
+        {
+          "object": "part_core_body_mount_plate",
+          "texturedPolygons": 44
+        },
+        {
+          "object": "part_core_embedded_socket_housing",
+          "texturedPolygons": 444
+        },
+        {
+          "object": "part_core_front_recess_backplate",
+          "texturedPolygons": 380
+        },
+        {
+          "object": "part_core_dark_socket_ring",
+          "texturedPolygons": 960
+        },
+        {
+          "object": "part_core_socket_upper_contact_lip",
+          "texturedPolygons": 44
+        },
+        {
+          "object": "part_core_socket_lower_contact_lip",
+          "texturedPolygons": 44
+        },
+        {
+          "object": "part_core_socket_left_contact_lip",
+          "texturedPolygons": 44
+        },
+        {
+          "object": "part_core_socket_right_contact_lip",
+          "texturedPolygons": 44
+        },
+        {
+          "object": "part_torso_internal_black_cavity_mass",
+          "texturedPolygons": 288
+        },
+        {
+          "object": "part_upper_chest_internal_black_cavity_mass",
+          "texturedPolygons": 224
+        },
+        {
+          "object": "part_core_recess_internal_depth_shadow",
+          "texturedPolygons": 380
+        },
+        {
+          "object": "part_back_internal_black_cavity_mass",
+          "texturedPolygons": 224
+        },
+        {
+          "object": "part_torso_upper_fracture_shadow_backing",
+          "texturedPolygons": 84
+        },
+        {
+          "object": "part_torso_lower_fracture_shadow_backing",
+          "texturedPolygons": 88
+        },
+        {
+          "object": "part_head_inner_fracture_shadow_backing",
+          "texturedPolygons": 96
+        },
+        {
+          "object": "part_left_shoulder_socket_shadow_backing",
+          "texturedPolygons": 92
+        },
+        {
+          "object": "part_left_forearm_split_shadow_backing",
+          "texturedPolygons": 104
+        },
+        {
+          "object": "part_left_thigh_split_shadow_backing",
+          "texturedPolygons": 104
+        },
+        {
+          "object": "part_left_shin_split_shadow_backing",
+          "texturedPolygons": 104
+        },
+        {
+          "object": "part_right_shoulder_socket_shadow_backing",
+          "texturedPolygons": 92
+        },
+        {
+          "object": "part_right_forearm_split_shadow_backing",
+          "texturedPolygons": 104
+        },
+        {
+          "object": "part_right_thigh_split_shadow_backing",
+          "texturedPolygons": 96
+        },
+        {
+          "object": "part_right_shin_split_shadow_backing",
+          "texturedPolygons": 100
+        },
+        {
+          "object": "mesh_stitch_articulated_left_foot",
+          "texturedPolygons": 82
+        },
+        {
+          "object": "mesh_stitch_articulated_left_thigh",
+          "texturedPolygons": 10
+        },
+        {
+          "object": "mesh_stitch_articulated_left_forearm",
+          "texturedPolygons": 5
+        },
+        {
+          "object": "mesh_stitch_articulated_torso",
+          "texturedPolygons": 152
+        },
+        {
+          "object": "mesh_stitch_articulated_back",
+          "texturedPolygons": 122
+        },
+        {
+          "object": "mesh_stitch_articulated_left_upper_arm",
+          "texturedPolygons": 4
+        },
+        {
+          "object": "mesh_stitch_articulated_right_thigh",
+          "texturedPolygons": 12
+        },
+        {
+          "object": "mesh_stitch_articulated_right_forearm",
+          "texturedPolygons": 9
+        },
+        {
+          "object": "mesh_stitch_articulated_right_foot",
+          "texturedPolygons": 84
+        },
+        {
+          "object": "mesh_stitch_articulated_head",
+          "texturedPolygons": 92
+        },
+        {
+          "object": "mesh_stitch_articulated_right_hand",
+          "texturedPolygons": 11
+        },
+        {
+          "object": "mesh_stitch_articulated_right_upper_arm",
+          "texturedPolygons": 21
+        },
+        {
+          "object": "mesh_stitch_articulated_left_foot_dark_inner",
+          "texturedPolygons": 86
+        },
+        {
+          "object": "mesh_stitch_articulated_left_shin_dark_inner",
+          "texturedPolygons": 36
+        },
+        {
+          "object": "mesh_stitch_articulated_left_thigh_dark_inner",
+          "texturedPolygons": 53
+        },
+        {
+          "object": "mesh_stitch_articulated_left_forearm_dark_inner",
+          "texturedPolygons": 19
+        },
+        {
+          "object": "mesh_stitch_articulated_torso_dark_inner",
+          "texturedPolygons": 248
+        },
+        {
+          "object": "mesh_stitch_articulated_back_dark_inner",
+          "texturedPolygons": 122
+        },
+        {
+          "object": "mesh_stitch_articulated_left_hand_dark_inner",
+          "texturedPolygons": 20
+        },
+        {
+          "object": "mesh_stitch_articulated_left_upper_arm_dark_inner",
+          "texturedPolygons": 149
+        },
+        {
+          "object": "mesh_stitch_articulated_right_thigh_dark_inner",
+          "texturedPolygons": 58
+        },
+        {
+          "object": "mesh_stitch_articulated_right_forearm_dark_inner",
+          "texturedPolygons": 19
+        },
+        {
+          "object": "mesh_stitch_articulated_right_shin_dark_inner",
+          "texturedPolygons": 41
+        },
+        {
+          "object": "mesh_stitch_articulated_right_foot_dark_inner",
+          "texturedPolygons": 90
+        },
+        {
+          "object": "mesh_stitch_articulated_head_dark_inner",
+          "texturedPolygons": 350
+        }
+      ]
+    },
+    "triangulatedBeforeUv": [
+      "part_core_body_mount_plate",
+      "part_core_embedded_socket_housing",
+      "part_core_front_recess_backplate",
+      "part_core_blue_glass",
+      "part_core_blue_front_lens",
+      "part_core_dark_socket_ring",
+      "part_core_socket_upper_contact_lip",
+      "part_core_socket_lower_contact_lip",
+      "part_core_socket_left_contact_lip",
+      "part_core_socket_right_contact_lip",
+      "part_torso_internal_black_cavity_mass",
+      "part_upper_chest_internal_black_cavity_mass",
+      "part_core_recess_internal_depth_shadow",
+      "part_back_internal_black_cavity_mass",
+      "part_torso_upper_fracture_shadow_backing",
+      "part_torso_lower_fracture_shadow_backing",
+      "part_head_inner_fracture_shadow_backing",
+      "part_left_shoulder_socket_shadow_backing",
+      "part_left_forearm_split_shadow_backing",
+      "part_left_thigh_split_shadow_backing",
+      "part_left_shin_split_shadow_backing",
+      "part_right_shoulder_socket_shadow_backing",
+      "part_right_forearm_split_shadow_backing",
+      "part_right_thigh_split_shadow_backing",
+      "part_right_shin_split_shadow_backing",
+      "mesh_stitch_articulated_left_foot",
+      "mesh_stitch_articulated_torso",
+      "mesh_stitch_articulated_back",
+      "mesh_stitch_articulated_left_upper_arm",
+      "mesh_stitch_articulated_right_thigh",
+      "mesh_stitch_articulated_right_shin",
+      "mesh_stitch_articulated_right_foot",
+      "mesh_stitch_articulated_head",
+      "mesh_stitch_articulated_right_upper_arm",
+      "mesh_stitch_articulated_left_foot_dark_inner",
+      "mesh_stitch_articulated_torso_dark_inner",
+      "mesh_stitch_articulated_back_dark_inner",
+      "mesh_stitch_articulated_left_upper_arm_dark_inner",
+      "mesh_stitch_articulated_right_thigh_dark_inner",
+      "mesh_stitch_articulated_right_shin_dark_inner",
+      "mesh_stitch_articulated_right_foot_dark_inner",
+      "mesh_stitch_articulated_head_dark_inner",
+      "mesh_stitch_articulated_right_upper_arm_dark_inner"
+    ]
+  }
+}

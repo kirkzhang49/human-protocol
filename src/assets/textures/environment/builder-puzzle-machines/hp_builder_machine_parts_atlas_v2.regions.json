@@ -1,0 +1,92 @@
+{
+  "atlasSize": [
+    768,
+    768
+  ],
+  "regions": {
+    "screen.glass.cyan": [
+      18,
+      18,
+      210,
+      150
+    ],
+    "screen.glass.amber": [
+      240,
+      18,
+      210,
+      150
+    ],
+    "screen.glass.dark": [
+      462,
+      18,
+      210,
+      150
+    ],
+    "trim.brass.long": [
+      18,
+      186,
+      732,
+      54
+    ],
+    "trim.cyan.rail": [
+      18,
+      252,
+      732,
+      34
+    ],
+    "warning.stripe.amber": [
+      18,
+      298,
+      450,
+      72
+    ],
+    "microticks.horizontal": [
+      480,
+      298,
+      270,
+      72
+    ],
+    "socket.round.large": [
+      18,
+      384,
+      168,
+      168
+    ],
+    "socket.round.small": [
+      198,
+      384,
+      120,
+      120
+    ],
+    "screw.cross": [
+      198,
+      516,
+      60,
+      60
+    ],
+    "screw.hex": [
+      264,
+      516,
+      60,
+      60
+    ],
+    "gasket.corner": [
+      330,
+      384,
+      120,
+      120
+    ],
+    "bus.copper.bar": [
+      462,
+      384,
+      288,
+      72
+    ],
+    "cable.lane.dark": [
+      462,
+      468,
+      288,
+      84
+    ]
+  }
+}

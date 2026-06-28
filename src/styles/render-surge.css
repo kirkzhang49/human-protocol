@@ -1,0 +1,55 @@
+.render-surge {
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+  pointer-events: none;
+  opacity: calc((1 - var(--surge-progress)) * 0.58 * var(--surge-intensity));
+  background:
+    radial-gradient(circle at 50% 54%, transparent 0 24%, rgba(138, 235, 255, 0.22) 25%, transparent 43%),
+    linear-gradient(90deg, transparent 0 18%, rgba(105, 224, 255, 0.16) 48%, transparent 72%),
+    repeating-linear-gradient(
+      180deg,
+      rgba(225, 248, 255, 0.08) 0 1px,
+      transparent 1px 10px
+    );
+  mix-blend-mode: screen;
+  animation: renderSurgeScan 420ms cubic-bezier(0.18, 0.82, 0.28, 1) both;
+  contain: strict;
+  will-change: opacity, transform;
+}
+
+.render-surge::before,
+.render-surge::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.render-surge::before {
+  background:
+    linear-gradient(180deg, transparent 0 42%, rgba(215, 249, 255, 0.28) 48%, transparent 57%),
+    linear-gradient(90deg, transparent 0 49%, rgba(255, 95, 72, 0.16) 50%, transparent 51%);
+  transform: translateY(calc((var(--surge-progress) - 0.5) * 34vh));
+}
+
+.render-surge::after {
+  border: 1px solid rgba(160, 238, 255, 0.26);
+  margin: clamp(20px, 5vw, 58px);
+  transform: scale(calc(0.94 + var(--surge-progress) * 0.08));
+}
+
+@keyframes renderSurgeScan {
+  0% {
+    opacity: 0;
+    transform: scale(1.025);
+  }
+
+  16% {
+    opacity: calc(0.58 * var(--surge-intensity));
+  }
+
+  100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,837 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level04_memory_clinic_furniture_v1",
+  "label": "Level 04 Memory Clinic Furniture v1",
+  "sourceTool": "generate-level04-memory-clinic-furniture-v1.py",
+  "generatedAt": "2026-06-23",
+  "atlas": {
+    "image": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+    "regions": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "assets": [
+    {
+      "modelKey": "hp_l4_cineclinic_decon_gate",
+      "label": "入口消毒扫描门",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_decon_gate_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_decon_gate.glb",
+      "sizeMeters": [
+        2.65,
+        2.62,
+        0.72
+      ],
+      "solid": false,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p1",
+        "deprecated:platform-gate",
+        "not-recommended:new-authoring",
+        "replaced-by:hp_wall_door_switch_button_v1"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens",
+        "translucent_curtain"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_reception_counter",
+      "label": "分诊接待台",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_reception_counter_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_reception_counter.glb",
+      "sizeMeters": [
+        3.2,
+        1.28,
+        0.86
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "table",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0",
+        "deprecated:platform-gate",
+        "not-recommended:new-authoring",
+        "replaced-by:hp_wall_door_switch_button_v1"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_waiting_sofa_row",
+      "label": "候诊软座排",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_waiting_sofa_row_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_waiting_sofa_row.glb",
+      "sizeMeters": [
+        2.55,
+        0.88,
+        0.82
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "ceramic_white",
+        "dark_acoustic_mesh",
+        "lime_cushion",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_lime_ottoman",
+      "label": "青柠模块脚凳",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_lime_ottoman_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_lime_ottoman.glb",
+      "sizeMeters": [
+        0.86,
+        0.48,
+        0.86
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p2"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "lime_cushion",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_side_table_planter",
+      "label": "候诊小桌与无菌盆栽",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_side_table_planter_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_side_table_planter.glb",
+      "sizeMeters": [
+        0.86,
+        0.82,
+        0.72
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p2"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "dark_acoustic_mesh",
+        "plant_green",
+        "smoked_titanium",
+        "warm_wood"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_triage_kiosk",
+      "label": "分诊号码亭",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_triage_kiosk_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_triage_kiosk.glb",
+      "sizeMeters": [
+        0.78,
+        1.56,
+        0.58
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p1"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "cyan_screen",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_med_cabinet",
+      "label": "无菌药品柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_med_cabinet_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_med_cabinet.glb",
+      "sizeMeters": [
+        1.05,
+        1.94,
+        0.52
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 3,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "wallPreferred": "back",
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_record_wall_cabinet",
+      "label": "记忆档案壁柜",
+      "assetKind": "furniture",
+      "family": "drawer_chest",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_record_wall_cabinet_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_record_wall_cabinet.glb",
+      "sizeMeters": [
+        1.34,
+        1.36,
+        0.42
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 3,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p1"
+      ],
+      "wallPreferred": "back",
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_exam_table",
+      "label": "高级检查床柜",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_exam_table_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_exam_table.glb",
+      "sizeMeters": [
+        2.28,
+        1.18,
+        0.92
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "bed",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "blue_cushion",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "rubber_black",
+        "smoked_titanium",
+        "soft_gray_cushion"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_memory_recliner",
+      "label": "记忆治疗躺椅",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_memory_recliner_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_memory_recliner.glb",
+      "sizeMeters": [
+        1.42,
+        1.48,
+        1.82
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "bed",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "blue_cushion",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_scan_arch",
+      "label": "记忆扫描拱",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_scan_arch_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_scan_arch.glb",
+      "sizeMeters": [
+        1.96,
+        2.05,
+        0.82
+      ],
+      "solid": false,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "smoked_titanium",
+        "surgical_lens",
+        "translucent_curtain"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_projection_pod",
+      "label": "记忆投影舱",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_projection_pod_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_projection_pod.glb",
+      "sizeMeters": [
+        0.98,
+        1.42,
+        1.26
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_rescue_speaker_panel",
+      "label": "墙内救援声栅",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_rescue_speaker_panel_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_rescue_speaker_panel.glb",
+      "sizeMeters": [
+        1.24,
+        0.72,
+        0.12
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallMountFace": "-z",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p2"
+      ],
+      "wallPreferred": "back",
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "red_fault",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_cable_trolley",
+      "label": "神经电缆推车",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_cable_trolley_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_cable_trolley.glb",
+      "sizeMeters": [
+        0.82,
+        1.36,
+        0.68
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 1,
+      "footprintFamily": "crate",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p1"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "rubber_black",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_observation_desk",
+      "label": "观察控制台",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_observation_desk_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_observation_desk.glb",
+      "sizeMeters": [
+        1.72,
+        1.34,
+        1.16
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p1"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_surgical_light",
+      "label": "无影手术灯",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_surgical_light_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_surgical_light.glb",
+      "sizeMeters": [
+        1.06,
+        1.22,
+        0.92
+      ],
+      "solid": false,
+      "mount": "ceiling",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_monitor_arm",
+      "label": "身体监视机械臂",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_monitor_arm_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_monitor_arm.glb",
+      "sizeMeters": [
+        2.18,
+        1.78,
+        0.72
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_privacy_screen",
+      "label": "身体遮挡隐私屏",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_privacy_screen_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_privacy_screen.glb",
+      "sizeMeters": [
+        1.86,
+        1.92,
+        0.32
+      ],
+      "solid": false,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p1"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "translucent_curtain"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_sedation_gate",
+      "label": "镇静闸门",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_sedation_gate_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_sedation_gate.glb",
+      "sizeMeters": [
+        1.92,
+        2.36,
+        0.72
+      ],
+      "solid": false,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "barrier",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p0"
+      ],
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "translucent_curtain"
+      ]
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_theater_wall",
+      "label": "治疗剧场背墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "诊疗",
+      "source": "level04-memory-clinic-furniture-v1",
+      "sourceAssetId": "hp_l4_cineclinic_theater_wall_source_v1",
+      "themeId": "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
+      "glbFile": "../../models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_theater_wall.glb",
+      "sizeMeters": [
+        5.05,
+        2.32,
+        0.42
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "level:04",
+        "theme:memory-clinic",
+        "style:premium-sci-fi-hospital",
+        "priority:p1"
+      ],
+      "wallPreferred": "back",
+      "textureSources": [
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.regions.json",
+        "src/assets/textures/environment/level04-memory-clinic-furniture-v1/image2-sources"
+      ],
+      "materialSlots": [
+        "black_glass_screen",
+        "ceramic_white",
+        "cyan_emissive",
+        "dark_acoustic_mesh",
+        "frosted_glass",
+        "red_fault",
+        "rubber_black",
+        "smoked_titanium",
+        "surgical_lens"
+      ]
+    }
+  ]
+}

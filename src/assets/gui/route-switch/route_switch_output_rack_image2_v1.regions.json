@@ -1,0 +1,18 @@
+{
+  "atlasSize": [
+    1160,
+    450
+  ],
+  "source": "src/assets/gui/route-switch/image2-sources/route_switch_output_rack_image2_source_v1.png",
+  "sourcePolicy": "Owned generated Image2 output-rack source. Cutter keys only the flood-connected black exterior to transparency, preserving the black recessed socket cavities, then packs one shared four-slot rack for the route switch deck.",
+  "license": "owned-generated-output",
+  "regions": {
+    "output_rack": [
+      40,
+      30,
+      1080,
+      390
+    ]
+  },
+  "notes": "Runtime places this shared Image2 rack behind the individual rotary selector modules so the four outputs read as one integrated route-control console, not separate buttons. No text, labels, or CSS-drawn symbols are baked into the asset."
+}

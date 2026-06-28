@@ -1,0 +1,23 @@
+{
+  "assetId": "route_switch_output_rack_image2_source_v1",
+  "generatedDate": "2026-06-21",
+  "tool": "built-in image_gen",
+  "model": "not-exposed-by-built-in-image-gen",
+  "toolCallId": "not-exposed-by-built-in-image-gen",
+  "generatedImagesDirectory": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd",
+  "originalGeneratedPath": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd/ig_0ed430fb83b2898a016a38cb0333f081998a3b80c5d5ccde4e.png",
+  "projectSourcePath": "src/assets/gui/route-switch/image2-sources/route_switch_output_rack_image2_source_v1.png",
+  "licenseLabel": "owned-generated-output",
+  "termsLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "sourceRole": "Shared Image2 four-slot rack behind the 2D route-switch output modules",
+  "promptSummary": "Ancient mechanical four-slot output rack, blackened iron and brass, empty recessed sockets, subtle cyan glass, no text.",
+  "derivativeOutputs": [
+    "src/assets/gui/route-switch/route_switch_output_rack_image2_v1.png",
+    "src/assets/gui/route-switch/route_switch_output_rack_image2_v1.regions.json"
+  ],
+  "derivativeScript": "scripts/asset-build/cut-route-switch-output-rack-image2.mjs",
+  "notes": [
+    "The cutter keys only the flood-connected exterior black background while preserving dark socket cavities.",
+    "Runtime places this rack behind the individual selector modules so the overlay reads as one integrated route-control desk."
+  ]
+}

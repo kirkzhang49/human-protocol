@@ -1,0 +1,58 @@
+{
+  "version": 1,
+  "assetFamily": "Human Protocol room image2 texture sources",
+  "status": "primary art-direction and material texture source for the current room preview",
+  "ownership": "project-owned AI-assisted generated bitmap assets",
+  "notes": [
+    "These PNG files are the preferred visual texture direction for the room preview.",
+    "The SVG atlases in this folder remain useful as config/region mapping helpers, but they are not the desired final visual quality.",
+    "Future UV/PBR work should repaint or project these image2 sources into albedo, normal, roughness, metalness, emissive, and mask maps."
+  ],
+  "textures": [
+    {
+      "id": "furniture_material",
+      "file": "hp_image2_furniture_material_atlas_v1.png",
+      "intendedUse": "maintenance cabinet, utility table, locker, crates, furniture metal, worn paint, grime, edge wear"
+    },
+    {
+      "id": "terminal_screen",
+      "file": "hp_image2_terminal_screen_atlas_v1.png",
+      "intendedUse": "large puzzle TV, keypads, terminal glass, off/on/error states, emissive screen material"
+    },
+    {
+      "id": "pickups_readables",
+      "file": "hp_image2_pickups_readables_atlas_v2.png",
+      "intendedUse": "instant-read pickups: red-cross medkit, gold key, glowing energy cell, memory chip, archive page, cabinet interior supplies"
+    },
+    {
+      "id": "environment_surfaces",
+      "file": "hp_image2_environment_surfaces_atlas_v1.png",
+      "intendedUse": "floor, wall, ceiling, door frame, trims, vents, conduit, emergency stripe, shadow-friendly surface panels"
+    },
+    {
+      "id": "dynamic_digits",
+      "file": "hp_image2_dynamic_digits_atlas_v1.png",
+      "intendedUse": "0-9 digit glyph source for renderer-driven puzzle TV numbers, keypad screens, and code displays; not a fixed password texture"
+    },
+    {
+      "id": "key_wrap",
+      "file": "hp_image2_key_wrap_v1.png",
+      "intendedUse": "dedicated multi-island wrap texture for the large gold key pickup; bow, shaft, teeth, bevel strips, and teal inlay"
+    },
+    {
+      "id": "medkit_wrap",
+      "file": "hp_image2_medkit_wrap_v1.png",
+      "intendedUse": "dedicated multi-island wrap texture for the medkit pickup; red-cross lid, front face, side guards, handle, latches, and seams"
+    },
+    {
+      "id": "energy_pack_wrap",
+      "file": "hp_image2_energy_pack_wrap_v1.png",
+      "intendedUse": "dedicated multi-island wrap texture for the energy pickup; glass core, metal cage, side panels, caps, and emissive charge bands"
+    },
+    {
+      "id": "repair_cabinet_wrap",
+      "file": "hp_image2_repair_cabinet_wrap_v1.png",
+      "intendedUse": "dedicated hero wrap texture for the maintenance supply cabinet; doors, side panel, interior shelf, hinges, handles, warning trims, and kick plate"
+    }
+  ]
+}

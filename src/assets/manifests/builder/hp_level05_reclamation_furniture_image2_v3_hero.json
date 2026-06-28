@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level05_reclamation_furniture_image2_v3_hero",
+  "label": "HP Level 05 Reclamation Core Hero Furniture v3.2 (Image2 Cutout UV + Table Polish)",
+  "sourceTool": "generate-level05-reclamation-furniture-image2-v3-hero-assets.py",
+  "generatedAt": "2026-06-27",
+  "revision": "v3.2-transparent-cutout-area-uv-table-bridge-polish",
+  "atlas": {
+    "image": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/hp_level05_reclamation_furniture_image2_v3_hero_atlas.png",
+    "regions": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3/hp_level05_reclamation_furniture_image2_v3_hero_atlas.regions.json",
+    "size": [
+      2048,
+      2048
+    ]
+  },
+  "assets": [
+    {
+      "modelKey": "room_l5_v3_intake_identity_gate",
+      "label": "L5 V3 Intake Identity Gate",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-hero",
+      "sourceAssetId": "room_l5_v3_intake_identity_gate_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-hero/room_l5_v3_intake_identity_gate.glb",
+      "sizeMeters": [
+        2.98,
+        2.58,
+        0.328
+      ],
+      "solid": false,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3.2",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:wall_panel_or_picture_frame"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_three_lock_monolith",
+      "label": "L5 V3 Three Lock Monolith",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-hero",
+      "sourceAssetId": "room_l5_v3_three_lock_monolith_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-hero/room_l5_v3_three_lock_monolith.glb",
+      "sizeMeters": [
+        1.689,
+        2.28,
+        0.448
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3.2",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:control_console"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_core_route_map_table",
+      "label": "L5 V3 Core Route Map Table",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-hero",
+      "sourceAssetId": "room_l5_v3_core_route_map_table_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-hero/room_l5_v3_core_route_map_table.glb",
+      "sizeMeters": [
+        2.0,
+        0.988,
+        1.65
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3.2",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:desk"
+      ],
+      "supportSurfaces": [
+        {
+          "id": "route_map_top",
+          "kind": "tabletop",
+          "localCenter": [
+            0,
+            0.995,
+            0
+          ],
+          "size": [
+            1.55,
+            0.75
+          ],
+          "maxChildHeight": 0.45
+        }
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_release_key_vault",
+      "label": "L5 V3 Release Key Vault",
+      "assetKind": "furniture",
+      "family": "safe",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-hero",
+      "sourceAssetId": "room_l5_v3_release_key_vault_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-hero/room_l5_v3_release_key_vault.glb",
+      "sizeMeters": [
+        1.82,
+        1.735,
+        0.69
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 3,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3.2",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:safe"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_reclamation_core_altar",
+      "label": "L5 V3 Reclamation Core Altar",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-hero",
+      "sourceAssetId": "room_l5_v3_reclamation_core_altar_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-hero/room_l5_v3_reclamation_core_altar.glb",
+      "sizeMeters": [
+        1.56,
+        1.232,
+        1.56
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 3,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3.2",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:display_case"
+      ]
+    }
+  ]
+}

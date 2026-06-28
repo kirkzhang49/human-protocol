@@ -1,0 +1,460 @@
+{
+  "file": "material.json",
+  "hash": "8c221f83045b27ac",
+  "materials": [
+    {
+      "index": 711,
+      "id": "mat:builder-resource:l1-amber-fault-glow:1sgtm17",
+      "name": "l1_amber_fault_glow",
+      "category": "builder-resource",
+      "visualRole": "danger_red",
+      "semanticParams": [
+        9,
+        0.86,
+        0.388256,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.95,
+        0.62,
+        0.18,
+        1
+      ],
+      "emissiveFactor": [
+        1,
+        0.55,
+        0.12
+      ],
+      "emissiveStrength": 1.6032,
+      "roughnessFactor": 0.3,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 713,
+      "id": "mat:builder-resource:l1-diagnostic-screen-atlas:vkueo0",
+      "name": "l1_diagnostic_screen_atlas",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.141176,
+        0.823529,
+        1
+      ],
+      "emissiveStrength": 1.4028,
+      "roughnessFactor": 0.16,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_furniture_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.428381,
+            "contrast": 0.471513,
+            "chroma": 0.16311,
+            "detail": 0.118902
+          },
+          "generated": false,
+          "layer": 58
+        }
+      ]
+    },
+    {
+      "index": 714,
+      "id": "mat:builder-resource:l1-brushed-steel-atlas:1w6yvjr",
+      "name": "l1_brushed_steel_atlas",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.32,
+      "metallicFactor": 0.85,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_furniture_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.428381,
+            "contrast": 0.471513,
+            "chroma": 0.16311,
+            "detail": 0.118902
+          },
+          "generated": false,
+          "layer": 58
+        }
+      ]
+    },
+    {
+      "index": 715,
+      "id": "mat:builder-resource:l1-cyan-lens-atlas:7ivkd8",
+      "name": "l1_cyan_lens_atlas",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0.2,
+        0.9,
+        1
+      ],
+      "emissiveStrength": 3.024,
+      "roughnessFactor": 0.18,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_furniture_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.428381,
+            "contrast": 0.471513,
+            "chroma": 0.16311,
+            "detail": 0.118902
+          },
+          "generated": false,
+          "layer": 58
+        }
+      ]
+    },
+    {
+      "index": 717,
+      "id": "mat:builder-resource:l1-black-rubber-solid:168et3j",
+      "name": "l1_black_rubber_solid",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.045,
+        0.05,
+        0.055,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.82,
+      "metallicFactor": 0.05,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 718,
+      "id": "mat:builder-resource:l1-brushed-steel-solid:4aiotd",
+      "name": "l1_brushed_steel_solid",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.5,
+        0.52,
+        0.55,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0.8,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 719,
+      "id": "mat:builder-resource:l1-hazard-edge-atlas:njxl5f",
+      "name": "l1_hazard_edge_atlas",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.5,
+      "metallicFactor": 0.3,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_furniture_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.428381,
+            "contrast": 0.471513,
+            "chroma": 0.16311,
+            "detail": 0.118902
+          },
+          "generated": false,
+          "layer": 58
+        }
+      ]
+    },
+    {
+      "index": 734,
+      "id": "mat:builder-resource:l1-black-rubber-atlas:15ec0oz",
+      "name": "l1_black_rubber_atlas",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.78,
+      "metallicFactor": 0.1,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_furniture_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.428381,
+            "contrast": 0.471513,
+            "chroma": 0.16311,
+            "detail": 0.118902
+          },
+          "generated": false,
+          "layer": 58
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 58,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+      "name": "hp_level01_furniture_image2_atlas",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_cable_reel_cart/textures/basecolor-58-hp-level01-furniture-image2-atlas.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.428381,
+        "contrast": 0.471513,
+        "chroma": 0.16311,
+        "detail": 0.118902
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

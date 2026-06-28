@@ -1,0 +1,40 @@
+{
+  "schema": "human-protocol/reference-missile-reverse@1",
+  "asset": "missile_01b33faf",
+  "strategy": "Import decoded reference GLB into Blender as a reference source, extract embedded baseColor texture, add named sockets and collision proxy metadata for later procedural rebuild.",
+  "sourcePage": "https://studio.reference3d.ai/workspace/generate/01b33faf-5883-4e91-9413-9fcb684c2a7a",
+  "inputGlb": "work/reference-intake/missile-01b33faf-5883-4e91-9413-9fcb684c2a7a/reference_missile_01b33faf_decoded.glb",
+  "sourceTexture": "work/reference-intake/missile-01b33faf-5883-4e91-9413-9fcb684c2a7a/reference_missile_01b33faf_basecolor_4096.jpg",
+  "sourceBlend": "work/reference-derived/missile-01b33faf-5883-4e91-9413-9fcb684c2a7a/reference_missile_01b33faf_reverse.blend",
+  "derivedGlb": "work/reference-derived/missile-01b33faf-5883-4e91-9413-9fcb684c2a7a/reference_missile_01b33faf_reverse.glb",
+  "meshObjects": 1,
+  "vertices": 3377,
+  "triangles": 4779,
+  "boundsMin": [
+    -0.22168,
+    -0.43652,
+    -0.49902
+  ],
+  "boundsMax": [
+    0.22168,
+    0.43652,
+    0.49902
+  ],
+  "dimensions": [
+    0.44336,
+    0.87305,
+    0.99805
+  ],
+  "majorAxisBlender": "z",
+  "materials": [
+    "missile_reference_reference_basecolor_opaque"
+  ],
+  "sockets": [
+    "missile_center_socket",
+    "missile_nose_socket",
+    "missile_tail_socket",
+    "missile_exhaust_vfx_socket",
+    "missile_pickup_hover_socket",
+    "missile_collision_proxy_half_extents"
+  ]
+}

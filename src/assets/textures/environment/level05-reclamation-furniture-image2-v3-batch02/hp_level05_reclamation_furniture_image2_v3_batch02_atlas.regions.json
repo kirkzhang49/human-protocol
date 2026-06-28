@@ -1,0 +1,1163 @@
+{
+  "schemaVersion": "hp.image2.semanticAtlasRegions.v1.1",
+  "atlas": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/hp_level05_reclamation_furniture_image2_v3_batch02_atlas.png",
+  "atlasSize": [
+    2048,
+    2048
+  ],
+  "cellSize": 256,
+  "sourceSheets": {
+    "chair": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "modelKey": "room_l5_v3_anemone_lounge_chair",
+      "prompt": "Orthographic Image2 parts sheet for an anemone lounge chair with ribbed black cushions, white ceramic shell petals, graphite swivel base, brass bearing ring, cyan glass beads, gaskets, screws.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_05aefb923c70497b016a400caaca74819abc1adfcf30978fc4.png"
+    },
+    "sofa": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "modelKey": "room_l5_v3_crescent_low_sofa",
+      "prompt": "Orthographic Image2 parts sheet for a crescent low sofa with curved black ribbed cushions, white ceramic outer shells, graphite plinth, brass caps, cyan glass slits and connector parts.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_02c3eff2071b3773016a400d0181a08199b180fb446b50562e.png"
+    },
+    "coffee": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "modelKey": "room_l5_v3_evidence_coffee_table",
+      "prompt": "Orthographic Image2 parts sheet for an evidence coffee table with smoked black glass top, cyan route glow, white ceramic rims, graphite slabs, brass feet, gaskets and screws.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_02c3eff2071b3773016a400d38393c819988823d7636a28140.png"
+    },
+    "cabinet": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "modelKey": "room_l5_v3_human_archive_cabinet",
+      "prompt": "Orthographic Image2 parts sheet for a human archive cabinet with tall white ceramic curved doors, smoked graphite shelves, black padded bolsters, brass handles, cyan glass strips and seals.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_02c3eff2071b3773016a400d78d214819981e2caca47642fa1.png"
+    },
+    "console": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "modelKey": "room_l5_v3_service_side_console",
+      "prompt": "Orthographic Image2 parts sheet for a service side console with black smoked glass tray, white ceramic side panels, graphite ribbed lower cabinet, brass rails and cyan glass status capsules.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f080f-434b-7c01-a3d3-558760ca1679/ig_02c3eff2071b3773016a400db4f5908199b291093701d31302.png"
+    }
+  },
+  "regions": {
+    "chair_black_ribbed_cushion": {
+      "atlasRect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "chair",
+      "sourceModelKey": "room_l5_v3_anemone_lounge_chair",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "sourceCrop": [
+        20,
+        18,
+        470,
+        520
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/chair_black_ribbed_cushion.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 11751,
+        "opaquePixelsGte250": 232649,
+        "transparentRatio": 0.0481
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        36,
+        36,
+        36
+      ],
+      "note": "ribbed black petal cushion",
+      "image2Assert": true
+    },
+    "chair_white_ceramic_petal": {
+      "atlasRect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "chair",
+      "sourceModelKey": "room_l5_v3_anemone_lounge_chair",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "sourceCrop": [
+        610,
+        24,
+        410,
+        360
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/chair_white_ceramic_petal.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 29400,
+        "opaquePixelsGte250": 118200,
+        "transparentRatio": 0.1992
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        222,
+        219,
+        215
+      ],
+      "note": "curved white ceramic petal shell",
+      "image2Assert": true
+    },
+    "chair_graphite_swivel_base": {
+      "atlasRect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "chair",
+      "sourceModelKey": "room_l5_v3_anemone_lounge_chair",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "sourceCrop": [
+        1040,
+        30,
+        370,
+        315
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/chair_graphite_swivel_base.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 17963,
+        "opaquePixelsGte250": 98587,
+        "transparentRatio": 0.1541
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        115,
+        111,
+        105
+      ],
+      "note": "brushed graphite swivel base",
+      "image2Assert": true
+    },
+    "chair_brass_bearing_ring": {
+      "atlasRect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "chair",
+      "sourceModelKey": "room_l5_v3_anemone_lounge_chair",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "sourceCrop": [
+        1090,
+        355,
+        260,
+        260
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/chair_brass_bearing_ring.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 24246,
+        "opaquePixelsGte250": 43354,
+        "transparentRatio": 0.3587
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        194,
+        190,
+        182
+      ],
+      "note": "brass bearing ring",
+      "image2Assert": true
+    },
+    "chair_cyan_glass_bead": {
+      "atlasRect": [
+        1024,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "chair",
+      "sourceModelKey": "room_l5_v3_anemone_lounge_chair",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "sourceCrop": [
+        650,
+        455,
+        420,
+        120
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/chair_cyan_glass_bead.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 9331,
+        "opaquePixelsGte250": 41069,
+        "transparentRatio": 0.1851
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        126,
+        166,
+        177
+      ],
+      "note": "cyan glass beads",
+      "image2Assert": true
+    },
+    "chair_black_gasket": {
+      "atlasRect": [
+        1280,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "chair",
+      "sourceModelKey": "room_l5_v3_anemone_lounge_chair",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "sourceCrop": [
+        650,
+        615,
+        560,
+        150
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/chair_black_gasket.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 4117,
+        "opaquePixelsGte250": 79883,
+        "transparentRatio": 0.049
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        176,
+        174,
+        170
+      ],
+      "note": "black gasket rails",
+      "image2Assert": true
+    },
+    "chair_screw_bracket": {
+      "atlasRect": [
+        1536,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "chair",
+      "sourceModelKey": "room_l5_v3_anemone_lounge_chair",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/anemone_lounge_chair_parts_image2.png",
+      "sourceCrop": [
+        410,
+        820,
+        700,
+        145
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/chair_screw_bracket.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 22870,
+        "opaquePixelsGte250": 78630,
+        "transparentRatio": 0.2253
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        212,
+        209,
+        205
+      ],
+      "note": "screws and brackets",
+      "image2Assert": true
+    },
+    "sofa_black_ribbed_crescent": {
+      "atlasRect": [
+        1792,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "sofa",
+      "sourceModelKey": "room_l5_v3_crescent_low_sofa",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "sourceCrop": [
+        18,
+        18,
+        650,
+        330
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/sofa_black_ribbed_crescent.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 18291,
+        "opaquePixelsGte250": 196209,
+        "transparentRatio": 0.0853
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        44,
+        44,
+        44
+      ],
+      "note": "curved black ribbed sofa cushion",
+      "image2Assert": true
+    },
+    "sofa_white_ceramic_arc": {
+      "atlasRect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "sofa",
+      "sourceModelKey": "room_l5_v3_crescent_low_sofa",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "sourceCrop": [
+        800,
+        30,
+        545,
+        310
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/sofa_white_ceramic_arc.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 65653,
+        "opaquePixelsGte250": 103297,
+        "transparentRatio": 0.3886
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        213,
+        211,
+        209
+      ],
+      "note": "white ceramic crescent shell",
+      "image2Assert": true
+    },
+    "sofa_graphite_plinth": {
+      "atlasRect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "sofa",
+      "sourceModelKey": "room_l5_v3_crescent_low_sofa",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "sourceCrop": [
+        35,
+        560,
+        720,
+        220
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/sofa_graphite_plinth.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 29470,
+        "opaquePixelsGte250": 128930,
+        "transparentRatio": 0.186
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        80,
+        80,
+        79
+      ],
+      "note": "graphite crescent plinth",
+      "image2Assert": true
+    },
+    "sofa_cyan_status_slit": {
+      "atlasRect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "sofa",
+      "sourceModelKey": "room_l5_v3_crescent_low_sofa",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "sourceCrop": [
+        785,
+        500,
+        450,
+        110
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/sofa_cyan_status_slit.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 22855,
+        "opaquePixelsGte250": 26645,
+        "transparentRatio": 0.4617
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        124,
+        177,
+        184
+      ],
+      "note": "cyan glass status slits",
+      "image2Assert": true
+    },
+    "sofa_black_gasket_rail": {
+      "atlasRect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "sofa",
+      "sourceModelKey": "room_l5_v3_crescent_low_sofa",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "sourceCrop": [
+        820,
+        610,
+        600,
+        150
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/sofa_black_gasket_rail.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 48189,
+        "opaquePixelsGte250": 41811,
+        "transparentRatio": 0.5354
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        80,
+        80,
+        79
+      ],
+      "note": "black curved gasket rails",
+      "image2Assert": true
+    },
+    "sofa_brass_foot_cap": {
+      "atlasRect": [
+        1024,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "sofa",
+      "sourceModelKey": "room_l5_v3_crescent_low_sofa",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "sourceCrop": [
+        1120,
+        810,
+        330,
+        130
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/sofa_brass_foot_cap.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 23445,
+        "opaquePixelsGte250": 19455,
+        "transparentRatio": 0.5465
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        130,
+        116,
+        95
+      ],
+      "note": "brass foot caps",
+      "image2Assert": true
+    },
+    "sofa_screw_plate": {
+      "atlasRect": [
+        1280,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "sofa",
+      "sourceModelKey": "room_l5_v3_crescent_low_sofa",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/crescent_low_sofa_parts_image2.png",
+      "sourceCrop": [
+        780,
+        770,
+        330,
+        160
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/sofa_screw_plate.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 37066,
+        "opaquePixelsGte250": 15734,
+        "transparentRatio": 0.702
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        144,
+        142,
+        136
+      ],
+      "note": "black screw plates",
+      "image2Assert": true
+    },
+    "coffee_black_glass_top": {
+      "atlasRect": [
+        1536,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "coffee",
+      "sourceModelKey": "room_l5_v3_evidence_coffee_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "sourceCrop": [
+        20,
+        24,
+        710,
+        220
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/coffee_black_glass_top.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 2099,
+        "opaquePixelsGte250": 154101,
+        "transparentRatio": 0.0134
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        24,
+        31,
+        32
+      ],
+      "note": "smoked black glass route top",
+      "image2Assert": true
+    },
+    "coffee_white_ceramic_rim": {
+      "atlasRect": [
+        1792,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "coffee",
+      "sourceModelKey": "room_l5_v3_evidence_coffee_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "sourceCrop": [
+        785,
+        30,
+        505,
+        170
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/coffee_white_ceramic_rim.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 22832,
+        "opaquePixelsGte250": 63018,
+        "transparentRatio": 0.266
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        202,
+        197,
+        195
+      ],
+      "note": "white ceramic rim bars",
+      "image2Assert": true
+    },
+    "coffee_graphite_pedestal": {
+      "atlasRect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "coffee",
+      "sourceModelKey": "room_l5_v3_evidence_coffee_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "sourceCrop": [
+        690,
+        330,
+        510,
+        330
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/coffee_graphite_pedestal.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 12604,
+        "opaquePixelsGte250": 155696,
+        "transparentRatio": 0.0749
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        81,
+        81,
+        81
+      ],
+      "note": "dark graphite pedestal slabs",
+      "image2Assert": true
+    },
+    "coffee_brass_connector": {
+      "atlasRect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "coffee",
+      "sourceModelKey": "room_l5_v3_evidence_coffee_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "sourceCrop": [
+        1095,
+        215,
+        300,
+        190
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/coffee_brass_connector.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 15742,
+        "opaquePixelsGte250": 41258,
+        "transparentRatio": 0.2762
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        133,
+        124,
+        111
+      ],
+      "note": "brass connector rods",
+      "image2Assert": true
+    },
+    "coffee_cyan_capsule": {
+      "atlasRect": [
+        512,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "coffee",
+      "sourceModelKey": "room_l5_v3_evidence_coffee_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "sourceCrop": [
+        500,
+        575,
+        330,
+        95
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/coffee_cyan_capsule.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 5955,
+        "opaquePixelsGte250": 25395,
+        "transparentRatio": 0.19
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        71,
+        75,
+        75
+      ],
+      "note": "cyan capsule lamps",
+      "image2Assert": true
+    },
+    "coffee_black_gasket": {
+      "atlasRect": [
+        768,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "coffee",
+      "sourceModelKey": "room_l5_v3_evidence_coffee_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "sourceCrop": [
+        35,
+        625,
+        520,
+        120
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/coffee_black_gasket.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 16618,
+        "opaquePixelsGte250": 45782,
+        "transparentRatio": 0.2663
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        99,
+        105,
+        106
+      ],
+      "note": "black gasket rails",
+      "image2Assert": true
+    },
+    "coffee_screw_corner": {
+      "atlasRect": [
+        1024,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "coffee",
+      "sourceModelKey": "room_l5_v3_evidence_coffee_table",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/evidence_coffee_table_parts_image2.png",
+      "sourceCrop": [
+        20,
+        880,
+        540,
+        110
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/coffee_screw_corner.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 36510,
+        "opaquePixelsGte250": 22890,
+        "transparentRatio": 0.6146
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        165,
+        162,
+        159
+      ],
+      "note": "screws and corner caps",
+      "image2Assert": true
+    },
+    "cabinet_white_ceramic_door": {
+      "atlasRect": [
+        1280,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "cabinet",
+      "sourceModelKey": "room_l5_v3_human_archive_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "sourceCrop": [
+        20,
+        30,
+        430,
+        630
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/cabinet_white_ceramic_door.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 115882,
+        "opaquePixelsGte250": 155018,
+        "transparentRatio": 0.4278
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        221,
+        216,
+        211
+      ],
+      "note": "tall white curved cabinet door",
+      "image2Assert": true
+    },
+    "cabinet_graphite_shelf": {
+      "atlasRect": [
+        1536,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "cabinet",
+      "sourceModelKey": "room_l5_v3_human_archive_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "sourceCrop": [
+        460,
+        70,
+        330,
+        575
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/cabinet_graphite_shelf.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 8074,
+        "opaquePixelsGte250": 181676,
+        "transparentRatio": 0.0426
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        57,
+        56,
+        55
+      ],
+      "note": "smoked graphite shelf body",
+      "image2Assert": true
+    },
+    "cabinet_black_padded_bolster": {
+      "atlasRect": [
+        1792,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "cabinet",
+      "sourceModelKey": "room_l5_v3_human_archive_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "sourceCrop": [
+        790,
+        70,
+        360,
+        300
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/cabinet_black_padded_bolster.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 2119,
+        "opaquePixelsGte250": 105881,
+        "transparentRatio": 0.0196
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        50,
+        50,
+        50
+      ],
+      "note": "black padded vertical bolsters",
+      "image2Assert": true
+    },
+    "cabinet_smoked_glass_front": {
+      "atlasRect": [
+        0,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "cabinet",
+      "sourceModelKey": "room_l5_v3_human_archive_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "sourceCrop": [
+        760,
+        430,
+        390,
+        180
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/cabinet_smoked_glass_front.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 2047,
+        "opaquePixelsGte250": 68153,
+        "transparentRatio": 0.0292
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        64,
+        64,
+        63
+      ],
+      "note": "smoked glass front panel",
+      "image2Assert": true
+    },
+    "cabinet_brass_handle": {
+      "atlasRect": [
+        256,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "cabinet",
+      "sourceModelKey": "room_l5_v3_human_archive_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "sourceCrop": [
+        1150,
+        70,
+        360,
+        320
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/cabinet_brass_handle.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 13264,
+        "opaquePixelsGte250": 101936,
+        "transparentRatio": 0.1151
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        111,
+        108,
+        103
+      ],
+      "note": "brass drawer handles",
+      "image2Assert": true
+    },
+    "cabinet_cyan_strip": {
+      "atlasRect": [
+        512,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "cabinet",
+      "sourceModelKey": "room_l5_v3_human_archive_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "sourceCrop": [
+        1120,
+        500,
+        220,
+        120
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/cabinet_cyan_strip.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 3269,
+        "opaquePixelsGte250": 23131,
+        "transparentRatio": 0.1238
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        179,
+        190,
+        188
+      ],
+      "note": "cyan frosted glass strips",
+      "image2Assert": true
+    },
+    "cabinet_screw_hinge": {
+      "atlasRect": [
+        768,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "cabinet",
+      "sourceModelKey": "room_l5_v3_human_archive_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/human_archive_cabinet_parts_image2.png",
+      "sourceCrop": [
+        1040,
+        700,
+        455,
+        265
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/cabinet_screw_hinge.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 9666,
+        "opaquePixelsGte250": 110909,
+        "transparentRatio": 0.0802
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        214,
+        210,
+        207
+      ],
+      "note": "hinges screws and plates",
+      "image2Assert": true
+    },
+    "console_white_ceramic_side": {
+      "atlasRect": [
+        1024,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "console",
+      "sourceModelKey": "room_l5_v3_service_side_console",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "sourceCrop": [
+        22,
+        40,
+        310,
+        490
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/console_white_ceramic_side.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 93562,
+        "opaquePixelsGte250": 58338,
+        "transparentRatio": 0.6159
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        185,
+        179,
+        174
+      ],
+      "note": "white ceramic side panel",
+      "image2Assert": true
+    },
+    "console_black_glass_tray": {
+      "atlasRect": [
+        1280,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "console",
+      "sourceModelKey": "room_l5_v3_service_side_console",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "sourceCrop": [
+        885,
+        45,
+        455,
+        215
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/console_black_glass_tray.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 13886,
+        "opaquePixelsGte250": 83939,
+        "transparentRatio": 0.1419
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        55,
+        55,
+        55
+      ],
+      "note": "black smoked glass tray",
+      "image2Assert": true
+    },
+    "console_graphite_ribbed_body": {
+      "atlasRect": [
+        1536,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "console",
+      "sourceModelKey": "room_l5_v3_service_side_console",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "sourceCrop": [
+        555,
+        230,
+        325,
+        430
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/console_graphite_ribbed_body.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 12132,
+        "opaquePixelsGte250": 127618,
+        "transparentRatio": 0.0868
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        50,
+        49,
+        47
+      ],
+      "note": "graphite ribbed lower cabinet",
+      "image2Assert": true
+    },
+    "console_brass_rail": {
+      "atlasRect": [
+        1792,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "console",
+      "sourceModelKey": "room_l5_v3_service_side_console",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "sourceCrop": [
+        25,
+        20,
+        700,
+        95
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/console_brass_rail.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 31979,
+        "opaquePixelsGte250": 34521,
+        "transparentRatio": 0.4809
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        160,
+        154,
+        147
+      ],
+      "note": "long brass rail with white mounts",
+      "image2Assert": true
+    },
+    "console_cyan_capsule": {
+      "atlasRect": [
+        0,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "console",
+      "sourceModelKey": "room_l5_v3_service_side_console",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "sourceCrop": [
+        900,
+        285,
+        195,
+        220
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/console_cyan_capsule.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 13276,
+        "opaquePixelsGte250": 29624,
+        "transparentRatio": 0.3095
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        139,
+        175,
+        177
+      ],
+      "note": "cyan glass capsules",
+      "image2Assert": true
+    },
+    "console_black_gasket": {
+      "atlasRect": [
+        256,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "console",
+      "sourceModelKey": "room_l5_v3_service_side_console",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "sourceCrop": [
+        1180,
+        315,
+        275,
+        360
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/console_black_gasket.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 43836,
+        "opaquePixelsGte250": 55164,
+        "transparentRatio": 0.4428
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        132,
+        129,
+        128
+      ],
+      "note": "black rounded gasket rails",
+      "image2Assert": true
+    },
+    "console_screw_foot": {
+      "atlasRect": [
+        512,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "console",
+      "sourceModelKey": "room_l5_v3_service_side_console",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-sources/service_side_console_parts_image2.png",
+      "sourceCrop": [
+        30,
+        775,
+        1060,
+        180
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/image2-cutouts/console_screw_foot.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 86920,
+        "opaquePixelsGte250": 103880,
+        "transparentRatio": 0.4556
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        132,
+        125,
+        119
+      ],
+      "note": "feet screws handles and brackets",
+      "image2Assert": true
+    }
+  }
+}

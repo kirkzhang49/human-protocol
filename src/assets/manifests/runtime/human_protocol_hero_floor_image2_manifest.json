@@ -1,0 +1,122 @@
+{
+  "id": "human_protocol_hero_floor_image2_manifest",
+  "generatedAt": "2026-06-05T02:01:05.777Z",
+  "generator": "scripts/asset-build/generate-hero-floor-image2-textures.mjs",
+  "purpose": "Five room-fit hero floor source images for the five official Human Protocol big-room themes. Each image has the same aspect ratio as the target room bounds.",
+  "sourcePolicy": "Source images only. Runtime integration should place each image on a single room-sized floor plane or GLB surface with matching meters; do not stretch a square texture over a rectangular room.",
+  "longEdgePx": 4096,
+  "textureCount": 5,
+  "contactSheet": "src/assets/textures/environment/hero-floors/human_protocol_room_fit_hero_floor_contact_sheet.png",
+  "textures": [
+    {
+      "id": "level01_maintenance_bay_room_fit_floor",
+      "levelId": "level_01_maintenance_bay",
+      "roomId": "maintenance_bay_floor",
+      "roomMeters": [
+        18,
+        25
+      ],
+      "sourcePath": "src/assets/textures/environment/hero-floors/level01_image2_maintenance_bay_room_fit_floor.png",
+      "sizePx": [
+        2949,
+        4096
+      ],
+      "pixelsPerMeter": [
+        163.83,
+        163.84
+      ],
+      "bytes": 2204744,
+      "prompt": "One exact room-fit top-down floor image for an 18m x 25m maintenance bay: dark wet gunmetal, large repair-bed light reflections, restrained cyan path strips, red elevator status reflection, bolts, scratches, seams, high-end sci-fi horror.",
+      "negative": "No text, no UI, no logo, no characters, no props, no walls, no perspective camera, no square-tile stretch artifacts.",
+      "qaNotes": "Room-fit source image: aspect ratio matches the target room footprint. Intended mapping is one plane covering the full room bounds with 1:1 UV, not repeated square tiling."
+    },
+    {
+      "id": "level02_false_residential_room_fit_floor",
+      "levelId": "level_02_residential_simulation",
+      "roomId": "level_02_living_room",
+      "roomMeters": [
+        18.8,
+        16.6
+      ],
+      "sourcePath": "src/assets/textures/environment/hero-floors/level02_image2_false_residential_room_fit_floor.png",
+      "sizePx": [
+        4096,
+        3617
+      ],
+      "pixelsPerMeter": [
+        217.87,
+        217.89
+      ],
+      "bytes": 2727660,
+      "prompt": "One exact room-fit top-down floor image for an 18.8m x 16.6m false residential living room: dark warm wood, large muted rug inlay, hidden service seams, amber domestic glow, tiny cold cyan lab cracks, elegant uncanny home.",
+      "negative": "No text, no UI, no logo, no characters, no props, no walls, no perspective camera, no square-tile stretch artifacts.",
+      "qaNotes": "Room-fit source image: aspect ratio matches the target room footprint. Intended mapping is one plane covering the full room bounds with 1:1 UV, not repeated square tiling."
+    },
+    {
+      "id": "level03_human_museum_room_fit_floor",
+      "levelId": "level_03_human_museum",
+      "roomId": "level_03_gallery_lobby",
+      "roomMeters": [
+        18,
+        12
+      ],
+      "sourcePath": "src/assets/textures/environment/hero-floors/level03_image2_human_museum_room_fit_floor.png",
+      "sizePx": [
+        4096,
+        2731
+      ],
+      "pixelsPerMeter": [
+        227.56,
+        227.58
+      ],
+      "bytes": 2316952,
+      "prompt": "One exact room-fit top-down floor image for an 18m x 12m human museum gallery: polished black stone, aged brass inlays, archive route geometry, smoked glass reflections, luxurious museum horror.",
+      "negative": "No text, no UI, no logo, no characters, no props, no walls, no perspective camera, no square-tile stretch artifacts.",
+      "qaNotes": "Room-fit source image: aspect ratio matches the target room footprint. Intended mapping is one plane covering the full room bounds with 1:1 UV, not repeated square tiling."
+    },
+    {
+      "id": "level04_memory_clinic_room_fit_floor",
+      "levelId": "level_04_memory_clinic",
+      "roomId": "level_04_waiting_room",
+      "roomMeters": [
+        16,
+        11
+      ],
+      "sourcePath": "src/assets/textures/environment/hero-floors/level04_image2_memory_clinic_room_fit_floor.png",
+      "sizePx": [
+        4096,
+        2816
+      ],
+      "pixelsPerMeter": [
+        256,
+        256
+      ],
+      "bytes": 3491725,
+      "prompt": "One exact room-fit top-down floor image for a 16m x 11m memory clinic waiting room: off-white medical resin, pale green-blue sterilization glow, therapy circle markings, soft scuffs, subtle red warning under glass.",
+      "negative": "No text, no UI, no logo, no characters, no props, no walls, no perspective camera, no square-tile stretch artifacts.",
+      "qaNotes": "Room-fit source image: aspect ratio matches the target room footprint. Intended mapping is one plane covering the full room bounds with 1:1 UV, not repeated square tiling."
+    },
+    {
+      "id": "level05_reclamation_core_room_fit_floor",
+      "levelId": "level_05_reclamation_core",
+      "roomId": "level_05_platform",
+      "roomMeters": [
+        18,
+        13
+      ],
+      "sourcePath": "src/assets/textures/environment/hero-floors/level05_image2_reclamation_core_room_fit_floor.png",
+      "sizePx": [
+        4096,
+        2958
+      ],
+      "pixelsPerMeter": [
+        227.56,
+        227.54
+      ],
+      "bytes": 2681833,
+      "prompt": "One exact room-fit top-down floor image for an 18m x 13m reclamation core platform: black heavy industrial metal, concentric lock rings, deep energy grooves, white identity path, cyan and amber core glow.",
+      "negative": "No text, no UI, no logo, no characters, no props, no walls, no perspective camera, no square-tile stretch artifacts.",
+      "qaNotes": "Room-fit source image: aspect ratio matches the target room footprint. Intended mapping is one plane covering the full room bounds with 1:1 UV, not repeated square tiling."
+    }
+  ]
+}

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "hp.image2.gui.regions.v1",
+  "atlasSize": [
+    1536,
+    1024
+  ],
+  "backgroundSize": [
+    1128,
+    490
+  ],
+  "source": "src/assets/gui/gate-balance-three-row/image2-sources/gate_balance_three_row_parts_image2_source_v1_chromakey.png",
+  "background": "src/assets/gui/gate-balance-three-row/gate_balance_three_row_frame_image2_v1.png",
+  "parts": "src/assets/gui/gate-balance-three-row/gate_balance_three_row_parts_image2_v1.png",
+  "regions": {
+    "gauge_shell_idle": [
+      0,
+      0,
+      620,
+      93
+    ],
+    "gauge_shell_near": [
+      638,
+      0,
+      620,
+      93
+    ],
+    "gauge_shell_locked": [
+      0,
+      111,
+      620,
+      93
+    ],
+    "gauge_shell_danger": [
+      638,
+      111,
+      620,
+      93
+    ],
+    "control_shell_idle": [
+      0,
+      222,
+      470,
+      63
+    ],
+    "control_shell_focused": [
+      488,
+      222,
+      470,
+      63
+    ],
+    "control_shell_locked": [
+      976,
+      222,
+      470,
+      63
+    ],
+    "button_idle": [
+      1464,
+      222,
+      50,
+      44
+    ],
+    "button_pressed": [
+      0,
+      303,
+      50,
+      44
+    ],
+    "button_disabled": [
+      68,
+      303,
+      50,
+      44
+    ],
+    "button_focused": [
+      136,
+      303,
+      50,
+      44
+    ],
+    "lock_button_disabled": [
+      204,
+      303,
+      232,
+      52
+    ],
+    "lock_button_ready": [
+      454,
+      303,
+      232,
+      52
+    ],
+    "lock_button_pressed": [
+      704,
+      303,
+      232,
+      52
+    ],
+    "lock_button_success": [
+      954,
+      303,
+      232,
+      52
+    ],
+    "reset_button_idle": [
+      1204,
+      303,
+      148,
+      52
+    ],
+    "reset_button_pressed": [
+      1370,
+      303,
+      148,
+      52
+    ],
+    "close_button_idle": [
+      0,
+      373,
+      44,
+      44
+    ],
+    "close_button_pressed": [
+      62,
+      373,
+      44,
+      44
+    ],
+    "progress_track": [
+      124,
+      373,
+      820,
+      18
+    ],
+    "slider_handle_idle": [
+      962,
+      373,
+      30,
+      38
+    ],
+    "slider_handle_dragging": [
+      1010,
+      373,
+      30,
+      38
+    ],
+    "slider_handle_locked": [
+      1058,
+      373,
+      30,
+      38
+    ]
+  },
+  "stateRegions": {
+    "active": [
+      "gauge_shell_idle",
+      "control_shell_idle",
+      "button_idle",
+      "progress_track"
+    ],
+    "choice": [
+      "control_shell_focused",
+      "button_focused",
+      "slider_handle_dragging"
+    ],
+    "solved": [
+      "gauge_shell_locked",
+      "control_shell_locked",
+      "lock_button_success"
+    ],
+    "disabled": [
+      "button_disabled",
+      "lock_button_disabled"
+    ],
+    "danger": [
+      "gauge_shell_danger"
+    ]
+  },
+  "notes": "Real Image2 transparent parts. Text and all values are live runtime layers."
+}

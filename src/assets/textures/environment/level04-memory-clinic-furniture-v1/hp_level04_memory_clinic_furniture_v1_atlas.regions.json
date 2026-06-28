@@ -1,0 +1,105 @@
+{
+  "image": "src/assets/textures/environment/level04-memory-clinic-furniture-v1/hp_level04_memory_clinic_furniture_v1_atlas.png",
+  "size": [
+    1024,
+    1024
+  ],
+  "regions": {
+    "ceramic_white": {
+      "x": 0,
+      "y": 0,
+      "w": 256,
+      "h": 256
+    },
+    "smoked_titanium": {
+      "x": 256,
+      "y": 0,
+      "w": 256,
+      "h": 256
+    },
+    "frosted_glass": {
+      "x": 512,
+      "y": 0,
+      "w": 256,
+      "h": 256
+    },
+    "cyan_screen": {
+      "x": 768,
+      "y": 0,
+      "w": 256,
+      "h": 256
+    },
+    "black_glass_screen": {
+      "x": 0,
+      "y": 256,
+      "w": 256,
+      "h": 256
+    },
+    "blue_cushion": {
+      "x": 256,
+      "y": 256,
+      "w": 256,
+      "h": 256
+    },
+    "lime_cushion": {
+      "x": 512,
+      "y": 256,
+      "w": 256,
+      "h": 256
+    },
+    "soft_gray_cushion": {
+      "x": 768,
+      "y": 256,
+      "w": 256,
+      "h": 256
+    },
+    "warm_wood": {
+      "x": 0,
+      "y": 512,
+      "w": 256,
+      "h": 256
+    },
+    "rubber_black": {
+      "x": 256,
+      "y": 512,
+      "w": 256,
+      "h": 256
+    },
+    "dark_acoustic_mesh": {
+      "x": 512,
+      "y": 512,
+      "w": 256,
+      "h": 256
+    },
+    "translucent_curtain": {
+      "x": 768,
+      "y": 512,
+      "w": 256,
+      "h": 256
+    },
+    "surgical_lens": {
+      "x": 0,
+      "y": 768,
+      "w": 256,
+      "h": 256
+    },
+    "red_fault": {
+      "x": 256,
+      "y": 768,
+      "w": 256,
+      "h": 256
+    },
+    "cyan_emissive": {
+      "x": 512,
+      "y": 768,
+      "w": 256,
+      "h": 256
+    },
+    "plant_green": {
+      "x": 768,
+      "y": 768,
+      "w": 256,
+      "h": 256
+    }
+  }
+}

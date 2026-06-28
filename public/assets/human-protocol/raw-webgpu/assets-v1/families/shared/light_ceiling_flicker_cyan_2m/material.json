@@ -1,0 +1,96 @@
+{
+  "file": "material.json",
+  "hash": "d30000837ed5c471",
+  "materials": [
+    {
+      "index": 64,
+      "id": "mat:builder-resource:mat-cyan-medical-emissive:1h1wcfc",
+      "name": "mat_cyan_medical_emissive",
+      "category": "builder-resource",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.432,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.12,
+        0.65,
+        0.75,
+        1
+      ],
+      "emissiveFactor": [
+        0.25,
+        0.95,
+        1
+      ],
+      "emissiveStrength": 1.65,
+      "roughnessFactor": 0.18,
+      "metallicFactor": 0.1,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 65,
+      "id": "mat:builder-resource:mat-dark-gunmetal:1n9qe9z",
+      "name": "mat_dark_gunmetal",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.025,
+        0.032,
+        0.038,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.86,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

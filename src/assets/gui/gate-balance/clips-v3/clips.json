@@ -1,0 +1,15 @@
+{
+  "gate_left_idle": "src/assets/gui/gate-balance/clips-v3/gate_left_idle.png",
+  "gate_mid_idle": "src/assets/gui/gate-balance/clips-v3/gate_mid_idle.png",
+  "gate_right_idle": "src/assets/gui/gate-balance/clips-v3/gate_right_idle.png",
+  "gauge_seal": "src/assets/gui/gate-balance/clips-v3/gauge_seal.png",
+  "gauge_track": "src/assets/gui/gate-balance/clips-v3/gauge_track.png",
+  "gauge_temp": "src/assets/gui/gate-balance/clips-v3/gauge_temp.png",
+  "control_left": "src/assets/gui/gate-balance/clips-v3/control_left.png",
+  "control_mid": "src/assets/gui/gate-balance/clips-v3/control_mid.png",
+  "control_right": "src/assets/gui/gate-balance/clips-v3/control_right.png",
+  "reset_plate": "src/assets/gui/gate-balance/clips-v3/reset_plate.png",
+  "lock_plate": "src/assets/gui/gate-balance/clips-v3/lock_plate.png",
+  "close_plate": "src/assets/gui/gate-balance/clips-v3/close_plate.png",
+  "progress_track": "src/assets/gui/gate-balance/clips-v3/progress_track.png"
+}

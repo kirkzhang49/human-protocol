@@ -1,0 +1,76 @@
+{
+  "atlas": "hp_level03_furniture_image2_atlas.png",
+  "atlasSize": [
+    1024,
+    1024
+  ],
+  "format": "[x, y, w, h] in pixels, top-left origin",
+  "regions": {
+    "black.enamel.plinth": [
+      8,
+      8,
+      320,
+      320
+    ],
+    "smoked.display.glass": [
+      344,
+      8,
+      320,
+      320
+    ],
+    "amber.exhibit.glass": [
+      680,
+      8,
+      320,
+      320
+    ],
+    "archive.drawer.front": [
+      8,
+      344,
+      320,
+      200
+    ],
+    "aged.brass.frame": [
+      344,
+      344,
+      656,
+      80
+    ],
+    "dark.velvet.strip": [
+      344,
+      440,
+      400,
+      104
+    ],
+    "cyan.scanner.strip": [
+      760,
+      440,
+      240,
+      60
+    ],
+    "glass.glare.mask": [
+      8,
+      560,
+      320,
+      200
+    ],
+    "dust.grime.mask": [
+      344,
+      560,
+      320,
+      200
+    ],
+    "blank.floor.plaque": [
+      680,
+      560,
+      320,
+      200
+    ],
+    "security.camera.lens": [
+      8,
+      776,
+      200,
+      200
+    ]
+  }
+}

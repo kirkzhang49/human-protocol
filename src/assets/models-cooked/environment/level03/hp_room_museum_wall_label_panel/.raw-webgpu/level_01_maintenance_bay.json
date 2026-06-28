@@ -1,0 +1,247 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_01_maintenance_bay",
+  "modelKey": "room_museum_wall_label_panel",
+  "category": "builder-resource",
+  "file": "src/assets/models-cooked/environment/level03/hp_room_museum_wall_label_panel.glb",
+  "fileName": "hp_room_museum_wall_label_panel.glb",
+  "sourceAsset": {
+    "modelKey": "room_museum_wall_label_panel",
+    "category": "builder-resource",
+    "url": "/src/assets/models-cooked/environment/level03/hp_room_museum_wall_label_panel.glb",
+    "file": "src/assets/models-cooked/environment/level03/hp_room_museum_wall_label_panel.glb",
+    "sizeMeters": [
+      1.156,
+      0.897,
+      0.088
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 39140,
+      "meshes": 4,
+      "nodes": 4,
+      "skins": 0,
+      "primitives": 4,
+      "materials": 4,
+      "textures": 2,
+      "images": 2,
+      "accessors": 14,
+      "bufferViews": 13,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 432
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level03/hp_room_museum_wall_label_panel.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 989976,
+    "vertexCount": 1296,
+    "triangleCount": 432,
+    "meshCount": 4,
+    "materialCount": 4,
+    "nodeCount": 5,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.560809,
+        0,
+        -0.046939
+      ],
+      "center": [
+        0,
+        0.372225,
+        0.011265
+      ],
+      "size": [
+        1.121618,
+        0.744449,
+        0.11641
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "image2_label_readable_face",
+        "vertexOffset": 989976,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.387113,
+          0.05445,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.387113,
+          -0.05445,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "small_cyan_catalogue_line",
+        "vertexOffset": 990300,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.610448,
+          0.065715,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.610448,
+          -0.065715,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "tiny_archive_red_dot",
+        "vertexOffset": 990624,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.38135,
+          0.14889,
+          0.065715,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.38135,
+          -0.14889,
+          -0.065715,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "wall_label_backplate",
+        "vertexOffset": 990948,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.372225,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.372225,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": []
+}

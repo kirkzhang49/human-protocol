@@ -1,0 +1,714 @@
+{
+  "file": "material.json",
+  "hash": "a265b307f1707e98",
+  "materials": [
+    {
+      "index": 87,
+      "id": "mat:pickup:room-emissive-cyan:1tpcl5y",
+      "name": "room_emissive_cyan",
+      "category": "pickup",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.3272,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0.060802,
+        0.544582,
+        0.595571,
+        0.355801
+      ],
+      "baseColorFactor": [
+        0.2,
+        0.78,
+        0.9,
+        1
+      ],
+      "emissiveFactor": [
+        0.14,
+        0.63,
+        0.7
+      ],
+      "emissiveStrength": 0.34,
+      "roughnessFactor": 0.24,
+      "metallicFactor": 0.05,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-110-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-110-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536059,
+            "contrast": 0.002903,
+            "chroma": 0.778034,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 110
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-74-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-74-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.174332,
+            "contrast": 0.005337,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 74
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/emissive-111-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/emissive-111-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.57008,
+            "contrast": 0.194856,
+            "chroma": 0.707282,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 111
+        }
+      ]
+    },
+    {
+      "index": 88,
+      "id": "mat:pickup:room-metal-dark:zql05b",
+      "name": "room_metal_dark",
+      "category": "pickup",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.055,
+        0.065,
+        0.072,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.38,
+      "metallicFactor": 0.72,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-19-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-19-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": null,
+          "generated": false,
+          "layer": 19
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-20-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-20-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": null,
+          "generated": false,
+          "layer": 20
+        }
+      ]
+    },
+    {
+      "index": 89,
+      "id": "mat:pickup:room-accent-protocol-gold:1l9yo58",
+      "name": "room_accent_protocol_gold",
+      "category": "pickup",
+      "visualRole": "pickup_key",
+      "semanticParams": [
+        17,
+        0.92,
+        0.4112,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0.935071,
+        0.674785,
+        0.14965,
+        0.788404
+      ],
+      "baseColorFactor": [
+        1,
+        0.74,
+        0.18,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0.14,
+      "roughnessFactor": 0.32,
+      "metallicFactor": 0.42,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-112-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-112-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536085,
+            "contrast": 0.005404,
+            "chroma": 0.778451,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 112
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-113-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-113-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.306053,
+            "contrast": 0.008463,
+            "chroma": 0.887188,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 113
+        }
+      ]
+    },
+    {
+      "index": 101,
+      "id": "mat:pickup:room-rubber:h2xalw",
+      "name": "room_rubber",
+      "category": "pickup",
+      "visualRole": "exhibit_warm",
+      "semanticParams": [
+        6,
+        0.8,
+        0.34,
+        0.18
+      ],
+      "paletteColorFactor": [
+        0.725769,
+        0.519167,
+        0.287673,
+        0.714073
+      ],
+      "baseColorFactor": [
+        0.012,
+        0.012,
+        0.011,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.86,
+      "metallicFactor": 0.04,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-125-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-125-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536093,
+            "contrast": 0.009621,
+            "chroma": 0.781884,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 125
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-126-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-126-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.837892,
+            "contrast": 0.014822,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 126
+        }
+      ]
+    },
+    {
+      "index": 102,
+      "id": "mat:pickup:room-image2-key-wrap-v1:18g3wn1",
+      "name": "room_image2_key_wrap_v1",
+      "category": "pickup",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0.14,
+      "roughnessFactor": 0.32,
+      "metallicFactor": 0.28,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_image2_key_wrap_v1",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/basecolor-10-hp-image2-key-wrap-v1.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/basecolor-10-hp-image2-key-wrap-v1.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.244574,
+            "contrast": 0.212906,
+            "chroma": 0.252023,
+            "detail": 0.197271
+          },
+          "generated": false,
+          "layer": 10
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-127-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-127-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536109,
+            "contrast": 0.007701,
+            "chroma": 0.779725,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 127
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-128-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-128-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.299903,
+            "contrast": 0.011146,
+            "chroma": 0.876112,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 128
+        }
+      ]
+    },
+    {
+      "index": 103,
+      "id": "mat:pickup:room-warning-orange:1fahu9q",
+      "name": "room_warning_orange",
+      "category": "pickup",
+      "visualRole": "pickup_energy",
+      "semanticParams": [
+        15,
+        0.9,
+        0.3928,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0.933457,
+        0.528008,
+        0.141901,
+        0.805827
+      ],
+      "baseColorFactor": [
+        1,
+        0.62,
+        0.14,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0.16,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0.32,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-129-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-129-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536097,
+            "contrast": 0.007014,
+            "chroma": 0.779665,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 129
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-109-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-109-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.32639,
+            "contrast": 0.008789,
+            "chroma": 0.855675,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 109
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 10,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/basecolor-10-hp-image2-key-wrap-v1.webp",
+      "name": "hp_image2_key_wrap_v1",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/basecolor-10-hp-image2-key-wrap-v1.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.244574,
+        "contrast": 0.212906,
+        "chroma": 0.252023,
+        "detail": 0.197271
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 19,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-19-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-19-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.55,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0
+      }
+    },
+    {
+      "layer": 20,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-20-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-20-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.55,
+        "contrast": 0,
+        "chroma": 0,
+        "detail": 0
+      }
+    },
+    {
+      "layer": 74,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-74-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-74-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.174332,
+        "contrast": 0.005337,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 109,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-109-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-109-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.32639,
+        "contrast": 0.008789,
+        "chroma": 0.855675,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 110,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-110-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-110-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536059,
+        "contrast": 0.002903,
+        "chroma": 0.778034,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 111,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/emissive-111-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/emissive-111-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.57008,
+        "contrast": 0.194856,
+        "chroma": 0.707282,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 112,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-112-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-112-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536085,
+        "contrast": 0.005404,
+        "chroma": 0.778451,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 113,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-113-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-113-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.306053,
+        "contrast": 0.008463,
+        "chroma": 0.887188,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 125,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-125-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-125-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536093,
+        "contrast": 0.009621,
+        "chroma": 0.781884,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 126,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-126-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-126-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.837892,
+        "contrast": 0.014822,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 127,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-127-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-127-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536109,
+        "contrast": 0.007701,
+        "chroma": 0.779725,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 128,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-128-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/metallicroughness-128-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.299903,
+        "contrast": 0.011146,
+        "chroma": 0.876112,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 129,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-129-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_large_yellow_key/textures/normal-129-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536097,
+        "contrast": 0.007014,
+        "chroma": 0.779665,
+        "detail": 0.5
+      }
+    }
+  ]
+}

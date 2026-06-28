@@ -1,0 +1,4 @@
+interface:
+  display_name: "Human Protocol Config Dev"
+  short_description: "Config-driven 3D game systems workflow"
+  default_prompt: "Use $human-protocol-config-game-dev to add a reusable config-driven Human Protocol puzzle system."

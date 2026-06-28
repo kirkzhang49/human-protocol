@@ -1,0 +1,346 @@
+{
+  "atlas": "src/assets/textures/environment/level01-power-infra-image2/hp_level01_power_infra_image2_atlas.png",
+  "atlasSize": [
+    1024,
+    1024
+  ],
+  "uvOrigin": "top-left",
+  "sourceImageSize": [
+    1254,
+    1254
+  ],
+  "regions": {
+    "battery.column": [
+      0,
+      0,
+      192,
+      512
+    ],
+    "breaker.column": [
+      192,
+      0,
+      192,
+      512
+    ],
+    "valve.column": [
+      384,
+      0,
+      192,
+      512
+    ],
+    "gantry.column": [
+      576,
+      0,
+      192,
+      512
+    ],
+    "docking.column": [
+      768,
+      0,
+      192,
+      512
+    ],
+    "dark.steel": [
+      0,
+      512,
+      256,
+      256
+    ],
+    "white.panel": [
+      256,
+      512,
+      256,
+      256
+    ],
+    "hazard.stripe": [
+      512,
+      512,
+      256,
+      128
+    ],
+    "cyan.diagnostic": [
+      768,
+      512,
+      128,
+      128
+    ],
+    "red.fault": [
+      896,
+      512,
+      128,
+      128
+    ],
+    "rubber.cable": [
+      512,
+      640,
+      256,
+      128
+    ],
+    "pipe.metal": [
+      768,
+      640,
+      256,
+      128
+    ],
+    "edge.wear": [
+      0,
+      768,
+      512,
+      128
+    ],
+    "panel.grime": [
+      512,
+      768,
+      512,
+      128
+    ],
+    "socket.plate": [
+      0,
+      896,
+      256,
+      128
+    ]
+  },
+  "sourceMappings": {
+    "battery.column": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        0,
+        0,
+        250,
+        1254
+      ],
+      "atlasRect": [
+        0,
+        0,
+        192,
+        512
+      ],
+      "resample": "nearest"
+    },
+    "breaker.column": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        250,
+        0,
+        251,
+        1254
+      ],
+      "atlasRect": [
+        192,
+        0,
+        192,
+        512
+      ],
+      "resample": "nearest"
+    },
+    "valve.column": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        501,
+        0,
+        251,
+        1254
+      ],
+      "atlasRect": [
+        384,
+        0,
+        192,
+        512
+      ],
+      "resample": "nearest"
+    },
+    "gantry.column": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        752,
+        0,
+        251,
+        1254
+      ],
+      "atlasRect": [
+        576,
+        0,
+        192,
+        512
+      ],
+      "resample": "nearest"
+    },
+    "docking.column": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        1003,
+        0,
+        251,
+        1254
+      ],
+      "atlasRect": [
+        768,
+        0,
+        192,
+        512
+      ],
+      "resample": "nearest"
+    },
+    "dark.steel": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        64,
+        760,
+        170,
+        210
+      ],
+      "atlasRect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "resample": "nearest"
+    },
+    "white.panel": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        292,
+        235,
+        170,
+        210
+      ],
+      "atlasRect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "resample": "nearest"
+    },
+    "hazard.stripe": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        1008,
+        422,
+        205,
+        100
+      ],
+      "atlasRect": [
+        512,
+        512,
+        256,
+        128
+      ],
+      "resample": "nearest"
+    },
+    "cyan.diagnostic": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        185,
+        350,
+        110,
+        135
+      ],
+      "atlasRect": [
+        768,
+        512,
+        128,
+        128
+      ],
+      "resample": "nearest"
+    },
+    "red.fault": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        1130,
+        525,
+        90,
+        90
+      ],
+      "atlasRect": [
+        896,
+        512,
+        128,
+        128
+      ],
+      "resample": "nearest"
+    },
+    "rubber.cable": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        642,
+        305,
+        220,
+        135
+      ],
+      "atlasRect": [
+        512,
+        640,
+        256,
+        128
+      ],
+      "resample": "nearest"
+    },
+    "pipe.metal": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        540,
+        515,
+        260,
+        120
+      ],
+      "atlasRect": [
+        768,
+        640,
+        256,
+        128
+      ],
+      "resample": "nearest"
+    },
+    "edge.wear": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        78,
+        1025,
+        395,
+        105
+      ],
+      "atlasRect": [
+        0,
+        768,
+        512,
+        128
+      ],
+      "resample": "nearest"
+    },
+    "panel.grime": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        786,
+        750,
+        330,
+        130
+      ],
+      "atlasRect": [
+        512,
+        768,
+        512,
+        128
+      ],
+      "resample": "nearest"
+    },
+    "socket.plate": {
+      "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+      "sourceRect": [
+        1042,
+        720,
+        165,
+        150
+      ],
+      "atlasRect": [
+        0,
+        896,
+        256,
+        128
+      ],
+      "resample": "nearest"
+    }
+  }
+}

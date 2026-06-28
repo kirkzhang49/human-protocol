@@ -1,0 +1,168 @@
+{
+  "schemaVersion": "hp.image2SourceProvenance.v1",
+  "assetFamily": "gate_balance",
+  "generatedAt": "2026-06-24",
+  "generator": "scripts/asset-build/generate-gate-balance-assets.py",
+  "licenseLabel": "project-owned deterministic generated output",
+  "commercialStatus": "project-owned deterministic generated output",
+  "policyNote": "No readable text, puzzle answers, people, gore, logos, or third-party texture pixels are baked. User screenshots were high-level direction only and are not redistributed as source pixels.",
+  "sources": [
+    {
+      "id": "gate_balance_overlay_source_v1",
+      "path": "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_source_v1.png",
+      "promptLedgerId": "gate_balance_overlay_source_v1",
+      "derivatives": [
+        "src/assets/gui/gate-balance/gate_balance_overlay_background_v1.png",
+        "src/assets/gui/gate-balance/gate_balance_overlay_parts_atlas_v1.png",
+        "src/assets/gui/gate-balance/gate_balance_overlay_parts_atlas_v1.regions.json",
+        "src/assets/gui/gate-balance/gate_balance_overlay_layout_v1.json"
+      ]
+    },
+    {
+      "id": "gate_balance_terminal_screen_source_v1",
+      "path": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/gate_balance_terminal_screen_source_v1.png",
+      "promptLedgerId": "gate_balance_terminal_screen_source_v1",
+      "derivatives": [
+        "src/assets/textures/environment/builder-puzzle-machines/hp_gate_balance_terminal_screen_atlas_v1.png",
+        "src/assets/textures/environment/builder-puzzle-machines/hp_gate_balance_terminal_screen_atlas_v1.regions.json"
+      ]
+    }
+  ],
+  "overlayRegions": {
+    "stage_plate": [
+      0,
+      0,
+      896,
+      224
+    ],
+    "gate_slot_idle": [
+      0,
+      240,
+      260,
+      160
+    ],
+    "gate_slot_focus": [
+      272,
+      240,
+      260,
+      160
+    ],
+    "gate_slot_balanced": [
+      544,
+      240,
+      260,
+      160
+    ],
+    "gauge_plate_idle": [
+      0,
+      416,
+      300,
+      112
+    ],
+    "gauge_plate_near": [
+      312,
+      416,
+      300,
+      112
+    ],
+    "gauge_plate_locked": [
+      624,
+      416,
+      300,
+      112
+    ],
+    "control_plate": [
+      0,
+      544,
+      300,
+      84
+    ],
+    "button_primary": [
+      312,
+      544,
+      240,
+      64
+    ],
+    "button_secondary": [
+      564,
+      544,
+      180,
+      64
+    ],
+    "close_plate": [
+      756,
+      544,
+      120,
+      56
+    ],
+    "progress_track": [
+      0,
+      648,
+      780,
+      34
+    ],
+    "readout_glass": [
+      0,
+      704,
+      220,
+      88
+    ],
+    "warning_glass": [
+      240,
+      704,
+      220,
+      88
+    ]
+  },
+  "terminalScreenRegions": {
+    "screen_back": [
+      0,
+      0,
+      768,
+      432
+    ],
+    "screen_gate_idle": [
+      0,
+      448,
+      220,
+      160
+    ],
+    "screen_gate_focus": [
+      232,
+      448,
+      220,
+      160
+    ],
+    "screen_gate_balanced": [
+      464,
+      448,
+      220,
+      160
+    ],
+    "screen_status_bar": [
+      0,
+      624,
+      520,
+      64
+    ],
+    "screen_warning_bar": [
+      536,
+      624,
+      320,
+      64
+    ],
+    "terminal_cyan_glass": [
+      0,
+      704,
+      220,
+      112
+    ],
+    "terminal_amber_glass": [
+      232,
+      704,
+      220,
+      112
+    ]
+  },
+  "contactSheet": "src/assets/manifests/reports/gate_balance_image2_contact_sheet_v1.png"
+}

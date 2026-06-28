@@ -1,0 +1,80 @@
+{
+  "schema": "human-protocol/service-elevator-atlas-free-blender-report@1",
+  "generatedBy": "scripts/asset-build/blender-generate-service-elevator-exit-kit.py",
+  "generationDate": "2026-06-22",
+  "blenderVersion": "5.1.2",
+  "sourceBlend": "src/assets/source_blend/service-elevator-atlas-free/human_protocol_service_elevator_atlas_free_exit_kit_v1.blend",
+  "preview": ".tmp/service-elevator-atlas-free/service_elevator_atlas_free_cabin_preview.png",
+  "ascentPreview": ".tmp/service-elevator-atlas-free/service_elevator_atlas_free_ascent_preview.png",
+  "materialPolicy": "atlas-free procedural PBR materials; no embedded Image2/atlas texture images",
+  "externalTextureSources": [],
+  "modelKeys": {
+    "exitStage": "service_elevator_exit_stage",
+    "roomShell": "service_elevator_interior_shell",
+    "buttonPanel": "service_elevator_call_buttons",
+    "ascentShaftFx": "service_elevator_ascent_shaft_fx"
+  },
+  "outputs": {
+    "cooked": [
+      "src/assets/models-cooked/environment/shells/hp_service_elevator_exit_stage.glb",
+      "src/assets/models-cooked/environment/shells/hp_service_elevator_interior_shell.glb",
+      "src/assets/models-cooked/environment/shells/hp_service_elevator_call_buttons.glb",
+      "src/assets/models-cooked/environment/shells/hp_service_elevator_ascent_shaft_fx.glb"
+    ],
+    "sourceMirror": [
+      "src/assets/models/environment/shells/hp_service_elevator_exit_stage.glb",
+      "src/assets/models/environment/shells/hp_service_elevator_interior_shell.glb",
+      "src/assets/models/environment/shells/hp_service_elevator_call_buttons.glb",
+      "src/assets/models/environment/shells/hp_service_elevator_ascent_shaft_fx.glb"
+    ]
+  },
+  "glbInspection": {
+    "service_elevator_exit_stage": {
+      "materials": 22,
+      "meshes": 197,
+      "nodes": 197,
+      "images": [],
+      "texturedMaterials": [],
+      "forbiddenAtlasOrImage2Names": []
+    },
+    "service_elevator_interior_shell": {
+      "materials": 12,
+      "meshes": 111,
+      "nodes": 111,
+      "images": [],
+      "texturedMaterials": [],
+      "forbiddenAtlasOrImage2Names": []
+    },
+    "service_elevator_call_buttons": {
+      "materials": 9,
+      "meshes": 26,
+      "nodes": 26,
+      "images": [],
+      "texturedMaterials": [],
+      "forbiddenAtlasOrImage2Names": []
+    },
+    "service_elevator_ascent_shaft_fx": {
+      "materials": 6,
+      "meshes": 60,
+      "nodes": 60,
+      "images": [],
+      "texturedMaterials": [],
+      "forbiddenAtlasOrImage2Names": []
+    }
+  },
+  "compositionContract": {
+    "entryFace": "open front: threshold, side ribs, and lintel only; no fourth wall blocks the door view",
+    "defaultRoomView": "three dark metallic walls, modeled floor/ceiling grooves, and side-mounted physical button panel",
+    "ascentLayer": "atlas-free shaft meshes are authored in the stage GLB and runtime-hidden until exit cinematic ascent",
+    "forbidden": [
+      "embedded Image2 atlases",
+      "broad fog planes",
+      "poster-like back wall decals"
+    ]
+  },
+  "runtimeStateBoundary": {
+    "buttonPressAnimation": "runtime translates the named GLB plunger/ring nodes according to exitElevatorButtonVisualState; no separate overlay button should cover the physical panel",
+    "ascentAnimation": "runtime moves only named shaft moving columns/beams/scan bands; static rib/cable/glass geometry provides depth",
+    "exitUnlockAndTiming": "config/GameWorld owned; not baked into GLB"
+  }
+}

@@ -1,0 +1,7036 @@
+[
+ {
+  "modelKey": "room_l610_frozen_archive_terminal",
+  "label": "冷冻档案终端",
+  "level": "06",
+  "theme": "cryogenic-records",
+  "family": "control_console",
+  "footprintFamily": "cabinet",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": "level06_frozen_archive",
+  "clueCapacity": 1,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "base_plinth",
+    "prim": "box",
+    "ext": [
+     1.28,
+     0.12,
+     0.7
+    ],
+    "pos": [
+     0,
+     0.06,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.02
+   },
+   {
+    "name": "base_cyan_strip",
+    "prim": "faceq",
+    "ext": [
+     1.2,
+     0.04,
+     0.72
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.12,
+     0
+    ],
+    "pal": "cyan_dim"
+   },
+   {
+    "name": "console_body",
+    "prim": "box",
+    "ext": [
+     1.2,
+     0.66,
+     0.58
+    ],
+    "pos": [
+     0,
+     0.47,
+     0
+    ],
+    "pal": "chrome",
+    "bevel": 0.022
+   },
+   {
+    "name": "side_panel_left",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.62,
+     0.6
+    ],
+    "pos": [
+     -0.62,
+     0.48,
+     0
+    ],
+    "pal": "glass_cyan",
+    "bevel": 0.012
+   },
+   {
+    "name": "side_panel_right",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.62,
+     0.6
+    ],
+    "pos": [
+     0.62,
+     0.48,
+     0
+    ],
+    "pal": "glass_cyan",
+    "bevel": 0.012
+   },
+   {
+    "name": "diag_strip_left",
+    "prim": "faceq",
+    "ext": [
+     0.04,
+     0.5,
+     0.02
+    ],
+    "face": "px",
+    "pos": [
+     0.605,
+     0.48,
+     0.2
+    ],
+    "pal": "cyan"
+   },
+   {
+    "name": "diag_strip_right",
+    "prim": "faceq",
+    "ext": [
+     0.04,
+     0.5,
+     0.02
+    ],
+    "face": "nx",
+    "pos": [
+     -0.605,
+     0.48,
+     0.2
+    ],
+    "pal": "cyan"
+   },
+   {
+    "name": "front_diag_band",
+    "prim": "faceq",
+    "ext": [
+     0.9,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.3,
+     0.292
+    ],
+    "pal": "cyan_dim"
+   },
+   {
+    "name": "angled_deck",
+    "prim": "box",
+    "ext": [
+     1.08,
+     0.06,
+     0.46
+    ],
+    "pos": [
+     0,
+     0.86,
+     0.04
+    ],
+    "pal": "steel",
+    "bevel": 0.012,
+    "rot": [
+     -24,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "screen_bezel",
+    "prim": "box",
+    "ext": [
+     0.92,
+     0.05,
+     0.42
+    ],
+    "pos": [
+     0,
+     0.9,
+     0.07
+    ],
+    "pal": "black",
+    "bevel": 0.01,
+    "rot": [
+     -24,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "waveform_screen",
+    "prim": "faceq",
+    "ext": [
+     0.82,
+     0.02,
+     0.34
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.93,
+     0.075
+    ],
+    "pal": "screen",
+    "rot": [
+     -24,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "status_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.02,
+     0.1
+    ],
+    "face": "py",
+    "pos": [
+     0.46,
+     0.805,
+     0.18
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "control_knob",
+    "prim": "cyl",
+    "radius": 0.045,
+    "height": 0.05,
+    "axis": "y",
+    "pos": [
+     -0.4,
+     0.78,
+     0.22
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "rear_cable_trunk",
+    "prim": "box",
+    "ext": [
+     0.5,
+     0.5,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.44,
+     -0.32
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_sample_drawer_stack",
+  "label": "样本抽屉柜",
+  "level": "06",
+  "theme": "cryogenic-records",
+  "family": "drawer_chest",
+  "footprintFamily": "cabinet",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 2,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "base_kick",
+    "prim": "box",
+    "ext": [
+     0.9,
+     0.1,
+     0.6
+    ],
+    "pos": [
+     0,
+     0.05,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "carcass",
+    "prim": "box",
+    "ext": [
+     0.9,
+     1.26,
+     0.56
+    ],
+    "pos": [
+     0,
+     0.73,
+     -0.02
+    ],
+    "pal": "graphite",
+    "bevel": 0.018
+   },
+   {
+    "name": "top_cap",
+    "prim": "box",
+    "ext": [
+     0.92,
+     0.06,
+     0.6
+    ],
+    "pos": [
+     0,
+     1.39,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.012
+   },
+   {
+    "name": "drawer_face_1",
+    "prim": "box",
+    "ext": [
+     0.82,
+     0.26,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.34,
+     0.27
+    ],
+    "pal": "steel",
+    "bevel": 0.012
+   },
+   {
+    "name": "drawer_face_2",
+    "prim": "box",
+    "ext": [
+     0.82,
+     0.26,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.64,
+     0.27
+    ],
+    "pal": "steel",
+    "bevel": 0.012
+   },
+   {
+    "name": "drawer_face_3",
+    "prim": "box",
+    "ext": [
+     0.82,
+     0.26,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.94,
+     0.27
+    ],
+    "pal": "steel",
+    "bevel": 0.012
+   },
+   {
+    "name": "drawer_face_4",
+    "prim": "box",
+    "ext": [
+     0.82,
+     0.18,
+     0.08
+    ],
+    "pos": [
+     0,
+     1.2,
+     0.27
+    ],
+    "pal": "steel",
+    "bevel": 0.012
+   },
+   {
+    "name": "handle_1",
+    "prim": "cyl",
+    "radius": 0.018,
+    "height": 0.4,
+    "axis": "x",
+    "pos": [
+     0,
+     0.34,
+     0.32
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "handle_2",
+    "prim": "cyl",
+    "radius": 0.018,
+    "height": 0.4,
+    "axis": "x",
+    "pos": [
+     0,
+     0.64,
+     0.32
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "handle_3",
+    "prim": "cyl",
+    "radius": 0.018,
+    "height": 0.4,
+    "axis": "x",
+    "pos": [
+     0,
+     0.94,
+     0.32
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "handle_4",
+    "prim": "cyl",
+    "radius": 0.018,
+    "height": 0.4,
+    "axis": "x",
+    "pos": [
+     0,
+     1.2,
+     0.32
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "tag_1",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.06,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     -0.3,
+     0.34,
+     0.312
+    ],
+    "pal": "cyan"
+   },
+   {
+    "name": "tag_2",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.06,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     -0.3,
+     0.64,
+     0.312
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "tag_3",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.06,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     -0.3,
+     0.94,
+     0.312
+    ],
+    "pal": "cyan"
+   },
+   {
+    "name": "tag_4",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.06,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     -0.3,
+     1.2,
+     0.312
+    ],
+    "pal": "amber_glow"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_medical_rail_wall",
+  "label": "医疗导轨墙",
+  "level": "06",
+  "theme": "cryogenic-records",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "panel_backer",
+    "prim": "box",
+    "ext": [
+     2.2,
+     2.4,
+     0.18
+    ],
+    "pos": [
+     0,
+     1.2,
+     -0.04
+    ],
+    "pal": "graphite",
+    "bevel": 0.02
+   },
+   {
+    "name": "enamel_panel_left",
+    "prim": "box",
+    "ext": [
+     1.04,
+     2.3,
+     0.06
+    ],
+    "pos": [
+     -0.55,
+     1.2,
+     0.07
+    ],
+    "pal": "enamel",
+    "bevel": 0.012
+   },
+   {
+    "name": "enamel_panel_right",
+    "prim": "box",
+    "ext": [
+     1.04,
+     2.3,
+     0.06
+    ],
+    "pos": [
+     0.55,
+     1.2,
+     0.07
+    ],
+    "pal": "enamel",
+    "bevel": 0.012
+   },
+   {
+    "name": "center_seam",
+    "prim": "box",
+    "ext": [
+     0.04,
+     2.3,
+     0.08
+    ],
+    "pos": [
+     0,
+     1.2,
+     0.08
+    ],
+    "pal": "black",
+    "bevel": 0.008
+   },
+   {
+    "name": "top_trim",
+    "prim": "box",
+    "ext": [
+     2.2,
+     0.08,
+     0.1
+    ],
+    "pos": [
+     0,
+     2.34,
+     0.06
+    ],
+    "pal": "chrome",
+    "bevel": 0.01
+   },
+   {
+    "name": "bottom_trim",
+    "prim": "box",
+    "ext": [
+     2.2,
+     0.08,
+     0.1
+    ],
+    "pos": [
+     0,
+     0.06,
+     0.06
+    ],
+    "pal": "chrome",
+    "bevel": 0.01
+   },
+   {
+    "name": "service_rail",
+    "prim": "cyl",
+    "radius": 0.03,
+    "height": 2.04,
+    "axis": "x",
+    "pos": [
+     0,
+     1.05,
+     0.14
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "rail_bracket_left",
+    "prim": "box",
+    "ext": [
+     0.06,
+     0.12,
+     0.12
+    ],
+    "pos": [
+     -0.9,
+     1.05,
+     0.1
+    ],
+    "pal": "chrome",
+    "bevel": 0.008
+   },
+   {
+    "name": "rail_bracket_right",
+    "prim": "box",
+    "ext": [
+     0.06,
+     0.12,
+     0.12
+    ],
+    "pos": [
+     0.9,
+     1.05,
+     0.1
+    ],
+    "pal": "chrome",
+    "bevel": 0.008
+   },
+   {
+    "name": "cyan_rail_high",
+    "prim": "faceq",
+    "ext": [
+     2.1,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.85,
+     0.105
+    ],
+    "pal": "cyan"
+   },
+   {
+    "name": "cyan_rail_mid",
+    "prim": "faceq",
+    "ext": [
+     2.1,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.5,
+     0.105
+    ],
+    "pal": "cyan_dim"
+   },
+   {
+    "name": "warning_decal",
+    "prim": "faceq",
+    "ext": [
+     0.32,
+     0.32,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.78,
+     0.55,
+     0.105
+    ],
+    "pal": "hazard_red"
+   },
+   {
+    "name": "warning_bezel",
+    "prim": "box",
+    "ext": [
+     0.38,
+     0.38,
+     0.05
+    ],
+    "pos": [
+     0.78,
+     0.55,
+     0.085
+    ],
+    "pal": "black",
+    "bevel": 0.008
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_cold_scan_pedestal",
+  "label": "冷扫描台",
+  "level": "06",
+  "theme": "cryogenic-records",
+  "family": "display_case",
+  "footprintFamily": "pedestal",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 1,
+  "canHoldSmallProps": true,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "base_plate",
+    "prim": "cyl",
+    "radius": 0.37,
+    "height": 0.08,
+    "axis": "y",
+    "pos": [
+     0,
+     0.04,
+     0
+    ],
+    "pal": "graphite",
+    "sections": 40
+   },
+   {
+    "name": "base_glow_ring",
+    "prim": "cyl",
+    "radius": 0.35,
+    "height": 0.05,
+    "axis": "y",
+    "pos": [
+     0,
+     0.105,
+     0
+    ],
+    "pal": "cyan_lamp",
+    "sections": 40
+   },
+   {
+    "name": "body_column",
+    "prim": "cyl",
+    "radius": 0.3,
+    "height": 0.72,
+    "axis": "y",
+    "pos": [
+     0,
+     0.49,
+     0
+    ],
+    "pal": "graphite",
+    "sections": 40
+   },
+   {
+    "name": "body_seam_ring",
+    "prim": "cyl",
+    "radius": 0.305,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     0,
+     0.5,
+     0
+    ],
+    "pal": "cyan_dim",
+    "sections": 40
+   },
+   {
+    "name": "top_collar",
+    "prim": "cyl",
+    "radius": 0.33,
+    "height": 0.06,
+    "axis": "y",
+    "pos": [
+     0,
+     0.86,
+     0
+    ],
+    "pal": "steel",
+    "sections": 40
+   },
+   {
+    "name": "frosted_top_disc",
+    "prim": "cyl",
+    "radius": 0.31,
+    "height": 0.05,
+    "axis": "y",
+    "pos": [
+     0,
+     0.92,
+     0
+    ],
+    "pal": "glass_cyan",
+    "sections": 40
+   },
+   {
+    "name": "scan_arm_post",
+    "prim": "cyl",
+    "radius": 0.025,
+    "height": 0.5,
+    "axis": "y",
+    "pos": [
+     0.27,
+     0.72,
+     0
+    ],
+    "pal": "steel",
+    "sections": 24
+   },
+   {
+    "name": "scan_arm_boom",
+    "prim": "box",
+    "ext": [
+     0.32,
+     0.04,
+     0.05
+    ],
+    "pos": [
+     0.12,
+     0.95,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.008
+   },
+   {
+    "name": "scan_arm_head",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.06,
+     0.08
+    ],
+    "pos": [
+     -0.02,
+     0.95,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.008
+   },
+   {
+    "name": "scan_emitter",
+    "prim": "faceq",
+    "ext": [
+     0.05,
+     0.04,
+     0.05
+    ],
+    "face": "ny",
+    "pos": [
+     -0.02,
+     0.918,
+     0
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "status_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.06,
+     0.02,
+     0.06
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.7,
+     0.302
+    ],
+    "pal": "amber_lamp"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_defrost_valve_cart",
+  "label": "解冻阀门车",
+  "level": "06",
+  "theme": "cryogenic-records",
+  "family": "storage_crate",
+  "footprintFamily": "crate",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "wheel_fl",
+    "prim": "cyl",
+    "radius": 0.06,
+    "height": 0.04,
+    "axis": "x",
+    "pos": [
+     -0.26,
+     0.06,
+     0.2
+    ],
+    "pal": "black",
+    "sections": 24
+   },
+   {
+    "name": "wheel_fr",
+    "prim": "cyl",
+    "radius": 0.06,
+    "height": 0.04,
+    "axis": "x",
+    "pos": [
+     0.26,
+     0.06,
+     0.2
+    ],
+    "pal": "black",
+    "sections": 24
+   },
+   {
+    "name": "wheel_bl",
+    "prim": "cyl",
+    "radius": 0.06,
+    "height": 0.04,
+    "axis": "x",
+    "pos": [
+     -0.26,
+     0.06,
+     -0.2
+    ],
+    "pal": "black",
+    "sections": 24
+   },
+   {
+    "name": "wheel_br",
+    "prim": "cyl",
+    "radius": 0.06,
+    "height": 0.04,
+    "axis": "x",
+    "pos": [
+     0.26,
+     0.06,
+     -0.2
+    ],
+    "pal": "black",
+    "sections": 24
+   },
+   {
+    "name": "frame_deck",
+    "prim": "box",
+    "ext": [
+     0.62,
+     0.06,
+     0.48
+    ],
+    "pos": [
+     0,
+     0.15,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.012
+   },
+   {
+    "name": "frame_post_left",
+    "prim": "cyl",
+    "radius": 0.02,
+    "height": 0.46,
+    "axis": "y",
+    "pos": [
+     -0.28,
+     0.4,
+     -0.2
+    ],
+    "pal": "steel",
+    "sections": 16
+   },
+   {
+    "name": "frame_post_right",
+    "prim": "cyl",
+    "radius": 0.02,
+    "height": 0.46,
+    "axis": "y",
+    "pos": [
+     0.28,
+     0.4,
+     -0.2
+    ],
+    "pal": "steel",
+    "sections": 16
+   },
+   {
+    "name": "tank",
+    "prim": "cyl",
+    "radius": 0.26,
+    "height": 0.56,
+    "axis": "y",
+    "pos": [
+     0,
+     0.48,
+     0.02
+    ],
+    "pal": "enamel",
+    "sections": 36
+   },
+   {
+    "name": "tank_collar_low",
+    "prim": "cyl",
+    "radius": 0.275,
+    "height": 0.05,
+    "axis": "y",
+    "pos": [
+     0,
+     0.24,
+     0.02
+    ],
+    "pal": "brass",
+    "sections": 36
+   },
+   {
+    "name": "tank_cyan_band",
+    "prim": "cyl",
+    "radius": 0.27,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     0,
+     0.52,
+     0.02
+    ],
+    "pal": "cyan_dim",
+    "sections": 36
+   },
+   {
+    "name": "tank_dome",
+    "prim": "cyl",
+    "radius": 0.2,
+    "height": 0.1,
+    "axis": "y",
+    "pos": [
+     0,
+     0.79,
+     0.02
+    ],
+    "pal": "enamel",
+    "sections": 36
+   },
+   {
+    "name": "valve_hub",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "y",
+    "pos": [
+     0,
+     0.87,
+     0.02
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "valve_spoke_a",
+    "prim": "box",
+    "ext": [
+     0.26,
+     0.03,
+     0.04
+    ],
+    "pos": [
+     0,
+     0.89,
+     0.02
+    ],
+    "pal": "brass",
+    "bevel": 0.006
+   },
+   {
+    "name": "valve_spoke_b",
+    "prim": "box",
+    "ext": [
+     0.26,
+     0.03,
+     0.04
+    ],
+    "pos": [
+     0,
+     0.89,
+     0.02
+    ],
+    "pal": "brass",
+    "bevel": 0.006,
+    "rot": [
+     90,
+     [
+      0,
+      1,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "valve_rim",
+    "prim": "cyl",
+    "radius": 0.13,
+    "height": 0.025,
+    "axis": "y",
+    "pos": [
+     0,
+     0.89,
+     0.02
+    ],
+    "pal": "brass",
+    "sections": 36
+   },
+   {
+    "name": "hose_loop",
+    "prim": "cyl",
+    "radius": 0.022,
+    "height": 0.4,
+    "axis": "y",
+    "pos": [
+     0.27,
+     0.45,
+     0.1
+    ],
+    "pal": "cyan",
+    "sections": 16,
+    "rot": [
+     28,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_manual_lever_bank",
+  "label": "手动拉杆排",
+  "level": "07",
+  "theme": "transit-switchyard",
+  "family": "control_console",
+  "footprintFamily": "cabinet",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 1,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "base_body",
+    "prim": "box",
+    "ext": [
+     1,
+     0.5,
+     0.5
+    ],
+    "pos": [
+     0,
+     0.25,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.02
+   },
+   {
+    "name": "hazard_stripe",
+    "prim": "faceq",
+    "ext": [
+     0.96,
+     0.12,
+     0.5
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.09,
+     0.251
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "base_kick",
+    "prim": "box",
+    "ext": [
+     1,
+     0.06,
+     0.5
+    ],
+    "pos": [
+     0,
+     0.03,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "lever_deck",
+    "prim": "box",
+    "ext": [
+     0.96,
+     0.1,
+     0.46
+    ],
+    "pos": [
+     0,
+     0.54,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.02
+   },
+   {
+    "name": "deck_trim",
+    "prim": "box",
+    "ext": [
+     0.98,
+     0.03,
+     0.48
+    ],
+    "pos": [
+     0,
+     0.605,
+     0
+    ],
+    "pal": "brass",
+    "bevel": 0.01
+   },
+   {
+    "name": "lever_shaft_left",
+    "prim": "cyl",
+    "radius": 0.022,
+    "height": 0.34,
+    "axis": "y",
+    "pos": [
+     -0.3,
+     0.78,
+     0.06
+    ],
+    "pal": "steel",
+    "sections": 24,
+    "rot": [
+     22,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "lever_knob_left",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "y",
+    "pos": [
+     -0.3,
+     0.95,
+     0.13
+    ],
+    "pal": "red_glow",
+    "sections": 24,
+    "rot": [
+     22,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "lever_shaft_mid",
+    "prim": "cyl",
+    "radius": 0.022,
+    "height": 0.34,
+    "axis": "y",
+    "pos": [
+     0,
+     0.74,
+     -0.06
+    ],
+    "pal": "steel",
+    "sections": 24,
+    "rot": [
+     -18,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "lever_knob_mid",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "y",
+    "pos": [
+     0,
+     0.9,
+     -0.12
+    ],
+    "pal": "amber_glow",
+    "sections": 24,
+    "rot": [
+     -18,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "lever_shaft_right",
+    "prim": "cyl",
+    "radius": 0.022,
+    "height": 0.34,
+    "axis": "y",
+    "pos": [
+     0.3,
+     0.78,
+     0.06
+    ],
+    "pal": "steel",
+    "sections": 24,
+    "rot": [
+     22,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "lever_knob_right",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "y",
+    "pos": [
+     0.3,
+     0.95,
+     0.13
+    ],
+    "pal": "brass",
+    "sections": 24,
+    "rot": [
+     22,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "lamp_left",
+    "prim": "faceq",
+    "ext": [
+     0.07,
+     0.07,
+     0.5
+    ],
+    "face": "pz",
+    "pos": [
+     -0.3,
+     0.4,
+     0.251
+    ],
+    "pal": "amber_lamp"
+   },
+   {
+    "name": "lamp_mid",
+    "prim": "faceq",
+    "ext": [
+     0.07,
+     0.07,
+     0.5
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.4,
+     0.251
+    ],
+    "pal": "amber_lamp"
+   },
+   {
+    "name": "lamp_right",
+    "prim": "faceq",
+    "ext": [
+     0.07,
+     0.07,
+     0.5
+    ],
+    "face": "pz",
+    "pos": [
+     0.3,
+     0.4,
+     0.251
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "lamp_bezel",
+    "prim": "box",
+    "ext": [
+     0.84,
+     0.14,
+     0.04
+    ],
+    "pos": [
+     0,
+     0.4,
+     0.235
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_floor_rail_crossing",
+  "label": "地轨交叉",
+  "level": "07",
+  "theme": "transit-switchyard",
+  "family": "storage_crate",
+  "footprintFamily": "barrier",
+  "mount": "floor",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "floor_plate",
+    "prim": "box",
+    "ext": [
+     1.8,
+     0.05,
+     1.8
+    ],
+    "pos": [
+     0,
+     0.025,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "plate_edge_trim",
+    "prim": "box",
+    "ext": [
+     1.78,
+     0.07,
+     1.78
+    ],
+    "pos": [
+     0,
+     0.035,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "rail_ew_a",
+    "prim": "box",
+    "ext": [
+     1.8,
+     0.1,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.09,
+     -0.22
+    ],
+    "pal": "steel",
+    "bevel": 0.01
+   },
+   {
+    "name": "rail_ew_b",
+    "prim": "box",
+    "ext": [
+     1.8,
+     0.1,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.09,
+     0.22
+    ],
+    "pal": "steel",
+    "bevel": 0.01
+   },
+   {
+    "name": "rail_ns_a",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.1,
+     1.8
+    ],
+    "pos": [
+     -0.22,
+     0.09,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.01
+   },
+   {
+    "name": "rail_ns_b",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.1,
+     1.8
+    ],
+    "pos": [
+     0.22,
+     0.09,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.01
+   },
+   {
+    "name": "rail_cap_ew_a",
+    "prim": "box",
+    "ext": [
+     1.8,
+     0.025,
+     0.06
+    ],
+    "pos": [
+     0,
+     0.142,
+     -0.22
+    ],
+    "pal": "hazard_amber",
+    "bevel": 0.005
+   },
+   {
+    "name": "rail_cap_ew_b",
+    "prim": "box",
+    "ext": [
+     1.8,
+     0.025,
+     0.06
+    ],
+    "pos": [
+     0,
+     0.142,
+     0.22
+    ],
+    "pal": "hazard_amber",
+    "bevel": 0.005
+   },
+   {
+    "name": "rail_cap_ns_a",
+    "prim": "box",
+    "ext": [
+     0.06,
+     0.025,
+     1.8
+    ],
+    "pos": [
+     -0.22,
+     0.142,
+     0
+    ],
+    "pal": "hazard_amber",
+    "bevel": 0.005
+   },
+   {
+    "name": "rail_cap_ns_b",
+    "prim": "box",
+    "ext": [
+     0.06,
+     0.025,
+     1.8
+    ],
+    "pos": [
+     0.22,
+     0.142,
+     0
+    ],
+    "pal": "hazard_amber",
+    "bevel": 0.005
+   },
+   {
+    "name": "hazard_strip_front",
+    "prim": "faceq",
+    "ext": [
+     1.8,
+     0.18,
+     0.18
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.055,
+     0.78
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "hazard_strip_back",
+    "prim": "faceq",
+    "ext": [
+     1.8,
+     0.18,
+     0.18
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.055,
+     -0.78
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "center_marker",
+    "prim": "faceq",
+    "ext": [
+     0.4,
+     0.4,
+     0.4
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.055,
+     0
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "corner_bolt_a",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     0.78,
+     0.06,
+     0.78
+    ],
+    "pal": "brass",
+    "sections": 12
+   },
+   {
+    "name": "corner_bolt_b",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     -0.78,
+     0.06,
+     -0.78
+    ],
+    "pal": "brass",
+    "sections": 12
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_signal_light_mast",
+  "label": "信号灯杆",
+  "level": "07",
+  "theme": "transit-switchyard",
+  "family": "control_console",
+  "footprintFamily": "lamp",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "base_plate",
+    "prim": "box",
+    "ext": [
+     0.42,
+     0.06,
+     0.42
+    ],
+    "pos": [
+     0,
+     0.03,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "base_collar",
+    "prim": "cyl",
+    "radius": 0.13,
+    "height": 0.12,
+    "axis": "y",
+    "pos": [
+     0,
+     0.12,
+     0
+    ],
+    "pal": "steel",
+    "sections": 24
+   },
+   {
+    "name": "base_hazard",
+    "prim": "faceq",
+    "ext": [
+     0.42,
+     0.05,
+     0.42
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.061,
+     0
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "mast_pole",
+    "prim": "cyl",
+    "radius": 0.045,
+    "height": 1.55,
+    "axis": "y",
+    "pos": [
+     0,
+     0.92,
+     0
+    ],
+    "pal": "graphite",
+    "sections": 24
+   },
+   {
+    "name": "junction_box",
+    "prim": "box",
+    "ext": [
+     0.16,
+     0.22,
+     0.12
+    ],
+    "pos": [
+     0.13,
+     0.5,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "junction_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.08,
+     0.05,
+     0.12
+    ],
+    "face": "px",
+    "pos": [
+     0.211,
+     0.5,
+     0
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "lamp_housing",
+    "prim": "box",
+    "ext": [
+     0.2,
+     0.62,
+     0.16
+    ],
+    "pos": [
+     0,
+     1.72,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.02
+   },
+   {
+    "name": "lamp_red_lens",
+    "prim": "faceq",
+    "ext": [
+     0.14,
+     0.16,
+     0.16
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.92,
+     0.081
+    ],
+    "pal": "red_lamp"
+   },
+   {
+    "name": "lamp_amber_lens",
+    "prim": "faceq",
+    "ext": [
+     0.14,
+     0.16,
+     0.16
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.72,
+     0.081
+    ],
+    "pal": "amber_lamp"
+   },
+   {
+    "name": "lamp_cyan_lens",
+    "prim": "faceq",
+    "ext": [
+     0.14,
+     0.16,
+     0.16
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.52,
+     0.081
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "hood_red",
+    "prim": "box",
+    "ext": [
+     0.18,
+     0.03,
+     0.07
+    ],
+    "pos": [
+     0,
+     2.01,
+     0.07
+    ],
+    "pal": "graphite",
+    "bevel": 0.005
+   },
+   {
+    "name": "hood_amber",
+    "prim": "box",
+    "ext": [
+     0.18,
+     0.03,
+     0.07
+    ],
+    "pos": [
+     0,
+     1.81,
+     0.07
+    ],
+    "pal": "graphite",
+    "bevel": 0.005
+   },
+   {
+    "name": "hood_cyan",
+    "prim": "box",
+    "ext": [
+     0.18,
+     0.03,
+     0.07
+    ],
+    "pos": [
+     0,
+     1.61,
+     0.07
+    ],
+    "pal": "graphite",
+    "bevel": 0.005
+   },
+   {
+    "name": "mast_top_cap",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     0,
+     2.06,
+     0
+    ],
+    "pal": "brass",
+    "sections": 16
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_maintenance_barrier",
+  "label": "检修护栏",
+  "level": "07",
+  "theme": "transit-switchyard",
+  "family": "storage_crate",
+  "footprintFamily": "barrier",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "foot_left",
+    "prim": "box",
+    "ext": [
+     0.22,
+     0.06,
+     0.3
+    ],
+    "pos": [
+     -0.66,
+     0.03,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "foot_right",
+    "prim": "box",
+    "ext": [
+     0.22,
+     0.06,
+     0.3
+    ],
+    "pos": [
+     0.66,
+     0.03,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "post_left",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 0.94,
+    "axis": "y",
+    "pos": [
+     -0.66,
+     0.53,
+     0
+    ],
+    "pal": "graphite",
+    "sections": 20
+   },
+   {
+    "name": "post_right",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 0.94,
+    "axis": "y",
+    "pos": [
+     0.66,
+     0.53,
+     0
+    ],
+    "pal": "graphite",
+    "sections": 20
+   },
+   {
+    "name": "post_cap_left",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     -0.66,
+     1,
+     0
+    ],
+    "pal": "steel",
+    "sections": 16
+   },
+   {
+    "name": "post_cap_right",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     0.66,
+     1,
+     0
+    ],
+    "pal": "steel",
+    "sections": 16
+   },
+   {
+    "name": "top_rail",
+    "prim": "cyl",
+    "radius": 0.035,
+    "height": 1.5,
+    "axis": "x",
+    "pos": [
+     0,
+     0.92,
+     0
+    ],
+    "pal": "steel",
+    "sections": 20
+   },
+   {
+    "name": "hazard_rail",
+    "prim": "box",
+    "ext": [
+     1.4,
+     0.12,
+     0.05
+    ],
+    "pos": [
+     0,
+     0.6,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "hazard_trim",
+    "prim": "faceq",
+    "ext": [
+     1.4,
+     0.12,
+     0.05
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.6,
+     0.026
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "hazard_trim_back",
+    "prim": "faceq",
+    "ext": [
+     1.4,
+     0.12,
+     0.05
+    ],
+    "face": "nz",
+    "pos": [
+     0,
+     0.6,
+     -0.026
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "mid_brace",
+    "prim": "cyl",
+    "radius": 0.022,
+    "height": 1.34,
+    "axis": "x",
+    "pos": [
+     0,
+     0.76,
+     0
+    ],
+    "pal": "brass",
+    "sections": 16
+   },
+   {
+    "name": "status_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.08,
+     0.08,
+     0.05
+    ],
+    "face": "pz",
+    "pos": [
+     -0.5,
+     0.92,
+     0.04
+    ],
+    "pal": "amber_lamp"
+   },
+   {
+    "name": "status_lamp_b",
+    "prim": "faceq",
+    "ext": [
+     0.08,
+     0.08,
+     0.05
+    ],
+    "face": "pz",
+    "pos": [
+     0.5,
+     0.92,
+     0.04
+    ],
+    "pal": "amber_glow"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_identity_playback_terminal",
+  "label": "身份回放终端",
+  "level": "08",
+  "theme": "memory-theater",
+  "family": "control_console",
+  "footprintFamily": "cabinet",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": "level08_identity_playback",
+  "clueCapacity": 1,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "ipt_base_plinth",
+    "prim": "box",
+    "ext": [
+     1.1,
+     0.12,
+     0.6
+    ],
+    "pos": [
+     0,
+     0.06,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.02
+   },
+   {
+    "name": "ipt_base_brass_rail",
+    "prim": "box",
+    "ext": [
+     1.06,
+     0.04,
+     0.58
+    ],
+    "pos": [
+     0,
+     0.14,
+     0
+    ],
+    "pal": "brass",
+    "bevel": 0.012
+   },
+   {
+    "name": "ipt_body",
+    "prim": "box",
+    "ext": [
+     1,
+     0.66,
+     0.48
+    ],
+    "pos": [
+     0,
+     0.49,
+     -0.02
+    ],
+    "pal": "black",
+    "bevel": 0.022
+   },
+   {
+    "name": "ipt_amber_edge_left",
+    "prim": "faceq",
+    "ext": [
+     0.04,
+     0.6,
+     0.46
+    ],
+    "face": "nx",
+    "pos": [
+     -0.5,
+     0.49,
+     -0.02
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "ipt_amber_edge_right",
+    "prim": "faceq",
+    "ext": [
+     0.04,
+     0.6,
+     0.46
+    ],
+    "face": "px",
+    "pos": [
+     0.5,
+     0.49,
+     -0.02
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "ipt_brass_frame_top",
+    "prim": "box",
+    "ext": [
+     1.02,
+     0.05,
+     0.5
+    ],
+    "pos": [
+     0,
+     0.835,
+     -0.02
+    ],
+    "pal": "brass",
+    "bevel": 0.012
+   },
+   {
+    "name": "ipt_deck",
+    "prim": "box",
+    "ext": [
+     0.96,
+     0.06,
+     0.4
+    ],
+    "pos": [
+     0,
+     0.8,
+     0.08
+    ],
+    "pal": "graphite",
+    "bevel": 0.014,
+    "rot": [
+     -20,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "ipt_screen_bezel",
+    "prim": "box",
+    "ext": [
+     0.78,
+     0.05,
+     0.56
+    ],
+    "pos": [
+     0,
+     0.9600000000000001,
+     0.06
+    ],
+    "pal": "black",
+    "bevel": 0.012,
+    "rot": [
+     -20,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "ipt_screen_brass_trim",
+    "prim": "box",
+    "ext": [
+     0.7,
+     0.03,
+     0.48
+    ],
+    "pos": [
+     0,
+     0.985,
+     0.065
+    ],
+    "pal": "amber_glow",
+    "bevel": 0.008,
+    "rot": [
+     -20,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "ipt_screen",
+    "prim": "faceq",
+    "ext": [
+     0.62,
+     0.02,
+     0.42
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     1.0,
+     0.07
+    ],
+    "pal": "screen",
+    "rot": [
+     -20,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "ipt_status_lamp_amber",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.02,
+     0.1
+    ],
+    "face": "py",
+    "pos": [
+     0.4,
+     0.735,
+     0
+    ],
+    "pal": "amber_lamp"
+   },
+   {
+    "name": "ipt_control_knob",
+    "prim": "cyl",
+    "radius": 0.045,
+    "height": 0.05,
+    "axis": "y",
+    "pos": [
+     -0.3,
+     0.76,
+     0.05
+    ],
+    "pal": "steel",
+    "sections": 24,
+    "rot": [
+     -20,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "ipt_front_brass_plate",
+    "prim": "faceq",
+    "ext": [
+     0.4,
+     0.14,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.4,
+     0.225
+    ],
+    "pal": "brass"
+   },
+   {
+    "name": "ipt_amber_lower_strip",
+    "prim": "faceq",
+    "ext": [
+     0.84,
+     0.03,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.22,
+     0.225
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "ipt_back_cable_trunk",
+    "prim": "box",
+    "ext": [
+     0.4,
+     0.5,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.45,
+     -0.27
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_memory_screen",
+  "label": "记忆墙屏",
+  "level": "08",
+  "theme": "memory-theater",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": "level08_identity_playback",
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "wms_panel_backplate",
+    "prim": "box",
+    "ext": [
+     1.8,
+     1.4,
+     0.2
+    ],
+    "pos": [
+     0,
+     0.7,
+     -0.02
+    ],
+    "pal": "graphite",
+    "bevel": 0.02
+   },
+   {
+    "name": "wms_black_glass_face",
+    "prim": "box",
+    "ext": [
+     1.72,
+     1.32,
+     0.04
+    ],
+    "pos": [
+     0,
+     0.7,
+     0.1
+    ],
+    "pal": "black",
+    "bevel": 0.014
+   },
+   {
+    "name": "wms_brass_border_top",
+    "prim": "box",
+    "ext": [
+     1.78,
+     0.08,
+     0.06
+    ],
+    "pos": [
+     0,
+     1.32,
+     0.11
+    ],
+    "pal": "brass",
+    "bevel": 0.01
+   },
+   {
+    "name": "wms_brass_border_bottom",
+    "prim": "box",
+    "ext": [
+     1.78,
+     0.08,
+     0.06
+    ],
+    "pos": [
+     0,
+     0.08,
+     0.11
+    ],
+    "pal": "brass",
+    "bevel": 0.01
+   },
+   {
+    "name": "wms_brass_border_left",
+    "prim": "box",
+    "ext": [
+     0.08,
+     1.32,
+     0.06
+    ],
+    "pos": [
+     -0.85,
+     0.7,
+     0.11
+    ],
+    "pal": "brass",
+    "bevel": 0.01
+   },
+   {
+    "name": "wms_brass_border_right",
+    "prim": "box",
+    "ext": [
+     0.08,
+     1.32,
+     0.06
+    ],
+    "pos": [
+     0.85,
+     0.7,
+     0.11
+    ],
+    "pal": "brass",
+    "bevel": 0.01
+   },
+   {
+    "name": "wms_screen_bezel",
+    "prim": "box",
+    "ext": [
+     1.4,
+     1,
+     0.04
+    ],
+    "pos": [
+     0,
+     0.7,
+     0.115
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "wms_screen",
+    "prim": "faceq",
+    "ext": [
+     1.3,
+     0.92,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.7,
+     0.14
+    ],
+    "pal": "screen"
+   },
+   {
+    "name": "wms_amber_accent_top",
+    "prim": "faceq",
+    "ext": [
+     1.4,
+     0.03,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.23,
+     0.115
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "wms_amber_accent_bottom",
+    "prim": "faceq",
+    "ext": [
+     1.4,
+     0.03,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.17,
+     0.115
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "wms_brass_corner_tl",
+    "prim": "box",
+    "ext": [
+     0.14,
+     0.14,
+     0.07
+    ],
+    "pos": [
+     -0.85,
+     1.32,
+     0.115
+    ],
+    "pal": "brass",
+    "bevel": 0.008
+   },
+   {
+    "name": "wms_brass_corner_tr",
+    "prim": "box",
+    "ext": [
+     0.14,
+     0.14,
+     0.07
+    ],
+    "pos": [
+     0.85,
+     1.32,
+     0.115
+    ],
+    "pal": "brass",
+    "bevel": 0.008
+   },
+   {
+    "name": "wms_amber_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.08,
+     0.08,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0.78,
+     0.7,
+     0.135
+    ],
+    "pal": "amber_lamp"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_archive_bench",
+  "label": "档案长椅",
+  "level": "08",
+  "theme": "memory-theater",
+  "family": "sofa_bench",
+  "footprintFamily": "sofa",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "ab_frame_rail_front",
+    "prim": "box",
+    "ext": [
+     1.56,
+     0.06,
+     0.05
+    ],
+    "pos": [
+     0,
+     0.27,
+     0.22
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "ab_frame_rail_back",
+    "prim": "box",
+    "ext": [
+     1.56,
+     0.06,
+     0.05
+    ],
+    "pos": [
+     0,
+     0.27,
+     -0.22
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "ab_frame_rail_left",
+    "prim": "box",
+    "ext": [
+     0.05,
+     0.06,
+     0.44
+    ],
+    "pos": [
+     -0.78,
+     0.27,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "ab_frame_rail_right",
+    "prim": "box",
+    "ext": [
+     0.05,
+     0.06,
+     0.44
+    ],
+    "pos": [
+     0.78,
+     0.27,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "ab_seat_cushion",
+    "prim": "box",
+    "ext": [
+     1.54,
+     0.14,
+     0.46
+    ],
+    "pos": [
+     0,
+     0.4,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.03
+   },
+   {
+    "name": "ab_seat_seam_a",
+    "prim": "faceq",
+    "ext": [
+     0.01,
+     0.12,
+     0.44
+    ],
+    "face": "py",
+    "pos": [
+     -0.5,
+     0.4,
+     0
+    ],
+    "pal": "black"
+   },
+   {
+    "name": "ab_seat_seam_b",
+    "prim": "faceq",
+    "ext": [
+     0.01,
+     0.12,
+     0.44
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.4,
+     0
+    ],
+    "pal": "black"
+   },
+   {
+    "name": "ab_seat_seam_c",
+    "prim": "faceq",
+    "ext": [
+     0.01,
+     0.12,
+     0.44
+    ],
+    "face": "py",
+    "pos": [
+     0.5,
+     0.4,
+     0
+    ],
+    "pal": "black"
+   },
+   {
+    "name": "ab_brass_trim_strip",
+    "prim": "faceq",
+    "ext": [
+     1.52,
+     0.02,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.33,
+     0.231
+    ],
+    "pal": "brass"
+   },
+   {
+    "name": "ab_leg_fl",
+    "prim": "cyl",
+    "radius": 0.025,
+    "height": 0.24,
+    "axis": "y",
+    "pos": [
+     -0.7,
+     0.12,
+     0.18
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "ab_leg_fr",
+    "prim": "cyl",
+    "radius": 0.025,
+    "height": 0.24,
+    "axis": "y",
+    "pos": [
+     0.7,
+     0.12,
+     0.18
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "ab_leg_bl",
+    "prim": "cyl",
+    "radius": 0.025,
+    "height": 0.24,
+    "axis": "y",
+    "pos": [
+     -0.7,
+     0.12,
+     -0.18
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "ab_leg_br",
+    "prim": "cyl",
+    "radius": 0.025,
+    "height": 0.24,
+    "axis": "y",
+    "pos": [
+     0.7,
+     0.12,
+     -0.18
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "ab_foot_fl",
+    "prim": "cyl",
+    "radius": 0.035,
+    "height": 0.02,
+    "axis": "y",
+    "pos": [
+     -0.7,
+     0.01,
+     0.18
+    ],
+    "pal": "steel",
+    "sections": 20
+   },
+   {
+    "name": "ab_foot_fr",
+    "prim": "cyl",
+    "radius": 0.035,
+    "height": 0.02,
+    "axis": "y",
+    "pos": [
+     0.7,
+     0.01,
+     0.18
+    ],
+    "pal": "steel",
+    "sections": 20
+   },
+   {
+    "name": "ab_foot_bl",
+    "prim": "cyl",
+    "radius": 0.035,
+    "height": 0.02,
+    "axis": "y",
+    "pos": [
+     -0.7,
+     0.01,
+     -0.18
+    ],
+    "pal": "steel",
+    "sections": 20
+   },
+   {
+    "name": "ab_foot_br",
+    "prim": "cyl",
+    "radius": 0.035,
+    "height": 0.02,
+    "axis": "y",
+    "pos": [
+     0.7,
+     0.01,
+     -0.18
+    ],
+    "pal": "steel",
+    "sections": 20
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_gallery_stanchion",
+  "label": "展馆护栏柱",
+  "level": "08",
+  "theme": "memory-theater",
+  "family": "display_case",
+  "footprintFamily": "column",
+  "mount": "floor",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "gs_base_weight",
+    "prim": "cyl",
+    "radius": 0.14,
+    "height": 0.05,
+    "axis": "y",
+    "pos": [
+     0,
+     0.025,
+     0
+    ],
+    "pal": "black",
+    "sections": 32
+   },
+   {
+    "name": "gs_base_dome",
+    "prim": "cyl",
+    "radius": 0.11,
+    "height": 0.06,
+    "axis": "y",
+    "pos": [
+     0,
+     0.08,
+     0
+    ],
+    "pal": "graphite",
+    "sections": 32
+   },
+   {
+    "name": "gs_base_brass_ring",
+    "prim": "cyl",
+    "radius": 0.12,
+    "height": 0.02,
+    "axis": "y",
+    "pos": [
+     0,
+     0.06,
+     0
+    ],
+    "pal": "brass",
+    "sections": 32
+   },
+   {
+    "name": "gs_post",
+    "prim": "cyl",
+    "radius": 0.025,
+    "height": 0.78,
+    "axis": "y",
+    "pos": [
+     0,
+     0.5,
+     0
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "gs_post_collar_low",
+    "prim": "cyl",
+    "radius": 0.035,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     0,
+     0.13,
+     0
+    ],
+    "pal": "steel",
+    "sections": 24
+   },
+   {
+    "name": "gs_post_collar_high",
+    "prim": "cyl",
+    "radius": 0.035,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     0,
+     0.86,
+     0
+    ],
+    "pal": "steel",
+    "sections": 24
+   },
+   {
+    "name": "gs_finial_ball",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.1,
+    "axis": "y",
+    "pos": [
+     0,
+     0.94,
+     0
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "gs_cable_hook",
+    "prim": "cyl",
+    "radius": 0.012,
+    "height": 0.06,
+    "axis": "x",
+    "pos": [
+     0.04,
+     0.82,
+     0
+    ],
+    "pal": "steel",
+    "sections": 16
+   },
+   {
+    "name": "gs_cable_stub",
+    "prim": "cyl",
+    "radius": 0.018,
+    "height": 0.06,
+    "axis": "x",
+    "pos": [
+     0.07,
+     0.82,
+     0
+    ],
+    "pal": "black",
+    "sections": 16,
+    "rot": [
+     -14,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "gs_cable_end",
+    "prim": "cyl",
+    "radius": 0.022,
+    "height": 0.03,
+    "axis": "x",
+    "pos": [
+     0.11,
+     0.82,
+     0
+    ],
+    "pal": "brass",
+    "sections": 16
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_emergency_breaker_crate",
+  "label": "应急断路箱",
+  "level": "09",
+  "theme": "containment-maintenance",
+  "family": "storage_crate",
+  "footprintFamily": "crate",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 1,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "base_skid",
+    "prim": "box",
+    "ext": [
+     0.7,
+     0.06,
+     0.6
+    ],
+    "pos": [
+     0,
+     0.03,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "crate_body",
+    "prim": "box",
+    "ext": [
+     0.66,
+     0.62,
+     0.56
+    ],
+    "pos": [
+     0,
+     0.37,
+     0
+    ],
+    "pal": "red",
+    "bevel": 0.015
+   },
+   {
+    "name": "lid_cap",
+    "prim": "box",
+    "ext": [
+     0.7,
+     0.08,
+     0.6
+    ],
+    "pos": [
+     0,
+     0.72,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "frame_post_left",
+    "prim": "box",
+    "ext": [
+     0.05,
+     0.74,
+     0.05
+    ],
+    "pos": [
+     -0.32,
+     0.41,
+     0.275
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "frame_post_right",
+    "prim": "box",
+    "ext": [
+     0.05,
+     0.74,
+     0.05
+    ],
+    "pos": [
+     0.32,
+     0.41,
+     0.275
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "frame_rail_bottom",
+    "prim": "box",
+    "ext": [
+     0.7,
+     0.05,
+     0.05
+    ],
+    "pos": [
+     0,
+     0.07,
+     0.275
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "handle_left",
+    "prim": "cyl",
+    "radius": 0.025,
+    "height": 0.34,
+    "axis": "y",
+    "pos": [
+     -0.2,
+     0.32,
+     0.32
+    ],
+    "pal": "red_glow",
+    "sections": 24
+   },
+   {
+    "name": "handle_right",
+    "prim": "cyl",
+    "radius": 0.025,
+    "height": 0.34,
+    "axis": "y",
+    "pos": [
+     0.2,
+     0.32,
+     0.32
+    ],
+    "pal": "red_glow",
+    "sections": 24
+   },
+   {
+    "name": "handle_mount_top_left",
+    "prim": "box",
+    "ext": [
+     0.06,
+     0.04,
+     0.08
+    ],
+    "pos": [
+     -0.2,
+     0.49,
+     0.295
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "handle_mount_top_right",
+    "prim": "box",
+    "ext": [
+     0.06,
+     0.04,
+     0.08
+    ],
+    "pos": [
+     0.2,
+     0.49,
+     0.295
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "socket_plate",
+    "prim": "box",
+    "ext": [
+     0.42,
+     0.18,
+     0.04
+    ],
+    "pos": [
+     0,
+     0.24,
+     0.29
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "socket_a",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     -0.12,
+     0.24,
+     0.31
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "socket_b",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     0,
+     0.24,
+     0.31
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "socket_c",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     0.12,
+     0.24,
+     0.31
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "hazard_stripe",
+    "prim": "faceq",
+    "ext": [
+     0.62,
+     0.07,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.56,
+     0.281
+    ],
+    "pal": "hazard_red"
+   },
+   {
+    "name": "status_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.08,
+     0.08,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0.24,
+     0.64,
+     0.281
+    ],
+    "pal": "red_lamp"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_blast_door_segment",
+  "label": "爆破门段",
+  "level": "09",
+  "theme": "containment-maintenance",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "door_backing_slab",
+    "prim": "box",
+    "ext": [
+     2.4,
+     2.6,
+     0.28
+    ],
+    "pos": [
+     0,
+     1.3,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "outer_frame_left",
+    "prim": "box",
+    "ext": [
+     0.18,
+     2.6,
+     0.42
+    ],
+    "pos": [
+     -1.11,
+     1.3,
+     0.05
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "outer_frame_right",
+    "prim": "box",
+    "ext": [
+     0.18,
+     2.6,
+     0.42
+    ],
+    "pos": [
+     1.11,
+     1.3,
+     0.05
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "outer_frame_top",
+    "prim": "box",
+    "ext": [
+     2.4,
+     0.2,
+     0.42
+    ],
+    "pos": [
+     0,
+     2.5,
+     0.05
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "slab_panel_left",
+    "prim": "box",
+    "ext": [
+     0.78,
+     2,
+     0.12
+    ],
+    "pos": [
+     -0.52,
+     1.35,
+     0.16
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "slab_panel_right",
+    "prim": "box",
+    "ext": [
+     0.78,
+     2,
+     0.12
+    ],
+    "pos": [
+     0.52,
+     1.35,
+     0.16
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "lock_spine",
+    "prim": "box",
+    "ext": [
+     0.2,
+     2.3,
+     0.12
+    ],
+    "pos": [
+     0,
+     1.35,
+     0.18
+    ],
+    "pal": "red_glow",
+    "bevel": 0.015
+   },
+   {
+    "name": "lock_spine_glow",
+    "prim": "faceq",
+    "ext": [
+     0.18,
+     2,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.35,
+     0.281
+    ],
+    "pal": "red_glow"
+   },
+   {
+    "name": "lock_bolt_upper",
+    "prim": "cyl",
+    "radius": 0.09,
+    "height": 0.14,
+    "axis": "z",
+    "pos": [
+     0,
+     2,
+     0.22
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "lock_bolt_lower",
+    "prim": "cyl",
+    "radius": 0.09,
+    "height": 0.14,
+    "axis": "z",
+    "pos": [
+     0,
+     0.7,
+     0.22
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "hazard_chevron_base",
+    "prim": "faceq",
+    "ext": [
+     2,
+     0.34,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.22,
+     0.141
+    ],
+    "pal": "hazard_red"
+   },
+   {
+    "name": "hazard_chevron_amber",
+    "prim": "faceq",
+    "ext": [
+     2,
+     0.18,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.48,
+     0.141
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "status_lamp_left",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.1,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     -0.9,
+     2.3,
+     0.141
+    ],
+    "pal": "red_lamp"
+   },
+   {
+    "name": "status_lamp_right",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.1,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0.9,
+     2.3,
+     0.141
+    ],
+    "pal": "red_lamp"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_pipe_valve_cluster",
+  "label": "管阀组",
+  "level": "09",
+  "theme": "containment-maintenance",
+  "family": "control_console",
+  "footprintFamily": "cabinet",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 1,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "base_pad",
+    "prim": "box",
+    "ext": [
+     1,
+     0.1,
+     0.5
+    ],
+    "pos": [
+     0,
+     0.05,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "base_plinth",
+    "prim": "box",
+    "ext": [
+     0.8,
+     0.16,
+     0.36
+    ],
+    "pos": [
+     0,
+     0.18,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "manifold_riser_left",
+    "prim": "cyl",
+    "radius": 0.06,
+    "height": 0.66,
+    "axis": "y",
+    "pos": [
+     -0.33,
+     0.59,
+     0
+    ],
+    "pal": "steel",
+    "sections": 28
+   },
+   {
+    "name": "manifold_riser_right",
+    "prim": "cyl",
+    "radius": 0.06,
+    "height": 0.66,
+    "axis": "y",
+    "pos": [
+     0.33,
+     0.59,
+     0
+    ],
+    "pal": "steel",
+    "sections": 28
+   },
+   {
+    "name": "manifold_header",
+    "prim": "cyl",
+    "radius": 0.06,
+    "height": 0.86,
+    "axis": "x",
+    "pos": [
+     0,
+     0.88,
+     0
+    ],
+    "pal": "brass",
+    "sections": 28
+   },
+   {
+    "name": "valve_stub_red",
+    "prim": "cyl",
+    "radius": 0.045,
+    "height": 0.18,
+    "axis": "z",
+    "pos": [
+     -0.33,
+     0.7,
+     0.18
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "valve_stub_amber",
+    "prim": "cyl",
+    "radius": 0.045,
+    "height": 0.18,
+    "axis": "z",
+    "pos": [
+     0,
+     0.7,
+     0.18
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "valve_stub_cyan",
+    "prim": "cyl",
+    "radius": 0.045,
+    "height": 0.18,
+    "axis": "z",
+    "pos": [
+     0.33,
+     0.7,
+     0.18
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "wheel_red",
+    "prim": "cyl",
+    "radius": 0.14,
+    "height": 0.04,
+    "axis": "z",
+    "pos": [
+     -0.33,
+     0.7,
+     0.29
+    ],
+    "pal": "red_glow",
+    "sections": 32
+   },
+   {
+    "name": "wheel_red_hub",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     -0.33,
+     0.7,
+     0.31
+    ],
+    "pal": "steel",
+    "sections": 24
+   },
+   {
+    "name": "wheel_red_band",
+    "prim": "faceq",
+    "ext": [
+     0.22,
+     0.05,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     -0.33,
+     0.86,
+     0.255
+    ],
+    "pal": "red_glow"
+   },
+   {
+    "name": "wheel_amber",
+    "prim": "cyl",
+    "radius": 0.14,
+    "height": 0.04,
+    "axis": "z",
+    "pos": [
+     0,
+     0.7,
+     0.29
+    ],
+    "pal": "amber_glow",
+    "sections": 32
+   },
+   {
+    "name": "wheel_amber_hub",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     0,
+     0.7,
+     0.31
+    ],
+    "pal": "steel",
+    "sections": 24
+   },
+   {
+    "name": "wheel_amber_band",
+    "prim": "faceq",
+    "ext": [
+     0.22,
+     0.05,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.86,
+     0.255
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "wheel_cyan",
+    "prim": "cyl",
+    "radius": 0.14,
+    "height": 0.04,
+    "axis": "z",
+    "pos": [
+     0.33,
+     0.7,
+     0.29
+    ],
+    "pal": "cyan",
+    "sections": 32
+   },
+   {
+    "name": "wheel_cyan_hub",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     0.33,
+     0.7,
+     0.31
+    ],
+    "pal": "steel",
+    "sections": 24
+   },
+   {
+    "name": "wheel_cyan_band",
+    "prim": "faceq",
+    "ext": [
+     0.22,
+     0.05,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0.33,
+     0.86,
+     0.255
+    ],
+    "pal": "cyan"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_maintenance_tool_rack",
+  "label": "检修工具架",
+  "level": "09",
+  "theme": "containment-maintenance",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "back_panel",
+    "prim": "box",
+    "ext": [
+     1.4,
+     1.6,
+     0.2
+    ],
+    "pos": [
+     0,
+     0.8,
+     0
+    ],
+    "pal": "chrome",
+    "bevel": 0.015
+   },
+   {
+    "name": "frame_left",
+    "prim": "box",
+    "ext": [
+     0.08,
+     1.6,
+     0.24
+    ],
+    "pos": [
+     -0.66,
+     0.8,
+     0.02
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "frame_right",
+    "prim": "box",
+    "ext": [
+     0.08,
+     1.6,
+     0.24
+    ],
+    "pos": [
+     0.66,
+     0.8,
+     0.02
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "frame_top",
+    "prim": "box",
+    "ext": [
+     1.4,
+     0.1,
+     0.24
+    ],
+    "pos": [
+     0,
+     1.55,
+     0.02
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "hook_rail_upper",
+    "prim": "box",
+    "ext": [
+     1.1,
+     0.05,
+     0.05
+    ],
+    "pos": [
+     0,
+     1.18,
+     0.1
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "hook_rail_lower",
+    "prim": "box",
+    "ext": [
+     1.1,
+     0.05,
+     0.05
+    ],
+    "pos": [
+     0,
+     0.62,
+     0.1
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "hook_a",
+    "prim": "cyl",
+    "radius": 0.02,
+    "height": 0.12,
+    "axis": "z",
+    "pos": [
+     -0.4,
+     1.18,
+     0.16
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "hook_b",
+    "prim": "cyl",
+    "radius": 0.02,
+    "height": 0.12,
+    "axis": "z",
+    "pos": [
+     0,
+     1.18,
+     0.16
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "hook_c",
+    "prim": "cyl",
+    "radius": 0.02,
+    "height": 0.12,
+    "axis": "z",
+    "pos": [
+     0.4,
+     1.18,
+     0.16
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "hook_d",
+    "prim": "cyl",
+    "radius": 0.02,
+    "height": 0.12,
+    "axis": "z",
+    "pos": [
+     -0.4,
+     0.62,
+     0.16
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "hook_e",
+    "prim": "cyl",
+    "radius": 0.02,
+    "height": 0.12,
+    "axis": "z",
+    "pos": [
+     0.4,
+     0.62,
+     0.16
+    ],
+    "pal": "brass",
+    "sections": 20
+   },
+   {
+    "name": "tool_silhouette_wrench",
+    "prim": "faceq",
+    "ext": [
+     0.16,
+     0.5,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     -0.4,
+     0.9,
+     0.101
+    ],
+    "pal": "black"
+   },
+   {
+    "name": "tool_silhouette_hammer",
+    "prim": "faceq",
+    "ext": [
+     0.2,
+     0.42,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.9,
+     0.101
+    ],
+    "pal": "black"
+   },
+   {
+    "name": "tool_silhouette_cutter",
+    "prim": "faceq",
+    "ext": [
+     0.16,
+     0.46,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0.4,
+     0.9,
+     0.101
+    ],
+    "pal": "black"
+   },
+   {
+    "name": "hazard_trim",
+    "prim": "faceq",
+    "ext": [
+     1.24,
+     0.1,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.12,
+     0.101
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "work_light_housing",
+    "prim": "box",
+    "ext": [
+     0.18,
+     0.1,
+     0.12
+    ],
+    "pos": [
+     0,
+     1.46,
+     0.12
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "work_light_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.14,
+     0.06,
+     0.01
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.46,
+     0.181
+    ],
+    "pal": "red_lamp"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_human_echo_screen",
+  "label": "人类回声屏",
+  "level": "10",
+  "theme": "core-terminal",
+  "family": "display_case",
+  "footprintFamily": "display_case",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": "level10_final_protocol",
+  "clueCapacity": 1,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "floor_base_plinth",
+    "prim": "box",
+    "ext": [
+     1,
+     0.12,
+     0.3
+    ],
+    "pos": [
+     0,
+     0.06,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "base_black_riser",
+    "prim": "box",
+    "ext": [
+     0.84,
+     0.1,
+     0.24
+    ],
+    "pos": [
+     0,
+     0.17,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "base_cyan_edge_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.72,
+     0.03,
+     0.24
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.2,
+     0.128
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "left_frame_post",
+    "prim": "box",
+    "ext": [
+     0.1,
+     1.5,
+     0.22
+    ],
+    "pos": [
+     -0.45,
+     0.97,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "right_frame_post",
+    "prim": "box",
+    "ext": [
+     0.1,
+     1.5,
+     0.22
+    ],
+    "pos": [
+     0.45,
+     0.97,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "top_frame_header",
+    "prim": "box",
+    "ext": [
+     1,
+     0.12,
+     0.22
+    ],
+    "pos": [
+     0,
+     1.78,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "left_cyan_seam",
+    "prim": "faceq",
+    "ext": [
+     0.03,
+     1.4,
+     0.22
+    ],
+    "face": "pz",
+    "pos": [
+     -0.45,
+     0.97,
+     0.112
+    ],
+    "pal": "cyan_glow"
+   },
+   {
+    "name": "right_cyan_seam",
+    "prim": "faceq",
+    "ext": [
+     0.03,
+     1.4,
+     0.22
+    ],
+    "face": "pz",
+    "pos": [
+     0.45,
+     0.97,
+     0.112
+    ],
+    "pal": "cyan_glow"
+   },
+   {
+    "name": "glass_display_slab",
+    "prim": "box",
+    "ext": [
+     0.78,
+     1.36,
+     0.06
+    ],
+    "pos": [
+     0,
+     1,
+     0.02
+    ],
+    "pal": "glass_cyan",
+    "bevel": 0.015
+   },
+   {
+    "name": "screen_bezel",
+    "prim": "box",
+    "ext": [
+     0.72,
+     1.04,
+     0.05
+    ],
+    "pos": [
+     0,
+     1.04,
+     0.07
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "final_message_screen",
+    "prim": "faceq",
+    "ext": [
+     0.62,
+     0.94,
+     0.04
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.04,
+     0.096
+    ],
+    "pal": "screen"
+   },
+   {
+    "name": "top_cyan_status_strip",
+    "prim": "faceq",
+    "ext": [
+     0.6,
+     0.04,
+     0.22
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.78,
+     0.112
+    ],
+    "pal": "cyan_lamp"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_boss_terminal_door",
+  "label": "Boss终端门",
+  "level": "10",
+  "theme": "core-terminal",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": "level10_final_protocol",
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "door_back_slab",
+    "prim": "box",
+    "ext": [
+     3,
+     3.4,
+     0.5
+    ],
+    "pos": [
+     0,
+     1.7,
+     -0.12
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "heavy_outer_frame_left",
+    "prim": "box",
+    "ext": [
+     0.32,
+     3.4,
+     0.36
+    ],
+    "pos": [
+     -1.34,
+     1.7,
+     0.07
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "heavy_outer_frame_right",
+    "prim": "box",
+    "ext": [
+     0.32,
+     3.4,
+     0.36
+    ],
+    "pos": [
+     1.34,
+     1.7,
+     0.07
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "heavy_top_lintel",
+    "prim": "box",
+    "ext": [
+     3,
+     0.36,
+     0.36
+    ],
+    "pos": [
+     0,
+     3.22,
+     0.07
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "left_monolith_panel",
+    "prim": "box",
+    "ext": [
+     1,
+     2.9,
+     0.22
+    ],
+    "pos": [
+     -0.62,
+     1.55,
+     0.16
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "right_monolith_panel",
+    "prim": "box",
+    "ext": [
+     1,
+     2.9,
+     0.22
+    ],
+    "pos": [
+     0.62,
+     1.55,
+     0.16
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "left_protocol_seam",
+    "prim": "faceq",
+    "ext": [
+     0.05,
+     2.7,
+     0.22
+    ],
+    "face": "pz",
+    "pos": [
+     -1.06,
+     1.55,
+     0.272
+    ],
+    "pal": "cyan_glow"
+   },
+   {
+    "name": "right_protocol_seam",
+    "prim": "faceq",
+    "ext": [
+     0.05,
+     2.7,
+     0.22
+    ],
+    "face": "pz",
+    "pos": [
+     1.06,
+     1.55,
+     0.272
+    ],
+    "pal": "cyan_glow"
+   },
+   {
+    "name": "center_seam_gap",
+    "prim": "faceq",
+    "ext": [
+     0.04,
+     2.7,
+     0.22
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.55,
+     0.272
+    ],
+    "pal": "cyan_dim"
+   },
+   {
+    "name": "terminal_bezel",
+    "prim": "box",
+    "ext": [
+     0.92,
+     0.84,
+     0.12
+    ],
+    "pos": [
+     0,
+     1.95,
+     0.24
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "central_terminal_screen",
+    "prim": "faceq",
+    "ext": [
+     0.82,
+     0.74,
+     0.1
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.95,
+     0.302
+    ],
+    "pal": "screen"
+   },
+   {
+    "name": "lock_glyph_plate",
+    "prim": "box",
+    "ext": [
+     0.34,
+     0.34,
+     0.1
+    ],
+    "pos": [
+     0,
+     0.95,
+     0.24
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "cyan_lock_glyph",
+    "prim": "faceq",
+    "ext": [
+     0.22,
+     0.22,
+     0.1
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.95,
+     0.292
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "top_warning_strip",
+    "prim": "faceq",
+    "ext": [
+     2.6,
+     0.06,
+     0.36
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     3.22,
+     0.252
+    ],
+    "pal": "cyan_glow"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_protocol_cable_spine",
+  "label": "协议电缆脊",
+  "level": "10",
+  "theme": "core-terminal",
+  "family": "storage_crate",
+  "footprintFamily": "barrier",
+  "mount": "floor",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "floor_spine_base",
+    "prim": "box",
+    "ext": [
+     1.6,
+     0.08,
+     0.5
+    ],
+    "pos": [
+     0,
+     0.04,
+     0
+    ],
+    "pal": "graphite",
+    "bevel": 0.015
+   },
+   {
+    "name": "low_spine_rail",
+    "prim": "box",
+    "ext": [
+     1.5,
+     0.12,
+     0.3
+    ],
+    "pos": [
+     0,
+     0.14,
+     0
+    ],
+    "pal": "black",
+    "bevel": 0.015
+   },
+   {
+    "name": "cable_bundle_left",
+    "prim": "cyl",
+    "radius": 0.07,
+    "height": 1.5,
+    "axis": "x",
+    "pos": [
+     0,
+     0.24,
+     -0.1
+    ],
+    "pal": "black",
+    "sections": 36
+   },
+   {
+    "name": "cable_bundle_center",
+    "prim": "cyl",
+    "radius": 0.07,
+    "height": 1.5,
+    "axis": "x",
+    "pos": [
+     0,
+     0.24,
+     0
+    ],
+    "pal": "black",
+    "sections": 36
+   },
+   {
+    "name": "cable_bundle_right",
+    "prim": "cyl",
+    "radius": 0.07,
+    "height": 1.5,
+    "axis": "x",
+    "pos": [
+     0,
+     0.24,
+     0.1
+    ],
+    "pal": "graphite",
+    "sections": 36
+   },
+   {
+    "name": "left_cable_clamp",
+    "prim": "box",
+    "ext": [
+     0.12,
+     0.18,
+     0.42
+    ],
+    "pos": [
+     -0.55,
+     0.18,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "right_cable_clamp",
+    "prim": "box",
+    "ext": [
+     0.12,
+     0.18,
+     0.42
+    ],
+    "pos": [
+     0.55,
+     0.18,
+     0
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "top_cyan_pulse_strip",
+    "prim": "faceq",
+    "ext": [
+     1.45,
+     0.04,
+     0.34
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.215,
+     0
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "front_route_pulse_strip",
+    "prim": "faceq",
+    "ext": [
+     1.4,
+     0.05,
+     0.3
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.14,
+     0.151
+    ],
+    "pal": "cyan_glow"
+   },
+   {
+    "name": "end_cap_left_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.12,
+     0.3
+    ],
+    "face": "nx",
+    "pos": [
+     -0.751,
+     0.16,
+     0
+    ],
+    "pal": "cyan_dim"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_archive_core_pedestal",
+  "label": "档案核心台",
+  "level": "10",
+  "theme": "core-terminal",
+  "family": "display_case",
+  "footprintFamily": "pedestal",
+  "mount": "floor",
+  "solid": true,
+  "guiKit": null,
+  "clueCapacity": 1,
+  "canHoldSmallProps": true,
+  "wallPreferred": null,
+  "parts": [
+   {
+    "name": "octagonal_base_lower",
+    "prim": "cyl",
+    "radius": 0.28,
+    "height": 0.12,
+    "axis": "y",
+    "pos": [
+     0,
+     0.06,
+     0
+    ],
+    "pal": "black",
+    "sections": 8
+   },
+   {
+    "name": "base_cyan_lamp_ring",
+    "prim": "faceq",
+    "ext": [
+     0.5,
+     0.5,
+     0.02
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.121,
+     0
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "octagonal_glass_column",
+    "prim": "cyl",
+    "radius": 0.22,
+    "height": 0.5,
+    "axis": "y",
+    "pos": [
+     0,
+     0.38,
+     0
+    ],
+    "pal": "glass",
+    "sections": 8
+   },
+   {
+    "name": "column_cyan_seam_front",
+    "prim": "faceq",
+    "ext": [
+     0.08,
+     0.46,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.38,
+     0.221
+    ],
+    "pal": "cyan_glow"
+   },
+   {
+    "name": "brass_ring",
+    "prim": "cyl",
+    "radius": 0.2,
+    "height": 0.06,
+    "axis": "y",
+    "pos": [
+     0,
+     0.66,
+     0
+    ],
+    "pal": "brass",
+    "sections": 36
+   },
+   {
+    "name": "brass_ring_inner_lip",
+    "prim": "cyl",
+    "radius": 0.13,
+    "height": 0.08,
+    "axis": "y",
+    "pos": [
+     0,
+     0.67,
+     0
+    ],
+    "pal": "brass",
+    "sections": 36
+   },
+   {
+    "name": "core_mount_disc",
+    "prim": "cyl",
+    "radius": 0.1,
+    "height": 0.04,
+    "axis": "y",
+    "pos": [
+     0,
+     0.71,
+     0
+    ],
+    "pal": "graphite",
+    "sections": 36
+   },
+   {
+    "name": "cyan_core_object",
+    "prim": "cyl",
+    "radius": 0.1,
+    "height": 0.24,
+    "axis": "y",
+    "pos": [
+     0,
+     0.85,
+     0
+    ],
+    "pal": "cyan_glow",
+    "sections": 36
+   },
+   {
+    "name": "core_top_lamp",
+    "prim": "faceq",
+    "ext": [
+     0.12,
+     0.12,
+     0.02
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.891,
+     0
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "top_brass_rim_accent",
+    "prim": "faceq",
+    "ext": [
+     0.4,
+     0.4,
+     0.02
+    ],
+    "face": "py",
+    "pos": [
+     0,
+     0.691,
+     0
+    ],
+    "pal": "brass"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_clinic_service",
+  "label": "诊疗服务墙",
+  "level": "06",
+  "theme": "wall-clinic-service",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "backing_plate",
+    "prim": "box",
+    "ext": [
+     2.2,
+     2.5,
+     0.08
+    ],
+    "pos": [
+     0,
+     1.25,
+     -0.06
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "enamel_panel_ll",
+    "prim": "box",
+    "ext": [
+     1.06,
+     1.18,
+     0.06
+    ],
+    "pos": [
+     -0.55,
+     0.66,
+     0.04
+    ],
+    "pal": "enamel",
+    "bevel": 0.015
+   },
+   {
+    "name": "enamel_panel_lr",
+    "prim": "box",
+    "ext": [
+     1.06,
+     1.18,
+     0.06
+    ],
+    "pos": [
+     0.55,
+     0.66,
+     0.04
+    ],
+    "pal": "enamel",
+    "bevel": 0.015
+   },
+   {
+    "name": "enamel_panel_ul",
+    "prim": "box",
+    "ext": [
+     1.06,
+     1.06,
+     0.06
+    ],
+    "pos": [
+     -0.55,
+     1.86,
+     0.04
+    ],
+    "pal": "enamel",
+    "bevel": 0.015
+   },
+   {
+    "name": "enamel_panel_ur",
+    "prim": "box",
+    "ext": [
+     1.06,
+     1.06,
+     0.06
+    ],
+    "pos": [
+     0.55,
+     1.86,
+     0.04
+    ],
+    "pal": "enamel",
+    "bevel": 0.015
+   },
+   {
+    "name": "seam_vertical_mid",
+    "prim": "box",
+    "ext": [
+     0.025,
+     2.34,
+     0.05
+    ],
+    "pos": [
+     0,
+     1.28,
+     0.06
+    ],
+    "pal": "graphite",
+    "bevel": 0.008
+   },
+   {
+    "name": "seam_horizontal_mid",
+    "prim": "box",
+    "ext": [
+     2.16,
+     0.025,
+     0.05
+    ],
+    "pos": [
+     0,
+     1.27,
+     0.06
+    ],
+    "pal": "graphite",
+    "bevel": 0.008
+   },
+   {
+    "name": "service_rail",
+    "prim": "box",
+    "ext": [
+     2.04,
+     0.07,
+     0.1
+    ],
+    "pos": [
+     0,
+     1.18,
+     0.11
+    ],
+    "pal": "chrome",
+    "bevel": 0.02
+   },
+   {
+    "name": "rail_bracket_l",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.16,
+     0.12
+    ],
+    "pos": [
+     -0.86,
+     1.18,
+     0.1
+    ],
+    "pal": "graphite",
+    "bevel": 0.012
+   },
+   {
+    "name": "rail_bracket_r",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.16,
+     0.12
+    ],
+    "pos": [
+     0.86,
+     1.18,
+     0.1
+    ],
+    "pal": "graphite",
+    "bevel": 0.012
+   },
+   {
+    "name": "stainless_baseboard",
+    "prim": "box",
+    "ext": [
+     2.14,
+     0.18,
+     0.09
+    ],
+    "pos": [
+     0,
+     0.12,
+     0.07
+    ],
+    "pal": "chrome",
+    "bevel": 0.012
+   },
+   {
+    "name": "diagnostic_light_strip",
+    "prim": "faceq",
+    "ext": [
+     1.96,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     2.32,
+     0.075
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "diagnostic_strip_housing",
+    "prim": "box",
+    "ext": [
+     2.02,
+     0.1,
+     0.06
+    ],
+    "pos": [
+     0,
+     2.32,
+     0.05
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "hazard_tick_l",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.04,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.7,
+     0.28,
+     0.075
+    ],
+    "pal": "amber"
+   },
+   {
+    "name": "hazard_tick_r",
+    "prim": "faceq",
+    "ext": [
+     0.1,
+     0.04,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.7,
+     0.28,
+     0.075
+    ],
+    "pal": "amber"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_archive_cabinet",
+  "label": "档案柜墙",
+  "level": "05",
+  "theme": "wall-archive-cabinet",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "backing_plate",
+    "prim": "box",
+    "ext": [
+     2.2,
+     2.5,
+     0.1
+    ],
+    "pos": [
+     0,
+     1.25,
+     -0.07
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "drawer_col_a",
+    "prim": "box",
+    "ext": [
+     0.62,
+     2.36,
+     0.12
+    ],
+    "pos": [
+     -0.72,
+     1.25,
+     0.04
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "drawer_col_b",
+    "prim": "box",
+    "ext": [
+     0.62,
+     2.36,
+     0.12
+    ],
+    "pos": [
+     0,
+     1.25,
+     0.04
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "drawer_col_c",
+    "prim": "box",
+    "ext": [
+     0.62,
+     2.36,
+     0.12
+    ],
+    "pos": [
+     0.72,
+     1.25,
+     0.04
+    ],
+    "pal": "steel",
+    "bevel": 0.015
+   },
+   {
+    "name": "rail_left",
+    "prim": "box",
+    "ext": [
+     0.05,
+     2.4,
+     0.13
+    ],
+    "pos": [
+     -1.05,
+     1.25,
+     0.05
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "rail_right",
+    "prim": "box",
+    "ext": [
+     0.05,
+     2.4,
+     0.13
+    ],
+    "pos": [
+     1.05,
+     1.25,
+     0.05
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "drawer_seam_1",
+    "prim": "box",
+    "ext": [
+     2,
+     0.02,
+     0.04
+    ],
+    "pos": [
+     0,
+     0.62,
+     0.105
+    ],
+    "pal": "graphite",
+    "bevel": 0.006
+   },
+   {
+    "name": "drawer_seam_2",
+    "prim": "box",
+    "ext": [
+     2,
+     0.02,
+     0.04
+    ],
+    "pos": [
+     0,
+     1.25,
+     0.105
+    ],
+    "pal": "graphite",
+    "bevel": 0.006
+   },
+   {
+    "name": "drawer_seam_3",
+    "prim": "box",
+    "ext": [
+     2,
+     0.02,
+     0.04
+    ],
+    "pos": [
+     0,
+     1.88,
+     0.105
+    ],
+    "pal": "graphite",
+    "bevel": 0.006
+   },
+   {
+    "name": "label_band_a",
+    "prim": "faceq",
+    "ext": [
+     0.44,
+     0.12,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.72,
+     1.42,
+     0.105
+    ],
+    "pal": "amber"
+   },
+   {
+    "name": "label_band_b",
+    "prim": "faceq",
+    "ext": [
+     0.44,
+     0.12,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.79,
+     0.105
+    ],
+    "pal": "amber"
+   },
+   {
+    "name": "brass_pull_a",
+    "prim": "cyl",
+    "radius": 0.03,
+    "height": 0.16,
+    "axis": "x",
+    "pos": [
+     -0.72,
+     0.95,
+     0.12
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "brass_pull_b",
+    "prim": "cyl",
+    "radius": 0.03,
+    "height": 0.16,
+    "axis": "x",
+    "pos": [
+     0,
+     1.58,
+     0.12
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "brass_pull_c",
+    "prim": "cyl",
+    "radius": 0.03,
+    "height": 0.16,
+    "axis": "x",
+    "pos": [
+     0.72,
+     1.1,
+     0.12
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "archive_light",
+    "prim": "faceq",
+    "ext": [
+     0.5,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.72,
+     2.16,
+     0.105
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "cyan_scan_line",
+    "prim": "faceq",
+    "ext": [
+     0.05,
+     2.2,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.25,
+     0.115
+    ],
+    "pal": "cyan_dim"
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_museum_brass",
+  "label": "博物馆黄铜墙",
+  "level": "03",
+  "theme": "wall-museum-brass",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "backing_plate",
+    "prim": "box",
+    "ext": [
+     2.4,
+     2.5,
+     0.08
+    ],
+    "pos": [
+     0,
+     1.25,
+     -0.06
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "pilaster_left",
+    "prim": "box",
+    "ext": [
+     0.34,
+     2.46,
+     0.16
+    ],
+    "pos": [
+     -1,
+     1.25,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.02
+   },
+   {
+    "name": "pilaster_right",
+    "prim": "box",
+    "ext": [
+     0.34,
+     2.46,
+     0.16
+    ],
+    "pos": [
+     1,
+     1.25,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.02
+   },
+   {
+    "name": "smoked_glass_bay",
+    "prim": "box",
+    "ext": [
+     1.6,
+     2.3,
+     0.05
+    ],
+    "pos": [
+     0,
+     1.3,
+     0.02
+    ],
+    "pal": "glass_amber",
+    "bevel": 0.01
+   },
+   {
+    "name": "glass_mullion_v",
+    "prim": "box",
+    "ext": [
+     0.04,
+     2.3,
+     0.06
+    ],
+    "pos": [
+     0,
+     1.3,
+     0.05
+    ],
+    "pal": "black",
+    "bevel": 0.008
+   },
+   {
+    "name": "glass_mullion_h",
+    "prim": "box",
+    "ext": [
+     1.6,
+     0.04,
+     0.06
+    ],
+    "pos": [
+     0,
+     1.3,
+     0.05
+    ],
+    "pal": "black",
+    "bevel": 0.008
+   },
+   {
+    "name": "brass_cap_left",
+    "prim": "box",
+    "ext": [
+     0.4,
+     0.1,
+     0.18
+    ],
+    "pos": [
+     -1,
+     2.44,
+     0.05
+    ],
+    "pal": "brass",
+    "bevel": 0.016
+   },
+   {
+    "name": "brass_cap_right",
+    "prim": "box",
+    "ext": [
+     0.4,
+     0.1,
+     0.18
+    ],
+    "pos": [
+     1,
+     2.44,
+     0.05
+    ],
+    "pal": "brass",
+    "bevel": 0.016
+   },
+   {
+    "name": "viewing_rail",
+    "prim": "cyl",
+    "radius": 0.035,
+    "height": 1.7,
+    "axis": "x",
+    "pos": [
+     0,
+     1.1,
+     0.16
+    ],
+    "pal": "brass",
+    "sections": 24
+   },
+   {
+    "name": "rail_stanchor_l",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.18,
+     0.12
+    ],
+    "pos": [
+     -0.8,
+     1.1,
+     0.1
+    ],
+    "pal": "brass",
+    "bevel": 0.012
+   },
+   {
+    "name": "rail_stanchor_r",
+    "prim": "box",
+    "ext": [
+     0.08,
+     0.18,
+     0.12
+    ],
+    "pos": [
+     0.8,
+     1.1,
+     0.1
+    ],
+    "pal": "brass",
+    "bevel": 0.012
+   },
+   {
+    "name": "exhibit_edge_light",
+    "prim": "faceq",
+    "ext": [
+     1.56,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     2.4,
+     0.055
+    ],
+    "pal": "amber_glow"
+   },
+   {
+    "name": "brass_base_trim",
+    "prim": "box",
+    "ext": [
+     2.32,
+     0.14,
+     0.1
+    ],
+    "pos": [
+     0,
+     0.1,
+     0.06
+    ],
+    "pal": "brass",
+    "bevel": 0.012
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_machine_relay",
+  "label": "机房继电墙",
+  "level": "08",
+  "theme": "wall-machine-relay",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "backing_plate",
+    "prim": "box",
+    "ext": [
+     2.2,
+     2.5,
+     0.1
+    ],
+    "pos": [
+     0,
+     1.25,
+     -0.07
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "relay_cabinet",
+    "prim": "box",
+    "ext": [
+     1,
+     1.5,
+     0.16
+    ],
+    "pos": [
+     -0.5,
+     1.4,
+     0.04
+    ],
+    "pal": "chrome",
+    "bevel": 0.015
+   },
+   {
+    "name": "cabinet_door_seam",
+    "prim": "box",
+    "ext": [
+     0.02,
+     1.4,
+     0.04
+    ],
+    "pos": [
+     -0.5,
+     1.4,
+     0.13
+    ],
+    "pal": "graphite",
+    "bevel": 0.006
+   },
+   {
+    "name": "conduit_run_a",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 1.6,
+    "axis": "y",
+    "pos": [
+     0.55,
+     1.45,
+     0.08
+    ],
+    "pal": "graphite",
+    "sections": 20
+   },
+   {
+    "name": "conduit_run_b",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 1.2,
+    "axis": "y",
+    "pos": [
+     0.78,
+     1,
+     0.09
+    ],
+    "pal": "steel",
+    "sections": 20
+   },
+   {
+    "name": "conduit_elbow",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.5,
+    "axis": "x",
+    "pos": [
+     0.32,
+     2.2,
+     0.08
+    ],
+    "pal": "graphite",
+    "sections": 20
+   },
+   {
+    "name": "copper_bus_bar_1",
+    "prim": "box",
+    "ext": [
+     1.1,
+     0.06,
+     0.05
+    ],
+    "pos": [
+     0.45,
+     1.95,
+     0.1
+    ],
+    "pal": "brass",
+    "bevel": 0.008
+   },
+   {
+    "name": "copper_bus_bar_2",
+    "prim": "box",
+    "ext": [
+     1.1,
+     0.06,
+     0.05
+    ],
+    "pos": [
+     0.45,
+     0.55,
+     0.1
+    ],
+    "pal": "brass",
+    "bevel": 0.008
+   },
+   {
+    "name": "pipe_manifold",
+    "prim": "cyl",
+    "radius": 0.06,
+    "height": 0.9,
+    "axis": "x",
+    "pos": [
+     0.45,
+     0.32,
+     0.09
+    ],
+    "pal": "steel",
+    "sections": 20
+   },
+   {
+    "name": "manifold_valve",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.12,
+    "axis": "z",
+    "pos": [
+     0.7,
+     0.32,
+     0.16
+    ],
+    "pal": "brass",
+    "sections": 18
+   },
+   {
+    "name": "hazard_band_junction",
+    "prim": "faceq",
+    "ext": [
+     0.3,
+     0.1,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.32,
+     2.2,
+     0.13
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "hazard_band_low",
+    "prim": "faceq",
+    "ext": [
+     0.4,
+     0.08,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.7,
+     0.55,
+     0.13
+    ],
+    "pal": "hazard_amber"
+   },
+   {
+    "name": "power_strip_cyan",
+    "prim": "faceq",
+    "ext": [
+     0.9,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.5,
+     2.2,
+     0.13
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "strip_housing",
+    "prim": "box",
+    "ext": [
+     0.96,
+     0.1,
+     0.06
+    ],
+    "pos": [
+     -0.5,
+     2.2,
+     0.1
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "cabinet_vent",
+    "prim": "faceq",
+    "ext": [
+     0.5,
+     0.4,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.5,
+     1.4,
+     0.125
+    ],
+    "pal": "black"
+   },
+   {
+    "name": "base_trim",
+    "prim": "box",
+    "ext": [
+     2.12,
+     0.14,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.1,
+     0.06
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_gallery_glass",
+  "label": "观察玻璃墙",
+  "level": "02",
+  "theme": "wall-gallery-glass",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "backing_plate",
+    "prim": "box",
+    "ext": [
+     2.4,
+     2.5,
+     0.08
+    ],
+    "pos": [
+     0,
+     1.25,
+     -0.06
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "glass_span",
+    "prim": "box",
+    "ext": [
+     2.16,
+     2.16,
+     0.05
+    ],
+    "pos": [
+     0,
+     1.42,
+     0
+    ],
+    "pal": "glass",
+    "bevel": 0.01
+   },
+   {
+    "name": "frame_top",
+    "prim": "box",
+    "ext": [
+     2.32,
+     0.12,
+     0.14
+    ],
+    "pos": [
+     0,
+     2.44,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.016
+   },
+   {
+    "name": "frame_bottom",
+    "prim": "box",
+    "ext": [
+     2.32,
+     0.12,
+     0.14
+    ],
+    "pos": [
+     0,
+     0.4,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.016
+   },
+   {
+    "name": "frame_left",
+    "prim": "box",
+    "ext": [
+     0.12,
+     2.16,
+     0.14
+    ],
+    "pos": [
+     -1.14,
+     1.42,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.016
+   },
+   {
+    "name": "frame_right",
+    "prim": "box",
+    "ext": [
+     0.12,
+     2.16,
+     0.14
+    ],
+    "pos": [
+     1.14,
+     1.42,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.016
+   },
+   {
+    "name": "mullion_v1",
+    "prim": "box",
+    "ext": [
+     0.03,
+     2.1,
+     0.06
+    ],
+    "pos": [
+     -0.72,
+     1.42,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.006
+   },
+   {
+    "name": "mullion_v2",
+    "prim": "box",
+    "ext": [
+     0.03,
+     2.1,
+     0.06
+    ],
+    "pos": [
+     0.72,
+     1.42,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.006
+   },
+   {
+    "name": "mullion_h1",
+    "prim": "box",
+    "ext": [
+     2.1,
+     0.03,
+     0.06
+    ],
+    "pos": [
+     0,
+     1.42,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.006
+   },
+   {
+    "name": "scanner_glint",
+    "prim": "faceq",
+    "ext": [
+     0.06,
+     1.6,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.3,
+     1.42,
+     -0.01
+    ],
+    "pal": "cyan_dim"
+   },
+   {
+    "name": "barrier_rail",
+    "prim": "cyl",
+    "radius": 0.03,
+    "height": 2.1,
+    "axis": "x",
+    "pos": [
+     0,
+     0.5,
+     0.2
+    ],
+    "pal": "steel",
+    "sections": 24
+   },
+   {
+    "name": "rail_post_l",
+    "prim": "box",
+    "ext": [
+     0.06,
+     0.5,
+     0.06
+    ],
+    "pos": [
+     -0.9,
+     0.34,
+     0.18
+    ],
+    "pal": "steel",
+    "bevel": 0.012
+   },
+   {
+    "name": "rail_post_r",
+    "prim": "box",
+    "ext": [
+     0.06,
+     0.5,
+     0.06
+    ],
+    "pos": [
+     0.9,
+     0.34,
+     0.18
+    ],
+    "pal": "steel",
+    "bevel": 0.012
+   },
+   {
+    "name": "sill_trim",
+    "prim": "box",
+    "ext": [
+     2.3,
+     0.1,
+     0.12
+    ],
+    "pos": [
+     0,
+     0.18,
+     0.05
+    ],
+    "pal": "graphite",
+    "bevel": 0.012
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_security_corridor",
+  "label": "安防走廊墙",
+  "level": "07",
+  "theme": "wall-security-corridor",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "backing_plate",
+    "prim": "box",
+    "ext": [
+     2.2,
+     2.5,
+     0.09
+    ],
+    "pos": [
+     0,
+     1.25,
+     -0.06
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "armored_panel_a",
+    "prim": "box",
+    "ext": [
+     1.04,
+     1.18,
+     0.1
+    ],
+    "pos": [
+     -0.55,
+     1.7,
+     0.04
+    ],
+    "pal": "steel",
+    "bevel": 0.02
+   },
+   {
+    "name": "armored_panel_b",
+    "prim": "box",
+    "ext": [
+     1.04,
+     1.18,
+     0.1
+    ],
+    "pos": [
+     0.55,
+     1.7,
+     0.04
+    ],
+    "pal": "steel",
+    "bevel": 0.02
+   },
+   {
+    "name": "armored_panel_c",
+    "prim": "box",
+    "ext": [
+     2.12,
+     0.9,
+     0.1
+    ],
+    "pos": [
+     0,
+     0.7,
+     0.04
+    ],
+    "pal": "steel",
+    "bevel": 0.02
+   },
+   {
+    "name": "panel_bolt_seam_v",
+    "prim": "box",
+    "ext": [
+     0.04,
+     2.36,
+     0.06
+    ],
+    "pos": [
+     0,
+     1.25,
+     0.1
+    ],
+    "pal": "graphite",
+    "bevel": 0.008
+   },
+   {
+    "name": "monitor_bay_bezel",
+    "prim": "box",
+    "ext": [
+     0.66,
+     0.5,
+     0.1
+    ],
+    "pos": [
+     -0.55,
+     1.7,
+     0.1
+    ],
+    "pal": "black",
+    "bevel": 0.014
+   },
+   {
+    "name": "monitor_bay_glass",
+    "prim": "box",
+    "ext": [
+     0.54,
+     0.38,
+     0.04
+    ],
+    "pos": [
+     -0.55,
+     1.7,
+     0.16
+    ],
+    "pal": "glass_cyan",
+    "bevel": 0.008
+   },
+   {
+    "name": "camera_mount_arm",
+    "prim": "box",
+    "ext": [
+     0.1,
+     0.1,
+     0.22
+    ],
+    "pos": [
+     0.7,
+     2.18,
+     0.16
+    ],
+    "pal": "graphite",
+    "bevel": 0.012
+   },
+   {
+    "name": "camera_body",
+    "prim": "cyl",
+    "radius": 0.08,
+    "height": 0.18,
+    "axis": "z",
+    "pos": [
+     0.7,
+     2.12,
+     0.3
+    ],
+    "pal": "black",
+    "sections": 24
+   },
+   {
+    "name": "camera_lens",
+    "prim": "faceq",
+    "ext": [
+     0.08,
+     0.08,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.7,
+     2.12,
+     0.39
+    ],
+    "pal": "glass_cyan"
+   },
+   {
+    "name": "cyan_strip",
+    "prim": "faceq",
+    "ext": [
+     1.9,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     1.18,
+     0.105
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "cyan_strip_housing",
+    "prim": "box",
+    "ext": [
+     1.96,
+     0.1,
+     0.06
+    ],
+    "pos": [
+     0,
+     1.18,
+     0.08
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "lockdown_puck",
+    "prim": "cyl",
+    "radius": 0.07,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     0.92,
+     1.18,
+     0.13
+    ],
+    "pal": "red_lamp",
+    "sections": 24
+   },
+   {
+    "name": "hazard_chevron_l",
+    "prim": "faceq",
+    "ext": [
+     0.5,
+     0.1,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.6,
+     0.22,
+     0.105
+    ],
+    "pal": "hazard_red"
+   },
+   {
+    "name": "hazard_chevron_r",
+    "prim": "faceq",
+    "ext": [
+     0.5,
+     0.1,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.6,
+     0.22,
+     0.105
+    ],
+    "pal": "hazard_red"
+   },
+   {
+    "name": "base_trim",
+    "prim": "box",
+    "ext": [
+     2.12,
+     0.12,
+     0.08
+    ],
+    "pos": [
+     0,
+     0.1,
+     0.06
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_terminal_boss",
+  "label": "终端Boss墙",
+  "level": "10",
+  "theme": "wall-terminal-boss",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "backing_plate",
+    "prim": "box",
+    "ext": [
+     2.4,
+     2.6,
+     0.1
+    ],
+    "pos": [
+     0,
+     1.3,
+     -0.07
+    ],
+    "pal": "black",
+    "bevel": 0.01
+   },
+   {
+    "name": "terminal_frame",
+    "prim": "box",
+    "ext": [
+     1.5,
+     1.9,
+     0.22
+    ],
+    "pos": [
+     0,
+     1.4,
+     0.04
+    ],
+    "pal": "graphite",
+    "bevel": 0.024
+   },
+   {
+    "name": "frame_inner_bezel",
+    "prim": "box",
+    "ext": [
+     1.2,
+     1.6,
+     0.06
+    ],
+    "pos": [
+     0,
+     1.4,
+     0.16
+    ],
+    "pal": "black",
+    "bevel": 0.016
+   },
+   {
+    "name": "central_readout_blank",
+    "prim": "box",
+    "ext": [
+     1,
+     1.36,
+     0.03
+    ],
+    "pos": [
+     0,
+     1.4,
+     0.19
+    ],
+    "pal": "graphite",
+    "bevel": 0.008
+   },
+   {
+    "name": "frame_buttress_l",
+    "prim": "box",
+    "ext": [
+     0.26,
+     2.3,
+     0.18
+    ],
+    "pos": [
+     -1,
+     1.3,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.02
+   },
+   {
+    "name": "frame_buttress_r",
+    "prim": "box",
+    "ext": [
+     0.26,
+     2.3,
+     0.18
+    ],
+    "pos": [
+     1,
+     1.3,
+     0.04
+    ],
+    "pal": "black",
+    "bevel": 0.02
+   },
+   {
+    "name": "hazard_line_l",
+    "prim": "faceq",
+    "ext": [
+     0.7,
+     0.06,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.62,
+     2.2,
+     0.16
+    ],
+    "pal": "red_glow",
+    "rot": [
+     20,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "hazard_line_r",
+    "prim": "faceq",
+    "ext": [
+     0.7,
+     0.06,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.62,
+     2.2,
+     0.16
+    ],
+    "pal": "red_glow",
+    "rot": [
+     -20,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "hazard_line_ll",
+    "prim": "faceq",
+    "ext": [
+     0.7,
+     0.06,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.62,
+     0.5,
+     0.16
+    ],
+    "pal": "red_glow",
+    "rot": [
+     -20,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "hazard_line_lr",
+    "prim": "faceq",
+    "ext": [
+     0.7,
+     0.06,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.62,
+     0.5,
+     0.16
+    ],
+    "pal": "red_glow",
+    "rot": [
+     20,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "red_warning_band_top",
+    "prim": "faceq",
+    "ext": [
+     1.3,
+     0.07,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     2.34,
+     0.17
+    ],
+    "pal": "red_lamp"
+   },
+   {
+    "name": "cyan_resolve_strip",
+    "prim": "faceq",
+    "ext": [
+     1.3,
+     0.06,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0,
+     0.42,
+     0.17
+    ],
+    "pal": "cyan_lamp"
+   },
+   {
+    "name": "corner_rivet_tl",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     -0.72,
+     2.32,
+     0.16
+    ],
+    "pal": "steel",
+    "sections": 18
+   },
+   {
+    "name": "corner_rivet_tr",
+    "prim": "cyl",
+    "radius": 0.05,
+    "height": 0.06,
+    "axis": "z",
+    "pos": [
+     0.72,
+     2.32,
+     0.16
+    ],
+    "pal": "steel",
+    "sections": 18
+   },
+   {
+    "name": "base_plinth",
+    "prim": "box",
+    "ext": [
+     2,
+     0.16,
+     0.14
+    ],
+    "pos": [
+     0,
+     0.12,
+     0.05
+    ],
+    "pal": "graphite",
+    "bevel": 0.012
+   }
+  ]
+ },
+ {
+  "modelKey": "room_l610_wall_damaged_transition",
+  "label": "损毁过渡墙",
+  "level": "09",
+  "theme": "wall-damaged-transition",
+  "family": "wall_panel_or_picture_frame",
+  "footprintFamily": "wall_panel",
+  "mount": "wall",
+  "solid": false,
+  "guiKit": null,
+  "clueCapacity": 0,
+  "canHoldSmallProps": false,
+  "wallPreferred": "back",
+  "parts": [
+   {
+    "name": "backing_plate",
+    "prim": "box",
+    "ext": [
+     2.2,
+     2.5,
+     0.1
+    ],
+    "pos": [
+     0,
+     1.25,
+     -0.07
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   },
+   {
+    "name": "clean_panel_left",
+    "prim": "box",
+    "ext": [
+     0.96,
+     2.36,
+     0.08
+    ],
+    "pos": [
+     -0.6,
+     1.25,
+     0.04
+    ],
+    "pal": "chrome",
+    "bevel": 0.015
+   },
+   {
+    "name": "torn_trim_edge",
+    "prim": "box",
+    "ext": [
+     0.08,
+     2,
+     0.06
+    ],
+    "pos": [
+     -0.1,
+     1.3,
+     0.07
+    ],
+    "pal": "wear",
+    "bevel": 0.006,
+    "rot": [
+     8,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "exposed_stud_a",
+    "prim": "box",
+    "ext": [
+     0.07,
+     2.2,
+     0.07
+    ],
+    "pos": [
+     0.35,
+     1.3,
+     0
+    ],
+    "pal": "chrome",
+    "bevel": 0.008
+   },
+   {
+    "name": "exposed_stud_b",
+    "prim": "box",
+    "ext": [
+     0.07,
+     2.2,
+     0.07
+    ],
+    "pos": [
+     0.85,
+     1.3,
+     0
+    ],
+    "pal": "chrome",
+    "bevel": 0.008
+   },
+   {
+    "name": "stud_brace",
+    "prim": "box",
+    "ext": [
+     0.62,
+     0.06,
+     0.06
+    ],
+    "pos": [
+     0.6,
+     1.9,
+     0
+    ],
+    "pal": "wear",
+    "bevel": 0.006
+   },
+   {
+    "name": "exposed_conduit",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 1.8,
+    "axis": "y",
+    "pos": [
+     0.6,
+     1.2,
+     0.03
+    ],
+    "pal": "wear",
+    "sections": 18,
+    "rot": [
+     6,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "conduit_break",
+    "prim": "cyl",
+    "radius": 0.04,
+    "height": 0.4,
+    "axis": "x",
+    "pos": [
+     0.78,
+     0.45,
+     0.03
+    ],
+    "pal": "wear",
+    "sections": 16,
+    "rot": [
+     24,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "bent_panel_flap",
+    "prim": "box",
+    "ext": [
+     0.5,
+     0.7,
+     0.06
+    ],
+    "pos": [
+     0.25,
+     2,
+     0.12
+    ],
+    "pal": "chrome",
+    "bevel": 0.01,
+    "rot": [
+     28,
+     [
+      1,
+      0,
+      0
+     ]
+    ]
+   },
+   {
+    "name": "scorch_decal",
+    "prim": "faceq",
+    "ext": [
+     0.6,
+     0.8,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.5,
+     0.9,
+     0.075
+    ],
+    "pal": "wear"
+   },
+   {
+    "name": "rust_decal_low",
+    "prim": "faceq",
+    "ext": [
+     0.5,
+     0.4,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     0.7,
+     0.4,
+     0.075
+    ],
+    "pal": "wear"
+   },
+   {
+    "name": "failing_cyan_strip",
+    "prim": "faceq",
+    "ext": [
+     0.7,
+     0.05,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.1,
+     1.9,
+     0.08
+    ],
+    "pal": "cyan_dim",
+    "rot": [
+     8,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "strip_housing_broken",
+    "prim": "box",
+    "ext": [
+     0.74,
+     0.09,
+     0.05
+    ],
+    "pos": [
+     -0.1,
+     1.9,
+     0.06
+    ],
+    "pal": "black",
+    "bevel": 0.008,
+    "rot": [
+     8,
+     [
+      0,
+      0,
+      1
+     ]
+    ]
+   },
+   {
+    "name": "hazard_warning_tape",
+    "prim": "faceq",
+    "ext": [
+     0.9,
+     0.08,
+     0.02
+    ],
+    "face": "pz",
+    "pos": [
+     -0.6,
+     0.3,
+     0.085
+    ],
+    "pal": "warning"
+   },
+   {
+    "name": "base_trim_intact",
+    "prim": "box",
+    "ext": [
+     1,
+     0.12,
+     0.08
+    ],
+    "pos": [
+     -0.6,
+     0.1,
+     0.06
+    ],
+    "pal": "graphite",
+    "bevel": 0.01
+   }
+  ]
+ }
+]

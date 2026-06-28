@@ -1,0 +1,1032 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_05_reclamation_core",
+  "modelKey": "room_l5_v4_wall_pipe_manifold",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_wall_pipe_manifold.glb",
+  "fileName": "room_l5_v4_wall_pipe_manifold.glb",
+  "sourceAsset": {
+    "modelKey": "room_l5_v4_wall_pipe_manifold",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_wall_pipe_manifold.glb",
+    "file": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_wall_pipe_manifold.glb",
+    "sizeMeters": [
+      1.62,
+      1.08,
+      0.267
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 43228,
+      "meshes": 18,
+      "nodes": 19,
+      "skins": 0,
+      "primitives": 18,
+      "materials": 9,
+      "textures": 0,
+      "images": 0,
+      "accessors": 32,
+      "bufferViews": 32,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 2520
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level05-reclamation-dressing-v4/room_l5_v4_wall_pipe_manifold.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 831534,
+    "vertexCount": 7560,
+    "triangleCount": 2520,
+    "meshCount": 18,
+    "materialCount": 9,
+    "nodeCount": 19,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.81,
+        0,
+        -0.13375
+      ],
+      "center": [
+        0,
+        0.54,
+        0
+      ],
+      "size": [
+        1.62,
+        1.08,
+        0.2675
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "recessed_back_panel",
+        "vertexOffset": 831534,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "vertical_brass_pipe_-054",
+        "vertexOffset": 831666,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "vertical_brass_pipe_0",
+        "vertexOffset": 832002,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "vertical_brass_pipe_054",
+        "vertexOffset": 832338,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "horizontal_graphite_bus_028",
+        "vertexOffset": 832674,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "horizontal_graphite_bus_062",
+        "vertexOffset": 833010,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "horizontal_graphite_bus_096",
+        "vertexOffset": 833346,
+        "vertexCount": 336,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lit_valve_lens_0",
+        "vertexOffset": 833682,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_valve_collar_0",
+        "vertexOffset": 834210,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lit_valve_lens_1",
+        "vertexOffset": 834738,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_valve_collar_1",
+        "vertexOffset": 835266,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lit_valve_lens_2",
+        "vertexOffset": 835794,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_valve_collar_2",
+        "vertexOffset": 836322,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lit_valve_lens_3",
+        "vertexOffset": 836850,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_valve_collar_3",
+        "vertexOffset": 837378,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "lit_valve_lens_4",
+        "vertexOffset": 837906,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "black_valve_collar_4",
+        "vertexOffset": 838434,
+        "vertexCount": 528,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "bottom_label_plate",
+        "vertexOffset": 838962,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_05_v4_dressing_entry_wall_pipe_manifold",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_core_entry",
+      "secondaryRoomId": null,
+      "position": [
+        -4.57752,
+        1.22,
+        16.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.88,
+        0.88,
+        0.88
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:wall"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -4.57752,
+          1.22,
+          16.25
+        ],
+        "halfSize": [
+          0.7128,
+          0.4752,
+          0.11748
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_v4_dressing_east_wall_pipe_manifold",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_east_lock",
+      "secondaryRoomId": null,
+      "position": [
+        16.58553,
+        1.18,
+        6.1
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        0.82,
+        0.82,
+        0.82
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:wall"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          16.58553,
+          1.18,
+          6.1
+        ],
+        "halfSize": [
+          0.6642,
+          0.4428,
+          0.10947
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_v4_dressing_west_wall_pipe_manifold",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_west_lock",
+      "secondaryRoomId": null,
+      "position": [
+        -16.58553,
+        1.18,
+        8.25
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.82,
+        0.82,
+        0.82
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:wall"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -16.58553,
+          1.18,
+          8.25
+        ],
+        "halfSize": [
+          0.6642,
+          0.4428,
+          0.10947
+        ]
+      }
+    },
+    {
+      "id": "prop:level_05_v4_dressing_archive_wall_pipe_manifold",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_05_archive_room",
+      "secondaryRoomId": null,
+      "position": [
+        8.40913,
+        1.16,
+        -12.2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.78,
+        0.78,
+        0.78
+      ],
+      "tags": [
+        "hp:level05_v4_dressing",
+        "source:deterministic-math-script",
+        "license:project-owned-clean",
+        "placement:art_directed",
+        "mount:wall"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.40913,
+          1.16,
+          -12.2
+        ],
+        "halfSize": [
+          0.6318,
+          0.4212,
+          0.10413
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,440 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "hp_l2_cc0_ottoman_polyhaven_v1",
+  "family": "level02-false-home",
+  "bundleId": "level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 13350,
+    "triangleCount": 4450,
+    "byteLength": 534000,
+    "hash": "42d52ae877d2ed1c",
+    "asset": {
+      "modelKey": "hp_l2_cc0_ottoman_polyhaven_v1",
+      "sourceFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+      "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_ottoman_polyhaven_v1.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 13350,
+      "triangleCount": 4450,
+      "meshCount": 3,
+      "materialCount": 3,
+      "nodeCount": 3,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "cc0_source_Ottoman_01",
+          "vertexOffset": 0,
+          "vertexCount": 12054,
+          "bindMatrix": [
+            0.32587,
+            0,
+            0,
+            0,
+            0,
+            0.32587,
+            0,
+            0,
+            0,
+            0,
+            0.32587,
+            0,
+            0,
+            0.23,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            3.06871,
+            0,
+            0,
+            0,
+            0,
+            3.06871,
+            0,
+            0,
+            0,
+            0,
+            3.06871,
+            0,
+            0,
+            -0.705803,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "hp_ottoman_edge_tick_0",
+          "vertexOffset": 12054,
+          "vertexCount": 648,
+          "bindMatrix": [
+            0.1025,
+            0,
+            0,
+            0,
+            0,
+            0.1025,
+            0,
+            0,
+            0,
+            0,
+            0.1025,
+            0,
+            -0.06,
+            0.3772,
+            0.233407,
+            1
+          ],
+          "inverseBindMatrix": [
+            9.756097,
+            0,
+            0,
+            0,
+            0,
+            9.756097,
+            0,
+            0,
+            0,
+            0,
+            9.756097,
+            0,
+            0.585366,
+            -3.68,
+            -2.277139,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "hp_ottoman_edge_tick_1",
+          "vertexOffset": 12702,
+          "vertexCount": 648,
+          "bindMatrix": [
+            0.1025,
+            0,
+            0,
+            0,
+            0,
+            0.1025,
+            0,
+            0,
+            0,
+            0,
+            0.1025,
+            0,
+            0.02,
+            0.3772,
+            0.233407,
+            1
+          ],
+          "inverseBindMatrix": [
+            9.756097,
+            0,
+            0,
+            0,
+            0,
+            9.756097,
+            0,
+            0,
+            0,
+            0,
+            9.756097,
+            0,
+            -0.195122,
+            -3.68,
+            -2.277139,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.32587,
+          0.000011,
+          -0.228836
+        ],
+        "center": [
+          0,
+          0.23,
+          0.006784
+        ],
+        "size": [
+          0.65174,
+          0.459979,
+          0.471239
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "fa86253ff31ddee0",
+    "materials": [
+      {
+        "index": 56,
+        "id": "mat:builder-resource:hp-muted-brass-pin:qu8x2h",
+        "name": "hp_muted_brass_pin",
+        "category": "builder-resource",
+        "visualRole": "route_gold",
+        "semanticParams": [
+          8,
+          0.9,
+          0.42,
+          0.06
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.88,
+          0.56,
+          0.18,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.38,
+        "metallicFactor": 0.45,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 61,
+        "id": "mat:builder-resource:hp-soft-cyan-status-light:1xs3oh5",
+        "name": "hp_soft_cyan_status_light",
+        "category": "builder-resource",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.3702,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.35,
+          0.9,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0.2275,
+          0.585,
+          0.65
+        ],
+        "emissiveStrength": 0.8775,
+        "roughnessFactor": 0.25,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 62,
+        "id": "mat:builder-resource:ottoman-01:xt59nn",
+        "name": "Ottoman_01",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.48,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.54,
+          0.66,
+          0.66,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.96,
+        "metallicFactor": 1,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "Ottoman_01_diff_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/basecolor-13-ottoman-01-diff-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/basecolor-13-ottoman-01-diff-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.172577,
+              "contrast": 0.097256,
+              "chroma": 0.096575,
+              "detail": 0.027792
+            },
+            "generated": false,
+            "layer": 13
+          },
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "Ottoman_01_nor_gl_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/normal-11-ottoman-01-nor-gl-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/normal-11-ottoman-01-nor-gl-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.536618,
+              "contrast": 0.055567,
+              "chroma": 0.751575,
+              "detail": 0.064218
+            },
+            "generated": false,
+            "layer": 11
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "Ottoman_01_arm_1k",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/metallicroughness-12-ottoman-01-arm-1k.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/metallicroughness-12-ottoman-01-arm-1k.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.522728,
+              "contrast": 0.145458,
+              "chroma": 1,
+              "detail": 0.062535
+            },
+            "generated": false,
+            "layer": 12
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 13,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/basecolor-13-ottoman-01-diff-1k.webp",
+        "name": "Ottoman_01_diff_1k",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/basecolor-13-ottoman-01-diff-1k.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.172577,
+          "contrast": 0.097256,
+          "chroma": 0.096575,
+          "detail": 0.027792
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": [
+      {
+        "layer": 11,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/normal-11-ottoman-01-nor-gl-1k.webp",
+        "name": "Ottoman_01_nor_gl_1k",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/normal-11-ottoman-01-nor-gl-1k.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.536618,
+          "contrast": 0.055567,
+          "chroma": 0.751575,
+          "detail": 0.064218
+        }
+      },
+      {
+        "layer": 12,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/metallicroughness-12-ottoman-01-arm-1k.webp",
+        "name": "Ottoman_01_arm_1k",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-false-home/hp_l2_cc0_ottoman_polyhaven_v1/textures/metallicroughness-12-ottoman-01-arm-1k.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.522728,
+          "contrast": 0.145458,
+          "chroma": 1,
+          "detail": 0.062535
+        }
+      }
+    ]
+  }
+}

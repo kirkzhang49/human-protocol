@@ -1,0 +1,67 @@
+.cockpit-vignette {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  background: transparent;
+}
+
+.cockpit-vignette::before,
+.cockpit-vignette::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+}
+
+.cockpit-vignette::before {
+  display: none;
+}
+
+.cockpit-vignette::after {
+  background:
+    radial-gradient(circle at 50% 50%, transparent 0 44%, rgba(255, 225, 190, calc(var(--damage-flash, 0) * 0.16)) 58%, rgba(255, 52, 42, calc(var(--damage-flash, 0) * 0.42)) 100%);
+  opacity: var(--damage-flash, 0);
+}
+
+.cockpit-scan-frame {
+  position: fixed;
+  inset: max(16px, env(safe-area-inset-top)) max(16px, env(safe-area-inset-right))
+    max(16px, env(safe-area-inset-bottom)) max(16px, env(safe-area-inset-left));
+  z-index: 7;
+  pointer-events: none;
+}
+
+.scan-corner {
+  position: absolute;
+  width: clamp(42px, 7vw, 88px);
+  height: clamp(28px, 5vw, 58px);
+  border-color: rgba(130, 235, 255, 0.34);
+  filter: drop-shadow(0 0 10px rgba(100, 215, 255, 0.18));
+}
+
+.scan-corner.tl {
+  left: 0;
+  top: 0;
+  border-top: 1px solid;
+  border-left: 1px solid;
+}
+
+.scan-corner.tr {
+  right: 0;
+  top: 0;
+  border-top: 1px solid;
+  border-right: 1px solid;
+}
+
+.scan-corner.bl {
+  left: 0;
+  bottom: 0;
+  border-bottom: 1px solid;
+  border-left: 1px solid;
+}
+
+.scan-corner.br {
+  right: 0;
+  bottom: 0;
+  border-right: 1px solid;
+  border-bottom: 1px solid;
+}

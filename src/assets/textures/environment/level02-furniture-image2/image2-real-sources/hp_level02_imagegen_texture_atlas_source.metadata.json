@@ -1,0 +1,58 @@
+{
+  "schema": "human-protocol/level02-real-imagegen-source@1",
+  "source": "built-in image_gen tool result decoded from Codex rollout",
+  "callId": "ig_09cc2af1f5429f06016a35a40c882881989efda669c30d115d",
+  "sourceImage": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/hp_level02_imagegen_texture_atlas_source.png",
+  "provenanceLedger": "src/assets/manifests/reports/level02_furniture_image2_source_provenance.json",
+  "license": {
+    "label": "openai-generated-output-user-owned-subject-to-openai-terms",
+    "termsCheckedAt": "2026-06-19",
+    "termsUrl": "https://openai.com/policies/row-terms-of-use/",
+    "servicesAgreementUrl": "https://openai.com/policies/services-agreement/",
+    "summary": "OpenAI-generated output produced for this project; project treats the output as user-owned generated output subject to OpenAI terms, input rights, downstream-use responsibility, and normal legal review."
+  },
+  "sourceSize": [
+    1254,
+    1254
+  ],
+  "cropMarginPx": 15,
+  "crops": {
+    "walnut_large_grain": {
+      "path": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/walnut_large_grain.png",
+      "box": [
+        15,
+        15,
+        612,
+        612
+      ]
+    },
+    "warm_lacquer_panel": {
+      "path": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/warm_lacquer_panel.png",
+      "box": [
+        642,
+        15,
+        1239,
+        612
+      ]
+    },
+    "residential_art_panel": {
+      "path": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/residential_art_panel.png",
+      "box": [
+        15,
+        642,
+        612,
+        1239
+      ]
+    },
+    "muted_book_spines": {
+      "path": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/muted_book_spines.png",
+      "box": [
+        642,
+        642,
+        1239,
+        1239
+      ]
+    }
+  },
+  "prompt": "Create a single square 2D texture atlas image for a refined residential furniture asset pack, 2048x2048 if possible. Divide it into four equal clean quadrants with subtle margins, no labels, no text, no objects, seamless-ish material surfaces only.\nTop-left: premium warm walnut and oak wood veneer, calm long grain, amber-brown with honey highlights, no knots bigger than small flecks, elegant contemporary furniture finish.\nTop-right: warm white lacquered cabinet panel material, satin finish, faint cream-grey undertones, very subtle inset-panel shadow/groove feeling, clean residential kitchen cabinetry, not futuristic.\nBottom-left: abstract residential art panel material, muted earth tones, ivory, sienna, olive, charcoal, soft organic brush bands like modern wall art, calm high-end living room taste, no faces, no symbols.\nBottom-right: muted bookshelf book-spine material, vertical narrow bands of warm neutrals, faded navy, terracotta, olive, cream, varied widths, quiet library feeling, no readable text.\nOverall: clean, premium, low noise, no sci-fi cyan, no camera lenses, no glowing strips, no dirt, no grime, no random beads or wires."
+}

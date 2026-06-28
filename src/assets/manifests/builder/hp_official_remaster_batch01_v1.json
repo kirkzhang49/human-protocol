@@ -1,0 +1,1089 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_official_remaster_batch01_v1",
+  "label": "官方关卡重制包 01",
+  "sourceTool": "hp-internal-asset-factory",
+  "generatedAt": "2026-06-11",
+  "assets": [
+    {
+      "modelKey": "room_rm_maint_broken_cradle",
+      "label": "破损检修台",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_maint_broken_cradle_v1",
+      "themeId": "hp_official_remaster_maintenance",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_maint_broken_cradle.glb",
+      "sizeMeters": [
+        2.4,
+        0.919,
+        2.1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:maintenance",
+        "role:hero",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_maint_cable_spine",
+      "label": "脊柱电缆槽",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_maint_cable_spine_v1",
+      "themeId": "hp_official_remaster_maintenance",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_maint_cable_spine.glb",
+      "sizeMeters": [
+        2.6,
+        0.33,
+        0.974
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:maintenance",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_maint_weapon_cradle",
+      "label": "武器认领架",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_maint_weapon_cradle_v1",
+      "themeId": "hp_official_remaster_maintenance",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_maint_weapon_cradle.glb",
+      "sizeMeters": [
+        1.3,
+        0.87,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "lane:maintenance",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_maint_battery_rack",
+      "label": "电池充能架",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_maint_battery_rack_v1",
+      "themeId": "hp_official_remaster_maintenance",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_maint_battery_rack.glb",
+      "sizeMeters": [
+        1.1,
+        1.56,
+        0.7
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:maintenance",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_maint_door_console",
+      "label": "压力门操作台",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_maint_door_console_v1",
+      "themeId": "hp_official_remaster_maintenance",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_maint_door_console.glb",
+      "sizeMeters": [
+        1.2,
+        1.37,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:maintenance",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_maint_tool_wall",
+      "label": "工具挂板",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_maint_tool_wall_v1",
+      "themeId": "hp_official_remaster_maintenance",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_maint_tool_wall.glb",
+      "sizeMeters": [
+        1.88,
+        1.245,
+        0.13
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:maintenance",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_maint_coolant_drums",
+      "label": "冷却剂桶组",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_maint_coolant_drums_v1",
+      "themeId": "hp_official_remaster_maintenance",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_maint_coolant_drums.glb",
+      "sizeMeters": [
+        1.593,
+        1.12,
+        1.487
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "crate",
+      "tags": [
+        "lane:maintenance",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_maint_gantry_hoist",
+      "label": "龙门吊架",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_maint_gantry_hoist_v1",
+      "themeId": "hp_official_remaster_maintenance",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_maint_gantry_hoist.glb",
+      "sizeMeters": [
+        1.759,
+        2.05,
+        1.1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:maintenance",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_home_family_table",
+      "label": "全家餐桌",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_home_family_table_v1",
+      "themeId": "hp_official_remaster_residential",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_home_family_table.glb",
+      "sizeMeters": [
+        2.35,
+        0.97,
+        2.439
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:residential",
+        "role:anchor",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_home_observation_sofa",
+      "label": "观察沙发",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_home_observation_sofa_v1",
+      "themeId": "hp_official_remaster_residential",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_home_observation_sofa.glb",
+      "sizeMeters": [
+        2.3,
+        1.095,
+        1.2
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "lane:residential",
+        "role:anchor",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_home_tv_shrine_broken",
+      "label": "故障电视柜",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_home_tv_shrine_broken_v1",
+      "themeId": "hp_official_remaster_residential",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_home_tv_shrine_broken.glb",
+      "sizeMeters": [
+        1.9,
+        1.725,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:residential",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_home_wall_rupture",
+      "label": "墙面破口",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_home_wall_rupture_v1",
+      "themeId": "hp_official_remaster_residential",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_home_wall_rupture.glb",
+      "sizeMeters": [
+        1.7,
+        1.5,
+        0.14
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:residential",
+        "role:clue",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_home_photo_cluster",
+      "label": "记忆照片墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_home_photo_cluster_v1",
+      "themeId": "hp_official_remaster_residential",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_home_photo_cluster.glb",
+      "sizeMeters": [
+        1.8,
+        1.002,
+        0.085
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:residential",
+        "role:clue",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_home_kitchen_fake",
+      "label": "样板厨台",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_home_kitchen_fake_v1",
+      "themeId": "hp_official_remaster_residential",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_home_kitchen_fake.glb",
+      "sizeMeters": [
+        1.9,
+        1.11,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:residential",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_home_crib_monitor",
+      "label": "监听婴儿床",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_home_crib_monitor_v1",
+      "themeId": "hp_official_remaster_residential",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_home_crib_monitor.glb",
+      "sizeMeters": [
+        1.784,
+        1.504,
+        1.1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:residential",
+        "role:clue",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_home_intercom_panel",
+      "label": "门口对讲器",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_home_intercom_panel_v1",
+      "themeId": "hp_official_remaster_residential",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_home_intercom_panel.glb",
+      "sizeMeters": [
+        0.4,
+        0.62,
+        0.09
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:residential",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_museum_specimen_case",
+      "label": "高型标本柜",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_museum_specimen_case_v1",
+      "themeId": "hp_official_remaster_museum",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_specimen_case.glb",
+      "sizeMeters": [
+        1.1,
+        1.98,
+        1.1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "display_case",
+      "tags": [
+        "lane:museum",
+        "role:hero",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_museum_archive_plinth",
+      "label": "档案基座",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_museum_archive_plinth_v1",
+      "themeId": "hp_official_remaster_museum",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_archive_plinth.glb",
+      "sizeMeters": [
+        0.9,
+        1.199,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "lane:museum",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_museum_body_display",
+      "label": "人体参照板",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_museum_body_display_v1",
+      "themeId": "hp_official_remaster_museum",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_body_display.glb",
+      "sizeMeters": [
+        1.28,
+        1.76,
+        0.108
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:museum",
+        "role:clue",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_museum_route_inlay",
+      "label": "导览地标",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_museum_route_inlay_v1",
+      "themeId": "hp_official_remaster_museum",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_route_inlay.glb",
+      "sizeMeters": [
+        2,
+        0.057,
+        0.5
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:museum",
+        "role:clue",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_museum_curator_desk",
+      "label": "策展人书桌",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_museum_curator_desk_v1",
+      "themeId": "hp_official_remaster_museum",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_curator_desk.glb",
+      "sizeMeters": [
+        1.9,
+        1.253,
+        1.2
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:museum",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_museum_audio_stand",
+      "label": "语音导览架",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_museum_audio_stand_v1",
+      "themeId": "hp_official_remaster_museum",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_audio_stand.glb",
+      "sizeMeters": [
+        0.7,
+        1.689,
+        0.7
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "lamp",
+      "tags": [
+        "lane:museum",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_museum_restoration_bench",
+      "label": "修复工作台",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_museum_restoration_bench_v1",
+      "themeId": "hp_official_remaster_museum",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_restoration_bench.glb",
+      "sizeMeters": [
+        1.8,
+        1.296,
+        1.1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:museum",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_museum_stanchion",
+      "label": "导览围栏",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_museum_stanchion_v1",
+      "themeId": "hp_official_remaster_museum",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_museum_stanchion.glb",
+      "sizeMeters": [
+        1.67,
+        1.02,
+        0.5
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:museum",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_clinic_therapy_chair",
+      "label": "治疗躺椅",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_clinic_therapy_chair_v1",
+      "themeId": "hp_official_remaster_clinic",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_clinic_therapy_chair.glb",
+      "sizeMeters": [
+        1.4,
+        1.592,
+        1.894
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:clinic",
+        "role:hero",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_clinic_sedation_gate",
+      "label": "镇静闸门",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_clinic_sedation_gate_v1",
+      "themeId": "hp_official_remaster_clinic",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_clinic_sedation_gate.glb",
+      "sizeMeters": [
+        1.8,
+        2.43,
+        0.8
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:clinic",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_clinic_diagnosis_terminal",
+      "label": "诊断终端车",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_clinic_diagnosis_terminal_v1",
+      "themeId": "hp_official_remaster_clinic",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_clinic_diagnosis_terminal.glb",
+      "sizeMeters": [
+        1.1,
+        1.411,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:clinic",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_clinic_memory_projector",
+      "label": "记忆放映机",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_clinic_memory_projector_v1",
+      "themeId": "hp_official_remaster_clinic",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_clinic_memory_projector.glb",
+      "sizeMeters": [
+        1,
+        1.448,
+        1.713
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "lamp",
+      "tags": [
+        "lane:clinic",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_clinic_surgical_curtain",
+      "label": "手术隔帘",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_clinic_surgical_curtain_v1",
+      "themeId": "hp_official_remaster_clinic",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_clinic_surgical_curtain.glb",
+      "sizeMeters": [
+        1.9,
+        2.055,
+        1.1
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:clinic",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_clinic_dosage_cart",
+      "label": "剂量推车",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_clinic_dosage_cart_v1",
+      "themeId": "hp_official_remaster_clinic",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_clinic_dosage_cart.glb",
+      "sizeMeters": [
+        0.9,
+        1.1,
+        0.8
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "crate",
+      "tags": [
+        "lane:clinic",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_clinic_waiting_row",
+      "label": "候诊连排椅",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_clinic_waiting_row_v1",
+      "themeId": "hp_official_remaster_clinic",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_clinic_waiting_row.glb",
+      "sizeMeters": [
+        2.1,
+        0.942,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "sofa",
+      "tags": [
+        "lane:clinic",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_clinic_eye_lightbox",
+      "label": "视力灯箱",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_clinic_eye_lightbox_v1",
+      "themeId": "hp_official_remaster_clinic",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_clinic_eye_lightbox.glb",
+      "sizeMeters": [
+        0.62,
+        0.88,
+        0.097
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:clinic",
+        "role:clue",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_core_reclamation_altar",
+      "label": "回收祭坛",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_core_reclamation_altar_v1",
+      "themeId": "hp_official_remaster_core",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_reclamation_altar.glb",
+      "sizeMeters": [
+        2.4,
+        1.114,
+        2.4
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "lane:core",
+        "role:hero",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_core_identity_server",
+      "label": "身份服务器",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_core_identity_server_v1",
+      "themeId": "hp_official_remaster_core",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_identity_server.glb",
+      "sizeMeters": [
+        1.1,
+        2.2,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:core",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_core_coolant_manifold",
+      "label": "冷却歧管",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_core_coolant_manifold_v1",
+      "themeId": "hp_official_remaster_core",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_coolant_manifold.glb",
+      "sizeMeters": [
+        1.9,
+        1.41,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "lane:core",
+        "role:interactive",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_core_final_lock_column",
+      "label": "终锁立柱",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_core_final_lock_column_v1",
+      "themeId": "hp_official_remaster_core",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_final_lock_column.glb",
+      "sizeMeters": [
+        1.2,
+        2.72,
+        1.2
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:core",
+        "role:hero",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_core_arena_marker",
+      "label": "决战地环",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_core_arena_marker_v1",
+      "themeId": "hp_official_remaster_core",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_arena_marker.glb",
+      "sizeMeters": [
+        1.98,
+        0.068,
+        1.98
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:core",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_core_conveyor_segment",
+      "label": "回收传送段",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_core_conveyor_segment_v1",
+      "themeId": "hp_official_remaster_core",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_conveyor_segment.glb",
+      "sizeMeters": [
+        2.3,
+        0.93,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:core",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_core_incinerator_hatch",
+      "label": "焚化舱口",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_core_incinerator_hatch_v1",
+      "themeId": "hp_official_remaster_core",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_incinerator_hatch.glb",
+      "sizeMeters": [
+        1.68,
+        0.17,
+        1.68
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "crate",
+      "tags": [
+        "lane:core",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    },
+    {
+      "modelKey": "room_rm_core_warning_pylon",
+      "label": "警示信标柱",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "官卡重制",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_rm_core_warning_pylon_v1",
+      "themeId": "hp_official_remaster_core",
+      "glbFile": "../../models-cooked/environment/hp-official-remaster-batch01/hp_room_rm_core_warning_pylon.glb",
+      "sizeMeters": [
+        0.7,
+        1.88,
+        0.7
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "lane:core",
+        "role:filler",
+        "style:hp-official-remaster"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,97 @@
+{
+  "schema": "human-protocol/level02-furniture-image2-texture-report@1",
+  "generatedAt": "2026-06-19",
+  "source": "real built-in image_gen material atlas for selected hero surfaces, deterministic fallbacks for non-hero support materials",
+  "reference": "/Users/zhengkaizhang/Desktop/Screenshot 2026-06-19 at 10.52.05 AM.png",
+  "realImageGenSourceDirectory": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources",
+  "realImageGenSourceMetadata": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/hp_level02_imagegen_texture_atlas_source.metadata.json",
+  "sourceProvenance": "src/assets/manifests/reports/level02_furniture_image2_source_provenance.json",
+  "sourceProvenanceHuman": "src/assets/manifests/reports/level02_furniture_image2_source_provenance.md",
+  "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "realImageGenSourceKeys": {
+    "walnut_large_grain": "image_gen walnut/oak veneer quadrant",
+    "warm_lacquer_panel": "image_gen warm lacquer cabinet panel quadrant",
+    "residential_art_panel": "image_gen residential abstract art quadrant",
+    "muted_book_spines": "image_gen muted bookshelf spines quadrant"
+  },
+  "sourceKinds": {
+    "walnut_large_grain": "real built-in image_gen source crop",
+    "honed_stone_warm_vein": "deterministic low-noise procedural fallback",
+    "ivory_boucle_fabric": "deterministic low-noise procedural fallback",
+    "warm_lacquer_panel": "real built-in image_gen source crop",
+    "residential_art_panel": "real built-in image_gen source crop",
+    "muted_book_spines": "real built-in image_gen source crop",
+    "shadow_trim_gap": "deterministic low-noise procedural fallback"
+  },
+  "rules": [
+    "texture only large, readable material surfaces",
+    "avoid repeated micro-lines, pasted posters, text, and sci-fi symbols",
+    "combine baseColorTexture with PBR roughness/metallic materials in Blender",
+    "UV regions are mathematically fixed by hp_level02_furniture_image2_atlas.regions.json"
+  ],
+  "atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+  "regions": {
+    "walnut_large_grain": {
+      "x": 16,
+      "y": 16,
+      "w": 752,
+      "h": 496,
+      "padding": 16,
+      "role": "tabletop and warm walnut veneer"
+    },
+    "honed_stone_warm_vein": {
+      "x": 800,
+      "y": 16,
+      "w": 496,
+      "h": 368,
+      "padding": 16,
+      "role": "kitchen stone counter"
+    },
+    "ivory_boucle_fabric": {
+      "x": 1328,
+      "y": 16,
+      "w": 496,
+      "h": 496,
+      "padding": 16,
+      "role": "shared soft upholstery"
+    },
+    "warm_lacquer_panel": {
+      "x": 16,
+      "y": 560,
+      "w": 496,
+      "h": 496,
+      "padding": 16,
+      "role": "wardrobe and elevator inset panels"
+    },
+    "residential_art_panel": {
+      "x": 544,
+      "y": 560,
+      "w": 624,
+      "h": 432,
+      "padding": 16,
+      "role": "portrait console art surface"
+    },
+    "muted_book_spines": {
+      "x": 1200,
+      "y": 560,
+      "w": 368,
+      "h": 240,
+      "padding": 16,
+      "role": "book shelf accents"
+    },
+    "shadow_trim_gap": {
+      "x": 1600,
+      "y": 560,
+      "w": 256,
+      "h": 256,
+      "padding": 16,
+      "role": "hidden control seams and shadow trims"
+    }
+  },
+  "contactSheet": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_contact_sheet.png",
+  "generatingAccount": "kirkzhang49@gmail.com",
+  "generationDate": "2026-06-19",
+  "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+  "licenseClassification": "owned-generated-output",
+  "releaseClearanceStatus": "cleared-for-project-use"
+}

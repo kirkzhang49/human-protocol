@@ -1,0 +1,184 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level05_reclamation_furniture_image2_v3_batch02",
+  "label": "HP Level 05 Reclamation Core Furniture v3 Batch 02 (Image2 Cutout UV)",
+  "sourceTool": "generate-level05-reclamation-furniture-image2-v3-batch02-assets.py",
+  "generatedAt": "2026-06-27",
+  "revision": "v3-batch02-clean-chair-sofa-front-organic-supports-area-uv",
+  "atlas": {
+    "image": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/hp_level05_reclamation_furniture_image2_v3_batch02_atlas.png",
+    "regions": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch02/hp_level05_reclamation_furniture_image2_v3_batch02_atlas.regions.json",
+    "size": [
+      2048,
+      2048
+    ]
+  },
+  "assets": [
+    {
+      "modelKey": "room_l5_v3_anemone_lounge_chair",
+      "label": "L5 V3 Anemone Lounge Chair",
+      "assetKind": "furniture",
+      "family": "chair",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch02",
+      "sourceAssetId": "room_l5_v3_anemone_lounge_chair_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_anemone_lounge_chair.glb",
+      "sizeMeters": [
+        1.04,
+        1.133,
+        1.04
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "chair",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch02",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:chair"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_crescent_low_sofa",
+      "label": "L5 V3 Crescent Low Sofa",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch02",
+      "sourceAssetId": "room_l5_v3_crescent_low_sofa_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_crescent_low_sofa.glb",
+      "sizeMeters": [
+        2.384,
+        0.72,
+        1.153
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "sofa",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch02",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:sofa_bench"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_evidence_coffee_table",
+      "label": "L5 V3 Evidence Coffee Table",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch02",
+      "sourceAssetId": "room_l5_v3_evidence_coffee_table_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_evidence_coffee_table.glb",
+      "sizeMeters": [
+        1.74,
+        0.66,
+        0.98
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch02",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:desk"
+      ],
+      "supportSurfaces": [
+        {
+          "id": "glass_top",
+          "kind": "tabletop",
+          "localCenter": [
+            0,
+            0.67,
+            0
+          ],
+          "size": [
+            1.4,
+            0.64
+          ],
+          "maxChildHeight": 0.4
+        }
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_human_archive_cabinet",
+      "label": "L5 V3 Human Archive Cabinet",
+      "assetKind": "furniture",
+      "family": "bookshelf",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch02",
+      "sourceAssetId": "room_l5_v3_human_archive_cabinet_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_human_archive_cabinet.glb",
+      "sizeMeters": [
+        1.26,
+        1.845,
+        0.75
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 3,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch02",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:bookshelf"
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_service_side_console",
+      "label": "L5 V3 Service Side Console",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "\u6838\u5fc3",
+      "source": "level05-reclamation-furniture-image2-v3-batch02",
+      "sourceAssetId": "room_l5_v3_service_side_console_v1",
+      "themeId": "hp_reclamation_core_v3",
+      "glbFile": "../../models-cooked/environment/level05-reclamation-furniture-image2-v3-batch02/room_l5_v3_service_side_console.glb",
+      "sizeMeters": [
+        1.6,
+        1.0,
+        0.588
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2-v3-batch02",
+        "source:independent-image2-sheet",
+        "texture:transparent-cutout",
+        "uv:area-mapped",
+        "family:control_console"
+      ]
+    }
+  ]
+}

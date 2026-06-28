@@ -1,0 +1,1768 @@
+[
+  {
+    "modelKey": "room_l5_v3_bio_recline_couch",
+    "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_bio_recline_couch.glb",
+    "bytes": 7167196,
+    "sizeMeters": [
+      2.55,
+      0.667,
+      1.17
+    ],
+    "expectedNamedParts": 22,
+    "geometryNodes": 18,
+    "vertices": 670,
+    "triangles": 1268,
+    "materialsWithBaseColorTexture": 18,
+    "uvNodes": 18,
+    "areaUvNodes": 18,
+    "centerSampleUvNodes": 0,
+    "missingUvNodes": 0,
+    "areaUvCoverageRatio": 1.0,
+    "materials": [
+      {
+        "node": "graphite_low_recline_frame",
+        "material": "couch_graphite_underframe",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "white_ceramic_lower_shell",
+        "material": "couch_white_ceramic_shell",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "back_pad",
+        "material": "couch_black_ribbed_pad",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "seat_pad",
+        "material": "couch_black_ribbed_pad",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "long_brass_side_rail_-0.54",
+        "material": "couch_brass_hinge_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "long_brass_side_rail_0.54",
+        "material": "couch_brass_hinge_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_-1.04",
+        "material": "couch_brass_hinge_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_-0.35",
+        "material": "couch_brass_hinge_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_0.36",
+        "material": "couch_brass_hinge_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_1.04",
+        "material": "couch_brass_hinge_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "cyan_status_slit_front",
+        "material": "couch_cyan_status_slit",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_side_gasket_-0.43",
+        "material": "couch_black_gasket_strips",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_side_gasket_0.43",
+        "material": "couch_black_gasket_strips",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_00_couch_screws_fasteners",
+        "material": "couch_screws_fasteners",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_01_couch_screws_fasteners",
+        "material": "couch_screws_fasteners",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_02_couch_screws_fasteners",
+        "material": "couch_screws_fasteners",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_03_couch_screws_fasteners",
+        "material": "couch_screws_fasteners",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_04_couch_screws_fasteners",
+        "material": "couch_screws_fasteners",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      }
+    ]
+  },
+  {
+    "modelKey": "room_l5_v3_memory_diagnostic_terminal",
+    "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_memory_diagnostic_terminal.glb",
+    "bytes": 7166984,
+    "sizeMeters": [
+      1.24,
+      2.16,
+      0.579
+    ],
+    "expectedNamedParts": 20,
+    "geometryNodes": 17,
+    "vertices": 628,
+    "triangles": 1188,
+    "materialsWithBaseColorTexture": 17,
+    "uvNodes": 17,
+    "areaUvNodes": 17,
+    "centerSampleUvNodes": 0,
+    "missingUvNodes": 0,
+    "areaUvCoverageRatio": 1.0,
+    "materials": [
+      {
+        "node": "wide_graphite_floor_base",
+        "material": "terminal_graphite_pedestal",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "tall_graphite_spine",
+        "material": "terminal_graphite_pedestal",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "smoked_glass_diagnostic_screen",
+        "material": "terminal_smoked_screen",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "white_ceramic_screen_shell",
+        "material": "terminal_white_ceramic_shell",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_vertical_side_rail_-0.58",
+        "material": "terminal_brass_side_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "lower_brass_mount_-0.58",
+        "material": "terminal_brass_side_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_vertical_side_rail_0.58",
+        "material": "terminal_brass_side_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "lower_brass_mount_0.58",
+        "material": "terminal_brass_side_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "cyan_horizontal_status_slit_1.02",
+        "material": "terminal_cyan_data_slits",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "cyan_horizontal_status_slit_1.42",
+        "material": "terminal_cyan_data_slits",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "cyan_horizontal_status_slit_1.82",
+        "material": "terminal_cyan_data_slits",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_screen_gasket_0.62",
+        "material": "terminal_black_gasket_bars",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_screen_gasket_2.12",
+        "material": "terminal_black_gasket_bars",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_00_terminal_screws_ports",
+        "material": "terminal_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_01_terminal_screws_ports",
+        "material": "terminal_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_02_terminal_screws_ports",
+        "material": "terminal_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_03_terminal_screws_ports",
+        "material": "terminal_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      }
+    ]
+  },
+  {
+    "modelKey": "room_l5_v3_tissue_freezer_cabinet",
+    "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_tissue_freezer_cabinet.glb",
+    "bytes": 7209384,
+    "sizeMeters": [
+      1.377,
+      1.755,
+      0.722
+    ],
+    "expectedNamedParts": 45,
+    "geometryNodes": 45,
+    "vertices": 1572,
+    "triangles": 2964,
+    "materialsWithBaseColorTexture": 45,
+    "uvNodes": 45,
+    "areaUvNodes": 45,
+    "centerSampleUvNodes": 0,
+    "missingUvNodes": 0,
+    "areaUvCoverageRatio": 1.0,
+    "materials": [
+      {
+        "node": "white_ceramic_cold_cabinet_body",
+        "material": "freezer_white_ceramic_door",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "graphite_compressor_plinth",
+        "material": "freezer_graphite_compressor_base",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "flush_dark_freezer_door_backing",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "cold_storage_top_compressor_cap",
+        "material": "freezer_graphite_compressor_base",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "separate_ceramic_door_-0.32",
+        "material": "freezer_white_ceramic_door",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "cyan_frosted_window_-0.32",
+        "material": "freezer_cyan_frosted_window",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "front_black_window_recess_gasket_-0.32",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_visible_cyan_window_-0.32",
+        "material": "freezer_cyan_frosted_window",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_black_window_gasket_-0.32",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "vertical_brass_freezer_pull_-0.32",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "separate_ceramic_door_0.32",
+        "material": "freezer_white_ceramic_door",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "cyan_frosted_window_0.32",
+        "material": "freezer_cyan_frosted_window",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "front_black_window_recess_gasket_0.32",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_visible_cyan_window_0.32",
+        "material": "freezer_cyan_frosted_window",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_black_window_gasket_0.32",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "vertical_brass_freezer_pull_0.32",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_vertical_hinge_-0.62",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "freezer_hinge_knuckle_-0.62_0.52",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "freezer_hinge_knuckle_-0.62_0.96",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "freezer_hinge_knuckle_-0.62_1.4",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_vertical_hinge_0.62",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "freezer_hinge_knuckle_0.62_0.52",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "freezer_hinge_knuckle_0.62_0.96",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "freezer_hinge_knuckle_0.62_1.4",
+        "material": "freezer_brass_hinges_handles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "black_horizontal_gasket_0.48",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_black_horizontal_gasket_0.48",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_horizontal_gasket_1.62",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_black_horizontal_gasket_1.62",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "center_freezer_door_shadow_split",
+        "material": "freezer_black_gasket",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "right_side_cyan_cold_status_0.86",
+        "material": "freezer_cyan_frosted_window",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "right_side_cyan_cold_status_1.26",
+        "material": "freezer_cyan_frosted_window",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "front_vent_grille_panel",
+        "material": "freezer_vent_grilles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "individual_front_vent_louver_0",
+        "material": "freezer_vent_grilles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "individual_front_vent_louver_1",
+        "material": "freezer_vent_grilles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "individual_front_vent_louver_2",
+        "material": "freezer_vent_grilles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "individual_front_vent_louver_3",
+        "material": "freezer_vent_grilles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "individual_front_vent_louver_4",
+        "material": "freezer_vent_grilles",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "upper_latch_plate_-0.18",
+        "material": "freezer_screws_latches",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "upper_latch_plate_0.18",
+        "material": "freezer_screws_latches",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "heavy_freezer_leveling_foot_-0.45",
+        "material": "freezer_graphite_compressor_base",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "heavy_freezer_leveling_foot_0.45",
+        "material": "freezer_graphite_compressor_base",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_00_freezer_screws_latches",
+        "material": "freezer_screws_latches",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_01_freezer_screws_latches",
+        "material": "freezer_screws_latches",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_02_freezer_screws_latches",
+        "material": "freezer_screws_latches",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_03_freezer_screws_latches",
+        "material": "freezer_screws_latches",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      }
+    ]
+  },
+  {
+    "modelKey": "room_l5_v3_limb_calibration_rack",
+    "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_limb_calibration_rack.glb",
+    "bytes": 7188660,
+    "sizeMeters": [
+      1.52,
+      2.28,
+      0.545
+    ],
+    "expectedNamedParts": 29,
+    "geometryNodes": 31,
+    "vertices": 1352,
+    "triangles": 2580,
+    "materialsWithBaseColorTexture": 31,
+    "uvNodes": 31,
+    "areaUvNodes": 31,
+    "centerSampleUvNodes": 0,
+    "missingUvNodes": 0,
+    "areaUvCoverageRatio": 1.0,
+    "materials": [
+      {
+        "node": "tall_graphite_rail_-0.45",
+        "material": "rack_graphite_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "white_ceramic_upright_skin_-0.45",
+        "material": "rack_white_ceramic_uprights",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "tall_graphite_rail_0.45",
+        "material": "rack_graphite_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "white_ceramic_upright_skin_0.45",
+        "material": "rack_white_ceramic_uprights",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "graphite_crossbar_0.3",
+        "material": "rack_graphite_base_feet",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "graphite_crossbar_1.18",
+        "material": "rack_graphite_base_feet",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "graphite_crossbar_2.05",
+        "material": "rack_graphite_base_feet",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_calibration_arm_0",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "black_limb_pad_0_-0.28",
+        "material": "rack_black_limb_pads",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_0_-0.28",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_limb_pad_0_0.28",
+        "material": "rack_black_limb_pads",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_0_0.28",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_calibration_arm_1",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "black_limb_pad_1_-0.28",
+        "material": "rack_black_limb_pads",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_1_-0.28",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_limb_pad_1_0.28",
+        "material": "rack_black_limb_pads",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_1_0.28",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_calibration_arm_2",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "black_limb_pad_2_-0.28",
+        "material": "rack_black_limb_pads",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_2_-0.28",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_limb_pad_2_0.28",
+        "material": "rack_black_limb_pads",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_pad_clamp_2_0.28",
+        "material": "rack_brass_articulated_clamps",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "wide_graphite_floor_foot_-0.58",
+        "material": "rack_graphite_base_feet",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "wide_graphite_floor_foot_0.58",
+        "material": "rack_graphite_base_feet",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_black_cable_run_-0.34",
+        "material": "rack_black_cable_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_black_cable_run_0.34",
+        "material": "rack_black_cable_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.122396,
+          0.125
+        ],
+        "uvArea": 0.01529948,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_00_rack_screws_brackets",
+        "material": "rack_screws_brackets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_01_rack_screws_brackets",
+        "material": "rack_screws_brackets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_02_rack_screws_brackets",
+        "material": "rack_screws_brackets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_03_rack_screws_brackets",
+        "material": "rack_screws_brackets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_04_rack_screws_brackets",
+        "material": "rack_screws_brackets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      }
+    ]
+  },
+  {
+    "modelKey": "room_l5_v3_cleaning_robot_dock",
+    "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch03/room_l5_v3_cleaning_robot_dock.glb",
+    "bytes": 7184732,
+    "sizeMeters": [
+      1.62,
+      0.445,
+      1.645
+    ],
+    "expectedNamedParts": 27,
+    "geometryNodes": 27,
+    "vertices": 876,
+    "triangles": 1480,
+    "materialsWithBaseColorTexture": 27,
+    "uvNodes": 27,
+    "areaUvNodes": 27,
+    "centerSampleUvNodes": 0,
+    "missingUvNodes": 0,
+    "areaUvCoverageRatio": 1.0,
+    "materials": [
+      {
+        "node": "rounded_white_ceramic_dock_base",
+        "material": "dock_rounded_ceramic_base",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "recessed_graphite_robot_cradle",
+        "material": "dock_graphite_cradle",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "dark_lower_cradle_floor_shadow",
+        "material": "dock_graphite_cradle",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "cyan_charging_ring_inlay",
+        "material": "dock_cyan_charging_ring",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.12,
+          0.12
+        ],
+        "uvArea": 0.0144,
+        "areaMapped": true
+      },
+      {
+        "node": "dark_center_contact_disc",
+        "material": "dock_graphite_cradle",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.12,
+          0.12
+        ],
+        "uvArea": 0.0144,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_charging_contact_rail_-0.42",
+        "material": "dock_brass_contacts_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "inner_black_robot_guide_rail_-0.42",
+        "material": "dock_black_bumpers_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "brass_charging_contact_rail_0.42",
+        "material": "dock_brass_contacts_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "inner_black_robot_guide_rail_0.42",
+        "material": "dock_black_bumpers_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_rubber_bumper_-0.54",
+        "material": "dock_black_bumpers_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "black_rubber_bumper_0.54",
+        "material": "dock_black_bumpers_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "front_soft_entry_bumper_lip",
+        "material": "dock_black_bumpers_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "sloped_front_entry_ramp",
+        "material": "dock_rounded_ceramic_base",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "side_white_shell_cheek_-0.72",
+        "material": "dock_white_shell_parts",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "front_corner_rubber_crash_pad_-0.72",
+        "material": "dock_black_bumpers_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "side_white_shell_cheek_0.72",
+        "material": "dock_white_shell_parts",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "front_corner_rubber_crash_pad_0.72",
+        "material": "dock_black_bumpers_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_cable_socket_panel",
+        "material": "dock_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_black_power_cable_stub",
+        "material": "dock_black_bumpers_gaskets",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.120536,
+          0.125
+        ],
+        "uvArea": 0.01506696,
+        "areaMapped": true
+      },
+      {
+        "node": "front_brass_alignment_contact_-0.25",
+        "material": "dock_brass_contacts_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "front_brass_alignment_contact_0.25",
+        "material": "dock_brass_contacts_rails",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_weighted_leveling_foot_-0.48",
+        "material": "dock_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "rear_weighted_leveling_foot_0.48",
+        "material": "dock_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.125,
+          0.125
+        ],
+        "uvArea": 0.015625,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_00_dock_screws_ports",
+        "material": "dock_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_01_dock_screws_ports",
+        "material": "dock_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_02_dock_screws_ports",
+        "material": "dock_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      },
+      {
+        "node": "screw_03_dock_screws_ports",
+        "material": "dock_screws_ports",
+        "baseColorTexture": true,
+        "hasUv": true,
+        "uvSpan": [
+          0.11875,
+          0.125
+        ],
+        "uvArea": 0.01484375,
+        "areaMapped": true
+      }
+    ]
+  }
+]

@@ -1,0 +1,66 @@
+{
+  "assetPack": "human_protocol_level02_false_home_cc0_surfaces_v1",
+  "generatedBy": "scripts/asset-build/ingest-level02-false-home-cc0-surfaces.py",
+  "generatedAt": "2026-06-20",
+  "license": {
+    "source": "ambientCG",
+    "license": "CC0 1.0 Universal",
+    "commercialUse": true,
+    "modificationAllowed": true,
+    "redistributionInGameAllowed": true,
+    "attributionRequired": false,
+    "licenseUrl": "https://docs.ambientcg.com/license/"
+  },
+  "blueprint": {
+    "level": "level_02_residential_simulation",
+    "role": "false-home wall and ceiling presets for /build and official builder source",
+    "textureSizePx": 512,
+    "compression": "WEBP quality 82",
+    "floorPreset": {
+      "presetId": "floor_level02_false_home_walnut_v1",
+      "source": "existing compressed builder surface wood_floor_*",
+      "licenseProof": "docs/asset-license-ledger.md ambientCG Wood062 CC0 row"
+    },
+    "runtimePath": "BuilderEnvironment presets -> room surface overrides -> Raw WebGPU builder runtime pack"
+  },
+  "surfaces": [
+    {
+      "presetId": "wall_level02_false_home_plaster_v1",
+      "label": "L2 假住宅细灰泥墙",
+      "sourceAsset": "Plaster001",
+      "sourceUrl": "https://ambientcg.com/view?id=Plaster001",
+      "downloadUrl": "https://ambientCG.com/get?file=Plaster001_1K-JPG.zip",
+      "sourceLocalPath": "src/assets/external/hp_surface_candidates_2026_06_18/ambientcg/walls/Plaster001",
+      "role": "warm fine plaster wall for Level 02 false-home residential rooms",
+      "outputs": {
+        "color": "src/assets/textures/environment/builder-surfaces/cc0_wall_level02_plaster001_false_home_v1_color.webp",
+        "normal": "src/assets/textures/environment/builder-surfaces/cc0_wall_level02_plaster001_false_home_v1_normal.webp",
+        "roughness": "src/assets/textures/environment/builder-surfaces/cc0_wall_level02_plaster001_false_home_v1_rough.webp"
+      },
+      "qaEvidence": {
+        "sourceMapsPresent": true,
+        "compressedWebp": true,
+        "intendedBuilderCatalog": true
+      }
+    },
+    {
+      "presetId": "ceiling_level02_false_home_plaster_v1",
+      "label": "L2 假住宅暖白石膏顶",
+      "sourceAsset": "Plaster003",
+      "sourceUrl": "https://ambientcg.com/view?id=Plaster003",
+      "downloadUrl": "https://ambientCG.com/get?file=Plaster003_1K-JPG.zip",
+      "sourceLocalPath": "src/assets/external/hp_surface_candidates_2026_06_18/ambientcg/ceilings/Plaster003",
+      "role": "warm muted plaster ceiling for Level 02 false-home residential rooms",
+      "outputs": {
+        "color": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_level02_plaster003_soft_panel_v1_color.webp",
+        "normal": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_level02_plaster003_soft_panel_v1_normal.webp",
+        "roughness": "src/assets/textures/environment/builder-surfaces/cc0_ceiling_level02_plaster003_soft_panel_v1_rough.webp"
+      },
+      "qaEvidence": {
+        "sourceMapsPresent": true,
+        "compressedWebp": true,
+        "intendedBuilderCatalog": true
+      }
+    }
+  ]
+}

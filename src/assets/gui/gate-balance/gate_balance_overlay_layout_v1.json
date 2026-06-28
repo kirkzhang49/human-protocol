@@ -1,0 +1,228 @@
+{
+  "schemaVersion": "hp.gateBalanceOverlayLayout.v1",
+  "canvas": [
+    1400,
+    900
+  ],
+  "sourceImage": "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_source_v1.png",
+  "backgroundImage": "src/assets/gui/gate-balance/gate_balance_overlay_background_v1.png",
+  "partsAtlas": "src/assets/gui/gate-balance/gate_balance_overlay_parts_atlas_v1.png",
+  "regions": {
+    "titleBlock": [
+      130,
+      100,
+      760,
+      92
+    ],
+    "closeButton": [
+      1130,
+      100,
+      110,
+      48
+    ],
+    "guidance": [
+      130,
+      194,
+      1060,
+      34
+    ],
+    "syncLabel": [
+      130,
+      240,
+      90,
+      26
+    ],
+    "syncBar": [
+      220,
+      240,
+      950,
+      18
+    ],
+    "syncCount": [
+      1190,
+      232,
+      70,
+      34
+    ],
+    "stage": [
+      130,
+      290,
+      1140,
+      250
+    ],
+    "gateLeft": [
+      180,
+      315,
+      300,
+      175
+    ],
+    "gateMid": [
+      550,
+      315,
+      300,
+      175
+    ],
+    "gateRight": [
+      920,
+      315,
+      300,
+      175
+    ],
+    "stageCaption": [
+      450,
+      518,
+      520,
+      28
+    ],
+    "gaugeSeal": [
+      130,
+      575,
+      350,
+      126
+    ],
+    "gaugeTrack": [
+      515,
+      575,
+      350,
+      126
+    ],
+    "gaugeTemp": [
+      900,
+      575,
+      350,
+      126
+    ],
+    "controlLeft": [
+      130,
+      725,
+      350,
+      92
+    ],
+    "controlMid": [
+      515,
+      725,
+      350,
+      92
+    ],
+    "controlRight": [
+      900,
+      725,
+      350,
+      92
+    ],
+    "statusText": [
+      130,
+      820,
+      560,
+      44
+    ],
+    "resetButton": [
+      780,
+      820,
+      180,
+      44
+    ],
+    "lockButton": [
+      1020,
+      820,
+      240,
+      44
+    ],
+    "timer": [
+      1220,
+      228,
+      80,
+      32
+    ],
+    "error": [
+      130,
+      862,
+      780,
+      30
+    ]
+  },
+  "hitRegions": {
+    "close": [
+      1130,
+      100,
+      110,
+      48
+    ],
+    "focusLeftGate": [
+      180,
+      315,
+      300,
+      175
+    ],
+    "focusMidGate": [
+      550,
+      315,
+      300,
+      175
+    ],
+    "focusRightGate": [
+      920,
+      315,
+      300,
+      175
+    ],
+    "leftMinus": [
+      158,
+      752,
+      56,
+      40
+    ],
+    "leftPlus": [
+      397,
+      752,
+      56,
+      40
+    ],
+    "midMinus": [
+      543,
+      752,
+      56,
+      40
+    ],
+    "midPlus": [
+      782,
+      752,
+      56,
+      40
+    ],
+    "rightMinus": [
+      928,
+      752,
+      56,
+      40
+    ],
+    "rightPlus": [
+      1167,
+      752,
+      56,
+      40
+    ],
+    "reset": [
+      780,
+      820,
+      180,
+      44
+    ],
+    "lock": [
+      1020,
+      820,
+      240,
+      44
+    ]
+  },
+  "runtimeMustNotBake": [
+    "localized title and guidance",
+    "valve labels",
+    "valve numeric positions",
+    "gauge values and deltas",
+    "safe-band fill and needle state",
+    "timer",
+    "success/failure text",
+    "keyboard focus state"
+  ]
+}

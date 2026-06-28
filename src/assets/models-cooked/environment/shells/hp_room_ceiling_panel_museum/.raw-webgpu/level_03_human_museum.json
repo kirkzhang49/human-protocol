@@ -1,0 +1,850 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_ceiling_panel_museum",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_ceiling_panel_museum.glb",
+  "fileName": "hp_room_ceiling_panel_museum.glb",
+  "sourceAsset": {
+    "modelKey": "room_ceiling_panel_museum",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_ceiling_panel_museum.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_ceiling_panel_museum.glb",
+    "sizeMeters": [
+      2.4,
+      0.28,
+      1.45
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 32360,
+      "meshes": 5,
+      "nodes": 5,
+      "skins": 0,
+      "primitives": 5,
+      "materials": 5,
+      "textures": 1,
+      "images": 1,
+      "accessors": 16,
+      "bufferViews": 13,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 698
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_ceiling_panel_museum.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 1058364,
+    "vertexCount": 2094,
+    "triangleCount": 698,
+    "meshCount": 11,
+    "materialCount": 5,
+    "nodeCount": 12,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -1.6,
+        -0.248,
+        -1.1
+      ],
+      "center": [
+        0,
+        -0.109,
+        0
+      ],
+      "size": [
+        3.2,
+        0.278,
+        2.2
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_center_quiet_graphite_panel",
+        "vertexOffset": 1058364,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.18,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.18,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_end_coffer_beam_0",
+        "vertexOffset": 1058496,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.13,
+          0.92,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.13,
+          -0.92,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_end_coffer_beam_1",
+        "vertexOffset": 1058820,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.13,
+          -0.92,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.13,
+          0.92,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_image2_underside_visible_face",
+        "vertexOffset": 1059144,
+        "vertexCount": 6,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.042,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.042,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_shadow_backplate",
+        "vertexOffset": 1059150,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_side_coffer_beam_0",
+        "vertexOffset": 1059282,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.42,
+          -0.13,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.42,
+          0.13,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_side_coffer_beam_1",
+        "vertexOffset": 1059606,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.42,
+          -0.13,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.42,
+          0.13,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_warm_linear_gallery_light_0",
+        "vertexOffset": 1059930,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.72,
+          -0.235,
+          0.52,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.72,
+          0.235,
+          -0.52,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_warm_linear_gallery_light_1",
+        "vertexOffset": 1060062,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.72,
+          -0.235,
+          0.52,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.72,
+          0.235,
+          -0.52,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_warm_linear_gallery_light_2",
+        "vertexOffset": 1060194,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.72,
+          -0.235,
+          -0.52,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.72,
+          0.235,
+          0.52,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_ceiling_warm_linear_gallery_light_3",
+        "vertexOffset": 1060326,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.72,
+          -0.235,
+          -0.52,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.72,
+          0.235,
+          0.52,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:level_03_entry_hall:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.65,
+        12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        3.75,
+        1,
+        3.181818
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.65,
+          12
+        ],
+        "halfSize": [
+          4.5,
+          0.14,
+          2.306818
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.65,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        5.625,
+        1,
+        5
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.65,
+          3.5
+        ],
+        "halfSize": [
+          6.75,
+          0.14,
+          3.625
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -12.2,
+        3.65,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.1875,
+        1,
+        3.181818
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -12.2,
+          3.65,
+          3.5
+        ],
+        "halfSize": [
+          2.625,
+          0.14,
+          2.306818
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        12.2,
+        3.65,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.1875,
+        1,
+        3.181818
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          12.2,
+          3.65,
+          3.5
+        ],
+        "halfSize": [
+          2.625,
+          0.14,
+          2.306818
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.65,
+        -5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        3.75,
+        1,
+        3.181818
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.65,
+          -5
+        ],
+        "halfSize": [
+          4.5,
+          0.14,
+          2.306818
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        3.65,
+        -12.65
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        4.0625,
+        1,
+        4.227273
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          3.65,
+          -12.65
+        ],
+        "halfSize": [
+          4.875,
+          0.14,
+          3.064773
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:ceiling-panel",
+      "source": "shell",
+      "role": "ceiling",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        12.75,
+        3.65,
+        -13
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        3.90625,
+        1,
+        3.363636
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          12.75,
+          3.65,
+          -13
+        ],
+        "halfSize": [
+          4.6875,
+          0.14,
+          2.438636
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,761 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_carekeeper_service_closet",
+  "category": "room",
+  "file": "src/assets/models-runtime/environment/level02/hp_room_carekeeper_service_closet.glb",
+  "fileName": "hp_room_carekeeper_service_closet.glb",
+  "sourceAsset": {
+    "modelKey": "room_carekeeper_service_closet",
+    "category": "room",
+    "url": "/src/assets/models-runtime/environment/level02/hp_room_carekeeper_service_closet.glb",
+    "file": "src/assets/models-runtime/environment/level02/hp_room_carekeeper_service_closet.glb",
+    "sizeMeters": [
+      1.18,
+      2.2,
+      0.68
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 201072,
+      "meshes": 14,
+      "nodes": 15,
+      "skins": 0,
+      "primitives": 14,
+      "materials": 6,
+      "textures": 3,
+      "images": 2,
+      "accessors": 50,
+      "bufferViews": 52,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 1512
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level02/hp_room_carekeeper_service_closet.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 416622,
+    "vertexCount": 4536,
+    "triangleCount": 1512,
+    "meshCount": 14,
+    "materialCount": 6,
+    "nodeCount": 15,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.599251,
+        0,
+        -0.326479
+      ],
+      "center": [
+        0,
+        1.249152,
+        0.032648
+      ],
+      "size": [
+        1.198502,
+        2.498304,
+        0.718253
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "bottom_hazard_but_muted_gold_bar",
+        "vertexOffset": 416622,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.31532,
+          0.378715,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.31532,
+          -0.378715,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "closet_vent_slit_0",
+        "vertexOffset": 416946,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.28764,
+          1.018726,
+          0.372185,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.28764,
+          -1.018726,
+          -0.372185,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "closet_vent_slit_1",
+        "vertexOffset": 417270,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.28764,
+          1.212769,
+          0.372185,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.28764,
+          -1.212769,
+          -0.372185,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "closet_vent_slit_2",
+        "vertexOffset": 417594,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.28764,
+          1.406812,
+          0.372185,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.28764,
+          -1.406812,
+          -0.372185,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "closet_vent_slit_3",
+        "vertexOffset": 417918,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.28764,
+          1.600855,
+          0.372185,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.28764,
+          -1.600855,
+          -0.372185,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "heavy_shadow_plinth",
+        "vertexOffset": 418242,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.1,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.1,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "left_smoked_door",
+        "vertexOffset": 418566,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.28764,
+          1.406812,
+          0.333008,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.28764,
+          -1.406812,
+          -0.333008,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "right_exposed_service_bay_image2_screen",
+        "vertexOffset": 418890,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.28764,
+          1.406812,
+          0.346067,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.28764,
+          -1.406812,
+          -0.346067,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "service_bay_tool_line_0",
+        "vertexOffset": 419214,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.146697,
+          1.528089,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.146697,
+          -1.528089,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "service_bay_tool_line_1",
+        "vertexOffset": 419538,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.048899,
+          1.528089,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.048899,
+          -1.528089,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "service_bay_tool_line_2",
+        "vertexOffset": 419862,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.048899,
+          1.528089,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.048899,
+          -1.528089,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "service_bay_tool_line_3",
+        "vertexOffset": 420186,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.146697,
+          1.528089,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.146697,
+          -1.528089,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "small_fault_indicator",
+        "vertexOffset": 420510,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.527341,
+          2.134473,
+          0.378715,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.527341,
+          -2.134473,
+          -0.378715,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "tall_service_case",
+        "vertexOffset": 420834,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.285535,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.285535,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_02_living_right_service_bookshelf",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        8.78,
+        0.02,
+        4.85
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        0.82,
+        0.86,
+        0.82
+      ],
+      "tags": [
+        "residential_simulation",
+        "story_clue",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.78,
+          0.02,
+          4.85
+        ],
+        "halfSize": [
+          0.4838,
+          0.946,
+          0.2788
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_care_service_closet",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_care_room",
+      "secondaryRoomId": null,
+      "position": [
+        13,
+        0.02,
+        3.65
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "residential_simulation",
+        "boss_room_prop"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          13,
+          0.02,
+          3.65
+        ],
+        "halfSize": [
+          0.59,
+          1.1,
+          0.34
+        ]
+      }
+    }
+  ]
+}

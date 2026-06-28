@@ -1,0 +1,41 @@
+import { Vector3 } from "three";
+import type { WeaponId } from "../config/weaponConfig";
+import type { RobotSkinId, WeaponHardpointId } from "../skins/SkinTypes";
+
+export interface RobotState {
+  id: number;
+  skinId: RobotSkinId;
+  position: Vector3;
+  velocity: Vector3;
+  aimPoint: Vector3;
+  aimDirection: Vector3;
+  dashDirection: Vector3;
+  rotationY: number;
+  cameraPitch: number;
+  targetRotationY: number;
+  health: number;
+  maxHealth: number;
+  energy: number;
+  maxEnergy: number;
+  dashCooldownRemaining: number;
+  dashTimeRemaining: number;
+  isDashing: boolean;
+  isSprinting: boolean;
+  isMoving: boolean;
+  movementAmount: number;
+  currentWeapon: WeaponId;
+  fireCooldownRemaining: number;
+  gunAmmo: number;
+  gunMaxAmmo: number;
+  gunReloadRemaining: number;
+  gunReloadDuration: number;
+  fireSequence: number;
+  dashSequence: number;
+  weaponSwitchSequence: number;
+  heat: number;
+  maxHeat: number;
+  damageFlash: number;
+  weaponRecoil: number;
+  activeHardpoint: WeaponHardpointId;
+  cannonRecoil: Record<WeaponHardpointId, number>;
+}

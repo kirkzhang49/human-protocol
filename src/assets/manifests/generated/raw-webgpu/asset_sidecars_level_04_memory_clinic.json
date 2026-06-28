@@ -1,0 +1,485 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar-index.v1",
+  "levelId": "level_04_memory_clinic",
+  "generatedBy": "tools/raw-webgpu-compiler/compile-raw-webgpu-render-plan.mjs",
+  "sidecarCount": 53,
+  "sidecars": [
+    {
+      "modelKey": "door_clinic_memory",
+      "category": "door",
+      "file": "src/assets/models-cooked/environment/doors/hp_door_clinic_memory.glb",
+      "fileName": "hp_door_clinic_memory.glb",
+      "sidecar": "src/assets/models-cooked/environment/doors/hp_door_clinic_memory/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "door_industrial_access",
+      "category": "door",
+      "file": "src/assets/models-cooked/environment/doors/hp_door_industrial_access.glb",
+      "fileName": "hp_door_industrial_access.glb",
+      "sidecar": "src/assets/models-cooked/environment/doors/hp_door_industrial_access/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "door_service_elevator_inner_cyan",
+      "category": "door",
+      "file": "src/assets/models-cooked/environment/level01/hp_door_service_elevator_inner_cyan.glb",
+      "fileName": "hp_door_service_elevator_inner_cyan.glb",
+      "sidecar": "src/assets/models-cooked/environment/level01/hp_door_service_elevator_inner_cyan/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_clamp_repair_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_clamp_repair_horror.glb",
+      "fileName": "hp_enemy_clamp_repair_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_clamp_repair_horror/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": "hp_enemy_clamp_repair_horror",
+      "ruleFileName": "hp_enemy_clamp_repair_horror.glb"
+    },
+    {
+      "modelKey": "hp_enemy_custodian_foreman_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_custodian_foreman_horror.glb",
+      "fileName": "hp_enemy_custodian_foreman_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_custodian_foreman_horror/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_reclamation_mother_final_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror.glb",
+      "fileName": "hp_enemy_reclamation_mother_final_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_enemy_repair_drone_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror.glb",
+      "fileName": "hp_enemy_repair_drone_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_repair_drone_horror/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": "hp_enemy_repair_drone_horror",
+      "ruleFileName": "hp_enemy_repair_drone_horror.glb"
+    },
+    {
+      "modelKey": "hp_enemy_shield_technician_horror",
+      "category": "enemy",
+      "file": "src/assets/models-cooked/enemies/hp_enemy_shield_technician_horror.glb",
+      "fileName": "hp_enemy_shield_technician_horror.glb",
+      "sidecar": "src/assets/models-cooked/enemies/hp_enemy_shield_technician_horror/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": "*enemy-default",
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "ability_protocol_breach_charge_v1",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_charge_v1.glb",
+      "fileName": "hp_ability_protocol_breach_charge_v1.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_charge_v1/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "ability_protocol_breach_missile_v1",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_missile_v1.glb",
+      "fileName": "hp_ability_protocol_breach_missile_v1.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_missile_v1/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_blue",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_blue.glb",
+      "fileName": "age_museum_puzzle_orb_blue.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_blue/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_green",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_green.glb",
+      "fileName": "age_museum_puzzle_orb_green.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_green/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_red",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_red.glb",
+      "fileName": "age_museum_puzzle_orb_red.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_red/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "age_museum_puzzle_orb_yellow",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_yellow.glb",
+      "fileName": "age_museum_puzzle_orb_yellow.glb",
+      "sidecar": "src/assets/models-cooked/environment/level03/age_museum_puzzle_orb_yellow/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_wall_door_switch_button_v1",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_wall_door_switch_button_v1.glb",
+      "fileName": "hp_wall_door_switch_button_v1.glb",
+      "sidecar": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_wall_door_switch_button_v1/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "puzzle_console_archive_merge",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_archive_merge.glb",
+      "fileName": "hp_puzzle_console_archive_merge.glb",
+      "sidecar": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_archive_merge/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "puzzle_console_color_sequence",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_color_sequence.glb",
+      "fileName": "hp_puzzle_console_color_sequence.glb",
+      "sidecar": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_color_sequence/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "puzzle_console_valve_matrix",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_valve_matrix.glb",
+      "fileName": "hp_puzzle_console_valve_matrix.glb",
+      "sidecar": "src/assets/models-cooked/environment/builder-puzzle-machines/hp_puzzle_console_valve_matrix/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "service_elevator_call_buttons",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/shells/hp_service_elevator_call_buttons.glb",
+      "fileName": "hp_service_elevator_call_buttons.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_service_elevator_call_buttons/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "terminal_code_keypad",
+      "category": "interaction",
+      "file": "src/assets/models-cooked/environment/terminals/hp_terminal_code_keypad.glb",
+      "fileName": "hp_terminal_code_keypad.glb",
+      "sidecar": "src/assets/models-cooked/environment/terminals/hp_terminal_code_keypad/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_energy_cell_amber",
+      "category": "pickup",
+      "file": "src/assets/models-cooked/environment/props/hp_pickup_energy_cell_amber.glb",
+      "fileName": "hp_pickup_energy_cell_amber.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_pickup_energy_cell_amber/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": "pickup_energy_cell_amber",
+      "ruleFileName": "hp_pickup_energy_cell_amber.glb"
+    },
+    {
+      "modelKey": "pickup_iron_rod_viewmodel_battleworn",
+      "category": "pickup",
+      "file": "src/assets/models/viewmodel/hp_viewmodel_iron_rod_wgpu_battleworn.glb",
+      "fileName": "hp_viewmodel_iron_rod_wgpu_battleworn.glb",
+      "sidecar": "src/assets/models/viewmodel/hp_viewmodel_iron_rod_wgpu_battleworn/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_medkit_white_red",
+      "category": "pickup",
+      "file": "src/assets/models-cooked/environment/props/hp_pickup_medkit_white_red.glb",
+      "fileName": "hp_pickup_medkit_white_red.glb",
+      "sidecar": "src/assets/models-cooked/environment/props/hp_pickup_medkit_white_red/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "pickup_sidearm_viewmodel_battleworn",
+      "category": "pickup",
+      "file": "src/assets/models/viewmodel/hp_viewmodel_sidearm_wgpu_battleworn.glb",
+      "fileName": "hp_viewmodel_sidearm_wgpu_battleworn.glb",
+      "sidecar": "src/assets/models/viewmodel/hp_viewmodel_sidearm_wgpu_battleworn/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "door_threshold_service_elevator",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_door_threshold_service_elevator.glb",
+      "fileName": "hp_door_threshold_service_elevator.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_door_threshold_service_elevator/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_cable_trolley",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_cable_trolley.glb",
+      "fileName": "hp_l4_cineclinic_cable_trolley.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_cable_trolley/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_exam_table",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_exam_table.glb",
+      "fileName": "hp_l4_cineclinic_exam_table.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_exam_table/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_lime_ottoman",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_lime_ottoman.glb",
+      "fileName": "hp_l4_cineclinic_lime_ottoman.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_lime_ottoman/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_med_cabinet",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_med_cabinet.glb",
+      "fileName": "hp_l4_cineclinic_med_cabinet.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_med_cabinet/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_memory_recliner",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_memory_recliner.glb",
+      "fileName": "hp_l4_cineclinic_memory_recliner.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_memory_recliner/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_monitor_arm",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_monitor_arm.glb",
+      "fileName": "hp_l4_cineclinic_monitor_arm.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_monitor_arm/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_observation_desk",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_observation_desk.glb",
+      "fileName": "hp_l4_cineclinic_observation_desk.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_observation_desk/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_privacy_screen",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_privacy_screen.glb",
+      "fileName": "hp_l4_cineclinic_privacy_screen.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_privacy_screen/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_projection_pod",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_projection_pod.glb",
+      "fileName": "hp_l4_cineclinic_projection_pod.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_projection_pod/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_reception_counter",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_reception_counter.glb",
+      "fileName": "hp_l4_cineclinic_reception_counter.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_reception_counter/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_record_wall_cabinet",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_record_wall_cabinet.glb",
+      "fileName": "hp_l4_cineclinic_record_wall_cabinet.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_record_wall_cabinet/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_rescue_speaker_panel",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_rescue_speaker_panel.glb",
+      "fileName": "hp_l4_cineclinic_rescue_speaker_panel.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_rescue_speaker_panel/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_scan_arch",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_scan_arch.glb",
+      "fileName": "hp_l4_cineclinic_scan_arch.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_scan_arch/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_side_table_planter",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_side_table_planter.glb",
+      "fileName": "hp_l4_cineclinic_side_table_planter.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_side_table_planter/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_surgical_light",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_surgical_light.glb",
+      "fileName": "hp_l4_cineclinic_surgical_light.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_surgical_light/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_theater_wall",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_theater_wall.glb",
+      "fileName": "hp_l4_cineclinic_theater_wall.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_theater_wall/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_triage_kiosk",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_triage_kiosk.glb",
+      "fileName": "hp_l4_cineclinic_triage_kiosk.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_triage_kiosk/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "hp_l4_cineclinic_waiting_sofa_row",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_waiting_sofa_row.glb",
+      "fileName": "hp_l4_cineclinic_waiting_sofa_row.glb",
+      "sidecar": "src/assets/models-cooked/environment/level04-memory-clinic-furniture-v1/hp_l4_cineclinic_waiting_sofa_row/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_corner_pillar_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_maintenance.glb",
+      "fileName": "hp_room_corner_pillar_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_maintenance/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_corner_pillar_museum",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum.glb",
+      "fileName": "hp_room_corner_pillar_museum.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_corner_pillar_museum/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_floor_tile_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance.glb",
+      "fileName": "hp_room_floor_tile_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_floor_tile_maintenance/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_wall_wash_light_maintenance",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_maintenance.glb",
+      "fileName": "hp_room_wall_wash_light_maintenance.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_maintenance/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "room_wall_wash_light_museum",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum.glb",
+      "fileName": "hp_room_wall_wash_light_museum.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "service_elevator_ascent_shaft_fx",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_service_elevator_ascent_shaft_fx.glb",
+      "fileName": "hp_service_elevator_ascent_shaft_fx.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_service_elevator_ascent_shaft_fx/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "service_elevator_exit_stage",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_service_elevator_exit_stage.glb",
+      "fileName": "hp_service_elevator_exit_stage.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_service_elevator_exit_stage/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "service_elevator_interior_shell",
+      "category": "room",
+      "file": "src/assets/models-cooked/environment/shells/hp_service_elevator_interior_shell.glb",
+      "fileName": "hp_service_elevator_interior_shell.glb",
+      "sidecar": "src/assets/models-cooked/environment/shells/hp_service_elevator_interior_shell/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "viewmodel_hand_cylindrical_grip_hp_baked",
+      "category": "viewmodel",
+      "file": "src/assets/models/viewmodel/hand-rod-onehand-v1-hp-baked.glb",
+      "fileName": "hand-rod-onehand-v1-hp-baked.glb",
+      "sidecar": "src/assets/models/viewmodel/hand-rod-onehand-v1-hp-baked/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    },
+    {
+      "modelKey": "viewmodel_hand_pistol_grip_hp_baked",
+      "category": "viewmodel",
+      "file": "src/assets/models/viewmodel/hand-sidearm-onehand-v1-hp-baked.glb",
+      "fileName": "hand-sidearm-onehand-v1-hp-baked.glb",
+      "sidecar": "src/assets/models/viewmodel/hand-sidearm-onehand-v1-hp-baked/.raw-webgpu/level_04_memory_clinic.json",
+      "ruleModelKey": null,
+      "ruleFileName": null
+    }
+  ]
+}

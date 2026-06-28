@@ -1,0 +1,262 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level05_furniture_image2_v1",
+  "label": "Level 05 Reclamation Core",
+  "sourceTool": "generate-level05-furniture-image2-assets.py",
+  "generatedAt": "2026-06-13",
+  "atlas": {
+    "image": "src/assets/textures/environment/level05-furniture-image2/hp_level05_furniture_image2_atlas.png",
+    "regions": "src/assets/textures/environment/level05-furniture-image2/hp_level05_furniture_image2_atlas.regions.json",
+    "size": [
+      1024,
+      1024
+    ]
+  },
+  "assets": [
+    {
+      "modelKey": "room_l5_img2_archive_server_column",
+      "label": "档案服务器列塔",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_archive_server_column_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_archive_server_column.glb",
+      "sizeMeters": [
+        0.83,
+        2.2,
+        0.8
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:cabinet"
+      ]
+    },
+    {
+      "modelKey": "room_l5_img2_identity_capsule_cabinet",
+      "label": "身份胶囊柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_identity_capsule_cabinet_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_identity_capsule_cabinet.glb",
+      "sizeMeters": [
+        1.1,
+        2.0,
+        0.67
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 3,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:cabinet"
+      ]
+    },
+    {
+      "modelKey": "room_l5_img2_data_spine_rack",
+      "label": "数据脊柱机架",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_data_spine_rack_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_data_spine_rack.glb",
+      "sizeMeters": [
+        1.0,
+        2.0,
+        0.705
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:cabinet"
+      ]
+    },
+    {
+      "modelKey": "room_l5_img2_biometric_filing_throne",
+      "label": "生物计量存档宝座",
+      "assetKind": "furniture",
+      "family": "sofa_bench",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_biometric_filing_throne_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_biometric_filing_throne.glb",
+      "sizeMeters": [
+        1.18,
+        1.56,
+        1.15
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "chair",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:sofa_bench"
+      ]
+    },
+    {
+      "modelKey": "room_l5_img2_retrieval_conveyor_table",
+      "label": "检索传送台",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_retrieval_conveyor_table_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_retrieval_conveyor_table.glb",
+      "sizeMeters": [
+        1.82,
+        0.727,
+        0.98
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:desk"
+      ]
+    },
+    {
+      "modelKey": "room_l5_img2_lockbox_pedestal",
+      "label": "锁盒基座",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_lockbox_pedestal_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_lockbox_pedestal.glb",
+      "sizeMeters": [
+        0.7,
+        1.015,
+        0.7
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:control_console"
+      ]
+    },
+    {
+      "modelKey": "room_l5_img2_core_memory_altar",
+      "label": "核心记忆祭坛",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_core_memory_altar_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_core_memory_altar.glb",
+      "sizeMeters": [
+        1.3,
+        1.31,
+        1.3
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 3,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:display_case"
+      ]
+    },
+    {
+      "modelKey": "room_l5_img2_heavy_archive_elevator_door",
+      "label": "重型档案电梯门",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_heavy_archive_elevator_door_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_heavy_archive_elevator_door.glb",
+      "sizeMeters": [
+        2.24,
+        2.64,
+        0.452
+      ],
+      "solid": false,
+      "mount": "wall",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:wall_panel_or_picture_frame"
+      ],
+      "wallPreferred": "back",
+      "mountNote": "Wall fixture. Pivot at base centre (y=0 = wall centre height). groundY ≈ -1.3 — expected."
+    },
+    {
+      "modelKey": "room_l5_img2_route_key_pedestal",
+      "label": "路线密钥基座",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "核心",
+      "source": "level05-image2-furniture",
+      "sourceAssetId": "room_l5_img2_route_key_pedestal_v1",
+      "themeId": "hp_reclamation_core",
+      "glbFile": "../../models-cooked/environment/level05-furniture-image2/room_l5_img2_route_key_pedestal.glb",
+      "sizeMeters": [
+        0.5,
+        1.125,
+        0.5
+      ],
+      "solid": true,
+      "mount": "floor",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "level:05",
+        "theme:reclamation-core",
+        "style:image2",
+        "family:control_console"
+      ]
+    }
+  ]
+}

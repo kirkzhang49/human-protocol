@@ -1,0 +1,75 @@
+{
+  "source": "Poly Haven",
+  "assetId": "Ottoman_01",
+  "sourceUrl": "https://polyhaven.com/a/Ottoman_01",
+  "downloadUrl": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/Ottoman_01/Ottoman_01_1k.gltf",
+  "license": "CC0",
+  "licenseUrl": "https://polyhaven.com/license",
+  "resolution": "1k glTF",
+  "apiInfo": {
+    "date_published": 1585605600,
+    "name": "Ottoman 01",
+    "old_id": 28,
+    "categories": [
+      "furniture",
+      "seating"
+    ],
+    "type": 2,
+    "tags": [
+      "furniture",
+      "leather",
+      "chair",
+      "fabric",
+      "ottoman",
+      "upholstery",
+      "interior design",
+      "living room",
+      "lounge"
+    ],
+    "authors": {
+      "Caspian Fortune": "All"
+    },
+    "max_resolution": [
+      4096,
+      4096
+    ],
+    "polycount": 4240,
+    "texel_density": 2191.152903771073,
+    "dimensions": [
+      884.5577836036682,
+      621.1484670639038,
+      624.3239195573551
+    ],
+    "files_hash": "bc9b99f10b19594d926dbd9ed049cb7c7ccd6e77",
+    "description": "Free 4K model: dark brown leather ottoman with stacked, cushioned tiers, visible stitching, subtle creases and short black feet.",
+    "download_count": 34010,
+    "thumbnail_url": "https://cdn.polyhaven.com/asset_img/thumbs/Ottoman_01.png?width=256&height=256"
+  },
+  "files": {
+    "include": {
+      "textures/Ottoman_01_arm_1k.jpg": {
+        "size": 155704,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Ottoman_01/Ottoman_01_arm_1k.jpg",
+        "md5": "79da86b6af7c611f753821fc35bafa54"
+      },
+      "Ottoman_01.bin": {
+        "size": 115200,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/4k/Ottoman_01/Ottoman_01.bin",
+        "md5": "7acac7b0744e80e7988c531677d6d57b"
+      },
+      "textures/Ottoman_01_diff_1k.jpg": {
+        "size": 141622,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Ottoman_01/Ottoman_01_diff_1k.jpg",
+        "md5": "20121319f4f9346481bce2abfcb1d2b0"
+      },
+      "textures/Ottoman_01_nor_gl_1k.jpg": {
+        "size": 236930,
+        "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/1k/Ottoman_01/Ottoman_01_nor_gl_1k.jpg",
+        "md5": "1e9fd1ac43f716b9e6e97a656517a275"
+      }
+    },
+    "size": 2656,
+    "url": "https://dl.polyhaven.org/file/ph-assets/Models/gltf/1k/Ottoman_01/Ottoman_01_1k.gltf",
+    "md5": "48acca9b9feae8092e95e291b9e8107b"
+  }
+}

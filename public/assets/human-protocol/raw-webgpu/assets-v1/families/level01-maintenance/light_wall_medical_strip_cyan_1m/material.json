@@ -1,0 +1,323 @@
+{
+  "file": "material.json",
+  "hash": "e482135833be5d45",
+  "materials": [
+    {
+      "index": 41,
+      "id": "mat:room:mat-cyan-medical-emissive:1pl6g74",
+      "name": "mat_cyan_medical_emissive",
+      "category": "room",
+      "visualRole": "cyan_emissive",
+      "semanticParams": [
+        7,
+        0.68,
+        0.432,
+        0.1
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.12,
+        0.65,
+        0.75,
+        1
+      ],
+      "emissiveFactor": [
+        0.25,
+        0.95,
+        1
+      ],
+      "emissiveStrength": 1.65,
+      "roughnessFactor": 0.18,
+      "metallicFactor": 0.1,
+      "aoStrength": 1,
+      "materialKind": 4,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/normal-01-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/normal-01-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536089,
+            "contrast": 0.003289,
+            "chroma": 0.778785,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 1
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/metallicroughness-02-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/metallicroughness-02-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.154556,
+            "contrast": 0.005677,
+            "chroma": 1,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 2
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/ao-03-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/ao-03-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.865172,
+            "contrast": 0.007541,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 3
+        },
+        {
+          "semantic": "emissive",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "emissive_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/emissive-04-emissive-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/emissive-04-emissive-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.814395,
+            "contrast": 0.295316,
+            "chroma": 0.909865,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 4
+        }
+      ]
+    },
+    {
+      "index": 42,
+      "id": "mat:room:mat-dark-gunmetal:13dirfa",
+      "name": "mat_dark_gunmetal",
+      "category": "room",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.025,
+        0.032,
+        0.038,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.28,
+      "metallicFactor": 0.86,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "normal_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/normal-08-normal-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/normal-08-normal-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.536088,
+            "contrast": 0.016314,
+            "chroma": 0.790544,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 8
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "metallicRoughness_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/metallicroughness-43-metallicroughness-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/metallicroughness-43-metallicroughness-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.244001,
+            "contrast": 0.017663,
+            "chroma": 0.971638,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 43
+        },
+        {
+          "semantic": "ao",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "ao_supplement",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/ao-10-ao-supplement.png",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/ao-10-ao-supplement.png",
+          "mimeType": "image/png",
+          "stats": {
+            "lumaMean": 0.641,
+            "contrast": 0.033002,
+            "chroma": 0,
+            "detail": 0.5
+          },
+          "generated": true,
+          "layer": 10
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 1,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/normal-01-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/normal-01-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536089,
+        "contrast": 0.003289,
+        "chroma": 0.778785,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 2,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/metallicroughness-02-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/metallicroughness-02-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.154556,
+        "contrast": 0.005677,
+        "chroma": 1,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 3,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/ao-03-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/ao-03-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.865172,
+        "contrast": 0.007541,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 4,
+      "semantic": "emissive",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/emissive-04-emissive-supplement.png",
+      "name": "emissive_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/emissive-04-emissive-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.814395,
+        "contrast": 0.295316,
+        "chroma": 0.909865,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 8,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/normal-08-normal-supplement.png",
+      "name": "normal_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/normal-08-normal-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.536088,
+        "contrast": 0.016314,
+        "chroma": 0.790544,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 10,
+      "semantic": "ao",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/ao-10-ao-supplement.png",
+      "name": "ao_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/ao-10-ao-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.641,
+        "contrast": 0.033002,
+        "chroma": 0,
+        "detail": 0.5
+      }
+    },
+    {
+      "layer": 43,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/metallicroughness-43-metallicroughness-supplement.png",
+      "name": "metallicRoughness_supplement",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level01-maintenance/light_wall_medical_strip_cyan_1m/textures/metallicroughness-43-metallicroughness-supplement.png",
+      "mimeType": "image/png",
+      "stats": {
+        "lumaMean": 0.244001,
+        "contrast": 0.017663,
+        "chroma": 0.971638,
+        "detail": 0.5
+      }
+    }
+  ]
+}

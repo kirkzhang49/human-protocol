@@ -1,0 +1,78 @@
+{
+  "schemaVersion": "hp.builder.ingestedPacks.v1",
+  "note": "Packs listed here feed generate-builder-asset-pack-registry.mjs --emit. ingest=manual packs are hand-registered (the pilot reference implementation) and only reserve their modelKeys; ingest=generated packs are emitted into the generated registry/catalog/footprint fragments.",
+  "packs": [
+    {
+      "manifest": "src/assets/manifests/builder/hp_builder_desire_pack_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_cyberpunk_batch01_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_l2_cc0_domestic_polyhaven_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level01_furniture_image2_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level01_power_infra_image2_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level01_safety_storage_image2_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level01_workcell_image2_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level02_furniture_image2_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level03_furniture_image2_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level04_memory_clinic_furniture_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level05_furniture_image2_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level05_reclamation_dressing_v4.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level05_reclamation_furniture_image2_v3_batch02.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level05_reclamation_furniture_image2_v3_batch03.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level05_reclamation_furniture_image2_v3_batch04.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_level05_reclamation_furniture_image2_v3_hero.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_official_remaster_batch01_v1.json",
+      "ingest": "generated"
+    },
+    {
+      "manifest": "src/assets/manifests/builder/hp_residential_reference_furniture_image2_v1.json",
+      "ingest": "generated"
+    }
+  ]
+}

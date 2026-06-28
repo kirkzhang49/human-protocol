@@ -1,0 +1,59 @@
+{
+  "assetFamily": "level04_memory_clinic_surfaces_image2_tileable_v4",
+  "generationDate": "2026-06-26",
+  "tool": "Codex built-in image_gen / Image2",
+  "callId": "not-exposed-by-built-in-imagegen",
+  "licenseLabel": "owned-generated-output",
+  "usageStatus": "wired-to-build-surface-presets",
+  "buildSurfacePresetIds": {
+    "floor": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+    "wall": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+    "ceiling": "ceiling_level04_memory_clinic_lab_image2_tileable_v4"
+  },
+  "supersedes": [
+    {
+      "family": "level04_memory_clinic_surfaces_image2_v1",
+      "reason": "Rejected as too procedural/CAD-like for the requested Image2 feel."
+    },
+    {
+      "family": "level04_memory_clinic_surfaces_image2_perspective_v3",
+      "reason": "Kept as visual reference only; perspective source art is not suitable for direct wall/floor/ceiling tiling."
+    }
+  ],
+  "assets": [
+    {
+      "assetId": "memory_clinic_wall_tileable_image2_candidate_v4",
+      "surfaceKind": "wall",
+      "sourceImagePath": "/Users/zhengkaizhang/.codex/generated_images/019efce3-bb6a-7520-993e-0d7a650e2685/ig_0b066e4447f4346b016a3eedb93a84819487ffc62aa2f97a2a.png",
+      "projectOutputPath": "src/assets/textures/environment/level04-memory-clinic-surfaces/image2-candidates/memory_clinic_wall_tileable_image2_candidate_v4.png",
+      "runtimeOutputPath": "src/assets/textures/environment/builder-surfaces/level04_memory_clinic_wall_image2_tileable_v4_color.jpg",
+      "buildSurfacePresetId": "wall_level04_memory_clinic_lab_image2_tileable_v4",
+      "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_surfaces_image2_prompt_ledger_v4.md",
+      "intendedUse": "Tileable wall albedo candidate for Level 4 memory clinic surface material work."
+    },
+    {
+      "assetId": "memory_clinic_floor_tileable_image2_candidate_v4",
+      "surfaceKind": "floor",
+      "sourceImagePath": "/Users/zhengkaizhang/.codex/generated_images/019efce3-bb6a-7520-993e-0d7a650e2685/ig_0b066e4447f4346b016a3eee19ba988194a2d455453ffff31b.png",
+      "projectOutputPath": "src/assets/textures/environment/level04-memory-clinic-surfaces/image2-candidates/memory_clinic_floor_tileable_image2_candidate_v4.png",
+      "runtimeOutputPath": "src/assets/textures/environment/builder-surfaces/level04_memory_clinic_floor_image2_tileable_v4_color.jpg",
+      "buildSurfacePresetId": "floor_level04_memory_clinic_lab_image2_tileable_v4",
+      "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_surfaces_image2_prompt_ledger_v4.md",
+      "intendedUse": "Tileable floor albedo candidate for Level 4 memory clinic surface material work."
+    },
+    {
+      "assetId": "memory_clinic_ceiling_tileable_image2_candidate_v4",
+      "surfaceKind": "ceiling",
+      "sourceImagePath": "/Users/zhengkaizhang/.codex/generated_images/019efce3-bb6a-7520-993e-0d7a650e2685/ig_0b066e4447f4346b016a3eee70b4388194a5dddd4a29ec5f6f.png",
+      "projectOutputPath": "src/assets/textures/environment/level04-memory-clinic-surfaces/image2-candidates/memory_clinic_ceiling_tileable_image2_candidate_v4.png",
+      "runtimeOutputPath": "src/assets/textures/environment/builder-surfaces/level04_memory_clinic_ceiling_image2_tileable_v4_color.jpg",
+      "buildSurfacePresetId": "ceiling_level04_memory_clinic_lab_image2_tileable_v4",
+      "promptLedger": "src/assets/manifests/reports/level04_memory_clinic_surfaces_image2_prompt_ledger_v4.md",
+      "intendedUse": "Tileable ceiling albedo candidate for Level 4 memory clinic surface material work."
+    }
+  ],
+  "notes": [
+    "Generated as square orthographic material candidates for tiling, not as perspective room concept art.",
+    "Wired into /build floor, wall, and ceiling preset catalogs on 2026-06-26. The Build preview and builder playtest runtime pack consume optimized JPG derivatives as albedoUrl base-color texture overrides, while source PNGs remain as Image2 provenance evidence."
+  ]
+}

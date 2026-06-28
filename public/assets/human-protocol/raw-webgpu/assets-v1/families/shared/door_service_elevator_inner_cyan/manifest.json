@@ -1,0 +1,1897 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "door_service_elevator_inner_cyan",
+  "family": "shared",
+  "bundleId": "shared/door_service_elevator_inner_cyan",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "level_01_maintenance_bay",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+    "rawFile": "src/assets/models/environment/level01/hp_door_service_elevator_inner_cyan.glb",
+    "rawSource": "raw-models",
+    "sourceLevels": [
+      "level_01_maintenance_bay",
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 912,
+    "triangleCount": 304,
+    "byteLength": 36480,
+    "hash": "b2600968fffb8626",
+    "asset": {
+      "modelKey": "door_service_elevator_inner_cyan",
+      "sourceFile": "src/assets/models-cooked/environment/level01/hp_door_service_elevator_inner_cyan.glb",
+      "rawFile": "src/assets/models/environment/level01/hp_door_service_elevator_inner_cyan.glb",
+      "rawSource": "raw-models",
+      "vertexOffset": 0,
+      "vertexCount": 912,
+      "triangleCount": 304,
+      "meshCount": 20,
+      "materialCount": 7,
+      "nodeCount": 21,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_amber_call_lens",
+          "vertexOffset": 0,
+          "vertexCount": 228,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            2.72,
+            1.34,
+            0.27,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -2.72,
+            -0.27,
+            1.34,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_call_panel_mount",
+          "vertexOffset": 228,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.72,
+            1.42,
+            0.2,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.72,
+            -1.42,
+            -0.2,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_call_panel_screen",
+          "vertexOffset": 264,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.72,
+            1.66,
+            0.265,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.72,
+            -1.66,
+            -0.265,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_center_split_shadow",
+          "vertexOffset": 300,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.48,
+            0.18,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.48,
+            -0.18,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_floor_cyan_threshold",
+          "vertexOffset": 336,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.26,
+            0.25,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.26,
+            -0.25,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_floor_threshold",
+          "vertexOffset": 372,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.12,
+            0.22,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.12,
+            -0.22,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_left_door_panel",
+          "vertexOffset": 408,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            1.48,
+            0.08,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            -1.48,
+            -0.08,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_left_vertical_cyan",
+          "vertexOffset": 444,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.32,
+            1.5,
+            0.21,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.32,
+            -1.5,
+            -0.21,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_outer_frame",
+          "vertexOffset": 480,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1.62,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1.62,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_panel_groove_left_07",
+          "vertexOffset": 516,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            0.7,
+            0.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            -0.7,
+            -0.17,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_panel_groove_left_122",
+          "vertexOffset": 552,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            1.22,
+            0.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            -1.22,
+            -0.17,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_panel_groove_left_174",
+          "vertexOffset": 588,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            1.74,
+            0.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            -1.74,
+            -0.17,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_panel_groove_left_226",
+          "vertexOffset": 624,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            2.26,
+            0.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            -2.26,
+            -0.17,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_panel_groove_right_07",
+          "vertexOffset": 660,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            0.7,
+            0.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            -0.7,
+            -0.17,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_panel_groove_right_122",
+          "vertexOffset": 696,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            1.22,
+            0.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            -1.22,
+            -0.17,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_panel_groove_right_174",
+          "vertexOffset": 732,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            1.74,
+            0.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            -1.74,
+            -0.17,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_panel_groove_right_226",
+          "vertexOffset": 768,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            2.26,
+            0.17,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            -2.26,
+            -0.17,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_right_door_panel",
+          "vertexOffset": 804,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            1.08,
+            1.48,
+            0.08,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -1.08,
+            -1.48,
+            -0.08,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_right_vertical_cyan",
+          "vertexOffset": 840,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            2.32,
+            1.5,
+            0.21,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -2.32,
+            -1.5,
+            -0.21,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "inner_elevator_top_cyan_status",
+          "vertexOffset": 876,
+          "vertexCount": 36,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            3,
+            0.22,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -3,
+            -0.22,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -2.4,
+          0,
+          -0.16
+        ],
+        "center": [
+          0.255,
+          1.62,
+          0.06375
+        ],
+        "size": [
+          5.31,
+          3.24,
+          0.4475
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "340f177e90704efc",
+    "materials": [
+      {
+        "index": 18,
+        "id": "mat:door:mat-amber-fault-emissive:hk7sxb",
+        "name": "mat_amber_fault_emissive",
+        "category": "door",
+        "visualRole": "door_locked_red",
+        "semanticParams": [
+          12,
+          0.9,
+          0.3824,
+          0.08
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.84,
+          0.14,
+          0.08,
+          1
+        ],
+        "emissiveFactor": [
+          0.9,
+          0.432,
+          0.072
+        ],
+        "emissiveStrength": 0.28,
+        "roughnessFactor": 0.34,
+        "metallicFactor": 0.14,
+        "aoStrength": 1,
+        "materialKind": 5,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-27-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-27-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536105,
+              "contrast": 0.005421,
+              "chroma": 0.778388,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 27
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-28-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-28-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.325341,
+              "contrast": 0.009327,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 28
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-29-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-29-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.855041,
+              "contrast": 0.011677,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 29
+          }
+        ]
+      },
+      {
+        "index": 19,
+        "id": "mat:door:mat-rubber-black:1lbfky",
+        "name": "mat_rubber_black",
+        "category": "door",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.006,
+          0.007,
+          0.008,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.84,
+        "metallicFactor": 0.08,
+        "aoStrength": 1,
+        "materialKind": 3,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-30-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-30-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536078,
+              "contrast": 0.016301,
+              "chroma": 0.790545,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 30
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-31-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-31-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.823951,
+              "contrast": 0.017416,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 31
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-32-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-32-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.64352,
+              "contrast": 0.031997,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 32
+          }
+        ]
+      },
+      {
+        "index": 20,
+        "id": "mat:door:mat-soft-blue-read-light-emissive:180qtvm",
+        "name": "mat_soft_blue_read_light_emissive",
+        "category": "door",
+        "visualRole": "door_access_cyan",
+        "semanticParams": [
+          13,
+          0.86,
+          0.364,
+          0.08
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.1,
+          0.58,
+          0.74,
+          1
+        ],
+        "emissiveFactor": [
+          0.19,
+          0.5225,
+          0.95
+        ],
+        "emissiveStrength": 0.3,
+        "roughnessFactor": 0.28,
+        "metallicFactor": 0.14,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-33-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-33-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536073,
+              "contrast": 0.005921,
+              "chroma": 0.77872,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 33
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-34-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-34-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.266295,
+              "contrast": 0.0097,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 34
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-35-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-35-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.854592,
+              "contrast": 0.012321,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 35
+          },
+          {
+            "semantic": "emissive",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "emissive_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/emissive-36-emissive-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/emissive-36-emissive-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.44935,
+              "contrast": 0,
+              "chroma": 0.559216,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 36
+          }
+        ]
+      },
+      {
+        "index": 21,
+        "id": "mat:door:mat-brushed-steel-trim:1wfh60k",
+        "name": "mat_brushed_steel_trim",
+        "category": "door",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.58,
+          0.64,
+          0.62,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.28,
+        "metallicFactor": 0.78,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-30-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-30-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536078,
+              "contrast": 0.016301,
+              "chroma": 0.790545,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 30
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-37-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-37-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.261755,
+              "contrast": 0.017409,
+              "chroma": 0.787111,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 37
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-32-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-32-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.64352,
+              "contrast": 0.031997,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 32
+          }
+        ]
+      },
+      {
+        "index": 22,
+        "id": "mat:door:mat-worn-off-white-panel:ic3t1h",
+        "name": "mat_worn_off_white_panel",
+        "category": "door",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0.6,
+          0.05,
+          0.34
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.48,
+          0.54,
+          0.54,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.36,
+        "metallicFactor": 0.58,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-38-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-38-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536106,
+              "contrast": 0.008036,
+              "chroma": 0.779997,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 38
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-39-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-39-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.340569,
+              "contrast": 0.011667,
+              "chroma": 0.772919,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 39
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-40-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-40-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.802803,
+              "contrast": 0.019022,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 40
+          }
+        ]
+      },
+      {
+        "index": 23,
+        "id": "mat:door:mat-cyan-medical-emissive:1q09m5e",
+        "name": "mat_cyan_medical_emissive",
+        "category": "door",
+        "visualRole": "door_access_cyan",
+        "semanticParams": [
+          13,
+          0.86,
+          0.364,
+          0.08
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.1,
+          0.58,
+          0.74,
+          1
+        ],
+        "emissiveFactor": [
+          0.28,
+          0.95,
+          1
+        ],
+        "emissiveStrength": 0.3,
+        "roughnessFactor": 0.28,
+        "metallicFactor": 0.12,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-33-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-33-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536073,
+              "contrast": 0.005921,
+              "chroma": 0.77872,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 33
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-34-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-34-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.266295,
+              "contrast": 0.0097,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 34
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-35-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-35-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.854592,
+              "contrast": 0.012321,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 35
+          },
+          {
+            "semantic": "emissive",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "emissive_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/emissive-41-emissive-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/emissive-41-emissive-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0,
+              "contrast": 0,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 41
+          }
+        ]
+      },
+      {
+        "index": 24,
+        "id": "mat:door:mat-dark-gunmetal-layered:1dz0laf",
+        "name": "mat_dark_gunmetal_layered",
+        "category": "door",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.025,
+          0.033,
+          0.038,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.26,
+        "metallicFactor": 0.88,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-42-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-42-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.53608,
+              "contrast": 0.016561,
+              "chroma": 0.790597,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 42
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-43-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-43-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.244001,
+              "contrast": 0.017663,
+              "chroma": 0.971638,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 43
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-44-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-44-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.645735,
+              "contrast": 0.033741,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 44
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [],
+    "materialTextureSize": 512,
+    "materialTextures": [
+      {
+        "layer": 27,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-27-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-27-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536105,
+          "contrast": 0.005421,
+          "chroma": 0.778388,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 28,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-28-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-28-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.325341,
+          "contrast": 0.009327,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 29,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-29-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-29-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.855041,
+          "contrast": 0.011677,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 30,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-30-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-30-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536078,
+          "contrast": 0.016301,
+          "chroma": 0.790545,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 31,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-31-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-31-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.823951,
+          "contrast": 0.017416,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 32,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-32-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-32-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.64352,
+          "contrast": 0.031997,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 33,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-33-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-33-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536073,
+          "contrast": 0.005921,
+          "chroma": 0.77872,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 34,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-34-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-34-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.266295,
+          "contrast": 0.0097,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 35,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-35-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-35-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.854592,
+          "contrast": 0.012321,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 36,
+        "semantic": "emissive",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/emissive-36-emissive-supplement.png",
+        "name": "emissive_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/emissive-36-emissive-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.44935,
+          "contrast": 0,
+          "chroma": 0.559216,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 37,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-37-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-37-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.261755,
+          "contrast": 0.017409,
+          "chroma": 0.787111,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 38,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-38-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-38-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536106,
+          "contrast": 0.008036,
+          "chroma": 0.779997,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 39,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-39-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-39-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.340569,
+          "contrast": 0.011667,
+          "chroma": 0.772919,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 40,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-40-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-40-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.802803,
+          "contrast": 0.019022,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 41,
+        "semantic": "emissive",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/emissive-41-emissive-supplement.png",
+        "name": "emissive_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/emissive-41-emissive-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0,
+          "contrast": 0,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 42,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-42-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/normal-42-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.53608,
+          "contrast": 0.016561,
+          "chroma": 0.790597,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 43,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-43-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/metallicroughness-43-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.244001,
+          "contrast": 0.017663,
+          "chroma": 0.971638,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 44,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-44-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/door_service_elevator_inner_cyan/textures/ao-44-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.645735,
+          "contrast": 0.033741,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      }
+    ]
+  }
+}

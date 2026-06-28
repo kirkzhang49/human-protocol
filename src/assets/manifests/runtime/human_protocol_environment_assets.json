@@ -1,0 +1,996 @@
+{
+  "schemaVersion": "hp.environment-assets.v1",
+  "generatedBy": "scripts/optimizer/generate-environment-assets.mjs; wgpu-room-prop-replacement-pass",
+  "assets": [
+    {
+      "modelKey": "door_identity_archive",
+      "file": "assets/models/environment/doors/hp_door_identity_archive.glb",
+      "category": "door",
+      "defaultVisualKey": "service_elevator_door",
+      "sizeMeters": [
+        5.2,
+        3.5,
+        0.46
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          5.2,
+          3.5,
+          0.46
+        ]
+      },
+      "materialAtlas": "door_terminal_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "door",
+        "identity-archive",
+        "level05",
+        "hero",
+        "red-lock",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 503520,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "pickup_ammo_magazine",
+      "file": "assets/models/environment/props/hp_pickup_ammo_magazine.glb",
+      "category": "pickup",
+      "defaultVisualKey": "maintenance_crate",
+      "sizeMeters": [
+        0.24,
+        0.36,
+        0.13
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.24,
+          0.36,
+          0.13
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "pickup",
+        "ammo",
+        "magazine",
+        "pistol",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 65264,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "pickup_energy_cell_amber",
+      "file": "assets/models/environment/props/hp_pickup_energy_cell_amber.glb",
+      "category": "pickup",
+      "defaultVisualKey": "maintenance_crate",
+      "sizeMeters": [
+        0.42,
+        0.42,
+        0.9
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.42,
+          0.42,
+          0.9
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "pickup",
+        "energy-cell",
+        "amber",
+        "boss-prep",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 2759732,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "pickup_large_yellow_key",
+      "file": "assets/models/environment/props/hp_pickup_large_yellow_key.glb",
+      "category": "pickup",
+      "defaultVisualKey": "large_yellow_key",
+      "sizeMeters": [
+        0.75,
+        0.28,
+        0.45
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.75,
+          0.28,
+          0.45
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "pickup",
+        "key",
+        "yellow",
+        "door-access",
+        "config",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 2904640,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "pickup_medkit_white_red",
+      "file": "assets/models/environment/props/hp_pickup_medkit_white_red.glb",
+      "category": "pickup",
+      "defaultVisualKey": "maintenance_crate",
+      "sizeMeters": [
+        0.62,
+        0.34,
+        0.42
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.62,
+          0.34,
+          0.42
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "pickup",
+        "medkit",
+        "repair-kit",
+        "white",
+        "red",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 2830560,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "pickup_memory_chip_cluster",
+      "file": "assets/models/environment/props/hp_pickup_memory_chip_cluster.glb",
+      "category": "pickup",
+      "defaultVisualKey": "yellow_access_card",
+      "sizeMeters": [
+        0.45,
+        0.08,
+        0.34
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.45,
+          0.08,
+          0.34
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "pickup",
+        "memory",
+        "chip",
+        "archive",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 203000,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "prop_archive_book_open",
+      "file": "assets/models/environment/props/hp_prop_archive_book_open.glb",
+      "category": "interaction",
+      "defaultVisualKey": "archive_book",
+      "sizeMeters": [
+        0.85,
+        0.12,
+        0.55
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.85,
+          0.12,
+          0.55
+        ]
+      },
+      "materialAtlas": "archive_reader_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "archive",
+        "article",
+        "readable",
+        "level05",
+        "config",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 136636,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "prop_archive_folder_stack",
+      "file": "assets/models/environment/props/hp_prop_archive_folder_stack.glb",
+      "category": "interaction",
+      "defaultVisualKey": "prop_archive_folder_stack",
+      "sizeMeters": [
+        0.62,
+        0.44,
+        0.42
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.62,
+          0.44,
+          0.42
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 160816,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "prop_small_floor_shadow_disc",
+      "file": "assets/models/environment/props/hp_prop_small_floor_shadow_disc.glb",
+      "category": "prop",
+      "defaultVisualKey": "maintenance_crate",
+      "sizeMeters": [
+        0.78,
+        0.01,
+        0.78
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.78,
+          0.01,
+          0.78
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "low",
+      "tags": [
+        "prop",
+        "shadow",
+        "pickup-grounding",
+        "low-cost"
+      ],
+      "notes": "Procedural low-poly Human Protocol environment asset generated from scripts/optimizer/generate-environment-assets.mjs."
+    },
+    {
+      "modelKey": "room-ceiling-strip-light",
+      "file": "assets/models/environment/props/hp_room_ceiling_strip_light.glb",
+      "category": "prop",
+      "defaultVisualKey": "room-ceiling-strip-light",
+      "sizeMeters": [
+        1.35,
+        0.18,
+        0.11
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1.35,
+          0.18,
+          0.11
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "architecture",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 136768,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "room-chair-service",
+      "file": "assets/models/environment/props/hp_room_chair_service.glb",
+      "category": "furniture",
+      "defaultVisualKey": "room-chair-service",
+      "sizeMeters": [
+        0.62,
+        1.2,
+        0.55
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.62,
+          1.2,
+          0.55
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "furniture",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 163144,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "room-crate-stack",
+      "file": "assets/models/environment/props/hp_room_crate_stack.glb",
+      "category": "clutter",
+      "defaultVisualKey": "room-crate-stack",
+      "sizeMeters": [
+        1,
+        0.9,
+        0.56
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1,
+          0.9,
+          0.56
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "clutter",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 307136,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "room-door-security",
+      "file": "assets/models/environment/doors/hp_room_door_security.glb",
+      "category": "door",
+      "defaultVisualKey": "room-door-security",
+      "sizeMeters": [
+        1.55,
+        2.35,
+        0.42
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1.55,
+          2.35,
+          0.42
+        ]
+      },
+      "materialAtlas": "door_terminal_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "architecture",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 465556,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "room-fuse-box",
+      "file": "assets/models/environment/props/hp_room_fuse_box.glb",
+      "category": "interaction",
+      "defaultVisualKey": "room-fuse-box",
+      "sizeMeters": [
+        0.58,
+        0.86,
+        0.18
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.58,
+          0.86,
+          0.18
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "utility",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 303656,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "room-locker-low",
+      "file": "assets/models/environment/props/hp_room_locker_low.glb",
+      "category": "furniture",
+      "defaultVisualKey": "room-locker-low",
+      "sizeMeters": [
+        1.1,
+        1.1,
+        0.5
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1.1,
+          1.1,
+          0.5
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "furniture",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 384400,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "room-maintenance-supply-cabinet",
+      "file": "assets/models/environment/props/hp_room_maintenance_supply_cabinet.glb",
+      "category": "furniture",
+      "defaultVisualKey": "room-maintenance-supply-cabinet",
+      "sizeMeters": [
+        0.95,
+        1.8,
+        0.54
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.95,
+          1.8,
+          0.54
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "furniture",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 3206240,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "room-table-utility",
+      "file": "assets/models/environment/props/hp_room_table_utility.glb",
+      "category": "furniture",
+      "defaultVisualKey": "room-table-utility",
+      "sizeMeters": [
+        1.45,
+        0.82,
+        0.72
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          1.45,
+          0.82,
+          0.72
+        ]
+      },
+      "materialAtlas": "props_pickups_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "furniture",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 370256,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "room-terminal-wall",
+      "file": "assets/models/environment/terminals/hp_room_terminal_wall.glb",
+      "category": "interaction",
+      "defaultVisualKey": "room-terminal-wall",
+      "sizeMeters": [
+        0.72,
+        0.98,
+        0.18
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.72,
+          0.98,
+          0.18
+        ]
+      },
+      "materialAtlas": "door_terminal_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "utility",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 317436,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "switch_panel_floor_lever",
+      "file": "assets/models/environment/props/hp_switch_panel_floor_lever.glb",
+      "category": "interaction",
+      "defaultVisualKey": "direction_keypad_panel",
+      "sizeMeters": [
+        0.9,
+        0.35,
+        0.7
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.9,
+          0.35,
+          0.7
+        ]
+      },
+      "materialAtlas": "switch_panel_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "switch",
+        "lever",
+        "floor",
+        "door-route",
+        "config",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 210328,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "switch_panel_wall_cyan",
+      "file": "assets/models/environment/props/hp_switch_panel_wall_cyan.glb",
+      "category": "interaction",
+      "defaultVisualKey": "direction_keypad_panel",
+      "sizeMeters": [
+        0.7,
+        1.1,
+        0.18
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.7,
+          1.1,
+          0.18
+        ]
+      },
+      "materialAtlas": "switch_panel_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "switch",
+        "door-route",
+        "wall",
+        "cyan",
+        "config",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 170572,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "switch_panel_wall_red",
+      "file": "assets/models/environment/props/hp_switch_panel_wall_red.glb",
+      "category": "interaction",
+      "defaultVisualKey": "direction_keypad_panel",
+      "sizeMeters": [
+        0.7,
+        1.1,
+        0.18
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.7,
+          1.1,
+          0.18
+        ]
+      },
+      "materialAtlas": "switch_panel_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "switch",
+        "door-route",
+        "wall",
+        "red",
+        "danger",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 170544,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "switch_state_light_amber",
+      "file": "assets/models/environment/props/hp_switch_state_light_amber.glb",
+      "category": "interaction",
+      "defaultVisualKey": "direction_keypad_panel",
+      "sizeMeters": [
+        0.12,
+        0.75,
+        0.04
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.12,
+          0.75,
+          0.04
+        ]
+      },
+      "materialAtlas": "switch_panel_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "switch",
+        "state-light",
+        "amber",
+        "door-route",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 83412,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "switch_state_light_cyan",
+      "file": "assets/models/environment/props/hp_switch_state_light_cyan.glb",
+      "category": "interaction",
+      "defaultVisualKey": "direction_keypad_panel",
+      "sizeMeters": [
+        0.12,
+        0.75,
+        0.04
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.12,
+          0.75,
+          0.04
+        ]
+      },
+      "materialAtlas": "switch_panel_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "switch",
+        "state-light",
+        "cyan",
+        "door-route",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 83496,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "switch_state_light_red",
+      "file": "assets/models/environment/props/hp_switch_state_light_red.glb",
+      "category": "interaction",
+      "defaultVisualKey": "direction_keypad_panel",
+      "sizeMeters": [
+        0.12,
+        0.75,
+        0.04
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.12,
+          0.75,
+          0.04
+        ]
+      },
+      "materialAtlas": "switch_panel_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "switch",
+        "state-light",
+        "red",
+        "door-route",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 83500,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "terminal_archive_reader",
+      "file": "assets/models/environment/terminals/hp_terminal_archive_reader.glb",
+      "category": "interaction",
+      "defaultVisualKey": "exit_panel",
+      "sizeMeters": [
+        0.9,
+        1.2,
+        0.38
+      ],
+      "pivot": "bottom_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.9,
+          1.2,
+          0.38
+        ]
+      },
+      "materialAtlas": "archive_reader_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "terminal",
+        "archive",
+        "reader",
+        "museum",
+        "clinic",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 194252,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "terminal_code_keypad",
+      "file": "assets/models/environment/terminals/hp_terminal_code_keypad.glb",
+      "category": "interaction",
+      "defaultVisualKey": "terminal_code_keypad",
+      "sizeMeters": [
+        0.62,
+        0.92,
+        0.18
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.62,
+          0.92,
+          0.18
+        ]
+      },
+      "materialAtlas": "door_terminal_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 268252,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "terminal_direction_ring",
+      "file": "assets/models/environment/terminals/hp_terminal_direction_ring.glb",
+      "category": "interaction",
+      "defaultVisualKey": "terminal_direction_ring",
+      "sizeMeters": [
+        0.84,
+        0.84,
+        0.16
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.84,
+          0.84,
+          0.16
+        ]
+      },
+      "materialAtlas": "door_terminal_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 269032,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "terminal_puzzle_big_screen",
+      "file": "assets/models/environment/terminals/hp_terminal_puzzle_big_screen.glb",
+      "category": "interaction",
+      "defaultVisualKey": "terminal_puzzle_big_screen",
+      "sizeMeters": [
+        2.55,
+        1.72,
+        0.2
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          2.55,
+          1.72,
+          0.2
+        ]
+      },
+      "materialAtlas": "door_terminal_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "new-room-prop"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 792356,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    },
+    {
+      "modelKey": "terminal_quiz_panel_cyan",
+      "file": "assets/models/environment/terminals/hp_terminal_quiz_panel_cyan.glb",
+      "category": "interaction",
+      "defaultVisualKey": "direction_keypad_panel",
+      "sizeMeters": [
+        0.82,
+        1.18,
+        0.18
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.82,
+          1.18,
+          0.18
+        ]
+      },
+      "materialAtlas": "switch_panel_atlas",
+      "mobileCost": "low",
+      "tags": [
+        "terminal",
+        "quiz",
+        "cyan",
+        "config"
+      ],
+      "notes": "Procedural low-poly Human Protocol environment asset generated from scripts/optimizer/generate-environment-assets.mjs."
+    },
+    {
+      "modelKey": "terminal_quiz_panel_red",
+      "file": "assets/models/environment/terminals/hp_terminal_quiz_panel_red.glb",
+      "category": "interaction",
+      "defaultVisualKey": "direction_keypad_panel",
+      "sizeMeters": [
+        0.82,
+        1.18,
+        0.18
+      ],
+      "pivot": "back_center",
+      "collision": {
+        "type": "box",
+        "sizeMeters": [
+          0.82,
+          1.18,
+          0.18
+        ]
+      },
+      "materialAtlas": "switch_panel_atlas",
+      "mobileCost": "high-review",
+      "tags": [
+        "terminal",
+        "quiz",
+        "red",
+        "danger",
+        "level05",
+        "config",
+        "interaction",
+        "wgpu-room-prop",
+        "high-fidelity",
+        "replacement"
+      ],
+      "qualityTier": "wgpu-steam-grade-uncompressed",
+      "sizeBytes": 239344,
+      "notes": "Original Human Protocol IP procedural GLB from webgpu-robot-lab final art pass. Contains embedded image2 textures where applicable; compress/Draco/KTX2 for web budget later. Active replacement manifest: human_protocol_wgpu_room_prop_replacements.json."
+    }
+  ]
+}

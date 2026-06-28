@@ -1,0 +1,431 @@
+{
+  "schemaVersion": "hp.builder.v1",
+  "projectId": "rb_l4",
+  "title": "记忆诊所·重制",
+  "rooms": [
+    {
+      "id": "rb_l4_r0",
+      "label": "候诊间",
+      "style": "sterile",
+      "center": [
+        0,
+        -4
+      ],
+      "size": [
+        12,
+        8
+      ]
+    },
+    {
+      "id": "rb_l4_r1",
+      "label": "童年疗椅",
+      "style": "sterile",
+      "center": [
+        0,
+        -12.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l4_r2",
+      "label": "救援疗椅",
+      "style": "sterile",
+      "center": [
+        0,
+        -21.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l4_r3",
+      "label": "躯体台",
+      "style": "hazard",
+      "center": [
+        0,
+        -30.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l4_r4",
+      "label": "治疗剧场",
+      "style": "core",
+      "center": [
+        0,
+        -39.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l4_r5",
+      "label": "出院电梯",
+      "style": "exit",
+      "center": [
+        0,
+        -47
+      ],
+      "size": [
+        12,
+        6
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "id": "rb_l4_d0",
+      "fromRoomId": "rb_l4_r0",
+      "toRoomId": "rb_l4_r1",
+      "lockType": "none"
+    },
+    {
+      "id": "rb_l4_d1",
+      "fromRoomId": "rb_l4_r1",
+      "toRoomId": "rb_l4_r2",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "valve_matrix",
+      "puzzleRoomId": "rb_l4_r1",
+      "doorFamily": "industrial"
+    },
+    {
+      "id": "rb_l4_d2",
+      "fromRoomId": "rb_l4_r2",
+      "toRoomId": "rb_l4_r3",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "circuit_grid",
+      "puzzleRoomId": "rb_l4_r2",
+      "doorFamily": "clinic"
+    },
+    {
+      "id": "rb_l4_d3",
+      "fromRoomId": "rb_l4_r3",
+      "toRoomId": "rb_l4_r4",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "surveillance_match",
+      "puzzleRoomId": "rb_l4_r3",
+      "doorFamily": "reclamation"
+    },
+    {
+      "id": "rb_l4_d4",
+      "fromRoomId": "rb_l4_r4",
+      "toRoomId": "rb_l4_r5",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "color_sequence",
+      "puzzleRoomId": "rb_l4_r4",
+      "doorFamily": "elevator"
+    }
+  ],
+  "props": [
+    {
+      "id": "rb_l4_p0",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l4_r0",
+      "position": [
+        -4.08,
+        -1.44
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p1",
+      "modelKey": "room_table_utility",
+      "roomId": "rb_l4_r0",
+      "position": [
+        4.08,
+        -6.5600000000000005
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p2",
+      "modelKey": "room_museum_display_case_tool",
+      "roomId": "rb_l4_r0",
+      "position": [
+        -4.08,
+        -6.4
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p3",
+      "modelKey": "room_locker_low",
+      "roomId": "rb_l4_r1",
+      "position": [
+        -4.08,
+        -9.620000000000001
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1,
+      "story": {
+        "title": "疗程记录",
+        "clue": "治疗记录：我是人，是一层可以被维护的记忆。",
+        "hint": "看护台还亮着。"
+      }
+    },
+    {
+      "id": "rb_l4_p4",
+      "modelKey": "room_museum_display_case_tool",
+      "roomId": "rb_l4_r1",
+      "position": [
+        4.08,
+        -15.379999999999999
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p5",
+      "modelKey": "room_table_utility",
+      "roomId": "rb_l4_r1",
+      "position": [
+        -4.08,
+        -15.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p6",
+      "modelKey": "room_museum_display_case_tool",
+      "roomId": "rb_l4_r2",
+      "position": [
+        -4.08,
+        -18.62
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p7",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l4_r2",
+      "position": [
+        4.08,
+        -24.38
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p8",
+      "modelKey": "room_table_utility",
+      "roomId": "rb_l4_r2",
+      "position": [
+        -4.08,
+        -24.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p9",
+      "modelKey": "room_locker_low",
+      "roomId": "rb_l4_r3",
+      "position": [
+        -4.08,
+        -27.62
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p10",
+      "modelKey": "room_museum_display_case_tool",
+      "roomId": "rb_l4_r3",
+      "position": [
+        4.08,
+        -33.38
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p11",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l4_r3",
+      "position": [
+        -4.08,
+        -33.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p12",
+      "modelKey": "room_museum_display_case_tool",
+      "roomId": "rb_l4_r4",
+      "position": [
+        -4.08,
+        -36.62
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p13",
+      "modelKey": "room_museum_wall_label_panel",
+      "roomId": "rb_l4_r4",
+      "position": [
+        4.08,
+        -42.38
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l4_p14",
+      "modelKey": "room_locker_low",
+      "roomId": "rb_l4_r4",
+      "position": [
+        -4.08,
+        -42.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    }
+  ],
+  "puzzles": [
+    {
+      "id": "rb_l4_pz1",
+      "kind": "valve_matrix",
+      "linkedDoorId": "rb_l4_d1",
+      "roomId": "rb_l4_r1",
+      "position": [
+        0,
+        -12.5
+      ],
+      "rotationY": 0
+    },
+    {
+      "id": "rb_l4_pz2",
+      "kind": "circuit_grid",
+      "linkedDoorId": "rb_l4_d2",
+      "roomId": "rb_l4_r2",
+      "position": [
+        0,
+        -21.5
+      ],
+      "rotationY": 0
+    },
+    {
+      "id": "rb_l4_pz3",
+      "kind": "surveillance_match",
+      "linkedDoorId": "rb_l4_d3",
+      "roomId": "rb_l4_r3",
+      "position": [
+        0,
+        -30.5
+      ],
+      "rotationY": 0
+    },
+    {
+      "id": "rb_l4_pz4",
+      "kind": "color_sequence",
+      "linkedDoorId": "rb_l4_d4",
+      "roomId": "rb_l4_r4",
+      "position": [
+        0,
+        -39.5
+      ],
+      "rotationY": 0,
+      "components": [
+        {
+          "id": "rb_l4_pz4_o0",
+          "role": "orb_cyan",
+          "roomId": "rb_l4_r4",
+          "position": [
+            -3.5,
+            -37.9
+          ]
+        },
+        {
+          "id": "rb_l4_pz4_o1",
+          "role": "orb_red",
+          "roomId": "rb_l4_r4",
+          "position": [
+            3.5,
+            -37.9
+          ]
+        },
+        {
+          "id": "rb_l4_pz4_o2",
+          "role": "orb_yellow",
+          "roomId": "rb_l4_r4",
+          "position": [
+            0,
+            -36.9
+          ]
+        }
+      ]
+    }
+  ],
+  "robots": [
+    {
+      "id": "rb_l4_rb0",
+      "roomId": "rb_l4_r3",
+      "archetype": "clamp_bot",
+      "count": 2
+    },
+    {
+      "id": "rb_l4_rb1",
+      "roomId": "rb_l4_r4",
+      "archetype": "custodian_elite",
+      "count": 1,
+      "tier": "elite"
+    },
+    {
+      "id": "rb_l4_rb2",
+      "roomId": "rb_l4_r2",
+      "archetype": "repair_drone",
+      "count": 2
+    }
+  ],
+  "pickups": [
+    {
+      "id": "rb_l4_pk0",
+      "kind": "repairKit",
+      "roomId": "rb_l4_r1",
+      "position": [
+        -2,
+        -14.5
+      ]
+    },
+    {
+      "id": "rb_l4_pk1",
+      "kind": "coreCell",
+      "roomId": "rb_l4_r3",
+      "position": [
+        -2,
+        -32.5
+      ]
+    }
+  ],
+  "story": {
+    "templateId": "memory_clinic",
+    "victoryLine": "治疗记录：我是人，是一层可以被维护的记忆。",
+    "transitionLine": "电梯门合拢，登记灯熄灭。"
+  },
+  "exitRoomId": "rb_l4_r5",
+  "lighting": {
+    "ambient": 0.6,
+    "keyColor": "#cfe7ff",
+    "keyIntensity": 0.92,
+    "fog": 0.3,
+    "bloom": 0.45,
+    "shadow": 0.5
+  }
+}

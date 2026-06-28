@@ -1,0 +1,2505 @@
+{
+  "schemaVersion": "hp.official.builder.v1",
+  "documentId": "official_builder_level_01_maintenance_bay",
+  "title": "维修舱 · Official Builder Source",
+  "campaign": {
+    "levelId": "level_01_maintenance_bay",
+    "title": "维修舱",
+    "ordinal": 1,
+    "packId": "human-protocol-base-demo",
+    "nextLevelId": "level_02_residential_simulation"
+  },
+  "project": {
+    "schemaVersion": "hp.builder.v1",
+    "projectId": "proj_import_level_01_maintenance_bay",
+    "title": "维修舱 · 可编辑草稿",
+    "rooms": [
+      {
+        "id": "maintenance_bay_floor",
+        "label": "维修主舱",
+        "style": "maintenance",
+        "center": [
+          0,
+          -3.2
+        ],
+        "size": [
+          18,
+          25
+        ],
+        "env": {
+          "surfaceKitId": "hp:industrial_panel_arena_shell_v4_image2_floor",
+          "floorPresetId": "floor_level01_maintenance_image2_v1",
+          "wallPresetId": "wall_level01_maintenance_gunmetal_v1",
+          "ceilingPresetId": "ceiling_level01_maintenance_service_ribs_v1",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36
+        },
+        "sourceRoom": {
+          "mood": "combat",
+          "skinKey": "maintenance_bay_hero",
+          "floorMaterialKey": "maintenance_bay_wet_floor",
+          "wallMaterialKey": "maintenance_bay_glass_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#8df6ff"
+          },
+          "aesthetic": {
+            "style": "maintenance",
+            "detail": "high"
+          },
+          "ambientPressure": 0.45,
+          "entryDialogueTrigger": "level_start"
+        }
+      },
+      {
+        "id": "level_01_tool_alcove",
+        "label": "工具间",
+        "style": "maintenance",
+        "center": [
+          -11.25,
+          1.5
+        ],
+        "size": [
+          4.5,
+          6
+        ],
+        "env": {
+          "surfaceKitId": "hp:industrial_panel_arena_shell_v4_image2_floor",
+          "floorPresetId": "floor_level01_maintenance_image2_v1",
+          "wallPresetId": "wall_level01_maintenance_gunmetal_v1",
+          "ceilingPresetId": "ceiling_level01_maintenance_service_ribs_v1",
+          "ceilingVisible": true,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36
+        },
+        "sourceRoom": {
+          "mood": "quiet",
+          "skinKey": "maintenance_bay_hero",
+          "floorMaterialKey": "maintenance_bay_wet_floor",
+          "wallMaterialKey": "maintenance_bay_glass_wall",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": true,
+            "renderCeiling": true,
+            "collisionWalls": true,
+            "accentColor": "#ffd36d"
+          },
+          "aesthetic": {
+            "style": "maintenance",
+            "detail": "high"
+          },
+          "ambientPressure": 0.36
+        }
+      },
+      {
+        "id": "service_elevator_room",
+        "label": "维修电梯井",
+        "style": "exit",
+        "center": [
+          0,
+          -17.9
+        ],
+        "size": [
+          6.4,
+          5.4
+        ],
+        "env": {
+          "floorPresetId": "floor_dark_rubber",
+          "wallPresetId": "wall_dark_metal_panel",
+          "ceilingPresetId": "wall_dark_metal_panel",
+          "ceilingVisible": false,
+          "wallHeight": 3.36,
+          "ceilingHeight": 3.36
+        },
+        "sourceRoom": {
+          "mood": "reveal",
+          "skinKey": "human_museum_gallery",
+          "floorMaterialKey": "museum_floor",
+          "wallMaterialKey": "service_elevator_metal",
+          "geometry": {
+            "renderFloor": true,
+            "renderWalls": false,
+            "renderCeiling": false,
+            "collisionWalls": true,
+            "accentColor": "#f3f0df"
+          },
+          "aesthetic": {
+            "enabled": true,
+            "style": "exit",
+            "detail": "high"
+          },
+          "ambientPressure": 0.55
+        }
+      }
+    ],
+    "doors": [
+      {
+        "id": "service_elevator_door",
+        "label": "维修电梯门",
+        "fromRoomId": "maintenance_bay_floor",
+        "toRoomId": "service_elevator_room",
+        "lockType": "survive_wave",
+        "waveIds": [
+          "first_contact",
+          "wave_01",
+          "wave_02",
+          "elite_wave"
+        ],
+        "sourceDoor": {
+          "label": "维修电梯门",
+          "position": [
+            0,
+            0,
+            -15.2
+          ],
+          "size": [
+            3.4,
+            3.2,
+            0.35
+          ],
+          "yaw": 0,
+          "defaultState": "locked",
+          "lock": {
+            "type": "survive_wave",
+            "waveIds": [
+              "first_contact",
+              "wave_01",
+              "wave_02",
+              "elite_wave"
+            ],
+            "lockedMessage": "清掉维修主舱里的封锁机器人，门才会开。",
+            "unlockedMessage": "威胁解除，门已解锁。"
+          },
+          "skinKey": "service_elevator_hero",
+          "visualKey": "service_elevator_door",
+          "materialKey": "service_elevator_metal",
+          "panelPosition": [
+            1.85,
+            0,
+            -14.7
+          ],
+          "openSpeed": 1.35,
+          "autoOpenOnApproach": true,
+          "openVisualPolicy": {
+            "hideClosedHardwareAfterOpen": true,
+            "hidePanelAfterOpen": true
+          },
+          "closedDialogueTrigger": "exit_unlocked",
+          "openedDialogueTrigger": "exit_entered",
+          "cameraImpact": {
+            "shake": 0.34,
+            "fovKick": 1.85
+          }
+        }
+      },
+      {
+        "id": "level_01_alcove_door",
+        "label": "工具间门",
+        "fromRoomId": "maintenance_bay_floor",
+        "toRoomId": "level_01_tool_alcove",
+        "lockType": "key_item",
+        "keyRoomId": "maintenance_bay_floor",
+        "sourceDoor": {
+          "label": "工具间门",
+          "position": [
+            -9,
+            0,
+            1.5
+          ],
+          "size": [
+            2.6,
+            3,
+            0.32
+          ],
+          "yaw": 1.5707963267948966,
+          "defaultState": "locked",
+          "lock": {
+            "type": "key_item",
+            "keyItemId": "key_level_01_alcove_door",
+            "lockedMessage": "缺少门禁片。去「维修主舱」找找。",
+            "unlockedMessage": "门禁确认，门已解锁。"
+          },
+          "visualKey": "industrial_access_door",
+          "materialKey": "hazard_hall_wall",
+          "panelPosition": [
+            -8.65,
+            0,
+            3.2800000000000002
+          ],
+          "autoOpenOnApproach": false
+        }
+      }
+    ],
+    "props": [
+      {
+        "id": "level_01_repair_bay",
+        "modelKey": "hero_maintenance_repair_bay",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -2.8,
+          6.8
+        ],
+        "rotationY": 0.25,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              1.6,
+              0.625,
+              0.7
+            ]
+          },
+          "label": "维修床",
+          "tags": [
+            "official",
+            "level01",
+            "hero_set_piece",
+            "configurable"
+          ]
+        }
+      },
+      {
+        "id": "level_01_repair_arm_cluster",
+        "modelKey": "hero_maintenance_repair_arm_cluster",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -4.1,
+          5.8
+        ],
+        "rotationY": 0.4,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "维修机械臂",
+          "tags": [
+            "official",
+            "level01",
+            "hero_set_piece",
+            "repair_arm",
+            "configurable"
+          ]
+        }
+      },
+      {
+        "id": "level_01_wall_medical_strip",
+        "modelKey": "light_wall_medical_strip_cyan_1m",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -8.6,
+          3.1
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1.35,
+        "elevation": 1.2,
+        "sourceProp": {
+          "y": 1.2,
+          "scale": 1.35,
+          "label": "医疗灯条",
+          "tags": [
+            "official",
+            "level01",
+            "light",
+            "legacy_v1",
+            "configurable"
+          ]
+        }
+      },
+      {
+        "id": "level_01_overhead_cyan_flicker",
+        "modelKey": "light_ceiling_flicker_cyan_2m",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -2.2,
+          3.4
+        ],
+        "rotationY": 0,
+        "scale": 2,
+        "elevation": 2.9,
+        "sourceProp": {
+          "y": 2.9,
+          "scale": [
+            2.2,
+            2.2,
+            2.2
+          ],
+          "label": "维修顶灯",
+          "tags": [
+            "official",
+            "level01",
+            "light",
+            "legacy_v1",
+            "configurable"
+          ]
+        }
+      },
+      {
+        "id": "level_01_human_reference_triptych_decal",
+        "modelKey": "decal_human_reference_triptych",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -1.5,
+          4.5
+        ],
+        "rotationY": 3.5915926535897933,
+        "scale": 1.45,
+        "elevation": 1.78,
+        "sourceProp": {
+          "y": 1.78,
+          "scale": 1.45,
+          "label": "人体参考三联图",
+          "tags": [
+            "official",
+            "level01",
+            "wall_reference",
+            "legacy_v1",
+            "triptych",
+            "configurable"
+          ]
+        }
+      },
+      {
+        "id": "prop_pfpugm",
+        "modelKey": "room_chair_service",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -8,
+          -6.5
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "服务椅"
+        }
+      },
+      {
+        "id": "prop_hhup5a",
+        "modelKey": "room_crate_stack",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -8,
+          -1
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.45,
+              0.45,
+              0.36
+            ]
+          },
+          "label": "货箱堆"
+        }
+      },
+      {
+        "id": "prop_l13w0j",
+        "modelKey": "room_locker_low",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -8.5,
+          -14.5
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.37,
+              0.55,
+              0.19
+            ]
+          },
+          "label": "矮储物柜"
+        }
+      },
+      {
+        "id": "prop_6so4sf",
+        "modelKey": "room_maintenance_supply_cabinet",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -8.5,
+          4.5
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.45,
+              0.875,
+              0.23
+            ]
+          },
+          "label": "补给柜"
+        }
+      },
+      {
+        "id": "prop_ob2o2y",
+        "modelKey": "room_l01_p10",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          8,
+          8
+        ],
+        "rotationY": 0.7853981633974483,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.31,
+              0.405,
+              0.26
+            ]
+          },
+          "label": "维修舱身份片读取座"
+        }
+      },
+      {
+        "id": "prop_ys3x9p",
+        "modelKey": "room_l1_img2_body_reference_lightbox",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          8,
+          4.5
+        ],
+        "rotationY": 4.71238898038469,
+        "scale": 1,
+        "elevation": 1.5,
+        "sourceProp": {
+          "y": 1.5,
+          "scale": 1,
+          "label": "人体维护参考灯箱"
+        }
+      },
+      {
+        "id": "prop_2myrm7",
+        "modelKey": "room_l1_img2_cable_reel_cart",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          8,
+          2.5
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.54,
+              0.4585,
+              0.36
+            ]
+          },
+          "label": "线缆卷盘推车"
+        }
+      },
+      {
+        "id": "prop_ywgyva",
+        "modelKey": "room_l1_img2_maintenance_privacy_screen",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          8,
+          0
+        ],
+        "rotationY": 4.71238898038469,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "折叠维护遮挡屏"
+        }
+      },
+      {
+        "id": "prop_l7xvgt",
+        "modelKey": "room_l1_img2_sterile_tool_rack",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          8,
+          -3
+        ],
+        "rotationY": 4.71238898038469,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.535,
+              0.92,
+              0.2255
+            ]
+          },
+          "label": "工具消毒充电架"
+        }
+      },
+      {
+        "id": "prop_kpmalj",
+        "modelKey": "room_l1_img2_sterile_wash_basin",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          7.5,
+          -14.5
+        ],
+        "rotationY": 5.497787143782138,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.725,
+              0.51,
+              0.31
+            ]
+          },
+          "label": "消毒零件清洗槽"
+        }
+      },
+      {
+        "id": "prop_4p5h1e",
+        "modelKey": "room_l1_img2_warning_barrier",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          8,
+          -12.5
+        ],
+        "rotationY": 1.5707963267948966,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              1.06,
+              0.55,
+              0.245
+            ]
+          },
+          "label": "警示隔离栏组件"
+        }
+      },
+      {
+        "id": "prop_4ft639",
+        "modelKey": "room_l1_img2_wall_tool_board",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          8.5,
+          -8.5
+        ],
+        "rotationY": 4.71238898038469,
+        "scale": 1,
+        "elevation": 1.5,
+        "sourceProp": {
+          "y": 1.5,
+          "scale": 1,
+          "label": "墙挂工具板"
+        }
+      },
+      {
+        "id": "builder_exit_elevator_interior_shell",
+        "modelKey": "service_elevator_interior_shell",
+        "roomId": "service_elevator_room",
+        "position": [
+          0,
+          -17.9
+        ],
+        "rotationY": 0,
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "label": "出口电梯内壁",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "builder",
+            "playtest",
+            "interior_shell",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_threshold",
+        "modelKey": "door_threshold_service_elevator",
+        "roomId": "service_elevator_room",
+        "position": [
+          0,
+          -15.79
+        ],
+        "rotationY": 0,
+        "scale": 1.05,
+        "elevation": 0.04,
+        "sourceProp": {
+          "y": 0.035,
+          "scale": [
+            1.15,
+            1,
+            1
+          ],
+          "label": "出口电梯门槛",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "builder",
+            "playtest",
+            "threshold",
+            "bright_exit"
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_call_buttons",
+        "modelKey": "service_elevator_call_buttons",
+        "roomId": "service_elevator_room",
+        "position": [
+          2.82,
+          -18.6
+        ],
+        "rotationY": -1.5707963267948966,
+        "scale": 1,
+        "elevation": 1.42,
+        "sourceProp": {
+          "y": 1.42,
+          "scale": 1,
+          "label": "出口电梯呼叫按钮",
+          "tags": [
+            "hp:official_exit_room_reference_v1",
+            "elevator",
+            "builder",
+            "playtest",
+            "exit_call_buttons",
+            "button_panel"
+          ]
+        }
+      }
+    ],
+    "pickups": [
+      {
+        "id": "key_level_01_alcove_door",
+        "kind": "key_item",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          -3.5,
+          -11.5
+        ],
+        "linkedDoorId": "level_01_alcove_door",
+        "sourceKeyItem": {
+          "label": "工具间门禁片",
+          "y": 0,
+          "collectRadius": 1.5,
+          "visualKey": "large_yellow_key",
+          "materialKey": "access_card_gold",
+          "rewardPulse": {
+            "label": "门禁片",
+            "detail": "工具间 的门可以打开了",
+            "rarity": "rare"
+          }
+        }
+      },
+      {
+        "id": "level_01_visible_repair_kit",
+        "kind": "repairKit",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          3.8,
+          5.5
+        ]
+      },
+      {
+        "id": "level_01_visible_core_cell",
+        "kind": "coreCell",
+        "roomId": "maintenance_bay_floor",
+        "position": [
+          4.65,
+          5.15
+        ]
+      },
+      {
+        "id": "pickup_cjka4a",
+        "kind": "repairKit",
+        "roomId": "level_01_tool_alcove",
+        "position": [
+          -12,
+          3
+        ]
+      },
+      {
+        "id": "pickup_c73mh9",
+        "kind": "repairKit",
+        "roomId": "level_01_tool_alcove",
+        "position": [
+          -11.5,
+          -0.5
+        ]
+      },
+      {
+        "id": "pickup_6gkfov",
+        "kind": "coreCell",
+        "roomId": "level_01_tool_alcove",
+        "position": [
+          -11,
+          1.5
+        ]
+      }
+    ],
+    "robots": [
+      {
+        "id": "robot_first_contact_enemy_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 1,
+        "position": [
+          -3.85,
+          -5.95
+        ],
+        "wave": {
+          "id": "first_contact",
+          "label": "初次接触",
+          "role": "enemy",
+          "triggerType": "room_entered",
+          "triggerId": "maintenance_bay_floor",
+          "triggerDelay": 0.4,
+          "startDelay": 2.3,
+          "interruptsActiveWave": true,
+          "reward": "none",
+          "spawnGroupId": "front",
+          "spawnGroupLabel": "前方舱门",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -3.85,
+              -5.95
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "first_contact",
+            "label": "初次接触",
+            "objectiveTitle": "逃出维修舱",
+            "objectiveDetail": "广播在找你",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "逃出维修舱",
+              "detail": "广播在找你"
+            },
+            "startWarningDuration": 2,
+            "startDialogueTrigger": "first_enemy_seen"
+          }
+        },
+        "waveChain": {
+          "waveId": "first_contact",
+          "order": 1,
+          "label": "初次接触"
+        }
+      },
+      {
+        "id": "robot_wave_01_enemy_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 3,
+        "position": [
+          -2.5,
+          -7.25
+        ],
+        "wave": {
+          "id": "wave_01",
+          "label": "封锁响应",
+          "role": "enemy",
+          "startDelay": 1.8,
+          "reward": "upgrade",
+          "completionDialogueTrigger": "wave_1_complete",
+          "spawnGroupId": "front_arc",
+          "spawnGroupLabel": "前方舱门",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -2.5,
+              -7.25
+            ],
+            [
+              1.55,
+              -1.25
+            ],
+            [
+              1.95,
+              -4.85
+            ],
+            [
+              3.3,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "wave_01",
+            "label": "封锁响应",
+            "objectiveTitle": "守住配电成果",
+            "objectiveDetail": "供电恢复惊动了封锁队",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "封锁响应",
+              "detail": "正面推进，别离工具间太远"
+            },
+            "startWarningDuration": 2,
+            "startDialogueTrigger": "rear_enemy_spawned",
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          }
+        },
+        "waveChain": {
+          "waveId": "wave_01",
+          "order": 2,
+          "label": "封锁响应"
+        }
+      },
+      {
+        "id": "robot_wave_01_enemy_2",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "position": [
+          1.55,
+          -1.25
+        ],
+        "wave": {
+          "id": "wave_01",
+          "label": "封锁响应",
+          "role": "enemy",
+          "startDelay": 1.8,
+          "reward": "upgrade",
+          "completionDialogueTrigger": "wave_1_complete",
+          "spawnGroupId": "front_arc",
+          "spawnGroupLabel": "前方舱门",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -2.5,
+              -7.25
+            ],
+            [
+              1.55,
+              -1.25
+            ],
+            [
+              1.95,
+              -4.85
+            ],
+            [
+              3.3,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "wave_01",
+            "label": "封锁响应",
+            "objectiveTitle": "守住配电成果",
+            "objectiveDetail": "供电恢复惊动了封锁队",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "封锁响应",
+              "detail": "正面推进，别离工具间太远"
+            },
+            "startWarningDuration": 2,
+            "startDialogueTrigger": "rear_enemy_spawned",
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_wave_01_reinforcement_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 1,
+        "position": [
+          -2.5,
+          -7.25
+        ],
+        "wave": {
+          "id": "wave_01",
+          "label": "封锁响应",
+          "role": "reinforcement",
+          "startDelay": 1.8,
+          "reward": "upgrade",
+          "completionDialogueTrigger": "wave_1_complete",
+          "spawnGroupId": "front_arc",
+          "spawnGroupLabel": "前方舱门",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -2.5,
+              -7.25
+            ],
+            [
+              1.55,
+              -1.25
+            ],
+            [
+              1.95,
+              -4.85
+            ],
+            [
+              3.3,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "wave_01",
+            "label": "封锁响应",
+            "objectiveTitle": "守住配电成果",
+            "objectiveDetail": "供电恢复惊动了封锁队",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "封锁响应",
+              "detail": "正面推进，别离工具间太远"
+            },
+            "startWarningDuration": 2,
+            "startDialogueTrigger": "rear_enemy_spawned",
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          },
+          "reinforcement": {
+            "every": 9.5,
+            "startsAfter": 7,
+            "maxGroups": 2,
+            "maxAlive": 3
+          }
+        }
+      },
+      {
+        "id": "robot_wave_02_enemy_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 4,
+        "position": [
+          -2.5,
+          -7.25
+        ],
+        "wave": {
+          "id": "wave_02",
+          "label": "夹击波",
+          "role": "enemy",
+          "startDelay": 2.1,
+          "reward": "none",
+          "completionDialogueTrigger": "wave_2_complete",
+          "spawnGroupId": "front_arc",
+          "spawnGroupLabel": "前方舱门",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -2.5,
+              -7.25
+            ],
+            [
+              1.55,
+              -1.25
+            ],
+            [
+              1.95,
+              -4.85
+            ],
+            [
+              3.3,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "wave_02",
+            "label": "夹击波",
+            "objectiveTitle": "顶住夹击",
+            "objectiveDetail": "侧后方会来",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "夹击波",
+              "detail": "侧后方的门也开了"
+            },
+            "startWarningDuration": 2,
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          }
+        },
+        "waveChain": {
+          "waveId": "wave_02",
+          "order": 3,
+          "label": "夹击波"
+        }
+      },
+      {
+        "id": "robot_wave_02_enemy_2",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "position": [
+          1.55,
+          -1.25
+        ],
+        "wave": {
+          "id": "wave_02",
+          "label": "夹击波",
+          "role": "enemy",
+          "startDelay": 2.1,
+          "reward": "none",
+          "completionDialogueTrigger": "wave_2_complete",
+          "spawnGroupId": "front_arc",
+          "spawnGroupLabel": "前方舱门",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -2.5,
+              -7.25
+            ],
+            [
+              1.55,
+              -1.25
+            ],
+            [
+              1.95,
+              -4.85
+            ],
+            [
+              3.3,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "wave_02",
+            "label": "夹击波",
+            "objectiveTitle": "顶住夹击",
+            "objectiveDetail": "侧后方会来",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "夹击波",
+              "detail": "侧后方的门也开了"
+            },
+            "startWarningDuration": 2,
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_wave_02_reinforcement_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 1,
+        "position": [
+          -2.5,
+          -7.25
+        ],
+        "wave": {
+          "id": "wave_02",
+          "label": "夹击波",
+          "role": "reinforcement",
+          "startDelay": 2.1,
+          "reward": "none",
+          "completionDialogueTrigger": "wave_2_complete",
+          "spawnGroupId": "front_arc",
+          "spawnGroupLabel": "前方舱门",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -2.5,
+              -7.25
+            ],
+            [
+              1.55,
+              -1.25
+            ],
+            [
+              1.95,
+              -4.85
+            ],
+            [
+              3.3,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "wave_02",
+            "label": "夹击波",
+            "objectiveTitle": "顶住夹击",
+            "objectiveDetail": "侧后方会来",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "夹击波",
+              "detail": "侧后方的门也开了"
+            },
+            "startWarningDuration": 2,
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          },
+          "reinforcement": {
+            "every": 9.5,
+            "startsAfter": 7,
+            "maxGroups": 3,
+            "maxAlive": 4
+          }
+        }
+      },
+      {
+        "id": "robot_wave_02_reinforcement_2",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "position": [
+          1.55,
+          -1.25
+        ],
+        "wave": {
+          "id": "wave_02",
+          "label": "夹击波",
+          "role": "reinforcement",
+          "startDelay": 2.1,
+          "reward": "none",
+          "completionDialogueTrigger": "wave_2_complete",
+          "spawnGroupId": "front_arc",
+          "spawnGroupLabel": "前方舱门",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -2.5,
+              -7.25
+            ],
+            [
+              1.55,
+              -1.25
+            ],
+            [
+              1.95,
+              -4.85
+            ],
+            [
+              3.3,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "wave_02",
+            "label": "夹击波",
+            "objectiveTitle": "顶住夹击",
+            "objectiveDetail": "侧后方会来",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "夹击波",
+              "detail": "侧后方的门也开了"
+            },
+            "startWarningDuration": 2,
+            "startAudio": {
+              "key": "assist_reorient",
+              "intensity": 0.72
+            }
+          },
+          "reinforcement": {
+            "every": 13,
+            "startsAfter": 14,
+            "maxGroups": 2,
+            "maxAlive": 1
+          }
+        }
+      },
+      {
+        "id": "robot_elite_wave_enemy_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "custodian_elite",
+        "count": 1,
+        "tier": "leader",
+        "combat": {
+          "tierLabel": "维修头领",
+          "healthMultiplier": 0.54,
+          "damageMultiplier": 1.02,
+          "attackCooldownMultiplier": 1,
+          "radiusMultiplier": 1,
+          "visual": {
+            "modelKey": "hp_enemy_custodian_foreman_horror",
+            "coreColor": "#ff6a52",
+            "warningColor": "#ffd36d",
+            "textureAtlasKey": "custodian_boss",
+            "scaleMultiplier": 1.05,
+            "lightIntensityMultiplier": 1.18
+          }
+        },
+        "position": [
+          -1.65,
+          -0.1
+        ],
+        "wave": {
+          "id": "elite_wave",
+          "label": "维修主管",
+          "role": "enemy",
+          "startDelay": 2.4,
+          "reward": "none",
+          "spawnGroupId": "front_gate",
+          "spawnGroupLabel": "正门重型单位",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -1.65,
+              -0.1
+            ],
+            [
+              2.75,
+              -2.4
+            ],
+            [
+              -3.35,
+              -1.05
+            ],
+            [
+              0.5,
+              1.15
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "elite_wave",
+            "label": "维修主管",
+            "objectiveTitle": "击退主管",
+            "objectiveDetail": "别贴太久",
+            "startMessage": "维修主管正在接近。",
+            "startWarning": {
+              "label": "维修主管",
+              "detail": "近身危险"
+            },
+            "startWarningDuration": 2,
+            "startDialogueTrigger": "elite_spawned",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1.2
+            },
+            "startCamera": {
+              "shake": 0.5
+            }
+          }
+        },
+        "waveChain": {
+          "waveId": "elite_wave",
+          "order": 4,
+          "label": "维修主管"
+        }
+      },
+      {
+        "id": "robot_elite_wave_enemy_2",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 2,
+        "position": [
+          2.75,
+          -2.4
+        ],
+        "wave": {
+          "id": "elite_wave",
+          "label": "维修主管",
+          "role": "enemy",
+          "startDelay": 2.4,
+          "reward": "none",
+          "spawnGroupId": "front_gate",
+          "spawnGroupLabel": "正门重型单位",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -1.65,
+              -0.1
+            ],
+            [
+              2.75,
+              -2.4
+            ],
+            [
+              -3.35,
+              -1.05
+            ],
+            [
+              0.5,
+              1.15
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "elite_wave",
+            "label": "维修主管",
+            "objectiveTitle": "击退主管",
+            "objectiveDetail": "别贴太久",
+            "startMessage": "维修主管正在接近。",
+            "startWarning": {
+              "label": "维修主管",
+              "detail": "近身危险"
+            },
+            "startWarningDuration": 2,
+            "startDialogueTrigger": "elite_spawned",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1.2
+            },
+            "startCamera": {
+              "shake": 0.5
+            }
+          }
+        }
+      },
+      {
+        "id": "robot_elite_wave_reinforcement_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 1,
+        "position": [
+          -1.65,
+          -0.1
+        ],
+        "wave": {
+          "id": "elite_wave",
+          "label": "维修主管",
+          "role": "reinforcement",
+          "startDelay": 2.4,
+          "reward": "none",
+          "spawnGroupId": "front_gate",
+          "spawnGroupLabel": "正门重型单位",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -1.65,
+              -0.1
+            ],
+            [
+              2.75,
+              -2.4
+            ],
+            [
+              -3.35,
+              -1.05
+            ],
+            [
+              0.5,
+              1.15
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "elite_wave",
+            "label": "维修主管",
+            "objectiveTitle": "击退主管",
+            "objectiveDetail": "别贴太久",
+            "startMessage": "维修主管正在接近。",
+            "startWarning": {
+              "label": "维修主管",
+              "detail": "近身危险"
+            },
+            "startWarningDuration": 2,
+            "startDialogueTrigger": "elite_spawned",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1.2
+            },
+            "startCamera": {
+              "shake": 0.5
+            }
+          },
+          "reinforcement": {
+            "every": 8,
+            "startsAfter": 6,
+            "maxGroups": 999,
+            "maxAlive": 2,
+            "requiresEliteAlive": true,
+            "endless": true
+          }
+        }
+      },
+      {
+        "id": "robot_elite_wave_reinforcement_2",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "position": [
+          2.75,
+          -2.4
+        ],
+        "wave": {
+          "id": "elite_wave",
+          "label": "维修主管",
+          "role": "reinforcement",
+          "startDelay": 2.4,
+          "reward": "none",
+          "spawnGroupId": "front_gate",
+          "spawnGroupLabel": "正门重型单位",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -1.65,
+              -0.1
+            ],
+            [
+              2.75,
+              -2.4
+            ],
+            [
+              -3.35,
+              -1.05
+            ],
+            [
+              0.5,
+              1.15
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "elite_wave",
+            "label": "维修主管",
+            "objectiveTitle": "击退主管",
+            "objectiveDetail": "别贴太久",
+            "startMessage": "维修主管正在接近。",
+            "startWarning": {
+              "label": "维修主管",
+              "detail": "近身危险"
+            },
+            "startWarningDuration": 2,
+            "startDialogueTrigger": "elite_spawned",
+            "startAudio": {
+              "key": "elite_warning",
+              "intensity": 1.2
+            },
+            "startCamera": {
+              "shake": 0.5
+            }
+          },
+          "reinforcement": {
+            "every": 15,
+            "startsAfter": 18,
+            "maxGroups": 999,
+            "maxAlive": 1,
+            "requiresEliteAlive": true,
+            "endless": true
+          }
+        }
+      },
+      {
+        "id": "robot_exit_chase_enemy_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 2,
+        "position": [
+          -1.05,
+          -0.75
+        ],
+        "wave": {
+          "id": "exit_chase",
+          "label": "出口追击",
+          "role": "enemy",
+          "startDelay": 0.8,
+          "reward": "open_exit",
+          "spawnGroupId": "side_rear",
+          "spawnGroupLabel": "侧后方夹击",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -1.05,
+              -0.75
+            ],
+            [
+              2.25,
+              -8.15
+            ],
+            [
+              -2.2,
+              -5
+            ],
+            [
+              0,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "exit_chase",
+            "label": "出口追击",
+            "objectiveTitle": "跑向电梯",
+            "objectiveDetail": "背后还有",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "进电梯",
+              "detail": "边打边跑"
+            },
+            "startWarningDuration": 2
+          }
+        },
+        "waveChain": {
+          "waveId": "exit_chase",
+          "order": 5,
+          "label": "出口追击",
+          "pressureLoop": {
+            "enabled": true,
+            "archetype": "clamp_bot",
+            "count": 1,
+            "startsAfter": 4,
+            "every": 8,
+            "maxAlive": 1
+          }
+        }
+      },
+      {
+        "id": "robot_exit_chase_enemy_2",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "position": [
+          2.25,
+          -8.15
+        ],
+        "wave": {
+          "id": "exit_chase",
+          "label": "出口追击",
+          "role": "enemy",
+          "startDelay": 0.8,
+          "reward": "open_exit",
+          "spawnGroupId": "side_rear",
+          "spawnGroupLabel": "侧后方夹击",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -1.05,
+              -0.75
+            ],
+            [
+              2.25,
+              -8.15
+            ],
+            [
+              -2.2,
+              -5
+            ],
+            [
+              0,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "exit_chase",
+            "label": "出口追击",
+            "objectiveTitle": "跑向电梯",
+            "objectiveDetail": "背后还有",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "进电梯",
+              "detail": "边打边跑"
+            },
+            "startWarningDuration": 2
+          }
+        }
+      },
+      {
+        "id": "robot_exit_chase_reinforcement_1",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "repair_drone",
+        "count": 1,
+        "position": [
+          -1.05,
+          -0.75
+        ],
+        "wave": {
+          "id": "exit_chase",
+          "label": "出口追击",
+          "role": "reinforcement",
+          "startDelay": 0.8,
+          "reward": "open_exit",
+          "spawnGroupId": "side_rear",
+          "spawnGroupLabel": "侧后方夹击",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -1.05,
+              -0.75
+            ],
+            [
+              2.25,
+              -8.15
+            ],
+            [
+              -2.2,
+              -5
+            ],
+            [
+              0,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "exit_chase",
+            "label": "出口追击",
+            "objectiveTitle": "跑向电梯",
+            "objectiveDetail": "背后还有",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "进电梯",
+              "detail": "边打边跑"
+            },
+            "startWarningDuration": 2
+          },
+          "reinforcement": {
+            "every": 6.5,
+            "startsAfter": 4,
+            "maxGroups": 999,
+            "maxAlive": 4,
+            "endless": true
+          }
+        }
+      },
+      {
+        "id": "robot_exit_chase_reinforcement_2",
+        "roomId": "maintenance_bay_floor",
+        "archetype": "clamp_bot",
+        "count": 1,
+        "position": [
+          2.25,
+          -8.15
+        ],
+        "wave": {
+          "id": "exit_chase",
+          "label": "出口追击",
+          "role": "reinforcement",
+          "startDelay": 0.8,
+          "reward": "open_exit",
+          "spawnGroupId": "side_rear",
+          "spawnGroupLabel": "侧后方夹击",
+          "spawnGroupLayout": "front",
+          "spawnGroupPositions": [
+            [
+              -1.05,
+              -0.75
+            ],
+            [
+              2.25,
+              -8.15
+            ],
+            [
+              -2.2,
+              -5
+            ],
+            [
+              0,
+              -3.2
+            ],
+            [
+              -5.04,
+              -10.2
+            ],
+            [
+              5.04,
+              -10.2
+            ],
+            [
+              -5.04,
+              3.8
+            ],
+            [
+              5.04,
+              3.8
+            ]
+          ],
+          "presentation": {
+            "id": "exit_chase",
+            "label": "出口追击",
+            "objectiveTitle": "跑向电梯",
+            "objectiveDetail": "背后还有",
+            "startMessage": "维修单位正在部署。",
+            "startWarning": {
+              "label": "进电梯",
+              "detail": "边打边跑"
+            },
+            "startWarningDuration": 2
+          },
+          "reinforcement": {
+            "every": 9,
+            "startsAfter": 8,
+            "maxGroups": 999,
+            "maxAlive": 1,
+            "endless": true
+          }
+        }
+      }
+    ],
+    "exitRoomId": "service_elevator_room",
+    "lighting": {
+      "ambient": 0.14,
+      "keyColor": "#b8fbff",
+      "keyIntensity": 0.26,
+      "fog": 0.72,
+      "bloom": 0.83,
+      "shadow": 0.82
+    },
+    "sourceLevel": {
+      "levelId": "level_01_maintenance_bay",
+      "mapId": "level_01_maintenance_bay_map",
+      "dialogues": [
+        {
+          "id": "wake_01",
+          "trigger": "level_start",
+          "speaker": "耳机里",
+          "line": "醒醒。别出声。地上有东西，拿起来。",
+          "tone": "system",
+          "duration": 2.6
+        },
+        {
+          "id": "rod_picked_01",
+          "trigger": "rod_picked",
+          "speaker": "你",
+          "line": "金属很冷。手在抖，但握得很紧。",
+          "tone": "player",
+          "duration": 2.3
+        },
+        {
+          "id": "pistol_picked_01",
+          "trigger": "pistol_picked",
+          "speaker": "走廊广播",
+          "line": "目标持械。门禁封死。维修单位，回收。",
+          "tone": "threat",
+          "duration": 2.9
+        },
+        {
+          "id": "first_contact_01",
+          "trigger": "first_enemy_seen",
+          "speaker": "广播",
+          "line": "前方维修单位接近。它在扫描，不是在问话。",
+          "tone": "threat",
+          "duration": 2.6
+        },
+        {
+          "id": "first_kill_01",
+          "trigger": "first_enemy_killed",
+          "speaker": "你",
+          "line": "它说“回收”……是什么意思？",
+          "tone": "player",
+          "duration": 2.25
+        },
+        {
+          "id": "lockdown_started_01",
+          "trigger": "lockdown_started",
+          "speaker": "走廊广播",
+          "line": "舱门锁死。玻璃后面，影子开始转头。",
+          "tone": "threat",
+          "duration": 2.8
+        },
+        {
+          "id": "repair_hint_01",
+          "trigger": "wave_1_complete",
+          "speaker": "未知频道",
+          "line": "目标仍在逃离。不要让它到档案门。",
+          "tone": "reveal",
+          "duration": 2.7
+        },
+        {
+          "id": "threat_ring_01",
+          "trigger": "rear_enemy_spawned",
+          "speaker": "近距警报",
+          "line": "后方接触。它们知道你会往哪边躲。",
+          "tone": "threat",
+          "duration": 2.5
+        },
+        {
+          "id": "memory_flash_01",
+          "trigger": "memory_flash",
+          "speaker": "闪回",
+          "line": "玻璃后，一排白色身体同时抬头。",
+          "tone": "reveal",
+          "duration": 2.8
+        },
+        {
+          "id": "wave_2_complete_01",
+          "trigger": "wave_2_complete",
+          "speaker": "未知频道",
+          "line": "压低灯光。启动主管。",
+          "tone": "reveal",
+          "duration": 2.4
+        },
+        {
+          "id": "elite_intro_01",
+          "trigger": "elite_spawned",
+          "speaker": "维修主管",
+          "line": "停止移动。维修台已经准备好。",
+          "tone": "threat",
+          "duration": 2.9
+        },
+        {
+          "id": "elite_mid_01",
+          "trigger": "elite_hp_50",
+          "speaker": "未知频道",
+          "line": "别让它靠近档案门。它会记起来。",
+          "tone": "reveal",
+          "duration": 2.7
+        },
+        {
+          "id": "identity_warning_01",
+          "trigger": "identity_collapse_warning",
+          "speaker": "耳机里",
+          "line": "痛觉延迟了半秒。不要想。跑。",
+          "tone": "reveal",
+          "duration": 2.8
+        },
+        {
+          "id": "exit_chase_01",
+          "trigger": "exit_chase_started",
+          "speaker": "广播",
+          "line": "后方队列全开。不要回头。",
+          "tone": "threat",
+          "duration": 2.5
+        },
+        {
+          "id": "exit_unlocked_01",
+          "trigger": "exit_unlocked",
+          "speaker": "耳机里",
+          "line": "电梯开了。下面有人用你的声音哭。",
+          "tone": "threat",
+          "duration": 2.8
+        },
+        {
+          "id": "level_end_01",
+          "trigger": "exit_entered",
+          "speaker": "档案残片",
+          "line": "档案残片：对象仍在移动。",
+          "tone": "reveal",
+          "duration": 3
+        }
+      ],
+      "cinematicBeats": [
+        {
+          "id": "wave_01_lockdown",
+          "waveId": "wave_01",
+          "triggerAt": 16,
+          "dialogueTrigger": "lockdown_started",
+          "spawnWarning": {
+            "label": "权限锁死",
+            "detail": "电梯断开。活下去"
+          },
+          "spawnWarningDuration": 2.2,
+          "rewardPulse": {
+            "label": "维修封锁",
+            "detail": "门锁死了",
+            "rarity": "rare"
+          },
+          "rewardPulseDuration": 1.55,
+          "cameraImpact": {
+            "shake": 0.45,
+            "fovKick": 2.8
+          },
+          "effects": [
+            {
+              "type": "dashBurst",
+              "position": [
+                0,
+                0,
+                -12.5
+              ],
+              "direction": [
+                0,
+                0,
+                1
+              ],
+              "lifetime": 0.5,
+              "intensity": 2.1
+            }
+          ],
+          "audio": {
+            "key": "elite_warning",
+            "intensity": 0.78
+          }
+        },
+        {
+          "id": "wave_02_memory_flash",
+          "waveId": "wave_02",
+          "triggerAt": 18,
+          "dialogueTrigger": "memory_flash",
+          "spawnWarning": {
+            "label": "闪回",
+            "detail": "玻璃后，有影子抬头"
+          },
+          "spawnWarningDuration": 2.25,
+          "rewardPulse": {
+            "label": "闪回",
+            "detail": "你见过这里",
+            "rarity": "story"
+          },
+          "rewardPulseDuration": 1.65,
+          "cameraImpact": {
+            "shake": 0.54,
+            "fovKick": 3.4
+          },
+          "effects": [
+            {
+              "type": "dashBurst",
+              "position": [
+                -7.8,
+                0,
+                -4
+              ],
+              "direction": [
+                1,
+                0,
+                0.2
+              ],
+              "lifetime": 0.42,
+              "intensity": 1.7
+            },
+            {
+              "type": "dashBurst",
+              "position": [
+                7.8,
+                0,
+                -4
+              ],
+              "direction": [
+                -1,
+                0,
+                0.2
+              ],
+              "lifetime": 0.42,
+              "intensity": 1.7
+            }
+          ],
+          "audio": {
+            "key": "assist_reorient",
+            "intensity": 0.9
+          }
+        },
+        {
+          "id": "wave_02_last_gate",
+          "waveId": "wave_02",
+          "triggerAt": 32,
+          "spawnWarning": {
+            "label": "出口线路亮了",
+            "detail": "撑过夹击"
+          },
+          "spawnWarningDuration": 2.15,
+          "tempoSurgeSec": 4.2,
+          "cameraImpact": {
+            "shake": 0.5,
+            "fovKick": 2.6
+          },
+          "audio": {
+            "key": "ui_upgrade_select",
+            "intensity": 0.92
+          }
+        },
+        {
+          "id": "elite_title_slam",
+          "waveId": "elite_wave",
+          "triggerAt": 2.2,
+          "spawnWarning": {
+            "label": "维修主管",
+            "detail": "别被拖回台上"
+          },
+          "spawnWarningDuration": 2.35,
+          "cameraImpact": {
+            "shake": 0.74,
+            "fovKick": 4
+          },
+          "audio": {
+            "key": "elite_warning",
+            "intensity": 1.22
+          }
+        },
+        {
+          "id": "elite_second_phase",
+          "waveId": "elite_wave",
+          "triggerAt": 34,
+          "spawnWarning": {
+            "label": "夹具入场",
+            "detail": "用电池开路"
+          },
+          "spawnWarningDuration": 2.25,
+          "tempoSurgeSec": 3.8,
+          "cameraImpact": {
+            "shake": 0.58,
+            "fovKick": 3.2
+          },
+          "audio": {
+            "key": "weapon_shock_burst",
+            "intensity": 0.78
+          }
+        },
+        {
+          "id": "elite_final_push",
+          "waveId": "elite_wave",
+          "triggerAt": 58,
+          "spawnWarning": {
+            "label": "门快开了",
+            "detail": "准备跑"
+          },
+          "spawnWarningDuration": 2.15,
+          "rewardPulse": {
+            "label": "逃生窗口",
+            "detail": "速度别断",
+            "rarity": "epic"
+          },
+          "rewardPulseDuration": 1.6,
+          "tempoSurgeSec": 5.5,
+          "cameraImpact": {
+            "shake": 0.62,
+            "fovKick": 3.5
+          }
+        },
+        {
+          "id": "exit_chase_start",
+          "waveId": "exit_chase",
+          "triggerAt": 1,
+          "dialogueTrigger": "exit_chase_started",
+          "spawnWarning": {
+            "label": "跑",
+            "detail": "别恋战，进电梯"
+          },
+          "spawnWarningDuration": 2.45,
+          "tempoSurgeSec": 4,
+          "cameraImpact": {
+            "shake": 0.55,
+            "fovKick": 3.2
+          },
+          "effects": [
+            {
+              "type": "dashBurst",
+              "position": [
+                0,
+                0,
+                7.2
+              ],
+              "direction": [
+                0,
+                0,
+                -1
+              ],
+              "lifetime": 0.55,
+              "intensity": 2.4
+            }
+          ],
+          "audio": {
+            "key": "elite_warning",
+            "intensity": 0.95
+          }
+        }
+      ],
+      "bossPhases": [
+        {
+          "id": "level_01_elite_half_memory",
+          "actorId": "custodian_elite",
+          "tier": "leader",
+          "threshold": 0.5,
+          "actions": [
+            {
+              "type": "queue_dialogue",
+              "trigger": "elite_hp_50"
+            },
+            {
+              "type": "camera_impact",
+              "cameraImpact": {
+                "shake": 0.38,
+                "fovKick": 1.8,
+                "rumble": 0.14,
+                "rumbleDuration": 0.18
+              }
+            }
+          ]
+        }
+      ],
+      "enemyDeathBeats": [
+        {
+          "archetypeId": "custodian_elite",
+          "spawnWarning": {
+            "label": "维修主管倒下",
+            "detail": "地面在震：冲向维修电梯"
+          },
+          "spawnWarningDuration": 2.4,
+          "cameraImpact": {
+            "shake": 1.15,
+            "fovKick": 6.2,
+            "rumble": 0.85,
+            "rumbleDuration": 0.85
+          },
+          "dashBurst": {
+            "lifetime": 0.62,
+            "intensity": 2.8
+          }
+        }
+      ],
+      "economy": {
+        "memoryFragments": {
+          "default": 1,
+          "byArchetype": {
+            "custodian_elite": 18,
+            "signal_turret": 3,
+            "clamp_bot": 2
+          }
+        },
+        "killStreakWindowSec": 3.8,
+        "memoryCacheMilestones": [
+          {
+            "amount": 10,
+            "label": "体力恢复",
+            "reward": "energy",
+            "rarity": "rare"
+          },
+          {
+            "amount": 28,
+            "label": "呼吸变稳",
+            "reward": "heat",
+            "rarity": "rare"
+          },
+          {
+            "amount": 52,
+            "label": "生命上限恢复",
+            "reward": "health",
+            "rarity": "epic"
+          }
+        ],
+        "curatedUpgradeRolls": [
+          [
+            "pulse_faster_cycle",
+            "pulse_coolant_feed",
+            "rail_overcharge",
+            "core_plating",
+            "servo_stride",
+            "wide_target_cone",
+            "thermal_buffer",
+            "dash_shorter_cd",
+            "field_medicine"
+          ],
+          [
+            "shock_repair_ping",
+            "shock_shorter_cd",
+            "core_cell_damage",
+            "core_cell_preserve",
+            "pulse_chain_mark",
+            "rail_double_line",
+            "last_human_protocol",
+            "dash_shorter_cd",
+            "field_medicine"
+          ]
+        ],
+        "tempoSurge": {
+          "eliteDuration": 6.5,
+          "normalThreshold": 5,
+          "tier2Threshold": 10,
+          "tier1Duration": 4.4,
+          "tier2Duration": 5.8,
+          "tier1HeatRefund": 7,
+          "tier2HeatRefund": 12,
+          "tier1EnergyRefund": 7,
+          "tier2EnergyRefund": 12
+        }
+      },
+      "revive": {
+        "maxRevives": 1,
+        "hpRatio": 0.7,
+        "memoryFragments": 12,
+        "reviveSurgeSec": 9.5,
+        "tempoSurgeSec": 5.5,
+        "blastRadius": 6.5,
+        "blastDamage": 80,
+        "blastKnockback": 6,
+        "rewardPulse": {
+          "label": "第二口气",
+          "detail": "+线索 + 短暂爆发",
+          "rarity": "story"
+        },
+        "rewardPulseDuration": 2.4,
+        "message": "你又醒了。几秒内全身发热。"
+      }
+    }
+  },
+  "contract": {
+    "profileId": "maintenance_bay",
+    "globalRules": [
+      "no_proxy_geometry",
+      "no_fallback_materials",
+      "source_role_traceability"
+    ],
+    "roleRules": [
+      "roomSurface",
+      "door",
+      "keyItem",
+      "interaction",
+      "puzzleStation",
+      "enemy",
+      "exitFixture"
+    ],
+    "levelOverrides": []
+  },
+  "advanced": {
+    "notes": [
+      "Imported from /Users/zhengkaizhang/Downloads/维修舱-可编辑草稿.hp.config.json.",
+      "Builder-native Level 1 official source; sourceLevel is kept as a lightweight shell."
+    ]
+  }
+}

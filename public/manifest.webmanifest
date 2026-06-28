@@ -1,0 +1,21 @@
+{
+  "id": "human-protocol",
+  "name": "Human Protocol",
+  "short_name": "Human Protocol",
+  "description": "A mobile-first first-person survival action escape game.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "landscape",
+  "background_color": "#05070b",
+  "theme_color": "#05070b",
+  "categories": ["games", "entertainment"],
+  "icons": [
+    {
+      "src": "./thumb.jpg",
+      "sizes": "900x900",
+      "type": "image/jpeg",
+      "purpose": "any maskable"
+    }
+  ]
+}

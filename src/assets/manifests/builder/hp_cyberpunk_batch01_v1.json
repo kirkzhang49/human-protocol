@@ -1,0 +1,792 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_cyberpunk_batch01_v1",
+  "label": "HP 赛博朋克手作包 01",
+  "sourceTool": "hp-internal-asset-factory",
+  "generatedAt": "2026-06-11",
+  "assets": [
+    {
+      "modelKey": "room_cyber_gate_turnstile",
+      "label": "安检闸机",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_gate_turnstile_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_gate_turnstile.glb",
+      "sizeMeters": [
+        1.6,
+        1.31,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:foyer",
+        "role:interactive",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_holo_pylon",
+      "label": "导览全息柱",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_holo_pylon_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_holo_pylon.glb",
+      "sizeMeters": [
+        1,
+        2.05,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:foyer",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_cable_trunk",
+      "label": "地面电缆槽",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_cable_trunk_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_cable_trunk.glb",
+      "sizeMeters": [
+        2.871,
+        0.22,
+        1.059
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:foyer",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_mural_circuit_city",
+      "label": "电路城市壁画",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_mural_circuit_city_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_mural_circuit_city.glb",
+      "sizeMeters": [
+        2.28,
+        1.37,
+        0.122
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:foyer",
+        "role:clue",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_security_desk",
+      "label": "安保前台",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_security_desk_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_security_desk.glb",
+      "sizeMeters": [
+        2.2,
+        1.328,
+        1.3
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:foyer",
+        "role:anchor",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_vending_unit",
+      "label": "蛋白贩卖机",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_vending_unit_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_vending_unit.glb",
+      "sizeMeters": [
+        1.1,
+        1.96,
+        0.9
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:foyer",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_monitor_wall",
+      "label": "监控屏墙",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_monitor_wall_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_monitor_wall.glb",
+      "sizeMeters": [
+        2.6,
+        2,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:surveillance",
+        "role:hero",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_camera_cluster",
+      "label": "壁挂摄像簇",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_camera_cluster_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_camera_cluster.glb",
+      "sizeMeters": [
+        0.512,
+        0.527,
+        0.615
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:surveillance",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_server_rack",
+      "label": "薄型服务器柜",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_server_rack_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_server_rack.glb",
+      "sizeMeters": [
+        0.9,
+        2.18,
+        1.15
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:surveillance",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_mural_eye_array",
+      "label": "瞳阵壁画",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_mural_eye_array_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_mural_eye_array.glb",
+      "sizeMeters": [
+        1.98,
+        1.245,
+        0.12
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:surveillance",
+        "role:clue",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_evidence_vitrine",
+      "label": "证物展示罩",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_evidence_vitrine_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_evidence_vitrine.glb",
+      "sizeMeters": [
+        1.2,
+        1.52,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "display_case",
+      "tags": [
+        "lane:surveillance",
+        "role:interactive",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_interrogation_chair",
+      "label": "审讯软椅",
+      "assetKind": "furniture",
+      "family": "chair",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_interrogation_chair_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_interrogation_chair.glb",
+      "sizeMeters": [
+        1.215,
+        1.946,
+        1.3
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "chair",
+      "tags": [
+        "lane:surveillance",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_substation_console",
+      "label": "变电操作台",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_substation_console_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_substation_console.glb",
+      "sizeMeters": [
+        1.9,
+        1.862,
+        1.2
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:power",
+        "role:hero",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_valve_cluster",
+      "label": "冷却阀组",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_valve_cluster_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_valve_cluster.glb",
+      "sizeMeters": [
+        1.4,
+        1.277,
+        1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "pedestal",
+      "tags": [
+        "lane:power",
+        "role:interactive",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_hazard_barrier",
+      "label": "警示护栏",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_hazard_barrier_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_hazard_barrier.glb",
+      "sizeMeters": [
+        1.9,
+        1.173,
+        0.6
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:power",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_pipe_manifold",
+      "label": "壁挂管汇",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_pipe_manifold_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_pipe_manifold.glb",
+      "sizeMeters": [
+        1.6,
+        1.5,
+        0.36
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:power",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_drone_cradle",
+      "label": "无人机充能架",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_drone_cradle_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_drone_cradle.glb",
+      "sizeMeters": [
+        1.5,
+        1.635,
+        1.3
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:power",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_cable_pit_cover",
+      "label": "电缆井盖板",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_cable_pit_cover_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_cable_pit_cover.glb",
+      "sizeMeters": [
+        1.3,
+        0.185,
+        0.91
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "crate",
+      "tags": [
+        "lane:power",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_tv_shrine",
+      "label": "永播电视墙柜",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_tv_shrine_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_tv_shrine.glb",
+      "sizeMeters": [
+        2.2,
+        1.53,
+        1.044
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": true,
+      "clueCapacity": 2,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:apartment",
+        "role:hero",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_kitchen_lab_island",
+      "label": "厨房实验岛台",
+      "assetKind": "furniture",
+      "family": "desk",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_kitchen_lab_island_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_kitchen_lab_island.glb",
+      "sizeMeters": [
+        2,
+        1.3,
+        1.2
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": true,
+      "clueCapacity": 0,
+      "footprintFamily": "table",
+      "tags": [
+        "lane:apartment",
+        "role:anchor",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_sensor_plant",
+      "label": "传感盆栽",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_sensor_plant_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_sensor_plant.glb",
+      "sizeMeters": [
+        0.7,
+        1.103,
+        0.7
+      ],
+      "solid": false,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "lamp",
+      "tags": [
+        "lane:apartment",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_mural_family_glitch",
+      "label": "故障全家福墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_mural_family_glitch_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_mural_family_glitch.glb",
+      "sizeMeters": [
+        2.068,
+        1.24,
+        0.112
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:apartment",
+        "role:clue",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_smart_bed_pod",
+      "label": "智能床舱",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_smart_bed_pod_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_smart_bed_pod.glb",
+      "sizeMeters": [
+        1.461,
+        1.291,
+        2.316
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:apartment",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_operating_pod",
+      "label": "黑诊所手术舱",
+      "assetKind": "furniture",
+      "family": "bed_or_exam_table",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_operating_pod_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_operating_pod.glb",
+      "sizeMeters": [
+        1.6,
+        1.79,
+        2.4
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "bed",
+      "tags": [
+        "lane:clinic_core",
+        "role:hero",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_organ_printer",
+      "label": "器官打印塔",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_organ_printer_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_organ_printer.glb",
+      "sizeMeters": [
+        1.1,
+        2.2,
+        1.12
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:clinic_core",
+        "role:interactive",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_uplink_throne",
+      "label": "神经上行王座",
+      "assetKind": "furniture",
+      "family": "chair",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_uplink_throne_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_uplink_throne.glb",
+      "sizeMeters": [
+        2.114,
+        2.681,
+        1.763
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "chair",
+      "tags": [
+        "lane:clinic_core",
+        "role:hero",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_core_power_spine",
+      "label": "核心供电脊柱",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_core_power_spine_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_core_power_spine.glb",
+      "sizeMeters": [
+        1.1,
+        2.8,
+        1.1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:clinic_core",
+        "role:interactive",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_cryo_column",
+      "label": "冷冻标本柱",
+      "assetKind": "furniture",
+      "family": "display_case",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_cryo_column_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_cryo_column.glb",
+      "sizeMeters": [
+        1.287,
+        2.36,
+        1.1
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:clinic_core",
+        "role:filler",
+        "style:hp-cyberpunk"
+      ]
+    },
+    {
+      "modelKey": "room_cyber_mural_protocol_finale",
+      "label": "协议终幕壁画",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "赛博",
+      "source": "hp-internal-asset-factory",
+      "sourceAssetId": "hp_cyber_mural_protocol_finale_v1",
+      "themeId": "hp_cyberpunk_surgical_blackglass",
+      "glbFile": "../../models-cooked/environment/hp-cyberpunk-batch01/hp_room_cyber_mural_protocol_finale.glb",
+      "sizeMeters": [
+        2.48,
+        1.45,
+        0.115
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:clinic_core",
+        "role:clue",
+        "style:hp-cyberpunk"
+      ]
+    }
+  ]
+}

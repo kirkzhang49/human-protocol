@@ -1,0 +1,150 @@
+{
+  "schemaVersion": "hp.builder.assetPack.v1",
+  "packId": "hp_level01_power_infra_image2_v1",
+  "label": "HP 维护舱电力管线基础设施 (Image2)",
+  "sourceTool": "level01-power-infra-image2-built-in-image-gen",
+  "generatedAt": "2026-06-20",
+  "atlas": "src/assets/textures/environment/level01-power-infra-image2/hp_level01_power_infra_image2_atlas.png",
+  "assets": [
+    {
+      "modelKey": "room_l1_img2_battery_charging_rack",
+      "label": "电池充电架",
+      "assetKind": "furniture",
+      "family": "cabinet",
+      "group": "维修",
+      "source": "level01-power-infra-image2-built-in-image-gen",
+      "sourceAssetId": "hp_room_l1_img2_battery_charging_rack_v1",
+      "themeId": "hp_level01_power_infra_image2",
+      "glbFile": "../../models-cooked/environment/level01-power-infra-image2/room_l1_img2_battery_charging_rack.glb",
+      "sizeMeters": [
+        1.45,
+        1.67,
+        0.662
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "cabinet",
+      "tags": [
+        "lane:level01-power-infra-image2-b",
+        "role:power",
+        "style:hp-level01-maintenance",
+        "source:image2"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_breaker_pylon",
+      "label": "高压断路器柱",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "维修",
+      "source": "level01-power-infra-image2-built-in-image-gen",
+      "sourceAssetId": "hp_room_l1_img2_breaker_pylon_v1",
+      "themeId": "hp_level01_power_infra_image2",
+      "glbFile": "../../models-cooked/environment/level01-power-infra-image2/room_l1_img2_breaker_pylon.glb",
+      "sizeMeters": [
+        0.8,
+        1.745,
+        0.72
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:level01-power-infra-image2-b",
+        "role:power",
+        "style:hp-level01-maintenance",
+        "source:image2"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_valve_manifold_wall",
+      "label": "管线阀门歧管墙",
+      "assetKind": "furniture",
+      "family": "wall_panel_or_picture_frame",
+      "group": "维修",
+      "source": "level01-power-infra-image2-built-in-image-gen",
+      "sourceAssetId": "hp_room_l1_img2_valve_manifold_wall_v1",
+      "themeId": "hp_level01_power_infra_image2",
+      "glbFile": "../../models-cooked/environment/level01-power-infra-image2/room_l1_img2_valve_manifold_wall.glb",
+      "sizeMeters": [
+        1.75,
+        1.22,
+        0.202
+      ],
+      "solid": false,
+      "mount": "wall",
+      "wallPreferred": "back",
+      "canHoldSmallProps": false,
+      "clueCapacity": 2,
+      "footprintFamily": "wall_panel",
+      "tags": [
+        "lane:level01-power-infra-image2-b",
+        "role:pipes",
+        "style:hp-level01-maintenance",
+        "source:image2"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_overhead_rail_gantry",
+      "label": "顶轨吊装小龙门",
+      "assetKind": "furniture",
+      "family": "storage_crate",
+      "group": "维修",
+      "source": "level01-power-infra-image2-built-in-image-gen",
+      "sourceAssetId": "hp_room_l1_img2_overhead_rail_gantry_v1",
+      "themeId": "hp_level01_power_infra_image2",
+      "glbFile": "../../models-cooked/environment/level01-power-infra-image2/room_l1_img2_overhead_rail_gantry.glb",
+      "sizeMeters": [
+        2.25,
+        2.13,
+        0.864
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 0,
+      "footprintFamily": "barrier",
+      "tags": [
+        "lane:level01-power-infra-image2-b",
+        "role:gantry",
+        "style:hp-level01-maintenance",
+        "source:image2"
+      ]
+    },
+    {
+      "modelKey": "room_l1_img2_robot_docking_post",
+      "label": "机器人停靠桩",
+      "assetKind": "furniture",
+      "family": "control_console",
+      "group": "维修",
+      "source": "level01-power-infra-image2-built-in-image-gen",
+      "sourceAssetId": "hp_room_l1_img2_robot_docking_post_v1",
+      "themeId": "hp_level01_power_infra_image2",
+      "glbFile": "../../models-cooked/environment/level01-power-infra-image2/room_l1_img2_robot_docking_post.glb",
+      "sizeMeters": [
+        0.94,
+        1.53,
+        0.852
+      ],
+      "solid": true,
+      "mount": "floor",
+      "wallPreferred": "none",
+      "canHoldSmallProps": false,
+      "clueCapacity": 1,
+      "footprintFamily": "column",
+      "tags": [
+        "lane:level01-power-infra-image2-b",
+        "role:robot",
+        "style:hp-level01-maintenance",
+        "source:image2"
+      ]
+    }
+  ]
+}

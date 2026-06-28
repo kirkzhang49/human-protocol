@@ -1,0 +1,755 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "room_l2_img2_family_portrait_console",
+  "family": "level02-image2",
+  "bundleId": "level02-image2/room_l2_img2_family_portrait_console",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "builder_runtime_resources",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin",
+    "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_family_portrait_console.glb",
+    "rawSource": "registered",
+    "sourceLevels": [
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 6984,
+    "triangleCount": 2328,
+    "byteLength": 279360,
+    "hash": "ef9b45d4b0a1b7d2",
+    "asset": {
+      "modelKey": "room_l2_img2_family_portrait_console",
+      "sourceFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_family_portrait_console.glb",
+      "rawFile": "src/assets/models-cooked/environment/level02-furniture-image2/room_l2_img2_family_portrait_console.glb",
+      "rawSource": "registered",
+      "vertexOffset": 0,
+      "vertexCount": 6984,
+      "triangleCount": 2328,
+      "meshCount": 10,
+      "materialCount": 5,
+      "nodeCount": 11,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_domestic_frame_bottom_rail",
+          "vertexOffset": 0,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.17,
+            0.0325,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.17,
+            -0.0325,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_domestic_frame_left_stile",
+          "vertexOffset": 564,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.54,
+            0.52,
+            0.0325,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.54,
+            -0.52,
+            -0.0325,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_domestic_frame_right_stile",
+          "vertexOffset": 1128,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.54,
+            0.52,
+            0.0325,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.54,
+            -0.52,
+            -0.0325,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_domestic_frame_top_rail",
+          "vertexOffset": 1692,
+          "vertexCount": 564,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.87,
+            0.0325,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.87,
+            -0.0325,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_overthick_wall_backer",
+          "vertexOffset": 2256,
+          "vertexCount": 900,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.46,
+            -0.0425,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.46,
+            0.0425,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_sculptural_image2_art_panel",
+          "vertexOffset": 3156,
+          "vertexCount": 900,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.52,
+            0.0655,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.52,
+            -0.0655,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_shallow_walnut_console_shelf",
+          "vertexOffset": 4056,
+          "vertexCount": 900,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.06,
+            -0.0125,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.06,
+            0.0125,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_small_round_family_knob_left",
+          "vertexOffset": 4956,
+          "vertexCount": 948,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            -0.3,
+            0.06,
+            0.1025,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.3,
+            -0.1025,
+            0.06,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_small_round_family_knob_right",
+          "vertexOffset": 5904,
+          "vertexCount": 948,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0.3,
+            0.06,
+            0.1025,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.3,
+            -0.1025,
+            0.06,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "portrait_under_shelf_hidden_join",
+          "vertexOffset": 6852,
+          "vertexCount": 132,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.28,
+            0.02,
+            0.1075,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.28,
+            -0.02,
+            -0.1075,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.67,
+          0,
+          -0.1125
+        ],
+        "center": [
+          0,
+          0.46,
+          0
+        ],
+        "size": [
+          1.34,
+          0.92,
+          0.225
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "66fbfd1e105b4bc1",
+    "materials": [
+      {
+        "index": 820,
+        "id": "mat:builder-resource:l2-hidden-control-shadow:luik88",
+        "name": "l2_hidden_control_shadow",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.28,
+          0.28,
+          0.25,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.88,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 821,
+        "id": "mat:builder-resource:l2-muted-champagne-hardware:1yd2f6q",
+        "name": "l2_muted_champagne_hardware",
+        "category": "builder-resource",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.64,
+          0.52,
+          0.3,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.42,
+        "metallicFactor": 0.5,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 826,
+        "id": "mat:builder-resource:l2-plain-warm-wallpaper:1810uqr",
+        "name": "l2_plain_warm_wallpaper",
+        "category": "builder-resource",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.8,
+          0.34,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.76,
+          0.73,
+          0.65,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.84,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      },
+      {
+        "index": 827,
+        "id": "mat:builder-resource:l2-image2-residential-art-panel:1cg77oj",
+        "name": "l2_image2_residential_art_panel",
+        "category": "builder-resource",
+        "visualRole": "neutral_surface",
+        "semanticParams": [
+          1,
+          0,
+          0,
+          0
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          1,
+          1,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.72,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 1,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "baseColor",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "hp_level02_furniture_image2_atlas",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_family_portrait_console/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_family_portrait_console/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+            "mimeType": "image/webp",
+            "stats": {
+              "lumaMean": 0.658327,
+              "contrast": 0.289874,
+              "chroma": 0.221643,
+              "detail": 0.075651
+            },
+            "generated": false,
+            "layer": 62
+          }
+        ]
+      },
+      {
+        "index": 828,
+        "id": "mat:builder-resource:l2-gallery-warm-walnut:qu736k",
+        "name": "l2_gallery_warm_walnut",
+        "category": "builder-resource",
+        "visualRole": "exhibit_warm",
+        "semanticParams": [
+          6,
+          0.8,
+          0.34,
+          0.18
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.56,
+          0.34,
+          0.18,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.52,
+        "metallicFactor": 0,
+        "aoStrength": 1,
+        "materialKind": 0,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": []
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [
+      {
+        "layer": 62,
+        "semantic": "baseColor",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_family_portrait_console/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+        "name": "hp_level02_furniture_image2_atlas",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/level02-image2/room_l2_img2_family_portrait_console/textures/basecolor-62-hp-level02-furniture-image2-atlas.webp",
+        "mimeType": "image/webp",
+        "stats": {
+          "lumaMean": 0.658327,
+          "contrast": 0.289874,
+          "chroma": 0.221643,
+          "detail": 0.075651
+        }
+      }
+    ],
+    "materialTextureSize": 512,
+    "materialTextures": []
+  }
+}

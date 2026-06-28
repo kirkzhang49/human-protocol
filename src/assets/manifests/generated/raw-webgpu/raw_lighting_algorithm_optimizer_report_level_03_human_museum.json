@@ -1,0 +1,91 @@
+{
+  "schemaVersion": "hp.raw-webgpu.level03-lighting-optimizer-report.v1",
+  "objective": "reduce flat cyan wash, strengthen contact shadows, keep wall shadows clean, preserve raw WebGPU cost",
+  "families": 50000,
+  "candidatesPerFamily": 1000,
+  "candidatesEvaluated": 50000001,
+  "elapsedMs": 53880,
+  "current": {"score": 95.271905, "depthCue": 0.965370, "contactShadow": 0.823481, "materialReadability": 0.979029, "colorBalance": 0.999385, "shadowCleanliness": 0.994147, "robotReadability": 0.948178, "performance": 0.962506, "flatPenalty": 0.106061, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.096197, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.008714, "overCostPenalty": 0.037494},
+  "best": {"score": 102.214030, "depthCue": 0.969869, "contactShadow": 0.995230, "materialReadability": 0.990626, "colorBalance": 0.997103, "shadowCleanliness": 0.998793, "robotReadability": 0.994117, "performance": 0.962506, "flatPenalty": 0.003156, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.004157, "overCostPenalty": 0.037494},
+  "improvement": 6.942125,
+  "bestGlobal": {"shadowStrengthHigh": 0.897802, "shadowStrengthBalanced": 0.705360, "shadowBias": 0.003054, "normalBias": 0.007999, "specularGain": 1.154953, "contactGain": 1.026757, "wallGuard": 0.728706},
+  "roomResults": {
+    "level_03_entry_hall": {
+      "before": {"score": 85.293038, "depthCue": 0.945361, "contactShadow": 0.650609, "materialReadability": 0.984998, "colorBalance": 1.000000, "shadowCleanliness": 0.985683, "robotReadability": 0.910228, "performance": 0.994286, "flatPenalty": 0.184824, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.208040, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.009000, "overCostPenalty": 0.005714},
+      "after": {
+      "artist": {"exposure": 1.151807, "contrast": 1.276894, "saturation": 0.997376, "warmth": 0.508284},
+      "bounce": {"floor": 0.190000, "ceiling": 0.262257, "side": 0.336651, "shadowDepth": 0.863904},
+      "algorithm": {"ao": 0.772498, "probe": 0.597978, "material": 1.108035, "localLight": 1.014671, "shadowReceiver": 0.830918, "specular": 1.174400, "contact": 1.060957, "wallGuard": 0.752456},
+      "metrics": {"score": 98.818381, "depthCue": 0.973065, "contactShadow": 0.990231, "materialReadability": 1.000000, "colorBalance": 1.000000, "shadowCleanliness": 0.999450, "flatPenalty": 0.022091, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000}
+    }
+    },
+    "level_03_gallery_lobby": {
+      "before": {"score": 90.923250, "depthCue": 0.956547, "contactShadow": 0.803249, "materialReadability": 0.984998, "colorBalance": 1.000000, "shadowCleanliness": 0.994945, "robotReadability": 0.946862, "performance": 0.987879, "flatPenalty": 0.124872, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.108787, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.009000, "overCostPenalty": 0.012121},
+      "after": {
+      "artist": {"exposure": 1.119329, "contrast": 1.269267, "saturation": 0.984253, "warmth": 0.500684},
+      "bounce": {"floor": 0.190000, "ceiling": 0.260923, "side": 0.336651, "shadowDepth": 0.927207},
+      "algorithm": {"ao": 0.778897, "probe": 0.590922, "material": 1.108035, "localLight": 1.049597, "shadowReceiver": 0.843128, "specular": 1.174400, "contact": 1.048903, "wallGuard": 0.744085},
+      "metrics": {"score": 99.044793, "depthCue": 0.963164, "contactShadow": 0.998102, "materialReadability": 1.000000, "colorBalance": 1.000000, "shadowCleanliness": 0.999988, "flatPenalty": 0.000000, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000}
+    }
+    },
+    "level_03_tool_exhibit": {
+      "before": {"score": 89.101072, "depthCue": 0.963207, "contactShadow": 0.751395, "materialReadability": 0.984998, "colorBalance": 1.000000, "shadowCleanliness": 0.992582, "robotReadability": 0.934417, "performance": 0.970612, "flatPenalty": 0.135694, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.137491, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.009000, "overCostPenalty": 0.029388},
+      "after": {
+      "artist": {"exposure": 1.177879, "contrast": 1.279154, "saturation": 1.009261, "warmth": 0.562430},
+      "bounce": {"floor": 0.190000, "ceiling": 0.255590, "side": 0.340000, "shadowDepth": 0.899289},
+      "algorithm": {"ao": 0.799970, "probe": 0.573367, "material": 1.108035, "localLight": 1.177008, "shadowReceiver": 0.836437, "specular": 1.174400, "contact": 1.067077, "wallGuard": 0.780039},
+      "metrics": {"score": 99.081495, "depthCue": 0.978757, "contactShadow": 1.000000, "materialReadability": 0.999641, "colorBalance": 1.000000, "shadowCleanliness": 1.000000, "flatPenalty": 0.000000, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000}
+    }
+    },
+    "level_03_voice_exhibit": {
+      "before": {"score": 88.830528, "depthCue": 0.968261, "contactShadow": 0.766026, "materialReadability": 0.966069, "colorBalance": 0.997633, "shadowCleanliness": 0.992766, "robotReadability": 0.927697, "performance": 0.948408, "flatPenalty": 0.130371, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.127951, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.009000, "overCostPenalty": 0.051592},
+      "after": {
+      "artist": {"exposure": 1.186417, "contrast": 1.279554, "saturation": 1.021659, "warmth": 0.581503},
+      "bounce": {"floor": 0.190000, "ceiling": 0.255923, "side": 0.340000, "shadowDepth": 0.905119},
+      "algorithm": {"ao": 0.809414, "probe": 0.561061, "material": 1.108035, "localLight": 1.220000, "shadowReceiver": 0.836836, "specular": 1.174400, "contact": 1.067077, "wallGuard": 0.791706},
+      "metrics": {"score": 98.102780, "depthCue": 0.975239, "contactShadow": 1.000000, "materialReadability": 0.978170, "colorBalance": 0.998541, "shadowCleanliness": 1.000000, "flatPenalty": 0.000000, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000}
+    }
+    },
+    "level_03_body_exhibit": {
+      "before": {"score": 92.304838, "depthCue": 0.973296, "contactShadow": 0.865713, "materialReadability": 0.966069, "colorBalance": 1.000000, "shadowCleanliness": 0.994900, "robotReadability": 0.951622, "performance": 0.945143, "flatPenalty": 0.098580, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.064967, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.009000, "overCostPenalty": 0.054857},
+      "after": {
+      "artist": {"exposure": 1.159365, "contrast": 1.275294, "saturation": 1.012438, "warmth": 0.561503},
+      "bounce": {"floor": 0.207283, "ceiling": 0.260923, "side": 0.340000, "shadowDepth": 0.928672},
+      "algorithm": {"ao": 0.820449, "probe": 0.561838, "material": 1.108035, "localLight": 1.220000, "shadowReceiver": 0.841856, "specular": 1.174400, "contact": 1.080957, "wallGuard": 0.787456},
+      "metrics": {"score": 97.693700, "depthCue": 0.960843, "contactShadow": 0.997259, "materialReadability": 0.978401, "colorBalance": 1.000000, "shadowCleanliness": 1.000000, "flatPenalty": 0.000000, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000}
+    }
+    },
+    "level_03_central_archive": {
+      "before": {"score": 95.335881, "depthCue": 0.953194, "contactShadow": 0.928573, "materialReadability": 0.984998, "colorBalance": 0.998580, "shadowCleanliness": 0.999094, "robotReadability": 0.976939, "performance": 0.983217, "flatPenalty": 0.068087, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.026144, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.016000, "overCostPenalty": 0.016783},
+      "after": {
+      "artist": {"exposure": 1.085774, "contrast": 1.272601, "saturation": 0.977398, "warmth": 0.523503},
+      "bounce": {"floor": 0.190000, "ceiling": 0.254923, "side": 0.340000, "shadowDepth": 0.930000},
+      "algorithm": {"ao": 0.822761, "probe": 0.561061, "material": 1.108035, "localLight": 1.154705, "shadowReceiver": 0.856812, "specular": 1.174400, "contact": 1.055570, "wallGuard": 0.783715},
+      "metrics": {"score": 98.743427, "depthCue": 0.958762, "contactShadow": 0.996364, "materialReadability": 0.997098, "colorBalance": 1.000000, "shadowCleanliness": 1.000000, "flatPenalty": 0.000000, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000}
+    }
+    },
+    "level_03_official_exit_room": {
+      "before": {"score": 97.814728, "depthCue": 0.997721, "contactShadow": 0.998802, "materialReadability": 0.981071, "colorBalance": 0.999483, "shadowCleanliness": 0.999059, "robotReadability": 0.989481, "performance": 0.908000, "flatPenalty": 0.000000, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.000000, "overCostPenalty": 0.092000},
+      "after": {
+      "artist": {"exposure": 1.160051, "contrast": 1.223455, "saturation": 0.983694, "warmth": 0.647700},
+      "bounce": {"floor": 0.390000, "ceiling": 0.213192, "side": 0.266897, "shadowDepth": 0.925359},
+      "algorithm": {"ao": 1.050695, "probe": 0.647595, "material": 0.999294, "localLight": 1.220000, "shadowReceiver": 1.020000, "specular": 1.154826, "contact": 1.107077, "wallGuard": 0.803373},
+      "metrics": {"score": 96.713638, "depthCue": 0.979253, "contactShadow": 0.984656, "materialReadability": 0.981071, "colorBalance": 0.981177, "shadowCleanliness": 0.992109, "flatPenalty": 0.000000, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000}
+    }
+    }
+  },
+  "topCandidates": [
+    {"family": 9363, "candidate": 801, "evaluation": {"score": 102.214030, "depthCue": 0.969869, "contactShadow": 0.995230, "materialReadability": 0.990626, "colorBalance": 0.997103, "shadowCleanliness": 0.998793, "robotReadability": 0.994117, "performance": 0.962506, "flatPenalty": 0.003156, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.004157, "overCostPenalty": 0.037494}, "global": {"shadowStrengthHigh": 0.897802, "shadowStrengthBalanced": 0.705360, "shadowBias": 0.003054, "normalBias": 0.007999, "specularGain": 1.154953, "contactGain": 1.026757, "wallGuard": 0.728706}},
+    {"family": 26021, "candidate": 121, "evaluation": {"score": 102.163562, "depthCue": 0.972720, "contactShadow": 0.993884, "materialReadability": 0.983182, "colorBalance": 0.994597, "shadowCleanliness": 0.996160, "robotReadability": 0.993666, "performance": 0.974737, "flatPenalty": 0.006028, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.001476, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.007143, "overCostPenalty": 0.025263}, "global": {"shadowStrengthHigh": 0.788917, "shadowStrengthBalanced": 0.773589, "shadowBias": 0.003674, "normalBias": 0.007916, "specularGain": 1.219836, "contactGain": 1.070224, "wallGuard": 0.841526}},
+    {"family": 7772, "candidate": 487, "evaluation": {"score": 102.160846, "depthCue": 0.961645, "contactShadow": 0.995140, "materialReadability": 0.987041, "colorBalance": 0.993908, "shadowCleanliness": 0.997875, "robotReadability": 0.995200, "performance": 0.974490, "flatPenalty": 0.004839, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.000000, "overCostPenalty": 0.025510}, "global": {"shadowStrengthHigh": 0.770355, "shadowStrengthBalanced": 0.726577, "shadowBias": 0.002489, "normalBias": 0.010265, "specularGain": 1.096049, "contactGain": 1.108887, "wallGuard": 0.909914}},
+    {"family": 32866, "candidate": 232, "evaluation": {"score": 102.160009, "depthCue": 0.972923, "contactShadow": 0.984994, "materialReadability": 0.986576, "colorBalance": 0.998889, "shadowCleanliness": 0.998651, "robotReadability": 0.989272, "performance": 0.976221, "flatPenalty": 0.002127, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.012437, "overCostPenalty": 0.023779}, "global": {"shadowStrengthHigh": 0.832854, "shadowStrengthBalanced": 0.748920, "shadowBias": 0.004342, "normalBias": 0.006351, "specularGain": 1.018722, "contactGain": 1.111620, "wallGuard": 0.621876}},
+    {"family": 42266, "candidate": 645, "evaluation": {"score": 102.096193, "depthCue": 0.971513, "contactShadow": 0.992385, "materialReadability": 0.986822, "colorBalance": 0.981702, "shadowCleanliness": 0.998794, "robotReadability": 0.994194, "performance": 0.976221, "flatPenalty": 0.006663, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.002534, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.001000, "overCostPenalty": 0.023779}, "global": {"shadowStrengthHigh": 0.801754, "shadowStrengthBalanced": 0.609878, "shadowBias": 0.003577, "normalBias": 0.006252, "specularGain": 0.976006, "contactGain": 1.017826, "wallGuard": 0.770257}},
+    {"family": 33493, "candidate": 242, "evaluation": {"score": 102.095734, "depthCue": 0.955204, "contactShadow": 0.994874, "materialReadability": 0.992759, "colorBalance": 0.994110, "shadowCleanliness": 0.998862, "robotReadability": 0.995270, "performance": 0.974455, "flatPenalty": 0.001457, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.009378, "overCostPenalty": 0.025545}, "global": {"shadowStrengthHigh": 0.800375, "shadowStrengthBalanced": 0.669011, "shadowBias": 0.002084, "normalBias": 0.011635, "specularGain": 1.187618, "contactGain": 1.076724, "wallGuard": 0.655820}},
+    {"family": 11809, "candidate": 487, "evaluation": {"score": 102.088800, "depthCue": 0.963163, "contactShadow": 0.985528, "materialReadability": 0.999978, "colorBalance": 0.999125, "shadowCleanliness": 0.998762, "robotReadability": 0.995681, "performance": 0.976221, "flatPenalty": 0.018057, "cyanWashPenalty": 0.000146, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.006076, "overCostPenalty": 0.023779}, "global": {"shadowStrengthHigh": 0.866076, "shadowStrengthBalanced": 0.750807, "shadowBias": 0.002772, "normalBias": 0.010633, "specularGain": 1.107219, "contactGain": 1.050979, "wallGuard": 0.747016}},
+    {"family": 44948, "candidate": 436, "evaluation": {"score": 102.084674, "depthCue": 0.976221, "contactShadow": 0.985659, "materialReadability": 0.991094, "colorBalance": 0.999888, "shadowCleanliness": 0.998102, "robotReadability": 0.991951, "performance": 0.962138, "flatPenalty": 0.010211, "cyanWashPenalty": 0.000000, "weakContactPenalty": 0.000000, "wallDirtPenalty": 0.000000, "overDarkPenalty": 0.000000, "overCostPenalty": 0.037862}, "global": {"shadowStrengthHigh": 0.898084, "shadowStrengthBalanced": 0.620556, "shadowBias": 0.001868, "normalBias": 0.007360, "specularGain": 1.034412, "contactGain": 1.154110, "wallGuard": 0.685702}}
+  ],
+  "shaderContract": {
+    "algorithm_params": ["ao", "probe", "material", "localLight"],
+    "algorithm_extra": ["shadowReceiver", "specular", "contact", "wallGuard"]
+  }
+}

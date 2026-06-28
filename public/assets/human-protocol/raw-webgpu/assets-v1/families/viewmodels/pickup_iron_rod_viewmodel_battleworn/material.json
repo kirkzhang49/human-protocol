@@ -1,0 +1,643 @@
+{
+  "file": "material.json",
+  "hash": "ffceb2395fd7bb28",
+  "materials": [
+    {
+      "index": 70,
+      "id": "mat:builder-resource:prop-aged-bronze-micro-inlay-001:1ca9691",
+      "name": "prop_aged_bronze_micro_inlay.001",
+      "category": "builder-resource",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.42144,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.84,
+        0.59,
+        0.31,
+        1
+      ],
+      "emissiveFactor": [
+        0.018,
+        0.01,
+        0.002
+      ],
+      "emissiveStrength": 0.018,
+      "roughnessFactor": 0.52,
+      "metallicFactor": 0.94,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 71,
+      "id": "mat:builder-resource:prop-iron-rod-age-black-wrap-v5-001:1ux75wz",
+      "name": "prop_iron_rod_age_black_wrap_v5.001",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.82,
+      "metallicFactor": 0.58,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_viewmodel_iron_rod_battleworn_detail_1024",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/basecolor-17-hp-viewmodel-iron-rod-battleworn-detail-1024.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/basecolor-17-hp-viewmodel-iron-rod-battleworn-detail-1024.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.564656,
+            "contrast": 0.072537,
+            "chroma": 0.041307,
+            "detail": 0.123684
+          },
+          "generated": false,
+          "layer": 17
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "iron-rod-age-normal-v5",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/normal-15-iron-rod-age-normal-v5.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/normal-15-iron-rod-age-normal-v5.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.535291,
+            "contrast": 0.001485,
+            "chroma": 0.777647,
+            "detail": 0.000637
+          },
+          "generated": false,
+          "layer": 15
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "iron-rod-age-roughness-v5",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/metallicroughness-16-iron-rod-age-roughness-v5.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/metallicroughness-16-iron-rod-age-roughness-v5.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.815883,
+            "contrast": 0.092373,
+            "chroma": 0.397027,
+            "detail": 0.022139
+          },
+          "generated": false,
+          "layer": 16
+        }
+      ]
+    },
+    {
+      "index": 72,
+      "id": "mat:builder-resource:prop-iron-rod-age-battered-edge-v5-001:z7i68k",
+      "name": "prop_iron_rod_age_battered_edge_v5.001",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0.48,
+        0.051104,
+        0.34
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.8,
+        0.86,
+        0.8,
+        1
+      ],
+      "emissiveFactor": [
+        0.006,
+        0.01,
+        0.007
+      ],
+      "emissiveStrength": 0.0138,
+      "roughnessFactor": 0.44,
+      "metallicFactor": 0.98,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_viewmodel_iron_rod_battleworn_detail_1024",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/basecolor-17-hp-viewmodel-iron-rod-battleworn-detail-1024.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/basecolor-17-hp-viewmodel-iron-rod-battleworn-detail-1024.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.564656,
+            "contrast": 0.072537,
+            "chroma": 0.041307,
+            "detail": 0.123684
+          },
+          "generated": false,
+          "layer": 17
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "iron-rod-age-normal-v5",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/normal-15-iron-rod-age-normal-v5.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/normal-15-iron-rod-age-normal-v5.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.535291,
+            "contrast": 0.001485,
+            "chroma": 0.777647,
+            "detail": 0.000637
+          },
+          "generated": false,
+          "layer": 15
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "iron-rod-age-roughness-v5",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/metallicroughness-16-iron-rod-age-roughness-v5.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/metallicroughness-16-iron-rod-age-roughness-v5.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.815883,
+            "contrast": 0.092373,
+            "chroma": 0.397027,
+            "detail": 0.022139
+          },
+          "generated": false,
+          "layer": 16
+        }
+      ]
+    },
+    {
+      "index": 73,
+      "id": "mat:builder-resource:prop-iron-rod-age-dark-shaft-v5-001:pmacjv",
+      "name": "prop_iron_rod_age_dark_shaft_v5.001",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.74,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.25,
+        0.33,
+        0.32,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.72,
+      "metallicFactor": 0.9,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_viewmodel_iron_rod_battleworn_detail_1024",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/basecolor-17-hp-viewmodel-iron-rod-battleworn-detail-1024.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/basecolor-17-hp-viewmodel-iron-rod-battleworn-detail-1024.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.564656,
+            "contrast": 0.072537,
+            "chroma": 0.041307,
+            "detail": 0.123684
+          },
+          "generated": false,
+          "layer": 17
+        },
+        {
+          "semantic": "normal",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "iron-rod-age-normal-v5",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/normal-15-iron-rod-age-normal-v5.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/normal-15-iron-rod-age-normal-v5.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.535291,
+            "contrast": 0.001485,
+            "chroma": 0.777647,
+            "detail": 0.000637
+          },
+          "generated": false,
+          "layer": 15
+        },
+        {
+          "semantic": "metallicRoughness",
+          "present": true,
+          "colorSpace": "linear",
+          "name": "iron-rod-age-roughness-v5",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/metallicroughness-16-iron-rod-age-roughness-v5.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/metallicroughness-16-iron-rod-age-roughness-v5.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.815883,
+            "contrast": 0.092373,
+            "chroma": 0.397027,
+            "detail": 0.022139
+          },
+          "generated": false,
+          "layer": 16
+        }
+      ]
+    },
+    {
+      "index": 74,
+      "id": "mat:builder-resource:hp-scraped-hero-steel-edge-detail:ssrnqd",
+      "name": "hp_scraped_hero_steel_edge_detail",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.032112,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.9,
+        0.96,
+        0.9,
+        1
+      ],
+      "emissiveFactor": [
+        0.012,
+        0.018,
+        0.014
+      ],
+      "emissiveStrength": 0.0264,
+      "roughnessFactor": 0.34,
+      "metallicFactor": 0.98,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 75,
+      "id": "mat:builder-resource:hp-oiled-bronze-visible-rail-detail:s425sc",
+      "name": "hp_oiled_bronze_visible_rail_detail",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03144,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.84,
+        0.59,
+        0.31,
+        1
+      ],
+      "emissiveFactor": [
+        0.018,
+        0.01,
+        0.002
+      ],
+      "emissiveStrength": 0.018,
+      "roughnessFactor": 0.52,
+      "metallicFactor": 0.94,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 76,
+      "id": "mat:builder-resource:hp-battered-steel-raised-detail:nudwb",
+      "name": "hp_battered_steel_raised_detail",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.031104,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.8,
+        0.86,
+        0.8,
+        1
+      ],
+      "emissiveFactor": [
+        0.006,
+        0.01,
+        0.007
+      ],
+      "emissiveStrength": 0.0138,
+      "roughnessFactor": 0.44,
+      "metallicFactor": 0.98,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 77,
+      "id": "mat:builder-resource:hp-oxidized-dark-cut-detail:12is0i",
+      "name": "hp_oxidized_dark_cut_detail",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.25,
+        0.33,
+        0.32,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.72,
+      "metallicFactor": 0.9,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 78,
+      "id": "mat:builder-resource:hp-aged-porcelain-registry-label-detail:15wbr4v",
+      "name": "hp_aged_porcelain_registry_label_detail",
+      "category": "builder-resource",
+      "visualRole": "screen_label",
+      "semanticParams": [
+        10,
+        0.78,
+        0.36,
+        0.08
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.6,
+        0.64,
+        0.6,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.66,
+      "metallicFactor": 0.82,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 79,
+      "id": "mat:builder-resource:hp-protocol-cyan-identity-glass-detail:181hw5i",
+      "name": "hp_protocol_cyan_identity_glass_detail",
+      "category": "builder-resource",
+      "visualRole": "route_gold",
+      "semanticParams": [
+        8,
+        0.9,
+        0.4256,
+        0.06
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.48,
+        0.82,
+        0.82,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0.055,
+        0.065
+      ],
+      "emissiveStrength": 0.07,
+      "roughnessFactor": 0.44,
+      "metallicFactor": 0.18,
+      "aoStrength": 1,
+      "materialKind": 6,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 17,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/basecolor-17-hp-viewmodel-iron-rod-battleworn-detail-1024.webp",
+      "name": "hp_viewmodel_iron_rod_battleworn_detail_1024",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/basecolor-17-hp-viewmodel-iron-rod-battleworn-detail-1024.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.564656,
+        "contrast": 0.072537,
+        "chroma": 0.041307,
+        "detail": 0.123684
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": [
+    {
+      "layer": 15,
+      "semantic": "normal",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/normal-15-iron-rod-age-normal-v5.webp",
+      "name": "iron-rod-age-normal-v5",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/normal-15-iron-rod-age-normal-v5.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.535291,
+        "contrast": 0.001485,
+        "chroma": 0.777647,
+        "detail": 0.000637
+      }
+    },
+    {
+      "layer": 16,
+      "semantic": "metallicRoughness",
+      "colorSpace": "linear",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/metallicroughness-16-iron-rod-age-roughness-v5.webp",
+      "name": "iron-rod-age-roughness-v5",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/viewmodels/pickup_iron_rod_viewmodel_battleworn/textures/metallicroughness-16-iron-rod-age-roughness-v5.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.815883,
+        "contrast": 0.092373,
+        "chroma": 0.397027,
+        "detail": 0.022139
+      }
+    }
+  ]
+}

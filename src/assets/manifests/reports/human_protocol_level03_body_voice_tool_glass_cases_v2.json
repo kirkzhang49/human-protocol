@@ -1,0 +1,339 @@
+{
+  "schemaVersion": "hp.asset-blueprint-report.v1",
+  "generatedBy": "scripts/asset-build/blender-bake-level03-hero-exhibits-image2.py",
+  "qualityTargets": [
+    "first-person readable at 2-6m",
+    "no white proxy boxes",
+    "transparent cyan glass is visible but still leaves internal 3D objects readable",
+    "body exhibit avoids gore",
+    "voice exhibit has microphone/larynx/tuning-fork-like acoustic identity",
+    "tool exhibit contains the sidearm and iron rod inside the glass footprint"
+  ],
+  "textureEvidence": [
+    "src/assets/textures/environment/level03-hero-exhibits/l3_glass_case_aged_brass_trim_v2.png",
+    "src/assets/textures/environment/level03-hero-exhibits/l3_glass_case_cut_foam_tray_v2.png",
+    "src/assets/textures/environment/level03-hero-exhibits/l3_glass_case_dark_mechanism_v2.png",
+    "src/assets/textures/environment/level03-hero-exhibits/l3_glass_case_smoked_black_panel_v2.png",
+    "src/assets/textures/environment/level03-hero-exhibits/l3_glass_case_specimen_ivory_scan_v2.png"
+  ],
+  "preview": "src/assets/manifests/reports/human_protocol_level03_body_voice_tool_glass_cases_preview.png",
+  "blueprints": [
+    {
+      "assetFamily": "level03_hero_exhibit_glass_case",
+      "modelKey": "room_museum_voice_archive_case",
+      "role": "Level 3 voice exhibit key-room hero prop; communicates recorded voice memory through a refined acoustic machine, not flat posters.",
+      "scaleMeters": {
+        "width": 1.42,
+        "height": 1.72,
+        "depth": 0.92,
+        "readabilityDistance": "2.0-5.0m"
+      },
+      "silhouette": [
+        "rectangular smoked glass vitrine",
+        "brass horn",
+        "twin tape reels",
+        "single frequency rail",
+        "reduced waveform bars",
+        "larynx memory capsule"
+      ],
+      "materialSlots": [
+        "smoked_black_metal",
+        "aged_brass",
+        "cyan_glass",
+        "dark_mechanism",
+        "cyan_light",
+        "amber_light",
+        "red_pin"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.71,
+          0.86,
+          0.46
+        ],
+        "blocks": "case footprint only"
+      },
+      "expectedPlacement": {
+        "levelId": "level_03_human_museum",
+        "roomId": "level_03_voice_exhibit",
+        "position": [
+          12.2,
+          0.045,
+          2.0
+        ],
+        "rotationY": -0.08
+      },
+      "runtimeContent": "No puzzle answers or localized story text baked into mesh."
+    },
+    {
+      "assetFamily": "level03_hero_exhibit_glass_case",
+      "modelKey": "room_museum_skeleton_vitrine",
+      "role": "Level 3 body exhibit critical-path hero prop; clean bionic torso memory specimen with surgical preservation language, no gore.",
+      "scaleMeters": {
+        "width": 1.62,
+        "height": 2.12,
+        "depth": 0.9,
+        "readabilityDistance": "2.0-6.0m"
+      },
+      "silhouette": [
+        "tall smoked glass vitrine",
+        "abstract torso memory core",
+        "minimal ivory rib lattice",
+        "bionic spine",
+        "single oval scan frame",
+        "one preservation light tube"
+      ],
+      "materialSlots": [
+        "smoked_black_metal",
+        "aged_brass",
+        "cyan_glass",
+        "ivory_memory",
+        "dark_mechanism",
+        "cyan_light",
+        "amber_light"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          0.81,
+          1.06,
+          0.45
+        ],
+        "blocks": "case footprint only"
+      },
+      "expectedPlacement": {
+        "levelId": "level_03_human_museum",
+        "roomId": "level_03_body_exhibit",
+        "position": [
+          -3.15,
+          0.045,
+          -5.35
+        ],
+        "rotationY": -0.08
+      },
+      "runtimeContent": "No puzzle answers or localized story text baked into mesh."
+    },
+    {
+      "assetFamily": "level03_hero_exhibit_glass_case",
+      "modelKey": "room_museum_last_human_tool_vitrine",
+      "role": "Level 3 horizontal tool exhibit; last-human sidearm and iron rod are physically inside one transparent case.",
+      "scaleMeters": {
+        "width": 2.1,
+        "height": 1.18,
+        "depth": 0.9,
+        "readabilityDistance": "1.5-5.0m"
+      },
+      "silhouette": [
+        "horizontal smoked glass vitrine",
+        "cut foam tray",
+        "black sidearm",
+        "iron rod",
+        "brass retention bands",
+        "cyan locator lights"
+      ],
+      "materialSlots": [
+        "smoked_black_metal",
+        "aged_brass",
+        "cyan_glass",
+        "cut_foam",
+        "dark_weapon_metal",
+        "cyan_light",
+        "amber_light"
+      ],
+      "collisionProxy": {
+        "type": "box",
+        "halfSize": [
+          1.05,
+          0.59,
+          0.45
+        ],
+        "blocks": "case footprint only"
+      },
+      "expectedPlacement": {
+        "levelId": "level_03_human_museum",
+        "roomId": "level_03_tool_exhibit",
+        "position": [
+          0.0,
+          0.045,
+          -14.95
+        ],
+        "rotationY": 0.04
+      },
+      "runtimeContent": "Story article remains in config; weapon contents are non-interactive museum specimens."
+    }
+  ],
+  "qaEvidence": {
+    "glbAudit": [
+      {
+        "file": "src/assets/models-cooked/environment/level03/hp_room_museum_voice_archive_case.glb",
+        "bytes": 597508,
+        "images": [
+          "l3_glass_case_aged_brass_trim_v2",
+          "l3_glass_case_smoked_black_panel_v2",
+          "l3_glass_case_specimen_ivory_scan_v2",
+          "l3_glass_case_dark_mechanism_v2"
+        ],
+        "materialCount": 9,
+        "nodeCount": 55,
+        "namedInternalRoots": [
+          "voice_internal_3d_asset_root_horn_reels_larynx"
+        ],
+        "texturedMaterials": [
+          "l3_exhibit_aged_brass",
+          "l3_exhibit_powdercoat_body",
+          "l3_exhibit_smoked_black_metal",
+          "l3_exhibit_preserved_ivory_memory",
+          "l3_exhibit_dark_object_metal"
+        ]
+      },
+      {
+        "file": "src/assets/models-cooked/environment/level03/hp_room_museum_skeleton_vitrine.glb",
+        "bytes": 494272,
+        "images": [
+          "l3_glass_case_aged_brass_trim_v2",
+          "l3_glass_case_smoked_black_panel_v2",
+          "l3_glass_case_specimen_ivory_scan_v2",
+          "l3_glass_case_dark_mechanism_v2"
+        ],
+        "materialCount": 9,
+        "nodeCount": 48,
+        "namedInternalRoots": [
+          "body_internal_3d_asset_root_bionic_torso_memory"
+        ],
+        "texturedMaterials": [
+          "l3_exhibit_aged_brass",
+          "l3_exhibit_powdercoat_body",
+          "l3_exhibit_smoked_black_metal",
+          "l3_exhibit_preserved_ivory_memory",
+          "l3_exhibit_dark_object_metal"
+        ]
+      },
+      {
+        "file": "src/assets/models-cooked/environment/level03/hp_room_museum_last_human_tool_vitrine.glb",
+        "bytes": 421236,
+        "images": [
+          "l3_glass_case_aged_brass_trim_v2",
+          "l3_glass_case_smoked_black_panel_v2",
+          "l3_glass_case_dark_mechanism_v2",
+          "l3_glass_case_cut_foam_tray_v2"
+        ],
+        "materialCount": 9,
+        "nodeCount": 56,
+        "namedInternalRoots": [
+          "tool_internal_3d_asset_root_sidearm_and_iron_rod"
+        ],
+        "texturedMaterials": [
+          "l3_exhibit_aged_brass",
+          "l3_exhibit_powdercoat_body",
+          "l3_exhibit_smoked_black_metal",
+          "l3_exhibit_dark_object_metal",
+          "l3_exhibit_cut_foam_tray"
+        ]
+      },
+      {
+        "file": "src/assets/models-cooked/environment/level03/age_museum_voice_booth.glb",
+        "bytes": 597508,
+        "images": [
+          "l3_glass_case_aged_brass_trim_v2",
+          "l3_glass_case_smoked_black_panel_v2",
+          "l3_glass_case_specimen_ivory_scan_v2",
+          "l3_glass_case_dark_mechanism_v2"
+        ],
+        "materialCount": 9,
+        "nodeCount": 55,
+        "namedInternalRoots": [
+          "voice_internal_3d_asset_root_horn_reels_larynx"
+        ],
+        "texturedMaterials": [
+          "l3_exhibit_aged_brass",
+          "l3_exhibit_powdercoat_body",
+          "l3_exhibit_smoked_black_metal",
+          "l3_exhibit_preserved_ivory_memory",
+          "l3_exhibit_dark_object_metal"
+        ]
+      },
+      {
+        "file": "src/assets/models-cooked/environment/level03/age_museum_body_reference_case.glb",
+        "bytes": 494272,
+        "images": [
+          "l3_glass_case_aged_brass_trim_v2",
+          "l3_glass_case_smoked_black_panel_v2",
+          "l3_glass_case_specimen_ivory_scan_v2",
+          "l3_glass_case_dark_mechanism_v2"
+        ],
+        "materialCount": 9,
+        "nodeCount": 48,
+        "namedInternalRoots": [
+          "body_internal_3d_asset_root_bionic_torso_memory"
+        ],
+        "texturedMaterials": [
+          "l3_exhibit_aged_brass",
+          "l3_exhibit_powdercoat_body",
+          "l3_exhibit_smoked_black_metal",
+          "l3_exhibit_preserved_ivory_memory",
+          "l3_exhibit_dark_object_metal"
+        ]
+      }
+    ],
+    "insideBoundsAudits": [
+      {
+        "modelKey": "room_museum_voice_archive_case",
+        "innerBounds": {
+          "min": [
+            -0.6549999999999999,
+            -0.405,
+            0.26
+          ],
+          "max": [
+            0.6549999999999999,
+            0.405,
+            1.5
+          ]
+        },
+        "checkedMeshCount": 22,
+        "outsideMeshCount": 0,
+        "outside": []
+      },
+      {
+        "modelKey": "room_museum_skeleton_vitrine",
+        "innerBounds": {
+          "min": [
+            -0.755,
+            -0.395,
+            0.26
+          ],
+          "max": [
+            0.755,
+            0.395,
+            1.9000000000000001
+          ]
+        },
+        "checkedMeshCount": 15,
+        "outsideMeshCount": 0,
+        "outside": []
+      },
+      {
+        "modelKey": "room_museum_last_human_tool_vitrine",
+        "innerBounds": {
+          "min": [
+            -0.995,
+            -0.395,
+            0.26
+          ],
+          "max": [
+            0.995,
+            0.395,
+            0.96
+          ]
+        },
+        "checkedMeshCount": 23,
+        "outsideMeshCount": 0,
+        "outside": []
+      }
+    ],
+    "pending": [
+      "browser first-person visual review"
+    ]
+  }
+}

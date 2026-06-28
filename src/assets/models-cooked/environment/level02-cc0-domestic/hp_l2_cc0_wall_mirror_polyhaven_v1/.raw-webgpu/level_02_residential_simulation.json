@@ -1,0 +1,294 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "hp_l2_cc0_wall_mirror_polyhaven_v1",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_wall_mirror_polyhaven_v1.glb",
+  "fileName": "hp_l2_cc0_wall_mirror_polyhaven_v1.glb",
+  "sourceAsset": {
+    "modelKey": "hp_l2_cc0_wall_mirror_polyhaven_v1",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_wall_mirror_polyhaven_v1.glb",
+    "file": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_wall_mirror_polyhaven_v1.glb",
+    "sizeMeters": [
+      0.798,
+      1.22,
+      0.153
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 130068,
+      "meshes": 3,
+      "nodes": 3,
+      "skins": 0,
+      "primitives": 3,
+      "materials": 3,
+      "textures": 3,
+      "images": 3,
+      "accessors": 10,
+      "bufferViews": 11,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 10859
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_wall_mirror_polyhaven_v1.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 550437,
+    "vertexCount": 32577,
+    "triangleCount": 10859,
+    "meshCount": 3,
+    "materialCount": 3,
+    "nodeCount": 3,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.398798,
+        0,
+        -0.074503
+      ],
+      "center": [
+        0,
+        0.61,
+        0.001747
+      ],
+      "size": [
+        0.797596,
+        1.22,
+        0.152499
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "cc0_source_ornate_mirror_01",
+        "vertexOffset": 550437,
+        "vertexCount": 31929,
+        "bindMatrix": [
+          0.61,
+          0,
+          0,
+          0,
+          0,
+          0.61,
+          0,
+          0,
+          0,
+          0,
+          0.61,
+          0,
+          0,
+          0.61,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.639344,
+          0,
+          0,
+          0,
+          0,
+          1.639344,
+          0,
+          0,
+          0,
+          0,
+          1.639344,
+          0,
+          0,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_wall_mirror_back_mount",
+        "vertexOffset": 582366,
+        "vertexCount": 324,
+        "bindMatrix": [
+          0.287129,
+          0,
+          0,
+          0,
+          0,
+          0.287129,
+          0,
+          0,
+          0,
+          0,
+          0.287129,
+          0,
+          0,
+          0.2196,
+          -0.052,
+          1
+        ],
+        "inverseBindMatrix": [
+          3.48275,
+          0,
+          0,
+          0,
+          0,
+          3.48275,
+          0,
+          0,
+          0,
+          0,
+          3.48275,
+          0,
+          0,
+          -0.764812,
+          0.181103,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_wall_mirror_lower_cyan_index",
+        "vertexOffset": 582690,
+        "vertexCount": 324,
+        "bindMatrix": [
+          0.079758,
+          0,
+          0,
+          0,
+          0,
+          0.079758,
+          0,
+          0,
+          0,
+          0,
+          0.079758,
+          0,
+          0.159516,
+          0.1281,
+          0.053,
+          1
+        ],
+        "inverseBindMatrix": [
+          12.5379,
+          0,
+          0,
+          0,
+          0,
+          12.5379,
+          0,
+          0,
+          0,
+          0,
+          12.5379,
+          0,
+          -2,
+          -1.606105,
+          -0.664509,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_v62qzt",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_recovery_foyer",
+      "secondaryRoomId": null,
+      "position": [
+        3,
+        1.5,
+        8.7815
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3,
+          1.5,
+          8.7815
+        ],
+        "halfSize": [
+          0.399,
+          0.61,
+          0.0765
+        ]
+      }
+    },
+    {
+      "id": "prop:prop_odm2f5",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        -9.0185,
+        1.5,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -9.0185,
+          1.5,
+          3.5
+        ],
+        "halfSize": [
+          0.399,
+          0.61,
+          0.0765
+        ]
+      }
+    }
+  ]
+}

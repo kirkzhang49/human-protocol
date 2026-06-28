@@ -1,0 +1,93 @@
+{
+  "atlas": "hp-builder-ui-image2-atlas-v1.png",
+  "atlasSize": [
+    1024,
+    1024
+  ],
+  "slices": {
+    "project_cover_frame": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 224,
+      "file": "slices/hp-builder-ui-project-cover-frame-v1.png"
+    },
+    "story_preview_panel": {
+      "x": 0,
+      "y": 240,
+      "w": 512,
+      "h": 224,
+      "file": "slices/hp-builder-ui-story-preview-panel-v1.png"
+    },
+    "playtest_cta_plate": {
+      "x": 0,
+      "y": 480,
+      "w": 380,
+      "h": 112,
+      "file": "slices/hp-builder-ui-playtest-cta-plate-v1.png"
+    },
+    "publish_badge_ready": {
+      "x": 540,
+      "y": 0,
+      "w": 184,
+      "h": 48,
+      "file": "slices/hp-builder-ui-publish-badge-ready-v1.png"
+    },
+    "publish_badge_warn": {
+      "x": 740,
+      "y": 0,
+      "w": 184,
+      "h": 48,
+      "file": "slices/hp-builder-ui-publish-badge-warn-v1.png"
+    },
+    "inspector_tab_lamp_story": {
+      "x": 540,
+      "y": 80,
+      "w": 192,
+      "h": 64,
+      "file": "slices/hp-builder-ui-tab-lamp-story-v1.png"
+    },
+    "inspector_tab_lamp_light": {
+      "x": 740,
+      "y": 80,
+      "w": 192,
+      "h": 64,
+      "file": "slices/hp-builder-ui-tab-lamp-light-v1.png"
+    },
+    "asset_card_glass": {
+      "x": 540,
+      "y": 176,
+      "w": 284,
+      "h": 336,
+      "file": "slices/hp-builder-ui-asset-card-glass-v1.png"
+    },
+    "lighting_mood_plate": {
+      "x": 0,
+      "y": 608,
+      "w": 380,
+      "h": 96,
+      "file": "slices/hp-builder-ui-lighting-mood-plate-v1.png"
+    },
+    "stage_chrome_frame": {
+      "x": 540,
+      "y": 528,
+      "w": 384,
+      "h": 384,
+      "file": "slices/hp-builder-ui-stage-chrome-frame-v1.png"
+    },
+    "blueprint_header_plate": {
+      "x": 0,
+      "y": 720,
+      "w": 320,
+      "h": 56,
+      "file": "slices/hp-builder-ui-blueprint-header-plate-v1.png"
+    },
+    "room_hud_plate": {
+      "x": 0,
+      "y": 792,
+      "w": 384,
+      "h": 72,
+      "file": "slices/hp-builder-ui-room-hud-plate-v1.png"
+    }
+  }
+}

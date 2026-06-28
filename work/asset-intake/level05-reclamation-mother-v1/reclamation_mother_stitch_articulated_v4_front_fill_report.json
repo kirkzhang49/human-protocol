@@ -1,0 +1,1187 @@
+{
+  "schema": "human-protocol/level05-reclamation-mother-stitch-only@1",
+  "generatedAt": "2026-06-28T16:41:05.042692+00:00",
+  "purpose": "Keep the earlier source-like fragmented silhouette, drive pivots from source mesh bounds, and add the player iron rod as a boss weapon with hit sockets.",
+  "assetAuthorship": {
+    "meshMethod": "source-like decimated shell split into rigid joint chunks, with same-source dark inner shell filling cut gaps",
+    "textures": "source body UVs/images removed; mat_black_inner_frame uses a project Image2 black-metal atlas cut into named UV regions; imported player iron rod keeps production material slots and texcoords",
+    "externalTextureDependency": false,
+    "visibleConnectorGeometry": "none for limb gap filling; added player iron rod weapon under weaponSocket for boss attack readability"
+  },
+  "stitchOnlyProxy": {
+    "sourceVertices": 7807,
+    "sourcePolygons": 4824,
+    "decimateRatio": 0.3,
+    "verticesAfterStitch": 3331,
+    "polygonsAfterStitch": 1364,
+    "verticesBeforeStitch": 4539,
+    "facesBeforeStitch": 1447,
+    "verticesWeldedApprox": 1208,
+    "tinyComponentsRemoved": 106,
+    "stitchMethod": "vertex weld, medium-boundary hole fill, normal consistency, tiny detached component removal; no invented visible rods or armor plates",
+    "verticesAfterExport": 11044,
+    "trianglesAfterExport": 13898,
+    "articulatedPartMeshes": [
+      "back",
+      "head",
+      "left_foot",
+      "left_forearm",
+      "left_hand",
+      "left_shin",
+      "left_thigh",
+      "left_upper_arm",
+      "right_foot",
+      "right_forearm",
+      "right_hand",
+      "right_shin",
+      "right_thigh",
+      "right_upper_arm",
+      "torso"
+    ],
+    "gapFillMeshes": [
+      "back",
+      "head",
+      "left_foot",
+      "left_forearm",
+      "left_hand",
+      "left_shin",
+      "left_thigh",
+      "left_upper_arm",
+      "right_foot",
+      "right_forearm",
+      "right_hand",
+      "right_shin",
+      "right_thigh",
+      "right_upper_arm",
+      "torso"
+    ],
+    "gapFillShellScale": 0.986,
+    "internalCavityFillMeshes": [
+      "part_torso_internal_black_cavity_mass",
+      "part_upper_chest_internal_black_cavity_mass",
+      "part_core_recess_internal_depth_shadow",
+      "part_back_internal_black_cavity_mass"
+    ],
+    "nonInflatingSeamBacking": {
+      "count": 11,
+      "depthMeters": 0.014,
+      "method": "thin dark baffle plates placed inside original source-group bounds to reduce see-through cracks without scaling or thickening the outer robot",
+      "objects": [
+        {
+          "object": "part_torso_upper_fracture_shadow_backing",
+          "sourceGroup": "torso",
+          "parent": "torsoPivot",
+          "boundsMinBlender": [
+            -0.3368,
+            0.0938,
+            2.0372
+          ],
+          "boundsMaxBlender": [
+            0.3508,
+            0.1649,
+            2.5093
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_torso_lower_fracture_shadow_backing",
+          "sourceGroup": "torso",
+          "parent": "torsoPivot",
+          "boundsMinBlender": [
+            -0.2633,
+            0.0559,
+            1.2923
+          ],
+          "boundsMaxBlender": [
+            0.3441,
+            0.1236,
+            1.7255
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_head_inner_fracture_shadow_backing",
+          "sourceGroup": "head",
+          "parent": "headSensorPivot",
+          "boundsMinBlender": [
+            -0.1805,
+            0.0218,
+            2.1384
+          ],
+          "boundsMaxBlender": [
+            0.2728,
+            0.0626,
+            2.4599
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_left_shoulder_socket_shadow_backing",
+          "sourceGroup": "left_upper_arm",
+          "parent": "leftShoulderPivot",
+          "boundsMinBlender": [
+            -0.8451,
+            -0.1951,
+            1.7231
+          ],
+          "boundsMaxBlender": [
+            -0.5536,
+            -0.1304,
+            2.1261
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_left_forearm_split_shadow_backing",
+          "sourceGroup": "left_forearm",
+          "parent": "leftElbowPivot",
+          "boundsMinBlender": [
+            -0.8459,
+            -0.1251,
+            1.1812
+          ],
+          "boundsMaxBlender": [
+            -0.5119,
+            -0.071,
+            1.4379
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_left_thigh_split_shadow_backing",
+          "sourceGroup": "left_thigh",
+          "parent": "leftHipPivot",
+          "boundsMinBlender": [
+            -0.4855,
+            0.0959,
+            0.8243
+          ],
+          "boundsMaxBlender": [
+            -0.2701,
+            0.1363,
+            1.0725
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_left_shin_split_shadow_backing",
+          "sourceGroup": "left_shin",
+          "parent": "leftKneePivot",
+          "boundsMinBlender": [
+            -0.4959,
+            -0.048,
+            0.3922
+          ],
+          "boundsMaxBlender": [
+            -0.2985,
+            -0.0115,
+            0.5975
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_right_shoulder_socket_shadow_backing",
+          "sourceGroup": "right_upper_arm",
+          "parent": "rightShoulderPivot",
+          "boundsMinBlender": [
+            0.5695,
+            -0.0405,
+            1.7418
+          ],
+          "boundsMaxBlender": [
+            0.8074,
+            0.0189,
+            2.1434
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_right_forearm_split_shadow_backing",
+          "sourceGroup": "right_forearm",
+          "parent": "rightElbowPivot",
+          "boundsMinBlender": [
+            0.5683,
+            0.1398,
+            1.2611
+          ],
+          "boundsMaxBlender": [
+            0.8455,
+            0.1886,
+            1.4738
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_right_thigh_split_shadow_backing",
+          "sourceGroup": "right_thigh",
+          "parent": "rightHipPivot",
+          "boundsMinBlender": [
+            0.2315,
+            0.3086,
+            0.8415
+          ],
+          "boundsMaxBlender": [
+            0.4464,
+            0.3497,
+            1.1241
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        },
+        {
+          "object": "part_right_shin_split_shadow_backing",
+          "sourceGroup": "right_shin",
+          "parent": "rightKneePivot",
+          "boundsMinBlender": [
+            0.2467,
+            0.2086,
+            0.3814
+          ],
+          "boundsMaxBlender": [
+            0.4578,
+            0.2467,
+            0.6385
+          ],
+          "policy": "thin dark backing plate clamped inside source group bounds, not an outer armor inflation"
+        }
+      ]
+    },
+    "meshPolish": {
+      "removeDoublesThresholdMeters": 0.008,
+      "fillHoleSides": 96,
+      "tinyComponentRemoval": "remove <=3-face detached pieces below area 0.004",
+      "intent": "reduce brittle holes and hollow reads while preserving the source-like fractured outer silhouette"
+    },
+    "image2Texture": {
+      "enabled": true,
+      "sourceAtlas": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.png",
+      "sourceAtlasSha256": "2808af0a72fb4bc56988f7627fed84e0e2dee1accbd0611833a72aff1e33e26b",
+      "runtimeAtlas": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_runtime_1024.png",
+      "regions": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.regions.json",
+      "contactSheet": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_regions_contact_sheet.png",
+      "runtimeAtlasSha256": "76f4c8cbca78b1bdf51f56e2580404e554500c4f1fc81d46a5ecab1d05ca693f",
+      "pbrMaps": {
+        "roughness": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_roughness_v1_runtime_1024.png",
+        "roughnessSha256": "bee3d7c5c918840da08c13b4f32bfc5eaacf3b24c63a303933b90cb38f01a8e0",
+        "metallic": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_metallic_v1_runtime_1024.png",
+        "metallicSha256": "5ffb6091a283da70e0d5ad0d32656711c78922c9691e291590fa609aadb4f424",
+        "normal": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_normal_v1_runtime_1024.png",
+        "normalSha256": "67382d455bb01bcec98d802495156744f657ed529d0999fc4be6ab778cb5e8a7",
+        "occlusion": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_occlusion_v1_runtime_1024.png",
+        "occlusionSha256": "b045c720054506900c9a0151f4877dc99630ede66bbacee7ac4ec318c23fade9",
+        "normalStrength": 0.24
+      },
+      "materialSlots": [
+        "mat_black_inner_frame"
+      ],
+      "regionCount": 8,
+      "uv": {
+        "uvObjectCount": 50,
+        "uvPolygonCount": 6265,
+        "objects": [
+          {
+            "object": "part_core_body_mount_plate",
+            "texturedPolygons": 44
+          },
+          {
+            "object": "part_core_embedded_socket_housing",
+            "texturedPolygons": 444
+          },
+          {
+            "object": "part_core_front_recess_backplate",
+            "texturedPolygons": 380
+          },
+          {
+            "object": "part_core_dark_socket_ring",
+            "texturedPolygons": 960
+          },
+          {
+            "object": "part_core_socket_upper_contact_lip",
+            "texturedPolygons": 44
+          },
+          {
+            "object": "part_core_socket_lower_contact_lip",
+            "texturedPolygons": 44
+          },
+          {
+            "object": "part_core_socket_left_contact_lip",
+            "texturedPolygons": 44
+          },
+          {
+            "object": "part_core_socket_right_contact_lip",
+            "texturedPolygons": 44
+          },
+          {
+            "object": "part_torso_internal_black_cavity_mass",
+            "texturedPolygons": 288
+          },
+          {
+            "object": "part_upper_chest_internal_black_cavity_mass",
+            "texturedPolygons": 224
+          },
+          {
+            "object": "part_core_recess_internal_depth_shadow",
+            "texturedPolygons": 380
+          },
+          {
+            "object": "part_back_internal_black_cavity_mass",
+            "texturedPolygons": 224
+          },
+          {
+            "object": "part_torso_upper_fracture_shadow_backing",
+            "texturedPolygons": 84
+          },
+          {
+            "object": "part_torso_lower_fracture_shadow_backing",
+            "texturedPolygons": 88
+          },
+          {
+            "object": "part_head_inner_fracture_shadow_backing",
+            "texturedPolygons": 96
+          },
+          {
+            "object": "part_left_shoulder_socket_shadow_backing",
+            "texturedPolygons": 92
+          },
+          {
+            "object": "part_left_forearm_split_shadow_backing",
+            "texturedPolygons": 104
+          },
+          {
+            "object": "part_left_thigh_split_shadow_backing",
+            "texturedPolygons": 104
+          },
+          {
+            "object": "part_left_shin_split_shadow_backing",
+            "texturedPolygons": 104
+          },
+          {
+            "object": "part_right_shoulder_socket_shadow_backing",
+            "texturedPolygons": 92
+          },
+          {
+            "object": "part_right_forearm_split_shadow_backing",
+            "texturedPolygons": 104
+          },
+          {
+            "object": "part_right_thigh_split_shadow_backing",
+            "texturedPolygons": 96
+          },
+          {
+            "object": "part_right_shin_split_shadow_backing",
+            "texturedPolygons": 100
+          },
+          {
+            "object": "mesh_stitch_articulated_left_foot",
+            "texturedPolygons": 82
+          },
+          {
+            "object": "mesh_stitch_articulated_left_thigh",
+            "texturedPolygons": 10
+          },
+          {
+            "object": "mesh_stitch_articulated_left_forearm",
+            "texturedPolygons": 5
+          },
+          {
+            "object": "mesh_stitch_articulated_torso",
+            "texturedPolygons": 152
+          },
+          {
+            "object": "mesh_stitch_articulated_back",
+            "texturedPolygons": 122
+          },
+          {
+            "object": "mesh_stitch_articulated_left_upper_arm",
+            "texturedPolygons": 4
+          },
+          {
+            "object": "mesh_stitch_articulated_right_thigh",
+            "texturedPolygons": 12
+          },
+          {
+            "object": "mesh_stitch_articulated_right_forearm",
+            "texturedPolygons": 9
+          },
+          {
+            "object": "mesh_stitch_articulated_right_foot",
+            "texturedPolygons": 84
+          },
+          {
+            "object": "mesh_stitch_articulated_head",
+            "texturedPolygons": 92
+          },
+          {
+            "object": "mesh_stitch_articulated_right_hand",
+            "texturedPolygons": 11
+          },
+          {
+            "object": "mesh_stitch_articulated_right_upper_arm",
+            "texturedPolygons": 21
+          },
+          {
+            "object": "mesh_stitch_articulated_left_foot_dark_inner",
+            "texturedPolygons": 86
+          },
+          {
+            "object": "mesh_stitch_articulated_left_shin_dark_inner",
+            "texturedPolygons": 36
+          },
+          {
+            "object": "mesh_stitch_articulated_left_thigh_dark_inner",
+            "texturedPolygons": 53
+          },
+          {
+            "object": "mesh_stitch_articulated_left_forearm_dark_inner",
+            "texturedPolygons": 19
+          },
+          {
+            "object": "mesh_stitch_articulated_torso_dark_inner",
+            "texturedPolygons": 248
+          },
+          {
+            "object": "mesh_stitch_articulated_back_dark_inner",
+            "texturedPolygons": 122
+          },
+          {
+            "object": "mesh_stitch_articulated_left_hand_dark_inner",
+            "texturedPolygons": 20
+          },
+          {
+            "object": "mesh_stitch_articulated_left_upper_arm_dark_inner",
+            "texturedPolygons": 149
+          },
+          {
+            "object": "mesh_stitch_articulated_right_thigh_dark_inner",
+            "texturedPolygons": 58
+          },
+          {
+            "object": "mesh_stitch_articulated_right_forearm_dark_inner",
+            "texturedPolygons": 19
+          },
+          {
+            "object": "mesh_stitch_articulated_right_shin_dark_inner",
+            "texturedPolygons": 41
+          },
+          {
+            "object": "mesh_stitch_articulated_right_foot_dark_inner",
+            "texturedPolygons": 90
+          },
+          {
+            "object": "mesh_stitch_articulated_head_dark_inner",
+            "texturedPolygons": 350
+          }
+        ]
+      },
+      "triangulatedBeforeUv": [
+        "part_core_body_mount_plate",
+        "part_core_embedded_socket_housing",
+        "part_core_front_recess_backplate",
+        "part_core_blue_glass",
+        "part_core_blue_front_lens",
+        "part_core_dark_socket_ring",
+        "part_core_socket_upper_contact_lip",
+        "part_core_socket_lower_contact_lip",
+        "part_core_socket_left_contact_lip",
+        "part_core_socket_right_contact_lip",
+        "part_torso_internal_black_cavity_mass",
+        "part_upper_chest_internal_black_cavity_mass",
+        "part_core_recess_internal_depth_shadow",
+        "part_back_internal_black_cavity_mass",
+        "part_torso_upper_fracture_shadow_backing",
+        "part_torso_lower_fracture_shadow_backing",
+        "part_head_inner_fracture_shadow_backing",
+        "part_left_shoulder_socket_shadow_backing",
+        "part_left_forearm_split_shadow_backing",
+        "part_left_thigh_split_shadow_backing",
+        "part_left_shin_split_shadow_backing",
+        "part_right_shoulder_socket_shadow_backing",
+        "part_right_forearm_split_shadow_backing",
+        "part_right_thigh_split_shadow_backing",
+        "part_right_shin_split_shadow_backing",
+        "mesh_stitch_articulated_left_foot",
+        "mesh_stitch_articulated_torso",
+        "mesh_stitch_articulated_back",
+        "mesh_stitch_articulated_left_upper_arm",
+        "mesh_stitch_articulated_right_thigh",
+        "mesh_stitch_articulated_right_shin",
+        "mesh_stitch_articulated_right_foot",
+        "mesh_stitch_articulated_head",
+        "mesh_stitch_articulated_right_upper_arm",
+        "mesh_stitch_articulated_left_foot_dark_inner",
+        "mesh_stitch_articulated_torso_dark_inner",
+        "mesh_stitch_articulated_back_dark_inner",
+        "mesh_stitch_articulated_left_upper_arm_dark_inner",
+        "mesh_stitch_articulated_right_thigh_dark_inner",
+        "mesh_stitch_articulated_right_shin_dark_inner",
+        "mesh_stitch_articulated_right_foot_dark_inner",
+        "mesh_stitch_articulated_head_dark_inner",
+        "mesh_stitch_articulated_right_upper_arm_dark_inner"
+      ]
+    },
+    "scriptedDetailBake": {
+      "enabled": true,
+      "size": 512,
+      "intent": "one-pass scripted micro-wear bake for white armor/shadow/trim; no silhouette inflation and no new external reference dependency",
+      "maps": {
+        "armorAlbedo": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_white_armor_micro_wear_bake_v2_color.png",
+        "armorAlbedoSha256": "3d913644665a538acee3262b34e6d89743987d2d62d74d5a28dee67f7ddebf44",
+        "armorRoughness": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_white_armor_micro_wear_bake_v2_roughness.png",
+        "armorRoughnessSha256": "e0b3b48af38fa66f9cf7e947d1d19ecc3d9833b9e6a286fc92f90a834d7fcfdd",
+        "armorNormal": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_white_armor_micro_wear_bake_v2_normal.png",
+        "armorNormalSha256": "8e2ae6b63e95a51ea1ae710baecfb410627a378bbcd68f8696e619372a181e22",
+        "shadowAlbedo": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_shadow_armor_micro_wear_bake_v2_color.png",
+        "shadowAlbedoSha256": "2cb3ac40be5f8cd618c3127feb3eb9fceb00aa0544c7fd08dcb5b818fcf32168",
+        "trimAlbedo": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_warm_trim_edge_wear_bake_v2_color.png",
+        "trimAlbedoSha256": "90241b4f4dc60a4825358a8ce2bbbd4ba67804e8d0fc518539a9d0929ef1dfde"
+      },
+      "materialLinks": {
+        "mat_bone_white_curved_armor": true,
+        "mat_worn_white_edge_shadow": true,
+        "mat_warm_brushed_edge_trim": true
+      }
+    },
+    "landmarkMethod": "mesh group bounding boxes drive root, pelvis, torso, shoulders, elbows, wrists, hips, knees, ankles, and front core sockets",
+    "landmarksBlender": {
+      "root": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "pelvis": [
+        0.0024,
+        -0.0595,
+        0.9708
+      ],
+      "torso": [
+        0.0017,
+        -0.0895,
+        1.5795
+      ],
+      "head": [
+        0.0253,
+        0.2256,
+        2.2815
+      ],
+      "halo": [
+        -0.0141,
+        0.5486,
+        1.9839
+      ],
+      "core": [
+        -0.0078,
+        0.3756,
+        1.6523
+      ],
+      "leftShoulder": [
+        -0.4278,
+        -0.2383,
+        2.0147
+      ],
+      "leftElbow": [
+        -0.6645,
+        -0.2368,
+        1.288
+      ],
+      "leftWrist": [
+        -0.8634,
+        -0.1562,
+        1.1212
+      ],
+      "leftHip": [
+        -0.2875,
+        0.0806,
+        1.1
+      ],
+      "leftKnee": [
+        -0.39,
+        -0.0443,
+        0.6919
+      ],
+      "leftAnkle": [
+        -0.5298,
+        -0.0364,
+        0.1141
+      ],
+      "rightShoulder": [
+        0.4707,
+        -0.0705,
+        2.0241
+      ],
+      "rightElbow": [
+        0.6949,
+        0.0583,
+        1.3497
+      ],
+      "rightWrist": [
+        0.772,
+        0.1967,
+        1.1043
+      ],
+      "rightHip": [
+        0.2572,
+        0.2962,
+        1.1
+      ],
+      "rightKnee": [
+        0.3465,
+        0.2157,
+        0.72
+      ],
+      "rightAnkle": [
+        0.449,
+        0.2436,
+        0.1278
+      ]
+    },
+    "groupBoundsBlender": {
+      "left_foot": {
+        "min": [
+          -0.7769,
+          -0.3251,
+          -0.0054
+        ],
+        "max": [
+          -0.2828,
+          0.3624,
+          0.3929
+        ],
+        "center": [
+          -0.5298,
+          0.0186,
+          0.1937
+        ],
+        "dims": [
+          0.4942,
+          0.6875,
+          0.3983
+        ],
+        "polygons": 82
+      },
+      "left_shin": {
+        "min": [
+          -0.5893,
+          -0.3119,
+          0.245
+        ],
+        "max": [
+          -0.205,
+          0.2233,
+          0.7427
+        ],
+        "center": [
+          -0.3971,
+          -0.0443,
+          0.4939
+        ],
+        "dims": [
+          0.3843,
+          0.5352,
+          0.4976
+        ],
+        "polygons": 36
+      },
+      "left_thigh": {
+        "min": [
+          -0.6,
+          -0.2287,
+          0.6412
+        ],
+        "max": [
+          -0.1372,
+          0.3899,
+          1.2533
+        ],
+        "center": [
+          -0.3686,
+          0.0806,
+          0.9473
+        ],
+        "dims": [
+          0.4628,
+          0.6186,
+          0.6121
+        ],
+        "polygons": 53
+      },
+      "left_forearm": {
+        "min": [
+          -1.0254,
+          -0.5975,
+          1.0025
+        ],
+        "max": [
+          -0.3036,
+          0.4045,
+          1.6823
+        ],
+        "center": [
+          -0.6645,
+          -0.0965,
+          1.3424
+        ],
+        "dims": [
+          0.7218,
+          1.002,
+          0.6798
+        ],
+        "polygons": 19
+      },
+      "torso": {
+        "min": [
+          -0.8322,
+          -0.4088,
+          0.9608
+        ],
+        "max": [
+          0.8459,
+          0.385,
+          2.7804
+        ],
+        "center": [
+          0.0068,
+          -0.0119,
+          1.8706
+        ],
+        "dims": [
+          1.6781,
+          0.7937,
+          1.8196
+        ],
+        "polygons": 223
+      },
+      "back": {
+        "min": [
+          -0.7292,
+          0.0073,
+          0.9818
+        ],
+        "max": [
+          0.6485,
+          0.5886,
+          2.6659
+        ],
+        "center": [
+          -0.0404,
+          0.2979,
+          1.8239
+        ],
+        "dims": [
+          1.3777,
+          0.5813,
+          1.684
+        ],
+        "polygons": 118
+      },
+      "left_hand": {
+        "min": [
+          -0.9923,
+          -0.2556,
+          1.0386
+        ],
+        "max": [
+          -0.7346,
+          0.0996,
+          1.3336
+        ],
+        "center": [
+          -0.8634,
+          -0.078,
+          1.1861
+        ],
+        "dims": [
+          0.2577,
+          0.3552,
+          0.295
+        ],
+        "polygons": 20
+      },
+      "left_upper_arm": {
+        "min": [
+          -1.1062,
+          -0.6431,
+          1.218
+        ],
+        "max": [
+          -0.4278,
+          0.3208,
+          2.75
+        ],
+        "center": [
+          -0.767,
+          -0.1612,
+          1.984
+        ],
+        "dims": [
+          0.6783,
+          0.9639,
+          1.532
+        ],
+        "polygons": 148
+      },
+      "right_thigh": {
+        "min": [
+          0.0996,
+          0.009,
+          0.6312
+        ],
+        "max": [
+          0.56,
+          0.5835,
+          1.3317
+        ],
+        "center": [
+          0.3298,
+          0.2962,
+          0.9815
+        ],
+        "dims": [
+          0.4604,
+          0.5746,
+          0.7005
+        ],
+        "polygons": 55
+      },
+      "right_forearm": {
+        "min": [
+          0.3969,
+          -0.218,
+          1.1144
+        ],
+        "max": [
+          0.9928,
+          0.5495,
+          1.6746
+        ],
+        "center": [
+          0.6949,
+          0.1658,
+          1.3945
+        ],
+        "dims": [
+          0.5959,
+          0.7674,
+          0.5602
+        ],
+        "polygons": 19
+      },
+      "right_shin": {
+        "min": [
+          0.147,
+          -0.0084,
+          0.1937
+        ],
+        "max": [
+          0.5572,
+          0.4398,
+          0.8238
+        ],
+        "center": [
+          0.3521,
+          0.2157,
+          0.5088
+        ],
+        "dims": [
+          0.4101,
+          0.4482,
+          0.6301
+        ],
+        "polygons": 37
+      },
+      "right_foot": {
+        "min": [
+          0.2334,
+          -0.0457,
+          -0.0004
+        ],
+        "max": [
+          0.6646,
+          0.6432,
+          0.4269
+        ],
+        "center": [
+          0.449,
+          0.2987,
+          0.2132
+        ],
+        "dims": [
+          0.4312,
+          0.689,
+          0.4273
+        ],
+        "polygons": 79
+      },
+      "head": {
+        "min": [
+          -0.627,
+          -0.4512,
+          1.9026
+        ],
+        "max": [
+          0.7189,
+          0.4653,
+          2.7804
+        ],
+        "center": [
+          0.0459,
+          0.0071,
+          2.3415
+        ],
+        "dims": [
+          1.3458,
+          0.9165,
+          0.8779
+        ],
+        "polygons": 313
+      },
+      "right_hand": {
+        "min": [
+          0.6372,
+          0.1214,
+          1.0229
+        ],
+        "max": [
+          0.9068,
+          0.3902,
+          1.3137
+        ],
+        "center": [
+          0.772,
+          0.2558,
+          1.1683
+        ],
+        "dims": [
+          0.2696,
+          0.2687,
+          0.2908
+        ],
+        "polygons": 11
+      },
+      "right_upper_arm": {
+        "min": [
+          0.4707,
+          -0.3925,
+          1.3019
+        ],
+        "max": [
+          1.0144,
+          0.374,
+          2.6908
+        ],
+        "center": [
+          0.7426,
+          -0.0092,
+          1.9964
+        ],
+        "dims": [
+          0.5437,
+          0.7665,
+          1.3889
+        ],
+        "polygons": 151
+      },
+      "overall": {
+        "min": [
+          -1.1062,
+          -0.6431,
+          -0.0578
+        ],
+        "max": [
+          1.0192,
+          0.6432,
+          2.7804
+        ],
+        "center": [
+          -0.0435,
+          0.0001,
+          1.3613
+        ],
+        "dims": [
+          2.1253,
+          1.2863,
+          2.8382
+        ],
+        "polygons": 1364
+      }
+    },
+    "canonicalFront": {
+      "axis": "+Y",
+      "evidence": "local black material surface near weakpoint, not whole-body maxY",
+      "blackFrontBoundsBlender": {
+        "min": [
+          -0.5896,
+          -0.2206,
+          0.8747
+        ],
+        "max": [
+          0.5032,
+          0.5886,
+          2.1947
+        ],
+        "center": [
+          -0.0432,
+          0.184,
+          1.5347
+        ],
+        "dims": [
+          1.0928,
+          0.8092,
+          1.32
+        ],
+        "polygons": 276
+      },
+      "coreLocalFrontFitBlender": {
+        "count": 696,
+        "minY": -0.2206,
+        "p80Y": 0.2718,
+        "p90Y": 0.3256,
+        "maxY": 0.5657,
+        "radiusX": 0.34,
+        "radiusZ": 0.38
+      }
+    },
+    "weapon": {
+      "source": "src/assets/models/viewmodel/prototypes/hp_viewmodel_iron_rod_production.glb",
+      "weaponSide": "right",
+      "attackPlanePivot": "weaponAttackPlanePivot",
+      "root": "boss_iron_rod_root",
+      "socket": "weaponSocket",
+      "gripTargetOffsetFromWristBlender": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "restLongAxisBlender": [
+        0.2509,
+        -0.7983,
+        0.5474
+      ],
+      "importedObjects": [
+        "boss_iron_rod_black_rubber_grip_wrap",
+        "boss_iron_rod_cyan_energy_spine_window",
+        "boss_iron_rod_flat_impact_face",
+        "boss_iron_rod_forward_strike_crown",
+        "boss_iron_rod_front_impact_head",
+        "boss_iron_rod_impact_rivet_00",
+        "boss_iron_rod_impact_rivet_01",
+        "boss_iron_rod_impact_rivet_02",
+        "boss_iron_rod_impact_rivet_03",
+        "boss_iron_rod_longitudinal_scraped_rib_00",
+        "boss_iron_rod_longitudinal_scraped_rib_01",
+        "boss_iron_rod_longitudinal_scraped_rib_02",
+        "boss_iron_rod_longitudinal_scraped_rib_03",
+        "boss_iron_rod_main_shaft_dark_core",
+        "boss_iron_rod_muted_red_lock_status_band",
+        "boss_iron_rod_protocol_registry_inlay_00",
+        "boss_iron_rod_protocol_registry_inlay_01",
+        "boss_iron_rod_protocol_registry_inlay_02",
+        "boss_iron_rod_protocol_registry_inlay_03",
+        "boss_iron_rod_raised_edge_ring_00",
+        "boss_iron_rod_raised_edge_ring_01",
+        "boss_iron_rod_raised_edge_ring_02",
+        "boss_iron_rod_raised_edge_ring_03",
+        "boss_iron_rod_raised_edge_ring_04",
+        "boss_iron_rod_raised_edge_ring_05",
+        "boss_iron_rod_raised_edge_ring_06",
+        "boss_iron_rod_raised_edge_ring_07",
+        "boss_iron_rod_rear_bronze_counter_cap",
+        "boss_iron_rod_scraped_outer_sleeve",
+        "iron_rod_emissive_core_socket",
+        "iron_rod_hit_base_socket",
+        "iron_rod_hit_tip_socket",
+        "iron_rod_right_hand_grip_socket",
+        "iron_rod_trail_end_socket",
+        "iron_rod_trail_mid_socket",
+        "iron_rod_trail_start_socket"
+      ],
+      "aliases": [
+        "bladeBaseSocket",
+        "bladeTipSocket",
+        "boss_iron_rod_trail_end_socket",
+        "boss_iron_rod_trail_mid_socket",
+        "boss_iron_rod_trail_start_socket"
+      ]
+    }
+  },
+  "derivedAsset": {
+    "modelKeyCandidate": "hp_enemy_reclamation_mother_stitch_articulated_v4_front_fill",
+    "glb": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_articulated_v4_front_fill.glb",
+    "sourceBlend": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_articulated_v4_front_fill.blend",
+    "preview": "work/asset-intake/level05-reclamation-mother-v1/derived/hp_enemy_reclamation_mother_stitch_articulated_v4_front_fill_preview.png",
+    "status": "visual-candidate-not-yet-registered-in-level5",
+    "requiredTextureEvidence": {
+      "image2SourceAtlas": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.png",
+      "image2RuntimeAtlas": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_runtime_1024.png",
+      "image2Regions": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.regions.json",
+      "image2ContactSheet": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_regions_contact_sheet.png",
+      "image2Roughness": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_roughness_v1_runtime_1024.png",
+      "image2Metallic": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_metallic_v1_runtime_1024.png",
+      "image2Normal": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_normal_v1_runtime_1024.png",
+      "image2Occlusion": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1_occlusion_v1_runtime_1024.png",
+      "image2Provenance": "work/asset-intake/level05-reclamation-mother-v1/reclamation_mother_black_metal_image2_source_provenance.json",
+      "image2ProvenanceClassification": "owned-generated-output",
+      "scriptedArmorAlbedo": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_white_armor_micro_wear_bake_v2_color.png",
+      "scriptedArmorRoughness": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_white_armor_micro_wear_bake_v2_roughness.png",
+      "scriptedArmorNormal": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_white_armor_micro_wear_bake_v2_normal.png",
+      "scriptedShadowAlbedo": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_shadow_armor_micro_wear_bake_v2_color.png",
+      "scriptedTrimAlbedo": "work/asset-intake/level05-reclamation-mother-v1/textures/reclamation_mother_polish_bake_v2/reclamation_mother_warm_trim_edge_wear_bake_v2_color.png"
+    },
+    "requiredSockets": [
+      "core_glass_weakpoint",
+      "missile_hit_socket",
+      "skill3_lockon_socket",
+      "boss_vfx_center_socket",
+      "floor_contact_socket",
+      "warning_emissive_slots",
+      "weaponSocket",
+      "bladeBaseSocket",
+      "bladeTipSocket",
+      "iron_rod_right_hand_grip_socket",
+      "iron_rod_hit_tip_socket",
+      "iron_rod_hit_base_socket"
+    ],
+    "meshObjects": 84,
+    "verticesApprox": 11044,
+    "trianglesApprox": 13898,
+    "boundsMinBlender": [
+      -1.1062,
+      -0.6431,
+      -0.0054
+    ],
+    "boundsMaxBlender": [
+      1.0144,
+      0.9874,
+      2.7804
+    ],
+    "dimensionsBlender": [
+      2.1206,
+      1.6305,
+      2.7858
+    ],
+    "glbScan": {
+      "isGlb": true,
+      "jsonFound": true,
+      "nodes": 123,
+      "meshes": 84,
+      "materials": 13,
+      "textures": 17,
+      "images": 9,
+      "animations": [
+        "idle",
+        "move",
+        "attack_windup",
+        "attack_strike",
+        "attack_combo_downslam",
+        "attack_sweep",
+        "attack_recover",
+        "hit_light",
+        "hit_heavy",
+        "stagger",
+        "death",
+        "spawn_boot"
+      ],
+      "extensionsUsed": [],
+      "extensionsRequired": [],
+      "forbiddenMarkerMatches": []
+    }
+  }
+}

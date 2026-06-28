@@ -1,0 +1,559 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_04_memory_clinic",
+  "modelKey": "room_wall_wash_light_museum",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum.glb",
+  "fileName": "hp_room_wall_wash_light_museum.glb",
+  "sourceAsset": {
+    "modelKey": "room_wall_wash_light_museum",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_wall_wash_light_museum.glb",
+    "sizeMeters": [
+      1.7,
+      0.22,
+      0.12
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 8204,
+      "meshes": 4,
+      "nodes": 4,
+      "skins": 0,
+      "primitives": 4,
+      "materials": 4,
+      "textures": 0,
+      "images": 0,
+      "accessors": 12,
+      "bufferViews": 9,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 220
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_wall_wash_light_museum.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 922806,
+    "vertexCount": 660,
+    "triangleCount": 220,
+    "meshCount": 5,
+    "materialCount": 4,
+    "nodeCount": 6,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.7,
+        -0.035,
+        -1.499
+      ],
+      "center": [
+        0,
+        0.013,
+        -1.432
+      ],
+      "size": [
+        1.4,
+        0.096,
+        0.134
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_black_back_rail",
+        "vertexOffset": 922806,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          -1.42,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          1.42,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_cyan_service_dot",
+        "vertexOffset": 922938,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.52,
+          0.052,
+          -1.49,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.52,
+          -0.052,
+          1.49,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_left_brass_endcap",
+        "vertexOffset": 923070,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.66,
+          0.035,
+          -1.42,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.66,
+          -0.035,
+          1.42,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_right_brass_endcap",
+        "vertexOffset": 923202,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.66,
+          0.035,
+          -1.42,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.66,
+          -0.035,
+          1.42,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "museum_wall_wash_warm_linear_lens",
+        "vertexOffset": 923334,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.047,
+          -1.42,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.047,
+          1.42,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:room_q0q7rw:wall-wash:front-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        -1.76,
+        0.16,
+        20.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -1.76,
+          0.16,
+          20.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:room_q0q7rw:wall-wash:front-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        1.76,
+        0.16,
+        20.75
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          1.76,
+          0.16,
+          20.75
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:room_q0q7rw:wall-wash:back-left",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        -1.76,
+        0.16,
+        25.45
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -1.76,
+          0.16,
+          25.45
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:room_q0q7rw:wall-wash:back-right",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        1.76,
+        0.16,
+        25.45
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          1.76,
+          0.16,
+          25.45
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:room_q0q7rw:wall-wash:left-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        -3.75,
+        0.16,
+        23.1
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.75,
+          0.16,
+          23.1
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    },
+    {
+      "id": "shell:room_q0q7rw:wall-wash:right-mid",
+      "source": "shell",
+      "role": "wall_wash_light_mesh",
+      "roomId": "room_q0q7rw",
+      "secondaryRoomId": null,
+      "position": [
+        3.75,
+        0.16,
+        23.1
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room",
+        "rescuePolicy": "current-room-only"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.75,
+          0.16,
+          23.1
+        ],
+        "halfSize": [
+          0.85,
+          0.11,
+          0.06
+        ]
+      }
+    }
+  ]
+}

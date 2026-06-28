@@ -1,0 +1,176 @@
+{
+  "schema": "human-protocol/level02-furniture-image2-source-provenance@1",
+  "recordedAt": "2026-06-19",
+  "assetPack": "hp_level02_furniture_image2_v1",
+  "purpose": "Provenance, prompt, license, and derivative-use ledger for the Level 02 furniture Image2 material atlas.",
+  "policy": {
+    "mustRecordPrompt": true,
+    "mustRecordLicense": true,
+    "mustRecordSourceImage": true,
+    "mustRecordDerivativeProcessing": true,
+    "mustRecordReferenceInputs": true,
+    "generatedRuntimeJsonIsNotSourceOfTruth": true
+  },
+  "openAiTermsRecord": {
+    "termsCheckedAt": "2026-06-19",
+    "termsUrl": "https://openai.com/policies/row-terms-of-use/",
+    "servicesAgreementUrl": "https://openai.com/policies/services-agreement/",
+    "summary": "For OpenAI-generated Output, the user/customer owns Output as between them and OpenAI to the extent permitted by law; the user remains responsible for Inputs, rights, and downstream use; similar output may be generated for others.",
+    "projectUse": "Treat the Image2 source atlas as project-owned generated output under the user's OpenAI/Codex use, subject to OpenAI terms and project legal review.",
+    "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+    "thirdPartyStockAsset": false,
+    "generatingAccount": "kirkzhang49@gmail.com",
+    "generationDate": "2026-06-19",
+    "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+    "licenseClassification": "owned-generated-output",
+    "releaseClearanceStatus": "cleared-for-project-use"
+  },
+  "sourceImage": {
+    "kind": "built-in image_gen output",
+    "tool": "OpenAI image_gen via Codex session",
+    "callId": "ig_09cc2af1f5429f06016a35a40c882881989efda669c30d115d",
+    "sourceImagePath": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/hp_level02_imagegen_texture_atlas_source.png",
+    "sourceMetadataPath": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/hp_level02_imagegen_texture_atlas_source.metadata.json",
+    "sourceSize": [
+      1254,
+      1254
+    ],
+    "prompt": "Create a single square 2D texture atlas image for a refined residential furniture asset pack, 2048x2048 if possible. Divide it into four equal clean quadrants with subtle margins, no labels, no text, no objects, seamless-ish material surfaces only.\nTop-left: premium warm walnut and oak wood veneer, calm long grain, amber-brown with honey highlights, no knots bigger than small flecks, elegant contemporary furniture finish.\nTop-right: warm white lacquered cabinet panel material, satin finish, faint cream-grey undertones, very subtle inset-panel shadow/groove feeling, clean residential kitchen cabinetry, not futuristic.\nBottom-left: abstract residential art panel material, muted earth tones, ivory, sienna, olive, charcoal, soft organic brush bands like modern wall art, calm high-end living room taste, no faces, no symbols.\nBottom-right: muted bookshelf book-spine material, vertical narrow bands of warm neutrals, faded navy, terracotta, olive, cream, varied widths, quiet library feeling, no readable text.\nOverall: clean, premium, low noise, no sci-fi cyan, no camera lenses, no glowing strips, no dirt, no grime, no random beads or wires.",
+    "negativePromptEmbedded": [
+      "no labels",
+      "no text",
+      "no objects",
+      "no faces",
+      "no symbols",
+      "no sci-fi cyan",
+      "no camera lenses",
+      "no glowing strips",
+      "no dirt",
+      "no grime",
+      "no random beads or wires"
+    ],
+    "generatingAccount": "kirkzhang49@gmail.com",
+    "generationDate": "2026-06-19",
+    "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+    "licenseClassification": "owned-generated-output",
+    "releaseClearanceStatus": "cleared-for-project-use"
+  },
+  "referenceInputs": [
+    {
+      "kind": "user-provided screenshot",
+      "path": "/Users/zhengkaizhang/Desktop/Screenshot 2026-06-19 at 10.52.05 AM.png",
+      "use": "High-level art direction only: warm walnut, ivory, restrained residential art, sculptural calm furniture language.",
+      "licenseLabel": "user-provided-reference-not-redistributed",
+      "directCopy": false,
+      "includedInBuild": false
+    },
+    {
+      "kind": "user-provided screenshot",
+      "path": "/Users/zhengkaizhang/Desktop/Screenshot 2026-06-19 at 10.29.30 AM.png",
+      "use": "High-level art direction only: gallery furniture proportion, organic wood/chrome restraint, upholstery volume.",
+      "licenseLabel": "user-provided-reference-not-redistributed",
+      "directCopy": false,
+      "includedInBuild": false
+    }
+  ],
+  "sourceCrops": {
+    "walnut_large_grain": {
+      "sourceKind": "real built-in image_gen source crop",
+      "sourceCropPath": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/walnut_large_grain.png",
+      "sourceBox": [
+        15,
+        15,
+        612,
+        612
+      ],
+      "atlasRegion": "walnut_large_grain",
+      "gameUse": [
+        "room_l2_img2_observation_dining_table tabletop"
+      ],
+      "derivativeProcessing": "center fit into atlas region with bleed; no text or object transfer"
+    },
+    "warm_lacquer_panel": {
+      "sourceKind": "real built-in image_gen source crop",
+      "sourceCropPath": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/warm_lacquer_panel.png",
+      "sourceBox": [
+        642,
+        15,
+        1239,
+        612
+      ],
+      "atlasRegion": "warm_lacquer_panel",
+      "gameUse": [
+        "room_l2_img2_scanner_wardrobe inset doors",
+        "room_l2_img2_service_kitchen_counter drawer/cabinet fronts",
+        "room_l2_img2_living_end_elevator_fixture disguise doors"
+      ],
+      "derivativeProcessing": "center crop from real source, light blur, faint interior rounded panel lines, bleed into atlas; strong generated picture-frame border intentionally removed"
+    },
+    "residential_art_panel": {
+      "sourceKind": "real built-in image_gen source crop",
+      "sourceCropPath": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/residential_art_panel.png",
+      "sourceBox": [
+        15,
+        642,
+        612,
+        1239
+      ],
+      "atlasRegion": "residential_art_panel",
+      "gameUse": [
+        "room_l2_img2_family_portrait_console framed art panel"
+      ],
+      "derivativeProcessing": "center fit into atlas region with bleed; used as one intentional art surface"
+    },
+    "muted_book_spines": {
+      "sourceKind": "real built-in image_gen source crop",
+      "sourceCropPath": "src/assets/textures/environment/level02-furniture-image2/image2-real-sources/muted_book_spines.png",
+      "sourceBox": [
+        642,
+        642,
+        1239,
+        1239
+      ],
+      "atlasRegion": "muted_book_spines",
+      "gameUse": [
+        "room_l2_img2_observation_bookshelf book fronts"
+      ],
+      "derivativeProcessing": "center fit into atlas region with bleed; no readable text"
+    }
+  },
+  "deterministicSupportRegions": {
+    "honed_stone_warm_vein": {
+      "sourceKind": "deterministic low-noise procedural fallback",
+      "script": "scripts/asset-build/generate-level02-furniture-image2-textures.py",
+      "licenseLabel": "project-generated-procedural"
+    },
+    "ivory_boucle_fabric": {
+      "sourceKind": "deterministic low-noise procedural fallback",
+      "script": "scripts/asset-build/generate-level02-furniture-image2-textures.py",
+      "licenseLabel": "project-generated-procedural"
+    },
+    "shadow_trim_gap": {
+      "sourceKind": "deterministic low-noise procedural fallback",
+      "script": "scripts/asset-build/generate-level02-furniture-image2-textures.py",
+      "licenseLabel": "project-generated-procedural"
+    }
+  },
+  "derivedOutputs": {
+    "atlas": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.png",
+    "regions": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_atlas.regions.json",
+    "contactSheet": "src/assets/textures/environment/level02-furniture-image2/hp_level02_furniture_image2_contact_sheet.png",
+    "textureReport": "src/assets/manifests/reports/level02_furniture_image2_texture_report.json",
+    "blenderReport": "src/assets/manifests/reports/level02_furniture_image2_blender_pipeline_report.json"
+  },
+  "restrictions": [
+    "Do not remove this provenance when regenerating the atlas.",
+    "Do not replace the source atlas without recording the new prompt, call id, source image, license label, and derivative processing.",
+    "Do not use user reference screenshots as direct texture sources unless their rights are separately recorded.",
+    "Do not patch generated Raw WebGPU JSON as the source of license or provenance truth."
+  ],
+  "generatingAccount": "kirkzhang49@gmail.com",
+  "generationDate": "2026-06-19",
+  "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+  "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "licenseClassification": "owned-generated-output",
+  "releaseClearanceStatus": "cleared-for-project-use"
+}

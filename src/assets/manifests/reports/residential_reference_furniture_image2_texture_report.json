@@ -1,0 +1,53 @@
+{
+  "schema": "human-protocol/residential-reference-image2-texture-report@1",
+  "generatedAt": "2026-06-19",
+  "source": "true image2-generated residential material PNGs copied into image2-generated-sources and packed into runtime tiles",
+  "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+  "regions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+  "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+  "image2GeneratedSources": {
+    "warm_walnut_ribbed": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources/warm_walnut_ribbed.image2.png",
+    "pale_oak_slats": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources/pale_oak_slats.image2.png",
+    "warm_stone_oval": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources/warm_stone_oval.image2.png",
+    "ivory_boucle_clean": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources/ivory_boucle_clean.image2.png",
+    "warm_white_lacquer": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources/warm_white_lacquer.image2.png",
+    "muted_book_spines": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources/muted_book_spines.image2.png",
+    "shadow_gap_panel": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources/shadow_gap_panel.image2.png",
+    "woven_basket_oak": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources/woven_basket_oak.image2.png"
+  },
+  "sourceTiles": {
+    "warm_walnut_ribbed": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_walnut_ribbed.png",
+    "pale_oak_slats": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/pale_oak_slats.png",
+    "warm_stone_oval": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_stone_oval.png",
+    "ivory_boucle_clean": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/ivory_boucle_clean.png",
+    "warm_white_lacquer": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_white_lacquer.png",
+    "muted_book_spines": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/muted_book_spines.png",
+    "shadow_gap_panel": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/shadow_gap_panel.png",
+    "woven_basket_oak": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/woven_basket_oak.png"
+  },
+  "prompts": {
+    "warm_walnut_ribbed": "warm walnut ribbed wood material texture for high-end residential furniture",
+    "pale_oak_slats": "pale oak vertical slat material texture for entry benches and built-ins",
+    "warm_stone_oval": "warm honed stone material texture for rounded coffee table tops",
+    "ivory_boucle_clean": "ivory boucle upholstery fabric material texture for sofas and cushions",
+    "warm_white_lacquer": "warm white lacquered cabinet panel material texture",
+    "muted_book_spines": "muted staged residential book-spine material texture with no readable text",
+    "shadow_gap_panel": "dark hidden shadow gap and rear access panel material texture",
+    "woven_basket_oak": "woven oak and rattan storage basket material texture"
+  },
+  "rules": [
+    "bitmap texture is used for primary material identity",
+    "source image must be an image2-generated PNG, not a procedural PIL material",
+    "texture remains low-noise and residential",
+    "no cyan scanner strip, camera lens, or front service panel is drawn"
+  ],
+  "sourceProvenance": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.json",
+  "sourceProvenanceHuman": "src/assets/manifests/reports/residential_reference_furniture_image2_source_provenance.md",
+  "termsPointer": "docs/provenance/openai-imagegen-terms-2026-06-19.md",
+  "generatingAccount": "kirkzhang49@gmail.com",
+  "generationDate": "2026-06-19",
+  "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "licenseClassification": "owned-generated-output",
+  "releaseClearanceStatus": "cleared-for-project-use-call-id-not-exposed",
+  "generationCallIdStatus": "not-exposed-by-built-in-codex-image-tool"
+}

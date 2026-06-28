@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "hp.image2.sourceProvenance.v2",
+  "assetFamily": "gate_balance_gui",
+  "licenseLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "classification": "owned-generated-output",
+  "generatedAt": "2026-06-24",
+  "sourceTool": "Codex image_gen / Image2",
+  "sourcePath": "/Users/zhengkaizhang/.codex/generated_images/019efa53-6ca6-78d3-a5b2-2824ea0b1627/ig_02e06c5886453cba016a3c1af25ca881998ebd8eca311b032b.png",
+  "repoSourceCopy": "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_image2_source_v2_original.png",
+  "derivatives": {
+    "background": "src/assets/gui/gate-balance/gate_balance_overlay_background_image2_v2.png",
+    "partsAtlas": "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v2.png",
+    "regions": "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v2.regions.json",
+    "layout": "src/assets/gui/gate-balance/gate_balance_overlay_layout_v2.json",
+    "contactSheet": "src/assets/manifests/reports/gate_balance_gui_image2_contact_sheet_v2.png"
+  }
+}

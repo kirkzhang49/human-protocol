@@ -1,0 +1,256 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_01_maintenance_bay",
+  "modelKey": "light_ceiling_flicker_cyan_2m",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+  "fileName": "hp_light_ceiling_flicker_cyan_2m.glb",
+  "sourceAsset": {
+    "modelKey": "light_ceiling_flicker_cyan_2m",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+    "file": "src/assets/models-cooked/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+    "sizeMeters": [
+      2,
+      0.12,
+      0.18
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 3800,
+      "meshes": 2,
+      "nodes": 2,
+      "skins": 0,
+      "primitives": 2,
+      "materials": 2,
+      "textures": 0,
+      "images": 0,
+      "accessors": 6,
+      "bufferViews": 5,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_materials_emissive_strength",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 36
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level01/hp_light_ceiling_flicker_cyan_2m.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 409068,
+    "vertexCount": 108,
+    "triangleCount": 36,
+    "meshCount": 3,
+    "materialCount": 2,
+    "nodeCount": 4,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -1,
+        -0.06,
+        -0.09
+      ],
+      "center": [
+        0,
+        0,
+        0.00875
+      ],
+      "size": [
+        2,
+        0.12,
+        0.1975
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "ceiling_light_cyan_lens_broken_a",
+        "vertexOffset": 409068,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.48,
+          0,
+          0.095,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.48,
+          0,
+          -0.095,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "ceiling_light_cyan_lens_broken_b",
+        "vertexOffset": 409104,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.52,
+          0,
+          0.095,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.52,
+          0,
+          -0.095,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "ceiling_light_dark_housing",
+        "vertexOffset": 409140,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_01_overhead_cyan_flicker",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "maintenance_bay_floor",
+      "secondaryRoomId": null,
+      "position": [
+        -2.2,
+        2.9,
+        3.4
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.2,
+        2.2,
+        2.2
+      ],
+      "tags": [
+        "official",
+        "level01",
+        "light",
+        "legacy_v1",
+        "configurable"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.2,
+          2.9,
+          3.4
+        ],
+        "halfSize": [
+          2.2,
+          0.132,
+          0.198
+        ]
+      }
+    }
+  ]
+}

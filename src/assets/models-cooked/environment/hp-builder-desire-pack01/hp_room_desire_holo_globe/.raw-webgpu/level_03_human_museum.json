@@ -1,0 +1,500 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_desire_holo_globe",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_holo_globe.glb",
+  "fileName": "hp_room_desire_holo_globe.glb",
+  "sourceAsset": {
+    "modelKey": "room_desire_holo_globe",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_holo_globe.glb",
+    "file": "src/assets/models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_holo_globe.glb",
+    "sizeMeters": [
+      0.8,
+      1.479,
+      0.8
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 66988,
+      "meshes": 9,
+      "nodes": 9,
+      "skins": 0,
+      "primitives": 9,
+      "materials": 8,
+      "textures": 0,
+      "images": 0,
+      "accessors": 36,
+      "bufferViews": 36,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_unlit"
+      ],
+      "estimatedTriangles": 1830
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/hp-builder-desire-pack01/hp_room_desire_holo_globe.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 653268,
+    "vertexCount": 5490,
+    "triangleCount": 1830,
+    "meshCount": 9,
+    "materialCount": 8,
+    "nodeCount": 9,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.4,
+        0,
+        -0.4
+      ],
+      "center": [
+        0,
+        0.695949,
+        0
+      ],
+      "size": [
+        0.8,
+        1.391899,
+        0.8
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "contact_shadow",
+        "vertexOffset": 653268,
+        "vertexCount": 6,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.012,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -0.012,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "base",
+        "vertexOffset": 653274,
+        "vertexCount": 264,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.04,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.04,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "stem",
+        "vertexOffset": 653538,
+        "vertexCount": 168,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.38,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.38,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "collar",
+        "vertexOffset": 653706,
+        "vertexCount": 192,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.7,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.7,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "emitter",
+        "vertexOffset": 653898,
+        "vertexCount": 192,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.76,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.76,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "emitter_lens",
+        "vertexOffset": 654090,
+        "vertexCount": 192,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.81,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.81,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "globe_core",
+        "vertexOffset": 654282,
+        "vertexCount": 1404,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.12,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.12,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "meridian_ring",
+        "vertexOffset": 655686,
+        "vertexCount": 1536,
+        "bindMatrix": [
+          0.913089,
+          0.40776,
+          0,
+          0,
+          -0.40776,
+          0.913089,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.12,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          0.913089,
+          -0.40776,
+          0,
+          0,
+          0.40776,
+          0.913089,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.456692,
+          -1.02266,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "equator_ring",
+        "vertexOffset": 657222,
+        "vertexCount": 1536,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          1.12,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1.12,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_e2bth8",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        -2.5,
+        0,
+        -0.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.785398,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2.5,
+          0,
+          -0.5
+        ],
+        "halfSize": [
+          0.4,
+          0.7395,
+          0.4
+        ]
+      }
+    }
+  ]
+}

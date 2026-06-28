@@ -1,0 +1,170 @@
+{
+  "id": "human_protocol_hero_floor_image2_ingested_manifest",
+  "generatedAt": "2026-06-05T02:29:05.573Z",
+  "inputDir": "src/assets/textures/environment/hero-floors/image2/incoming",
+  "sourcePolicy": "These are real image2 floor sources supplied in order by the user. The ingest crop is ratio-safe and never stretches pixels.",
+  "runtimePolicy": "Runtime WebP files are generated for later wiring. Final high-performance path should prefer KTX2/Basis when the floor planes are integrated.",
+  "contactSheet": "src/assets/textures/environment/hero-floors/image2/review/human_protocol_image2_floor_ingest_contact_sheet.jpg",
+  "assets": [
+    {
+      "id": "level01_image2_full_room_maintenance_bay_floor",
+      "levelId": "level_01_maintenance_bay",
+      "roomId": "maintenance_bay_floor",
+      "roomMeters": [
+        18,
+        25
+      ],
+      "targetAspect": 0.72,
+      "originalPath": "src/assets/textures/environment/hero-floors/image2/source-original/level01_image2_original.png",
+      "originalSizePx": [
+        1064,
+        1478
+      ],
+      "sourceRoomfitPath": "src/assets/textures/environment/hero-floors/image2/source-roomfit/level01_image2_full_room_maintenance_bay_floor_18x25.png",
+      "sourceRoomfitSizePx": [
+        1064,
+        1478
+      ],
+      "runtimePath": "src/assets/textures/environment/hero-floors/image2/runtime/level01_image2_full_room_maintenance_bay_floor_18x25_runtime.webp",
+      "runtimeSizePx": [
+        1064,
+        1478
+      ],
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1064,
+        "height": 1478
+      },
+      "qaNotes": "Image2 source ingested without stretching. Source-roomfit output uses center crop only to match the room footprint aspect ratio. Runtime WebP is preview/runtime-ready but is not wired into level config yet."
+    },
+    {
+      "id": "level02_image2_full_room_false_residential_floor",
+      "levelId": "level_02_residential_simulation",
+      "roomId": "level_02_living_room",
+      "roomMeters": [
+        18.8,
+        16.6
+      ],
+      "targetAspect": 1.13253,
+      "originalPath": "src/assets/textures/environment/hero-floors/image2/source-original/level02_image2_original.png",
+      "originalSizePx": [
+        1335,
+        1178
+      ],
+      "sourceRoomfitPath": "src/assets/textures/environment/hero-floors/image2/source-roomfit/level02_image2_full_room_false_residential_floor_18p8x16p6.png",
+      "sourceRoomfitSizePx": [
+        1334,
+        1178
+      ],
+      "runtimePath": "src/assets/textures/environment/hero-floors/image2/runtime/level02_image2_full_room_false_residential_floor_18p8x16p6_runtime.webp",
+      "runtimeSizePx": [
+        1334,
+        1178
+      ],
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1334,
+        "height": 1178
+      },
+      "qaNotes": "Image2 source ingested without stretching. Source-roomfit output uses center crop only to match the room footprint aspect ratio. Runtime WebP is preview/runtime-ready but is not wired into level config yet."
+    },
+    {
+      "id": "level03_image2_full_room_human_museum_gallery_floor",
+      "levelId": "level_03_human_museum",
+      "roomId": "level_03_gallery_lobby",
+      "roomMeters": [
+        18,
+        12
+      ],
+      "targetAspect": 1.5,
+      "originalPath": "src/assets/textures/environment/hero-floors/image2/source-original/level03_image2_original.png",
+      "originalSizePx": [
+        1536,
+        1024
+      ],
+      "sourceRoomfitPath": "src/assets/textures/environment/hero-floors/image2/source-roomfit/level03_image2_full_room_human_museum_gallery_floor_18x12.png",
+      "sourceRoomfitSizePx": [
+        1536,
+        1024
+      ],
+      "runtimePath": "src/assets/textures/environment/hero-floors/image2/runtime/level03_image2_full_room_human_museum_gallery_floor_18x12_runtime.webp",
+      "runtimeSizePx": [
+        1536,
+        1024
+      ],
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1536,
+        "height": 1024
+      },
+      "qaNotes": "Image2 source ingested without stretching. Source-roomfit output uses center crop only to match the room footprint aspect ratio. Runtime WebP is preview/runtime-ready but is not wired into level config yet."
+    },
+    {
+      "id": "level04_image2_full_room_memory_clinic_floor",
+      "levelId": "level_04_memory_clinic",
+      "roomId": "level_04_waiting_room",
+      "roomMeters": [
+        16,
+        11
+      ],
+      "targetAspect": 1.454545,
+      "originalPath": "src/assets/textures/environment/hero-floors/image2/source-original/level04_image2_original.png",
+      "originalSizePx": [
+        1512,
+        1040
+      ],
+      "sourceRoomfitPath": "src/assets/textures/environment/hero-floors/image2/source-roomfit/level04_image2_full_room_memory_clinic_floor_16x11.png",
+      "sourceRoomfitSizePx": [
+        1512,
+        1040
+      ],
+      "runtimePath": "src/assets/textures/environment/hero-floors/image2/runtime/level04_image2_full_room_memory_clinic_floor_16x11_runtime.webp",
+      "runtimeSizePx": [
+        1512,
+        1040
+      ],
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1512,
+        "height": 1040
+      },
+      "qaNotes": "Image2 source ingested without stretching. Source-roomfit output uses center crop only to match the room footprint aspect ratio. Runtime WebP is preview/runtime-ready but is not wired into level config yet."
+    },
+    {
+      "id": "level05_image2_full_room_reclamation_core_floor",
+      "levelId": "level_05_reclamation_core",
+      "roomId": "level_05_platform",
+      "roomMeters": [
+        18,
+        13
+      ],
+      "targetAspect": 1.384615,
+      "originalPath": "src/assets/textures/environment/hero-floors/image2/source-original/level05_image2_original.png",
+      "originalSizePx": [
+        1476,
+        1066
+      ],
+      "sourceRoomfitPath": "src/assets/textures/environment/hero-floors/image2/source-roomfit/level05_image2_full_room_reclamation_core_floor_18x13.png",
+      "sourceRoomfitSizePx": [
+        1476,
+        1066
+      ],
+      "runtimePath": "src/assets/textures/environment/hero-floors/image2/runtime/level05_image2_full_room_reclamation_core_floor_18x13_runtime.webp",
+      "runtimeSizePx": [
+        1476,
+        1066
+      ],
+      "crop": {
+        "left": 0,
+        "top": 0,
+        "width": 1476,
+        "height": 1066
+      },
+      "qaNotes": "Image2 source ingested without stretching. Source-roomfit output uses center crop only to match the room footprint aspect ratio. Runtime WebP is preview/runtime-ready but is not wired into level config yet."
+    }
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "schema": "human-protocol/environment-asset-factory/glb-texture-audit@1",
+  "generatedAt": "2026-06-19",
+  "scope": "residential_reference_batch01_true_image2_sources",
+  "textureRule": "Each new residential furniture GLB must contain material.pbrMetallicRoughness.baseColorTexture and TEXCOORD_0 after raw export and cooked runtime cooking.",
+  "textureSources": {
+    "image2GeneratedSourcesDir": "src/assets/textures/environment/residential-reference-furniture-image2/image2-generated-sources",
+    "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+    "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+    "packedTilesDir": "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources",
+    "sourceReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json"
+  },
+  "assets": [
+    {
+      "modelKey": "hp_furniture_residential_oval_coffee_table_v1",
+      "raw": {
+        "glb": "src/assets/models/environment/props/hp_furniture_residential_oval_coffee_table_v1.glb",
+        "materialCount": 4,
+        "texturedMaterials": [
+          "hp_residential_warm_stone",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_warm_walnut",
+          "hp_residential_light_oak"
+        ],
+        "imageNames": [
+          "warm_stone_oval",
+          "shadow_gap_panel",
+          "warm_walnut_ribbed",
+          "pale_oak_slats"
+        ],
+        "textureCount": 4,
+        "primitivesWithTexcoord0": 41
+      },
+      "cooked": {
+        "glb": "src/assets/models-cooked/environment/props/hp_furniture_residential_oval_coffee_table_v1.glb",
+        "materialCount": 4,
+        "texturedMaterials": [
+          "hp_residential_warm_stone",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_warm_walnut",
+          "hp_residential_light_oak"
+        ],
+        "imageNames": [
+          "warm_stone_oval",
+          "shadow_gap_panel",
+          "warm_walnut_ribbed",
+          "pale_oak_slats"
+        ],
+        "textureCount": 4,
+        "primitivesWithTexcoord0": 4
+      },
+      "pass": true
+    },
+    {
+      "modelKey": "hp_furniture_residential_fluted_sideboard_v1",
+      "raw": {
+        "glb": "src/assets/models/environment/props/hp_furniture_residential_fluted_sideboard_v1.glb",
+        "materialCount": 6,
+        "texturedMaterials": [
+          "hp_residential_warm_walnut",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_warm_stone",
+          "hp_residential_light_oak",
+          "hp_residential_ivory_boucle"
+        ],
+        "imageNames": [
+          "warm_walnut_ribbed",
+          "shadow_gap_panel",
+          "warm_stone_oval",
+          "pale_oak_slats",
+          "ivory_boucle_clean"
+        ],
+        "textureCount": 5,
+        "primitivesWithTexcoord0": 34
+      },
+      "cooked": {
+        "glb": "src/assets/models-cooked/environment/props/hp_furniture_residential_fluted_sideboard_v1.glb",
+        "materialCount": 6,
+        "texturedMaterials": [
+          "hp_residential_warm_walnut",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_warm_stone",
+          "hp_residential_light_oak",
+          "hp_residential_ivory_boucle"
+        ],
+        "imageNames": [
+          "warm_walnut_ribbed",
+          "shadow_gap_panel",
+          "warm_stone_oval",
+          "pale_oak_slats",
+          "ivory_boucle_clean"
+        ],
+        "textureCount": 5,
+        "primitivesWithTexcoord0": 5
+      },
+      "pass": true
+    },
+    {
+      "modelKey": "hp_furniture_residential_entry_bench_cubby_v1",
+      "raw": {
+        "glb": "src/assets/models/environment/props/hp_furniture_residential_entry_bench_cubby_v1.glb",
+        "materialCount": 6,
+        "texturedMaterials": [
+          "hp_residential_pale_oak_laminate",
+          "hp_residential_ivory_boucle",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_deep_walnut_shadow",
+          "hp_residential_light_oak"
+        ],
+        "imageNames": [
+          "pale_oak_slats",
+          "ivory_boucle_clean",
+          "shadow_gap_panel",
+          "warm_walnut_ribbed"
+        ],
+        "textureCount": 5,
+        "primitivesWithTexcoord0": 34
+      },
+      "cooked": {
+        "glb": "src/assets/models-cooked/environment/props/hp_furniture_residential_entry_bench_cubby_v1.glb",
+        "materialCount": 6,
+        "texturedMaterials": [
+          "hp_residential_pale_oak_laminate",
+          "hp_residential_ivory_boucle",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_deep_walnut_shadow",
+          "hp_residential_light_oak"
+        ],
+        "imageNames": [
+          "pale_oak_slats",
+          "ivory_boucle_clean",
+          "shadow_gap_panel",
+          "warm_walnut_ribbed"
+        ],
+        "textureCount": 4,
+        "primitivesWithTexcoord0": 5
+      },
+      "pass": true
+    },
+    {
+      "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+      "raw": {
+        "glb": "src/assets/models/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+        "materialCount": 9,
+        "texturedMaterials": [
+          "hp_residential_warm_walnut",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_light_oak",
+          "hp_residential_muted_book_spines",
+          "hp_residential_muted_sage",
+          "hp_residential_muted_blue_gray",
+          "hp_residential_warm_white_lacquer",
+          "hp_residential_deep_walnut_shadow",
+          "hp_residential_warm_stone"
+        ],
+        "imageNames": [
+          "warm_walnut_ribbed",
+          "shadow_gap_panel",
+          "pale_oak_slats",
+          "muted_book_spines",
+          "warm_white_lacquer",
+          "warm_stone_oval"
+        ],
+        "textureCount": 9,
+        "primitivesWithTexcoord0": 25
+      },
+      "cooked": {
+        "glb": "src/assets/models-cooked/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+        "materialCount": 8,
+        "texturedMaterials": [
+          "hp_residential_warm_walnut",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_light_oak",
+          "hp_residential_muted_book_spines",
+          "hp_residential_muted_sage",
+          "hp_residential_warm_white_lacquer",
+          "hp_residential_deep_walnut_shadow",
+          "hp_residential_warm_stone"
+        ],
+        "imageNames": [
+          "warm_walnut_ribbed",
+          "shadow_gap_panel",
+          "pale_oak_slats",
+          "muted_book_spines",
+          "warm_white_lacquer",
+          "warm_stone_oval"
+        ],
+        "textureCount": 6,
+        "primitivesWithTexcoord0": 8
+      },
+      "pass": true
+    },
+    {
+      "modelKey": "hp_furniture_residential_cleaner_closet_v1",
+      "raw": {
+        "glb": "src/assets/models/environment/props/hp_furniture_residential_cleaner_closet_v1.glb",
+        "materialCount": 6,
+        "texturedMaterials": [
+          "hp_residential_warm_white_lacquer",
+          "hp_residential_pale_oak_laminate",
+          "hp_residential_light_oak",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_woven_basket_oak"
+        ],
+        "imageNames": [
+          "warm_white_lacquer",
+          "pale_oak_slats",
+          "shadow_gap_panel",
+          "woven_basket_oak"
+        ],
+        "textureCount": 5,
+        "primitivesWithTexcoord0": 21
+      },
+      "cooked": {
+        "glb": "src/assets/models-cooked/environment/props/hp_furniture_residential_cleaner_closet_v1.glb",
+        "materialCount": 6,
+        "texturedMaterials": [
+          "hp_residential_warm_white_lacquer",
+          "hp_residential_pale_oak_laminate",
+          "hp_residential_light_oak",
+          "hp_residential_hidden_shadow_gap",
+          "hp_residential_woven_basket_oak"
+        ],
+        "imageNames": [
+          "warm_white_lacquer",
+          "pale_oak_slats",
+          "shadow_gap_panel",
+          "woven_basket_oak"
+        ],
+        "textureCount": 4,
+        "primitivesWithTexcoord0": 5
+      },
+      "pass": true
+    }
+  ],
+  "pass": true
+}

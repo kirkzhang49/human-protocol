@@ -1,0 +1,3620 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_04_memory_clinic",
+  "modelKey": "hp_enemy_reclamation_mother_final_horror",
+  "category": "enemy",
+  "file": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror.glb",
+  "fileName": "hp_enemy_reclamation_mother_final_horror.glb",
+  "sourceAsset": null,
+  "rule": {
+    "modelKey": "*enemy-default",
+    "fileName": null,
+    "compileHiddenNodeExactCount": 15,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/enemies/hp_enemy_reclamation_mother_final_horror.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 261756,
+    "vertexCount": 41694,
+    "triangleCount": 13898,
+    "meshCount": 41,
+    "materialCount": 13,
+    "nodeCount": 51,
+    "skinCount": 0,
+    "rigidSkin": {
+      "mode": "rigid-node-palette",
+      "jointCount": 47,
+      "referencedJointCount": 30,
+      "chunkCount": 41,
+      "vertexAttribute": "rigidJointIndex"
+    },
+    "bounds": {
+      "min": [
+        -1.106153,
+        -0.005403,
+        -0.967617
+      ],
+      "center": [
+        -0.04586,
+        1.387507,
+        -0.162258
+      ],
+      "size": [
+        2.120585,
+        2.785819,
+        1.610719
+      ]
+    },
+    "animationClips": [
+      {
+        "index": 0,
+        "name": "idle",
+        "action": "idle",
+        "durationSeconds": 2,
+        "samplerCount": 12,
+        "channelCount": 12,
+        "targetNodeCount": 4,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "translation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "scale"
+          },
+          {
+            "node": 19,
+            "name": "headSensorPivot",
+            "path": "translation"
+          },
+          {
+            "node": 19,
+            "name": "headSensorPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 19,
+            "name": "headSensorPivot",
+            "path": "scale"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "translation"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 1,
+        "name": "move",
+        "action": "move",
+        "durationSeconds": 1.166667,
+        "samplerCount": 39,
+        "channelCount": 39,
+        "targetNodeCount": 13,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "translation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "rotation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "scale"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 2,
+        "name": "attack_windup",
+        "action": "attack_windup",
+        "durationSeconds": 1.833333,
+        "samplerCount": 57,
+        "channelCount": 57,
+        "targetNodeCount": 19,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "translation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "rotation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "scale"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "translation"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "scale"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "translation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "scale"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 3,
+        "name": "attack_strike",
+        "action": "attack_strike",
+        "durationSeconds": 1.25,
+        "samplerCount": 54,
+        "channelCount": 54,
+        "targetNodeCount": 18,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "translation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "rotation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "scale"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "translation"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "scale"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "translation"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 4,
+        "name": "attack_combo_downslam",
+        "action": "attack_combo_downslam",
+        "durationSeconds": 3,
+        "samplerCount": 54,
+        "channelCount": 54,
+        "targetNodeCount": 18,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "translation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "rotation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "scale"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "translation"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "scale"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "translation"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 5,
+        "name": "attack_sweep",
+        "action": "attack_sweep",
+        "durationSeconds": 1.416667,
+        "samplerCount": 48,
+        "channelCount": 48,
+        "targetNodeCount": 16,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "translation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "rotation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "scale"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "translation"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 49,
+            "name": "pelvisPivot",
+            "path": "scale"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "translation"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 41,
+            "name": "weaponAttackPlanePivot",
+            "path": "scale"
+          },
+          {
+            "node": 40,
+            "name": "weaponSocket",
+            "path": "translation"
+          },
+          {
+            "node": 40,
+            "name": "weaponSocket",
+            "path": "rotation"
+          },
+          {
+            "node": 40,
+            "name": "weaponSocket",
+            "path": "scale"
+          },
+          {
+            "node": 39,
+            "name": "boss_iron_rod_root",
+            "path": "translation"
+          },
+          {
+            "node": 39,
+            "name": "boss_iron_rod_root",
+            "path": "rotation"
+          },
+          {
+            "node": 39,
+            "name": "boss_iron_rod_root",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 6,
+        "name": "attack_recover",
+        "action": "attack_recover",
+        "durationSeconds": 1,
+        "samplerCount": 45,
+        "channelCount": 45,
+        "targetNodeCount": 15,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 6,
+            "name": "leftHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 4,
+            "name": "leftKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 1,
+            "name": "leftAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "translation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 13,
+            "name": "rightHipPivot",
+            "path": "scale"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "translation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 12,
+            "name": "rightKneePivot",
+            "path": "scale"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "translation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "rotation"
+          },
+          {
+            "node": 11,
+            "name": "rightAnklePivot",
+            "path": "scale"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "translation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "scale"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 24,
+            "name": "leftElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 22,
+            "name": "leftWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "translation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 43,
+            "name": "rightElbowPivot",
+            "path": "scale"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "translation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 42,
+            "name": "rightWristPivot",
+            "path": "scale"
+          },
+          {
+            "node": 39,
+            "name": "boss_iron_rod_root",
+            "path": "translation"
+          },
+          {
+            "node": 39,
+            "name": "boss_iron_rod_root",
+            "path": "rotation"
+          },
+          {
+            "node": 39,
+            "name": "boss_iron_rod_root",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 7,
+        "name": "hit_light",
+        "action": "hit_light",
+        "durationSeconds": 0.416667,
+        "samplerCount": 3,
+        "channelCount": 3,
+        "targetNodeCount": 1,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 8,
+        "name": "hit_heavy",
+        "action": "hit_heavy",
+        "durationSeconds": 0.75,
+        "samplerCount": 9,
+        "channelCount": 9,
+        "targetNodeCount": 3,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "translation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "rotation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "scale"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "translation"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 9,
+        "name": "stagger",
+        "action": "stagger",
+        "durationSeconds": 1.583333,
+        "samplerCount": 9,
+        "channelCount": 9,
+        "targetNodeCount": 3,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 26,
+            "name": "leftShoulderPivot",
+            "path": "scale"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "translation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 44,
+            "name": "rightShoulderPivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 10,
+        "name": "death",
+        "action": "death",
+        "durationSeconds": 2.291667,
+        "samplerCount": 12,
+        "channelCount": 12,
+        "targetNodeCount": 4,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "translation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "rotation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "scale"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "translation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 48,
+            "name": "torsoPivot",
+            "path": "scale"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "translation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "scale"
+          },
+          {
+            "node": 19,
+            "name": "headSensorPivot",
+            "path": "translation"
+          },
+          {
+            "node": 19,
+            "name": "headSensorPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 19,
+            "name": "headSensorPivot",
+            "path": "scale"
+          }
+        ]
+      },
+      {
+        "index": 11,
+        "name": "spawn_boot",
+        "action": "spawn_boot",
+        "durationSeconds": 1.666667,
+        "samplerCount": 9,
+        "channelCount": 9,
+        "targetNodeCount": 3,
+        "targetPaths": [
+          "rotation",
+          "scale",
+          "translation"
+        ],
+        "targetNodes": [
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "translation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "rotation"
+          },
+          {
+            "node": 50,
+            "name": "reclamation_mother_root",
+            "path": "scale"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "translation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 17,
+            "name": "coreWeakpointPivot",
+            "path": "scale"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "translation"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "rotation"
+          },
+          {
+            "node": 47,
+            "name": "shoulderHaloPivot",
+            "path": "scale"
+          }
+        ]
+      }
+    ],
+    "nodeChunks": [
+      {
+        "nodeIndex": 0,
+        "nodeName": "mesh_stitch_articulated_left_foot_mesh",
+        "vertexOffset": 261756,
+        "vertexCount": 12,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 0,
+        "nodeName": "mesh_stitch_articulated_left_foot_mesh_1",
+        "vertexOffset": 261768,
+        "vertexCount": 504,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 2,
+        "nodeName": "mesh_stitch_articulated_left_shin",
+        "vertexOffset": 262272,
+        "vertexCount": 108,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 3,
+        "nodeName": "mesh_stitch_articulated_left_shin_dark_inner",
+        "vertexOffset": 262380,
+        "vertexCount": 420,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 5,
+        "nodeName": "mesh_stitch_articulated_left_thigh_mesh",
+        "vertexOffset": 262800,
+        "vertexCount": 129,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 5,
+        "nodeName": "mesh_stitch_articulated_left_thigh_mesh_1",
+        "vertexOffset": 262929,
+        "vertexCount": 501,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 7,
+        "nodeName": "mesh_stitch_articulated_right_thigh_mesh",
+        "vertexOffset": 263430,
+        "vertexCount": 138,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 7,
+        "nodeName": "mesh_stitch_articulated_right_thigh_mesh_1",
+        "vertexOffset": 263568,
+        "vertexCount": 498,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 8,
+        "nodeName": "mesh_stitch_articulated_right_shin",
+        "vertexOffset": 264066,
+        "vertexCount": 123,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 9,
+        "nodeName": "mesh_stitch_articulated_right_shin_dark_inner",
+        "vertexOffset": 264189,
+        "vertexCount": 423,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 10,
+        "nodeName": "mesh_stitch_articulated_right_foot_mesh",
+        "vertexOffset": 264612,
+        "vertexCount": 18,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 10,
+        "nodeName": "mesh_stitch_articulated_right_foot_mesh_1",
+        "vertexOffset": 264630,
+        "vertexCount": 522,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 14,
+        "nodeName": "part_core_blue_front_lens",
+        "vertexOffset": 265152,
+        "vertexCount": 1140,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -0.007776,
+          1.652271,
+          -0.419587,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.007776,
+          0.419587,
+          1.652271,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 15,
+        "nodeName": "part_core_blue_glass",
+        "vertexOffset": 266292,
+        "vertexCount": 4560,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.007776,
+          1.652271,
+          -0.401587,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.007776,
+          -1.652271,
+          0.401587,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 16,
+        "nodeName": "part_core_dark_socket_ring",
+        "vertexOffset": 270852,
+        "vertexCount": 7020,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          -0.007776,
+          1.652271,
+          -0.395587,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.007776,
+          0.395587,
+          1.652271,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 18,
+        "nodeName": "mesh_stitch_articulated_head_mesh",
+        "vertexOffset": 277872,
+        "vertexCount": 774,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 18,
+        "nodeName": "mesh_stitch_articulated_head_mesh_1",
+        "vertexOffset": 278646,
+        "vertexCount": 1614,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 20,
+        "nodeName": "mesh_stitch_articulated_left_hand",
+        "vertexOffset": 280260,
+        "vertexCount": 60,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 21,
+        "nodeName": "mesh_stitch_articulated_left_hand_dark_inner",
+        "vertexOffset": 280320,
+        "vertexCount": 60,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 23,
+        "nodeName": "mesh_stitch_articulated_left_forearm_mesh",
+        "vertexOffset": 280380,
+        "vertexCount": 42,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 23,
+        "nodeName": "mesh_stitch_articulated_left_forearm_mesh_1",
+        "vertexOffset": 280422,
+        "vertexCount": 384,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 25,
+        "nodeName": "mesh_stitch_articulated_left_upper_arm_mesh",
+        "vertexOffset": 280806,
+        "vertexCount": 435,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 25,
+        "nodeName": "mesh_stitch_articulated_left_upper_arm_mesh_1",
+        "vertexOffset": 281241,
+        "vertexCount": 735,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 27,
+        "nodeName": "mesh_stitch_articulated_torso_mesh",
+        "vertexOffset": 281976,
+        "vertexCount": 276,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 27,
+        "nodeName": "mesh_stitch_articulated_torso_mesh_1",
+        "vertexOffset": 282252,
+        "vertexCount": 12,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 27,
+        "nodeName": "mesh_stitch_articulated_torso_mesh_2",
+        "vertexOffset": 282264,
+        "vertexCount": 1716,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 28,
+        "nodeName": "part_core_body_mount_plate",
+        "vertexOffset": 283980,
+        "vertexCount": 1668,
+        "bindMatrix": [
+          0.315,
+          0,
+          0,
+          0,
+          0,
+          0.3,
+          0,
+          0,
+          0,
+          0,
+          0.066,
+          0,
+          -0.007776,
+          1.652271,
+          -0.333587,
+          1
+        ],
+        "inverseBindMatrix": [
+          3.174603,
+          0,
+          0,
+          0,
+          0,
+          3.333333,
+          0,
+          0,
+          0,
+          0,
+          15.151515,
+          0,
+          0.024686,
+          -5.507571,
+          5.05435,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 29,
+        "nodeName": "mesh_stitch_articulated_right_upper_arm_mesh",
+        "vertexOffset": 285648,
+        "vertexCount": 462,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 29,
+        "nodeName": "mesh_stitch_articulated_right_upper_arm_mesh_1",
+        "vertexOffset": 286110,
+        "vertexCount": 864,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 30,
+        "nodeName": "mesh_stitch_articulated_right_forearm_mesh",
+        "vertexOffset": 286974,
+        "vertexCount": 30,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 30,
+        "nodeName": "mesh_stitch_articulated_right_forearm_mesh_1",
+        "vertexOffset": 287004,
+        "vertexCount": 396,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 31,
+        "nodeName": "mesh_stitch_articulated_right_hand",
+        "vertexOffset": 287400,
+        "vertexCount": 66,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 32,
+        "nodeName": "boss_iron_rod_black_rubber_grip_wrap",
+        "vertexOffset": 287466,
+        "vertexCount": 660,
+        "bindMatrix": [
+          -0.648716,
+          0,
+          0.203882,
+          0,
+          -0.111613,
+          0.569056,
+          -0.355131,
+          0,
+          -0.170618,
+          -0.372258,
+          -0.542876,
+          0,
+          0.790766,
+          1.145286,
+          -0.13696,
+          1
+        ],
+        "inverseBindMatrix": [
+          -1.402932,
+          -0.241377,
+          -0.368983,
+          0,
+          0,
+          1.230657,
+          -0.805055,
+          0,
+          0.440921,
+          -0.768018,
+          -1.174039,
+          0,
+          1.16978,
+          -1.323769,
+          1.053002,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 33,
+        "nodeName": "boss_iron_rod_cyan_energy_spine_window",
+        "vertexOffset": 288126,
+        "vertexCount": 648,
+        "bindMatrix": [
+          -0.648716,
+          0,
+          0.203882,
+          0,
+          -0.111613,
+          0.569056,
+          -0.355131,
+          0,
+          -0.170618,
+          -0.372258,
+          -0.542876,
+          0,
+          0.66158,
+          1.675999,
+          -0.548007,
+          1
+        ],
+        "inverseBindMatrix": [
+          -1.402932,
+          -0.241377,
+          -0.368983,
+          0,
+          0,
+          1.230657,
+          -0.805055,
+          0,
+          0.440921,
+          -0.768018,
+          -1.174039,
+          0,
+          1.16978,
+          -2.323769,
+          0.950002,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 34,
+        "nodeName": "boss_iron_rod_flat_impact_face",
+        "vertexOffset": 288774,
+        "vertexCount": 984,
+        "bindMatrix": [
+          -0.648716,
+          0,
+          0.203882,
+          0,
+          -0.111613,
+          0.569056,
+          -0.355131,
+          0,
+          -0.170618,
+          -0.372258,
+          -0.542876,
+          0,
+          0.553558,
+          2.342271,
+          -0.891716,
+          1
+        ],
+        "inverseBindMatrix": [
+          -1.402932,
+          -0.241377,
+          -0.368983,
+          0,
+          0,
+          1.230657,
+          -0.805055,
+          0,
+          0.440921,
+          -0.768018,
+          -1.174039,
+          0,
+          1.16978,
+          -3.433769,
+          1.043002,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 35,
+        "nodeName": "boss_iron_rod_forward_strike_crown",
+        "vertexOffset": 289758,
+        "vertexCount": 1512,
+        "bindMatrix": [
+          -0.648716,
+          0,
+          0.203882,
+          0,
+          -0.111613,
+          0.569056,
+          -0.355131,
+          0,
+          -0.170618,
+          -0.372258,
+          -0.542876,
+          0,
+          0.558086,
+          2.344025,
+          -0.877307,
+          1
+        ],
+        "inverseBindMatrix": [
+          -1.402932,
+          -0.241377,
+          -0.368983,
+          0,
+          0,
+          1.230657,
+          -0.805055,
+          0,
+          0.440921,
+          -0.768018,
+          -1.174039,
+          0,
+          1.16978,
+          -3.423768,
+          1.063002,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 36,
+        "nodeName": "boss_iron_rod_front_impact_head",
+        "vertexOffset": 291270,
+        "vertexCount": 6852,
+        "bindMatrix": [
+          -0.648716,
+          0,
+          0.203882,
+          0,
+          -0.111613,
+          0.569056,
+          -0.355131,
+          0,
+          -0.170618,
+          -0.372258,
+          -0.542876,
+          0,
+          0.582641,
+          2.218833,
+          -0.799178,
+          1
+        ],
+        "inverseBindMatrix": [
+          -1.402932,
+          -0.241377,
+          -0.368983,
+          0,
+          0,
+          1.230657,
+          -0.805055,
+          0,
+          0.440921,
+          -0.768018,
+          -1.174039,
+          0,
+          1.16978,
+          -3.203769,
+          1.063002,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 37,
+        "nodeName": "boss_iron_rod_longitudinal_scraped_rib_01",
+        "vertexOffset": 298122,
+        "vertexCount": 3600,
+        "bindMatrix": [
+          -0.65744,
+          0.124136,
+          0.121502,
+          0,
+          0.032588,
+          0.555351,
+          -0.391054,
+          0,
+          -0.170618,
+          -0.372258,
+          -0.542876,
+          0,
+          0.665846,
+          1.685306,
+          -0.534435,
+          1
+        ],
+        "inverseBindMatrix": [
+          -1.4218,
+          0.070477,
+          -0.368983,
+          0,
+          0.26846,
+          1.201018,
+          -0.805055,
+          0,
+          0.262765,
+          -0.845705,
+          -1.174039,
+          0,
+          0.634693,
+          -2.522984,
+          0.975002,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 38,
+        "nodeName": "boss_iron_rod_muted_red_lock_status_band",
+        "vertexOffset": 301722,
+        "vertexCount": 324,
+        "bindMatrix": [
+          -0.648716,
+          0,
+          0.203882,
+          0,
+          -0.111613,
+          0.569056,
+          -0.355131,
+          0,
+          -0.170618,
+          -0.372258,
+          -0.542876,
+          0,
+          0.745027,
+          1.25676,
+          -0.282495,
+          1
+        ],
+        "inverseBindMatrix": [
+          -1.402932,
+          -0.241377,
+          -0.368983,
+          0,
+          0,
+          1.230657,
+          -0.805055,
+          0,
+          0.440921,
+          -0.768018,
+          -1.174039,
+          0,
+          1.16978,
+          -1.583769,
+          0.955003,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 45,
+        "nodeName": "mesh_stitch_articulated_back",
+        "vertexOffset": 302046,
+        "vertexCount": 732,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": 46,
+        "nodeName": "part_back_internal_black_cavity_mass",
+        "vertexOffset": 302778,
+        "vertexCount": 672,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.001706,
+          1.679488,
+          -0.210455,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.001706,
+          -1.679488,
+          0.210455,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": []
+}

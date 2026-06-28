@@ -1,0 +1,357 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_01_maintenance_bay",
+  "modelKey": "prop_small_floor_shadow_disc",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/props/hp_prop_small_floor_shadow_disc.glb",
+  "fileName": "hp_prop_small_floor_shadow_disc.glb",
+  "sourceAsset": {
+    "modelKey": "prop_small_floor_shadow_disc",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/props/hp_prop_small_floor_shadow_disc.glb",
+    "file": "src/assets/models-cooked/environment/props/hp_prop_small_floor_shadow_disc.glb",
+    "sizeMeters": [
+      1.2,
+      0.02,
+      1.2
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 1732,
+      "meshes": 1,
+      "nodes": 1,
+      "skins": 0,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 0,
+      "images": 0,
+      "accessors": 2,
+      "bufferViews": 2,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "KHR_materials_unlit",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 2
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/props/hp_prop_small_floor_shadow_disc.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 638502,
+    "vertexCount": 6,
+    "triangleCount": 2,
+    "meshCount": 1,
+    "materialCount": 1,
+    "nodeCount": 1,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.39,
+        0.004,
+        -0.39
+      ],
+      "center": [
+        0,
+        0.004,
+        0
+      ],
+      "size": [
+        0.78,
+        0,
+        0.78
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "soft_floor_shadow_disc",
+        "vertexOffset": 638502,
+        "vertexCount": 6,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0.004,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1,
+          0,
+          0,
+          0,
+          0,
+          -0.004,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "procedural:maintenance_bay_floor:hero_arena_floor",
+      "source": "procedural-placeholder",
+      "role": "hero_arena_floor",
+      "roomId": "maintenance_bay_floor",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        0,
+        -3.2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": {
+        "compilerPlaceholder": true,
+        "message": "Hero arena panel floor is procedural in Three and not yet flattened for raw WebGPU."
+      },
+      "estimatedBounds": {
+        "center": [
+          0,
+          0,
+          -3.2
+        ],
+        "halfSize": [
+          0.0006,
+          0.00001,
+          0.0006
+        ]
+      }
+    },
+    {
+      "id": "procedural:maintenance_bay_floor:deep_grid_ceiling",
+      "source": "procedural-placeholder",
+      "role": "deep_grid_ceiling",
+      "roomId": "maintenance_bay_floor",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        0,
+        -3.2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": {
+        "compilerPlaceholder": true,
+        "message": "Deep-grid ceiling is procedural in Three and not yet flattened for raw WebGPU."
+      },
+      "estimatedBounds": {
+        "center": [
+          0,
+          0,
+          -3.2
+        ],
+        "halfSize": [
+          0.0006,
+          0.00001,
+          0.0006
+        ]
+      }
+    },
+    {
+      "id": "procedural:level_01_tool_alcove:hero_arena_floor",
+      "source": "procedural-placeholder",
+      "role": "hero_arena_floor",
+      "roomId": "level_01_tool_alcove",
+      "secondaryRoomId": null,
+      "position": [
+        -11.25,
+        0,
+        1.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": {
+        "compilerPlaceholder": true,
+        "message": "Hero arena panel floor is procedural in Three and not yet flattened for raw WebGPU."
+      },
+      "estimatedBounds": {
+        "center": [
+          -11.25,
+          0,
+          1.5
+        ],
+        "halfSize": [
+          0.0006,
+          0.00001,
+          0.0006
+        ]
+      }
+    },
+    {
+      "id": "procedural:level_01_tool_alcove:deep_grid_ceiling",
+      "source": "procedural-placeholder",
+      "role": "deep_grid_ceiling",
+      "roomId": "level_01_tool_alcove",
+      "secondaryRoomId": null,
+      "position": [
+        -11.25,
+        0,
+        1.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": {
+        "compilerPlaceholder": true,
+        "message": "Deep-grid ceiling is procedural in Three and not yet flattened for raw WebGPU."
+      },
+      "estimatedBounds": {
+        "center": [
+          -11.25,
+          0,
+          1.5
+        ],
+        "halfSize": [
+          0.0006,
+          0.00001,
+          0.0006
+        ]
+      }
+    },
+    {
+      "id": "procedural:service_elevator_room:hero_arena_floor",
+      "source": "procedural-placeholder",
+      "role": "hero_arena_floor",
+      "roomId": "service_elevator_room",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        0,
+        -16.3
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.001,
+        0.001,
+        0.001
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": {
+        "compilerPlaceholder": true,
+        "message": "Hero arena panel floor is procedural in Three and not yet flattened for raw WebGPU."
+      },
+      "estimatedBounds": {
+        "center": [
+          0,
+          0,
+          -16.3
+        ],
+        "halfSize": [
+          0.0006,
+          0.00001,
+          0.0006
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,33 @@
+{
+  "atlasSize": [
+    960,
+    600
+  ],
+  "source": "src/assets/gui/tool-calibration/image2-sources/tool_calibration_complete_ui_image2_source_v3_no_hand.png",
+  "sourceCrop": {
+    "left": 210,
+    "top": 171,
+    "width": 281,
+    "height": 240
+  },
+  "regions": {
+    "full_layer_16x10": [
+      0,
+      0,
+      960,
+      600
+    ],
+    "left_tool_bay_image": [
+      130,
+      42,
+      700,
+      520
+    ]
+  },
+  "constraints": [
+    "no hands",
+    "no skin tones",
+    "no biological forms",
+    "no gore"
+  ]
+}

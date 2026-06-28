@@ -1,0 +1,115 @@
+{
+  "schema": "hp.level05.reclamationSurfaces.strategy.v1",
+  "generatedAt": "2026-06-27",
+  "currentState": {
+    "summary": "Level 5 has room surface presets, but not a complete Level 5 v3 wall/floor/ceiling evidence chain matching the new furniture set.",
+    "runtimeOnlyImage2Floor": {
+      "roomId": "level_05_platform",
+      "assetId": "level05_image2_full_room_reclamation_core_floor",
+      "manifest": "src/assets/manifests/runtime/human_protocol_hero_floor_image2_ingested_manifest.json",
+      "note": "Existing older platform floor Image2 runtime hook is room-id based, not a complete builder surface preset family."
+    },
+    "rooms": [
+      {
+        "roomId": "level_05_core_entry",
+        "floorPresetId": "floor_level01_maintenance_image2_v1",
+        "wallPresetId": "wall_level01_maintenance_gunmetal_v1",
+        "ceilingPresetId": "ceiling_level01_maintenance_service_ribs_v1"
+      },
+      {
+        "roomId": "level_05_lock_hub",
+        "floorPresetId": "floor_reclamation_core_metal",
+        "wallPresetId": "wall_reclamation_core_panel",
+        "ceilingPresetId": "wall_reclamation_core_panel"
+      },
+      {
+        "roomId": "level_05_north_lock",
+        "floorPresetId": "floor_reclamation_core_metal",
+        "wallPresetId": "wall_reclamation_core_panel",
+        "ceilingPresetId": "wall_reclamation_core_panel"
+      },
+      {
+        "roomId": "level_05_east_lock",
+        "floorPresetId": "floor_level01_maintenance_image2_v1",
+        "wallPresetId": "wall_level01_maintenance_gunmetal_v1",
+        "ceilingPresetId": "ceiling_level01_maintenance_service_ribs_v1"
+      },
+      {
+        "roomId": "level_05_west_lock",
+        "floorPresetId": "floor_reclamation_core_metal",
+        "wallPresetId": "wall_reclamation_core_panel",
+        "ceilingPresetId": "wall_reclamation_core_panel"
+      },
+      {
+        "roomId": "level_05_platform",
+        "floorPresetId": "floor_reclamation_core_metal",
+        "wallPresetId": "wall_reclamation_core_panel",
+        "ceilingPresetId": "wall_reclamation_core_panel"
+      },
+      {
+        "roomId": "level_05_archive_room",
+        "floorPresetId": "floor_memory_clinic_tile",
+        "wallPresetId": "wall_memory_clinic_panel",
+        "ceilingPresetId": "wall_memory_clinic_panel"
+      },
+      {
+        "roomId": "level_05_identity_file",
+        "floorPresetId": "floor_dark_rubber",
+        "wallPresetId": "wall_dark_metal_panel",
+        "ceilingPresetId": "wall_dark_metal_panel",
+        "ceilingVisible": false
+      }
+    ]
+  },
+  "recommendation": {
+    "preferred": "image2",
+    "reason": "The 20 v3 furniture assets use a project-owned Image2 source-sheet art language: graphite, white ceramic, black ribbed pads, aged brass, cyan glass, and restrained red warning. Dedicated Image2 surfaces will look more coherent than generic CC0 metal/concrete scans.",
+    "doNotDo": [
+      "Do not claim the existing procedural reclamation presets are the new v3 surface evidence.",
+      "Do not import CC0 without exact source URL, author, license page, local archive, and redistribution note.",
+      "Do not use the old room-fit platform floor as proof for wall and ceiling."
+    ]
+  },
+  "image2Plan": {
+    "presetIds": {
+      "floor": "floor_level05_reclamation_core_image2_v3",
+      "wall": "wall_level05_reclamation_core_image2_v3",
+      "ceiling": "ceiling_level05_reclamation_core_image2_v3"
+    },
+    "sourcePrompts": [
+      "Tileable sci-fi reclamation core floor trim sheet: graphite metal plates, white ceramic lane inlays, aged brass seams, subtle cyan route lenses, black gasket grooves, restrained red warning slits, no text, no logos.",
+      "Tileable sci-fi reclamation wall panel trim sheet: vertical graphite ribs, white ceramic curved panel inserts, brass service bands, cyan glass inspection strips, screw caps, rubber gaskets, no text, no logos.",
+      "Tileable sci-fi reclamation ceiling panel trim sheet: recessed graphite service ribs, white ceramic baffles, cyan frosted light lenses, aged brass rails, black acoustic pads, tiny red maintenance markers, no text, no logos."
+    ],
+    "evidenceRequired": [
+      "Prompt ledger MD/JSON",
+      "Copied source PNGs under repo-local image2 source directory",
+      "Generated cache path or tool call id when exposed",
+      "License label openai-generated-output-user-owned-subject-to-openai-terms",
+      "Classification owned-generated-output",
+      "Runtime color/normal/rough maps under builder-surfaces",
+      "BuilderEnvironment preset entries",
+      "Official builder room env preset references",
+      "Raw WebGPU resource compile evidence",
+      "Browser or viewer screenshot evidence"
+    ]
+  },
+  "cc0Alternative": {
+    "status": "not imported",
+    "acceptableSources": [
+      "ambientCG",
+      "Poly Haven"
+    ],
+    "auditRequiredBeforeUse": [
+      "source URL",
+      "author/publisher",
+      "license page URL and local proof",
+      "commercial use allowed",
+      "modification allowed",
+      "redistribution inside bundled web game allowed",
+      "local raw archive path",
+      "adapted runtime output path"
+    ],
+    "visualRisk": "CC0 industrial scans may read as stock concrete/metal and fight the custom Image2 furniture unless heavily art-directed."
+  }
+}

@@ -1,0 +1,2389 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_wall_panel_maintenance",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/shells/hp_room_wall_panel_maintenance.glb",
+  "fileName": "hp_room_wall_panel_maintenance.glb",
+  "sourceAsset": {
+    "modelKey": "room_wall_panel_maintenance",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/shells/hp_room_wall_panel_maintenance.glb",
+    "file": "src/assets/models-cooked/environment/shells/hp_room_wall_panel_maintenance.glb",
+    "sizeMeters": [
+      2.4,
+      1.65,
+      0.28
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 6340,
+      "meshes": 2,
+      "nodes": 2,
+      "skins": 0,
+      "primitives": 2,
+      "materials": 2,
+      "textures": 2,
+      "images": 2,
+      "accessors": 7,
+      "bufferViews": 8,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_materials_unlit",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 248
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/shells/hp_room_wall_panel_maintenance.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 823800,
+    "vertexCount": 744,
+    "triangleCount": 248,
+    "meshCount": 12,
+    "materialCount": 6,
+    "nodeCount": 12,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -1.2,
+        0,
+        -0.08
+      ],
+      "center": [
+        0,
+        0.825,
+        0.083
+      ],
+      "size": [
+        2.4,
+        1.65,
+        0.326
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_structural_back",
+        "vertexOffset": 823800,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.825,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.825,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_inset_shadow",
+        "vertexOffset": 823836,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.88,
+          0.09,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.88,
+          -0.09,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_main_panel_left",
+        "vertexOffset": 823872,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.52,
+          0.86,
+          0.145,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.52,
+          -0.86,
+          -0.145,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_main_panel_right",
+        "vertexOffset": 823908,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.52,
+          0.86,
+          0.145,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.52,
+          -0.86,
+          -0.145,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_top_rail",
+        "vertexOffset": 823944,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.52,
+          0.17,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.52,
+          -0.17,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_bottom_rail",
+        "vertexOffset": 823980,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.12,
+          0.17,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.12,
+          -0.17,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_center_seam",
+        "vertexOffset": 824016,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.84,
+          0.18,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.84,
+          -0.18,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_status_strip",
+        "vertexOffset": 824052,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          1.34,
+          0.224,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -1.34,
+          -0.224,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_data_chip_a",
+        "vertexOffset": 824088,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.72,
+          0.28,
+          0.226,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.72,
+          -0.28,
+          -0.226,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_data_chip_b",
+        "vertexOffset": 824124,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.72,
+          0.28,
+          0.226,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.72,
+          -0.28,
+          -0.226,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_side_pipe_-103",
+        "vertexOffset": 824160,
+        "vertexCount": 192,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.03,
+          0.83,
+          0.21,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.03,
+          -0.83,
+          -0.21,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "maintenance_wall_side_pipe_103",
+        "vertexOffset": 824352,
+        "vertexCount": 192,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          1.03,
+          0.83,
+          0.21,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -1.03,
+          -0.83,
+          -0.21,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "shell:level_03_entry_hall:north:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        0,
+        0,
+        15.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        5,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          0,
+          0,
+          15.34
+        ],
+        "halfSize": [
+          6,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_entry_hall:south:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -3.99,
+        0,
+        8.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.675,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.99,
+          0,
+          8.66
+        ],
+        "halfSize": [
+          2.01,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_entry_hall:south:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        3.99,
+        0,
+        8.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.675,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.99,
+          0,
+          8.66
+        ],
+        "halfSize": [
+          2.01,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_entry_hall:east:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        5.84,
+        0,
+        12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          5.84,
+          0,
+          12
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_entry_hall:west:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -5.84,
+        0,
+        12
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5.84,
+          0,
+          12
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:north:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        -5.49,
+        0,
+        8.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        2.925,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5.49,
+          0,
+          8.84
+        ],
+        "halfSize": [
+          3.51,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:north:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        5.49,
+        0,
+        8.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        2.925,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          5.49,
+          0,
+          8.84
+        ],
+        "halfSize": [
+          3.51,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:south:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        -5.49,
+        0,
+        -1.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.925,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5.49,
+          0,
+          -1.84
+        ],
+        "halfSize": [
+          3.51,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:south:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        5.49,
+        0,
+        -1.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.925,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          5.49,
+          0,
+          -1.84
+        ],
+        "halfSize": [
+          3.51,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:east:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        8.84,
+        0,
+        -0.24
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1.466667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.84,
+          0,
+          -0.24
+        ],
+        "halfSize": [
+          1.76,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:east:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        8.84,
+        0,
+        7.24
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1.466667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.84,
+          0,
+          7.24
+        ],
+        "halfSize": [
+          1.76,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:west:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        -8.84,
+        0,
+        -0.24
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.466667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -8.84,
+          0,
+          -0.24
+        ],
+        "halfSize": [
+          1.76,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_gallery_lobby:west:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_gallery_lobby",
+      "secondaryRoomId": null,
+      "position": [
+        -8.84,
+        0,
+        7.24
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1.466667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -8.84,
+          0,
+          7.24
+        ],
+        "halfSize": [
+          1.76,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:north:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -12.2,
+        0,
+        6.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -12.2,
+          0,
+          6.84
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:south:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -12.2,
+        0,
+        0.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -12.2,
+          0,
+          0.16
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:east:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -8.86,
+        0,
+        0.76
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        0.633333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -8.86,
+          0,
+          0.76
+        ],
+        "halfSize": [
+          0.76,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:east:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -8.86,
+        0,
+        6.24
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        0.633333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -8.86,
+          0,
+          6.24
+        ],
+        "halfSize": [
+          0.76,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_tool_exhibit:west:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_tool_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -15.54,
+        0,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -15.54,
+          0,
+          3.5
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:north:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        12.2,
+        0,
+        6.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          12.2,
+          0,
+          6.84
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:south:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        12.2,
+        0,
+        0.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          12.2,
+          0,
+          0.16
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:east:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        15.54,
+        0,
+        3.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          15.54,
+          0,
+          3.5
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:west:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        8.86,
+        0,
+        0.76
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.633333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.86,
+          0,
+          0.76
+        ],
+        "halfSize": [
+          0.76,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_voice_exhibit:west:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_voice_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        8.86,
+        0,
+        6.24
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.633333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          8.86,
+          0,
+          6.24
+        ],
+        "halfSize": [
+          0.76,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:north:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -3.99,
+        0,
+        -1.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1.675,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.99,
+          0,
+          -1.66
+        ],
+        "halfSize": [
+          2.01,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:north:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        3.99,
+        0,
+        -1.66
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1.675,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.99,
+          0,
+          -1.66
+        ],
+        "halfSize": [
+          2.01,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:south:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -3.99,
+        0,
+        -8.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.675,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.99,
+          0,
+          -8.34
+        ],
+        "halfSize": [
+          2.01,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:south:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        3.99,
+        0,
+        -8.34
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.675,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          3.99,
+          0,
+          -8.34
+        ],
+        "halfSize": [
+          2.01,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:east:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        5.84,
+        0,
+        -5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          5.84,
+          0,
+          -5
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_body_exhibit:west:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_body_exhibit",
+      "secondaryRoomId": null,
+      "position": [
+        -5.84,
+        0,
+        -5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        2.916667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -5.84,
+          0,
+          -5
+        ],
+        "halfSize": [
+          3.5,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:north:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        -4.24,
+        0,
+        -8.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1.883333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -4.24,
+          0,
+          -8.16
+        ],
+        "halfSize": [
+          2.26,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:north:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        4.24,
+        0,
+        -8.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        1.883333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          4.24,
+          0,
+          -8.16
+        ],
+        "halfSize": [
+          2.26,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:south:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        -4.24,
+        0,
+        -17.14
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.883333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -4.24,
+          0,
+          -17.14
+        ],
+        "halfSize": [
+          2.26,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:south:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        4.24,
+        0,
+        -17.14
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1.883333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          4.24,
+          0,
+          -17.14
+        ],
+        "halfSize": [
+          2.26,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:east:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        6.34,
+        0,
+        -16.14
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        0.966667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.34,
+          0,
+          -16.14
+        ],
+        "halfSize": [
+          1.16,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:east:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        6.34,
+        0,
+        -9.51
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1.258333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.34,
+          0,
+          -9.51
+        ],
+        "halfSize": [
+          1.51,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:level_03_central_archive:west:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "level_03_central_archive",
+      "secondaryRoomId": null,
+      "position": [
+        -6.34,
+        0,
+        -12.65
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        3.875,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -6.34,
+          0,
+          -12.65
+        ],
+        "halfSize": [
+          4.65,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:north:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        12.75,
+        0,
+        -9.46
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        3.141593,
+        0
+      ],
+      "scale": [
+        5.208333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          12.75,
+          0,
+          -9.46
+        ],
+        "halfSize": [
+          6.25,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:south:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        12.75,
+        0,
+        -16.54
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        5.208333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          12.75,
+          0,
+          -16.54
+        ],
+        "halfSize": [
+          6.25,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:east:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        18.84,
+        0,
+        -13
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        3.083333,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          18.84,
+          0,
+          -13
+        ],
+        "halfSize": [
+          3.7,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:west:0:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        6.66,
+        0,
+        -15.84
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.716667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.66,
+          0,
+          -15.84
+        ],
+        "halfSize": [
+          0.86,
+          1.325,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "shell:room_kqrkp0:west:1:wall",
+      "source": "shell",
+      "role": "wall",
+      "roomId": "room_kqrkp0",
+      "secondaryRoomId": null,
+      "position": [
+        6.66,
+        0,
+        -10.16
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.716667,
+        1.606061,
+        1.214286
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          6.66,
+          0,
+          -10.16
+        ],
+        "halfSize": [
+          0.86,
+          1.325,
+          0.17
+        ]
+      }
+    }
+  ]
+}

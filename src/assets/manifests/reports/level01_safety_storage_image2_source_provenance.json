@@ -1,0 +1,105 @@
+{
+  "schema": "human-protocol/image2-source-provenance@1",
+  "assetFamily": "Level 01 safety, storage, and human-maintenance reference furniture Lane C",
+  "packId": "hp_level01_safety_storage_image2_v1",
+  "sourceTool": "built-in image_gen",
+  "sourceCallId": "not-exposed-by-built-in-image-gen",
+  "generationDate": "2026-06-20",
+  "generatingAccount": "local Codex desktop session for project owner",
+  "licenseLabel": "owned-generated-output",
+  "licenseNote": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "originalGeneratedImage": "/Users/zhengkaizhang/.codex/generated_images/019ee642-d82c-7711-99bb-f499abe4f514/ig_0343bbfede74d376016a36d9eee444819aab5dbc5917e6b2c2.png",
+  "repoSourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+  "prompt": "Use case: stylized-concept\nAsset type: Human Protocol Level 1 industrial safety/storage/body-reference material board for 3D prop texture sourcing\nPrimary request: Create one square material board image for a game asset pipeline, showing five clearly separated panels that can be cropped into texture regions: (1) yellow-black warning barrier stripes and scratched metal rail material, (2) stacked gray-blue industrial plastic parts totes with small blank label plates, (3) dark access diagnostic terminal cabinet surface with abstract cyan indicator lights and cable sockets, (4) white folding maintenance privacy screen fabric/plastic panels with pale gray hinges, (5) white medical maintenance reference lightbox with abstract human silhouette diagram made only of non-readable geometric lines and soft structure light.\nScene/backdrop: orthographic flat lay material board on a neutral dark workshop table, five clean rectangular zones separated by thin gutters.\nSubject: industrial safety, storage, and body-maintenance surfaces suitable for Level 1 maintenance bay props.\nStyle/medium: high-quality stylized 3D game texture concept, clean industrial sci-fi, crisp edges, physically plausible materials, low-noise albedo-friendly lighting.\nComposition/framing: square image, straight-on orthographic view, each panel distinct, generous margins, no perspective distortion, no object overlap between panels.\nLighting/mood: soft studio light, readable material details, controlled reflections.\nColor palette: hazard yellow/black, cool gray metal, muted blue storage plastic, white medical panels, cyan diagnostic glow accents.\nMaterials/textures: scratched painted metal, ribbed plastic, brushed dark cabinet metal, clean white folding polymer, translucent glowing acrylic.\nText (verbatim): none.\nConstraints: no readable words, no numbers, no puzzle answers, no logos, no watermark, no UI text. Human reference must be abstract diagram only, not anatomical detail.\nAvoid: blurred crops, tiny illegible signs, random labels, blood, gore, horror anatomy, brand marks, handwritten text.",
+  "cropMapping": {
+    "warning_barrier": {
+      "x": 0,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 16,
+        "y": 16,
+        "w": 604,
+        "h": 584
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/warning_barrier_fixed_crop.png",
+      "modelKey": "room_l1_img2_warning_barrier",
+      "materialIntent": "scratched black/yellow warning rail and barrier plank"
+    },
+    "parts_tote_stack": {
+      "x": 512,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 634,
+        "y": 16,
+        "w": 604,
+        "h": 584
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/parts_tote_stack_fixed_crop.png",
+      "modelKey": "room_l1_img2_parts_tote_stack",
+      "materialIntent": "stacked gray-blue industrial plastic tote faces"
+    },
+    "access_diagnostic_cabinet": {
+      "x": 1024,
+      "y": 0,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 16,
+        "y": 614,
+        "w": 396,
+        "h": 610
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/access_diagnostic_cabinet_fixed_crop.png",
+      "modelKey": "room_l1_img2_access_diagnostic_cabinet",
+      "materialIntent": "dark terminal cabinet face with abstract cyan indicators"
+    },
+    "maintenance_privacy_screen": {
+      "x": 0,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 424,
+        "y": 614,
+        "w": 408,
+        "h": 610
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/maintenance_privacy_screen_fixed_crop.png",
+      "modelKey": "room_l1_img2_maintenance_privacy_screen",
+      "materialIntent": "white folding maintenance privacy panels and hinges"
+    },
+    "body_reference_lightbox": {
+      "x": 512,
+      "y": 512,
+      "w": 512,
+      "h": 512,
+      "sourceRect": {
+        "x": 844,
+        "y": 614,
+        "w": 396,
+        "h": 610
+      },
+      "sourceImage": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/hp_level01_safety_storage_material_board_image2_source.png",
+      "fixedCrop": "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/body_reference_lightbox_fixed_crop.png",
+      "modelKey": "room_l1_img2_body_reference_lightbox",
+      "materialIntent": "white medical lightbox with abstract non-readable body reference"
+    }
+  },
+  "derivativeOutputs": [
+    "src/assets/textures/environment/level01-safety-storage-image2/hp_level01_safety_storage_image2_atlas.png",
+    "src/assets/textures/environment/level01-safety-storage-image2/hp_level01_safety_storage_image2_atlas.regions.json",
+    "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/warning_barrier_fixed_crop.png",
+    "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/parts_tote_stack_fixed_crop.png",
+    "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/access_diagnostic_cabinet_fixed_crop.png",
+    "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/maintenance_privacy_screen_fixed_crop.png",
+    "src/assets/textures/environment/level01-safety-storage-image2/image2-sources/body_reference_lightbox_fixed_crop.png"
+  ]
+}

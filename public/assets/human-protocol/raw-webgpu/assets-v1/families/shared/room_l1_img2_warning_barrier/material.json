@@ -1,0 +1,216 @@
+{
+  "file": "material.json",
+  "hash": "8159db46299fc3c0",
+  "materials": [
+    {
+      "index": 707,
+      "id": "mat:builder-resource:l1-safety-graphite-powdercoat:3i8b3d",
+      "name": "l1_safety_graphite_powdercoat",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.055,
+        0.06,
+        0.065,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.72,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 0,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 708,
+      "id": "mat:builder-resource:l1-safety-rubber-black:79hd9m",
+      "name": "l1_safety_rubber_black",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.025,
+        0.025,
+        0.027,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.86,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 3,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 709,
+      "id": "mat:builder-resource:l1-safety-brushed-steel:1i2tkla",
+      "name": "l1_safety_brushed_steel",
+      "category": "builder-resource",
+      "visualRole": "structural_dark",
+      "semanticParams": [
+        4,
+        0.86,
+        0.03,
+        0.48
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        0.5,
+        0.54,
+        0.55,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.42,
+      "metallicFactor": 0.45,
+      "aoStrength": 1,
+      "materialKind": 2,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": []
+    },
+    {
+      "index": 755,
+      "id": "mat:builder-resource:l1-image2-warning-barrier-tile:18vsde2",
+      "name": "l1_image2_warning_barrier_tile",
+      "category": "builder-resource",
+      "visualRole": "neutral_surface",
+      "semanticParams": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "paletteColorFactor": [
+        0,
+        0,
+        0,
+        0
+      ],
+      "baseColorFactor": [
+        1,
+        1,
+        1,
+        1
+      ],
+      "emissiveFactor": [
+        0,
+        0,
+        0
+      ],
+      "emissiveStrength": 0,
+      "roughnessFactor": 0.58,
+      "metallicFactor": 0,
+      "aoStrength": 1,
+      "materialKind": 5,
+      "alphaMode": "OPAQUE",
+      "transparency": {
+        "mode": "opaque",
+        "alpha": 1,
+        "source": "opaque-default"
+      },
+      "doubleSided": true,
+      "textures": [
+        {
+          "semantic": "baseColor",
+          "present": true,
+          "colorSpace": "srgb",
+          "name": "hp_level01_safety_storage_image2_atlas",
+          "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_warning_barrier/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+          "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_warning_barrier/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+          "mimeType": "image/webp",
+          "stats": {
+            "lumaMean": 0.345531,
+            "contrast": 0.488284,
+            "chroma": 0.091025,
+            "detail": 0.194501
+          },
+          "generated": false,
+          "layer": 57
+        }
+      ]
+    }
+  ],
+  "baseColorTextureSize": 512,
+  "baseColorTextures": [
+    {
+      "layer": 57,
+      "semantic": "baseColor",
+      "colorSpace": "srgb",
+      "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_warning_barrier/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+      "name": "hp_level01_safety_storage_image2_atlas",
+      "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/shared/room_l1_img2_warning_barrier/textures/basecolor-57-hp-level01-safety-storage-image2-atlas.webp",
+      "mimeType": "image/webp",
+      "stats": {
+        "lumaMean": 0.345531,
+        "contrast": 0.488284,
+        "chroma": 0.091025,
+        "detail": 0.194501
+      }
+    }
+  ],
+  "materialTextureSize": 512,
+  "materialTextures": []
+}

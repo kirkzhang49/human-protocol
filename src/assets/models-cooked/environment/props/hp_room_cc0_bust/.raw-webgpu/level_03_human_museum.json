@@ -1,0 +1,166 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_03_human_museum",
+  "modelKey": "room_cc0_bust",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/props/hp_room_cc0_bust.glb",
+  "fileName": "hp_room_cc0_bust.glb",
+  "sourceAsset": {
+    "modelKey": "room_cc0_bust",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/props/hp_room_cc0_bust.glb",
+    "file": "src/assets/models-cooked/environment/props/hp_room_cc0_bust.glb",
+    "sizeMeters": [
+      0.712,
+      1.35,
+      0.786
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 192780,
+      "meshes": 1,
+      "nodes": 1,
+      "skins": 0,
+      "primitives": 1,
+      "materials": 1,
+      "textures": 3,
+      "images": 3,
+      "accessors": 4,
+      "bufferViews": 7,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 16226
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/props/hp_room_cc0_bust.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 1033182,
+    "vertexCount": 48678,
+    "triangleCount": 16226,
+    "meshCount": 1,
+    "materialCount": 1,
+    "nodeCount": 1,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.356247,
+        0.000034,
+        -0.392915
+      ],
+      "center": [
+        0,
+        0.675017,
+        0
+      ],
+      "size": [
+        0.712495,
+        1.349967,
+        0.785829
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "marble_bust_01",
+        "vertexOffset": 1033182,
+        "vertexCount": 48678,
+        "bindMatrix": [
+          0.674983,
+          0,
+          0,
+          0,
+          0,
+          0.674983,
+          0,
+          0,
+          0,
+          0,
+          0.674983,
+          0,
+          0,
+          0.675017,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1.481518,
+          0,
+          0,
+          0,
+          0,
+          1.481518,
+          0,
+          0,
+          0,
+          0,
+          1.481518,
+          0,
+          0,
+          -1.00005,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_3r5g00",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_03_entry_hall",
+      "secondaryRoomId": null,
+      "position": [
+        -2,
+        0,
+        9.5
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -2,
+          0,
+          9.5
+        ],
+        "halfSize": [
+          0.356,
+          0.675,
+          0.393
+        ]
+      }
+    }
+  ]
+}

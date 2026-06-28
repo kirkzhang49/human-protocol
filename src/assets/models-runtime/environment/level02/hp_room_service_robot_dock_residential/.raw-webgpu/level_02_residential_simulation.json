@@ -1,0 +1,646 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "room_service_robot_dock_residential",
+  "category": "room",
+  "file": "src/assets/models-runtime/environment/level02/hp_room_service_robot_dock_residential.glb",
+  "fileName": "hp_room_service_robot_dock_residential.glb",
+  "sourceAsset": {
+    "modelKey": "room_service_robot_dock_residential",
+    "category": "room",
+    "url": "/src/assets/models-runtime/environment/level02/hp_room_service_robot_dock_residential.glb",
+    "file": "src/assets/models-runtime/environment/level02/hp_room_service_robot_dock_residential.glb",
+    "sizeMeters": [
+      1.35,
+      0.92,
+      0.91
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 174028,
+      "meshes": 9,
+      "nodes": 10,
+      "skins": 0,
+      "primitives": 9,
+      "materials": 5,
+      "textures": 3,
+      "images": 2,
+      "accessors": 34,
+      "bufferViews": 36,
+      "animations": [],
+      "extensionsUsed": [
+        "KHR_materials_emissive_strength"
+      ],
+      "estimatedTriangles": 972
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models/environment/level02/hp_room_service_robot_dock_residential.glb",
+    "rawSource": "raw-models",
+    "status": "ready",
+    "vertexOffset": 518886,
+    "vertexCount": 2916,
+    "triangleCount": 972,
+    "meshCount": 9,
+    "materialCount": 5,
+    "nodeCount": 10,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.644044,
+        0,
+        -0.456663
+      ],
+      "center": [
+        0,
+        0.494877,
+        0
+      ],
+      "size": [
+        1.288087,
+        0.989753,
+        0.913325
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "central_empty_cradle_space",
+        "vertexOffset": 518886,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.346924,
+          -0.05,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.346924,
+          0.05,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "charging_dock_floor_plinth",
+        "vertexOffset": 519210,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.1,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.1,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "dock_cyan_charge_tip",
+        "vertexOffset": 519534,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.412188,
+          0.459164,
+          0.328797,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.412188,
+          -0.459164,
+          -0.328797,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "dock_cyan_charge_tip001",
+        "vertexOffset": 519858,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.412188,
+          0.459164,
+          0.328797,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.412188,
+          -0.459164,
+          -0.328797,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "dock_side_clamp_arm",
+        "vertexOffset": 520182,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.412188,
+          0.459164,
+          0.045666,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.412188,
+          -0.459164,
+          -0.045666,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "dock_side_clamp_arm001",
+        "vertexOffset": 520506,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0.412188,
+          0.459164,
+          0.045666,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          -0.412188,
+          -0.459164,
+          -0.045666,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "rear_charge_status_screen_image2",
+        "vertexOffset": 520830,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.734662,
+          -0.223765,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.734662,
+          0.223765,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "rear_power_column",
+        "vertexOffset": 521154,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.550997,
+          -0.319664,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.550997,
+          0.319664,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "small_gold_service_slot",
+        "vertexOffset": 521478,
+        "vertexCount": 324,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0.204073,
+          0.374463,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          -0.204073,
+          -0.374463,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:level_02_living_left_robot_dock",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        -7.72,
+        0.02,
+        1
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "residential_simulation",
+        "robot_dock"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7.72,
+          0.02,
+          1
+        ],
+        "halfSize": [
+          0.675,
+          0.46,
+          0.455
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_living_left_robot_dock_rear",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        -7.72,
+        0.02,
+        -1.15
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.92,
+        0.92,
+        0.92
+      ],
+      "tags": [
+        "residential_simulation",
+        "robot_dock",
+        "image2_director"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -7.72,
+          0.02,
+          -1.15
+        ],
+        "halfSize": [
+          0.621,
+          0.4232,
+          0.4186
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_living_right_robot_dock",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        7.72,
+        0.02,
+        -4.2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        0.92,
+        0.92,
+        0.92
+      ],
+      "tags": [
+        "residential_simulation",
+        "robot_dock"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          7.72,
+          0.02,
+          -4.2
+        ],
+        "halfSize": [
+          0.621,
+          0.4232,
+          0.4186
+        ]
+      }
+    },
+    {
+      "id": "prop:level_02_care_robot_dock",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_care_room",
+      "secondaryRoomId": null,
+      "position": [
+        15.15,
+        0.02,
+        -1.65
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        -1.570796,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [
+        "residential_simulation",
+        "boss_room_prop",
+        "robot_dock"
+      ],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          15.15,
+          0.02,
+          -1.65
+        ],
+        "halfSize": [
+          0.675,
+          0.46,
+          0.455
+        ]
+      }
+    }
+  ]
+}

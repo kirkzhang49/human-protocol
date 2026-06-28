@@ -1,0 +1,210 @@
+import type { WeaponId } from "./weaponConfig";
+import type { UltimateAbilityId } from "./ultimateAbilityConfig";
+
+export type UpgradeRarity = "Common" | "Rare" | "Epic" | "Prototype";
+
+export interface UpgradeDefinition {
+  id: string;
+  title: string;
+  rarity: UpgradeRarity;
+  role: string;
+  description: string;
+  category: "blade" | "gun" | "ultimate" | "core" | "assist" | "story";
+  maxStacks: number;
+  weaponId?: WeaponId;
+  ultimateAbilityId?: UltimateAbilityId;
+}
+
+export const upgradePool: readonly UpgradeDefinition[] = [
+  {
+    id: "pulse_faster_cycle",
+    title: "臂力恢复",
+    rarity: "Common",
+    role: "身体强化",
+    description: "铁棒挥击+18%，耗费精力略降。适合一直贴脸压迫。",
+    category: "blade",
+    maxStacks: 3,
+    weaponId: "pulseRifle",
+  },
+  {
+    id: "pulse_coolant_feed",
+    title: "省力挥棒",
+    rarity: "Common",
+    role: "身体强化",
+    description: "铁棒耗费精力大幅降低。精力不空，近战节奏就不会断。",
+    category: "blade",
+    maxStacks: 2,
+    weaponId: "pulseRifle",
+  },
+  {
+    id: "pulse_chain_mark",
+    title: "搏斗本能",
+    rarity: "Rare",
+    role: "近战路线",
+    description: "铁棒击杀回精力，并扩大近身锁定角。怪越多越敢往前压。",
+    category: "blade",
+    maxStacks: 1,
+    weaponId: "pulseRifle",
+  },
+  {
+    id: "rail_overcharge",
+    title: "快速换弹",
+    rarity: "Rare",
+    role: "手枪路线",
+    description: "换弹速度显著提升，手枪伤害+18%。适合边退边点掉重型单位。",
+    category: "gun",
+    maxStacks: 2,
+    weaponId: "railLance",
+  },
+  {
+    id: "rail_double_line",
+    title: "稳定呼吸",
+    rarity: "Epic",
+    role: "手枪路线",
+    description: "呼吸忽然稳定：手枪追加第二发平行弹道，适合打断护盾和远处单位。",
+    category: "gun",
+    maxStacks: 1,
+    weaponId: "railLance",
+  },
+  {
+    id: "shock_shorter_cd",
+    title: "电池快装",
+    rarity: "Common",
+    role: "物品技能",
+    description: "立刻装填1枚应急电池；释放硬直-18%，被围住时一键炸开空间。",
+    category: "ultimate",
+    maxStacks: 2,
+    weaponId: "flakBurst",
+    ultimateAbilityId: "coreBomb",
+  },
+  {
+    id: "shock_repair_ping",
+    title: "急救电池",
+    rarity: "Rare",
+    role: "物品技能",
+    description: "应急电池命中会恢复生命，并进一步推开近身机器人。",
+    category: "ultimate",
+    maxStacks: 1,
+    weaponId: "flakBurst",
+    ultimateAbilityId: "coreBomb",
+  },
+  {
+    id: "breach_missile_module",
+    title: "突破导弹",
+    rarity: "Prototype",
+    role: "物品技能",
+    description: "把 3 号技能切换为高速突破导弹：范围更小，但飞得更直、爆心更疼。",
+    category: "ultimate",
+    maxStacks: 1,
+    weaponId: "flakBurst",
+    ultimateAbilityId: "breachMissile",
+  },
+  {
+    id: "core_cell_damage",
+    title: "高压电池",
+    rarity: "Rare",
+    role: "物品爆发",
+    description: "应急电池伤害+28%，推开范围更硬。留到被包围时更值钱。",
+    category: "ultimate",
+    maxStacks: 2,
+    weaponId: "flakBurst",
+    ultimateAbilityId: "coreBomb",
+  },
+  {
+    id: "core_cell_preserve",
+    title: "残余电量",
+    rarity: "Epic",
+    role: "物品爆发",
+    description: "使用应急电池后有26%概率不完全耗尽。后续关卡可以做电池流。",
+    category: "ultimate",
+    maxStacks: 2,
+    weaponId: "flakBurst",
+    ultimateAbilityId: "coreBomb",
+  },
+  {
+    id: "shock_memory_echo",
+    title: "陌生回声",
+    rarity: "Prototype",
+    role: "剧情原型",
+    description: "使用应急电池时，广播会短暂露出它们真正想说的话。",
+    category: "story",
+    maxStacks: 1,
+    weaponId: "flakBurst",
+  },
+  {
+    id: "core_plating",
+    title: "心脏加强",
+    rarity: "Common",
+    role: "生存路线",
+    description: "你觉得心跳变重了：生命上限+30，并立刻恢复一截。",
+    category: "core",
+    maxStacks: 3,
+  },
+  {
+    id: "servo_stride",
+    title: "求生步伐",
+    rarity: "Common",
+    role: "走位路线",
+    description: "腿终于听话了：移动速度+10%，更容易拉开夹击和冲向出口。",
+    category: "core",
+    maxStacks: 2,
+  },
+  {
+    id: "turn_assist",
+    title: "转身辅助",
+    rarity: "Common",
+    role: "手机友好",
+    description: "威胁转向速度+15%。点红弧后更快回头。",
+    category: "assist",
+    maxStacks: 2,
+  },
+  {
+    id: "wide_target_cone",
+    title: "宽域锁定",
+    rarity: "Rare",
+    role: "瞄准辅助",
+    description: "自动锁定角+4度。少瞄准，多移动。",
+    category: "assist",
+    maxStacks: 2,
+  },
+  {
+    id: "thermal_buffer",
+    title: "深呼吸",
+    rarity: "Common",
+    role: "精力路线",
+    description: "精力上限+16，铁棒耗力略降。适合铁棒和闪避一起用。",
+    category: "core",
+    maxStacks: 2,
+  },
+  {
+    id: "dash_shorter_cd",
+    title: "短闪步",
+    rarity: "Common",
+    role: "走位路线",
+    description: "闪避冷却-28%。被侧后方夹击时更容易拉开身位。",
+    category: "core",
+    maxStacks: 2,
+  },
+  {
+    id: "field_medicine",
+    title: "急救熟练",
+    rarity: "Rare",
+    role: "生存路线",
+    description: "修复箱恢复量+35%。低血掉包更值钱，容错更高。",
+    category: "assist",
+    maxStacks: 2,
+  },
+  {
+    id: "last_human_protocol",
+    title: "残留反射",
+    rarity: "Epic",
+    role: "反杀保险",
+    description: "低血量自动触发一次应急爆发，给你一次反杀窗口。",
+    category: "story",
+    maxStacks: 1,
+  },
+];
+
+export const upgradeById: ReadonlyMap<string, UpgradeDefinition> = new Map(
+  upgradePool.map((upgrade) => [upgrade.id, upgrade] as const),
+);

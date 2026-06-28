@@ -1,0 +1,118 @@
+{
+  "schemaVersion": "hp.image2.gui.regions.v2",
+  "atlasSize": [
+    1536,
+    1536
+  ],
+  "backgroundSize": [
+    1792,
+    1024
+  ],
+  "source": "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_image2_source_v2.png",
+  "background": "src/assets/gui/gate-balance/gate_balance_overlay_background_image2_v2.png",
+  "parts": "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v2.png",
+  "regions": {
+    "stage_plate": [
+      0,
+      0,
+      1556,
+      500
+    ],
+    "gate_slot_idle": [
+      0,
+      520,
+      390,
+      340
+    ],
+    "gate_slot_focus": [
+      400,
+      520,
+      390,
+      340
+    ],
+    "gate_slot_balanced": [
+      800,
+      520,
+      390,
+      340
+    ],
+    "gauge_plate_idle": [
+      0,
+      930,
+      420,
+      132
+    ],
+    "gauge_plate_near": [
+      424,
+      930,
+      420,
+      132
+    ],
+    "gauge_plate_locked": [
+      848,
+      930,
+      420,
+      132
+    ],
+    "control_plate": [
+      0,
+      1090,
+      480,
+      112
+    ],
+    "control_plate_mid": [
+      444,
+      1090,
+      480,
+      112
+    ],
+    "control_plate_right": [
+      904,
+      1090,
+      480,
+      112
+    ],
+    "button_primary": [
+      0,
+      1228,
+      420,
+      70
+    ],
+    "button_secondary": [
+      348,
+      1228,
+      188,
+      70
+    ],
+    "close_plate": [
+      512,
+      1228,
+      168,
+      92
+    ],
+    "progress_track": [
+      688,
+      1228,
+      782,
+      42
+    ]
+  },
+  "stateRegions": {
+    "active": [
+      "stage_plate",
+      "gate_slot_focus",
+      "progress_track"
+    ],
+    "solved": [
+      "stage_plate",
+      "gate_slot_balanced",
+      "gauge_plate_locked",
+      "button_primary"
+    ],
+    "error": [
+      "stage_plate",
+      "gauge_plate_near"
+    ]
+  },
+  "notes": "V2 is cut from a real Image2 source PNG generated in Codex image_gen. Runtime overlays live labels, numbers, gate positions, gauge needles, timer, and success state."
+}

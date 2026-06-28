@@ -1,0 +1,92 @@
+{
+  "assetId": "hp_ability_protocol_breach_missile_v1",
+  "modelKey": "ability_protocol_breach_missile_v1",
+  "displayName": "Protocol Breach Missile",
+  "role": "skill3_variant_breach_missile_pickup_and_deployed_visual",
+  "license": {
+    "status": "project-owned",
+    "commercialUse": true,
+    "modification": true,
+    "attributionRequired": false,
+    "notes": "Fully procedural Blender/Python geometry and generated atlas. No external mesh or texture is used."
+  },
+  "sourceStrategy": {
+    "externalMeshInput": false,
+    "externalTextureInput": false,
+    "directExternalAssetCopied": false,
+    "script": "scripts/asset-build/generate-skill3-protocol-breach-missile.py"
+  },
+  "outputs": {
+    "glb": "src/assets/models-cooked/environment/props/hp_ability_protocol_breach_missile_v1.glb",
+    "sourceBlend": "src/assets/source_blend/abilities/hp_ability_protocol_breach_missile_v1.blend",
+    "generatedAtlas": "src/assets/textures/abilities/skill3-protocol-breach-missile-image2/hp_ability_protocol_breach_missile_v1_atlas.png",
+    "preview": ".tmp/skill3-protocol-breach-missile/hp_ability_protocol_breach_missile_v1_preview.png"
+  },
+  "sizeMeters": [
+    0.339,
+    0.296,
+    0.915
+  ],
+  "meshStats": {
+    "vertices": 2990,
+    "triangles": 5866
+  },
+  "designContract": {
+    "silhouette": "compact horizontal breach missile with scraped nose cone, dark cylindrical body, brass lock rings, pull ring, tail nozzle, and three fins",
+    "firstPersonRead": "black/brass/cyan hand-held missile at Skill 3 scale",
+    "worldRead": "thrown/deployed breach missile distinct from the current core bomb/charge",
+    "gameplayIntent": "future separate Skill 3 variant selected by picking up its own item"
+  },
+  "materialSlots": [
+    "skill3_missile_black_rubber_grip",
+    "skill3_missile_body_smoked_titanium",
+    "skill3_missile_brass_locking_ribs",
+    "skill3_missile_cyan_energy_glass",
+    "skill3_missile_dark_cut_edges",
+    "skill3_missile_generated_energy_window_atlas",
+    "skill3_missile_safety_pin_blacksteel",
+    "skill3_missile_scraped_nose_cap"
+  ],
+  "nodeNames": [
+    "breach_missile_graphite_main_body",
+    "breach_missile_scraped_nose_cone",
+    "breach_missile_tail_nozzle_dark",
+    "breach_missile_exhaust_core_cyan",
+    "breach_missile_brass_lock_ring_0",
+    "breach_missile_brass_lock_ring_1",
+    "breach_missile_brass_lock_ring_2",
+    "breach_missile_brass_lock_ring_3",
+    "breach_missile_longitudinal_black_rail_0",
+    "breach_missile_longitudinal_black_rail_1",
+    "breach_missile_longitudinal_black_rail_2",
+    "breach_missile_longitudinal_black_rail_3",
+    "breach_missile_generated_cyan_window_0",
+    "breach_missile_window_brass_edge_0_-1",
+    "breach_missile_window_brass_edge_0_1",
+    "breach_missile_generated_cyan_window_1",
+    "breach_missile_window_brass_edge_1_-1",
+    "breach_missile_window_brass_edge_1_1",
+    "breach_missile_generated_cyan_window_2",
+    "breach_missile_window_brass_edge_2_-1",
+    "breach_missile_window_brass_edge_2_1",
+    "breach_missile_tail_fin_0",
+    "breach_missile_tail_fin_1",
+    "breach_missile_tail_fin_2",
+    "breach_missile_top_arming_spine",
+    "breach_missile_safety_pin_crossbar",
+    "breach_missile_pull_ring_left_link",
+    "breach_missile_pull_ring_right_link",
+    "breach_missile_pull_ring",
+    "breach_missile_lower_rubber_grip_pad",
+    "breach_missile_left_service_plate",
+    "breach_missile_right_service_plate"
+  ],
+  "sockets": [
+    "breach_missile_center_socket",
+    "breach_missile_nose_socket",
+    "breach_missile_tail_socket",
+    "breach_missile_exhaust_vfx_socket",
+    "breach_missile_hand_grip_socket",
+    "breach_missile_collision_proxy_half_extents"
+  ]
+}

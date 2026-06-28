@@ -1,0 +1,71 @@
+{
+  "id": "hp_raw_webgpu_lighting_v1_math_bridge",
+  "schemaVersion": "hp.raw-webgpu.math-bridge.v1",
+  "sourceOfTruth": {
+    "lab": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/asset-lab/math",
+    "formulaIndex": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/asset-lab/math/FORMULA_INDEX.md",
+    "cppLightingObjective": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/asset-lab/math/human-protocol/reports/human_protocol_level01_lighting_objective_v3_report.json",
+    "paperArchiveSummary": "/Users/zhengkaizhang/Documents/webgpu-robot-lab/asset-lab/math/human-protocol/docs/human-protocol-age-math-binary-lighting-engine-principles.md"
+  },
+  "runtimeTarget": {
+    "game": "Human Protocol",
+    "level": "level_03_human_museum",
+    "backend": "raw-webgpu",
+    "shader": "src/render/raw-webgpu/shaders/levelProxy.wgsl",
+    "renderer": "src/render/raw-webgpu/RawWebGpuLevelRenderer.ts",
+    "compiler": "tools/raw-webgpu-compiler/compile-raw-webgpu-render-plan.mjs"
+  },
+  "implementedTerms": [
+    {
+      "formulaTerm": "linearLuminance",
+      "runtimeMapping": "WGSL luminance() uses Rec.709 linear coefficients for material lift, cheap-red guard, and display contrast."
+    },
+    {
+      "formulaTerm": "cinematicKeyFillRatio",
+      "runtimeMapping": "Directional key light is separated from hemisphere/floor/ceiling/side fill instead of a flat ambient-only model."
+    },
+    {
+      "formulaTerm": "shProbeDiffuseScore",
+      "runtimeMapping": "Shader uses a room-space SH/probe proxy with floor bounce, ceiling wash, wall gradient, and side fill."
+    },
+    {
+      "formulaTerm": "enemySilhouetteUnderRoomLightScore",
+      "runtimeMapping": "Robot material kinds receive a stronger view rim and dark-material readability lift."
+    },
+    {
+      "formulaTerm": "contactShadowScore",
+      "runtimeMapping": "Ground-height and normal-orientation proxy darkens contact zones without a shadow map pass."
+    },
+    {
+      "formulaTerm": "specularLayeringScore",
+      "runtimeMapping": "Material-kind roughness controls a compact GGX-like half-vector specular layer."
+    },
+    {
+      "formulaTerm": "cheapGlowPenalty",
+      "runtimeMapping": "Cheap red guard suppresses excess red unless the material is explicitly a warning/locked-state material."
+    },
+    {
+      "formulaTerm": "screenshotProxyScore",
+      "runtimeMapping": "Filmic tone mapping, color contrast, and manual sRGB display transform replace raw linear output."
+    },
+    {
+      "formulaTerm": "runtimeBinaryBudget",
+      "runtimeMapping": "The geometry stream adds two floats per vertex for materialKind and roughness; instance stream adds four floats for raw GPU animation meta."
+    }
+  ],
+  "deferredTerms": [
+    {
+      "formulaTerm": "rayVisibility",
+      "reason": "Needs room occluder or BVH/light visibility buffer before it can be evaluated per pixel."
+    },
+    {
+      "formulaTerm": "real GLB texture sampling",
+      "reason": "Requires a raw texture atlas/material table path instead of current vertex-color material semantics."
+    },
+    {
+      "formulaTerm": "authored GLB node animation clips",
+      "reason": "Enemy GLBs use rigid node clips with no skins; full reproduction needs a node-palette animation compiler instead of flattened static geometry."
+    }
+  ],
+  "recommendedNextBreakthrough": "Compile enemy GLBs into rigid node palettes and animation clips, then evaluate node matrices on CPU or compute and bind the palette as a storage buffer."
+}

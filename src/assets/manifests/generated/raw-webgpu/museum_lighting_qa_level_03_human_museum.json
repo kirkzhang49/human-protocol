@@ -1,0 +1,240 @@
+{
+  "schemaVersion": "hp.museum-lighting-qa.v2",
+  "generatedAt": "2026-06-23T05:35:40.835Z",
+  "levelId": "level_03_human_museum",
+  "preset": "hp:human_museum_gallery_lighting_v1",
+  "plan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_03_human_museum.json",
+  "metrics": {
+    "ok": true,
+    "lightCount": 38,
+    "semanticLightCount": 0,
+    "coldSemanticLightCount": 0,
+    "roomMetrics": {
+      "level_03_entry_hall": {
+        "count": 6,
+        "cyanWeighted": 0,
+        "warmWeighted": 0.87589,
+        "intensity": 4.66
+      },
+      "level_03_gallery_lobby": {
+        "count": 10,
+        "cyanWeighted": 0.001208,
+        "warmWeighted": 1.10409,
+        "intensity": 5.24
+      },
+      "level_03_tool_exhibit": {
+        "count": 3,
+        "cyanWeighted": 0,
+        "warmWeighted": 0.375729,
+        "intensity": 1.16
+      },
+      "level_03_voice_exhibit": {
+        "count": 2,
+        "cyanWeighted": 0,
+        "warmWeighted": 0.235973,
+        "intensity": 0.9
+      },
+      "level_03_body_exhibit": {
+        "count": 4,
+        "cyanWeighted": 0.004392,
+        "warmWeighted": 0.309191,
+        "intensity": 1.538
+      },
+      "level_03_central_archive": {
+        "count": 7,
+        "cyanWeighted": 0.154757,
+        "warmWeighted": 0.481927,
+        "intensity": 2.098
+      },
+      "level_03_official_exit_room": {
+        "count": 6,
+        "cyanWeighted": 0.126691,
+        "warmWeighted": 0.419286,
+        "intensity": 1.676
+      }
+    },
+    "museumSurfaces": {
+      "glass_shell": {
+        "count": 6,
+        "luma": 0.528642,
+        "chroma": 0.1455,
+        "cyan": 0.186958,
+        "warm": 0,
+        "materials": [
+          "glass",
+          "glass_glare",
+          "hp_elevator_button_convex_ceramic_glass_pbr",
+          "hp_elevator_shaft_smoked_depth_glass_pbr",
+          "l3_exhibit_thick_cyan_glass",
+          "smoked_glass"
+        ]
+      },
+      "neutral_floor_ceiling": {
+        "count": 32,
+        "luma": 0.4231,
+        "chroma": 0.149766,
+        "cyan": 0.122349,
+        "warm": 0.049302,
+        "materials": [
+          "antique_ceramic_vase_01",
+          "bull_head",
+          "enamel_plinth",
+          "floor_plaque",
+          "hp_elevator_button_smoked_brushed_metal_face_pbr",
+          "hp_elevator_cool_scuffed_panel_highlight_pbr",
+          "hp_elevator_floor_blackened_steel_pbr",
+          "hp_elevator_floor_polished_worn_edge_pbr",
+          "hp_elevator_graphite_microbrushed_pbr",
+          "hp_elevator_shaft_microbrushed_graphite_pbr",
+          "marble",
+          "marble_bust_01",
+          "room_edge_wear_bright",
+          "room_image2_wall_art_human_origin_v1",
+          "room_image2_wall_art_last_human_v1",
+          "room_image2_wall_art_protocol_diagram_v1",
+          "room_image2_wall_art_robot_worker_v1",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_material",
+          "room_museum_door_aged_bronze",
+          "room_rubber",
+          "white_marble"
+        ]
+      },
+      "structural_dark": {
+        "count": 14,
+        "luma": 0.093986,
+        "chroma": 0.012714,
+        "cyan": 0.020814,
+        "warm": 0.00005,
+        "materials": [
+          "dark_stone",
+          "hp_black_stone_plinth",
+          "hp_elevator_black_rubber_gasket_pbr",
+          "hp_elevator_button_deep_socket_pbr",
+          "hp_elevator_deep_black_anodized_pbr",
+          "hp_elevator_opaque_smoked_glass_pbr",
+          "hp_elevator_shaft_blackened_steel_pbr",
+          "hp_elevator_smoked_titanium_pbr",
+          "museum_pillar_deep_black_stone_core",
+          "museum_pillar_smoked_metal_edges",
+          "museum_wall_wash_black_mount",
+          "room_metal_worn",
+          "room_museum_door_blackened_steel",
+          "steel"
+        ]
+      },
+      "cyan_accents": {
+        "count": 12,
+        "luma": 0.490891,
+        "chroma": 0.409476,
+        "cyan": 0.392863,
+        "warm": 0,
+        "materials": [
+          "base_scanner",
+          "hp_elevator_button_cyan_glass_ring_pbr",
+          "hp_elevator_cold_edge_light_pbr",
+          "hp_elevator_shaft_cyan_motion_tube_pbr",
+          "hp_elevator_shaft_soft_cyan_reflection_pbr",
+          "label_cyan",
+          "museum_pillar_tiny_cyan_status",
+          "museum_wall_wash_small_cyan_service_light",
+          "room_glass_screen",
+          "room_label_dark",
+          "specimen_glow",
+          "spot_glow"
+        ]
+      }
+    },
+    "gameplayColoredTargets": {
+      "count": 13,
+      "luma": 0.51825,
+      "chroma": 0.691231,
+      "cyan": 0.126638,
+      "warm": 0.2365,
+      "materials": [
+        "puzzle_orb_blue_inner_core",
+        "puzzle_orb_blue_museum_glass",
+        "puzzle_orb_dark_stem",
+        "puzzle_orb_green_inner_core",
+        "puzzle_orb_green_museum_glass",
+        "puzzle_orb_old_gold_holder",
+        "puzzle_orb_purple_inner_core",
+        "puzzle_orb_purple_museum_glass",
+        "puzzle_orb_red_inner_core",
+        "puzzle_orb_red_museum_glass",
+        "puzzle_orb_soft_white_glint",
+        "puzzle_orb_yellow_inner_core",
+        "puzzle_orb_yellow_museum_glass"
+      ]
+    },
+    "colorRoles": {
+      "glass_shell": {
+        "role": "glass_shell",
+        "count": 20,
+        "expectedSemanticId": 5,
+        "semanticId": 5,
+        "roleIdMismatches": 0,
+        "paletteMix": 0,
+        "luma": 0.623076,
+        "chroma": 0.4378,
+        "cyan": 0.637394,
+        "warm": 0.266716,
+        "textureCoverage": 0.1
+      },
+      "neutral_surface": {
+        "role": "neutral_surface",
+        "count": 53,
+        "expectedSemanticId": 1,
+        "semanticId": 1,
+        "roleIdMismatches": 0,
+        "paletteMix": 0.214737,
+        "luma": 0.526814,
+        "chroma": 0.08218,
+        "cyan": 0.368012,
+        "warm": 0.38901,
+        "textureCoverage": 0.415094
+      },
+      "structural_dark": {
+        "role": "structural_dark",
+        "count": 75,
+        "expectedSemanticId": 4,
+        "semanticId": 4,
+        "roleIdMismatches": 0,
+        "paletteMix": 0,
+        "luma": 0.243288,
+        "chroma": 0.066434,
+        "cyan": 0.177117,
+        "warm": 0.168827,
+        "textureCoverage": 0.04
+      },
+      "exhibit_warm": {
+        "role": "exhibit_warm",
+        "count": 20,
+        "expectedSemanticId": 6,
+        "semanticId": 6,
+        "roleIdMismatches": 0,
+        "paletteMix": 0.464147,
+        "luma": 0.579117,
+        "chroma": 0.234336,
+        "cyan": 0.330772,
+        "warm": 0.494395,
+        "textureCoverage": 0.35
+      }
+    }
+  },
+  "failures": [],
+  "warnings": [
+    "museum cyan accents are still prominent count=12 cyan=0.392863"
+  ],
+  "notes": []
+}

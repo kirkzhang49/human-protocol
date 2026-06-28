@@ -1,0 +1,2704 @@
+:root {
+  --gui-font-ui: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  --gui-font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  --gui-bg: #05070b;
+  --gui-text: #f3f7fb;
+  --gui-muted: #9aaec3;
+  --gui-cyan: #64d7ff;
+  --gui-cyan-bright: #78e6ff;
+  --gui-amber: #ffd36d;
+  --gui-red: #ff6655;
+  --gui-orange: #ff9b35;
+  --gui-panel-strong: rgba(3, 7, 11, 0.92);
+  --gui-panel: rgba(7, 11, 18, 0.78);
+  --gui-panel-soft: rgba(8, 15, 22, 0.58);
+  --gui-border: rgba(139, 174, 210, 0.28);
+  --gui-hairline: rgba(202, 237, 248, 0.16);
+  --gui-safe-inset: max(18px, env(safe-area-inset-top));
+  --gui-touch-min: 44px;
+  --gui-combat-target: 58px;
+  --gui-progress-min: 6px;
+  --gui-shadow-clamp: 0.66;
+  --gui-depth-epsilon-m: 0.03;
+  --gui-shadow-heavy: 0 28px 90px rgba(0, 0, 0, 0.58);
+  --gui-shadow-soft: 0 16px 52px rgba(0, 0, 0, 0.34);
+  --gui-text-glow: 0 0 18px rgba(100, 215, 255, 0.18);
+  --gui-panel-glow: inset 0 0 54px rgba(100, 215, 255, 0.08);
+  --gui-hud-font: clamp(10px, 0.72vw, 13px);
+  --gui-hud-value-font: clamp(14px, 1.05vw, 18px);
+  --gui-objective-title-font: clamp(11px, 0.88vw, 15px);
+  --gui-objective-detail-font: clamp(9px, 0.68vw, 12px);
+  --gui-dialogue-font: clamp(18px, 2.2vw, 30px);
+}
+
+html {
+  font-family: var(--gui-font-ui);
+}
+
+.flow-panel,
+.upgrade-shell,
+.choice-shell,
+.pause-panel,
+.code-lock-panel,
+.hud,
+.run-progress,
+.mission-cue,
+.interaction-cue,
+.dialogue-toast,
+.mobile-action,
+.mobile-dash-button,
+.mobile-interact-button {
+  text-rendering: geometricPrecision;
+  font-variant-numeric: tabular-nums;
+}
+
+.mobile-action,
+.mobile-dash-button,
+.mobile-interact-button,
+.flow-panel button,
+.pause-actions button,
+.code-keypad button,
+.code-submit {
+  min-width: min(var(--gui-touch-min), 100%);
+  min-height: var(--gui-touch-min);
+}
+
+.level-transfer-panel,
+.flow-panel,
+.upgrade-shell,
+.choice-shell {
+  text-shadow: var(--gui-text-glow);
+}
+
+.flow-overlay,
+.upgrade-overlay,
+.choice-overlay {
+  place-items: center;
+  padding: 24px;
+  background:
+    radial-gradient(circle at 50% 34%, rgba(100, 215, 255, 0.16), transparent 34%),
+    radial-gradient(circle at 50% 88%, rgba(255, 92, 64, 0.12), transparent 42%),
+    rgba(1, 4, 8, 0.84);
+}
+
+.flow-overlay.compact,
+.flow-death-overlay {
+  background:
+    radial-gradient(circle at 50% 38%, rgba(255, 92, 64, 0.16), transparent 34%),
+    radial-gradient(circle at 50% 88%, rgba(100, 215, 255, 0.08), transparent 42%),
+    rgba(4, 2, 5, 0.86);
+}
+
+.flow-overlay.transition,
+.flow-transition-overlay {
+  background:
+    radial-gradient(circle at 50% 42%, rgba(100, 215, 255, 0.14), transparent 30%),
+    rgba(1, 4, 8, 0.9);
+}
+
+.flow-panel {
+  box-sizing: border-box;
+  width: min(520px, calc(100vw - 44px), calc(100vh - 44px));
+  min-height: 520px;
+  display: grid;
+  align-content: center;
+  gap: clamp(10px, 1.6vh, 16px);
+  padding:
+    clamp(50px, 8vw, 66px)
+    clamp(50px, 8vw, 70px)
+    clamp(48px, 8vw, 66px);
+  overflow-y: auto;
+  border: 0;
+  border-radius: 0;
+  background: url("../assets/gui/hp-gui-flow-entry-panel-age-v5.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+  filter: drop-shadow(0 24px 54px rgba(0, 0, 0, 0.46));
+}
+
+.flow-panel::before,
+.flow-panel::after {
+  content: none;
+}
+
+.flow-panel-entry,
+.flow-panel-transition {
+  justify-items: center;
+  text-align: center;
+}
+
+.flow-panel-victory,
+.flow-panel-death {
+  width: min(620px, calc(100vw - 44px));
+  min-height: 520px;
+  padding-inline: clamp(54px, 7vw, 78px);
+}
+
+.flow-panel-victory {
+  background-image: url("../assets/gui/hp-gui-flow-victory-panel-age-v5.png");
+}
+
+.flow-panel-death {
+  min-height: 360px;
+  background-image: url("../assets/gui/hp-gui-flow-death-panel-age-v5.png");
+}
+
+.flow-system,
+.overlay-title {
+  color: rgba(129, 229, 255, 0.94);
+  font-size: clamp(10px, 1.3vw, 12px);
+  line-height: 1;
+  letter-spacing: 0;
+}
+
+.flow-panel h1,
+.flow-panel h2 {
+  max-width: 10em;
+  margin: 0;
+  color: rgba(246, 251, 255, 0.98);
+  font-size: clamp(28px, 5.6vw, 44px);
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-wrap: balance;
+}
+
+.flow-panel h2 {
+  font-size: clamp(24px, 4.6vw, 38px);
+}
+
+.flow-panel p,
+.revive-offer {
+  max-width: 34em;
+  margin: 0;
+  color: rgba(191, 214, 226, 0.84);
+  font-size: clamp(13px, 1.7vw, 16px);
+  line-height: 1.38;
+  overflow-wrap: anywhere;
+}
+
+.flow-signal-strip {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(54px, 1fr));
+  gap: 6px;
+  width: min(100%, 360px);
+  margin: 2px 0;
+}
+
+.flow-signal-strip span,
+.flow-stats span,
+.death-stats span,
+.memory-settlement {
+  min-height: 30px;
+  display: grid;
+  align-content: center;
+  border: 0;
+  color: rgba(220, 241, 250, 0.9);
+  font-size: clamp(10px, 1.2vw, 12px);
+  font-weight: 900;
+  text-align: center;
+  text-shadow: 0 0 10px rgba(100, 215, 255, 0.18);
+}
+
+.flow-signal-strip span,
+.flow-stats span,
+.death-stats span {
+  background: url("../assets/gui/hp-gui-stat-chip-age-v5.png") center / 100% 100% no-repeat;
+}
+
+.flow-stats,
+.death-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(116px, 1fr));
+  gap: 8px;
+  width: 100%;
+}
+
+.memory-settlement {
+  justify-items: center;
+  gap: 3px;
+  min-height: 76px;
+  padding: 14px 28px;
+  background: url("../assets/gui/hp-gui-objective-strip-age-v5.png") center / 100% 100% no-repeat;
+  text-align: center;
+}
+
+.memory-settlement span,
+.memory-settlement em {
+  color: rgba(185, 207, 219, 0.82);
+  font-size: clamp(10px, 1.2vw, 12px);
+  font-style: normal;
+}
+
+.memory-settlement strong {
+  color: rgba(246, 251, 255, 0.98);
+  font-size: clamp(18px, 2.8vw, 26px);
+  line-height: 1;
+}
+
+.flow-actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(168px, 1fr));
+  gap: 10px;
+  width: 100%;
+}
+
+.flow-panel-victory .flow-actions {
+  grid-template-columns: 1fr;
+}
+
+.flow-panel button,
+.flow-panel .double-memory-button {
+  min-height: 54px;
+  padding: 0 42px;
+  border: 0;
+  border-radius: 0;
+  color: rgba(246, 251, 255, 0.98);
+  background: url("../assets/gui/hp-gui-button-wide-age-v5.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+  font-size: clamp(12px, 1.45vw, 15px);
+  line-height: 1.08;
+  text-align: center;
+  text-shadow: 0 0 12px rgba(100, 215, 255, 0.22);
+}
+
+.flow-panel button::after {
+  content: none;
+}
+
+.flow-panel button:hover,
+.flow-panel button:focus-visible {
+  filter: drop-shadow(0 0 16px rgba(120, 230, 255, 0.34));
+}
+
+.flow-panel button:disabled,
+.flow-panel .double-memory-button:disabled {
+  filter: grayscale(0.25) opacity(0.62);
+}
+
+.progress-training {
+  margin: 0;
+}
+
+.progress-training-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 8px;
+}
+
+.progress-training-title span {
+  color: rgba(255, 217, 143, 0.9);
+  font-size: clamp(10px, 1.2vw, 12px);
+  font-weight: 900;
+}
+
+.progress-training-title strong {
+  color: rgba(246, 251, 255, 0.96);
+  font-size: clamp(12px, 1.4vw, 14px);
+}
+
+.progress-training-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.flow-panel .progress-training-button {
+  min-height: 78px;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+  gap: 4px;
+  padding: 10px 12px;
+  background: url("../assets/gui/hp-gui-button-small-age-v5.png") center / 100% 100% no-repeat;
+  text-align: left;
+}
+
+.progress-training-button span,
+.progress-training-button strong,
+.progress-training-button em {
+  position: relative;
+  z-index: 1;
+  display: block;
+  line-height: 1;
+}
+
+.progress-training-button span {
+  color: rgba(201, 232, 246, 0.82);
+  font-size: clamp(9px, 1vw, 11px);
+  font-weight: 900;
+}
+
+.progress-training-button strong {
+  color: rgba(246, 251, 255, 0.98);
+  font-size: clamp(16px, 2vw, 20px);
+  font-weight: 900;
+}
+
+.progress-training-button em {
+  color: rgba(181, 203, 218, 0.76);
+  font-size: clamp(8px, 0.9vw, 10px);
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.12;
+}
+
+.hud {
+  width: clamp(300px, 24vw, 380px);
+  aspect-ratio: 560 / 228;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  gap: 0;
+  padding: clamp(24px, 2vw, 34px) clamp(24px, 2vw, 34px) clamp(18px, 1.5vw, 26px) clamp(84px, 6.2vw, 112px);
+  background: url("../assets/gui/hp-gui-hud-frame-age-v3.png") center / 100% 100% no-repeat;
+  filter: drop-shadow(0 16px 34px rgba(0, 0, 0, 0.28));
+}
+
+.hud::before {
+  content: none;
+}
+
+.hud-row,
+.hud-row.health,
+.hud-row.energy {
+  grid-template-columns: minmax(0, 1fr);
+  min-height: 0;
+  padding: 4px 0 6px;
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.hud-icon,
+.hud-row.health .hud-icon {
+  display: none;
+}
+
+.hud-label-line,
+.hud-row.health .hud-label-line {
+  gap: 12px;
+  color: rgba(232, 247, 255, 0.92);
+  font-size: var(--gui-hud-font);
+  font-weight: 900;
+  letter-spacing: 0;
+  text-shadow: 0 0 12px rgba(100, 215, 255, 0.16);
+}
+
+.hud-row.health .hud-label-line span:last-child,
+.hud-label-line span:last-child {
+  color: rgba(246, 251, 255, 0.96);
+  font-size: var(--gui-hud-value-font);
+  font-variant-numeric: tabular-nums;
+}
+
+.bar-track,
+.hud-row.health .bar-track {
+  height: max(var(--gui-progress-min), 7px);
+  margin-top: 6px;
+  border: 1px solid rgba(220, 246, 255, 0.12);
+  border-radius: 999px;
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 14px),
+    rgba(0, 0, 0, 0.22);
+  transform: none;
+}
+
+.run-progress {
+  position: fixed;
+  top: max(14px, env(safe-area-inset-top));
+  left: 50%;
+  box-sizing: border-box;
+  width: min(620px, calc(100vw - 48px));
+  min-height: 116px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) clamp(58px, 9vw, 76px);
+  grid-template-rows: auto max(var(--gui-progress-min), 7px);
+  align-items: center;
+  gap: 8px 16px;
+  padding: 18px 52px 24px 126px;
+  border: 0;
+  background: url("../assets/gui/hp-gui-objective-nav-image2-v1.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+  backdrop-filter: none;
+  filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.34));
+  transform: translateX(-50%);
+}
+
+.run-progress::before {
+  content: none;
+}
+
+.run-objective {
+  grid-column: 1;
+  grid-row: 1;
+  align-self: center;
+}
+
+.run-objective span {
+  color: rgba(255, 217, 143, 0.88);
+  font-size: clamp(10px, 0.76vw, 12px);
+  line-height: 1;
+}
+
+.run-objective strong {
+  margin-top: 3px;
+  color: rgba(245, 251, 255, 0.98);
+  font-size: clamp(17px, 1.45vw, 22px);
+  line-height: 1.02;
+  letter-spacing: 0;
+  text-shadow: 0 0 14px rgba(120, 230, 255, 0.2);
+}
+
+.run-objective em {
+  margin-top: 4px;
+  color: rgba(175, 205, 222, 0.86);
+  font-size: clamp(11px, 0.9vw, 13px);
+  line-height: 1.08;
+}
+
+.run-progress-main {
+  grid-column: 2;
+  grid-row: 1;
+  align-items: end;
+  justify-content: center;
+  gap: 4px;
+  min-width: 0;
+}
+
+.run-progress-main span {
+  max-width: 100%;
+  overflow: hidden;
+  color: rgba(181, 196, 214, 0.9);
+  font-size: clamp(9px, 0.72vw, 11px);
+  line-height: 1;
+  text-align: right;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-progress-main strong {
+  color: rgba(100, 215, 255, 0.98);
+  font-size: clamp(22px, 2.3vw, 30px);
+  line-height: 0.92;
+  text-shadow: 0 0 14px rgba(100, 215, 255, 0.32);
+}
+
+.run-progress-meter {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  height: var(--gui-progress-min);
+  margin: 0 12px 0 0;
+  border-radius: 999px;
+}
+
+.run-guidance {
+  position: absolute;
+  left: 108px;
+  right: 22px;
+  top: calc(100% - 28px);
+  grid-column: auto;
+  grid-row: auto;
+  min-height: 38px;
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr);
+  gap: 2px 12px;
+  align-items: center;
+  padding: 7px 16px 8px;
+  border: 1px solid rgba(120, 230, 255, 0.18);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(255, 217, 143, 0.09), rgba(120, 230, 255, 0.08) 38%, transparent 84%),
+    rgba(3, 13, 20, 0.78);
+  box-shadow:
+    inset 0 0 18px rgba(100, 215, 255, 0.06),
+    0 12px 22px rgba(0, 0, 0, 0.24);
+}
+
+.run-guidance span {
+  grid-row: 1 / 3;
+  align-self: stretch;
+  display: grid;
+  place-items: center;
+  padding-right: 10px;
+  color: rgba(255, 217, 143, 0.86);
+  font-size: clamp(10px, 0.8vw, 12px);
+}
+
+.run-guidance strong {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+  overflow: hidden;
+  color: rgba(241, 249, 255, 0.98);
+  font-size: clamp(15px, 1.22vw, 18px);
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-guidance strong small {
+  flex: 0 0 auto;
+  margin-left: 0;
+  color: rgba(100, 215, 255, 0.98);
+  font-size: clamp(13px, 1.08vw, 16px);
+}
+
+.run-guidance em,
+.run-progress-row {
+  grid-column: 2 / 3;
+  overflow: hidden;
+  color: rgba(181, 203, 218, 0.82);
+  font-size: clamp(10px, 0.78vw, 12px);
+  line-height: 1.05;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.level-transfer-panel {
+  width: min(500px, calc(100vw - 56px), calc(100vh - 96px));
+  aspect-ratio: 730 / 772;
+  box-sizing: border-box;
+  display: block;
+  padding:
+    clamp(42px, 7.4vw, 56px)
+    clamp(48px, 8vw, 62px)
+    clamp(44px, 7.4vw, 58px);
+  border: 0;
+  background: url("../assets/gui/hp-gui-flow-entry-panel-age-v5.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+  filter: drop-shadow(0 22px 44px rgba(0, 0, 0, 0.42));
+}
+
+.level-transfer-panel::before,
+.level-transfer-panel::after {
+  content: none;
+}
+
+.level-transfer-kicker {
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  top: 7.2%;
+  z-index: 1;
+  overflow: hidden;
+  color: rgba(129, 229, 255, 0.94);
+  font-size: clamp(9px, 1.3vw, 11px);
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.level-transfer-title,
+.level-transfer-panel h2 {
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  top: 9.8%;
+  z-index: 1;
+  max-width: 11em;
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: rgba(245, 250, 255, 0.98);
+  font-size: clamp(21px, 4.1vw, 30px);
+  line-height: 1.04;
+  text-align: center;
+  text-wrap: balance;
+}
+
+.level-transfer-radar {
+  position: absolute;
+  left: 50%;
+  top: 28%;
+  z-index: 1;
+  transform: translateX(-50%);
+  width: min(178px, 34vw, 26vh);
+  border-color: rgba(125, 232, 255, 0.18);
+}
+
+.level-transfer-readout {
+  position: absolute;
+  left: 13%;
+  right: 13%;
+  bottom: 17%;
+  z-index: 1;
+  align-items: end;
+  gap: 12px;
+  min-width: 0;
+  padding-inline: clamp(20px, 4vw, 34px);
+}
+
+.level-transfer-phase {
+  min-width: 0;
+  max-width: 18em;
+  overflow: hidden;
+  color: rgba(214, 239, 250, 0.82);
+  font-size: clamp(10px, 2.1vw, 13px);
+  line-height: 1.15;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.level-transfer-percent,
+.level-transfer-readout strong {
+  flex: 0 0 auto;
+  color: rgba(247, 251, 255, 0.98);
+  font-size: clamp(23px, 5vw, 34px);
+  line-height: 0.9;
+}
+
+.level-transfer-bar {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 12.8%;
+  z-index: 1;
+  height: max(var(--gui-progress-min), 8px);
+  margin-inline: 0;
+}
+
+.level-transfer-ticks {
+  position: absolute;
+  left: 14%;
+  right: 14%;
+  bottom: 8%;
+  z-index: 1;
+  gap: clamp(3px, 1vw, 5px);
+  margin: 0;
+}
+
+.level-transfer-ticks span {
+  height: clamp(9px, 2.2vh, 14px);
+}
+
+.dialogue-toast {
+  width: min(720px, calc(100vw - 48px));
+  min-height: 118px;
+  padding: 20px 42px 22px 118px;
+  background: url("../assets/gui/hp-gui-dialogue-toast-age-v3.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+}
+
+.dialogue-toast::before {
+  content: none;
+}
+
+.dialogue-toast strong {
+  font-size: var(--gui-dialogue-font);
+}
+
+.mobile-action,
+.mobile-action.primary,
+.mobile-action.secondary,
+.mobile-action.disabled,
+.mobile-action:disabled,
+.mobile-action.item-ready,
+.mobile-action.item-empty,
+.desktop-action-slot,
+.desktop-action-slot.active,
+.desktop-action-slot.pistol.reloading,
+.desktop-action-slot.item-ready,
+.desktop-action-slot.item-empty,
+.desktop-action-slot.disabled {
+  border: 0;
+  background: url("../assets/gui/hp-gui-mobile-action-age-v3.png") center / 112% 112% no-repeat;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.mobile-action::before,
+.desktop-action-slot::before,
+.desktop-action-slot::after {
+  content: none;
+}
+
+.mobile-action.selected,
+.mobile-action.primary.selected,
+.desktop-action-slot.active {
+  filter: drop-shadow(0 0 18px rgba(120, 230, 255, 0.36));
+}
+
+.desktop-action-slot.pistol.reloading {
+  filter: drop-shadow(0 0 16px rgba(255, 211, 109, 0.32));
+}
+
+.desktop-action-slot.item-ready {
+  filter: drop-shadow(0 0 16px rgba(255, 211, 109, 0.28));
+}
+
+.desktop-action-slot.disabled,
+.desktop-action-slot.item-empty,
+.mobile-action.disabled,
+.mobile-action:disabled,
+.mobile-action.item-empty {
+  filter: grayscale(0.2) opacity(0.58);
+}
+
+.joystick {
+  border: 0;
+  background:
+    url("../assets/gui/hp-gui-joystick-plate-age-v3.png") center / 165% 102% no-repeat,
+    radial-gradient(circle, rgba(110, 213, 255, 0.1), rgba(6, 12, 20, 0.1));
+  box-shadow: none;
+}
+
+.joystick::before,
+.joystick::after {
+  opacity: 0.62;
+}
+
+.mobile-interact-button {
+  border: 0;
+  background: url("../assets/gui/hp-gui-interact-pill-age-v3.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+}
+
+.desktop-action-cluster::before {
+  opacity: 0.46;
+}
+
+.desktop-key-chip {
+  width: 26px;
+  height: 22px;
+  border: 0;
+  background: url("../assets/gui/hp-gui-key-chip-age-v3.png") center / 100% 100% no-repeat;
+  font-size: 10px;
+  text-shadow: 0 0 8px rgba(120, 230, 255, 0.22);
+}
+
+.desktop-action-readout,
+.desktop-dash-readout,
+.desktop-reload-caption {
+  border: 0;
+  background: url("../assets/gui/hp-gui-status-pill-age-v3.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+  backdrop-filter: none;
+}
+
+.desktop-action-readout,
+.desktop-dash-readout {
+  width: 244px;
+  min-height: 32px;
+  padding: 7px 16px;
+}
+
+.desktop-dash-track {
+  height: var(--gui-progress-min);
+  border-radius: 999px;
+}
+
+.desktop-reload-caption {
+  width: 224px;
+  min-height: 28px;
+  padding-inline: 14px;
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .flow-panel {
+    width: min(440px, calc(100vw - 32px), calc(100vh - 32px));
+    min-height: 440px;
+    gap: 10px;
+    padding: 44px 48px 46px;
+  }
+
+  .flow-panel-victory,
+  .flow-panel-death {
+    width: min(540px, calc(100vw - 32px));
+  }
+
+  .flow-panel h1 {
+    font-size: clamp(27px, 7.2vw, 38px);
+  }
+
+  .flow-panel h2 {
+    font-size: clamp(24px, 6.2vw, 34px);
+  }
+
+  .flow-panel p,
+  .revive-offer {
+    font-size: clamp(12px, 3vw, 14px);
+  }
+
+  .progress-training-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .hud {
+    width: min(260px, calc(100vw - 24px));
+    padding: 20px 20px 16px 74px;
+  }
+
+  .hud-label-line,
+  .hud-row.health .hud-label-line {
+    font-size: 10px;
+  }
+
+  .hud-row.health .hud-label-line span:last-child,
+  .hud-label-line span:last-child {
+    font-size: 14px;
+  }
+
+  .run-progress {
+    width: min(540px, calc(100vw - 28px));
+    min-height: 98px;
+    grid-template-columns: minmax(0, 1fr) 58px;
+    gap: 7px 12px;
+    padding: 15px 40px 16px 106px;
+  }
+
+  .run-objective strong {
+    font-size: clamp(15px, 4.1vw, 19px);
+  }
+
+  .run-objective em {
+    font-size: clamp(10px, 2.8vw, 12px);
+  }
+
+  .run-progress-main strong {
+    font-size: clamp(20px, 6.2vw, 26px);
+  }
+
+  .run-guidance {
+    left: 88px;
+    right: 18px;
+    top: calc(100% - 24px);
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 2px 9px;
+    min-height: 28px;
+    padding: 5px 12px 6px 16px;
+  }
+
+  .run-guidance strong {
+    font-size: clamp(13px, 3.7vw, 16px);
+  }
+
+  .run-guidance em {
+    font-size: clamp(9px, 2.6vw, 11px);
+  }
+
+  .level-transfer-panel {
+    width: min(420px, calc(100vw - 40px), calc(100vh - 40px));
+    grid-template-rows: auto auto minmax(100px, 1fr) auto auto auto;
+    padding: 34px 42px 38px;
+  }
+
+  .level-transfer-title,
+  .level-transfer-panel h2 {
+    font-size: clamp(21px, 6.4vw, 30px);
+  }
+
+  .level-transfer-radar {
+    width: min(130px, 31vw, 22vh);
+  }
+
+  .level-transfer-percent,
+  .level-transfer-readout strong {
+    font-size: clamp(24px, 8vw, 34px);
+  }
+}
+
+@media (max-width: 520px) {
+  .flow-panel,
+  .flow-panel-victory,
+  .flow-panel-death {
+    width: min(360px, calc(100vw - 24px), calc(100vh - 24px));
+    min-height: 360px;
+    gap: 8px;
+    padding: 34px 36px 38px;
+  }
+
+  .flow-panel-victory,
+  .flow-panel-death {
+    max-height: calc(100vh - 24px);
+  }
+
+  .flow-actions {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .flow-panel button,
+  .flow-panel .double-memory-button {
+    min-height: 46px;
+    padding-inline: 24px;
+    font-size: 12px;
+  }
+
+  .flow-panel p,
+  .revive-offer {
+    max-width: 22em;
+    justify-self: center;
+    text-align: center;
+  }
+
+  .flow-stats,
+  .death-stats {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+
+  .progress-training-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 6px;
+  }
+
+  .flow-panel .progress-training-button {
+    min-height: 66px;
+    padding: 8px 10px;
+  }
+
+  .hud {
+    width: min(238px, calc(100vw - 24px));
+    padding: 18px 18px 14px 66px;
+  }
+
+  .mobile-action,
+  .mobile-action.primary {
+    background-size: 120% 120%;
+  }
+
+  .level-transfer-panel {
+    width: min(360px, calc(100vw - 28px), calc(100vh - 32px));
+    grid-template-rows: auto auto minmax(88px, 1fr) auto auto auto;
+    padding: 30px 34px 34px;
+  }
+
+  .level-transfer-kicker {
+    font-size: 9px;
+  }
+
+  .level-transfer-title,
+  .level-transfer-panel h2 {
+    font-size: clamp(20px, 7.4vw, 27px);
+  }
+
+  .level-transfer-radar {
+    width: min(112px, 30vw, 20vh);
+  }
+
+  .level-transfer-phase {
+    max-width: 12em;
+  }
+
+  .run-progress {
+    width: min(360px, calc(100vw - 20px));
+    min-height: 92px;
+    grid-template-columns: minmax(0, 1fr) 48px;
+    gap: 6px 8px;
+    padding: 14px 30px 14px 82px;
+    background-image: url("../assets/gui/hp-gui-objective-strip-mobile-age-v5.png");
+  }
+
+  .run-objective span,
+  .run-progress-main span,
+  .run-guidance span {
+    font-size: 9px;
+  }
+
+  .run-objective strong {
+    font-size: clamp(14px, 4.8vw, 17px);
+  }
+
+  .run-progress-main strong {
+    font-size: clamp(18px, 6.4vw, 23px);
+  }
+
+  .run-guidance {
+    left: 72px;
+    right: 12px;
+    top: calc(100% - 22px);
+    grid-template-columns: 42px minmax(0, 1fr);
+    padding: 5px 10px 6px 12px;
+  }
+
+  .run-guidance strong {
+    font-size: clamp(12px, 4vw, 15px);
+  }
+}
+
+@media (max-height: 520px) {
+  .flow-panel,
+  .flow-panel-victory,
+  .flow-panel-death {
+    width: min(420px, calc(100vw - 32px), calc(100vh - 24px));
+    min-height: min(420px, calc(100vh - 24px));
+    max-height: calc(100vh - 24px);
+    gap: 7px;
+    padding: 28px 34px 32px;
+  }
+
+  .flow-panel h1,
+  .flow-panel h2 {
+    font-size: clamp(22px, 6vh, 30px);
+  }
+
+  .flow-panel p,
+  .revive-offer {
+    font-size: 12px;
+  }
+
+  .run-progress {
+    width: min(430px, calc(100vw - 24px));
+    min-height: 86px;
+    grid-template-columns: minmax(0, 1fr) 50px;
+    gap: 6px 10px;
+    padding: 13px 34px 14px 94px;
+    background-image: url("../assets/gui/hp-gui-objective-strip-mobile-age-v5.png");
+  }
+
+  .run-guidance {
+    left: 82px;
+    right: 14px;
+    top: calc(100% - 20px);
+    min-height: 36px;
+    padding: 5px 10px 6px 12px;
+  }
+
+  .level-transfer-panel {
+    width: min(360px, calc(100vw - 40px), calc(100vh - 32px));
+    grid-template-rows: auto auto minmax(76px, 1fr) auto auto auto;
+    gap: 5px;
+    padding: 28px 34px 30px;
+  }
+
+  .level-transfer-title,
+  .level-transfer-panel h2 {
+    font-size: clamp(19px, 5.6vh, 27px);
+  }
+
+  .level-transfer-radar {
+    width: min(104px, 22vh);
+  }
+
+  .level-transfer-ticks span {
+    height: 8px;
+  }
+}
+
+/* Combat GUI layout solver: every live HUD surface is placed inside a non-overlapping viewport rectangle. */
+:root {
+  --hp-vw: 100vw;
+  --hp-vh: 100vh;
+  --hp-gui-scale: 1;
+  --hp-edge: clamp(12px, 1.8vmin, 28px);
+  --hp-gap: clamp(14px, 1.4vw, 34px);
+  --hp-hud-w: clamp(250px, 16.5vw, 340px);
+  --hp-hud-h: calc(var(--hp-hud-w) * 0.407);
+  --hp-settings-w: clamp(84px, 5.4vw, 116px);
+  --hp-settings-h: clamp(42px, 4.4vh, 56px);
+  --hp-objective-max-w: clamp(420px, 36vw, 720px);
+  --hp-action-cluster: clamp(190px, 15vw, 260px);
+  --hp-action-panel-w: calc(var(--hp-action-cluster) + 34px);
+  --hp-action-slot: calc(var(--hp-action-cluster) * 0.38);
+  --hp-action-main-slot: calc(var(--hp-action-cluster) * 0.43);
+  --hp-action-item-slot: calc(var(--hp-action-cluster) * 0.36);
+  --hp-top-reserve: calc(var(--hp-edge) + var(--hp-hud-h) + var(--hp-gap));
+  --hp-bottom-reserve: calc(var(--hp-edge) + var(--hp-action-cluster) + 84px);
+  --hp-type-xs: clamp(9px, 1vh, 12px);
+  --hp-type-sm: clamp(10px, 1.15vh, 14px);
+  --hp-type-md: clamp(13px, 1.45vh, 18px);
+  --hp-type-lg: clamp(16px, 1.9vh, 24px);
+}
+
+.hud {
+  position: fixed;
+  left: calc(env(safe-area-inset-left) + var(--hp-edge));
+  top: calc(env(safe-area-inset-top) + var(--hp-edge));
+  z-index: 16;
+  box-sizing: border-box;
+  width: var(--hp-hud-w);
+  height: var(--hp-hud-h);
+  aspect-ratio: 560 / 228;
+  padding:
+    calc(var(--hp-hud-w) * 0.065)
+    calc(var(--hp-hud-w) * 0.065)
+    calc(var(--hp-hud-w) * 0.047)
+    calc(var(--hp-hud-w) * 0.215);
+}
+
+.hud-label-line,
+.hud-row.health .hud-label-line {
+  gap: calc(var(--hp-gap) * 0.45);
+  font-size: var(--hp-type-xs);
+  line-height: 1;
+}
+
+.hud-row.health .hud-label-line span:last-child,
+.hud-label-line span:last-child {
+  font-size: var(--hp-type-lg);
+  line-height: 1;
+}
+
+.bar-track,
+.hud-row.health .bar-track {
+  height: clamp(6px, calc(var(--hp-hud-w) * 0.022), 9px);
+  margin-top: clamp(4px, calc(var(--hp-hud-w) * 0.016), 7px);
+}
+
+.system-settings-button {
+  right: calc(env(safe-area-inset-right) + var(--hp-edge));
+  top: calc(env(safe-area-inset-top) + var(--hp-edge));
+  min-width: var(--hp-settings-w);
+  min-height: var(--hp-settings-h);
+  padding-inline: clamp(10px, calc(var(--hp-settings-w) * 0.12), 16px);
+  border-radius: 8px;
+}
+
+.system-settings-button span {
+  font-size: var(--hp-type-md);
+}
+
+.system-settings-button strong {
+  font-size: var(--hp-type-sm);
+}
+
+.run-progress {
+  left: calc(env(safe-area-inset-left) + var(--hp-edge) + var(--hp-hud-w) + var(--hp-gap));
+  right: calc(env(safe-area-inset-right) + var(--hp-edge) + var(--hp-settings-w) + var(--hp-gap));
+  top: calc(env(safe-area-inset-top) + var(--hp-edge));
+  width: auto;
+  max-width: var(--hp-objective-max-w);
+  min-height: clamp(74px, calc(var(--hp-objective-max-w) * 0.16), 112px);
+  margin-inline: auto;
+  grid-template-columns: minmax(0, 1fr) clamp(50px, calc(var(--hp-objective-max-w) * 0.12), 78px);
+  gap: clamp(6px, calc(var(--hp-objective-max-w) * 0.016), 12px) clamp(10px, calc(var(--hp-objective-max-w) * 0.026), 18px);
+  padding:
+    clamp(12px, calc(var(--hp-objective-max-w) * 0.027), 18px)
+    clamp(34px, calc(var(--hp-objective-max-w) * 0.076), 54px)
+    clamp(14px, calc(var(--hp-objective-max-w) * 0.033), 24px)
+    clamp(82px, calc(var(--hp-objective-max-w) * 0.18), 126px);
+  transform: none;
+}
+
+.run-objective span {
+  font-size: var(--hp-type-xs);
+}
+
+.run-objective strong {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: var(--hp-type-lg);
+  line-height: 1.02;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-objective em {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  font-size: var(--hp-type-sm);
+  line-height: 1.1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-progress-main span {
+  font-size: var(--hp-type-xs);
+}
+
+.run-progress-main strong {
+  font-size: clamp(22px, calc(var(--hp-type-lg) * 1.42), 34px);
+}
+
+.run-guidance {
+  left: clamp(72px, 17%, 112px);
+  right: clamp(12px, 4%, 24px);
+  top: calc(100% - clamp(20px, 2.2vh, 28px));
+  min-height: clamp(32px, 4.4vh, 44px);
+  grid-template-columns: clamp(42px, 9%, 58px) minmax(0, 1fr);
+  gap: 2px clamp(8px, 1vw, 12px);
+  padding:
+    clamp(5px, 0.7vh, 8px)
+    clamp(10px, 1.4vw, 16px)
+    clamp(6px, 0.8vh, 9px);
+}
+
+.run-guidance span {
+  font-size: var(--hp-type-xs);
+}
+
+.run-guidance strong {
+  font-size: var(--hp-type-md);
+}
+
+.run-guidance strong small {
+  font-size: var(--hp-type-sm);
+}
+
+.run-guidance em,
+.run-progress-row {
+  font-size: var(--hp-type-xs);
+}
+
+.lower-hud {
+  right: calc(env(safe-area-inset-right) + var(--hp-edge));
+  bottom: calc(env(safe-area-inset-bottom) + var(--hp-edge));
+  z-index: 15;
+}
+
+.desktop-action-hud {
+  box-sizing: border-box;
+  width: var(--hp-action-panel-w);
+  padding: clamp(7px, calc(var(--hp-action-cluster) * 0.04), 11px);
+}
+
+.desktop-action-cluster {
+  width: var(--hp-action-cluster);
+  height: calc(var(--hp-action-cluster) * 0.86);
+}
+
+.desktop-action-cluster::before {
+  right: calc(var(--hp-action-cluster) * 0.16);
+  bottom: calc(var(--hp-action-cluster) * 0.18);
+  width: calc(var(--hp-action-cluster) * 0.58);
+  height: calc(var(--hp-action-cluster) * 0.33);
+}
+
+.desktop-action-slot {
+  width: var(--hp-action-slot);
+  height: var(--hp-action-slot);
+}
+
+.desktop-action-slot.rod {
+  right: 0;
+  top: 0;
+  width: var(--hp-action-main-slot);
+  height: var(--hp-action-main-slot);
+}
+
+.desktop-action-slot.pistol {
+  left: 0;
+  bottom: calc(var(--hp-action-cluster) * 0.21);
+}
+
+.desktop-action-slot.item {
+  right: calc(var(--hp-action-cluster) * 0.02);
+  bottom: 0;
+  width: var(--hp-action-item-slot);
+  height: var(--hp-action-item-slot);
+}
+
+.desktop-action-slot .weapon-glyph,
+.desktop-action-slot.rod .weapon-glyph,
+.desktop-action-slot.item .weapon-glyph {
+  width: calc(var(--hp-action-slot) * 0.63);
+  height: calc(var(--hp-action-slot) * 0.63);
+}
+
+.desktop-action-slot.rod .weapon-glyph {
+  width: calc(var(--hp-action-main-slot) * 0.58);
+  height: calc(var(--hp-action-main-slot) * 0.58);
+}
+
+.desktop-action-slot.item .weapon-glyph {
+  width: calc(var(--hp-action-item-slot) * 0.64);
+  height: calc(var(--hp-action-item-slot) * 0.64);
+}
+
+.desktop-key-chip {
+  left: calc(var(--hp-action-slot) * 0.08);
+  top: calc(var(--hp-action-slot) * 0.08);
+  width: clamp(20px, calc(var(--hp-action-slot) * 0.24), 28px);
+  height: clamp(18px, calc(var(--hp-action-slot) * 0.2), 24px);
+  font-size: var(--hp-type-xs);
+}
+
+.desktop-action-readout,
+.desktop-dash-readout,
+.desktop-reload-caption {
+  width: 100%;
+  min-height: clamp(26px, calc(var(--hp-action-cluster) * 0.12), 34px);
+  padding:
+    clamp(5px, calc(var(--hp-action-cluster) * 0.025), 8px)
+    clamp(10px, calc(var(--hp-action-cluster) * 0.06), 16px);
+}
+
+.desktop-action-readout span,
+.desktop-dash-readout span,
+.desktop-reload-caption span {
+  font-size: var(--hp-type-xs);
+}
+
+.desktop-action-readout strong,
+.desktop-dash-readout strong,
+.desktop-reload-caption strong {
+  font-size: var(--hp-type-xs);
+}
+
+.desktop-aim-chip {
+  bottom: calc(env(safe-area-inset-bottom) + var(--hp-edge));
+  width: min(380px, calc(100vw - var(--hp-action-panel-w) - var(--hp-edge) * 4));
+  min-height: 48px;
+  padding: 9px 12px;
+}
+
+.desktop-aim-chip span {
+  font-size: var(--hp-type-xs);
+}
+
+.desktop-aim-chip strong {
+  font-size: var(--hp-type-sm);
+}
+
+.mission-cue {
+  bottom: calc(env(safe-area-inset-bottom) + var(--hp-edge));
+  width: min(360px, calc(100vw - var(--hp-action-panel-w) - var(--hp-edge) * 4));
+}
+
+.interaction-cue,
+.reward-pulse {
+  bottom: calc(env(safe-area-inset-bottom) + var(--hp-edge) + 70px);
+  width: min(360px, calc(100vw - var(--hp-action-panel-w) - var(--hp-edge) * 4));
+}
+
+@media (max-width: 1180px), (max-height: 680px) {
+  .run-progress {
+    left: calc(env(safe-area-inset-left) + var(--hp-edge));
+    right: calc(env(safe-area-inset-right) + var(--hp-edge) + var(--hp-settings-w) + var(--hp-gap));
+    top: calc(env(safe-area-inset-top) + var(--hp-edge) + var(--hp-hud-h) + 6px);
+    max-width: min(var(--hp-objective-max-w), calc(100vw - var(--hp-settings-w) - var(--hp-edge) * 3));
+    min-height: 76px;
+    padding:
+      12px
+      clamp(28px, 6vw, 42px)
+      14px
+      clamp(64px, 12vw, 92px);
+    background-image: url("../assets/gui/hp-gui-objective-strip-mobile-age-v5.png");
+  }
+
+  .hud {
+    width: var(--hp-hud-w);
+    height: var(--hp-hud-h);
+  }
+
+  .run-guidance {
+    top: calc(100% - 18px);
+  }
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .hud {
+    left: calc(env(safe-area-inset-left) + var(--hp-edge));
+    top: calc(env(safe-area-inset-top) + var(--hp-edge));
+    width: min(var(--hp-hud-w), calc(100vw - var(--hp-settings-w) - var(--hp-edge) * 3));
+  }
+
+  .system-settings-button {
+    min-width: clamp(72px, 14vw, var(--hp-settings-w));
+  }
+
+  .run-progress {
+    left: calc(env(safe-area-inset-left) + var(--hp-edge));
+    right: calc(env(safe-area-inset-right) + var(--hp-edge));
+    top: calc(env(safe-area-inset-top) + var(--hp-edge) + var(--hp-hud-h) + 6px);
+    max-width: min(var(--hp-objective-max-w), calc(100vw - var(--hp-edge) * 2));
+  }
+
+  .lower-hud {
+    display: none;
+  }
+
+  .mission-cue,
+  .interaction-cue,
+  .reward-pulse,
+  .desktop-aim-chip {
+    width: min(360px, calc(100vw - var(--hp-edge) * 2));
+  }
+}
+
+/* Combat HUD clarity pass: keep task, guidance, and warning text in solved rectangles. */
+.run-progress.has-guidance {
+  grid-template-rows: minmax(38px, auto) var(--gui-progress-min) auto;
+  min-height: calc(clamp(74px, calc(var(--hp-objective-max-w) * 0.16), 112px) + 42px);
+  align-content: center;
+  padding-bottom: clamp(12px, calc(var(--hp-objective-max-w) * 0.028), 20px);
+}
+
+.run-progress.has-guidance .run-progress-meter {
+  grid-row: 2;
+}
+
+.run-guidance {
+  position: static;
+  left: auto;
+  right: auto;
+  top: auto;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  box-sizing: border-box;
+  width: 100%;
+  min-height: 34px;
+  margin: 2px 0 0;
+  grid-template-columns: minmax(44px, 56px) minmax(0, 1fr);
+  gap: 2px 10px;
+  padding: 6px 12px;
+  transform: none;
+}
+
+.run-guidance.compact-guidance {
+  min-height: 32px;
+  align-content: center;
+}
+
+.run-guidance span {
+  grid-row: 1 / -1;
+  align-self: stretch;
+  min-width: 0;
+  padding-right: 10px;
+  text-align: center;
+}
+
+.run-guidance strong {
+  min-width: 0;
+  max-width: 100%;
+  align-self: end;
+}
+
+.run-guidance.compact-guidance strong {
+  align-self: center;
+}
+
+.run-guidance strong small {
+  flex: 0 0 auto;
+}
+
+.run-guidance em {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.mission-cue.spawn-warning-cue {
+  top: calc(env(safe-area-inset-top) + var(--hp-notice-y));
+  bottom: auto;
+  left: 50%;
+  box-sizing: border-box;
+  width: min(420px, calc(100vw - var(--hp-edge) * 2));
+  max-height: 54px;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  overflow: hidden;
+  border-color: rgba(255, 155, 106, 0.34);
+  background:
+    linear-gradient(90deg, rgba(255, 102, 85, 0.18), rgba(255, 211, 109, 0.08) 48%, transparent),
+    rgba(10, 6, 6, 0.84);
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.28), inset 0 0 18px rgba(255, 102, 85, 0.06);
+  transform: translateX(-50%);
+}
+
+.mission-cue.spawn-warning-cue span,
+.mission-cue.spawn-warning-cue strong {
+  min-width: 0;
+  margin: 0;
+  overflow: hidden;
+  line-height: 1.05;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.mission-cue.spawn-warning-cue span {
+  color: rgba(255, 217, 143, 0.94);
+  font-size: var(--hp-type-xs);
+}
+
+.mission-cue.spawn-warning-cue strong {
+  color: rgba(255, 240, 232, 0.96);
+  font-size: var(--hp-type-sm);
+}
+
+.critical-warning {
+  inset: auto auto auto 50%;
+  top: calc(env(safe-area-inset-top) + var(--hp-notice-y));
+  z-index: 18;
+  width: min(320px, calc(100vw - var(--hp-edge) * 2));
+  display: block;
+  padding: 0;
+  background: transparent;
+  animation: none;
+  transform: translateX(-50%);
+}
+
+.critical-warning span {
+  display: block;
+  padding: 8px 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 92, 72, 0.38);
+  border-radius: 6px;
+  background: rgba(14, 5, 5, 0.82);
+  color: rgba(255, 226, 220, 0.96);
+  font-size: var(--hp-type-xs);
+  line-height: 1.05;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.28), inset 0 0 14px rgba(255, 92, 72, 0.08);
+}
+
+/* Victory settlement compact page. */
+.flow-panel-victory {
+  width: min(720px, calc(100vw - 40px));
+  min-height: 0;
+  max-height: calc(100dvh - 40px);
+  display: grid;
+  align-content: start;
+  justify-items: stretch;
+  gap: 14px;
+  padding: 34px 38px 36px;
+  overflow: auto;
+  border: 1px solid rgba(139, 174, 210, 0.32);
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, rgba(8, 17, 25, 0.96), rgba(3, 7, 11, 0.94)),
+    radial-gradient(circle at 78% 24%, rgba(122, 255, 194, 0.1), transparent 32%);
+  filter: drop-shadow(0 24px 52px rgba(0, 0, 0, 0.5));
+}
+
+.flow-panel-victory h2 {
+  max-width: none;
+  font-size: clamp(32px, 5dvh, 52px);
+}
+
+.flow-panel-victory p {
+  max-width: 42em;
+  font-size: clamp(14px, 1.7dvh, 16px);
+  line-height: 1.45;
+}
+
+.victory-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.victory-metrics span {
+  min-width: 0;
+  min-height: 54px;
+  display: grid;
+  align-content: center;
+  justify-items: center;
+  gap: 2px;
+  padding: 8px 10px;
+  border: 1px solid rgba(120, 230, 255, 0.18);
+  border-radius: 6px;
+  background: rgba(5, 13, 19, 0.72);
+}
+
+.victory-metrics em,
+.victory-metrics strong {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.victory-metrics em {
+  color: rgba(181, 203, 218, 0.82);
+  font-size: 11px;
+  font-style: normal;
+  font-weight: 900;
+}
+
+.victory-metrics strong {
+  color: rgba(246, 251, 255, 0.98);
+  font-size: 24px;
+}
+
+.victory-memory {
+  min-height: 58px;
+  grid-template-columns: auto minmax(0, 1fr) auto;
+  justify-items: stretch;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border: 1px solid rgba(255, 211, 109, 0.26);
+  border-radius: 6px;
+  background:
+    linear-gradient(90deg, rgba(255, 211, 109, 0.12), transparent 70%),
+    rgba(8, 12, 15, 0.76);
+}
+
+.victory-memory span,
+.victory-memory em,
+.victory-memory strong {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.victory-memory span,
+.victory-memory em {
+  font-size: 12px;
+}
+
+.victory-memory strong {
+  justify-self: center;
+  font-size: 28px;
+}
+
+.victory-memory::before {
+  content: none;
+}
+
+.victory-training-compact {
+  padding: 12px;
+  border: 1px solid rgba(120, 230, 255, 0.16);
+  border-radius: 6px;
+  background: rgba(3, 10, 15, 0.58);
+}
+
+.victory-training-compact .progress-training-title {
+  margin-bottom: 8px;
+}
+
+.victory-training-compact .progress-training-grid {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 6px;
+}
+
+.flow-panel-victory .progress-training-button {
+  min-height: 62px;
+  padding: 8px 10px;
+}
+
+.flow-panel-victory .progress-training-button strong {
+  font-size: 18px;
+}
+
+.flow-panel-victory .progress-training-button em {
+  display: none;
+}
+
+.victory-actions {
+  display: grid;
+  gap: 8px;
+}
+
+.flow-panel-victory .victory-primary-button {
+  min-height: 58px;
+}
+
+.victory-secondary-actions {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 8px;
+}
+
+.flow-panel-victory .double-memory-button,
+.victory-secondary-actions button {
+  width: 100%;
+  min-height: 48px;
+  margin: 0;
+}
+
+@media (max-width: 700px), (max-height: 620px) {
+  .flow-panel-victory {
+    width: min(560px, calc(100vw - 24px));
+    max-height: calc(100dvh - 24px);
+    gap: 10px;
+    padding: 24px;
+  }
+
+  .flow-panel-victory h2 {
+    font-size: 32px;
+  }
+
+  .victory-memory {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    gap: 4px;
+    text-align: center;
+  }
+
+  .victory-training-compact .progress-training-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .victory-secondary-actions {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 560px) {
+  .mission-cue.spawn-warning-cue,
+  .critical-warning {
+    display: none;
+  }
+}
+
+/* Objective frame anchor solver: all text is placed in the 960x180 Image2 navigation shell space. */
+.run-progress,
+.run-progress.has-guidance {
+  box-sizing: border-box;
+  width: min(var(--hp-objective-w), calc(100vw - var(--hp-edge) * 2));
+  height: var(--hp-objective-h);
+  min-height: 0;
+  max-width: none;
+  display: block;
+  padding: 0;
+  overflow: visible;
+  border: 0;
+  background: url("../assets/gui/hp-gui-objective-nav-image2-v1.png") center / 100% 100% no-repeat;
+  transform: none;
+}
+
+.run-progress {
+  left: calc(env(safe-area-inset-left) + var(--hp-edge) + var(--hp-hud-w) + var(--hp-gap));
+  right: calc(env(safe-area-inset-right) + var(--hp-edge) + var(--hp-settings-w) + var(--hp-gap));
+  top: calc(env(safe-area-inset-top) + var(--hp-edge));
+  margin-inline: auto;
+}
+
+.run-progress.has-guidance {
+  grid-template-rows: none;
+  align-content: normal;
+}
+
+.run-objective,
+.run-progress-main,
+.run-progress-meter,
+.run-guidance {
+  position: absolute;
+  box-sizing: border-box;
+}
+
+.run-objective {
+  left: 0;
+  top: 0;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
+  display: block;
+  align-self: auto;
+}
+
+.run-objective span,
+.run-objective strong,
+.run-objective em {
+  position: absolute;
+  left: 5.8%;
+  max-width: 70%;
+  margin: 0;
+  overflow: hidden;
+  letter-spacing: 0;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-objective span {
+  top: 16.5%;
+  color: rgba(255, 217, 143, 0.9);
+  font-size: clamp(10px, calc(var(--hp-objective-w) * 0.024), 14px);
+  line-height: 1;
+}
+
+.run-objective strong {
+  top: 29%;
+  color: rgba(246, 251, 255, 0.98);
+  font-size: clamp(15px, calc(var(--hp-objective-w) * 0.039), 28px);
+  line-height: 1;
+  text-shadow: 0 0 14px rgba(120, 230, 255, 0.22);
+}
+
+.run-objective em {
+  top: 55%;
+  max-width: 73%;
+  color: rgba(184, 207, 220, 0.78);
+  font-size: clamp(9px, calc(var(--hp-objective-w) * 0.023), 14px);
+  line-height: 1;
+}
+
+.run-progress-main {
+  right: 5.4%;
+  top: 20%;
+  width: 12.8%;
+  height: 47%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+  align-items: start;
+  justify-items: center;
+  gap: 2px;
+  min-width: 0;
+}
+
+.run-progress-main span {
+  max-width: 100%;
+  overflow: hidden;
+  color: rgba(187, 202, 219, 0.88);
+  font-size: clamp(9px, calc(var(--hp-objective-w) * 0.022), 13px);
+  line-height: 1;
+  text-align: center;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-progress-main strong {
+  align-self: start;
+  color: rgba(100, 215, 255, 0.98);
+  font-size: clamp(23px, calc(var(--hp-objective-w) * 0.071), 48px);
+  line-height: 0.9;
+  text-align: center;
+  text-shadow: 0 0 14px rgba(100, 215, 255, 0.32);
+}
+
+.run-progress-meter {
+  left: 5.8%;
+  right: 12.4%;
+  top: 72.5%;
+  height: clamp(4px, calc(var(--hp-objective-w) * 0.011), 8px);
+  margin: 0;
+  overflow: hidden;
+  border-radius: 999px;
+}
+
+.run-guidance {
+  left: 18.8%;
+  top: 70.2%;
+  width: 69.4%;
+  height: 17.5%;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 16% minmax(0, 1fr);
+  align-items: center;
+  gap: 2.6%;
+  margin: 0;
+  padding: 0 2.6%;
+  overflow: hidden;
+  border: 0;
+  border-radius: 0;
+  background: transparent;
+  box-shadow: none;
+  transform: none;
+}
+
+.run-guidance.compact-guidance {
+  min-height: 0;
+  align-content: center;
+}
+
+.run-guidance span {
+  grid-row: 1;
+  align-self: center;
+  min-width: 0;
+  padding: 0;
+  border: 0;
+  color: rgba(255, 217, 143, 0.86);
+  font-size: clamp(8px, calc(var(--hp-objective-w) * 0.018), 11px);
+  line-height: 1;
+  text-align: center;
+}
+
+.run-guidance strong {
+  min-width: 0;
+  max-width: 100%;
+  align-self: center;
+  overflow: hidden;
+  color: rgba(238, 249, 255, 0.96);
+  font-size: clamp(10px, calc(var(--hp-objective-w) * 0.026), 15px);
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-guidance strong small {
+  margin-left: 0.6em;
+  color: rgba(100, 215, 255, 0.95);
+  font-size: 0.88em;
+}
+
+.run-guidance em {
+  display: none;
+}
+
+@media (max-width: 1180px), (max-height: 680px) {
+  .run-progress,
+  .run-progress.has-guidance {
+    left: calc(env(safe-area-inset-left) + var(--hp-edge));
+    right: calc(env(safe-area-inset-right) + var(--hp-edge) + var(--hp-settings-w) + var(--hp-gap));
+    top: calc(env(safe-area-inset-top) + var(--hp-edge) + var(--hp-hud-h) + 6px);
+    width: min(var(--hp-objective-w), calc(100vw - var(--hp-edge) * 3 - var(--hp-settings-w) - var(--hp-gap)));
+    height: auto;
+    aspect-ratio: 880 / 165;
+    margin-inline: auto;
+    padding: 0;
+    background-image: url("../assets/gui/hp-gui-objective-nav-image2-v1.png");
+  }
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .run-progress,
+  .run-progress.has-guidance {
+    right: calc(env(safe-area-inset-right) + var(--hp-edge));
+    width: min(var(--hp-objective-w), calc(100vw - var(--hp-edge) * 2));
+  }
+}
+
+/* Final HUD constraint pass: task frame sticks to the top-center safe rect and text never escapes its solved cells. */
+.run-progress,
+.run-progress.has-guidance {
+  left: 50%;
+  right: auto;
+  top: calc(var(--hp-viewport-top, 0px) + env(safe-area-inset-top) + clamp(8px, 0.95vh, 16px));
+  width: min(var(--hp-objective-w), calc(var(--hp-vw, 100vw) - max(var(--hp-hud-w), var(--hp-settings-w)) * 2 - var(--hp-edge) * 4));
+  min-width: min(420px, calc(var(--hp-vw, 100vw) - var(--hp-edge) * 2));
+  height: var(--hp-objective-h);
+  max-height: none;
+  border-radius: 0;
+  transform: translateX(-50%);
+  contain: layout paint;
+  background: url("../assets/gui/hp-gui-objective-nav-image2-v1.png") center / 100% 100% no-repeat;
+  box-shadow: none;
+  filter:
+    drop-shadow(0 10px 18px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 0 8px rgba(97, 210, 255, 0.14));
+  backdrop-filter: none;
+}
+
+.run-progress::before {
+  content: none;
+}
+
+.run-progress::after {
+  content: none;
+}
+
+.run-objective strong,
+.run-objective em {
+  left: 19.5%;
+  width: 58%;
+  max-width: 58%;
+  min-width: 0;
+  font-family: "PingFang SC", "Noto Sans SC", "Microsoft YaHei", Inter, system-ui, sans-serif;
+  line-height: 1;
+  text-align: center;
+}
+
+.run-objective span {
+  display: none;
+}
+
+.run-objective strong {
+  top: 31.5%;
+  color: rgba(246, 251, 255, 0.98);
+  font-size: clamp(18px, calc(var(--hp-objective-w) * 0.042), 24px);
+  font-weight: 690;
+  max-height: 1.08em;
+  text-shadow:
+    0 0 10px rgba(116, 224, 255, 0.22),
+    0 1px 0 rgba(0, 0, 0, 0.56);
+}
+
+.run-objective em {
+  display: none;
+}
+
+.run-progress-main {
+  right: 3.4%;
+  top: 32%;
+  width: 9.2%;
+  overflow: hidden;
+}
+
+.run-progress-main span {
+  color: rgba(255, 213, 132, 0.8);
+  font-size: clamp(8px, calc(var(--hp-objective-w) * 0.014), 10px);
+  font-weight: 750;
+}
+
+.run-progress-main strong {
+  color: rgba(246, 251, 255, 0.98);
+  font-size: clamp(18px, calc(var(--hp-objective-w) * 0.043), 28px);
+  font-variant-numeric: tabular-nums;
+}
+
+.run-progress-meter {
+  display: none !important;
+}
+
+.run-guidance {
+  left: 20.5%;
+  top: 74%;
+  width: 58%;
+  height: 17.5%;
+  grid-template-columns: 12% minmax(0, 1fr);
+}
+
+.run-guidance span,
+.run-guidance strong,
+.run-guidance strong b,
+.run-guidance strong small {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.run-guidance span {
+  color: rgba(255, 213, 132, 0.78);
+  font-size: clamp(9px, calc(var(--hp-objective-w) * 0.018), 11px);
+  font-weight: 800;
+}
+
+.run-guidance strong {
+  color: rgba(231, 247, 252, 0.9);
+  font-size: clamp(10px, calc(var(--hp-objective-w) * 0.024), 13px);
+  font-weight: 650;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(6px, calc(var(--hp-objective-w) * 0.015), 10px);
+}
+
+.run-guidance strong b {
+  flex: 0 1 auto;
+  font: inherit;
+}
+
+.run-guidance strong small {
+  flex: 0 0 auto;
+  color: rgba(139, 231, 255, 0.92);
+  font-size: 0.94em;
+  font-weight: 760;
+  text-shadow: 0 0 8px rgba(88, 212, 255, 0.34);
+}
+
+.hud-label-line {
+  grid-template-columns: minmax(0, 1fr) auto;
+}
+
+.hud-label-line span:first-child {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.hud-label-line span:last-child {
+  font-size: clamp(20px, calc(var(--hp-hud-w) * 0.088), 30px);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (max-width: 1180px), (max-height: 680px) {
+  .run-progress,
+  .run-progress.has-guidance {
+    top: calc(var(--hp-viewport-top, 0px) + env(safe-area-inset-top) + clamp(6px, 0.8vh, 11px));
+    width: min(var(--hp-objective-w), calc(var(--hp-vw, 100vw) - var(--hp-edge) * 2 - var(--hp-settings-w) * 0.45));
+    min-width: min(360px, calc(var(--hp-vw, 100vw) - var(--hp-edge) * 2));
+  }
+}
+
+/* Final objective-frame asset lock: every responsive branch must use only the clean Image2 shell. */
+.run-progress,
+.run-progress.has-guidance {
+  border-radius: 0 !important;
+  background-color: transparent !important;
+  background-image: url("../assets/gui/hp-gui-objective-nav-image2-v1.png") !important;
+  background-position: center !important;
+  background-repeat: no-repeat !important;
+  background-size: 100% 100% !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+}
+
+.run-progress::before,
+.run-progress::after {
+  content: none !important;
+  display: none !important;
+}
+
+.boss-vitality {
+  position: fixed;
+  right: calc(var(--hp-viewport-left, 0px) + max(14px, env(safe-area-inset-right)));
+  top: calc(var(--hp-viewport-top, 0px) + env(safe-area-inset-top) + max(14px, var(--hp-edge)) + var(--hp-settings-h) + 8px);
+  z-index: 18;
+  box-sizing: border-box;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  grid-template-rows: auto auto auto auto;
+  column-gap: 10px;
+  row-gap: 2px;
+  width: min(372px, calc(var(--hp-vw, 100vw) - var(--hp-edge) * 2 - var(--hp-hud-w) - var(--hp-gap)));
+  min-width: min(292px, calc(var(--hp-vw, 100vw) - var(--hp-edge) * 2));
+  min-height: 62px;
+  padding:
+    10px
+    33px
+    8px
+    42px;
+  overflow: hidden;
+  pointer-events: none;
+  border: 0;
+  border-radius: 0;
+  color: rgba(245, 251, 255, 0.96);
+  background: transparent;
+  filter:
+    drop-shadow(0 9px 18px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 0 calc(6px + var(--boss-impact) * 8px) rgba(255, 150, 62, calc(0.04 + var(--boss-impact) * 0.18)));
+}
+
+.boss-vitality-frame,
+.boss-vitality::before,
+.boss-vitality::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  pointer-events: none;
+}
+
+.boss-vitality-frame {
+  z-index: 0;
+  background: url("../assets/gui/hp-gui-boss-vitality-shell-clean-image2-v1.png") center / 100% 100% no-repeat;
+}
+
+.boss-vitality::before {
+  z-index: 1;
+  left: 11%;
+  right: 17%;
+  top: 31%;
+  bottom: 26%;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 206, 123, calc(var(--boss-impact) * 0.2)), transparent),
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.055) 0 1px, transparent 1px 18px);
+  opacity: calc(0.22 + var(--boss-impact) * 0.5);
+  transform: skewX(-8deg);
+}
+
+.boss-vitality::after {
+  z-index: 3;
+  left: calc(11% + var(--boss-health) * 0.61);
+  top: 39%;
+  width: clamp(18px, 3.2vw, 42px);
+  height: 20%;
+  background: linear-gradient(90deg, transparent, rgba(255, 238, 185, calc(0.2 + var(--boss-impact) * 0.46)), transparent);
+  opacity: calc(0.42 + var(--boss-impact) * 0.44);
+  transform: skewX(-16deg);
+}
+
+.boss-vitality-copy {
+  position: relative;
+  z-index: 2;
+  grid-column: 1;
+  grid-row: 1;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
+  grid-template-areas:
+    "kicker status"
+    "name name";
+  gap: 1px 8px;
+  align-items: end;
+  min-width: 0;
+  padding-right: 2px;
+}
+
+.boss-vitality-copy span,
+.boss-vitality-copy em {
+  color: rgba(255, 211, 121, 0.9);
+  font-size: 8px;
+  font-style: normal;
+  font-weight: 900;
+  letter-spacing: 0;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+.boss-vitality-copy span {
+  grid-area: kicker;
+}
+
+.boss-vitality-copy strong {
+  grid-area: name;
+  min-width: 0;
+  overflow: hidden;
+  color: rgba(248, 253, 255, 0.98);
+  font-size: clamp(14px, 1.02vw, 17px);
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 1;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-shadow: 0 0 calc(8px + var(--boss-impact) * 16px) rgba(255, 185, 76, calc(0.18 + var(--boss-impact) * 0.42));
+}
+
+.boss-vitality-copy em {
+  grid-area: status;
+  justify-self: end;
+  color: rgba(150, 224, 255, 0.86);
+  font-size: clamp(8px, 0.66vw, 10px);
+  line-height: 1;
+  text-align: right;
+}
+
+.boss-vitality.is-hit .boss-vitality-copy em {
+  color: rgba(255, 225, 168, 0.98);
+}
+
+.boss-vitality.is-wounded {
+  filter:
+    drop-shadow(0 9px 18px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 0 calc(6px + var(--boss-impact) * 10px) rgba(255, 82, 62, calc(0.07 + var(--boss-impact) * 0.2)));
+}
+
+.boss-vitality.is-wounded .boss-vitality-copy em {
+  color: rgba(255, 126, 96, 0.95);
+}
+
+.boss-vitality.is-pressure .boss-vitality-copy em {
+  color: rgba(255, 210, 113, 0.98);
+}
+
+.boss-vitality.is-staggered .boss-vitality-copy em {
+  color: rgba(255, 224, 148, 0.98);
+}
+
+.boss-vitality.is-warning {
+  filter:
+    drop-shadow(0 9px 18px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 0 calc(8px + var(--boss-impact) * 12px) rgba(255, 83, 58, calc(0.1 + var(--boss-impact) * 0.24)));
+}
+
+.boss-vitality.is-warning .boss-vitality-copy em {
+  color: rgba(255, 136, 96, 0.98);
+}
+
+.boss-vitality.is-defeated {
+  filter:
+    drop-shadow(0 9px 18px rgba(0, 0, 0, 0.34))
+    drop-shadow(0 0 calc(8px + var(--boss-impact) * 14px) rgba(133, 239, 255, calc(0.1 + var(--boss-impact) * 0.2)));
+}
+
+.boss-vitality.is-defeated .boss-vitality-copy em {
+  color: rgba(159, 239, 255, 0.98);
+}
+
+.boss-vitality-meter {
+  position: relative;
+  z-index: 2;
+  grid-column: 1 / -1;
+  grid-row: 2;
+  height: 7px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 236, 189, 0.22);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.1) 0 1px, transparent 1px 18px),
+    rgba(0, 8, 12, 0.62);
+  transform: skewX(-10deg);
+}
+
+.boss-vitality-meter i,
+.boss-vitality-meter b,
+.boss-vitality-meter em {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--boss-health);
+  content: "";
+}
+
+.boss-vitality-meter i {
+  background: linear-gradient(90deg, #ff5547, #ffb84e 48%, #79e7ff);
+  box-shadow: 0 0 calc(14px + var(--boss-impact) * 22px) rgba(255, 180, 72, calc(0.32 + var(--boss-impact) * 0.34));
+}
+
+.boss-vitality-meter b {
+  width: calc(var(--boss-impact) * 100%);
+  max-width: 100%;
+  background: linear-gradient(90deg, rgba(255, 255, 255, 0.0), rgba(255, 250, 222, 0.64), rgba(255, 255, 255, 0.0));
+  mix-blend-mode: screen;
+}
+
+.boss-vitality-meter em {
+  width: var(--boss-armor);
+  border-right: 2px solid rgba(255, 232, 174, calc(0.42 + var(--boss-impact) * 0.38));
+  background:
+    linear-gradient(90deg, transparent 0 26%, rgba(255, 230, 166, calc(var(--boss-impact) * 0.22)) 26% 29%, transparent 29% 52%, rgba(255, 90, 68, calc(var(--boss-impact) * 0.28)) 52% 55%, transparent 55%),
+    transparent;
+}
+
+.boss-vitality-readout {
+  position: relative;
+  z-index: 2;
+  grid-column: 2;
+  grid-row: 1;
+  align-self: end;
+  color: rgba(255, 244, 214, 0.96);
+  font-size: clamp(17px, 1.35vw, 21px);
+  font-weight: 900;
+  font-variant-numeric: tabular-nums;
+  line-height: 1;
+  text-align: right;
+  text-shadow: 0 0 12px rgba(255, 180, 72, 0.24);
+}
+
+.boss-vitality-armor {
+  position: relative;
+  z-index: 2;
+  grid-column: 1 / -1;
+  grid-row: 3;
+  height: 2px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.045);
+}
+
+.boss-vitality-armor i {
+  display: block;
+  width: var(--boss-armor);
+  height: 100%;
+  background: linear-gradient(90deg, rgba(125, 231, 255, 0.76), rgba(255, 212, 134, 0.84));
+}
+
+.boss-vitality-armor b {
+  position: absolute;
+  top: -3px;
+  bottom: -3px;
+  width: 2px;
+  background: rgba(255, 109, 84, calc(0.42 + var(--boss-impact) * 0.45));
+  transform: rotate(24deg);
+}
+
+.boss-vitality-armor b:nth-of-type(1) {
+  left: 34%;
+}
+
+.boss-vitality-armor b:nth-of-type(2) {
+  left: 68%;
+}
+
+.boss-vitality-stagger {
+  position: relative;
+  z-index: 2;
+  grid-column: 1 / -1;
+  grid-row: 4;
+  height: 5px;
+  overflow: hidden;
+  border: 1px solid rgba(126, 229, 255, 0.16);
+  background:
+    repeating-linear-gradient(90deg, rgba(255, 255, 255, 0.08) 0 1px, transparent 1px 24px),
+    rgba(0, 9, 14, 0.58);
+  transform: skewX(-10deg);
+}
+
+.boss-vitality-stagger i {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: var(--boss-stagger);
+  background:
+    linear-gradient(90deg, rgba(126, 229, 255, 0.72), rgba(255, 214, 109, 0.95));
+  box-shadow: 0 0 calc(12px + var(--boss-impact) * 18px) rgba(255, 210, 112, calc(0.18 + var(--boss-impact) * 0.28));
+}
+
+.boss-vitality-stagger span {
+  display: none;
+}
+
+.boss-vitality.is-pressure .boss-vitality-stagger i,
+.boss-vitality.is-staggered .boss-vitality-stagger i {
+  background:
+    linear-gradient(90deg, rgba(255, 116, 79, 0.82), rgba(255, 226, 124, 0.98), rgba(129, 239, 255, 0.9));
+}
+
+.boss-vitality.is-warning .boss-vitality-stagger i {
+  background:
+    linear-gradient(90deg, rgba(255, 68, 54, 0.96), rgba(255, 191, 86, 0.98));
+  box-shadow: 0 0 calc(14px + var(--boss-impact) * 22px) rgba(255, 93, 64, calc(0.24 + var(--boss-impact) * 0.36));
+}
+
+.boss-vitality.is-warning .boss-vitality-stagger {
+  border-color: rgba(255, 116, 82, 0.34);
+}
+
+.boss-vitality.is-staggered .boss-vitality-stagger {
+  border-color: rgba(255, 219, 126, 0.36);
+}
+
+.boss-vitality.is-defeated .boss-vitality-meter i {
+  width: 100%;
+  background: linear-gradient(90deg, rgba(93, 230, 255, 0), rgba(116, 239, 255, 0.42), rgba(255, 255, 255, 0));
+  opacity: calc(0.18 + var(--boss-impact) * 0.38);
+}
+
+.boss-vitality.is-defeated .boss-vitality-meter em,
+.boss-vitality.is-defeated .boss-vitality-armor i {
+  width: 0;
+}
+
+.boss-vitality.is-defeated .boss-vitality-stagger i {
+  background: linear-gradient(90deg, rgba(255, 91, 74, 0.0), rgba(124, 239, 255, 0.72), rgba(255, 255, 255, 0));
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .boss-vitality {
+    top: calc(var(--hp-viewport-top, 0px) + env(safe-area-inset-top) + var(--hp-edge) + var(--hp-settings-h) + 6px);
+    z-index: 18;
+    width: 196px;
+    min-width: 0;
+    min-height: 56px;
+    grid-template-columns: minmax(0, 1fr) auto;
+    grid-template-rows: auto 4px;
+    column-gap: 8px;
+    row-gap: 4px;
+    padding: 10px 18px 9px 20px;
+    filter:
+      drop-shadow(0 8px 16px rgba(0, 0, 0, 0.34))
+      drop-shadow(0 0 calc(5px + var(--boss-impact) * 8px) rgba(255, 150, 62, calc(0.05 + var(--boss-impact) * 0.18)));
+  }
+
+  .boss-vitality-frame {
+    background-image: url("../assets/gui/hp-gui-status-pill-age-v3.png");
+  }
+
+  .boss-vitality::before,
+  .boss-vitality::after {
+    content: none;
+    display: none;
+  }
+
+  .boss-vitality-copy {
+    grid-column: 1;
+    grid-row: 1;
+    display: grid;
+    grid-template-columns: auto minmax(0, 1fr);
+    grid-template-areas:
+      "kicker status"
+      "name name";
+    gap: 1px 5px;
+    align-self: center;
+    align-items: end;
+    padding-right: 0;
+  }
+
+  .boss-vitality-copy span,
+  .boss-vitality-copy em {
+    display: block;
+    min-width: 0;
+    overflow: hidden;
+    font-size: 7px;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .boss-vitality-copy span {
+    grid-area: kicker;
+  }
+
+  .boss-vitality-copy em {
+    grid-area: status;
+    justify-self: end;
+  }
+
+  .boss-vitality-copy strong {
+    display: block;
+    grid-area: name;
+    color: rgba(247, 252, 255, 0.98);
+    font-size: 13px;
+    line-height: 1;
+    text-shadow: 0 0 10px rgba(100, 215, 255, 0.18);
+  }
+
+  .boss-vitality-readout {
+    grid-column: 2;
+    grid-row: 1;
+    align-self: center;
+    color: rgba(255, 241, 204, 0.98);
+    font-size: 18px;
+    line-height: 1;
+  }
+
+  .boss-vitality-meter {
+    grid-column: 1 / -1;
+    grid-row: 2;
+    height: 4px;
+    border-color: rgba(255, 231, 176, 0.22);
+    transform: none;
+  }
+
+  .boss-vitality-armor,
+  .boss-vitality-stagger {
+    display: none;
+  }
+}
+
+@media (max-height: 500px) and (max-width: 900px), (max-height: 500px) and (pointer: coarse) {
+  .boss-vitality {
+    top: calc(var(--hp-viewport-top, 0px) + env(safe-area-inset-top) + var(--hp-edge) + var(--hp-settings-h) + 5px);
+    bottom: auto;
+    width: 184px;
+    min-height: 52px;
+    padding: 9px 16px 8px 18px;
+    row-gap: 3px;
+  }
+
+  .boss-vitality-copy span,
+  .boss-vitality-copy em {
+    font-size: 6.5px;
+  }
+
+  .boss-vitality-copy strong {
+    font-size: 12px;
+  }
+
+  .boss-vitality-readout {
+    font-size: 17px;
+  }
+}
+
+@media (max-width: 900px), (pointer: coarse) {
+  .mobile-interact-button {
+    right: calc(env(safe-area-inset-right) + 116px);
+    bottom: calc(env(safe-area-inset-bottom) + 174px);
+    z-index: 2;
+    width: 86px;
+    min-width: 76px;
+    min-height: 44px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    align-content: center;
+    gap: 2px;
+    padding: 7px 11px;
+    overflow: hidden;
+    border-radius: 999px;
+    background-size: 100% 100%;
+    pointer-events: auto;
+  }
+
+  .mobile-interact-button span,
+  .mobile-interact-button strong {
+    min-width: 0;
+    max-width: 100%;
+    overflow: hidden;
+    line-height: 1;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mobile-interact-button span {
+    color: rgba(255, 221, 150, 0.92);
+    font-size: 9px;
+  }
+
+  .mobile-interact-button strong {
+    color: rgba(240, 251, 255, 0.96);
+    font-size: 12px;
+  }
+
+  .mobile-interact-button.locked strong {
+    color: rgba(255, 181, 170, 0.96);
+  }
+
+  .mission-cue,
+  .interaction-cue {
+    z-index: 18;
+    border-radius: 999px;
+    background:
+      linear-gradient(90deg, rgba(4, 14, 20, 0.92), rgba(10, 18, 24, 0.86)),
+      rgba(4, 10, 15, 0.9);
+    box-shadow:
+      inset 0 0 14px rgba(100, 215, 255, 0.08),
+      0 8px 18px rgba(0, 0, 0, 0.3);
+  }
+
+  .interaction-cue {
+    left: 50%;
+    right: auto;
+    bottom: calc(env(safe-area-inset-bottom) + 72px);
+    width: min(250px, calc(var(--hp-vw, 100vw) - var(--hp-action-panel-w) - 210px));
+    min-width: 210px;
+    min-height: 42px;
+    grid-template-columns: 28px minmax(0, 1fr);
+    grid-template-areas:
+      "key label"
+      "key detail";
+    column-gap: 8px;
+    padding: 7px 12px;
+    overflow: hidden;
+    transform: translateX(-50%);
+  }
+
+  .interaction-cue kbd {
+    width: 26px;
+    height: 26px;
+    border-radius: 7px;
+    font-size: 11px;
+  }
+
+  .interaction-cue span,
+  .interaction-cue strong {
+    min-width: 0;
+    overflow: hidden;
+    line-height: 1;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .interaction-cue span {
+    font-size: 9px;
+  }
+
+  .interaction-cue strong {
+    margin-top: 2px;
+    font-size: 11px;
+  }
+
+  .mission-cue {
+    left: 50%;
+    bottom: calc(env(safe-area-inset-bottom) + 124px);
+    width: min(240px, calc(var(--hp-vw, 100vw) - var(--hp-action-panel-w) - 220px));
+    min-height: 36px;
+    padding: 7px 12px;
+    overflow: hidden;
+    transform: translateX(-50%);
+  }
+
+  .mission-cue span,
+  .mission-cue strong {
+    min-width: 0;
+    margin: 0;
+    overflow: hidden;
+    line-height: 1.05;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .mission-cue span {
+    font-size: 9px;
+  }
+
+  .mission-cue strong {
+    margin-top: 2px;
+    font-size: 11px;
+  }
+
+  .mission-cue.spawn-warning-cue {
+    top: auto;
+    bottom: calc(env(safe-area-inset-bottom) + 124px);
+    width: min(250px, calc(var(--hp-vw, 100vw) - var(--hp-action-panel-w) - 220px));
+    max-height: 40px;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2px;
+  }
+}
+
+@media (max-height: 500px) and (max-width: 900px), (max-height: 500px) and (pointer: coarse) {
+  .mobile-interact-button {
+    right: calc(env(safe-area-inset-right) + 114px);
+    bottom: calc(env(safe-area-inset-bottom) + 174px);
+    width: 82px;
+    min-height: 42px;
+    padding: 6px 10px;
+  }
+
+  .mobile-interact-button strong {
+    font-size: 11px;
+  }
+}

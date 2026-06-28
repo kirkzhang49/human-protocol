@@ -1,0 +1,945 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "door_residential_access",
+  "category": "door",
+  "file": "src/assets/models-cooked/environment/doors/hp_door_residential_access.glb",
+  "fileName": "hp_door_residential_access.glb",
+  "sourceAsset": {
+    "modelKey": "door_residential_access",
+    "category": "door",
+    "url": "/src/assets/models-cooked/environment/doors/hp_door_residential_access.glb",
+    "file": "src/assets/models-cooked/environment/doors/hp_door_residential_access.glb",
+    "sizeMeters": [
+      4.4,
+      3.3,
+      0.41
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 160868,
+      "meshes": 17,
+      "nodes": 18,
+      "skins": 0,
+      "primitives": 17,
+      "materials": 5,
+      "textures": 5,
+      "images": 5,
+      "accessors": 26,
+      "bufferViews": 27,
+      "animations": [],
+      "extensionsUsed": [],
+      "estimatedTriangles": 236
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/doors/hp_door_residential_access.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 79560,
+    "vertexCount": 708,
+    "triangleCount": 236,
+    "meshCount": 17,
+    "materialCount": 5,
+    "nodeCount": 18,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -2.2,
+        0,
+        -0.205
+      ],
+      "center": [
+        0,
+        1.65,
+        0
+      ],
+      "size": [
+        4.4,
+        3.3,
+        0.41
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "frame_left_jamb",
+        "vertexOffset": 79560,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "frame_right_jamb",
+        "vertexOffset": 79596,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "frame_lintel",
+        "vertexOffset": 79632,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "threshold",
+        "vertexOffset": 79668,
+        "vertexCount": 132,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "leaf_left",
+        "vertexOffset": 79800,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "leaf_right",
+        "vertexOffset": 79836,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "panel_l_0",
+        "vertexOffset": 79872,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "panel_l_1",
+        "vertexOffset": 79908,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "panel_l_2",
+        "vertexOffset": 79944,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "panel_r_0",
+        "vertexOffset": 79980,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "panel_r_1",
+        "vertexOffset": 80016,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "panel_r_2",
+        "vertexOffset": 80052,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "steel_band_l",
+        "vertexOffset": 80088,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "steel_band_r",
+        "vertexOffset": 80124,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "center_seam",
+        "vertexOffset": 80160,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "status_lens",
+        "vertexOffset": 80196,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "status_strip_top",
+        "vertexOffset": 80232,
+        "vertexCount": 36,
+        "bindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "door:level_02_living_room_door:leaf",
+      "source": "map.doors",
+      "role": "door_leaf",
+      "roomId": "level_02_recovery_foyer",
+      "secondaryRoomId": "level_02_living_room",
+      "position": [
+        0,
+        1.36,
+        8.55
+      ],
+      "localOffset": [
+        0,
+        -1.36,
+        0
+      ],
+      "rotation": [
+        0,
+        0,
+        0
+      ],
+      "scale": [
+        0.613636,
+        0.824242,
+        0.829268
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "door",
+        "doorId": "level_02_living_room_door"
+      },
+      "state": {
+        "doorId": "level_02_living_room_door",
+        "openAnimation": null,
+        "openVisualPolicy": {
+          "hideClosedHardwareAfterOpen": true,
+          "hidePanelAfterOpen": true
+        }
+      },
+      "estimatedBounds": {
+        "center": [
+          0,
+          1.36,
+          8.55
+        ],
+        "halfSize": [
+          1.35,
+          1.36,
+          0.17
+        ]
+      }
+    },
+    {
+      "id": "door:level_02_care_room_door:leaf",
+      "source": "map.doors",
+      "role": "door_leaf",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": "level_02_care_room",
+      "position": [
+        9.4,
+        1.29,
+        0.4
+      ],
+      "localOffset": [
+        0,
+        -1.29,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.465909,
+        0.781818,
+        0.780488
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "door",
+        "doorId": "level_02_care_room_door"
+      },
+      "state": {
+        "doorId": "level_02_care_room_door",
+        "openAnimation": null,
+        "openVisualPolicy": {
+          "hideClosedHardwareAfterOpen": true,
+          "hidePanelAfterOpen": true
+        }
+      },
+      "estimatedBounds": {
+        "center": [
+          9.4,
+          1.29,
+          0.4
+        ],
+        "halfSize": [
+          1.025,
+          1.29,
+          0.16
+        ]
+      }
+    },
+    {
+      "id": "door:level_02_light_room_door:leaf",
+      "source": "map.doors",
+      "role": "door_leaf",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": "level_02_light_room",
+      "position": [
+        -9.4,
+        1.29,
+        0.4
+      ],
+      "localOffset": [
+        0,
+        -1.29,
+        0
+      ],
+      "rotation": [
+        0,
+        1.570796,
+        0
+      ],
+      "scale": [
+        0.465909,
+        0.781818,
+        0.780488
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "door",
+        "doorId": "level_02_light_room_door"
+      },
+      "state": {
+        "doorId": "level_02_light_room_door",
+        "openAnimation": null,
+        "openVisualPolicy": {
+          "hideClosedHardwareAfterOpen": true
+        }
+      },
+      "estimatedBounds": {
+        "center": [
+          -9.4,
+          1.29,
+          0.4
+        ],
+        "halfSize": [
+          1.025,
+          1.29,
+          0.16
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": "human-protocol.asset-report.museum-ceiling-options.v1",
+  "assetFamily": "museum_ceiling_options_1_2_5",
+  "createdFor": "Human Protocol /build museum ceiling selection",
+  "blueprint": [
+    {
+      "option": 1,
+      "presetId": "ceiling_hp_museum_limestone_coffer_v2",
+      "role": "Premium limestone/plaster coffered gallery ceiling for broad museum rooms.",
+      "scaleMeters": "Tiling 384px PBR triple, textureScale 3.1, intended for 3-6m rooms.",
+      "silhouette": "Deep square coffer grid with warm brass center trims.",
+      "materialSlots": ["limestone plaster", "aged brass accent", "shadowed coffer recess"],
+      "collisionProxy": "none; builder procedural ceiling surface",
+      "expectedPlacement": "Build page ceiling preset; suitable default for Level 3-style museum rooms.",
+      "qaEvidence": ["generated color/normal/rough WebP textures", "BuilderEnvironment preset registered"]
+    },
+    {
+      "option": 2,
+      "presetId": "ceiling_hp_museum_frosted_skylight_v2",
+      "role": "Frosted glass skylight ceiling with dark bronze mullions for modern archive/gallery spaces.",
+      "scaleMeters": "Tiling 384px PBR triple, textureScale 3.0, intended for 3-6m rooms.",
+      "silhouette": "Long frosted glass panels divided by bronze mullions.",
+      "materialSlots": ["frosted glass", "dark bronze mullion", "subtle cyan strip light"],
+      "collisionProxy": "none; builder procedural ceiling surface",
+      "expectedPlacement": "Build page ceiling preset; pairs with glass cases and cooler museum lighting.",
+      "qaEvidence": ["generated color/normal/rough WebP textures", "BuilderEnvironment preset registered"]
+    },
+    {
+      "option": 5,
+      "presetId": "ceiling_hp_museum_rotunda_chandelier_v1",
+      "modelKey": "room_cc0_chandelier_02_ceiling",
+      "role": "Classical rotunda plaster medallion ceiling plus center brass chandelier prop.",
+      "scaleMeters": {
+        "ceilingSurface": "Tiling 384px PBR triple, textureScale 2.6",
+        "chandelier": [1.25, 1.561, 1.14]
+      },
+      "silhouette": "Circular plaster medallion and downward-hanging brass chandelier.",
+      "materialSlots": ["aged plaster", "brass medallion accent", "brass chandelier", "warm low emissive bulbs"],
+      "collisionProxy": "chandelier non-solid ceiling mount; no player blocker",
+      "expectedPlacement": "Use the ceiling preset on a larger museum room and place room_cc0_chandelier_02_ceiling near room center.",
+      "qaEvidence": ["generated color/normal/rough WebP textures", "Poly Haven CC0 source audit", "Blender source blend", "compressed cooked GLB"]
+    }
+  ],
+  "textureEvidence": {
+    "preview": "/Users/zhengkaizhang/Documents/Codex/2026-06-17/human-protocol-l3-glass-exhibits-assets/outputs/museum_ceiling_options_1_2_5_texture_preview.webp",
+    "textureDir": "src/assets/textures/environment/builder-surfaces"
+  },
+  "licenseEvidence": [
+    {
+      "source": "Poly Haven",
+      "asset": "Chandelier_02",
+      "url": "https://polyhaven.com/a/Chandelier_02",
+      "license": "CC0",
+      "proof": "src/assets/external/polyhaven_museum_ceiling_2026_06_18/polyhaven/Chandelier_02/human_protocol_source_audit.json"
+    },
+    {
+      "source": "Project procedural",
+      "asset": "ceiling texture triples",
+      "license": "owned/procedural",
+      "proof": "scripts/asset-build/generate-museum-builder-ceiling-textures.py"
+    }
+  ],
+  "integration": {
+    "builderSurfacePresets": [
+      "ceiling_hp_museum_limestone_coffer_v2",
+      "ceiling_hp_museum_frosted_skylight_v2",
+      "ceiling_hp_museum_rotunda_chandelier_v1"
+    ],
+    "builderPropCatalog": ["room_cc0_chandelier_02_ceiling"],
+    "runtimeModelRegistry": ["room_cc0_chandelier_02_ceiling"],
+    "rawWebGpuPath": "builder runtime pack consumes builder ceiling surface textures and cooked chandelier model through normal catalog/resource indexing"
+  }
+}

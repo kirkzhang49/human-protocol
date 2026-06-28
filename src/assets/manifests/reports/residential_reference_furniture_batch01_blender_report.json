@@ -1,0 +1,298 @@
+{
+  "schema": "human-protocol/environment-asset-factory/residential-reference-batch@1",
+  "generatedAt": "2026-06-19",
+  "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend",
+  "textureSources": {
+    "type": "image2-base-color-png",
+    "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+    "atlasRegions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+    "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+    "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+    "glbTextureAudit": "src/assets/manifests/reports/residential_reference_furniture_glb_texture_audit.json"
+  },
+  "referenceImages": [
+    "/Users/zhengkaizhang/Desktop/Screenshot 2026-06-19 at 2.53.26 PM.png",
+    "/Users/zhengkaizhang/Desktop/Screenshot 2026-06-19 at 2.53.52 PM.png"
+  ],
+  "styleProfile": {
+    "id": "residential_simulation",
+    "scope": "Reusable Environment Asset Factory profile; Level 02 is one consumer.",
+    "artDirection": "warm residential showroom, clean and gentle, slightly over-controlled, no obvious sci-fi surveillance"
+  },
+  "assets": [
+    {
+      "modelKey": "hp_furniture_residential_oval_coffee_table_v1",
+      "label": "住宅圆角茶几",
+      "assetFamily": "residential_coffee_table",
+      "styleProfile": "residential_simulation",
+      "footprint": "table",
+      "role": "residential showroom furniture with subtle Human Protocol control cues",
+      "silhouette": "low rounded oval stone top with twin fluted walnut pedestals",
+      "referenceCue": "rounded warm wood / stone coffee tables, ribbed pedestal bases",
+      "hiddenControlHint": "single underside shadow gap only",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_oval_coffee_table_v1.glb",
+      "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_oval_coffee_table_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend",
+      "sizeMeters": [
+        1.48,
+        0.477,
+        0.82
+      ],
+      "objectCount": 41,
+      "materialSlots": [
+        "hp_residential_hidden_shadow_gap",
+        "hp_residential_light_oak",
+        "hp_residential_warm_stone",
+        "hp_residential_warm_walnut"
+      ],
+      "textureSources": {
+        "type": "image2-base-color-png",
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "atlasRegions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "tiles": [
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/pale_oak_slats.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/shadow_gap_panel.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_stone_oval.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_walnut_ribbed.png"
+        ]
+      },
+      "qaScores": {
+        "silhouetteReadability": 0.86,
+        "groundedContact": 0.93,
+        "materialHarmony": 0.9,
+        "hiddenControlRestraint": 0.94,
+        "clutterPenalty": 0.08,
+        "sciFiFrontFacePenalty": 0.0
+      },
+      "qaNotes": [
+        "warm wood / ivory / stone / muted brass palette",
+        "no cyan scanner strip, visible camera, or front service panel",
+        "control implication is limited to rear plates, shadow gaps, and over-regular modules"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_fluted_sideboard_v1",
+      "label": "住宅竖纹边柜",
+      "assetFamily": "residential_sideboard",
+      "styleProfile": "residential_simulation",
+      "footprint": "cabinet",
+      "role": "residential showroom furniture with subtle Human Protocol control cues",
+      "silhouette": "long low sideboard, vertical fluted doors, warm stone slab top",
+      "referenceCue": "warm wood sideboards with vertical tambour fronts",
+      "hiddenControlHint": "rear access plate and toe shadow",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_fluted_sideboard_v1.glb",
+      "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_fluted_sideboard_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend",
+      "sizeMeters": [
+        1.86,
+        0.962,
+        0.668
+      ],
+      "objectCount": 34,
+      "materialSlots": [
+        "hp_residential_hidden_shadow_gap",
+        "hp_residential_ivory_boucle",
+        "hp_residential_light_oak",
+        "hp_residential_muted_brass",
+        "hp_residential_warm_stone",
+        "hp_residential_warm_walnut"
+      ],
+      "textureSources": {
+        "type": "image2-base-color-png",
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "atlasRegions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "tiles": [
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/ivory_boucle_clean.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/pale_oak_slats.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/shadow_gap_panel.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_stone_oval.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_walnut_ribbed.png"
+        ]
+      },
+      "qaScores": {
+        "silhouetteReadability": 0.86,
+        "groundedContact": 0.93,
+        "materialHarmony": 0.9,
+        "hiddenControlRestraint": 0.94,
+        "clutterPenalty": 0.08,
+        "sciFiFrontFacePenalty": 0.0
+      },
+      "qaNotes": [
+        "warm wood / ivory / stone / muted brass palette",
+        "no cyan scanner strip, visible camera, or front service panel",
+        "control implication is limited to rear plates, shadow gaps, and over-regular modules"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_entry_bench_cubby_v1",
+      "label": "玄关储物换鞋凳",
+      "assetFamily": "residential_entry_bench",
+      "styleProfile": "residential_simulation",
+      "footprint": "bench",
+      "role": "residential showroom furniture with subtle Human Protocol control cues",
+      "silhouette": "entry bench with cushion, cubbies, and tall fluted wall back",
+      "referenceCue": "mudroom bench, wall pegs, shoe cubbies",
+      "hiddenControlHint": "over-regular lower service shadow gap",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_entry_bench_cubby_v1.glb",
+      "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_entry_bench_cubby_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend",
+      "sizeMeters": [
+        1.52,
+        1.64,
+        0.588
+      ],
+      "objectCount": 34,
+      "materialSlots": [
+        "hp_residential_deep_walnut_shadow",
+        "hp_residential_hidden_shadow_gap",
+        "hp_residential_ivory_boucle",
+        "hp_residential_light_oak",
+        "hp_residential_muted_brass",
+        "hp_residential_pale_oak_laminate"
+      ],
+      "textureSources": {
+        "type": "image2-base-color-png",
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "atlasRegions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "tiles": [
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/ivory_boucle_clean.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/pale_oak_slats.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/shadow_gap_panel.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_walnut_ribbed.png"
+        ]
+      },
+      "qaScores": {
+        "silhouetteReadability": 0.86,
+        "groundedContact": 0.93,
+        "materialHarmony": 0.9,
+        "hiddenControlRestraint": 0.94,
+        "clutterPenalty": 0.08,
+        "sciFiFrontFacePenalty": 0.0
+      },
+      "qaNotes": [
+        "warm wood / ivory / stone / muted brass palette",
+        "no cyan scanner strip, visible camera, or front service panel",
+        "control implication is limited to rear plates, shadow gaps, and over-regular modules"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_room_divider_shelf_v1",
+      "label": "半高隔断书架",
+      "assetFamily": "residential_room_divider_shelf",
+      "styleProfile": "residential_simulation",
+      "footprint": "books",
+      "role": "residential showroom furniture with subtle Human Protocol control cues",
+      "silhouette": "open warm wood shelf grid with restrained books and display bowl",
+      "referenceCue": "warm open room divider shelves and staged residential niches",
+      "hiddenControlHint": "small rear maintenance inset",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_room_divider_shelf_v1.glb",
+      "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_room_divider_shelf_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend",
+      "sizeMeters": [
+        1.72,
+        1.32,
+        0.384
+      ],
+      "objectCount": 25,
+      "materialSlots": [
+        "hp_residential_deep_walnut_shadow",
+        "hp_residential_hidden_shadow_gap",
+        "hp_residential_light_oak",
+        "hp_residential_muted_blue_gray",
+        "hp_residential_muted_book_spines",
+        "hp_residential_muted_sage",
+        "hp_residential_warm_stone",
+        "hp_residential_warm_walnut",
+        "hp_residential_warm_white_lacquer"
+      ],
+      "textureSources": {
+        "type": "image2-base-color-png",
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "atlasRegions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "tiles": [
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/muted_book_spines.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/pale_oak_slats.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/shadow_gap_panel.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_stone_oval.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_walnut_ribbed.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_white_lacquer.png"
+        ]
+      },
+      "qaScores": {
+        "silhouetteReadability": 0.86,
+        "groundedContact": 0.93,
+        "materialHarmony": 0.9,
+        "hiddenControlRestraint": 0.94,
+        "clutterPenalty": 0.08,
+        "sciFiFrontFacePenalty": 0.0
+      },
+      "qaNotes": [
+        "warm wood / ivory / stone / muted brass palette",
+        "no cyan scanner strip, visible camera, or front service panel",
+        "control implication is limited to rear plates, shadow gaps, and over-regular modules"
+      ]
+    },
+    {
+      "modelKey": "hp_furniture_residential_cleaner_closet_v1",
+      "label": "家政清洁储物柜",
+      "assetFamily": "residential_cleaner_closet",
+      "styleProfile": "residential_simulation",
+      "footprint": "cabinet",
+      "role": "residential showroom furniture with subtle Human Protocol control cues",
+      "silhouette": "tall warm-white utility closet with fluted door and lower basket niche",
+      "referenceCue": "entry hall built-in closet, coat panel, warm utility cabinet",
+      "hiddenControlHint": "heavy rear service panel and overbuilt plinth",
+      "rawGlb": "src/assets/models/environment/props/hp_furniture_residential_cleaner_closet_v1.glb",
+      "previewPng": "work/furniture-factory/residential-reference-previews/hp_furniture_residential_cleaner_closet_v1.png",
+      "sourceBlend": "src/assets/source_blend/furniture/human_protocol_residential_reference_furniture_batch01.blend",
+      "sizeMeters": [
+        0.93,
+        1.96,
+        0.62
+      ],
+      "objectCount": 21,
+      "materialSlots": [
+        "hp_residential_hidden_shadow_gap",
+        "hp_residential_light_oak",
+        "hp_residential_muted_brass",
+        "hp_residential_pale_oak_laminate",
+        "hp_residential_warm_white_lacquer",
+        "hp_residential_woven_basket_oak"
+      ],
+      "textureSources": {
+        "type": "image2-base-color-png",
+        "atlas": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.png",
+        "atlasRegions": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_atlas.regions.json",
+        "contactSheet": "src/assets/textures/environment/residential-reference-furniture-image2/hp_residential_reference_image2_contact_sheet.png",
+        "textureReport": "src/assets/manifests/reports/residential_reference_furniture_image2_texture_report.json",
+        "tiles": [
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/pale_oak_slats.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/shadow_gap_panel.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/warm_white_lacquer.png",
+          "src/assets/textures/environment/residential-reference-furniture-image2/image2-sources/woven_basket_oak.png"
+        ]
+      },
+      "qaScores": {
+        "silhouetteReadability": 0.86,
+        "groundedContact": 0.93,
+        "materialHarmony": 0.9,
+        "hiddenControlRestraint": 0.94,
+        "clutterPenalty": 0.08,
+        "sciFiFrontFacePenalty": 0.0
+      },
+      "qaNotes": [
+        "warm wood / ivory / stone / muted brass palette",
+        "no cyan scanner strip, visible camera, or front service panel",
+        "control implication is limited to rear plates, shadow gaps, and over-regular modules"
+      ]
+    }
+  ]
+}

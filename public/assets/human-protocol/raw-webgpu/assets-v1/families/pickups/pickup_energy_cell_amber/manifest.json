@@ -1,0 +1,1184 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-bundle-manifest.v1",
+  "modelKey": "pickup_energy_cell_amber",
+  "family": "pickups",
+  "bundleId": "pickups/pickup_energy_cell_amber",
+  "version": 1,
+  "status": "ready",
+  "source": {
+    "sourcePackId": "level_01_maintenance_bay",
+    "sourcePlan": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay.json",
+    "sourceGeometry": "src/assets/manifests/generated/raw-webgpu/render_plan_level_01_maintenance_bay_geometry.bin",
+    "rawFile": "src/assets/models/environment/props/hp_pickup_energy_cell_amber.glb",
+    "rawSource": "raw-models",
+    "sourceLevels": [
+      "level_01_maintenance_bay",
+      "level_02_residential_simulation"
+    ],
+    "refactor": "phase-1-split-from-legacy-raw-source-pack"
+  },
+  "quality": {
+    "tier": "ordinary-furniture",
+    "baseColorTarget": 512,
+    "normalTarget": 512,
+    "ormTarget": 512,
+    "emissiveTarget": 512,
+    "preferredMimeTypes": [
+      "image/avif",
+      "image/webp"
+    ]
+  },
+  "geometry": {
+    "file": "geometry.raw.bin",
+    "format": "raw-float32",
+    "futureFormat": "meshopt",
+    "vertexFormat": "position3_normal3_uv2_materialIndex1_rigidJointIndex1_float32",
+    "vertexStrideFloats": 10,
+    "vertexCount": 11088,
+    "triangleCount": 3696,
+    "byteLength": 443520,
+    "hash": "f4fa62e99e170f83",
+    "asset": {
+      "modelKey": "pickup_energy_cell_amber",
+      "sourceFile": "src/assets/models-cooked/environment/props/hp_pickup_energy_cell_amber.glb",
+      "rawFile": "src/assets/models/environment/props/hp_pickup_energy_cell_amber.glb",
+      "rawSource": "raw-models",
+      "vertexOffset": 0,
+      "vertexCount": 11088,
+      "triangleCount": 3696,
+      "meshCount": 12,
+      "materialCount": 4,
+      "nodeCount": 21,
+      "skinCount": 0,
+      "rigidSkin": null,
+      "animationClips": [],
+      "nodeChunks": [
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_blue_energy_core",
+          "vertexOffset": 0,
+          "vertexCount": 1716,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.45,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.45,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_bottom_cap",
+          "vertexOffset": 1716,
+          "vertexCount": 1428,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.04,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.04,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_bottom_gold_contact_ring",
+          "vertexOffset": 3144,
+          "vertexCount": 1428,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.005,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.005,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_gold_contact_bottom",
+          "vertexOffset": 4572,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.29,
+            0.235,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.29,
+            -0.235,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_gold_contact_top",
+          "vertexOffset": 4896,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.73,
+            0.235,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.73,
+            -0.235,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_guard_rail_1",
+          "vertexOffset": 5220,
+          "vertexCount": 324,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0.21,
+            0.45,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            -0.21,
+            -0.45,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_guard_rail_2",
+          "vertexOffset": 5544,
+          "vertexCount": 324,
+          "bindMatrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            0.45,
+            -0.21,
+            1
+          ],
+          "inverseBindMatrix": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            -0.21,
+            -0.45,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_guard_rail_3",
+          "vertexOffset": 5868,
+          "vertexCount": 324,
+          "bindMatrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -0.21,
+            0.45,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            -1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            -1,
+            0,
+            -0.21,
+            -0.45,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_guard_rail_4",
+          "vertexOffset": 6192,
+          "vertexCount": 324,
+          "bindMatrix": [
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -1,
+            0,
+            0,
+            0,
+            0,
+            0.45,
+            0.21,
+            1
+          ],
+          "inverseBindMatrix": [
+            0,
+            0,
+            -1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            -0.21,
+            -0.45,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_top_cap",
+          "vertexOffset": 6516,
+          "vertexCount": 1428,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.86,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.86,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_top_gold_contact_ring",
+          "vertexOffset": 7944,
+          "vertexCount": 1428,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.905,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.905,
+            0,
+            1
+          ]
+        },
+        {
+          "nodeIndex": null,
+          "nodeName": "pickup_energy_cell_amber_transparent_outer_energy_shell",
+          "vertexOffset": 9372,
+          "vertexCount": 1716,
+          "bindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0.45,
+            0,
+            1
+          ],
+          "inverseBindMatrix": [
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            0,
+            0,
+            1,
+            0,
+            0,
+            -0.45,
+            0,
+            1
+          ]
+        }
+      ],
+      "bounds": {
+        "min": [
+          -0.23,
+          -0.016,
+          -0.23
+        ],
+        "center": [
+          0,
+          0.45,
+          0.0065
+        ],
+        "size": [
+          0.46,
+          0.932,
+          0.473
+        ]
+      },
+      "status": "ready"
+    }
+  },
+  "material": {
+    "file": "material.json",
+    "hash": "b62c737ac280f6f7",
+    "materials": [
+      {
+        "index": 43,
+        "id": "mat:pickup:room-emissive-cyan:c9zsty",
+        "name": "room_emissive_cyan",
+        "category": "pickup",
+        "visualRole": "cyan_emissive",
+        "semanticParams": [
+          7,
+          0.68,
+          0.3272,
+          0.1
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.2,
+          0.78,
+          0.9,
+          1
+        ],
+        "emissiveFactor": [
+          0.14,
+          0.63,
+          0.7
+        ],
+        "emissiveStrength": 0.34,
+        "roughnessFactor": 0.24,
+        "metallicFactor": 0.05,
+        "aoStrength": 1,
+        "materialKind": 4,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-56-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-56-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536059,
+              "contrast": 0.002903,
+              "chroma": 0.778034,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 56
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-57-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-57-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.214332,
+              "contrast": 0.005572,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 57
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-58-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-58-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.865365,
+              "contrast": 0.007595,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 58
+          },
+          {
+            "semantic": "emissive",
+            "present": true,
+            "colorSpace": "srgb",
+            "name": "emissive_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/emissive-59-emissive-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/emissive-59-emissive-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.57008,
+              "contrast": 0.194856,
+              "chroma": 0.707282,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 59
+          }
+        ]
+      },
+      {
+        "index": 44,
+        "id": "mat:pickup:room-metal-dark:1t30k6v",
+        "name": "room_metal_dark",
+        "category": "pickup",
+        "visualRole": "structural_dark",
+        "semanticParams": [
+          4,
+          0.86,
+          0.03,
+          0.48
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.055,
+          0.065,
+          0.072,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0,
+        "roughnessFactor": 0.38,
+        "metallicFactor": 0.72,
+        "aoStrength": 1,
+        "materialKind": 2,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-60-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-60-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536083,
+              "contrast": 0.016561,
+              "chroma": 0.790511,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 60
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-61-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-61-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.36294,
+              "contrast": 0.017622,
+              "chroma": 0.556263,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 61
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-62-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-62-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.64476,
+              "contrast": 0.032422,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 62
+          }
+        ]
+      },
+      {
+        "index": 45,
+        "id": "mat:pickup:room-accent-protocol-gold:mcbaiq",
+        "name": "room_accent_protocol_gold",
+        "category": "pickup",
+        "visualRole": "pickup_key",
+        "semanticParams": [
+          17,
+          0.92,
+          0.4112,
+          0.06
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          1,
+          0.74,
+          0.18,
+          1
+        ],
+        "emissiveFactor": [
+          0,
+          0,
+          0
+        ],
+        "emissiveStrength": 0.14,
+        "roughnessFactor": 0.32,
+        "metallicFactor": 0.42,
+        "aoStrength": 1,
+        "materialKind": 5,
+        "alphaMode": "OPAQUE",
+        "transparency": {
+          "mode": "opaque",
+          "alpha": 1,
+          "source": "opaque-default"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-63-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-63-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536085,
+              "contrast": 0.005404,
+              "chroma": 0.778451,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 63
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-64-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-64-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.306053,
+              "contrast": 0.008463,
+              "chroma": 0.887188,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 64
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-65-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-65-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.855097,
+              "contrast": 0.012209,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 65
+          }
+        ]
+      },
+      {
+        "index": 46,
+        "id": "mat:pickup:room-glass-energy-shell:1xyxrt8",
+        "name": "room_glass_energy_shell",
+        "category": "pickup",
+        "visualRole": "glass_shell",
+        "semanticParams": [
+          5,
+          0.82,
+          0.1896,
+          0.12
+        ],
+        "paletteColorFactor": [
+          0,
+          0,
+          0,
+          0
+        ],
+        "baseColorFactor": [
+          0.5,
+          0.88,
+          1,
+          0.34
+        ],
+        "emissiveFactor": [
+          0.0144,
+          0.0552,
+          0.0624
+        ],
+        "emissiveStrength": 0.12,
+        "roughnessFactor": 0.4,
+        "metallicFactor": 0.06,
+        "aoStrength": 1,
+        "materialKind": 6,
+        "alphaMode": "BLEND",
+        "transparency": {
+          "mode": "blend",
+          "alpha": 0.34,
+          "source": "gltf-material.opacity"
+        },
+        "doubleSided": true,
+        "textures": [
+          {
+            "semantic": "normal",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "normal_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-66-normal-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-66-normal-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.536142,
+              "contrast": 0.002423,
+              "chroma": 0.776555,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 66
+          },
+          {
+            "semantic": "metallicRoughness",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "metallicRoughness_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-67-metallicroughness-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-67-metallicroughness-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.381593,
+              "contrast": 0.00265,
+              "chroma": 1,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 67
+          },
+          {
+            "semantic": "ao",
+            "present": true,
+            "colorSpace": "linear",
+            "name": "ao_supplement",
+            "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-68-ao-supplement.png",
+            "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-68-ao-supplement.png",
+            "mimeType": "image/png",
+            "stats": {
+              "lumaMean": 0.913188,
+              "contrast": 0.003452,
+              "chroma": 0,
+              "detail": 0.5
+            },
+            "generated": true,
+            "layer": 68
+          }
+        ]
+      }
+    ],
+    "baseColorTextureSize": 512,
+    "baseColorTextures": [],
+    "materialTextureSize": 512,
+    "materialTextures": [
+      {
+        "layer": 56,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-56-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-56-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536059,
+          "contrast": 0.002903,
+          "chroma": 0.778034,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 57,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-57-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-57-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.214332,
+          "contrast": 0.005572,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 58,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-58-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-58-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.865365,
+          "contrast": 0.007595,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 59,
+        "semantic": "emissive",
+        "colorSpace": "srgb",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/emissive-59-emissive-supplement.png",
+        "name": "emissive_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/emissive-59-emissive-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.57008,
+          "contrast": 0.194856,
+          "chroma": 0.707282,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 60,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-60-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-60-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536083,
+          "contrast": 0.016561,
+          "chroma": 0.790511,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 61,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-61-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-61-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.36294,
+          "contrast": 0.017622,
+          "chroma": 0.556263,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 62,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-62-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-62-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.64476,
+          "contrast": 0.032422,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 63,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-63-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-63-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536085,
+          "contrast": 0.005404,
+          "chroma": 0.778451,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 64,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-64-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-64-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.306053,
+          "contrast": 0.008463,
+          "chroma": 0.887188,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 65,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-65-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-65-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.855097,
+          "contrast": 0.012209,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 66,
+        "semantic": "normal",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-66-normal-supplement.png",
+        "name": "normal_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/normal-66-normal-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.536142,
+          "contrast": 0.002423,
+          "chroma": 0.776555,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 67,
+        "semantic": "metallicRoughness",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-67-metallicroughness-supplement.png",
+        "name": "metallicRoughness_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/metallicroughness-67-metallicroughness-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.381593,
+          "contrast": 0.00265,
+          "chroma": 1,
+          "detail": 0.5
+        }
+      },
+      {
+        "layer": 68,
+        "semantic": "ao",
+        "colorSpace": "linear",
+        "url": "/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-68-ao-supplement.png",
+        "name": "ao_supplement",
+        "sourceFile": "public/assets/human-protocol/raw-webgpu/assets-v1/families/pickups/pickup_energy_cell_amber/textures/ao-68-ao-supplement.png",
+        "mimeType": "image/png",
+        "stats": {
+          "lumaMean": 0.913188,
+          "contrast": 0.003452,
+          "chroma": 0,
+          "detail": 0.5
+        }
+      }
+    ]
+  }
+}

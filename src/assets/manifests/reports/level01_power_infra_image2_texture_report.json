@@ -1,0 +1,12 @@
+{
+  "assetPack": "hp_level01_power_infra_image2_v1",
+  "sourceImage": "src/assets/textures/environment/level01-power-infra-image2/image2-sources/level01_power_infra_reference_board_image2_v1.png",
+  "atlas": "src/assets/textures/environment/level01-power-infra-image2/hp_level01_power_infra_image2_atlas.png",
+  "regions": "src/assets/textures/environment/level01-power-infra-image2/hp_level01_power_infra_image2_atlas.regions.json",
+  "atlasSize": [
+    1024,
+    1024
+  ],
+  "regionCount": 15,
+  "sourceMappingCount": 15
+}

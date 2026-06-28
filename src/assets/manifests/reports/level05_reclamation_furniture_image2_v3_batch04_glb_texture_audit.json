@@ -1,0 +1,85 @@
+{
+  "schema": "human-protocol/environment-asset-factory/glb-texture-audit@1",
+  "packId": "hp_level05_reclamation_furniture_image2_v3_batch04",
+  "sourceId": "level05-reclamation-furniture-image2-v3-batch04",
+  "atlas": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch04/hp_level05_reclamation_furniture_image2_v3_batch04_atlas.png",
+  "assets": [
+    {
+      "modelKey": "room_l5_v3_curved_archive_shelf",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_curved_archive_shelf.glb",
+      "materialsWithBaseColorTexture": 9,
+      "areaUvNodes": 24,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 24,
+      "sizeMeters": [
+        1.822,
+        2.08,
+        0.595
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_hanging_cable_organizer",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_hanging_cable_organizer.glb",
+      "materialsWithBaseColorTexture": 11,
+      "areaUvNodes": 37,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 37,
+      "sizeMeters": [
+        1.56,
+        1.195,
+        0.551
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_surgical_light_stand",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_surgical_light_stand.glb",
+      "materialsWithBaseColorTexture": 12,
+      "areaUvNodes": 27,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 27,
+      "sizeMeters": [
+        1.438,
+        2.692,
+        0.864
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_specimen_drawer_stack",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_specimen_drawer_stack.glb",
+      "materialsWithBaseColorTexture": 9,
+      "areaUvNodes": 37,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 37,
+      "sizeMeters": [
+        1.015,
+        2.05,
+        0.6
+      ]
+    },
+    {
+      "modelKey": "room_l5_v3_corner_privacy_screen",
+      "glb": "src/assets/models-cooked/environment/level05-reclamation-furniture-image2-v3-batch04/room_l5_v3_corner_privacy_screen.glb",
+      "materialsWithBaseColorTexture": 9,
+      "areaUvNodes": 34,
+      "centerSampleUvNodes": 0,
+      "missingUvNodes": 0,
+      "namedMeshNodes": 34,
+      "sizeMeters": [
+        2.149,
+        2.005,
+        0.415
+      ]
+    }
+  ],
+  "totals": {
+    "assetCount": 5,
+    "materialsWithBaseColorTexture": 50,
+    "areaUvNodes": 159,
+    "centerSampleUvNodes": 0,
+    "missingUvNodes": 0
+  }
+}

@@ -1,0 +1,2505 @@
+{
+  "id": "builder_level_rb_l4",
+  "title": "记忆诊所·重制",
+  "authoringProfile": "generated",
+  "authoringMetadata": {
+    "builderEnvironment": {
+      "lighting": {
+        "ambient": 0.6,
+        "keyColor": "#cfe7ff",
+        "keyIntensity": 0.92,
+        "fog": 0.3,
+        "bloom": 0.45,
+        "shadow": 0.5
+      },
+      "rooms": {}
+    },
+    "builderStories": {
+      "rb_l4_p3": {
+        "title": "疗程记录",
+        "clue": "治疗记录：我是人，是一层可以被维护的记忆。",
+        "hint": "看护台还亮着。"
+      }
+    },
+    "builderStory": {
+      "templateId": "memory_clinic",
+      "victoryLine": "治疗记录：我是人，是一层可以被维护的记忆。",
+      "transitionLine": "电梯门合拢，登记灯熄灭。"
+    }
+  },
+  "articles": [
+    {
+      "id": "article_room_locker_low_rb_l4_p3",
+      "roomId": "rb_l4_r1",
+      "interactionId": "story_rb_l4_p3",
+      "systemLabel": "墙面档案",
+      "title": "疗程记录",
+      "pages": [
+        {
+          "id": "record",
+          "body": "治疗记录：我是人，是一层可以被维护的记忆。"
+        },
+        {
+          "id": "note",
+          "body": "看护台还亮着。"
+        }
+      ],
+      "readReward": {
+        "label": "墙面档案",
+        "detail": "疗程记录 已读取",
+        "rarity": "story"
+      },
+      "readRewardDuration": 1.35
+    }
+  ],
+  "spawnPoint": [
+    0,
+    0,
+    -4
+  ],
+  "initialInventory": {
+    "hasRod": true,
+    "hasPistol": true,
+    "coreCells": 0,
+    "equipWeapon": "railLance"
+  },
+  "initialWaveStartDelay": 0,
+  "requiresStoryPickupsBeforeWaves": false,
+  "exit": {
+    "id": "builder_exit",
+    "position": [
+      0,
+      0,
+      -46.800000000000004
+    ],
+    "radius": 2.2,
+    "unlockedLabel": "出院电梯",
+    "distanceLabel": "出院电梯",
+    "unlockMessage": "出院电梯已通电。",
+    "unlockDialogueTrigger": "builder_exit_unlocked",
+    "unlockWarning": {
+      "label": "出口已通电",
+      "detail": "出院电梯可以使用了"
+    },
+    "cinematic": {
+      "type": "elevator_walk_in",
+      "duration": 5.6,
+      "walkInDuration": 1.55,
+      "doorOpenTime": 0.08,
+      "doorCloseTime": 2.15,
+      "buttonPressTime": 4,
+      "buttonPressDuration": 2,
+      "whiteOutTime": 4.85,
+      "enterPosition": [
+        0,
+        0,
+        -47.6
+      ],
+      "faceYaw": 1.641599759364804,
+      "doorId": "rb_l4_d4",
+      "message": "出院电梯正在接管关卡切换。"
+    },
+    "transitionMessage": "电梯门合拢，登记灯熄灭。",
+    "transitionDialogueTrigger": "builder_exit_transition",
+    "victoryMessage": "治疗记录：我是人，是一层可以被维护的记忆。"
+  },
+  "map": {
+    "id": "builder_level_rb_l4_map",
+    "schemaVersion": "hp.map.v1",
+    "rooms": [
+      {
+        "id": "rb_l4_r0",
+        "label": "候诊间",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -4
+          ],
+          "size": [
+            12,
+            4,
+            8
+          ]
+        },
+        "mood": "quiet",
+        "floorMaterialKey": "sterile_lab_floor",
+        "wallMaterialKey": "sterile_lab_wall",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#64d7ff"
+        }
+      },
+      {
+        "id": "rb_l4_r1",
+        "label": "童年疗椅",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -12.5
+          ],
+          "size": [
+            12,
+            4,
+            9
+          ]
+        },
+        "mood": "quiet",
+        "floorMaterialKey": "sterile_lab_floor",
+        "wallMaterialKey": "sterile_lab_wall",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#64d7ff"
+        }
+      },
+      {
+        "id": "rb_l4_r2",
+        "label": "救援疗椅",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -21.5
+          ],
+          "size": [
+            12,
+            4,
+            9
+          ]
+        },
+        "mood": "quiet",
+        "floorMaterialKey": "sterile_lab_floor",
+        "wallMaterialKey": "sterile_lab_wall",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#64d7ff"
+        }
+      },
+      {
+        "id": "rb_l4_r3",
+        "label": "躯体台",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -30.5
+          ],
+          "size": [
+            12,
+            4,
+            9
+          ]
+        },
+        "mood": "uneasy",
+        "floorMaterialKey": "hazard_hall_floor",
+        "wallMaterialKey": "hazard_hall_wall",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#ffb34f"
+        }
+      },
+      {
+        "id": "rb_l4_r4",
+        "label": "治疗剧场",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -39.5
+          ],
+          "size": [
+            12,
+            4,
+            9
+          ]
+        },
+        "mood": "boss",
+        "floorMaterialKey": "museum_floor",
+        "wallMaterialKey": "service_elevator_metal",
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": true,
+          "renderCeiling": true,
+          "collisionWalls": true,
+          "accentColor": "#7ff2ff"
+        }
+      },
+      {
+        "id": "rb_l4_r5",
+        "label": "出院电梯",
+        "bounds": {
+          "center": [
+            0,
+            0,
+            -46.7
+          ],
+          "size": [
+            6.4,
+            4,
+            5.4
+          ]
+        },
+        "mood": "reveal",
+        "skinKey": "human_museum_gallery",
+        "floorMaterialKey": "museum_floor",
+        "wallMaterialKey": "service_elevator_metal",
+        "ambientPressure": 0.55,
+        "geometry": {
+          "renderFloor": true,
+          "renderWalls": false,
+          "renderCeiling": false,
+          "collisionWalls": true,
+          "accentColor": "#f3f0df"
+        },
+        "aesthetic": {
+          "enabled": true,
+          "style": "exit",
+          "detail": "high"
+        }
+      }
+    ],
+    "doors": [
+      {
+        "id": "rb_l4_d0",
+        "label": "候诊间 → 童年疗椅",
+        "fromRoomId": "rb_l4_r0",
+        "toRoomId": "rb_l4_r1",
+        "position": [
+          0,
+          0,
+          -8
+        ],
+        "size": [
+          3.2,
+          3.2,
+          0.35
+        ],
+        "yaw": 0,
+        "defaultState": "closed",
+        "lock": {
+          "type": "none"
+        },
+        "visualKey": "service_elevator_door",
+        "materialKey": "service_elevator_metal",
+        "panelPosition": [
+          1.78,
+          0,
+          -7.65
+        ],
+        "autoOpenOnApproach": true
+      },
+      {
+        "id": "rb_l4_d1",
+        "label": "童年疗椅 → 救援疗椅",
+        "fromRoomId": "rb_l4_r1",
+        "toRoomId": "rb_l4_r2",
+        "position": [
+          0,
+          0,
+          -17
+        ],
+        "size": [
+          3.2,
+          3.2,
+          0.35
+        ],
+        "yaw": 0,
+        "defaultState": "locked",
+        "lock": {
+          "type": "puzzle_complete",
+          "puzzleId": "rb_l4_pz1",
+          "lockedMessage": "先在「童年疗椅」的谜题台上完成阀门配平台。",
+          "unlockedMessage": "阀门配平台完成，门已解锁。"
+        },
+        "visualKey": "industrial_access_door",
+        "materialKey": "hazard_hall_wall",
+        "panelPosition": [
+          1.78,
+          0,
+          -16.65
+        ],
+        "autoOpenOnApproach": false
+      },
+      {
+        "id": "rb_l4_d2",
+        "label": "救援疗椅 → 躯体台",
+        "fromRoomId": "rb_l4_r2",
+        "toRoomId": "rb_l4_r3",
+        "position": [
+          0,
+          0,
+          -26
+        ],
+        "size": [
+          3.2,
+          3.2,
+          0.35
+        ],
+        "yaw": 0,
+        "defaultState": "locked",
+        "lock": {
+          "type": "puzzle_complete",
+          "puzzleId": "rb_l4_pz2",
+          "lockedMessage": "先在「救援疗椅」的谜题台上完成工具档案校准。",
+          "unlockedMessage": "工具档案校准完成，门已解锁。"
+        },
+        "visualKey": "clinic_memory_door",
+        "materialKey": "sterile_lab_wall",
+        "panelPosition": [
+          1.78,
+          0,
+          -25.65
+        ],
+        "autoOpenOnApproach": false
+      },
+      {
+        "id": "rb_l4_d3",
+        "label": "躯体台 → 治疗剧场",
+        "fromRoomId": "rb_l4_r3",
+        "toRoomId": "rb_l4_r4",
+        "position": [
+          0,
+          0,
+          -35
+        ],
+        "size": [
+          3.2,
+          3.2,
+          0.35
+        ],
+        "yaw": 0,
+        "defaultState": "locked",
+        "lock": {
+          "type": "puzzle_complete",
+          "puzzleId": "rb_l4_pz3",
+          "lockedMessage": "先在「躯体台」的谜题台上完成展品归档比对。",
+          "unlockedMessage": "展品归档比对完成，门已解锁。"
+        },
+        "visualKey": "reclamation_archive_door",
+        "materialKey": "museum_wall",
+        "panelPosition": [
+          1.78,
+          0,
+          -34.65
+        ],
+        "autoOpenOnApproach": false
+      },
+      {
+        "id": "rb_l4_d4",
+        "label": "治疗剧场 → 出院电梯",
+        "fromRoomId": "rb_l4_r4",
+        "toRoomId": "rb_l4_r5",
+        "position": [
+          0,
+          0,
+          -44
+        ],
+        "size": [
+          3.2,
+          3.2,
+          0.35
+        ],
+        "yaw": 0,
+        "defaultState": "locked",
+        "lock": {
+          "type": "puzzle_complete",
+          "puzzleId": "rb_l4_pz4",
+          "lockedMessage": "灯序尚未确认。",
+          "unlockedMessage": "灯序确认。"
+        },
+        "visualKey": "service_elevator_door",
+        "materialKey": "service_elevator_metal",
+        "panelPosition": [
+          1.78,
+          0,
+          -43.65
+        ],
+        "autoOpenOnApproach": true,
+        "skinKey": "service_elevator_hero",
+        "openSpeed": 1.35,
+        "openVisualPolicy": {
+          "hideClosedHardwareAfterOpen": true,
+          "hidePanelAfterOpen": true
+        },
+        "cameraImpact": {
+          "shake": 0.34,
+          "fovKick": 1.85
+        }
+      }
+    ],
+    "keyItems": [],
+    "interactions": [
+      {
+        "id": "pz_rb_l4_d1_panel",
+        "type": "terminal",
+        "roomId": "rb_l4_r1",
+        "position": [
+          0,
+          0,
+          -12.5
+        ],
+        "radius": 1.7,
+        "visualKey": "control_bank",
+        "materialKey": "terminal_cyan",
+        "label": "阀门配平台"
+      },
+      {
+        "id": "pz_rb_l4_d2_panel",
+        "type": "terminal",
+        "roomId": "rb_l4_r2",
+        "position": [
+          0,
+          0,
+          -21.5
+        ],
+        "radius": 1.7,
+        "visualKey": "control_bank",
+        "materialKey": "terminal_cyan",
+        "label": "工具档案校准"
+      },
+      {
+        "id": "pz_rb_l4_d3_panel",
+        "type": "terminal",
+        "roomId": "rb_l4_r3",
+        "position": [
+          0,
+          0,
+          -30.5
+        ],
+        "radius": 1.7,
+        "visualKey": "control_bank",
+        "materialKey": "terminal_cyan",
+        "label": "展品归档比对"
+      },
+      {
+        "id": "pz_rb_l4_d4_panel",
+        "type": "terminal",
+        "roomId": "rb_l4_r4",
+        "position": [
+          0,
+          0,
+          -39.5
+        ],
+        "radius": 1.55,
+        "visualKey": "puzzle_console_color_sequence",
+        "materialKey": "terminal_cyan",
+        "label": "灯序墙"
+      },
+      {
+        "id": "use_builder_exit",
+        "type": "exit",
+        "roomId": "rb_l4_r5",
+        "position": [
+          2.82,
+          0,
+          -47.400000000000006
+        ],
+        "radius": 2.2,
+        "visualKey": "service_elevator_panel",
+        "materialKey": "terminal_cyan",
+        "label": "进入出院电梯",
+        "opensDoorId": "rb_l4_d4"
+      },
+      {
+        "id": "story_rb_l4_p3",
+        "type": "article",
+        "roomId": "rb_l4_r1",
+        "position": [
+          -4.08,
+          0,
+          -9.620000000000001
+        ],
+        "radius": 1.45,
+        "visualKey": "none",
+        "materialKey": "terminal_cyan",
+        "anchorPropId": "rb_l4_p3",
+        "label": "疗程记录"
+      }
+    ],
+    "pickups": [
+      {
+        "id": "rb_l4_pk0",
+        "type": "repairKit",
+        "roomId": "rb_l4_r1",
+        "position": [
+          -2,
+          0,
+          -14.5
+        ],
+        "label": "治疗包"
+      },
+      {
+        "id": "rb_l4_pk1",
+        "type": "coreCell",
+        "roomId": "rb_l4_r3",
+        "position": [
+          -2,
+          0,
+          -32.5
+        ],
+        "label": "能量块"
+      }
+    ],
+    "props": [
+      {
+        "id": "rb_l4_p0",
+        "roomId": "rb_l4_r0",
+        "modelKey": "room_museum_wall_label_panel",
+        "position": [
+          -4.08,
+          0,
+          -1.44
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "墙面说明牌"
+      },
+      {
+        "id": "rb_l4_p1",
+        "roomId": "rb_l4_r0",
+        "modelKey": "room_table_utility",
+        "position": [
+          4.08,
+          0,
+          -6.5600000000000005
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "工作台",
+        "collider": {
+          "halfSize": [
+            0.6,
+            0.41,
+            0.35
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p2",
+        "roomId": "rb_l4_r0",
+        "modelKey": "room_museum_display_case_tool",
+        "position": [
+          -4.08,
+          0,
+          -6.4
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "展示柜",
+        "collider": {
+          "halfSize": [
+            1.165,
+            0.715,
+            0.44
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p3",
+        "roomId": "rb_l4_r1",
+        "modelKey": "room_locker_low",
+        "position": [
+          -4.08,
+          0,
+          -9.620000000000001
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "矮储物柜",
+        "collider": {
+          "halfSize": [
+            0.37,
+            0.55,
+            0.19
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p4",
+        "roomId": "rb_l4_r1",
+        "modelKey": "room_museum_display_case_tool",
+        "position": [
+          4.08,
+          0,
+          -15.379999999999999
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "展示柜",
+        "collider": {
+          "halfSize": [
+            1.165,
+            0.715,
+            0.44
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p5",
+        "roomId": "rb_l4_r1",
+        "modelKey": "room_table_utility",
+        "position": [
+          -4.08,
+          0,
+          -15.2
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "工作台",
+        "collider": {
+          "halfSize": [
+            0.6,
+            0.41,
+            0.35
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p6",
+        "roomId": "rb_l4_r2",
+        "modelKey": "room_museum_display_case_tool",
+        "position": [
+          -4.08,
+          0,
+          -18.62
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "展示柜",
+        "collider": {
+          "halfSize": [
+            1.165,
+            0.715,
+            0.44
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p7",
+        "roomId": "rb_l4_r2",
+        "modelKey": "room_museum_wall_label_panel",
+        "position": [
+          4.08,
+          0,
+          -24.38
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "墙面说明牌"
+      },
+      {
+        "id": "rb_l4_p8",
+        "roomId": "rb_l4_r2",
+        "modelKey": "room_table_utility",
+        "position": [
+          -4.08,
+          0,
+          -24.2
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "工作台",
+        "collider": {
+          "halfSize": [
+            0.6,
+            0.41,
+            0.35
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p9",
+        "roomId": "rb_l4_r3",
+        "modelKey": "room_locker_low",
+        "position": [
+          -4.08,
+          0,
+          -27.62
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "矮储物柜",
+        "collider": {
+          "halfSize": [
+            0.37,
+            0.55,
+            0.19
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p10",
+        "roomId": "rb_l4_r3",
+        "modelKey": "room_museum_display_case_tool",
+        "position": [
+          4.08,
+          0,
+          -33.38
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "展示柜",
+        "collider": {
+          "halfSize": [
+            1.165,
+            0.715,
+            0.44
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p11",
+        "roomId": "rb_l4_r3",
+        "modelKey": "room_museum_wall_label_panel",
+        "position": [
+          -4.08,
+          0,
+          -33.2
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "墙面说明牌"
+      },
+      {
+        "id": "rb_l4_p12",
+        "roomId": "rb_l4_r4",
+        "modelKey": "room_museum_display_case_tool",
+        "position": [
+          -4.08,
+          0,
+          -36.62
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "展示柜",
+        "collider": {
+          "halfSize": [
+            1.165,
+            0.715,
+            0.44
+          ]
+        }
+      },
+      {
+        "id": "rb_l4_p13",
+        "roomId": "rb_l4_r4",
+        "modelKey": "room_museum_wall_label_panel",
+        "position": [
+          4.08,
+          0,
+          -42.38
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "墙面说明牌"
+      },
+      {
+        "id": "rb_l4_p14",
+        "roomId": "rb_l4_r4",
+        "modelKey": "room_locker_low",
+        "position": [
+          -4.08,
+          0,
+          -42.2
+        ],
+        "rotation": [
+          0,
+          1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "矮储物柜",
+        "collider": {
+          "halfSize": [
+            0.37,
+            0.55,
+            0.19
+          ]
+        }
+      },
+      {
+        "id": "builder_exit_elevator_interior_shell",
+        "roomId": "rb_l4_r5",
+        "modelKey": "service_elevator_interior_shell",
+        "position": [
+          0,
+          0,
+          -46.7
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": 1,
+        "label": "出口电梯内壁",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "builder",
+          "playtest",
+          "interior_shell",
+          "bright_exit"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_threshold",
+        "roomId": "rb_l4_r5",
+        "modelKey": "door_threshold_service_elevator",
+        "position": [
+          0,
+          0.035,
+          -44.59
+        ],
+        "rotation": [
+          0,
+          0,
+          0
+        ],
+        "scale": [
+          1.15,
+          1,
+          1
+        ],
+        "label": "出口电梯门槛",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "builder",
+          "playtest",
+          "threshold",
+          "bright_exit"
+        ]
+      },
+      {
+        "id": "builder_exit_elevator_call_buttons",
+        "roomId": "rb_l4_r5",
+        "modelKey": "service_elevator_call_buttons",
+        "position": [
+          2.82,
+          1.42,
+          -47.400000000000006
+        ],
+        "rotation": [
+          0,
+          -1.5707963267948966,
+          0
+        ],
+        "scale": 1,
+        "label": "出口电梯呼叫按钮",
+        "tags": [
+          "hp:official_exit_room_reference_v1",
+          "elevator",
+          "builder",
+          "playtest",
+          "exit_call_buttons",
+          "button_panel"
+        ]
+      }
+    ],
+    "navigation": {
+      "criticalPathRoomIds": [
+        "rb_l4_r0",
+        "rb_l4_r1",
+        "rb_l4_r2",
+        "rb_l4_r3",
+        "rb_l4_r4",
+        "rb_l4_r5"
+      ],
+      "optionalRoomIds": [],
+      "maxBacktrackSeconds": 24,
+      "mobileReadableDoorCount": 5
+    }
+  },
+  "puzzles": [
+    {
+      "id": "rb_l4_pz1",
+      "type": "valve_matrix",
+      "label": "阀门配平台",
+      "roomId": "rb_l4_r1",
+      "interactionId": "pz_rb_l4_d1_panel",
+      "guidance": "主泵推压力，回流稳水位，旁通压温度。三块表全部进绿区。",
+      "valves": [
+        {
+          "id": "rb_l4_pz1_valve_pump",
+          "label": "主泵",
+          "min": 0,
+          "max": 8,
+          "initial": 2,
+          "gaugeShift": [
+            6,
+            2,
+            0
+          ]
+        },
+        {
+          "id": "rb_l4_pz1_valve_return",
+          "label": "回流",
+          "min": 0,
+          "max": 8,
+          "initial": 1,
+          "gaugeShift": [
+            -2,
+            5,
+            2
+          ]
+        },
+        {
+          "id": "rb_l4_pz1_valve_bypass",
+          "label": "旁通",
+          "min": 0,
+          "max": 8,
+          "initial": 0,
+          "gaugeShift": [
+            0,
+            -3,
+            7
+          ]
+        }
+      ],
+      "gauges": [
+        {
+          "id": "rb_l4_pz1_gauge_pressure",
+          "label": "主压",
+          "base": 8,
+          "target": 30,
+          "tolerance": 2,
+          "unit": "bar"
+        },
+        {
+          "id": "rb_l4_pz1_gauge_level",
+          "label": "水位",
+          "base": 6,
+          "target": 27,
+          "tolerance": 2,
+          "unit": ""
+        },
+        {
+          "id": "rb_l4_pz1_gauge_core_temp",
+          "label": "核温",
+          "base": 36,
+          "target": 65,
+          "tolerance": 3,
+          "unit": "°"
+        }
+      ],
+      "solution": [
+        5,
+        4,
+        3
+      ],
+      "timeLimitSec": 50,
+      "success": {
+        "opensDoorId": "rb_l4_d1",
+        "rewardPulse": {
+          "label": "阀门配平台完成",
+          "detail": "谜题门已解锁",
+          "rarity": "epic"
+        },
+        "rewardPulseDuration": 1.6,
+        "audio": {
+          "key": "system_exit_open",
+          "intensity": 0.9
+        },
+        "actions": [
+          {
+            "type": "open_door",
+            "doorId": "rb_l4_d1"
+          },
+          {
+            "type": "focus_reveal",
+            "reveal": {
+              "kind": "door",
+              "doorId": "rb_l4_d1"
+            }
+          }
+        ]
+      },
+      "fail": {
+        "message": "歧管泄压，阀位复位。",
+        "cameraImpact": {
+          "shake": 0.28,
+          "fovKick": 1.2
+        },
+        "audio": {
+          "key": "enemy_hit",
+          "intensity": 0.56
+        }
+      }
+    },
+    {
+      "id": "rb_l4_pz2",
+      "type": "tool_calibration",
+      "label": "工具档案校准",
+      "roomId": "rb_l4_r2",
+      "interactionId": "pz_rb_l4_d2_panel",
+      "toolLabel": "馆藏校准棒",
+      "columns": 6,
+      "rows": 4,
+      "entry": {
+        "x": 0,
+        "y": 2,
+        "channel": "signal"
+      },
+      "targets": [
+        {
+          "x": 5,
+          "y": 1,
+          "channel": "stability"
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "channel": "force"
+        }
+      ],
+      "requiredCells": [
+        {
+          "x": 3,
+          "y": 2,
+          "channel": "protocol"
+        }
+      ],
+      "cells": [
+        {
+          "x": 0,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 2
+        },
+        {
+          "x": 1,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 0
+        },
+        {
+          "x": 2,
+          "y": 0,
+          "kind": "tee",
+          "rotation": 3
+        },
+        {
+          "x": 3,
+          "y": 0,
+          "kind": "blocked"
+        },
+        {
+          "x": 4,
+          "y": 0,
+          "kind": "corner",
+          "rotation": 1
+        },
+        {
+          "x": 5,
+          "y": 0,
+          "kind": "straight",
+          "rotation": 0
+        },
+        {
+          "x": 0,
+          "y": 1,
+          "kind": "tee",
+          "rotation": 2
+        },
+        {
+          "x": 1,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 3
+        },
+        {
+          "x": 2,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 0
+        },
+        {
+          "x": 3,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 1
+        },
+        {
+          "x": 4,
+          "y": 1,
+          "kind": "corner",
+          "rotation": 0
+        },
+        {
+          "x": 5,
+          "y": 1,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 0,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 1,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 2,
+          "y": 2,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 3,
+          "y": 2,
+          "kind": "amplifier",
+          "rotation": 0
+        },
+        {
+          "x": 4,
+          "y": 2,
+          "kind": "tee",
+          "rotation": 0
+        },
+        {
+          "x": 5,
+          "y": 2,
+          "kind": "blocked"
+        },
+        {
+          "x": 0,
+          "y": 3,
+          "kind": "blocked"
+        },
+        {
+          "x": 1,
+          "y": 3,
+          "kind": "corner",
+          "rotation": 0
+        },
+        {
+          "x": 2,
+          "y": 3,
+          "kind": "tee",
+          "rotation": 0
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 1
+        },
+        {
+          "x": 4,
+          "y": 3,
+          "kind": "corner",
+          "rotation": 0
+        },
+        {
+          "x": 5,
+          "y": 3,
+          "kind": "straight",
+          "rotation": 1
+        }
+      ],
+      "perfectMoveLimit": 5,
+      "maxMoveLimit": 10,
+      "timeLimitSec": 90,
+      "variants": [
+        {
+          "id": "builder_tool_route_01",
+          "solutionMoveCount": 5,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 3
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_02",
+          "solutionMoveCount": 4,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 3
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_03",
+          "solutionMoveCount": 6,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 2
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_04",
+          "solutionMoveCount": 5,
+          "rotationOverrides": [
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 2
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_05",
+          "solutionMoveCount": 4,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_06",
+          "solutionMoveCount": 6,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 2
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 3
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_07",
+          "solutionMoveCount": 5,
+          "rotationOverrides": [
+            {
+              "x": 2,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 3
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_08",
+          "solutionMoveCount": 4,
+          "rotationOverrides": [
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "rotation": 0
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_09",
+          "solutionMoveCount": 6,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 1,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 3,
+              "rotation": 3
+            }
+          ]
+        },
+        {
+          "id": "builder_tool_route_10",
+          "solutionMoveCount": 5,
+          "rotationOverrides": [
+            {
+              "x": 0,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 2,
+              "y": 2,
+              "rotation": 0
+            },
+            {
+              "x": 4,
+              "y": 2,
+              "rotation": 3
+            },
+            {
+              "x": 4,
+              "y": 1,
+              "rotation": 0
+            },
+            {
+              "x": 5,
+              "y": 3,
+              "rotation": 0
+            }
+          ]
+        }
+      ],
+      "success": {
+        "opensDoorId": "rb_l4_d2",
+        "rewardPulse": {
+          "label": "工具档案校准完成",
+          "detail": "谜题门已解锁",
+          "rarity": "epic"
+        },
+        "rewardPulseDuration": 1.6,
+        "audio": {
+          "key": "system_exit_open",
+          "intensity": 0.9
+        },
+        "actions": [
+          {
+            "type": "open_door",
+            "doorId": "rb_l4_d2"
+          },
+          {
+            "type": "focus_reveal",
+            "reveal": {
+              "kind": "door",
+              "doorId": "rb_l4_d2"
+            }
+          }
+        ]
+      },
+      "perfectBonus": {
+        "pickupType": "repairKit",
+        "rewardPulse": {
+          "label": "完美校准",
+          "detail": "额外治疗包弹出",
+          "rarity": "epic"
+        },
+        "rewardPulseDuration": 1.5
+      },
+      "fail": {
+        "message": "校准路径断开，馆藏台重置。"
+      }
+    },
+    {
+      "id": "rb_l4_pz3",
+      "type": "surveillance_match",
+      "label": "展品归档比对",
+      "roomId": "rb_l4_r3",
+      "interactionId": "pz_rb_l4_d3_panel",
+      "guidance": "策展监察台回放四路展厅画面。把工具、声纹、身体与空展位如实归档。",
+      "channels": [
+        {
+          "id": "rb_l4_pz3_exhibit_tool",
+          "label": "展厅A",
+          "symbol": "⚒",
+          "feedDetail": "玻璃柜里是一排手工工具，旁边有修复夹具。",
+          "answerOptionId": "rb_l4_pz3_hall_tool"
+        },
+        {
+          "id": "rb_l4_pz3_exhibit_voice",
+          "label": "展厅B",
+          "symbol": "◖",
+          "feedDetail": "隔音棉墙，一座亭子，铜喇叭还在转。",
+          "answerOptionId": "rb_l4_pz3_hall_voice"
+        },
+        {
+          "id": "rb_l4_pz3_exhibit_body",
+          "label": "展厅C",
+          "symbol": "✣",
+          "feedDetail": "人形参照板，四个颜色灯球围着展柜。",
+          "answerOptionId": "rb_l4_pz3_hall_body"
+        },
+        {
+          "id": "rb_l4_pz3_exhibit_vacant",
+          "label": "展厅D",
+          "symbol": "▢",
+          "feedDetail": "底座灯亮着，玻璃罩里什么都没有。标签写着：筹备中。",
+          "answerOptionId": "rb_l4_pz3_hall_vacant"
+        }
+      ],
+      "options": [
+        {
+          "id": "rb_l4_pz3_hall_tool",
+          "label": "工具展厅",
+          "symbol": "⚒"
+        },
+        {
+          "id": "rb_l4_pz3_hall_voice",
+          "label": "声纹展厅",
+          "symbol": "◖"
+        },
+        {
+          "id": "rb_l4_pz3_hall_body",
+          "label": "身体展厅",
+          "symbol": "✣"
+        },
+        {
+          "id": "rb_l4_pz3_hall_vacant",
+          "label": "空展位",
+          "symbol": "▢"
+        }
+      ],
+      "maxMistakes": 3,
+      "success": {
+        "opensDoorId": "rb_l4_d3",
+        "rewardPulse": {
+          "label": "展品归档比对完成",
+          "detail": "谜题门已解锁",
+          "rarity": "epic"
+        },
+        "rewardPulseDuration": 1.6,
+        "audio": {
+          "key": "system_exit_open",
+          "intensity": 0.9
+        },
+        "actions": [
+          {
+            "type": "open_door",
+            "doorId": "rb_l4_d3"
+          },
+          {
+            "type": "focus_reveal",
+            "reveal": {
+              "kind": "door",
+              "doorId": "rb_l4_d3"
+            }
+          }
+        ]
+      },
+      "fail": {
+        "message": "归档驳回。策展系统重排了画面。",
+        "cameraImpact": {
+          "shake": 0.2,
+          "fovKick": 0.8
+        },
+        "audio": {
+          "key": "enemy_hit",
+          "intensity": 0.46
+        }
+      }
+    },
+    {
+      "id": "rb_l4_pz4",
+      "type": "hit_sequence",
+      "label": "灯序记忆锁",
+      "roomId": "rb_l4_r4",
+      "clue": {
+        "type": "pattern_panel",
+        "roomId": "rb_l4_r4",
+        "interactionId": "pz_rb_l4_d4_panel",
+        "sequence": [
+          "rb_l4_pz4_o0",
+          "rb_l4_pz4_o1",
+          "rb_l4_pz4_o2"
+        ],
+        "label": "墙面灯序只亮一次。",
+        "playback": {
+          "palette": [
+            "red",
+            "blue",
+            "yellow",
+            "green",
+            "purple",
+            "white",
+            "cyan"
+          ],
+          "stepMs": 560,
+          "gapMs": 130,
+          "requireReplayBeforeInput": true,
+          "reshuffleAfterFailures": 3,
+          "replayRequiredMessage": "回灯墙再看。",
+          "reshuffleMessage": "灯墙已换序。"
+        }
+      },
+      "input": {
+        "method": "weapon_hit",
+        "resetOnMistake": true,
+        "showProgressPulse": true
+      },
+      "targets": [
+        {
+          "id": "rb_l4_pz4_o0",
+          "label": "青色球",
+          "roomId": "rb_l4_r4",
+          "position": [
+            -3.5,
+            1.15,
+            -37.9
+          ],
+          "radius": 0.72,
+          "colorKey": "cyan",
+          "visualKey": "puzzle_orb_cyan"
+        },
+        {
+          "id": "rb_l4_pz4_o1",
+          "label": "红色球",
+          "roomId": "rb_l4_r4",
+          "position": [
+            3.5,
+            1.15,
+            -37.9
+          ],
+          "radius": 0.72,
+          "colorKey": "red",
+          "visualKey": "puzzle_orb_red"
+        },
+        {
+          "id": "rb_l4_pz4_o2",
+          "label": "黄色球",
+          "roomId": "rb_l4_r4",
+          "position": [
+            0,
+            1.15,
+            -36.9
+          ],
+          "radius": 0.72,
+          "colorKey": "yellow",
+          "visualKey": "puzzle_orb_yellow"
+        }
+      ],
+      "actors": [
+        {
+          "id": "rb_l4_pz4_o0",
+          "role": "orb:cyan",
+          "kind": "target",
+          "roomId": "rb_l4_r4",
+          "position": [
+            -3.5,
+            1.15,
+            -37.9
+          ],
+          "visualKey": "puzzle_orb_cyan",
+          "colorKey": "cyan",
+          "inputMode": "weapon_hit",
+          "hitbox": {
+            "shape": "sphere",
+            "radius": 0.72
+          },
+          "targetId": "rb_l4_pz4_o0"
+        },
+        {
+          "id": "rb_l4_pz4_o1",
+          "role": "orb:red",
+          "kind": "target",
+          "roomId": "rb_l4_r4",
+          "position": [
+            3.5,
+            1.15,
+            -37.9
+          ],
+          "visualKey": "puzzle_orb_red",
+          "colorKey": "red",
+          "inputMode": "weapon_hit",
+          "hitbox": {
+            "shape": "sphere",
+            "radius": 0.72
+          },
+          "targetId": "rb_l4_pz4_o1"
+        },
+        {
+          "id": "rb_l4_pz4_o2",
+          "role": "orb:yellow",
+          "kind": "target",
+          "roomId": "rb_l4_r4",
+          "position": [
+            0,
+            1.15,
+            -36.9
+          ],
+          "visualKey": "puzzle_orb_yellow",
+          "colorKey": "yellow",
+          "inputMode": "weapon_hit",
+          "hitbox": {
+            "shape": "sphere",
+            "radius": 0.72
+          },
+          "targetId": "rb_l4_pz4_o2"
+        }
+      ],
+      "fail": {
+        "message": "顺序错了，回灯墙。",
+        "resetDelay": 0.45
+      },
+      "success": {
+        "opensDoorId": "rb_l4_d4",
+        "rewardPulse": {
+          "label": "灯序确认",
+          "detail": "门禁顺序已记录",
+          "rarity": "epic"
+        },
+        "rewardPulseDuration": 1.6,
+        "audio": {
+          "key": "system_exit_open",
+          "intensity": 0.9
+        }
+      }
+    }
+  ],
+  "objectiveChain": [
+    {
+      "id": "obj_puzzle_rb_l4_d1",
+      "type": "custom",
+      "title": "配平阀门",
+      "detail": "在「童年疗椅」的谜题台：调节三组阀门，让三块表同时进绿区。",
+      "requiredIds": [
+        "rb_l4_pz1"
+      ],
+      "completesWhen": {
+        "type": "puzzle_completed",
+        "id": "rb_l4_pz1"
+      },
+      "hudLabel": "阀门配平台",
+      "startsWhen": {
+        "type": "level_start"
+      },
+      "nextObjectiveId": "obj_open_rb_l4_d1"
+    },
+    {
+      "id": "obj_open_rb_l4_d1",
+      "type": "open_door",
+      "title": "打开 童年疗椅 → 救援疗椅",
+      "detail": "靠近门并打开它。",
+      "requiredIds": [
+        "rb_l4_d1"
+      ],
+      "completesWhen": {
+        "type": "door_opened",
+        "id": "rb_l4_d1"
+      },
+      "hudLabel": "开门",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_puzzle_rb_l4_d1"
+      },
+      "nextObjectiveId": "obj_puzzle_rb_l4_d2"
+    },
+    {
+      "id": "obj_puzzle_rb_l4_d2",
+      "type": "custom",
+      "title": "校准工具档案",
+      "detail": "在「救援疗椅」的谜题台：让信号经过协议格并接到双端口。",
+      "requiredIds": [
+        "rb_l4_pz2"
+      ],
+      "completesWhen": {
+        "type": "puzzle_completed",
+        "id": "rb_l4_pz2"
+      },
+      "hudLabel": "工具档案校准",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_open_rb_l4_d1"
+      },
+      "nextObjectiveId": "obj_open_rb_l4_d2"
+    },
+    {
+      "id": "obj_open_rb_l4_d2",
+      "type": "open_door",
+      "title": "打开 救援疗椅 → 躯体台",
+      "detail": "靠近门并打开它。",
+      "requiredIds": [
+        "rb_l4_d2"
+      ],
+      "completesWhen": {
+        "type": "door_opened",
+        "id": "rb_l4_d2"
+      },
+      "hudLabel": "开门",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_puzzle_rb_l4_d2"
+      },
+      "nextObjectiveId": "obj_puzzle_rb_l4_d3"
+    },
+    {
+      "id": "obj_puzzle_rb_l4_d3",
+      "type": "custom",
+      "title": "完成展品归档",
+      "detail": "在「躯体台」的谜题台：给每个展厅画面选出正确归属。",
+      "requiredIds": [
+        "rb_l4_pz3"
+      ],
+      "completesWhen": {
+        "type": "puzzle_completed",
+        "id": "rb_l4_pz3"
+      },
+      "hudLabel": "展品归档比对",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_open_rb_l4_d2"
+      },
+      "nextObjectiveId": "obj_open_rb_l4_d3"
+    },
+    {
+      "id": "obj_open_rb_l4_d3",
+      "type": "open_door",
+      "title": "打开 躯体台 → 治疗剧场",
+      "detail": "靠近门并打开它。",
+      "requiredIds": [
+        "rb_l4_d3"
+      ],
+      "completesWhen": {
+        "type": "door_opened",
+        "id": "rb_l4_d3"
+      },
+      "hudLabel": "开门",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_puzzle_rb_l4_d3"
+      },
+      "nextObjectiveId": "obj_puzzle_rb_l4_d4"
+    },
+    {
+      "id": "obj_puzzle_rb_l4_d4",
+      "type": "custom",
+      "title": "确认灯序",
+      "detail": "看灯墙亮序后按顺序击中色球。",
+      "requiredIds": [
+        "rb_l4_pz4"
+      ],
+      "completesWhen": {
+        "type": "puzzle_completed",
+        "id": "rb_l4_pz4"
+      },
+      "hudLabel": "灯序记忆锁",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_open_rb_l4_d3"
+      },
+      "nextObjectiveId": "obj_open_rb_l4_d4"
+    },
+    {
+      "id": "obj_open_rb_l4_d4",
+      "type": "open_door",
+      "title": "打开 治疗剧场 → 出院电梯",
+      "detail": "靠近门并打开它。",
+      "requiredIds": [
+        "rb_l4_d4"
+      ],
+      "completesWhen": {
+        "type": "door_opened",
+        "id": "rb_l4_d4"
+      },
+      "hudLabel": "开门",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_puzzle_rb_l4_d4"
+      },
+      "nextObjectiveId": "obj_reach_exit"
+    },
+    {
+      "id": "obj_reach_exit",
+      "type": "reach_exit",
+      "title": "进入出院电梯",
+      "detail": "抵达出口，启动它。",
+      "requiredIds": [
+        "use_builder_exit"
+      ],
+      "completesWhen": {
+        "type": "interaction_completed",
+        "id": "use_builder_exit"
+      },
+      "hudLabel": "撤离",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_open_rb_l4_d4"
+      }
+    }
+  ],
+  "waves": [
+    {
+      "id": "wave_rb_l4_r3",
+      "startDelay": 0,
+      "trigger": {
+        "type": "room_entered",
+        "id": "rb_l4_r3",
+        "delay": 0.4
+      },
+      "enemies": [
+        {
+          "archetype": "clamp_bot",
+          "count": 2,
+          "from": "sg_rb_l4_r3"
+        }
+      ],
+      "reward": "none"
+    },
+    {
+      "id": "wave_rb_l4_r4",
+      "startDelay": 0,
+      "trigger": {
+        "type": "room_entered",
+        "id": "rb_l4_r4",
+        "delay": 0.4
+      },
+      "enemies": [
+        {
+          "archetype": "custodian_elite",
+          "count": 1,
+          "from": "sg_rb_l4_r4",
+          "tier": "elite"
+        }
+      ],
+      "reward": "none"
+    },
+    {
+      "id": "wave_rb_l4_r2",
+      "startDelay": 0,
+      "trigger": {
+        "type": "room_entered",
+        "id": "rb_l4_r2",
+        "delay": 0.4
+      },
+      "enemies": [
+        {
+          "archetype": "repair_drone",
+          "count": 2,
+          "from": "sg_rb_l4_r2"
+        }
+      ],
+      "reward": "none"
+    }
+  ],
+  "events": [
+    {
+      "id": "builder_unlock_exit_on_enter",
+      "trigger": {
+        "type": "room_entered",
+        "id": "rb_l4_r5"
+      },
+      "once": true,
+      "actions": [
+        {
+          "type": "unlock_exit"
+        }
+      ]
+    }
+  ],
+  "dialogues": [],
+  "spawnGroups": [
+    {
+      "id": "front",
+      "label": "前方舱门",
+      "layout": "front"
+    },
+    {
+      "id": "front_arc",
+      "label": "前方舱门",
+      "layout": "front_arc"
+    },
+    {
+      "id": "side_rear",
+      "label": "侧后方夹击",
+      "layout": "side_rear"
+    },
+    {
+      "id": "front_gate",
+      "label": "正门重型单位",
+      "layout": "front_gate"
+    },
+    {
+      "id": "turret_rail",
+      "label": "左右轨道炮台",
+      "layout": "turret_rail"
+    },
+    {
+      "id": "around_ring",
+      "label": "四周通道",
+      "layout": "around_ring"
+    },
+    {
+      "id": "rear_ring",
+      "label": "后方追击队",
+      "layout": "rear_ring"
+    },
+    {
+      "id": "sg_rb_l4_r3",
+      "label": "躯体台 内部",
+      "layout": "front",
+      "positions": [
+        [
+          -3.3600000000000003,
+          0,
+          -33.02
+        ],
+        [
+          3.3600000000000003,
+          0,
+          -33.02
+        ],
+        [
+          -3.3600000000000003,
+          0,
+          -27.98
+        ],
+        [
+          3.3600000000000003,
+          0,
+          -27.98
+        ]
+      ]
+    },
+    {
+      "id": "sg_rb_l4_r4",
+      "label": "治疗剧场 内部",
+      "layout": "front",
+      "positions": [
+        [
+          -3.3600000000000003,
+          0,
+          -42.02
+        ],
+        [
+          3.3600000000000003,
+          0,
+          -42.02
+        ],
+        [
+          -3.3600000000000003,
+          0,
+          -36.98
+        ],
+        [
+          3.3600000000000003,
+          0,
+          -36.98
+        ]
+      ]
+    },
+    {
+      "id": "sg_rb_l4_r2",
+      "label": "救援疗椅 内部",
+      "layout": "front",
+      "positions": [
+        [
+          -3.3600000000000003,
+          0,
+          -24.02
+        ],
+        [
+          3.3600000000000003,
+          0,
+          -24.02
+        ],
+        [
+          -3.3600000000000003,
+          0,
+          -18.98
+        ],
+        [
+          3.3600000000000003,
+          0,
+          -18.98
+        ]
+      ]
+    }
+  ],
+  "cinematicBeats": [],
+  "pickups": {
+    "maxActiveDynamicPickups": 3,
+    "dynamicLifetimeSec": 22,
+    "storyPickups": [],
+    "collectRadii": {
+      "coreCell": 2.45,
+      "repairKit": 2.25,
+      "ironRod": 1.65,
+      "pistol": 1.65
+    },
+    "repairKit": {
+      "minMissingHealthToCollect": 3,
+      "healAmount": 24,
+      "rewardLabel": "拾取修复箱"
+    },
+    "coreCell": {
+      "maxHeld": 1,
+      "pickupLabel": "拾取应急电池",
+      "pickupDetailPrefix": "物品",
+      "useLabel": "应急电池释放",
+      "useDetail": "一次性清场冲击",
+      "preservedLabel": "电池余电",
+      "preservedDetail": "这枚电池没有完全耗尽",
+      "upgradeInsertedLabel": "应急电池装入",
+      "emptyUseReward": {
+        "label": "没有应急电池",
+        "detail": "电池很少，留给被包围时",
+        "rarity": "common"
+      }
+    },
+    "drops": {
+      "coreCell": {
+        "activeDropLimit": 1,
+        "pityKills": 18,
+        "minKillsForPity": 16,
+        "eliteChance": 0.72,
+        "archetypeChances": {
+          "clamp_bot": {
+            "minKills": 12,
+            "chance": 0.07
+          },
+          "repair_drone": {
+            "minKills": 16,
+            "chance": 0.018
+          }
+        }
+      },
+      "repairKit": {
+        "activeDropLimit": 1,
+        "minMissingHealth": 14,
+        "eliteChance": 0.22,
+        "baseChance": 0.012,
+        "archetypeChanceBonus": {
+          "clamp_bot": 0.02
+        },
+        "missingHealthThreshold": 0.34,
+        "missingHealthBonus": 0.03,
+        "lowHealthBonuses": [
+          {
+            "healthRatioAtMost": 0.4,
+            "bonus": 0.09
+          },
+          {
+            "healthRatioAtMost": 0.24,
+            "bonus": 0.16
+          }
+        ],
+        "lowHealthPity": [
+          {
+            "healthRatioAtMost": 0.22,
+            "kills": 4
+          },
+          {
+            "healthRatioAtMost": 0.32,
+            "kills": 7
+          }
+        ]
+      }
+    }
+  },
+  "economy": {
+    "memoryFragments": {
+      "default": 1,
+      "byArchetype": {
+        "custodian_elite": 18,
+        "signal_turret": 3,
+        "clamp_bot": 2
+      }
+    },
+    "killStreakWindowSec": 3.8,
+    "memoryCacheMilestones": [
+      {
+        "amount": 10,
+        "label": "体力恢复",
+        "reward": "energy",
+        "rarity": "rare"
+      },
+      {
+        "amount": 28,
+        "label": "呼吸变稳",
+        "reward": "heat",
+        "rarity": "rare"
+      },
+      {
+        "amount": 52,
+        "label": "生命上限恢复",
+        "reward": "health",
+        "rarity": "epic"
+      }
+    ],
+    "curatedUpgradeRolls": [
+      [
+        "pulse_faster_cycle",
+        "pulse_coolant_feed",
+        "rail_overcharge",
+        "core_plating",
+        "servo_stride",
+        "wide_target_cone",
+        "thermal_buffer",
+        "dash_shorter_cd",
+        "field_medicine"
+      ],
+      [
+        "shock_repair_ping",
+        "shock_shorter_cd",
+        "core_cell_damage",
+        "core_cell_preserve",
+        "pulse_chain_mark",
+        "rail_double_line",
+        "last_human_protocol",
+        "dash_shorter_cd",
+        "field_medicine"
+      ]
+    ],
+    "tempoSurge": {
+      "eliteDuration": 6.5,
+      "normalThreshold": 5,
+      "tier2Threshold": 10,
+      "tier1Duration": 4.4,
+      "tier2Duration": 5.8,
+      "tier1HeatRefund": 7,
+      "tier2HeatRefund": 12,
+      "tier1EnergyRefund": 7,
+      "tier2EnergyRefund": 12
+    }
+  },
+  "revive": {
+    "maxRevives": 1,
+    "hpRatio": 0.7,
+    "memoryFragments": 12,
+    "reviveSurgeSec": 9.5,
+    "tempoSurgeSec": 5.5,
+    "blastRadius": 6.5,
+    "blastDamage": 80,
+    "blastKnockback": 6,
+    "rewardPulse": {
+      "label": "第二口气",
+      "detail": "+线索 + 短暂爆发",
+      "rarity": "story"
+    },
+    "rewardPulseDuration": 2.4,
+    "message": "你又醒了。几秒内全身发热。"
+  },
+  "combatLimits": {
+    "smallEnemyArchetypes": [
+      "repair_drone",
+      "clamp_bot"
+    ],
+    "eliteArchetypeId": "custodian_elite",
+    "smallEnemyDamageMultiplier": 1.3
+  },
+  "enemyDeathBeats": [],
+  "presentation": {
+    "defaultWaveStartMessage": "敌对单位正在部署。",
+    "reinforcementMessage": "增援单位已部署。",
+    "waveLabels": {
+      "wave_rb_l4_r3": "躯体台 清剿",
+      "wave_rb_l4_r4": "治疗剧场 清剿",
+      "wave_rb_l4_r2": "救援疗椅 清剿"
+    },
+    "objectives": {
+      "upgrade": {
+        "title": "选一种活法",
+        "detail": "只能选一项",
+        "progressLabel": "升级上线",
+        "progressText": "选 1 个"
+      },
+      "preRod": {
+        "title": "捡起铁棒",
+        "detail": "别空手"
+      },
+      "prePistol": {
+        "title": "捡起手枪",
+        "detail": "拿到枪，门会锁"
+      },
+      "default": {
+        "title": "继续前进",
+        "detail": "目标还没完成"
+      },
+      "exitUnlocked": {
+        "title": "进入出口",
+        "detail": "进电梯",
+        "progressLabel": "撤离",
+        "progressText": "走"
+      }
+    },
+    "flow": {
+      "title": {
+        "system": "异常生命信号",
+        "heading": "Human Protocol",
+        "body": "你醒在一段不该有人的协议里。",
+        "signalStrip": [
+          "生命体征",
+          "门禁",
+          "无线电噪声"
+        ],
+        "startButton": "开始"
+      },
+      "death": {
+        "system": "急救失败",
+        "heading": "你倒下了",
+        "itchSuffix": "itch 版本无广告。",
+        "reviveOfferPrefix": "醒来后有几秒肾上腺素爆发。",
+        "cacheReadyText": "补给已备好。",
+        "reviveButtonRewarded": "看广告急救",
+        "reviveButtonLocal": "急救",
+        "restartButton": "重开本关",
+        "restartAfterReviveUsedButton": "重新开始"
+      },
+      "transition": {
+        "system": "出口",
+        "heading": "继续下行"
+      },
+      "victory": {
+        "system": "档案片段",
+        "heading": "记录完成",
+        "body": "门合上了，下一层仍在亮。",
+        "doubleMemoryButton": "看广告 x2 积分",
+        "doubleMemoryClaimedButton": "x2 积分已领取",
+        "replayButton": "再次进入"
+      }
+    },
+    "waves": [
+      {
+        "id": "wave_rb_l4_r3",
+        "label": "躯体台 清剿",
+        "objectiveTitle": "清剿 躯体台",
+        "objectiveDetail": "击毁房间里的敌对单位。",
+        "startMessage": "躯体台 的机器人被唤醒。",
+        "startWarning": {
+          "label": "敌对单位",
+          "detail": "躯体台 出现机器人"
+        },
+        "startWarningDuration": 1.8
+      },
+      {
+        "id": "wave_rb_l4_r4",
+        "label": "治疗剧场 清剿",
+        "objectiveTitle": "清剿 治疗剧场",
+        "objectiveDetail": "击毁房间里的敌对单位。",
+        "startMessage": "治疗剧场 的机器人被唤醒。",
+        "startWarning": {
+          "label": "敌对单位",
+          "detail": "治疗剧场 出现机器人"
+        },
+        "startWarningDuration": 1.8
+      },
+      {
+        "id": "wave_rb_l4_r2",
+        "label": "救援疗椅 清剿",
+        "objectiveTitle": "清剿 救援疗椅",
+        "objectiveDetail": "击毁房间里的敌对单位。",
+        "startMessage": "救援疗椅 的机器人被唤醒。",
+        "startWarning": {
+          "label": "敌对单位",
+          "detail": "救援疗椅 出现机器人"
+        },
+        "startWarningDuration": 1.8
+      }
+    ],
+    "spawnSourceLabels": {
+      "front": "前方入口",
+      "front_arc": "前方入口",
+      "side_rear": "侧后方夹击",
+      "front_gate": "正门重型单位",
+      "turret_rail": "左右轨道炮台",
+      "around_ring": "四周通道",
+      "rear_ring": "后方追击队",
+      "sg_rb_l4_r3": "躯体台 内部",
+      "sg_rb_l4_r4": "治疗剧场 内部",
+      "sg_rb_l4_r2": "救援疗椅 内部"
+    },
+    "reinforcementWarningDuration": 1.45,
+    "environmentPressure": {
+      "title": 0.16,
+      "death": 0.95,
+      "idle": 0.24,
+      "exitUnlocked": 0.84,
+      "byWave": {}
+    }
+  }
+}

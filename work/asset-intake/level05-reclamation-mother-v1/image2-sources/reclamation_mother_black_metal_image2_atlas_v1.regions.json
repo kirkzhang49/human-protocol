@@ -1,0 +1,130 @@
+{
+  "schemaVersion": "hp.image2.regionAtlas.v1",
+  "source": "work/asset-intake/level05-reclamation-mother-v1/image2-sources/reclamation_mother_black_metal_image2_atlas_v1.png",
+  "imageSize": [
+    1254,
+    1254
+  ],
+  "regions": {
+    "torso_panel": {
+      "xywh": [
+        80,
+        300,
+        395,
+        385
+      ],
+      "role": "large black torso/chest armor panel",
+      "uvRect": [
+        0.063796,
+        0.453748,
+        0.314992,
+        0.307018
+      ]
+    },
+    "large_scratched_panel": {
+      "xywh": [
+        38,
+        735,
+        450,
+        350
+      ],
+      "role": "broad scratched graphite fill",
+      "uvRect": [
+        0.030303,
+        0.134769,
+        0.358852,
+        0.279107
+      ]
+    },
+    "top_long_rail": {
+      "xywh": [
+        500,
+        12,
+        720,
+        120
+      ],
+      "role": "long black titanium rail with brass corners",
+      "uvRect": [
+        0.398724,
+        0.894737,
+        0.574163,
+        0.095694
+      ]
+    },
+    "cyan_micro_groove": {
+      "xywh": [
+        710,
+        440,
+        112,
+        88
+      ],
+      "role": "restrained cyan micro emissive grooves",
+      "uvRect": [
+        0.566188,
+        0.578947,
+        0.089314,
+        0.070175
+      ]
+    },
+    "narrow_vertical_black": {
+      "xywh": [
+        980,
+        260,
+        110,
+        650
+      ],
+      "role": "narrow dark ribbed vertical panel",
+      "uvRect": [
+        0.781499,
+        0.274322,
+        0.087719,
+        0.518341
+      ]
+    },
+    "rubber_gasket": {
+      "xywh": [
+        630,
+        390,
+        95,
+        340
+      ],
+      "role": "black rubber perforated gasket",
+      "uvRect": [
+        0.502392,
+        0.417863,
+        0.075758,
+        0.271132
+      ]
+    },
+    "brass_edge_wear": {
+      "xywh": [
+        805,
+        405,
+        145,
+        120
+      ],
+      "role": "aged brass worn corner trim",
+      "uvRect": [
+        0.641946,
+        0.58134,
+        0.11563,
+        0.095694
+      ]
+    },
+    "scratch_fill": {
+      "xywh": [
+        255,
+        145,
+        180,
+        150
+      ],
+      "role": "small scratched black panel fill",
+      "uvRect": [
+        0.203349,
+        0.764753,
+        0.143541,
+        0.119617
+      ]
+    }
+  }
+}

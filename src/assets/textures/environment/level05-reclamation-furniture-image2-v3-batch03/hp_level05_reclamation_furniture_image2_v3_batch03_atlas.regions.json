@@ -1,0 +1,1163 @@
+{
+  "schemaVersion": "hp.image2.semanticAtlasRegions.v1.1",
+  "atlas": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/hp_level05_reclamation_furniture_image2_v3_batch03_atlas.png",
+  "atlasSize": [
+    2048,
+    2048
+  ],
+  "cellSize": 256,
+  "sourceSheets": {
+    "couch": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/bio_recline_couch_parts_image2.png",
+      "modelKey": "room_l5_v3_bio_recline_couch",
+      "prompt": "High-detail orthographic parts sheet for a sci-fi medical/reclamation reclining couch: low black ribbed soft recline pads, white ceramic curved shell panels, graphite underframe, brass hinge rails and clamps, cyan glass status slit, black rubber gasket strips, screws.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a30-d34c-7c43-ba68-a708ca030fbe/ig_0de12353e253c363016a400cc178d8819b80054127f7a6c94e.png"
+    },
+    "terminal": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/memory_diagnostic_terminal_parts_image2.png",
+      "modelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "prompt": "High-detail orthographic parts sheet for a standing memory diagnostic terminal: smoked glass diagnostic screen panels, graphite pedestal base, white ceramic back shells, aged brass side rails, cyan data lens strips, black rubber gasket bars, vent grilles and screw hardware.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a30-d34c-7c43-ba68-a708ca030fbe/ig_0de12353e253c363016a400cf43928819b8c3d4281f834ca8e.png"
+    },
+    "freezer": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/tissue_freezer_cabinet_parts_image2.png",
+      "modelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "prompt": "High-detail orthographic parts sheet for a sci-fi tissue freezer / medical cold cabinet: white ceramic cabinet doors, cyan frosted inspection windows, black rubber gaskets, graphite compressor base, aged brass hinge rods and handles, vent panels, latch hardware and cyan status strips.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a30-d34c-7c43-ba68-a708ca030fbe/ig_0de12353e253c363016a400d24d51c819b8685eac8a19776b9.png"
+    },
+    "rack": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/limb_calibration_rack_parts_image2.png",
+      "modelKey": "room_l5_v3_limb_calibration_rack",
+      "prompt": "High-detail orthographic parts sheet for a limb calibration rack / biomechanical equipment frame: tall narrow graphite frame rails, white ceramic upright shells, aged brass articulated clamps, black padded limb supports, cyan measurement lens strips, black cable/gasket runs, base feet and bolts.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a30-d34c-7c43-ba68-a708ca030fbe/ig_0de12353e253c363016a400d534624819b90811dc8136ee6fa.png"
+    },
+    "dock": {
+      "file": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/cleaning_robot_dock_parts_image2.png",
+      "modelKey": "room_l5_v3_cleaning_robot_dock",
+      "prompt": "High-detail orthographic parts sheet for a low cleaning robot dock: rounded graphite and white ceramic docking base panels, cyan glowing ring and charging lens, brass charging contacts and guide rails, black rubber bumpers, gasket strips, vents, contact pads and cable socket covers.",
+      "generatedCache": "/Users/zhengkaizhang/.codex/generated_images/019f0a30-d34c-7c43-ba68-a708ca030fbe/ig_0de12353e253c363016a400d85d320819bbab1d67ce50127da.png"
+    }
+  },
+  "regions": {
+    "couch_black_ribbed_pad": {
+      "atlasRect": [
+        0,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "couch",
+      "sourceModelKey": "room_l5_v3_bio_recline_couch",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/bio_recline_couch_parts_image2.png",
+      "sourceCrop": [
+        18,
+        28,
+        285,
+        805
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/couch_black_ribbed_pad.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 59750,
+        "opaquePixelsGte250": 169675,
+        "transparentRatio": 0.2604
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        54,
+        54,
+        55
+      ],
+      "note": "stacked black soft couch pads",
+      "image2Assert": true
+    },
+    "couch_white_ceramic_shell": {
+      "atlasRect": [
+        256,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "couch",
+      "sourceModelKey": "room_l5_v3_bio_recline_couch",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/bio_recline_couch_parts_image2.png",
+      "sourceCrop": [
+        330,
+        28,
+        600,
+        438
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/couch_white_ceramic_shell.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 115224,
+        "opaquePixelsGte250": 147576,
+        "transparentRatio": 0.4384
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        223,
+        221,
+        218
+      ],
+      "note": "curved white ceramic recline shells",
+      "image2Assert": true
+    },
+    "couch_graphite_underframe": {
+      "atlasRect": [
+        512,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "couch",
+      "sourceModelKey": "room_l5_v3_bio_recline_couch",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/bio_recline_couch_parts_image2.png",
+      "sourceCrop": [
+        315,
+        480,
+        610,
+        270
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/couch_graphite_underframe.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 31371,
+        "opaquePixelsGte250": 133329,
+        "transparentRatio": 0.1905
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        88,
+        88,
+        87
+      ],
+      "note": "graphite mechanical couch underframe",
+      "image2Assert": true
+    },
+    "couch_brass_hinge_clamps": {
+      "atlasRect": [
+        768,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "couch",
+      "sourceModelKey": "room_l5_v3_bio_recline_couch",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/bio_recline_couch_parts_image2.png",
+      "sourceCrop": [
+        885,
+        475,
+        462,
+        315
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/couch_brass_hinge_clamps.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 87428,
+        "opaquePixelsGte250": 58102,
+        "transparentRatio": 0.6008
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        124,
+        103,
+        74
+      ],
+      "note": "brass hinge rails and clamps",
+      "image2Assert": true
+    },
+    "couch_cyan_status_slit": {
+      "atlasRect": [
+        1024,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "couch",
+      "sourceModelKey": "room_l5_v3_bio_recline_couch",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/bio_recline_couch_parts_image2.png",
+      "sourceCrop": [
+        920,
+        122,
+        268,
+        326
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/couch_cyan_status_slit.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 24851,
+        "opaquePixelsGte250": 62517,
+        "transparentRatio": 0.2844
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        216,
+        215,
+        211
+      ],
+      "note": "cyan glass status slit modules",
+      "image2Assert": true
+    },
+    "couch_black_gasket_strips": {
+      "atlasRect": [
+        1280,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "couch",
+      "sourceModelKey": "room_l5_v3_bio_recline_couch",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/bio_recline_couch_parts_image2.png",
+      "sourceCrop": [
+        1188,
+        36,
+        325,
+        430
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/couch_black_gasket_strips.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 110709,
+        "opaquePixelsGte250": 29041,
+        "transparentRatio": 0.7922
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        114,
+        147,
+        153
+      ],
+      "note": "black rubber gasket and bumper strips",
+      "image2Assert": true
+    },
+    "couch_screws_fasteners": {
+      "atlasRect": [
+        1536,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "couch",
+      "sourceModelKey": "room_l5_v3_bio_recline_couch",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/bio_recline_couch_parts_image2.png",
+      "sourceCrop": [
+        1095,
+        782,
+        430,
+        220
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/couch_screws_fasteners.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 81285,
+        "opaquePixelsGte250": 13315,
+        "transparentRatio": 0.8592
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        130,
+        115,
+        95
+      ],
+      "note": "small screws and fasteners",
+      "image2Assert": true
+    },
+    "terminal_smoked_screen": {
+      "atlasRect": [
+        1792,
+        0,
+        256,
+        256
+      ],
+      "sourceId": "terminal",
+      "sourceModelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/memory_diagnostic_terminal_parts_image2.png",
+      "sourceCrop": [
+        42,
+        58,
+        360,
+        705
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/terminal_smoked_screen.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 26428,
+        "opaquePixelsGte250": 227372,
+        "transparentRatio": 0.1041
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        30,
+        35,
+        38
+      ],
+      "note": "tall smoked glass screen panels",
+      "image2Assert": true
+    },
+    "terminal_graphite_pedestal": {
+      "atlasRect": [
+        0,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "terminal",
+      "sourceModelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/memory_diagnostic_terminal_parts_image2.png",
+      "sourceCrop": [
+        410,
+        150,
+        205,
+        735
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/terminal_graphite_pedestal.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 49168,
+        "opaquePixelsGte250": 101507,
+        "transparentRatio": 0.3263
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        60,
+        60,
+        58
+      ],
+      "note": "graphite standing pedestal and base",
+      "image2Assert": true
+    },
+    "terminal_white_ceramic_shell": {
+      "atlasRect": [
+        256,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "terminal",
+      "sourceModelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/memory_diagnostic_terminal_parts_image2.png",
+      "sourceCrop": [
+        610,
+        70,
+        242,
+        1010
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/terminal_white_ceramic_shell.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 72892,
+        "opaquePixelsGte250": 171528,
+        "transparentRatio": 0.2982
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        228,
+        226,
+        223
+      ],
+      "note": "white ceramic rear shell sections",
+      "image2Assert": true
+    },
+    "terminal_brass_side_rails": {
+      "atlasRect": [
+        512,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "terminal",
+      "sourceModelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/memory_diagnostic_terminal_parts_image2.png",
+      "sourceCrop": [
+        862,
+        22,
+        130,
+        760
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/terminal_brass_side_rails.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 53016,
+        "opaquePixelsGte250": 45784,
+        "transparentRatio": 0.5366
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        149,
+        125,
+        79
+      ],
+      "note": "brass side rail rods and brackets",
+      "image2Assert": true
+    },
+    "terminal_cyan_data_slits": {
+      "atlasRect": [
+        768,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "terminal",
+      "sourceModelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/memory_diagnostic_terminal_parts_image2.png",
+      "sourceCrop": [
+        28,
+        1110,
+        490,
+        248
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/terminal_cyan_data_slits.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 55357,
+        "opaquePixelsGte250": 66163,
+        "transparentRatio": 0.4555
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        29,
+        47,
+        46
+      ],
+      "note": "cyan data lens strips",
+      "image2Assert": true
+    },
+    "terminal_black_gasket_bars": {
+      "atlasRect": [
+        1024,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "terminal",
+      "sourceModelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/memory_diagnostic_terminal_parts_image2.png",
+      "sourceCrop": [
+        430,
+        1110,
+        220,
+        360
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/terminal_black_gasket_bars.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 39441,
+        "opaquePixelsGte250": 39759,
+        "transparentRatio": 0.498
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        48,
+        48,
+        46
+      ],
+      "note": "black gasket and base bars",
+      "image2Assert": true
+    },
+    "terminal_screws_ports": {
+      "atlasRect": [
+        1280,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "terminal",
+      "sourceModelKey": "room_l5_v3_memory_diagnostic_terminal",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/memory_diagnostic_terminal_parts_image2.png",
+      "sourceCrop": [
+        820,
+        865,
+        190,
+        620
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/terminal_screws_ports.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 80737,
+        "opaquePixelsGte250": 37063,
+        "transparentRatio": 0.6854
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        118,
+        98,
+        64
+      ],
+      "note": "screws ports and small brackets",
+      "image2Assert": true
+    },
+    "freezer_white_ceramic_door": {
+      "atlasRect": [
+        1536,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "freezer",
+      "sourceModelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/tissue_freezer_cabinet_parts_image2.png",
+      "sourceCrop": [
+        40,
+        72,
+        420,
+        680
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/freezer_white_ceramic_door.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 59245,
+        "opaquePixelsGte250": 226355,
+        "transparentRatio": 0.2074
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        221,
+        218,
+        215
+      ],
+      "note": "white ceramic freezer door panel",
+      "image2Assert": true
+    },
+    "freezer_cyan_frosted_window": {
+      "atlasRect": [
+        1792,
+        256,
+        256,
+        256
+      ],
+      "sourceId": "freezer",
+      "sourceModelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/tissue_freezer_cabinet_parts_image2.png",
+      "sourceCrop": [
+        130,
+        142,
+        740,
+        380
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/freezer_cyan_frosted_window.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 68380,
+        "opaquePixelsGte250": 212820,
+        "transparentRatio": 0.2432
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        174,
+        206,
+        207
+      ],
+      "note": "cyan frosted freezer windows",
+      "image2Assert": true
+    },
+    "freezer_black_gasket": {
+      "atlasRect": [
+        0,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "freezer",
+      "sourceModelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/tissue_freezer_cabinet_parts_image2.png",
+      "sourceCrop": [
+        880,
+        202,
+        280,
+        405
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/freezer_black_gasket.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 53724,
+        "opaquePixelsGte250": 59676,
+        "transparentRatio": 0.4738
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        151,
+        189,
+        192
+      ],
+      "note": "black door gasket strips",
+      "image2Assert": true
+    },
+    "freezer_graphite_compressor_base": {
+      "atlasRect": [
+        256,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "freezer",
+      "sourceModelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/tissue_freezer_cabinet_parts_image2.png",
+      "sourceCrop": [
+        32,
+        612,
+        715,
+        305
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/freezer_graphite_compressor_base.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 23772,
+        "opaquePixelsGte250": 194303,
+        "transparentRatio": 0.109
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        73,
+        73,
+        71
+      ],
+      "note": "graphite compressor drawer base",
+      "image2Assert": true
+    },
+    "freezer_brass_hinges_handles": {
+      "atlasRect": [
+        512,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "freezer",
+      "sourceModelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/tissue_freezer_cabinet_parts_image2.png",
+      "sourceCrop": [
+        730,
+        548,
+        395,
+        420
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/freezer_brass_hinges_handles.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 83869,
+        "opaquePixelsGte250": 82031,
+        "transparentRatio": 0.5055
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        87,
+        79,
+        62
+      ],
+      "note": "brass hinges handles and latch rods",
+      "image2Assert": true
+    },
+    "freezer_vent_grilles": {
+      "atlasRect": [
+        768,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "freezer",
+      "sourceModelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/tissue_freezer_cabinet_parts_image2.png",
+      "sourceCrop": [
+        1188,
+        68,
+        310,
+        505
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/freezer_vent_grilles.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 24973,
+        "opaquePixelsGte250": 131577,
+        "transparentRatio": 0.1595
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        219,
+        218,
+        214
+      ],
+      "note": "vent grilles and perforated panels",
+      "image2Assert": true
+    },
+    "freezer_screws_latches": {
+      "atlasRect": [
+        1024,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "freezer",
+      "sourceModelKey": "room_l5_v3_tissue_freezer_cabinet",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/tissue_freezer_cabinet_parts_image2.png",
+      "sourceCrop": [
+        1080,
+        580,
+        430,
+        380
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/freezer_screws_latches.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 125427,
+        "opaquePixelsGte250": 37973,
+        "transparentRatio": 0.7676
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        147,
+        143,
+        137
+      ],
+      "note": "screws latch plates and tiny hardware",
+      "image2Assert": true
+    },
+    "rack_graphite_rails": {
+      "atlasRect": [
+        1280,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "rack",
+      "sourceModelKey": "room_l5_v3_limb_calibration_rack",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/limb_calibration_rack_parts_image2.png",
+      "sourceCrop": [
+        22,
+        28,
+        170,
+        1265
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/rack_graphite_rails.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 84234,
+        "opaquePixelsGte250": 130816,
+        "transparentRatio": 0.3917
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        73,
+        74,
+        75
+      ],
+      "note": "long graphite frame rails with cyan lines",
+      "image2Assert": true
+    },
+    "rack_white_ceramic_uprights": {
+      "atlasRect": [
+        1536,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "rack",
+      "sourceModelKey": "room_l5_v3_limb_calibration_rack",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/limb_calibration_rack_parts_image2.png",
+      "sourceCrop": [
+        215,
+        90,
+        245,
+        840
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/rack_white_ceramic_uprights.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 94022,
+        "opaquePixelsGte250": 111778,
+        "transparentRatio": 0.4569
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        195,
+        190,
+        181
+      ],
+      "note": "white ceramic upright shells",
+      "image2Assert": true
+    },
+    "rack_brass_articulated_clamps": {
+      "atlasRect": [
+        1792,
+        512,
+        256,
+        256
+      ],
+      "sourceId": "rack",
+      "sourceModelKey": "room_l5_v3_limb_calibration_rack",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/limb_calibration_rack_parts_image2.png",
+      "sourceCrop": [
+        455,
+        28,
+        315,
+        840
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/rack_brass_articulated_clamps.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 168639,
+        "opaquePixelsGte250": 95961,
+        "transparentRatio": 0.6373
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        158,
+        142,
+        108
+      ],
+      "note": "brass articulated calibration clamps",
+      "image2Assert": true
+    },
+    "rack_black_limb_pads": {
+      "atlasRect": [
+        0,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "rack",
+      "sourceModelKey": "room_l5_v3_limb_calibration_rack",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/limb_calibration_rack_parts_image2.png",
+      "sourceCrop": [
+        782,
+        38,
+        220,
+        495
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/rack_black_limb_pads.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 44950,
+        "opaquePixelsGte250": 63950,
+        "transparentRatio": 0.4128
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        61,
+        62,
+        63
+      ],
+      "note": "black padded limb supports",
+      "image2Assert": true
+    },
+    "rack_black_cable_gaskets": {
+      "atlasRect": [
+        256,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "rack",
+      "sourceModelKey": "room_l5_v3_limb_calibration_rack",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/limb_calibration_rack_parts_image2.png",
+      "sourceCrop": [
+        760,
+        630,
+        245,
+        470
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/rack_black_cable_gaskets.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 86585,
+        "opaquePixelsGte250": 28565,
+        "transparentRatio": 0.7519
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        64,
+        64,
+        63
+      ],
+      "note": "black cables and gasket runs",
+      "image2Assert": true
+    },
+    "rack_graphite_base_feet": {
+      "atlasRect": [
+        512,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "rack",
+      "sourceModelKey": "room_l5_v3_limb_calibration_rack",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/limb_calibration_rack_parts_image2.png",
+      "sourceCrop": [
+        128,
+        960,
+        520,
+        430
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/rack_graphite_base_feet.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 111935,
+        "opaquePixelsGte250": 111665,
+        "transparentRatio": 0.5006
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        71,
+        72,
+        72
+      ],
+      "note": "graphite base feet and collars",
+      "image2Assert": true
+    },
+    "rack_screws_brackets": {
+      "atlasRect": [
+        768,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "rack",
+      "sourceModelKey": "room_l5_v3_limb_calibration_rack",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/limb_calibration_rack_parts_image2.png",
+      "sourceCrop": [
+        620,
+        1035,
+        380,
+        445
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/rack_screws_brackets.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 128039,
+        "opaquePixelsGte250": 41061,
+        "transparentRatio": 0.7572
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        103,
+        97,
+        84
+      ],
+      "note": "bolts bracket plates and small clamps",
+      "image2Assert": true
+    },
+    "dock_rounded_ceramic_base": {
+      "atlasRect": [
+        1024,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "dock",
+      "sourceModelKey": "room_l5_v3_cleaning_robot_dock",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/cleaning_robot_dock_parts_image2.png",
+      "sourceCrop": [
+        24,
+        48,
+        390,
+        382
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/dock_rounded_ceramic_base.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 3686,
+        "opaquePixelsGte250": 145294,
+        "transparentRatio": 0.0247
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        77,
+        83,
+        86
+      ],
+      "note": "rounded white ceramic dock top",
+      "image2Assert": true
+    },
+    "dock_cyan_charging_ring": {
+      "atlasRect": [
+        1280,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "dock",
+      "sourceModelKey": "room_l5_v3_cleaning_robot_dock",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/cleaning_robot_dock_parts_image2.png",
+      "sourceCrop": [
+        118,
+        120,
+        210,
+        210
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/dock_cyan_charging_ring.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 144,
+        "opaquePixelsGte250": 43956,
+        "transparentRatio": 0.0033
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        64,
+        68,
+        70
+      ],
+      "note": "cyan charging ring lens",
+      "image2Assert": true
+    },
+    "dock_graphite_cradle": {
+      "atlasRect": [
+        1536,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "dock",
+      "sourceModelKey": "room_l5_v3_cleaning_robot_dock",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/cleaning_robot_dock_parts_image2.png",
+      "sourceCrop": [
+        505,
+        340,
+        410,
+        340
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/dock_graphite_cradle.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 17401,
+        "opaquePixelsGte250": 121999,
+        "transparentRatio": 0.1248
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        53,
+        56,
+        59
+      ],
+      "note": "low graphite robot cradle recess",
+      "image2Assert": true
+    },
+    "dock_white_shell_parts": {
+      "atlasRect": [
+        1792,
+        768,
+        256,
+        256
+      ],
+      "sourceId": "dock",
+      "sourceModelKey": "room_l5_v3_cleaning_robot_dock",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/cleaning_robot_dock_parts_image2.png",
+      "sourceCrop": [
+        765,
+        30,
+        522,
+        260
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/dock_white_shell_parts.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 63880,
+        "opaquePixelsGte250": 71840,
+        "transparentRatio": 0.4707
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        222,
+        219,
+        216
+      ],
+      "note": "white ceramic shell cover parts",
+      "image2Assert": true
+    },
+    "dock_black_bumpers_gaskets": {
+      "atlasRect": [
+        0,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "dock",
+      "sourceModelKey": "room_l5_v3_cleaning_robot_dock",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/cleaning_robot_dock_parts_image2.png",
+      "sourceCrop": [
+        1195,
+        38,
+        310,
+        605
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/dock_black_bumpers_gaskets.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 57962,
+        "opaquePixelsGte250": 129588,
+        "transparentRatio": 0.309
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        73,
+        77,
+        78
+      ],
+      "note": "black rubber bumpers and gasket strips",
+      "image2Assert": true
+    },
+    "dock_brass_contacts_rails": {
+      "atlasRect": [
+        256,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "dock",
+      "sourceModelKey": "room_l5_v3_cleaning_robot_dock",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/cleaning_robot_dock_parts_image2.png",
+      "sourceCrop": [
+        28,
+        465,
+        622,
+        195
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/dock_brass_contacts_rails.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 69986,
+        "opaquePixelsGte250": 51304,
+        "transparentRatio": 0.577
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        69,
+        68,
+        65
+      ],
+      "note": "brass charging contacts and guide rails",
+      "image2Assert": true
+    },
+    "dock_screws_ports": {
+      "atlasRect": [
+        512,
+        1024,
+        256,
+        256
+      ],
+      "sourceId": "dock",
+      "sourceModelKey": "room_l5_v3_cleaning_robot_dock",
+      "sourceImage2Sheet": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-sources/cleaning_robot_dock_parts_image2.png",
+      "sourceCrop": [
+        42,
+        672,
+        1015,
+        330
+      ],
+      "transparentCutout": "src/assets/textures/environment/level05-reclamation-furniture-image2-v3-batch03/image2-cutouts/dock_screws_ports.png",
+      "alphaCutApplied": true,
+      "alphaCutStats": {
+        "transparentPixelsLt250": 180072,
+        "opaquePixelsGte250": 154878,
+        "transparentRatio": 0.5376
+      },
+      "atlasTileMode": "transparent-cutout-composited-on-region-median-matte",
+      "atlasMatteRgb": [
+        53,
+        57,
+        59
+      ],
+      "note": "screws cable ports and contact pads",
+      "image2Assert": true
+    }
+  }
+}

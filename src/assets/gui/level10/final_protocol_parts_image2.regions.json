@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "hp.image2.gui.regions.v1",
+  "kitId": "level10_final_protocol",
+  "label": "Final Protocol Console",
+  "role": "core terminal final sync",
+  "special": "protocol_ring",
+  "textPolicy": "No baked gameplay text; React/CSS/runtime owns all language and puzzle answers.",
+  "atlasSize": [
+    2048,
+    2048
+  ],
+  "backgroundSize": [
+    1280,
+    720
+  ],
+  "background": "src/assets/gui/level10/final_protocol_background_image2.png",
+  "parts": "src/assets/gui/level10/final_protocol_parts_image2.png",
+  "regions": {
+    "frame_corner_tl": [
+      18,
+      18,
+      176,
+      176
+    ],
+    "frame_corner_tr": [
+      212,
+      18,
+      176,
+      176
+    ],
+    "frame_corner_bl": [
+      406,
+      18,
+      176,
+      176
+    ],
+    "frame_corner_br": [
+      600,
+      18,
+      176,
+      176
+    ],
+    "panel_plate": [
+      794,
+      18,
+      520,
+      300
+    ],
+    "text_safe_band": [
+      1332,
+      18,
+      520,
+      72
+    ],
+    "button_enabled": [
+      18,
+      336,
+      256,
+      76
+    ],
+    "button_disabled": [
+      292,
+      336,
+      256,
+      76
+    ],
+    "button_selected": [
+      566,
+      336,
+      256,
+      76
+    ],
+    "progress_track": [
+      840,
+      336,
+      460,
+      44
+    ],
+    "progress_fill": [
+      1318,
+      336,
+      460,
+      44
+    ],
+    "key_slot_empty": [
+      1796,
+      336,
+      76,
+      64
+    ],
+    "key_slot_full": [
+      1890,
+      336,
+      76,
+      64
+    ],
+    "lock_overlay": [
+      18,
+      430,
+      520,
+      300
+    ],
+    "scanline_strip": [
+      556,
+      430,
+      420,
+      90
+    ],
+    "hero_display": [
+      994,
+      430,
+      420,
+      220
+    ],
+    "detail_strip": [
+      1432,
+      430,
+      420,
+      86
+    ],
+    "status_locked": [
+      1870,
+      430,
+      104,
+      104
+    ],
+    "status_active": [
+      18,
+      748,
+      104,
+      104
+    ],
+    "status_choice": [
+      140,
+      748,
+      104,
+      104
+    ],
+    "status_solved": [
+      262,
+      748,
+      104,
+      104
+    ],
+    "status_disabled": [
+      384,
+      748,
+      104,
+      104
+    ],
+    "status_danger": [
+      506,
+      748,
+      104,
+      104
+    ],
+    "status_error": [
+      628,
+      748,
+      104,
+      104
+    ]
+  },
+  "stateRegions": {
+    "locked": [
+      "status_locked",
+      "text_safe_band",
+      "hero_display",
+      "progress_track"
+    ],
+    "active": [
+      "status_active",
+      "text_safe_band",
+      "hero_display",
+      "progress_track"
+    ],
+    "choice": [
+      "status_choice",
+      "text_safe_band",
+      "hero_display",
+      "progress_track"
+    ],
+    "solved": [
+      "status_solved",
+      "text_safe_band",
+      "hero_display",
+      "progress_track"
+    ]
+  },
+  "recommendedRuntimeLayers": [
+    "background",
+    "panel_plate",
+    "hero_display",
+    "detail_strip",
+    "status_*",
+    "text_safe_band",
+    "button_*",
+    "progress_*",
+    "lock_overlay when unauthorized"
+  ]
+}

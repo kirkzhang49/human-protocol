@@ -1,0 +1,96 @@
+{
+  "schemaVersion": "hp.image2.gui.regions.v3",
+  "atlasSize": [
+    2048,
+    1024
+  ],
+  "backgroundSize": [
+    1792,
+    1024
+  ],
+  "source": "src/assets/gui/gate-balance/image2-sources/gate_balance_overlay_image2_source_v2_original.png",
+  "background": "src/assets/gui/gate-balance/gate_balance_overlay_frame_image2_v3.png",
+  "parts": "src/assets/gui/gate-balance/gate_balance_overlay_parts_image2_v3.png",
+  "clipsDir": "src/assets/gui/gate-balance/clips-v3",
+  "regions": {
+    "gate_left_idle": [
+      0,
+      0,
+      340,
+      360
+    ],
+    "gate_mid_idle": [
+      370,
+      0,
+      350,
+      360
+    ],
+    "gate_right_idle": [
+      750,
+      0,
+      350,
+      360
+    ],
+    "gauge_seal": [
+      0,
+      390,
+      390,
+      125
+    ],
+    "gauge_track": [
+      420,
+      390,
+      390,
+      125
+    ],
+    "gauge_temp": [
+      840,
+      390,
+      390,
+      125
+    ],
+    "control_left": [
+      0,
+      545,
+      410,
+      120
+    ],
+    "control_mid": [
+      440,
+      545,
+      410,
+      120
+    ],
+    "control_right": [
+      880,
+      545,
+      410,
+      120
+    ],
+    "reset_plate": [
+      0,
+      700,
+      135,
+      72
+    ],
+    "lock_plate": [
+      160,
+      700,
+      430,
+      72
+    ],
+    "close_plate": [
+      620,
+      700,
+      170,
+      86
+    ],
+    "progress_track": [
+      820,
+      700,
+      820,
+      42
+    ]
+  },
+  "notes": "Frame has alpha cutouts. Clips-v3 contains individual transparent Image2 GUI pieces; atlas packs those clips for runtime."
+}

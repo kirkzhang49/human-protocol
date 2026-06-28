@@ -1,0 +1,29 @@
+{
+  "atlasSize": [1254, 1254],
+  "source": "src/assets/textures/environment/builder-puzzle-machines/image2-sources/route_switch_router_console_image2_source_v1.png",
+  "sourcePolicy": "Owned generated Image2 source sheet for the 3D builder route-switch console. Regions are UV sampled onto real Blender geometry so the 3D asset matches the 2D overlay style without baking live text, selected outputs, or a full UI poster.",
+  "license": "owned-generated-output",
+  "regions": {
+    "top_deck_plate": [100, 28, 690, 202],
+    "four_slot_rack_face": [32, 282, 982, 438],
+    "rotary_dial_face": [806, 18, 252, 252],
+    "authorization_key_lens": [1070, 58, 158, 214],
+    "empty_badge_bezel": [1058, 306, 166, 166],
+    "empty_badge_bezel_alt": [1058, 505, 166, 166],
+    "vertical_side_rail_cyan": [94, 724, 64, 420],
+    "vertical_side_rail_dark": [28, 724, 60, 420],
+    "short_side_lamp": [26, 18, 52, 210],
+    "round_gasket_dark": [168, 916, 94, 94],
+    "round_gasket_brass": [290, 916, 94, 94],
+    "copper_pipe_long": [262, 758, 238, 45],
+    "copper_pipe_mid": [262, 815, 238, 45],
+    "micro_bar_set": [520, 752, 276, 120],
+    "screw_cross_set": [822, 750, 186, 84],
+    "lower_long_trim": [164, 1045, 452, 70],
+    "lower_deep_panel": [92, 1136, 508, 70],
+    "copper_bus_long": [748, 1070, 480, 28],
+    "copper_bus_long_alt": [748, 1105, 480, 28],
+    "tiny_key_socket": [622, 1074, 74, 44]
+  },
+  "notes": "The large rack face is only one texture layer over a volumetric rack shell with separate knobs, badge sockets, side rails, pipes, screws, and recessed geometry. Runtime selected state and output meaning remain unbaked."
+}

@@ -1,0 +1,294 @@
+{
+  "schemaVersion": "hp.raw-webgpu.asset-sidecar.v1",
+  "levelId": "level_02_residential_simulation",
+  "modelKey": "hp_l2_cc0_dining_chair_polyhaven_v1",
+  "category": "room",
+  "file": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_dining_chair_polyhaven_v1.glb",
+  "fileName": "hp_l2_cc0_dining_chair_polyhaven_v1.glb",
+  "sourceAsset": {
+    "modelKey": "hp_l2_cc0_dining_chair_polyhaven_v1",
+    "category": "room",
+    "url": "/src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_dining_chair_polyhaven_v1.glb",
+    "file": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_dining_chair_polyhaven_v1.glb",
+    "sizeMeters": [
+      0.428,
+      0.96,
+      0.605
+    ],
+    "glb": {
+      "readable": true,
+      "byteLength": 172748,
+      "meshes": 3,
+      "nodes": 3,
+      "skins": 0,
+      "primitives": 3,
+      "materials": 3,
+      "textures": 3,
+      "images": 3,
+      "accessors": 10,
+      "bufferViews": 11,
+      "animations": [],
+      "extensionsUsed": [
+        "EXT_meshopt_compression",
+        "EXT_texture_webp",
+        "KHR_mesh_quantization"
+      ],
+      "estimatedTriangles": 17227
+    }
+  },
+  "rule": {
+    "modelKey": null,
+    "fileName": null,
+    "compileHiddenNodeExactCount": 0,
+    "compileHiddenNodePrefixCount": 0
+  },
+  "geometry": {
+    "rawFile": "src/assets/models-cooked/environment/level02-cc0-domestic/hp_l2_cc0_dining_chair_polyhaven_v1.glb",
+    "rawSource": "registered",
+    "status": "ready",
+    "vertexOffset": 485406,
+    "vertexCount": 51681,
+    "triangleCount": 17227,
+    "meshCount": 3,
+    "materialCount": 3,
+    "nodeCount": 3,
+    "skinCount": 0,
+    "rigidSkin": null,
+    "bounds": {
+      "min": [
+        -0.21383,
+        0,
+        -0.284276
+      ],
+      "center": [
+        0,
+        0.48,
+        0.018357
+      ],
+      "size": [
+        0.42766,
+        0.96,
+        0.605267
+      ]
+    },
+    "animationClips": [],
+    "nodeChunks": [
+      {
+        "nodeIndex": null,
+        "nodeName": "cc0_source_dining_chair_02",
+        "vertexOffset": 485406,
+        "vertexCount": 51033,
+        "bindMatrix": [
+          0.48,
+          0,
+          0,
+          0,
+          0,
+          0.48,
+          0,
+          0,
+          0,
+          0,
+          0.48,
+          0,
+          0,
+          0.48,
+          0,
+          1
+        ],
+        "inverseBindMatrix": [
+          2.083333,
+          0,
+          0,
+          0,
+          0,
+          2.083333,
+          0,
+          0,
+          0,
+          0,
+          2.083333,
+          0,
+          0,
+          -1,
+          0,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_underseat_service_tag",
+        "vertexOffset": 536439,
+        "vertexCount": 324,
+        "bindMatrix": [
+          0.072694,
+          0,
+          0,
+          0,
+          0,
+          0.072694,
+          0,
+          0,
+          0,
+          0,
+          0.072694,
+          0,
+          0,
+          0.4512,
+          0.295619,
+          1
+        ],
+        "inverseBindMatrix": [
+          13.756287,
+          0,
+          0,
+          0,
+          0,
+          13.756287,
+          0,
+          0,
+          0,
+          0,
+          13.756287,
+          0,
+          0,
+          -6.206836,
+          -4.06662,
+          1
+        ]
+      },
+      {
+        "nodeIndex": null,
+        "nodeName": "hp_underseat_cyan_tick",
+        "vertexOffset": 536763,
+        "vertexCount": 324,
+        "bindMatrix": [
+          0.025657,
+          0,
+          0,
+          0,
+          0,
+          0.025657,
+          0,
+          0,
+          0,
+          0,
+          0.025657,
+          0,
+          0.051313,
+          0.456,
+          0.306989,
+          1
+        ],
+        "inverseBindMatrix": [
+          38.976148,
+          0,
+          0,
+          0,
+          0,
+          38.976148,
+          0,
+          0,
+          0,
+          0,
+          38.976148,
+          0,
+          -2,
+          -17.773124,
+          -11.965247,
+          1
+        ]
+      }
+    ]
+  },
+  "instances": [
+    {
+      "id": "prop:prop_30j7ed",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_care_room",
+      "secondaryRoomId": null,
+      "position": [
+        15.5,
+        0,
+        2
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        4.712389,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          15.5,
+          0,
+          2
+        ],
+        "halfSize": [
+          0.214,
+          0.48,
+          0.3025
+        ]
+      }
+    },
+    {
+      "id": "prop:prop_rd3zq7",
+      "source": "map.props",
+      "role": "prop",
+      "roomId": "level_02_living_room",
+      "secondaryRoomId": null,
+      "position": [
+        -3.5,
+        0,
+        -3
+      ],
+      "localOffset": [
+        0,
+        0,
+        0
+      ],
+      "rotation": [
+        0,
+        0.785398,
+        0
+      ],
+      "scale": [
+        1,
+        1,
+        1
+      ],
+      "tags": [],
+      "visibility": {
+        "type": "room"
+      },
+      "state": null,
+      "estimatedBounds": {
+        "center": [
+          -3.5,
+          0,
+          -3
+        ],
+        "halfSize": [
+          0.214,
+          0.48,
+          0.3025
+        ]
+      }
+    }
+  ]
+}

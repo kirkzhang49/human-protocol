@@ -1,0 +1,292 @@
+{
+  "schemaVersion": "hp.builder.v1",
+  "projectId": "rb_l1",
+  "title": "维修舱·重制",
+  "rooms": [
+    {
+      "id": "rb_l1_r0",
+      "label": "维修主舱",
+      "style": "maintenance",
+      "center": [
+        0,
+        -5
+      ],
+      "size": [
+        14,
+        10
+      ]
+    },
+    {
+      "id": "rb_l1_r1",
+      "label": "配电壁龛",
+      "style": "maintenance",
+      "center": [
+        0,
+        -14.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l1_r2",
+      "label": "工具间",
+      "style": "hazard",
+      "center": [
+        0,
+        -23.5
+      ],
+      "size": [
+        12,
+        9
+      ]
+    },
+    {
+      "id": "rb_l1_r3",
+      "label": "检修电梯",
+      "style": "exit",
+      "center": [
+        0,
+        -31
+      ],
+      "size": [
+        12,
+        6
+      ]
+    }
+  ],
+  "doors": [
+    {
+      "id": "rb_l1_d0",
+      "fromRoomId": "rb_l1_r0",
+      "toRoomId": "rb_l1_r1",
+      "lockType": "none"
+    },
+    {
+      "id": "rb_l1_d1",
+      "fromRoomId": "rb_l1_r1",
+      "toRoomId": "rb_l1_r2",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "circuit_grid",
+      "puzzleRoomId": "rb_l1_r1",
+      "doorFamily": "industrial"
+    },
+    {
+      "id": "rb_l1_d2",
+      "fromRoomId": "rb_l1_r2",
+      "toRoomId": "rb_l1_r3",
+      "lockType": "puzzle_complete",
+      "puzzleKind": "valve_matrix",
+      "puzzleRoomId": "rb_l1_r2",
+      "doorFamily": "clinic"
+    }
+  ],
+  "props": [
+    {
+      "id": "rb_l1_p0",
+      "modelKey": "room_rm_maint_broken_cradle",
+      "roomId": "rb_l1_r0",
+      "position": [
+        -4.08,
+        -1.7999999999999998
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_p1",
+      "modelKey": "room_crate_stack",
+      "roomId": "rb_l1_r0",
+      "position": [
+        4.08,
+        -8.2
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_p2",
+      "modelKey": "room_fuse_box",
+      "roomId": "rb_l1_r0",
+      "position": [
+        -4.08,
+        -8
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_p3",
+      "modelKey": "room_fuse_box",
+      "roomId": "rb_l1_r1",
+      "position": [
+        -4.08,
+        -11.620000000000001
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1,
+      "story": {
+        "title": "检修工单",
+        "clue": "档案残缺：有一段记录被涂黑了。",
+        "hint": "翻到背面。"
+      }
+    },
+    {
+      "id": "rb_l1_p4",
+      "modelKey": "room_rm_maint_gantry_hoist",
+      "roomId": "rb_l1_r1",
+      "position": [
+        4.08,
+        -17.38
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_p5",
+      "modelKey": "room_locker_low",
+      "roomId": "rb_l1_r1",
+      "position": [
+        -4.08,
+        -17.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_p6",
+      "modelKey": "room_rm_maint_gantry_hoist",
+      "roomId": "rb_l1_r2",
+      "position": [
+        -4.08,
+        -20.62
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_p7",
+      "modelKey": "room_rm_maint_tool_wall",
+      "roomId": "rb_l1_r2",
+      "position": [
+        4.08,
+        -26.38
+      ],
+      "rotationY": -1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_p8",
+      "modelKey": "room_locker_low",
+      "roomId": "rb_l1_r2",
+      "position": [
+        -4.08,
+        -26.2
+      ],
+      "rotationY": 1.5707963267948966,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_hp9",
+      "modelKey": "room_rm_maint_weapon_cradle",
+      "roomId": "rb_l1_r0",
+      "position": [
+        1.8592833001166582,
+        -6.784458527341485
+      ],
+      "rotationY": 0,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_hp10",
+      "modelKey": "room_rm_maint_cable_spine",
+      "roomId": "rb_l1_r0",
+      "position": [
+        0.02031407319009304,
+        -6.066866172477603
+      ],
+      "rotationY": 0,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_hp11",
+      "modelKey": "room_rm_maint_coolant_drums",
+      "roomId": "rb_l1_r0",
+      "position": [
+        -1.1596843404695392,
+        -4.119726617820561
+      ],
+      "rotationY": 0,
+      "scale": 1
+    },
+    {
+      "id": "rb_l1_hp12",
+      "modelKey": "room_rm_maint_battery_rack",
+      "roomId": "rb_l1_r1",
+      "position": [
+        0.2558701066300273,
+        -13.032631744630635
+      ],
+      "rotationY": 0,
+      "scale": 1
+    }
+  ],
+  "puzzles": [
+    {
+      "id": "rb_l1_pz1",
+      "kind": "circuit_grid",
+      "linkedDoorId": "rb_l1_d1",
+      "roomId": "rb_l1_r1",
+      "position": [
+        0,
+        -14.5
+      ],
+      "rotationY": 0
+    },
+    {
+      "id": "rb_l1_pz2",
+      "kind": "valve_matrix",
+      "linkedDoorId": "rb_l1_d2",
+      "roomId": "rb_l1_r2",
+      "position": [
+        0,
+        -23.5
+      ],
+      "rotationY": 0
+    }
+  ],
+  "robots": [
+    {
+      "id": "rb_l1_rb0",
+      "roomId": "rb_l1_r2",
+      "archetype": "repair_drone",
+      "count": 1
+    }
+  ],
+  "pickups": [
+    {
+      "id": "rb_l1_pk0",
+      "kind": "repairKit",
+      "roomId": "rb_l1_r1",
+      "position": [
+        -2,
+        -16.5
+      ]
+    }
+  ],
+  "story": {
+    "templateId": "maintenance_incident",
+    "victoryLine": "档案残缺：有一段记录被涂黑了。",
+    "transitionLine": "电梯门合拢，登记灯熄灭。"
+  },
+  "exitRoomId": "rb_l1_r3",
+  "lighting": {
+    "ambient": 0.5,
+    "keyColor": "#6fe3c2",
+    "keyIntensity": 0.85,
+    "fog": 0.4,
+    "bloom": 0.5,
+    "shadow": 0.55
+  }
+}

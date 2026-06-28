@@ -1,0 +1,23 @@
+{
+  "assetId": "route_switch_integrated_output_module_image2_source_v1",
+  "generatedDate": "2026-06-21",
+  "tool": "built-in image_gen",
+  "model": "not-exposed-by-built-in-image-gen",
+  "toolCallId": "not-exposed-by-built-in-image-gen",
+  "generatedImagesDirectory": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd",
+  "originalGeneratedPath": "/Users/zhengkaizhang/.codex/generated_images/019eed1d-4132-7921-93d5-aedf378351dd/ig_020ee0b0cf46f65e016a38c7b5339c819aaf96a23d132a8ed1.png",
+  "projectSourcePath": "src/assets/gui/route-switch/image2-sources/route_switch_integrated_output_module_image2_source_v1.png",
+  "licenseLabel": "owned-generated-output",
+  "termsLabel": "openai-generated-output-user-owned-subject-to-openai-terms",
+  "sourceRole": "Image2 source sheet for integrated 2D route-switch output module housing",
+  "promptSummary": "Ancient mechanical output module housing with empty upper rotary socket, empty lower badge socket, central spine, brass rails, blackened steel, no text.",
+  "derivativeOutputs": [
+    "src/assets/gui/route-switch/route_switch_output_rotary_buttons_image2_v1.png",
+    "src/assets/gui/route-switch/route_switch_output_rotary_buttons_image2_v1.regions.json"
+  ],
+  "derivativeScript": "scripts/asset-build/cut-route-switch-rotary-buttons-image2.mjs",
+  "notes": [
+    "The cutter composites source-painted rotary knob states into this housing.",
+    "The lower target meaning remains a separate Image2 badge layer so runtime can map door, terminal, robot, and output gate options without baked text."
+  ]
+}

@@ -1,0 +1,23 @@
+node_modules/
+dist/
+.tmp/
+tmp/
+.vercel/
+
+*.zip
+*.log
+.DS_Store
+
+node_modules/.tmp/
+
+# Generated local AI/planner artifacts. Keep committed campaign fixtures only.
+data/ai/train/
+data/ai/corpus.jsonl
+data/ai/negatives.jsonl
+data/ai/demo-*.builder.json
+
+# Generated Raw WebGPU QA reports.
+src/assets/manifests/generated/raw-webgpu/qa/*.json
+
+# Generated Raw builder-runtime geometry can exceed GitHub's 100MB file limit.
+src/assets/manifests/generated/raw-webgpu/render_plan_builder_runtime_resources_geometry.bin
