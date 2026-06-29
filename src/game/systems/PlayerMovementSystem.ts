@@ -6,6 +6,8 @@ import type { GameWorld } from "../core/GameWorld";
 import { clamp, damp, resolveCircleAabb, resolveCircleObb } from "../core/math";
 import { dampenPlanarVelocityAgainstKinematicRecovery, reconcilePlanarVelocityWithKinematicResult } from "./KinematicMovement";
 
+const LEGACY_FALLBACK_MAX_STEP_FACTOR = 0.45;
+
 export class PlayerMovementSystem implements GameSystem {
   private readonly moveDirection = new Vector3();
   private readonly forward = new Vector3();
@@ -39,10 +41,7 @@ export class PlayerMovementSystem implements GameSystem {
       this.updateWalk(world, delta, wantsMove);
     }
 
-    if (!this.moveWithPhysics(world, delta)) {
-      player.position.addScaledVector(player.velocity, delta);
-      this.resolveArena(world);
-    }
+    if (!this.moveWithPhysics(world, delta)) this.moveWithLegacyFallback(world, delta);
     player.movementAmount = clamp(player.velocity.length() / (playerConfig.moveSpeed * 1.6), 0, 1);
     player.isMoving = player.movementAmount > 0.05;
   }
@@ -124,6 +123,20 @@ export class PlayerMovementSystem implements GameSystem {
     player.position.copy(result.position);
     reconcilePlanarVelocityWithKinematicResult(player.velocity, desiredTranslation, result, delta);
     return true;
+  }
+
+  private moveWithLegacyFallback(world: GameWorld, delta: number) {
+    const player = world.player;
+    const distance = player.velocity.length() * delta;
+    const maxStepDistance = Math.max(0.08, playerConfig.radius * LEGACY_FALLBACK_MAX_STEP_FACTOR);
+    const steps = Math.max(1, Math.ceil(distance / maxStepDistance));
+    const stepDelta = delta / steps;
+
+    for (let step = 0; step < steps; step += 1) {
+      if (player.velocity.lengthSq() <= 0.000001) break;
+      player.position.addScaledVector(player.velocity, stepDelta);
+      this.resolveArena(world);
+    }
   }
 
   private resolveArena(world: GameWorld) {

@@ -42,6 +42,26 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(world.player.velocity.x).toBeGreaterThanOrEqual(-0.01);
   });
 
+  it("keeps fallback dash movement from tunneling through thin blockers", () => {
+    const world = createPlayingWorld();
+    world.player.position.set(0, 0, 0);
+    world.player.dashTimeRemaining = 0.2;
+    world.player.dashDirection.set(1, 0, 0);
+    world.player.velocity.set(0, 0, 0);
+    world.obstacles.push({
+      id: "thin_dash_blocker",
+      visualKey: "test_door",
+      position: new Vector3(1.2, 0.5, 0),
+      halfSize: new Vector3(0.05, 0.5, 2),
+    });
+    world.markObstacleIndexDirty();
+    world.moveKinematicCircleWithPhysics = vi.fn(() => null);
+
+    new PlayerMovementSystem().update(world, 0.1);
+
+    expect(world.player.position.x).toBeLessThan(0.55);
+  });
+
   it("damps enemy velocity to the physics-resolved translation when blocked", () => {
     const world = createPlayingWorld();
     const enemy = world.spawnEnemy("repair_drone", "blocked_enemy", new Vector3(0, 0, -2.5), 0);
