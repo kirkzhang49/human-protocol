@@ -1,4 +1,4 @@
-import { Vector3 } from "three";
+import { Quaternion, Vector3 } from "three";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { GameWorld } from "../core/GameWorld";
 
@@ -92,5 +92,45 @@ describe("GameWorld dynamic prop physics", () => {
 
     expect(prop?.position.x).toBeGreaterThan(1.02);
     expect(prop?.position.y).toBeCloseTo(0.35, 4);
+  });
+
+  it("despawns old sleeping dynamic props while preserving awake props", () => {
+    const world = new GameWorld();
+    const sleeping = world.spawnDynamicProp({
+      id: "sleeping-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+    const awake = world.spawnDynamicProp({
+      id: "awake-crate",
+      modelKey: "test_crate",
+      position: new Vector3(1, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+    const rotation = new Quaternion();
+
+    expect(sleeping).not.toBeNull();
+    expect(awake).not.toBeNull();
+    world.physics.dynamicBodySnapshots = vi.fn(() => [
+      {
+        id: "sleeping-crate",
+        position: sleeping!.position,
+        rotation,
+        sleeping: true,
+      },
+      {
+        id: "awake-crate",
+        position: awake!.position,
+        rotation,
+        sleeping: false,
+      },
+    ]);
+
+    world.syncDynamicPropsFromPhysics(16);
+
+    expect(world.dynamicProps.map((prop) => prop.id)).toEqual(["awake-crate"]);
   });
 });

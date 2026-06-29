@@ -122,6 +122,8 @@ export type { ObjectiveEvent, RuntimeDebugOptions, TouchInputState, UpgradeModif
 const dialogueToastDurationScale = 0.5;
 const RECLAMATION_MOTHER_BOSS_MODEL_KEY = "hp_enemy_reclamation_mother_final_horror";
 const MAX_DYNAMIC_PROPS = 12;
+const DYNAMIC_PROP_SLEEP_DESPAWN_SECONDS = 12;
+const DYNAMIC_PROP_HARD_DESPAWN_SECONDS = 45;
 
 export class GameWorld {
   readonly platform: PlatformAdapter = createPlatformAdapter();
@@ -321,6 +323,18 @@ export class GameWorld {
       prop.yaw = yawFromQuaternion(snapshot.rotation);
       prop.sleeping = snapshot.sleeping;
     }
+    this.pruneDynamicProps();
+  }
+
+  private pruneDynamicProps() {
+    const beforeCount = this.dynamicProps.length;
+    for (let index = this.dynamicProps.length - 1; index >= 0; index -= 1) {
+      const prop = this.dynamicProps[index];
+      const sleptPastGrace = prop.sleeping && prop.age >= DYNAMIC_PROP_SLEEP_DESPAWN_SECONDS;
+      const exceededHardLifetime = prop.age >= DYNAMIC_PROP_HARD_DESPAWN_SECONDS;
+      if (sleptPastGrace || exceededHardLifetime) this.dynamicProps.splice(index, 1);
+    }
+    if (this.dynamicProps.length !== beforeCount) this.syncPhysicsDynamicProps();
   }
 
   physicsDebugSnapshot() {
