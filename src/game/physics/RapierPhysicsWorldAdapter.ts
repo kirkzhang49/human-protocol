@@ -25,6 +25,9 @@ interface DynamicBodyEntry {
 
 const identityRotation = { x: 0, y: 0, z: 0, w: 1 };
 const minimumMoveDistanceSq = 0.000001;
+const kinematicDynamicPushImpulsePerMeter = 1.4;
+const kinematicDynamicPushMinImpulse = 0.35;
+const kinematicDynamicPushMaxImpulse = 1.6;
 
 export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
   readonly mode = "rapier" as const;
@@ -36,6 +39,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
   private readonly obstacleByColliderHandle = new Map<number, ObstacleState>();
   private readonly dynamicBodies = new Map<string, DynamicBodyEntry>();
   private readonly dynamicColliderHandles = new Set<number>();
+  private readonly dynamicBodyIdByColliderHandle = new Map<number, string>();
   private lastSyncMs = 0;
   private lastMoveMs = 0;
   private lastQueryMs = 0;
@@ -153,6 +157,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
     const center = shapeCenterForGroundedShape(move.position, characterShape.groundOffsetY);
     const remaining = planarTranslation(move.desiredTranslation);
     const filterPredicate = this.filterPredicate(move.filter, true);
+    const pushedDynamicBodyIds = new Set<string>();
     let blocked = this.recoverKinematicOverlap(center, characterShape.shape, filterPredicate);
 
     for (let iteration = 0; iteration < 3; iteration += 1) {
@@ -178,6 +183,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       }
 
       blocked = true;
+      this.pushDynamicBodyFromKinematicHit(hit.collider, move.desiredTranslation, pushedDynamicBodyIds);
       const distance = Math.max(0.001, remaining.length());
       const safeToi = Math.max(0, Math.min(1, hit.time_of_impact - 0.002 / distance));
       const applied = remaining.clone().multiplyScalar(safeToi);
@@ -207,7 +213,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
     for (const [id, entry] of this.dynamicBodies) {
       if (nextIds.has(id)) continue;
       this.world.removeRigidBody(entry.body);
-      this.dynamicColliderHandles.delete(entry.colliderHandle);
+      this.forgetDynamicCollider(entry);
       this.dynamicBodies.delete(id);
     }
 
@@ -216,7 +222,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       const existing = this.dynamicBodies.get(body.id);
       if (existing && existing.halfSizeKey !== halfSizeKey) {
         this.world.removeRigidBody(existing.body);
-        this.dynamicColliderHandles.delete(existing.colliderHandle);
+        this.forgetDynamicCollider(existing);
         this.dynamicBodies.delete(body.id);
       }
 
@@ -290,9 +296,34 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       .setRestitution(0.04);
     const collider = this.world.createCollider(colliderDesc, rigidBody);
     this.dynamicColliderHandles.add(collider.handle);
+    this.dynamicBodyIdByColliderHandle.set(collider.handle, body.id);
     const entry = { body: rigidBody, colliderHandle: collider.handle, halfSizeKey };
     this.dynamicBodies.set(body.id, entry);
     return entry;
+  }
+
+  private forgetDynamicCollider(entry: DynamicBodyEntry) {
+    this.dynamicColliderHandles.delete(entry.colliderHandle);
+    this.dynamicBodyIdByColliderHandle.delete(entry.colliderHandle);
+  }
+
+  private pushDynamicBodyFromKinematicHit(collider: Collider, desiredTranslation: Vector3, pushedDynamicBodyIds: Set<string>) {
+    const bodyId = this.dynamicBodyIdByColliderHandle.get(collider.handle);
+    if (!bodyId || pushedDynamicBodyIds.has(bodyId)) return;
+    const entry = this.dynamicBodies.get(bodyId);
+    if (!entry) return;
+
+    const direction = planarTranslation(desiredTranslation);
+    const distance = direction.length();
+    if (distance <= Math.sqrt(minimumMoveDistanceSq)) return;
+
+    const impulseMagnitude = Math.min(
+      kinematicDynamicPushMaxImpulse,
+      Math.max(kinematicDynamicPushMinImpulse, distance * kinematicDynamicPushImpulsePerMeter),
+    );
+    direction.multiplyScalar(impulseMagnitude / distance);
+    entry.body.applyImpulse({ x: direction.x, y: 0, z: direction.z }, true);
+    pushedDynamicBodyIds.add(bodyId);
   }
 
   private filterPredicate(filter: PhysicsSegmentQuery["filter"], includeDynamicColliders = false) {

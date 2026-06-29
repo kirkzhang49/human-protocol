@@ -96,6 +96,41 @@ describe("GameWorld dynamic prop physics", () => {
     expect((moved?.position.x ?? start.x) - start.x).toBeLessThan(0.45);
   });
 
+  it("nudges opt-in dynamic props when kinematic characters press into them", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    const prop = world.spawnDynamicProp({
+      id: "player-nudged-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0.9, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+    world.physics.step(1 / 120);
+
+    const moved = world.moveKinematicCircleWithPhysics({
+      id: "player",
+      position: new Vector3(0, 0, 0),
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(1.6, 0, 0),
+    });
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(moved?.blocked).toBe(true);
+    expect(prop?.position.x).toBeGreaterThan(0.91);
+    expect(prop?.position.y).toBeCloseTo(0.35, 4);
+  });
+
   it("pushes opt-in dynamic props away from combat shock origins", async () => {
     vi.stubGlobal("window", {
       ...globalThis,

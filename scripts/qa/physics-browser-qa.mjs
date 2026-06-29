@@ -570,6 +570,7 @@ const kinematicProbe = `(() => {
       world.syncPhysicsDynamicProps();
       world.physics?.step?.(1 / 120);
       world.syncDynamicPropsFromPhysics?.(0);
+      const propStartX = Number(prop?.position?.x ?? propPosition.x);
       const playerMoved = world.moveKinematicCircleWithPhysics({
         id: "qa_browser_player_dynamic_blocker",
         position: start,
@@ -585,8 +586,11 @@ const kinematicProbe = `(() => {
         desiredTranslation: desired,
         filter: (candidate) => candidate.enemyNavigation !== "soft" && candidate.enemyNavigation !== "ignore",
       });
+      for (let step = 0; step < 3; step += 1) world.physics?.step?.(1 / 60);
+      world.syncDynamicPropsFromPhysics?.(1 / 20);
       const playerTravelX = Number((playerMoved?.position?.x ?? start.x) - start.x);
       const enemyTravelX = Number((enemyMoved?.position?.x ?? start.x) - start.x);
+      const propTravelX = Number((prop?.position?.x ?? propStartX) - propStartX);
       const dynamicCountDelta = (world.dynamicProps?.length ?? beforeCount) - beforeCount;
       return {
         spawned: Boolean(prop),
@@ -594,6 +598,8 @@ const kinematicProbe = `(() => {
         playerTravelX,
         enemyFilteredBlocked: Boolean(enemyMoved?.blocked),
         enemyTravelX,
+        propNudged: propTravelX > 0.005,
+        propTravelX,
         dynamicCountDelta,
         pass: Boolean(
           prop &&
@@ -601,6 +607,7 @@ const kinematicProbe = `(() => {
           playerTravelX < 0.45 &&
           enemyMoved?.blocked &&
           enemyTravelX < 0.45 &&
+          propTravelX > 0.005 &&
           dynamicCountDelta === 1
         ),
       };
