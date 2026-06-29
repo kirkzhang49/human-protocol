@@ -19,6 +19,7 @@
     "assets:viewmodel-sidearm-real-layered:blender": "/Applications/Blender.app/Contents/MacOS/blender --background --python scripts/asset-build/blender-generate-sidearm-real-layered-viewmodel.py && npx --yes @gltf-transform/cli resize work/scripted-derived/hp_viewmodel_sidearm_scripted_derived_v2_unoptimized.glb work/scripted-derived/hp_viewmodel_sidearm_scripted_derived_v2_1024.glb --width 1024 --height 1024 && npx --yes @gltf-transform/cli webp work/scripted-derived/hp_viewmodel_sidearm_scripted_derived_v2_1024.glb work/scripted-derived/hp_viewmodel_sidearm_scripted_derived_v2_webp.glb --quality 86 --effort 80 && npx --yes @gltf-transform/cli meshopt work/scripted-derived/hp_viewmodel_sidearm_scripted_derived_v2_webp.glb src/assets/models/viewmodel/prototypes/hp_viewmodel_sidearm_scripted_derived_v2.glb --level high",
     "qa:render-plan": "node scripts/qa/render-plan-audit.mjs",
     "qa:root-menu": "node scripts/qa/root-menu-browser-qa.mjs",
+    "qa:physics:browser": "node scripts/qa/physics-browser-qa.mjs",
     "clean:runtime": "rm -rf dist node_modules/.vite node_modules/.tmp .tmp",
     "smoke:campaign": "node scripts/qa/smoke-campaign.mjs",
     "smoke:age-adapter": "tsx --tsconfig tsconfig.app.json scripts/qa/age-adapter-smoke.ts",

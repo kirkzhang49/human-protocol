@@ -14,12 +14,18 @@
 | --- | --- | --- |
 | Phase 1-2 核心/静态 collider | 已实现。`src/game/physics` 已有 Rapier adapter、null fallback、静态 obstacle sync、yaw collider 和 debug snapshot。 | 继续保留 `?physics=legacy` 回滚路径，观察真实 QA。 |
 | Phase 3 查询替换 | 已实现主路径。projectile/LOS/enemy navigation query 可走 Rapier，并保留 dual-run parity 统计。 | Phase 6 的近战/枪械 shape sweep 还没完整替换。 |
-| Phase 4 玩家移动 | 已实现代码主路径。`PlayerMovementSystem` 先尝试 `moveKinematicCircleWithPhysics`，失败才走 legacy fallback；已有速度修正、恢复修正、dash 防穿透回归。 | 还要做浏览器手感 QA：五关+试玩、移动端、门框/旋转家具/窄通道逐点验收。 |
-| Phase 5 怪物移动 | 已实现代码主路径。`EnemyAISystem` 的移动和 post-spacing recovery 已走 Rapier；`enemyNavigation` soft/ignore 过滤、boss/leader 高度、近墙恢复都有回归。 | 还要做手感调参：boss/leader 在真实关卡门边和大型家具旁的长期抖动观察。 |
+| Phase 4 玩家移动 | 已实现代码主路径。`PlayerMovementSystem` 先尝试 `moveKinematicCircleWithPhysics`，失败才走 legacy fallback；已有速度修正、恢复修正、dash 防穿透回归。新增 `qa:physics:browser`，在真实 Chrome + Raw WebGPU 下覆盖五个官方关卡、桌面/移动横屏、RAF/game loop、Rapier static collider 与玩家 kinematic probe。 | 还要做人工手感 QA：试玩包、门框/旋转家具/窄通道逐点验收，以及移动端真机触控体感。 |
+| Phase 5 怪物移动 | 已实现代码主路径。`EnemyAISystem` 的移动和 post-spacing recovery 已走 Rapier；`enemyNavigation` soft/ignore 过滤、boss/leader 高度、近墙恢复都有回归。`qa:physics:browser` 在 Level 1 含活体敌人 probe，确认浏览器 runtime 下敌人 kinematic query 可用。 | 还要做手感调参：boss/leader 在真实关卡门边和大型家具旁的长期抖动观察，尤其是高体型敌人与门/家具边缘的连续追击。 |
 | Phase 7 动态小物件 | 基础层已实现。`DynamicPropState`、Rapier dynamic body、冲击力、睡眠/寿命清理、Raw WebGPU/Three fallback 读取都已具备；并已加配置护栏，限制数量、体积、关键标签。 | 还没把真实关卡里的小箱子/轻椅/碎片逐关标成 dynamic；需要少量精选，不应批量动态化。 |
 | Phase 8 清理 legacy | 未开始。 | 需要等 QA 证明 Rapier 主路径稳定，再删重复 legacy。 |
 
 因此，Phase 4/5 现在不是“不能做”，而是已经进入“主路径实现 + 回归覆盖 + 实机手感 QA”的阶段。Phase 7 也已经有基础层，但必须谨慎：先用配置护栏保证关键谜题、门、key item、大型机器不会被误标为动态物件，再逐关挑少量轻物件试做。
+
+### 0.1 最新 QA 证据
+
+- `npm run qa:playthrough:rapier`：五个官方关卡 headless real-playthrough 已覆盖 Rapier 主路径。
+- `npm run qa:physics:browser`：真实 Chrome browser QA，五个官方关卡均通过 Raw WebGPU backend、browser RAF/game loop、Rapier runtime、console clean 检查；包含 Level 2 移动横屏视口。
+- `npm run qa:builder:browser`：仍应作为 /build 试玩包与 deep bake 浏览器流程的主 QA 入口；本轮复跑发现它还在寻找旧的“快速生成/深度烘焙”双按钮，需要另行刷新到当前“烘焙并试玩 / WebGPU 试玩”单按钮 UI。物理专项脚本不替代 builder 生产链路测试。
 
 ---
 
