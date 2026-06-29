@@ -48,6 +48,43 @@ describe("RapierPhysicsWorldAdapter", () => {
     ).toBe(false);
   });
 
+  it("honors enemyNavigation filters for kinematic enemy movement", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+    adapter.syncStaticObstacles([
+      obstacle({
+        id: "soft-puzzle-host",
+        position: new Vector3(0.55, 0.5, 0),
+        halfSize: new Vector3(0.25, 0.5, 0.65),
+        enemyNavigation: "soft",
+      }),
+      obstacle({
+        id: "ignored-puzzle-host",
+        position: new Vector3(1.15, 0.5, 0),
+        halfSize: new Vector3(0.25, 0.5, 0.65),
+        enemyNavigation: "ignore",
+      }),
+      obstacle({
+        id: "solid-wall",
+        position: new Vector3(1.9, 0.5, 0),
+        halfSize: new Vector3(0.25, 0.5, 0.65),
+      }),
+    ]);
+
+    const moved = adapter.moveKinematicCircle({
+      id: "enemy:nav-filter",
+      position: new Vector3(0, 0, 0),
+      radius: 0.28,
+      height: 1.3,
+      desiredTranslation: new Vector3(2.4, 0, 0),
+      filter: (candidate) => candidate.enemyNavigation !== "soft" && candidate.enemyNavigation !== "ignore",
+    });
+
+    expect(moved.blocked).toBe(true);
+    expect(moved.position.x).toBeGreaterThan(1.2);
+    expect(moved.position.x).toBeLessThan(1.5);
+  });
+
   it("slides kinematic circles out of fixed obstacle colliders", async () => {
     const adapter = createRapierPhysicsWorldAdapter();
     await adapter.init();
