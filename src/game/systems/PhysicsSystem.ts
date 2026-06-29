@@ -4,7 +4,10 @@ import type { GameWorld } from "../core/GameWorld";
 export class PhysicsSystem implements GameSystem {
   update(world: GameWorld, delta: number) {
     world.ensurePhysicsReady();
-    if (!world.physics.ready) return;
+    if (!world.physics.ready) {
+      world.syncDynamicPropsFromPhysics(delta);
+      return;
+    }
     world.syncPhysicsStaticObstacles();
     world.syncPhysicsDynamicProps();
     world.physics.step(delta);

@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { resolvePropCollisionProxy } from "../config/MapGeometry";
 import { GameWorld } from "../core/GameWorld";
 import { createProjectile } from "../entities/createProjectile";
+import { PhysicsSystem } from "../systems/PhysicsSystem";
 import { ProjectileSystem } from "../systems/ProjectileSystem";
 
 describe("GameWorld dynamic prop physics", () => {
@@ -206,6 +207,24 @@ describe("GameWorld dynamic prop physics", () => {
     world.physics.dynamicBodySnapshots = vi.fn(() => []);
 
     world.syncDynamicPropsFromPhysics(46);
+
+    expect(world.dynamicProps).toHaveLength(0);
+  });
+
+  it("despawns old dynamic props through PhysicsSystem even before physics is ready", () => {
+    const world = new GameWorld();
+    const prop = world.spawnDynamicProp({
+      id: "not-ready-expiring-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+
+    expect(prop).not.toBeNull();
+    world.physics.dynamicBodySnapshots = vi.fn(() => []);
+
+    new PhysicsSystem().update(world, 46);
 
     expect(world.dynamicProps).toHaveLength(0);
   });
