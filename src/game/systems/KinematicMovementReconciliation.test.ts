@@ -122,6 +122,34 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(world.player.isDashing).toBe(false);
   });
 
+  it("blocks player dash on opt-in dynamic props and nudges them", async () => {
+    const world = await createRapierPlayingWorld();
+    const prop = world.spawnDynamicProp({
+      id: "rapier_dash_dynamic_crate",
+      modelKey: "test_crate",
+      position: new Vector3(1.55, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+
+    expect(prop).not.toBeNull();
+    expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(1);
+    const propStartX = prop!.position.x;
+    world.player.dashTimeRemaining = 0.2;
+    world.player.dashDirection.set(1, 0, 0);
+
+    new PlayerMovementSystem().update(world, 0.06);
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(world.player.position.x).toBeLessThan(0.85);
+    expect(world.player.velocity.length()).toBeLessThan(0.1);
+    expect(world.player.dashTimeRemaining).toBe(0);
+    expect(world.player.isDashing).toBe(false);
+    expect(prop!.position.x).toBeGreaterThan(propStartX + 0.01);
+    expect(prop!.position.y).toBeCloseTo(0.35, 4);
+  });
+
   it("keeps player dash sliding along rotated Rapier furniture", async () => {
     const world = await createRapierPlayingWorld();
     world.player.position.set(-1, 0, -0.65);
