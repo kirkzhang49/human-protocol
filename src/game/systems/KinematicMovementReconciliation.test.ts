@@ -1,11 +1,15 @@
 import { Vector3 } from "three";
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import { GameWorld } from "../core/GameWorld";
 import type { PhysicsKinematicCircleMove } from "../physics/PhysicsWorldAdapter";
 import { EnemyAISystem } from "./EnemyAISystem";
 import { PlayerMovementSystem } from "./PlayerMovementSystem";
 
 describe("Rapier kinematic movement reconciliation", () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
   it("damps player velocity to the physics-resolved translation when blocked", () => {
     const world = createPlayingWorld();
     world.input.move.set(0, -1);
@@ -60,6 +64,83 @@ describe("Rapier kinematic movement reconciliation", () => {
     new PlayerMovementSystem().update(world, 0.1);
 
     expect(world.player.position.x).toBeLessThan(0.55);
+  });
+
+  it("keeps player dash moving through a Rapier-passable doorframe", async () => {
+    const world = await createRapierPlayingWorld();
+    world.obstacles.push(
+      {
+        id: "rapier_passable_left_post",
+        visualKey: "test_door",
+        position: new Vector3(-0.91, 0.75, -1),
+        halfSize: new Vector3(0.1, 0.75, 0.2),
+      },
+      {
+        id: "rapier_passable_right_post",
+        visualKey: "test_door",
+        position: new Vector3(0.91, 0.75, -1),
+        halfSize: new Vector3(0.1, 0.75, 0.2),
+      },
+    );
+    world.markObstacleIndexDirty();
+    world.player.dashTimeRemaining = 0.2;
+    world.player.dashDirection.set(0, 0, -1);
+
+    new PlayerMovementSystem().update(world, 0.06);
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(2);
+    expect(world.player.position.z).toBeLessThan(-1.35);
+    expect(world.player.velocity.z).toBeLessThan(-1);
+  });
+
+  it("blocks player dash at an undersized Rapier doorframe", async () => {
+    const world = await createRapierPlayingWorld();
+    world.obstacles.push(
+      {
+        id: "rapier_tight_left_post",
+        visualKey: "test_door",
+        position: new Vector3(-0.8, 0.75, -1),
+        halfSize: new Vector3(0.1, 0.75, 0.2),
+      },
+      {
+        id: "rapier_tight_right_post",
+        visualKey: "test_door",
+        position: new Vector3(0.8, 0.75, -1),
+        halfSize: new Vector3(0.1, 0.75, 0.2),
+      },
+    );
+    world.markObstacleIndexDirty();
+    world.player.dashTimeRemaining = 0.2;
+    world.player.dashDirection.set(0, 0, -1);
+
+    new PlayerMovementSystem().update(world, 0.06);
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(2);
+    expect(world.player.position.z).toBeGreaterThan(-0.7);
+    expect(world.player.velocity.length()).toBeLessThan(0.1);
+    expect(world.player.dashTimeRemaining).toBe(0);
+    expect(world.player.isDashing).toBe(false);
+  });
+
+  it("keeps player dash sliding along rotated Rapier furniture", async () => {
+    const world = await createRapierPlayingWorld();
+    world.player.position.set(-1, 0, -0.65);
+    world.obstacles.push({
+      id: "rapier_rotated_display_case",
+      visualKey: "test_display_case",
+      position: new Vector3(0.15, 0.75, -0.25),
+      halfSize: new Vector3(0.24, 0.75, 1),
+      yaw: Math.PI / 4,
+    });
+    world.markObstacleIndexDirty();
+    world.player.dashTimeRemaining = 0.2;
+    world.player.dashDirection.set(0.97, 0, 0.24).normalize();
+
+    new PlayerMovementSystem().update(world, 0.06);
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(1);
+    expect(world.player.position.x).toBeGreaterThan(-0.95);
+    expect(world.player.velocity.x).toBeGreaterThan(0.5);
   });
 
   it("damps enemy velocity to the physics-resolved translation when blocked", () => {
@@ -197,5 +278,18 @@ function createPlayingWorld() {
     enemy.isAlive = false;
     enemy.deathAge = 99;
   }
+  return world;
+}
+
+async function createRapierPlayingWorld() {
+  vi.stubGlobal("window", {
+    ...globalThis,
+    location: {
+      search: "?physics=rapier",
+      hostname: "localhost",
+    },
+  });
+  const world = createPlayingWorld();
+  await world.physics.init();
   return world;
 }

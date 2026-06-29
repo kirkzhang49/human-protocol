@@ -4,15 +4,21 @@ import { playerConfig } from "../config/playerConfig";
 import type { GameSystem } from "../core/GameLoop";
 import type { GameWorld } from "../core/GameWorld";
 import { clamp, damp, resolveCircleAabb, resolveCircleObb } from "../core/math";
+import type { PhysicsKinematicMoveResult } from "../physics/PhysicsWorldAdapter";
 import { dampenPlanarVelocityAgainstKinematicRecovery, reconcilePlanarVelocityWithKinematicResult } from "./KinematicMovement";
 
 const LEGACY_FALLBACK_MAX_STEP_FACTOR = 0.45;
+const DASH_HEAD_ON_BLOCK_ALIGNMENT = 0.94;
+const DASH_HEAD_ON_BLOCK_RETAINED_DISTANCE = 0.55;
+const MINIMUM_DASH_SLIDE_TRANSLATION = 0.000001;
 
 export class PlayerMovementSystem implements GameSystem {
   private readonly moveDirection = new Vector3();
   private readonly forward = new Vector3();
   private readonly right = new Vector3();
   private readonly recoveryDelta = new Vector3();
+  private readonly dashDesired = new Vector3();
+  private readonly dashResolved = new Vector3();
 
   update(world: GameWorld, delta: number) {
     if (world.session.mode !== "playing") return;
@@ -106,6 +112,7 @@ export class PlayerMovementSystem implements GameSystem {
 
   private moveWithPhysics(world: GameWorld, delta: number) {
     const player = world.player;
+    const wasDashing = player.dashTimeRemaining > 0 || player.isDashing;
     const bounds = movementBoundsForLevel(world.level, playerConfig.radius);
     const desiredTranslation = player.velocity.clone().multiplyScalar(delta);
     const targetX = clamp(player.position.x + desiredTranslation.x, bounds.minX, bounds.maxX);
@@ -122,7 +129,45 @@ export class PlayerMovementSystem implements GameSystem {
     if (!result) return false;
     player.position.copy(result.position);
     reconcilePlanarVelocityWithKinematicResult(player.velocity, desiredTranslation, result, delta);
+    if (wasDashing) this.reconcileDashAfterPhysicsBlock(player, desiredTranslation, result);
     return true;
+  }
+
+  private reconcileDashAfterPhysicsBlock(
+    player: GameWorld["player"],
+    desiredTranslation: Vector3,
+    result: PhysicsKinematicMoveResult,
+  ) {
+    if (!result.blocked) return;
+
+    this.dashDesired.copy(desiredTranslation).setY(0);
+    this.dashResolved.copy(result.translation).setY(0);
+    const desiredDistance = this.dashDesired.length();
+    const resolvedDistance = this.dashResolved.length();
+    if (desiredDistance <= 0.000001) return;
+    if (resolvedDistance <= MINIMUM_DASH_SLIDE_TRANSLATION) {
+      this.stopDashAgainstObstacle(player);
+      return;
+    }
+
+    const retainedDistance = resolvedDistance / desiredDistance;
+    const alignment = this.dashDesired.dot(this.dashResolved) / (desiredDistance * resolvedDistance);
+    if (
+      retainedDistance < DASH_HEAD_ON_BLOCK_RETAINED_DISTANCE &&
+      alignment > DASH_HEAD_ON_BLOCK_ALIGNMENT
+    ) {
+      this.stopDashAgainstObstacle(player);
+      return;
+    }
+
+    this.dashResolved.multiplyScalar(1 / resolvedDistance);
+    player.dashDirection.copy(this.dashResolved);
+  }
+
+  private stopDashAgainstObstacle(player: GameWorld["player"]) {
+    player.dashTimeRemaining = 0;
+    player.isDashing = false;
+    player.velocity.set(0, 0, 0);
   }
 
   private moveWithLegacyFallback(world: GameWorld, delta: number) {
