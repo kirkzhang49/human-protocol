@@ -1,3 +1,4 @@
+import { isDynamicPropTagged } from "./DynamicPropPolicy";
 import type { LevelDefinition, LevelDoorDefinition, LevelMapPropDefinition, LevelRoomDefinition, Vec3Tuple } from "./schema/levelConfig";
 
 export type RoomWallSide = "north" | "south" | "east" | "west";
@@ -97,7 +98,7 @@ export function resolvePropCollisionProxy(prop: LevelMapPropDefinition): PropCol
 }
 
 export function isDynamicMapProp(prop: LevelMapPropDefinition) {
-  return prop.tags?.includes("dynamic_prop") ?? false;
+  return isDynamicPropTagged(prop);
 }
 
 function enemyNavigationForProp(prop: LevelMapPropDefinition, collider: PropColliderDefinition) {

@@ -1,5 +1,13 @@
 import { isEnvironmentModelKey } from "../../../assets/environmentModelAssets";
 import { isStoryPaintingArtModelKey } from "../../visual/StoryPaintingArtKeys";
+import {
+  blockedDynamicPropTags,
+  dynamicPropColliderTooLarge,
+  DYNAMIC_PROP_MAX_FULL_VOLUME,
+  DYNAMIC_PROP_MAX_HALF_EXTENT,
+  isDynamicPropTagged,
+  MAX_DYNAMIC_PROPS_PER_LEVEL,
+} from "../DynamicPropPolicy";
 import { knownDoorSkinKeys, knownMapMaterialKeys, knownMapVisualKeys, knownRoomSkinKeys, mapVisualProfiles } from "../../visual/AssetResolver";
 import { enemyArchetypes } from "../enemyArchetypes";
 import {
@@ -18,6 +26,7 @@ import type {
   LevelDoorDefinition,
   LevelKeyItemDefinition,
   LevelMapConfig,
+  LevelMapPropDefinition,
   LevelRoomDefinition,
   Vec3Tuple,
 } from "../schema/levelConfig";
@@ -206,6 +215,16 @@ export function validateMap(
     validateVisualKey(pickup.visualKey, `map.pickups[${index}].visualKey`, warnings);
   });
 
+  const dynamicPropCount = map.props?.filter((prop) => isDynamicPropTagged(prop)).length ?? 0;
+  if (dynamicPropCount > MAX_DYNAMIC_PROPS_PER_LEVEL) {
+    add(
+      errors,
+      "prop.dynamic.count.exceeded",
+      "map.props",
+      `Map has ${dynamicPropCount} dynamic props; cap is ${MAX_DYNAMIC_PROPS_PER_LEVEL}.`,
+    );
+  }
+
   map.props?.forEach((prop, index) => {
     if (!roomIds.has(prop.roomId)) {
       add(errors, "prop.room.missing", `map.props[${index}].roomId`, `Map prop "${prop.id}" references missing room "${prop.roomId}".`);
@@ -219,6 +238,7 @@ export function validateMap(
     if (prop.collider?.halfSize.some((value) => value <= 0)) {
       add(errors, "prop.collider.invalid", `map.props[${index}].collider.halfSize`, `Map prop "${prop.id}" has non-positive collider halfSize.`);
     }
+    if (isDynamicPropTagged(prop)) validateDynamicPropAuthoring(prop, index, errors);
   });
 
   map.decals?.forEach((decal, index) => {
@@ -242,6 +262,35 @@ export function validateMap(
 
   validateReachability(level, map, errors);
   validateKeyPlacement(level, map, errors);
+}
+
+function validateDynamicPropAuthoring(
+  prop: LevelMapPropDefinition,
+  index: number,
+  errors: ConfigValidationIssue[],
+) {
+  if (!prop.collider) {
+    add(errors, "prop.dynamic.collider.missing", `map.props[${index}].collider`, `Dynamic prop "${prop.id}" needs an explicit collider.`);
+    return;
+  }
+  if (dynamicPropColliderTooLarge(prop.collider.halfSize)) {
+    add(
+      errors,
+      "prop.dynamic.collider.too_large",
+      `map.props[${index}].collider.halfSize`,
+      `Dynamic prop "${prop.id}" exceeds the small-prop budget (${DYNAMIC_PROP_MAX_HALF_EXTENT}m half extent or ${DYNAMIC_PROP_MAX_FULL_VOLUME}m3 full volume).`,
+    );
+  }
+
+  const blockedTags = blockedDynamicPropTags(prop);
+  if (blockedTags.length > 0) {
+    add(
+      errors,
+      "prop.dynamic.tag.blocked",
+      `map.props[${index}].tags`,
+      `Dynamic prop "${prop.id}" uses protected tag(s): ${blockedTags.join(", ")}.`,
+    );
+  }
 }
 
 function validateMapPresentation(
