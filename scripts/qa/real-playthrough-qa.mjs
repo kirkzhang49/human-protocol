@@ -8,6 +8,7 @@ const physicsMode = readPhysicsModeArg();
 const expectedDynamicBodiesByLevelId = new Map([
   ["level_01_maintenance_bay", 1],
   ["level_02_residential_simulation", 1],
+  ["level_04_memory_clinic", 1],
 ]);
 let qaPlayerRadius = 0.72;
 let qaPlayerCollisionHeight = 1.75;

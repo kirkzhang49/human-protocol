@@ -1269,6 +1269,7 @@
           "cineclinic",
           "pipeline_generated",
           "waiting_room",
+          "dynamic_prop",
           "color_accent"
         ],
         "collider": {

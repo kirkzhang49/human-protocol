@@ -4,6 +4,7 @@ import { MAX_DYNAMIC_PROPS_PER_LEVEL } from "../config/DynamicPropPolicy";
 import { resolvePropCollisionProxy } from "../config/MapGeometry";
 import { level01MaintenanceBay } from "../config/levels/level01-maintenance-bay";
 import { level02ResidentialSimulation } from "../config/levels/level02-residential-simulation";
+import { level04MemoryClinic } from "../config/levels/level04-memory-clinic";
 import { GameWorld } from "../core/GameWorld";
 import { createProjectile } from "../entities/createProjectile";
 import { PhysicsSystem } from "../systems/PhysicsSystem";
@@ -513,6 +514,17 @@ describe("GameWorld dynamic prop physics", () => {
       roomId: "level_02_living_room",
     });
     expect(level02World.dynamicProps[0].halfSize.toArray()).toEqual([0.326, 0.23, 0.2355]);
+
+    const level04World = new GameWorld();
+    level04World.level = level04MemoryClinic;
+    (level04World as unknown as { resetLevel(mode: "playing"): void }).resetLevel("playing");
+
+    expect(level04World.dynamicProps.map((prop) => prop.id)).toEqual(["level_04_cineclinic_lime_ottoman"]);
+    expect(level04World.dynamicProps[0]).toMatchObject({
+      modelKey: "hp_l4_cineclinic_lime_ottoman",
+      roomId: "level_04_waiting_room",
+    });
+    expect(level04World.dynamicProps[0].halfSize.toArray()).toEqual([0.43, 0.24, 0.43]);
   });
 
   it("does not mirror dynamic map props as static collision proxies", () => {

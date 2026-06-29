@@ -76,6 +76,7 @@ describe("dynamic map prop validation", () => {
     expect(dynamicPropIds).toEqual([
       "level_01_maintenance_bay:prop_hhup5a",
       "level_02_residential_simulation:prop_vq1oiy",
+      "level_04_memory_clinic:level_04_cineclinic_lime_ottoman",
     ]);
   });
 });
