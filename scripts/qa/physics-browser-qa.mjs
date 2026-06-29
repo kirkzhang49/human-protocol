@@ -570,7 +570,14 @@ const kinematicProbe = `(() => {
       world.syncPhysicsDynamicProps();
       world.physics?.step?.(1 / 120);
       world.syncDynamicPropsFromPhysics?.(0);
-      const moved = world.moveKinematicCircleWithPhysics({
+      const playerMoved = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_player_dynamic_blocker",
+        position: start,
+        radius: world.player.radius ?? 0.32,
+        height: 1.6,
+        desiredTranslation: desired,
+      });
+      const enemyMoved = world.moveKinematicCircleWithPhysics({
         id: "qa_browser_enemy_dynamic_blocker",
         position: start,
         radius: 0.3,
@@ -578,13 +585,24 @@ const kinematicProbe = `(() => {
         desiredTranslation: desired,
         filter: (candidate) => candidate.enemyNavigation !== "soft" && candidate.enemyNavigation !== "ignore",
       });
-      const travelX = Number((moved?.position?.x ?? start.x) - start.x);
+      const playerTravelX = Number((playerMoved?.position?.x ?? start.x) - start.x);
+      const enemyTravelX = Number((enemyMoved?.position?.x ?? start.x) - start.x);
+      const dynamicCountDelta = (world.dynamicProps?.length ?? beforeCount) - beforeCount;
       return {
         spawned: Boolean(prop),
-        blocked: Boolean(moved?.blocked),
-        travelX,
-        dynamicCountDelta: (world.dynamicProps?.length ?? beforeCount) - beforeCount,
-        pass: Boolean(prop && moved?.blocked && travelX < 0.45 && ((world.dynamicProps?.length ?? beforeCount) - beforeCount) === 1),
+        playerBlocked: Boolean(playerMoved?.blocked),
+        playerTravelX,
+        enemyFilteredBlocked: Boolean(enemyMoved?.blocked),
+        enemyTravelX,
+        dynamicCountDelta,
+        pass: Boolean(
+          prop &&
+          playerMoved?.blocked &&
+          playerTravelX < 0.45 &&
+          enemyMoved?.blocked &&
+          enemyTravelX < 0.45 &&
+          dynamicCountDelta === 1
+        ),
       };
     } finally {
       if (Array.isArray(world.dynamicProps)) {
@@ -708,6 +726,29 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
   }
 }
 
+function startupRetryReason(testCase, caseRecords) {
+  const runtimeFailure = caseRecords.find((entry) => entry.status === "FAIL" && entry.name === `${testCase.name} runtime`);
+  if (!runtimeFailure) return null;
+  let details = null;
+  try {
+    details = JSON.parse(runtimeFailure.detail);
+  } catch {
+    return null;
+  }
+  const error = typeof details?.error === "string" ? details.error : "";
+  const consoleText = Array.isArray(details?.console) ? details.console.join(" | ") : "";
+  if (consoleText.includes("Failed to fetch dynamically imported module")) return "dynamic import fetch failed before runtime warmed";
+  if (!error.startsWith("timeout waiting for ")) return null;
+  const startupLabels = [
+    `${testCase.name} world`,
+    `${testCase.name} Raw WebGPU ready`,
+    `${testCase.name} browser RAF`,
+    `${testCase.name} game loop frame`,
+    `${testCase.name} Rapier ready`,
+  ];
+  return startupLabels.some((label) => error.includes(label)) ? error : null;
+}
+
 async function main() {
   const binary = chromePath();
   if (!binary) {
@@ -732,7 +773,15 @@ async function main() {
       throw new Error(`No physics browser QA case matched --level=${levelFilter}`);
     }
     for (const testCase of activeCases) {
+      const beforeCount = results.length;
       await runPhysicsCase(cdp, testCase, webgpuAvailable);
+      const retryReason = startupRetryReason(testCase, results.slice(beforeCount));
+      if (retryReason) {
+        results.splice(beforeCount);
+        console.log(`RETRY ${testCase.name} startup — ${retryReason}`);
+        await sleep(1000);
+        await runPhysicsCase(cdp, testCase, webgpuAvailable);
+      }
     }
   } finally {
     try {

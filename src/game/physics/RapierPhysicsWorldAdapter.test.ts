@@ -298,7 +298,7 @@ describe("RapierPhysicsWorldAdapter", () => {
     expect(snapshot?.position.y).toBeCloseTo(0.35, 4);
   });
 
-  it("does not treat dynamic prop bodies as static kinematic blockers", async () => {
+  it("treats stepped dynamic prop bodies as kinematic blockers", async () => {
     const adapter = createRapierPhysicsWorldAdapter();
     await adapter.init();
     adapter.syncDynamicPropBodies([
@@ -309,6 +309,7 @@ describe("RapierPhysicsWorldAdapter", () => {
         mass: 1,
       },
     ]);
+    adapter.step(1 / 120);
 
     const moved = adapter.moveKinematicCircle({
       id: "player",
@@ -318,8 +319,8 @@ describe("RapierPhysicsWorldAdapter", () => {
       desiredTranslation: new Vector3(1.2, 0, 0),
     });
 
-    expect(moved.blocked).toBe(false);
-    expect(moved.position.x).toBeCloseTo(1.2, 4);
+    expect(moved.blocked).toBe(true);
+    expect(moved.position.x).toBeLessThan(0.2);
   });
 });
 

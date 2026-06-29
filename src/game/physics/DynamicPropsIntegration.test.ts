@@ -45,7 +45,7 @@ describe("GameWorld dynamic prop physics", () => {
     expect(prop?.position.y).toBeCloseTo(0.35, 4);
   });
 
-  it("keeps filtered kinematic characters from passing through opt-in dynamic props", async () => {
+  it("keeps player and filtered enemy kinematic movement from passing through opt-in dynamic props", async () => {
     vi.stubGlobal("window", {
       ...globalThis,
       location: {
@@ -74,6 +74,13 @@ describe("GameWorld dynamic prop physics", () => {
     expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(1);
     world.physics.step(1 / 120);
 
+    const playerMove = world.moveKinematicCircleWithPhysics({
+      id: "player",
+      position: start,
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(1.6, 0, 0),
+    });
     const moved = world.moveKinematicCircleWithPhysics({
       id: "enemy:dynamic-prop-blocker",
       position: start,
@@ -83,6 +90,8 @@ describe("GameWorld dynamic prop physics", () => {
       filter: (obstacle) => obstacle.enemyNavigation !== "soft" && obstacle.enemyNavigation !== "ignore",
     });
 
+    expect(playerMove?.blocked).toBe(true);
+    expect((playerMove?.position.x ?? start.x) - start.x).toBeLessThan(0.45);
     expect(moved?.blocked).toBe(true);
     expect((moved?.position.x ?? start.x) - start.x).toBeLessThan(0.45);
   });
