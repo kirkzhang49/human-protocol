@@ -348,6 +348,7 @@ const kinematicProbe = `(() => {
     projectileSweep: projectileSweepProbe(world),
     movementStress: movementStressProbe(world),
     dynamicPropKinematicBlock: dynamicPropKinematicBlockProbe(world),
+    dynamicPropRuntimeCap: dynamicPropRuntimeCapProbe(world),
     dynamicPropImpulse: dynamicPropImpulseProbe(world),
   };
 
@@ -865,6 +866,75 @@ const kinematicProbe = `(() => {
       pass: Boolean(result.pass && cleanupDynamicCountDelta === 0 && cleanupBodyCountDelta === 0),
     };
   }
+
+  function dynamicPropRuntimeCapProbe(world) {
+    if (!world?.spawnDynamicProp || !world?.syncPhysicsDynamicProps || !world?.syncDynamicPropsFromPhysics) return null;
+    const maxRuntimeDynamicProps = 12;
+    const propPrefix = "qa_dynamic_runtime_cap_";
+    const beforeCount = Array.isArray(world.dynamicProps) ? world.dynamicProps.length : 0;
+    const beforeBodyCount = Number(world.physicsDebugSnapshot?.().dynamicBodyCount ?? beforeCount);
+    const capacity = Math.max(0, maxRuntimeDynamicProps - beforeCount);
+    const spawned = [];
+    let result = null;
+    try {
+      for (let index = 0; index < capacity; index += 1) {
+        spawned.push(world.spawnDynamicProp({
+          id: propPrefix + index,
+          modelKey: "test_crate",
+          position: world.player.position.clone().set(96 + index * 1.2, 0.35, 96),
+          halfSize: world.player.position.clone().set(0.35, 0.35, 0.35),
+          mass: 1,
+        }));
+      }
+      const overflow = world.spawnDynamicProp({
+        id: propPrefix + "overflow",
+        modelKey: "test_crate",
+        position: world.player.position.clone().set(128, 0.35, 96),
+        halfSize: world.player.position.clone().set(0.35, 0.35, 0.35),
+        mass: 1,
+      });
+      world.syncPhysicsDynamicProps();
+      world.physics?.step?.(1 / 120);
+      world.syncDynamicPropsFromPhysics?.(0);
+      const afterCount = Array.isArray(world.dynamicProps) ? world.dynamicProps.length : beforeCount;
+      const afterBodyCount = Number(world.physicsDebugSnapshot?.().dynamicBodyCount ?? afterCount);
+      const spawnedCount = spawned.filter(Boolean).length;
+      result = {
+        beforeCount,
+        beforeBodyCount,
+        capacity,
+        spawnedCount,
+        overflowRejected: overflow === null,
+        afterCount,
+        afterBodyCount,
+        pass: Boolean(
+          spawnedCount === capacity &&
+          overflow === null &&
+          afterCount === beforeCount + capacity &&
+          afterBodyCount === beforeBodyCount + capacity &&
+          afterCount <= maxRuntimeDynamicProps &&
+          afterBodyCount <= maxRuntimeDynamicProps
+        ),
+      };
+    } finally {
+      if (Array.isArray(world.dynamicProps)) {
+        for (let index = world.dynamicProps.length - 1; index >= 0; index -= 1) {
+          if (world.dynamicProps[index]?.id?.startsWith(propPrefix)) world.dynamicProps.splice(index, 1);
+        }
+      }
+      world.syncPhysicsDynamicProps();
+      world.syncDynamicPropsFromPhysics?.(0);
+    }
+    if (!result) return result;
+    const cleanupDynamicCount = Array.isArray(world.dynamicProps) ? world.dynamicProps.length : beforeCount;
+    const cleanupBodyCount = Number(world.physicsDebugSnapshot?.().dynamicBodyCount ?? beforeBodyCount);
+    return {
+      ...result,
+      cleanupDynamicCount,
+      cleanupBodyCount,
+      pass: Boolean(result.pass && cleanupDynamicCount === beforeCount && cleanupBodyCount === beforeBodyCount),
+    };
+  }
 })()`;
 
 async function probeWebGpuAdapter(cdp) {
@@ -938,6 +1008,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.movementStress.largeRotatedFurniturePressure?.pass &&
       probe.movementStress.leaderRotatedFurniturePressure?.pass &&
       probe.dynamicPropKinematicBlock?.pass &&
+      probe.dynamicPropRuntimeCap?.pass &&
       (testCase.expectedDynamicBodies > 0
         ? probe?.dynamicPropImpulse?.present &&
           probe.dynamicPropImpulse.count === testCase.expectedDynamicBodies &&
@@ -961,6 +1032,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         projectileSweep: probe?.projectileSweep,
         movementStress: probe?.movementStress,
         dynamicPropKinematicBlock: probe?.dynamicPropKinematicBlock,
+        dynamicPropRuntimeCap: probe?.dynamicPropRuntimeCap,
         dynamicPropImpulse: probe?.dynamicPropImpulse,
       }),
     );
