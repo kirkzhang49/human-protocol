@@ -280,6 +280,22 @@ export class GameWorld {
     return this.physics.applyDynamicImpulse(id, impulse);
   }
 
+  applyDynamicPropImpulseFromPoint(origin: Vector3, radius: number, strength: number) {
+    if (radius <= 0 || strength <= 0) return 0;
+    let pushed = 0;
+    for (const prop of this.dynamicProps) {
+      const dx = prop.position.x - origin.x;
+      const dz = prop.position.z - origin.z;
+      const distanceSq = dx * dx + dz * dz;
+      if (distanceSq > radius * radius) continue;
+      const distance = Math.sqrt(Math.max(0.0001, distanceSq));
+      const falloff = 1 - Math.min(1, distance / radius);
+      const impulse = new Vector3((dx / distance) * strength * falloff, 0, (dz / distance) * strength * falloff);
+      if (this.applyDynamicPropImpulse(prop.id, impulse)) pushed += 1;
+    }
+    return pushed;
+  }
+
   syncPhysicsDynamicProps() {
     this.physics.syncDynamicPropBodies(
       this.dynamicProps.map((prop) => ({
@@ -3625,6 +3641,7 @@ export class GameWorld {
 
   private detonateUltimateAt(position: Vector3, ability: UltimateAbilityConfig, showReward: boolean) {
     const hitCount = this.damageEnemiesInUltimateBlast(position, ability);
+    this.applyDynamicPropImpulseFromPoint(position, ability.blastRadius, ability.knockback * 0.6);
     const forward = this.player.aimDirection.lengthSq() > 0.001 ? this.player.aimDirection : new Vector3(0, 0, -1);
     const center = position.clone();
     center.y += 0.08;

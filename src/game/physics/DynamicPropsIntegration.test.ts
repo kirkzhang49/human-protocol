@@ -38,4 +38,59 @@ describe("GameWorld dynamic prop physics", () => {
     expect(prop?.position.x).toBeGreaterThan(0.01);
     expect(prop?.position.y).toBeCloseTo(0.35, 4);
   });
+
+  it("pushes opt-in dynamic props away from combat shock origins", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    const prop = world.spawnDynamicProp({
+      id: "shock-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0.7, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+
+    expect(world.applyDynamicPropImpulseFromPoint(new Vector3(0, 0.35, 0), 2, 3)).toBe(1);
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(prop?.position.x).toBeGreaterThan(0.72);
+    expect(prop?.position.y).toBeCloseTo(0.35, 4);
+  });
+
+  it("pushes opt-in dynamic props when an ultimate blast detonates", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    world.player.position.set(0, 0, 0);
+    const prop = world.spawnDynamicProp({
+      id: "ultimate-crate",
+      modelKey: "test_crate",
+      position: new Vector3(1, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+
+    world.triggerEmergencyUltimateBlast();
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(prop?.position.x).toBeGreaterThan(1.02);
+    expect(prop?.position.y).toBeCloseTo(0.35, 4);
+  });
 });
