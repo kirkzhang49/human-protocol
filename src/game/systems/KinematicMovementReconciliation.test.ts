@@ -160,6 +160,75 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(enemy.velocity.length()).toBeLessThan(0.01);
   });
 
+  it("lets real Rapier enemy movement pass soft navigation obstacles", async () => {
+    const world = await createRapierPlayingWorld();
+    const enemy = world.spawnEnemy("repair_drone", "rapier_soft_enemy", new Vector3(0, 0, -2.5), 0);
+    enemy.velocity.set(80, 0, 0);
+    enemy.staggerRemaining = 0.2;
+    world.obstacles.push({
+      id: "rapier_soft_navigation_prop",
+      visualKey: "test_soft_prop",
+      position: new Vector3(0.55, 0.5, -2.5),
+      halfSize: new Vector3(0.25, 0.5, 0.65),
+      enemyNavigation: "soft",
+    });
+    world.markObstacleIndexDirty();
+
+    new EnemyAISystem().update(world, 0.1);
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(1);
+    expect(enemy.position.x).toBeGreaterThan(0.9);
+  });
+
+  it("stops real Rapier enemy movement on solid furniture after ignored soft zones", async () => {
+    const world = await createRapierPlayingWorld();
+    const enemy = world.spawnEnemy("repair_drone", "rapier_solid_enemy", new Vector3(0, 0, -2.5), 0);
+    enemy.velocity.set(80, 0, 0);
+    enemy.staggerRemaining = 0.2;
+    world.obstacles.push(
+      {
+        id: "rapier_ignored_soft_navigation_prop",
+        visualKey: "test_soft_prop",
+        position: new Vector3(0.55, 0.5, -2.5),
+        halfSize: new Vector3(0.25, 0.5, 0.65),
+        enemyNavigation: "soft",
+      },
+      {
+        id: "rapier_solid_navigation_prop",
+        visualKey: "test_solid_prop",
+        position: new Vector3(1.45, 0.5, -2.5),
+        halfSize: new Vector3(0.25, 0.5, 0.65),
+      },
+    );
+    world.markObstacleIndexDirty();
+
+    new EnemyAISystem().update(world, 0.1);
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(2);
+    expect(enemy.position.x).toBeGreaterThan(0.45);
+    expect(enemy.position.x).toBeLessThan(1.2);
+  });
+
+  it("recovers real Rapier boss movement off walls without preserving inward velocity", async () => {
+    const world = await createRapierPlayingWorld();
+    const boss = world.spawnEnemy("custodian_elite", "rapier_recovered_boss", new Vector3(0.42, 0, -2.5), 0, { tier: "boss" });
+    boss.velocity.set(-2.4, 0, 0);
+    boss.staggerRemaining = 0.2;
+    world.obstacles.push({
+      id: "rapier_boss_recovery_wall",
+      visualKey: "test_wall",
+      position: new Vector3(0, 0.75, -2.5),
+      halfSize: new Vector3(0.5, 0.75, 0.5),
+    });
+    world.markObstacleIndexDirty();
+
+    new EnemyAISystem().update(world, 0.1);
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(1);
+    expect(boss.position.x).toBeGreaterThan(0.9);
+    expect(boss.velocity.x).toBeGreaterThanOrEqual(-0.01);
+  });
+
   it("damps enemy velocity that points back into a physics recovery correction", () => {
     const world = createPlayingWorld();
     const enemy = world.spawnEnemy("repair_drone", "recovered_enemy", new Vector3(0, 0, -2.5), 0);
