@@ -1,5 +1,5 @@
-// Real-browser QA for the /build playtest pack flow (fast + deep) and the
-// Raw WebGPU viewmodel modes. Zero dependencies: drives system Chrome over
+// Real-browser QA for the /build WebGPU playtest pack flow and the Raw WebGPU
+// viewmodel modes. Zero dependencies: drives system Chrome over
 // the DevTools protocol using Node's built-in WebSocket, against a local
 // vite dev server (real IndexedDB, real fetch, real WebGPU when available).
 //
@@ -78,6 +78,9 @@ async function startChrome(binary) {
       `--user-data-dir=${PROFILE_DIR}`,
       "--no-first-run",
       "--no-default-browser-check",
+      "--disable-background-timer-throttling",
+      "--disable-backgrounding-occluded-windows",
+      "--disable-renderer-backgrounding",
       "--hide-scrollbars",
       "--mute-audio",
       "--enable-unsafe-webgpu",
@@ -220,6 +223,15 @@ async function openPage(cdp, url, { width = 1440, height = 900, seedDraft = null
   await page.send("Page.enable", {});
   await page.send("Runtime.enable", {});
   await page.setViewport(width, height);
+  await page.send("Page.addScriptToEvaluateOnNewDocument", {
+    source: `try {
+      window.__lastWindowOpen = null;
+      window.open = (url) => {
+        window.__lastWindowOpen = String(url ?? "");
+        return null;
+      };
+    } catch {}`,
+  });
   if (seedDraft) {
     const clearSnippet = clearPacks
       ? `localStorage.removeItem("human-protocol-builder-runtime-pack-latest-v1");
@@ -301,14 +313,25 @@ const GALLERY_QA_PROJECT = {
 // --------------------------------------------------------------------------
 const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
 
-const clickPackButton = (label) => `(() => {
-  const button = [...document.querySelectorAll(".builder-pack-cluster button")].find((b) => b.textContent.includes(${JSON.stringify(label)}));
-  if (!button) return false;
+const clickPrimaryPackButton = `(() => {
+  const button = document.querySelector(".builder-pack-primary");
+  if (!button) return { clicked: false, text: "", reason: "missing primary pack button" };
+  const text = button.textContent.replace(/\\s+/g, " ").trim();
+  if (button.disabled) return { clicked: false, text, reason: "primary pack button disabled" };
   button.click();
-  return true;
+  return { clicked: true, text };
 })()`;
 
 const packButtonText = `[...document.querySelectorAll(".builder-pack-cluster button")].map((b) => b.textContent).join("|")`;
+const deepPointerForProject = (projectId) => `(() => {
+  try {
+    const pointers = JSON.parse(localStorage.getItem("human-protocol-builder-runtime-pack-latest-v1") ?? "{}");
+    const pointer = pointers[${JSON.stringify(`${projectId}::deep`)}] ?? null;
+    return pointer?.levelId && pointer?.packId ? pointer : null;
+  } catch {
+    return null;
+  }
+})()`;
 
 const backendReadyEvent = `(() => {
   const events = window.__humanProtocolPerfEvents?.() ?? window.__humanProtocolSpikes?.getEvents?.() ?? [];
@@ -511,37 +534,28 @@ try {
   const build = await openPage(cdp, `${BASE}/build`, { seedDraft: QA_PROJECT, clearPacks: true });
   await build.waitFor(`Boolean(document.querySelector(".builder-pack-cluster"))`, 20000, "/build pack cluster");
 
-  if (!(await build.evaluate(clickPackButton("快速生成")))) throw new Error("快速生成 button not found");
+  const primaryClick = await build.evaluate(clickPrimaryPackButton);
+  if (!primaryClick?.clicked) throw new Error(`WebGPU playtest primary button not clickable: ${JSON.stringify(primaryClick)}`);
   try {
-    await build.waitFor(`(${packButtonText}).includes("快速试玩")`, 60000, "fast pack ready");
-    record("PASS", "fast pack generates", "快速生成 → 快速试玩");
+    await build.waitFor(deepPointerForProject("proj_qa_browser"), 180000, "deep pack pointer ready");
+    const openedUrl = await build.evaluate(`window.__lastWindowOpen ?? ""`).catch(() => "");
+    record("PASS", "WebGPU playtest primary bakes a deep pack", `${primaryClick.text}${openedUrl ? ` → ${openedUrl}` : ""}`);
   } catch (error) {
     const clusterText = await build.evaluate(packButtonText).catch(() => "?");
     const popText = await build.evaluate(`document.querySelector(".builder-pack-pop")?.textContent ?? ""`).catch(() => "?");
-    await build.screenshot("builder-fast-FAILED");
-    throw new Error(`fast pack did not become ready. buttons="${clusterText}" pop="${popText}" (${error.message})`);
+    await build.screenshot("builder-webgpu-playtest-FAILED");
+    throw new Error(`WebGPU playtest pack did not become ready. buttons="${clusterText}" pop="${popText}" (${error.message})`);
   }
-  await build.screenshot("builder-fast-ready-1440x900");
-
-  if (!(await build.evaluate(clickPackButton("深度烘焙")))) throw new Error("深度烘焙 button not found");
-  try {
-    await build.waitFor(`(${packButtonText}).includes("深度试玩")`, 180000, "deep pack ready");
-    record("PASS", "deep pack bakes", "深度烘焙 → 深度试玩");
-  } catch (error) {
-    const failure = await build.evaluate(`document.querySelector(".builder-pack-pop.error")?.textContent ?? ""`);
-    record("FAIL", "deep pack bakes", failure || String(error));
-    hardFailures += 1;
-  }
-  await build.screenshot("builder-deep-ready-1440x900");
+  await build.screenshot("builder-webgpu-playtest-ready-1440x900");
 
   const pointers = await build.evaluate(`localStorage.getItem("human-protocol-builder-runtime-pack-latest-v1")`);
   const pointerMap = JSON.parse(pointers ?? "{}");
-  const fastPointer = pointerMap["proj_qa_browser"];
   const deepPointer = pointerMap["proj_qa_browser::deep"];
-  if (!fastPointer?.levelId) throw new Error("fast pointer missing after generation");
-  record(deepPointer ? "PASS" : "FAIL", "fast/deep pointers stored per mode", `fast=${Boolean(fastPointer)} deep=${Boolean(deepPointer)}`);
+  if (!deepPointer?.levelId || !deepPointer?.packId) throw new Error("deep pointer missing after WebGPU playtest bake");
+  record(deepPointer ? "PASS" : "FAIL", "deep pointer stored for current WebGPU playtest", `deep=${Boolean(deepPointer)} packId=${deepPointer?.packId ?? "none"}`);
   if (!deepPointer) hardFailures += 1;
-  const levelId = fastPointer.levelId;
+  const levelId = deepPointer.levelId;
+  const deepPackQuery = `&pack=deep&packId=${encodeURIComponent(deepPointer.packId)}`;
   const buildConsoleErrors = build.consoleErrors.slice();
   await closePage(cdp, build);
 
@@ -607,7 +621,7 @@ try {
   })()`);
   const chips = JSON.parse(chipReport ?? "{}");
   if (!nodeFound) chips.error = "no puzzle node in canvas";
-  const expectedPremium = ["灯序记忆锁", "工具档案校准", "身份压缩柜", "阀门配平台", "展画审读机"];
+  const expectedPremium = ["灯序记忆锁", "工具档案校准", "身份压缩柜", "闸门配平台", "展画审读机"];
   const hasAllPremium = expectedPremium.every((label) => (chips.labels ?? []).some((text) => text.includes(label)));
   const galleryPremiumOk = chips.count === expectedPremium.length && hasAllPremium;
   record(
@@ -617,15 +631,22 @@ try {
   );
   if (!galleryPremiumOk) hardFailures += 1;
   await galleryBuild.screenshot("builder-gallery-puzzle-chips");
-  // Fast pack must bake from a gallery-puzzle project.
-  const galleryPackOk = await galleryBuild.evaluate(clickPackButton("快速生成"));
-  await sleep(2600);
+  // Current Builder UI exposes one WebGPU playtest primary that deep-bakes and
+  // launches; verify that gallery-puzzle projects still produce that pack.
+  const galleryPackClick = await galleryBuild.evaluate(clickPrimaryPackButton);
+  let galleryPointer = null;
+  try {
+    galleryPointer = await galleryBuild.waitFor(deepPointerForProject("proj_qa_gallery"), 180000, "gallery deep pack ready");
+  } catch {
+    galleryPointer = null;
+  }
   const galleryPackText = await galleryBuild.evaluate(packButtonText);
   record(
-    galleryPackOk && /试玩/.test(galleryPackText ?? "") ? "PASS" : "FAIL",
-    "gallery puzzle project generates a playtest pack",
-    `packButtons=${galleryPackText ?? "none"}`,
+    galleryPackClick?.clicked && Boolean(galleryPointer) ? "PASS" : "FAIL",
+    "gallery puzzle project generates a WebGPU playtest pack",
+    `clicked=${Boolean(galleryPackClick?.clicked)} packId=${galleryPointer?.packId ?? "none"} packButtons=${galleryPackText ?? "none"}`,
   );
+  if (!galleryPackClick?.clicked || !galleryPointer) hardFailures += 1;
   const galleryBuildErrors = galleryBuild.consoleErrors.slice();
   await closePage(cdp, galleryBuild);
   record(galleryBuildErrors.length === 0 ? "PASS" : "FAIL", "gallery build console clean", galleryBuildErrors.slice(0, 3).join(" | ") || "no console errors");
@@ -728,18 +749,7 @@ try {
   };
 
   if (webgpu) {
-    const fast = await playtest("fast", "&pack=fast");
-    const fastDetail = fast.event?.detail ?? {};
-    record(
-      fastDetail.assetSource === "builder-runtime-pack-v1" ? "PASS" : "FAIL",
-      "fast playtest uses proxy pack",
-      `assetSource=${fastDetail.assetSource ?? "none"}`,
-    );
-    if (fastDetail.assetSource !== "builder-runtime-pack-v1") hardFailures += 1;
-    await fast.page.screenshot("playtest-fast");
-    await closePage(cdp, fast.page);
-
-    const deep = await playtest("deep", "&pack=deep");
+    const deep = await playtest("deep", deepPackQuery);
     const deepDetail = deep.event?.detail ?? {};
     record(
       deepDetail.assetSource === "builder-runtime-pack-v2+cooked-glb" ? "PASS" : "FAIL",
@@ -756,7 +766,7 @@ try {
     // Viewmodel modes on the deep pack. The old native raw weapon path is
     // retired: even legacy raw URLs must resolve to the Three new-equipment
     // overlay so QA cannot accidentally showcase the wrong first-person kit.
-    const vmRaw = await playtest("viewmodel raw retired alias", "&pack=deep&rawViewmodelMode=raw&rawViewmodelExperimental=1");
+    const vmRaw = await playtest("viewmodel raw retired alias", `${deepPackQuery}&rawViewmodelMode=raw&rawViewmodelExperimental=1`);
     const vmRawDetail = vmRaw.event?.detail ?? {};
     record(
       vmRawDetail.viewmodelMode === "three" ? "PASS" : "FAIL",
@@ -786,13 +796,13 @@ try {
     await vmRaw.page.screenshot("viewmodel-three-rod-from-raw-alias");
     await closePage(cdp, vmRaw.page);
 
-    const vmThree = await playtest("viewmodel three", "&pack=deep&rawViewmodelMode=three");
+    const vmThree = await playtest("viewmodel three", `${deepPackQuery}&rawViewmodelMode=three`);
     const threeOverlay = await vmThree.page.evaluate(`Boolean(document.querySelector(".raw-webgpu-viewmodel-layer"))`);
     record(threeOverlay ? "PASS" : "FAIL", "rawViewmodelMode=three mounts overlay", `overlay=${threeOverlay}`);
     if (!threeOverlay) hardFailures += 1;
     await closePage(cdp, vmThree.page);
 
-    const vmOff = await playtest("viewmodel off", "&pack=deep&rawViewmodelMode=off");
+    const vmOff = await playtest("viewmodel off", `${deepPackQuery}&rawViewmodelMode=off`);
     const offOverlay = await vmOff.page.evaluate(`Boolean(document.querySelector(".raw-webgpu-viewmodel-layer"))`);
     const offDetail = vmOff.event?.detail ?? {};
     record(
@@ -827,7 +837,7 @@ try {
     await official.screenshot("official-level01-three-viewmodel-from-raw-alias");
     await closePage(cdp, official);
   } else {
-    record("SKIP", "fast/deep playtest raw rendering", "WebGPU unavailable in automation — would fall back to Three");
+    record("SKIP", "deep playtest raw rendering", "WebGPU unavailable in automation — would fall back to Three");
     record("SKIP", "viewmodel raw/three/off rendering", "WebGPU unavailable in automation");
     record("SKIP", "official level 01 Three viewmodel overlay", "WebGPU unavailable in automation");
   }

@@ -25,7 +25,7 @@
 
 - `npm run qa:playthrough:rapier`：五个官方关卡 headless real-playthrough 已覆盖 Rapier 主路径。
 - `npm run qa:physics:browser`：真实 Chrome browser QA，五个官方关卡均通过 Raw WebGPU backend、browser RAF/game loop、Rapier runtime、console clean 检查；包含 Level 2 移动横屏视口。
-- `npm run qa:builder:browser`：仍应作为 /build 试玩包与 deep bake 浏览器流程的主 QA 入口；本轮复跑发现它还在寻找旧的“快速生成/深度烘焙”双按钮，需要另行刷新到当前“烘焙并试玩 / WebGPU 试玩”单按钮 UI。物理专项脚本不替代 builder 生产链路测试。
+- `npm run qa:builder:browser`：已刷新到当前“烘焙并试玩 / WebGPU 试玩”单按钮 UI，并通过 /build 深度烘焙、gallery puzzle 试玩包、Raw WebGPU cooked pack、viewmodel overlay 和 compat fallback 浏览器检查。物理专项脚本不替代 builder 生产链路测试。
 
 ---
 
