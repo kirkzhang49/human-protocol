@@ -1,5 +1,6 @@
 import { Quaternion, Vector3 } from "three";
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { MAX_DYNAMIC_PROPS_PER_LEVEL } from "../config/DynamicPropPolicy";
 import { resolvePropCollisionProxy } from "../config/MapGeometry";
 import { level01MaintenanceBay } from "../config/levels/level01-maintenance-bay";
 import { level02ResidentialSimulation } from "../config/levels/level02-residential-simulation";
@@ -75,6 +76,40 @@ describe("GameWorld dynamic prop physics", () => {
     expect(duplicate).toBeNull();
     expect(world.dynamicProps.map((prop) => prop.id)).toEqual(["duplicate-crate"]);
     expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(1);
+  });
+
+  it("caps runtime dynamic props before they expand Rapier body count", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    const spawned = Array.from({ length: MAX_DYNAMIC_PROPS_PER_LEVEL }, (_, index) =>
+      world.spawnDynamicProp({
+        id: `runtime-cap-crate-${index}`,
+        modelKey: "test_crate",
+        position: new Vector3(index * 1.2, 0.35, 0),
+        halfSize: new Vector3(0.35, 0.35, 0.35),
+        mass: 1,
+      }),
+    );
+    const overflow = world.spawnDynamicProp({
+      id: "runtime-cap-overflow-crate",
+      modelKey: "test_crate",
+      position: new Vector3(99, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+
+    expect(spawned.every(Boolean)).toBe(true);
+    expect(overflow).toBeNull();
+    expect(world.dynamicProps).toHaveLength(MAX_DYNAMIC_PROPS_PER_LEVEL);
+    expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(MAX_DYNAMIC_PROPS_PER_LEVEL);
   });
 
   it("keeps player and filtered enemy kinematic movement from passing through opt-in dynamic props", async () => {
