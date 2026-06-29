@@ -98,6 +98,7 @@ export function MapGeometryRenderer({ world }: MapGeometryRendererProps) {
     <group>
       <ConfiguredRoomShellRenderer world={world} />
       <ConfiguredMapProps world={world} />
+      <ConfiguredDynamicProps world={world} />
       <ExitCinematicElevatorFx world={world} />
       <ConfiguredMapDecals world={world} />
       {world.activeEnvironmentStates().map((state) => (
@@ -303,6 +304,33 @@ function ConfiguredMapProps({ world, exitCinematicOnly = false }: { world: GameW
         <ConfiguredMapProp key={prop.id} prop={prop} world={world} />
       ))}
     </group>
+  );
+}
+
+function ConfiguredDynamicProps({ world }: { world: GameWorld }) {
+  const props = world.dynamicProps.filter((prop) => !prop.roomId || isRoomRenderVisible(world, prop.roomId));
+  if (props.length === 0) return null;
+
+  return (
+    <group>
+      {props.map((prop) => (
+        <ConfiguredDynamicProp key={prop.id} prop={prop} />
+      ))}
+    </group>
+  );
+}
+
+function ConfiguredDynamicProp({ prop }: { prop: GameWorld["dynamicProps"][number] }) {
+  if (!isEnvironmentModelKey(prop.modelKey)) return null;
+  return (
+    <EnvironmentModelInstance
+      modelKey={prop.modelKey}
+      position={[prop.position.x, prop.position.y, prop.position.z]}
+      rotation={[0, prop.yaw, 0]}
+      scale={[prop.scale.x, prop.scale.y, prop.scale.z]}
+      castShadow
+      receiveShadow
+    />
   );
 }
 
