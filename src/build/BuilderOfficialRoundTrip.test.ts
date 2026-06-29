@@ -1385,13 +1385,36 @@ describe("official level builder round trip", () => {
       },
       modelKey: null,
     });
+    const objectiveIds = level.objectiveChain?.map((objective) => objective.id) ?? [];
+    expect(objectiveIds.indexOf("obj_route_level_03_official_exit_door")).toBeLessThan(objectiveIds.indexOf("obj_open_level_03_official_exit_door"));
+    expect(level.objectiveChain?.find((objective) => objective.id === "obj_open_door_endnke")?.nextObjectiveId).toBe("obj_route_level_03_official_exit_door");
     expect(level.objectiveChain?.find((objective) => objective.id === "obj_route_level_03_official_exit_door")).toMatchObject({
       type: "custom",
+      requiredIds: ["route_route_z43akm:out_1_route_out_yf"],
+      startsWhen: {
+        type: "objective_completed",
+        id: "obj_open_door_endnke",
+      },
+      nextObjectiveId: "obj_open_level_03_official_exit_door",
       completesWhen: {
         type: "switch_activated",
         id: "route_route_z43akm",
         optionId: "out_1_route_out_yf",
       },
+    });
+    const builtInLevel = getBuiltInLevelConfig("level_03_human_museum");
+    const builtInObjectiveIds = builtInLevel.objectiveChain?.map((objective) => objective.id) ?? [];
+    expect(builtInObjectiveIds.indexOf("obj_route_level_03_official_exit_door")).toBeLessThan(
+      builtInObjectiveIds.indexOf("obj_open_level_03_official_exit_door"),
+    );
+    expect(builtInLevel.objectiveChain?.find((objective) => objective.id === "obj_open_door_endnke")?.nextObjectiveId).toBe("obj_route_level_03_official_exit_door");
+    expect(builtInLevel.objectiveChain?.find((objective) => objective.id === "obj_route_level_03_official_exit_door")).toMatchObject({
+      requiredIds: ["route_route_z43akm:out_1_route_out_yf"],
+      startsWhen: {
+        type: "objective_completed",
+        id: "obj_open_door_endnke",
+      },
+      nextObjectiveId: "obj_open_level_03_official_exit_door",
     });
     expect(level.switches?.find((entry) => entry.id === "route_route_z43akm")?.states.find((state) => state.id === "out_1_route_out_yf")?.actions).toEqual(
       expect.arrayContaining([

@@ -2545,7 +2545,7 @@ function buildObjectiveChain(
   const lockedDoors = doors
     .filter((door) => door.lock.type !== "none")
     .filter((door) => !isBacktrackControllerDoor(door, roomOrder, project))
-    .sort((a, b) => doorOrder(a, roomOrder, project) - doorOrder(b, roomOrder, project));
+    .sort((a, b) => doorOrder(a, roomOrder, project, waves) - doorOrder(b, roomOrder, project, waves));
   const coveredWaveIds = new Set(lockedDoors.flatMap((door) => (door.lock.type === "survive_wave" ? doorSurviveWaveIds(door.lock) : [])));
   const appendedRoomWaveIds = new Set<string>();
   const roomEnteredWaves = new Map<string, WaveDefinition[]>();
@@ -2557,22 +2557,24 @@ function buildObjectiveChain(
   }
 
   const steps: Omit<LevelObjectiveDefinition, "startsWhen" | "nextObjectiveId">[] = [];
-  const appendRouteSwitchObjectiveSteps = () => {
+  const appendRouteSwitchObjectiveSteps = (targetDoorId?: string) => {
     const existingIds = new Set(steps.map((step) => step.id));
     for (const route of project.routeSwitches ?? []) {
       const switchId = routeSwitchDefinitionId(route);
       route.outputs.slice(0, 4).forEach((output, index) => {
         if (output.kind !== "open_door" || !output.doorId) return;
+        if (targetDoorId && output.doorId !== targetDoorId) return;
         const sourceLock = project.doors.find((door) => door.id === output.doorId)?.sourceDoor?.lock;
         if (sourceLock?.type !== "objective_complete" || !sourceLock.objectiveId || existingIds.has(sourceLock.objectiveId)) return;
         const label = output.label?.trim() || routeOutputLabel(output, project);
+        const stateId = routeOutputStateId(output, index);
         steps.push({
           id: sourceLock.objectiveId,
           type: "custom",
           title: label,
           detail: routeOutputMessage(output, project),
-          requiredIds: [switchId],
-          completesWhen: { type: "switch_activated", id: switchId, optionId: routeOutputStateId(output, index) },
+          requiredIds: [`${switchId}:${stateId}`],
+          completesWhen: { type: "switch_activated", id: switchId, optionId: stateId },
           hudLabel: "路由",
           guidance: { targetType: "door", targetId: output.doorId, label, detail: "切换路由后门禁会解除", urgency: "exit" },
         });
@@ -2637,7 +2639,8 @@ function buildObjectiveChain(
         });
       }
     } else if (door.lock.type === "survive_wave" && (door.lock.waveId || door.lock.waveIds?.length)) {
-      appendRoomWaveSteps(door.fromRoomId);
+      const approachRoomId = doorApproachRoomId(door, roomOrder);
+      appendRoomWaveSteps(approachRoomId);
       const requiredWaveIds = [...new Set([...(door.lock.waveIds ?? []), ...(door.lock.waveId ? [door.lock.waveId] : [])])];
       const requiredWaves = requiredWaveIds.map((waveId) => waves.find((candidate) => candidate.id === waveId)).filter((wave): wave is WaveDefinition => Boolean(wave));
       if (requiredWaves.length > 0) {
@@ -2645,12 +2648,12 @@ function buildObjectiveChain(
         steps.push({
           id: `obj_survive_${door.id}`,
           type: "survive_wave",
-          title: `清剿「${roomLabel(door.fromRoomId)}」`,
+          title: `清剿「${roomLabel(approachRoomId)}」`,
           detail: "击毁房间里的机器人，门才会解锁。",
           requiredIds: requiredWaves.map((wave) => wave.id),
           completesWhen: { type: "wave_completed", id: finalWave.id },
           hudLabel: "清剿",
-          guidance: { targetType: "wave", targetId: finalWave.id, label: roomLabel(door.fromRoomId), detail: "清掉门锁波次", urgency: "danger" },
+          guidance: { targetType: "wave", targetId: finalWave.id, label: roomLabel(approachRoomId), detail: "清掉门锁波次", urgency: "danger" },
         });
       }
     } else if (door.lock.type === "puzzle_complete" && door.lock.puzzleId) {
@@ -2681,6 +2684,7 @@ function buildObjectiveChain(
         });
       }
     }
+    appendRouteSwitchObjectiveSteps(door.id);
     steps.push({
       id: `obj_open_${door.id}`,
       type: "open_door",
@@ -2765,23 +2769,40 @@ function buildObjectiveRoomOrder(criticalPath: readonly string[], doors: readonl
   return roomOrder;
 }
 
-function doorOrder(door: LevelDoorDefinition, roomOrder: Map<string, number>, project: BuilderProject) {
+function doorOrder(door: LevelDoorDefinition, roomOrder: Map<string, number>, project: BuilderProject, waves: readonly WaveDefinition[]) {
   const anchors = [
     roomOrder.get(door.fromRoomId),
     roomOrder.get(door.toRoomId),
     ...doorControllerRoomIds(project, door.id).map((roomId) => roomOrder.get(roomId)),
+    ...doorLockRoomIds(door, waves).map((roomId) => roomOrder.get(roomId)),
   ].filter((order): order is number => order !== undefined);
   if (anchors.length === 0) return 999;
   return Math.max(...anchors);
+}
+
+function doorApproachRoomId(door: LevelDoorDefinition, roomOrder: Map<string, number>) {
+  const fromOrder = roomOrder.get(door.fromRoomId);
+  const toOrder = roomOrder.get(door.toRoomId);
+  if (fromOrder === undefined && toOrder === undefined) return door.fromRoomId;
+  if (fromOrder === undefined) return door.toRoomId;
+  if (toOrder === undefined) return door.fromRoomId;
+  return fromOrder <= toOrder ? door.fromRoomId : door.toRoomId;
+}
+
+function doorLockRoomIds(door: LevelDoorDefinition, waves: readonly WaveDefinition[]) {
+  if (door.lock.type !== "survive_wave") return [];
+  const waveIds = [...new Set([...(door.lock.waveIds ?? []), ...(door.lock.waveId ? [door.lock.waveId] : [])])];
+  return waveIds.map((waveId) => waves.find((wave) => wave.id === waveId)?.roomId).filter((roomId): roomId is string => Boolean(roomId));
 }
 
 function isBacktrackControllerDoor(door: LevelDoorDefinition, roomOrder: Map<string, number>, project: BuilderProject) {
   const endpointOrders = [roomOrder.get(door.fromRoomId), roomOrder.get(door.toRoomId)].filter((order): order is number => order !== undefined);
   if (endpointOrders.length === 0) return false;
   const endpointOrder = Math.max(...endpointOrders);
-  return doorControllerRoomIds(project, door.id)
+  const controllerOrders = doorControllerRoomIds(project, door.id)
     .map((roomId) => roomOrder.get(roomId))
-    .some((order) => order !== undefined && order > endpointOrder + 0.001);
+    .filter((order): order is number => order !== undefined);
+  return controllerOrders.length > 0 && controllerOrders.every((order) => order > endpointOrder + 0.001);
 }
 
 function doorControllerRoomIds(project: BuilderProject, doorId: string) {

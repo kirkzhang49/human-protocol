@@ -409,9 +409,9 @@
       "doorId": "level_04_exit_door",
       "message": "撤离电梯正在接管关卡切换。"
     },
-    "transitionMessage": "电梯下行。诊所把灯关掉，记录还在后台写入。",
+    "transitionMessage": "电梯下行。这间密室没有挽留你。",
     "transitionDialogueTrigger": "builder_exit_transition",
-    "victoryMessage": "出院记录：记忆留置，对象继续前进。"
+    "victoryMessage": "离场记录：对象自行离开，房间保持原样。"
   },
   "map": {
     "id": "level_04_memory_clinic_map",
@@ -889,8 +889,8 @@
         "lock": {
           "type": "puzzle_complete",
           "puzzleId": "pz_level_04_exit_door",
-          "lockedMessage": "先在「留置档案间」完成记忆压缩。",
-          "unlockedMessage": "记忆压缩柜完成，门已解锁。"
+          "lockedMessage": "先在「留置档案间」的谜题台上完成身份压缩柜。",
+          "unlockedMessage": "身份压缩柜完成，门已解锁。"
         },
         "visualKey": "service_elevator_door",
         "materialKey": "service_elevator_metal",
@@ -931,7 +931,7 @@
         "lock": {
           "type": "survive_wave",
           "waveId": "wave_yjxxy4",
-          "lockedMessage": "清掉治疗剧场主管，门才会开。",
+          "lockedMessage": "清掉「治疗剧场主管」，门才会开。",
           "unlockedMessage": "威胁解除，门已解锁。"
         },
         "visualKey": "yellow_access_door",
@@ -989,7 +989,7 @@
         "radius": 1.7,
         "visualKey": "puzzle_console_archive_merge",
         "materialKey": "terminal_cyan",
-        "label": "记忆压缩柜",
+        "label": "身份压缩柜",
         "requiresObjectiveId": "obj_survive_wave_dw6lb3",
         "requiresArticleIds": [
           "article_l4_story_rescue_loop_image2_v1_prop_ljs8ix",
@@ -1509,7 +1509,7 @@
         ],
         "rotation": [
           0,
-          -1.5707963267948966,
+          1.5707963267948966,
           0
         ],
         "scale": 1,
@@ -2276,10 +2276,10 @@
     {
       "id": "pz_level_04_exit_door",
       "type": "archive_merge",
-      "label": "记忆压缩柜",
+      "label": "身份压缩柜",
       "roomId": "room_q0q7rw",
       "interactionId": "pz_level_04_exit_door_panel",
-      "guidance": "相同记忆片可以合并。压到目标阶后，门禁记录放行。",
+      "guidance": "相同身份片可以合并。压到目标阶后，门禁记录放行。",
       "gridSize": 4,
       "targetValue": 32,
       "moveLimit": 90,
@@ -2327,7 +2327,7 @@
       "success": {
         "opensDoorId": "level_04_exit_door",
         "rewardPulse": {
-          "label": "记忆压缩柜完成",
+          "label": "身份压缩柜完成",
           "detail": "谜题门已解锁",
           "rarity": "epic"
         },
@@ -2430,12 +2430,9 @@
           },
           "actions": [
             {
-              "type": "unlock_door",
-              "doorId": "level_04_waiting_door"
-            },
-            {
               "type": "open_door",
-              "doorId": "level_04_waiting_door"
+              "doorId": "level_04_waiting_door",
+              "respectLock": true
             }
           ]
         }
@@ -2515,12 +2512,9 @@
           },
           "actions": [
             {
-              "type": "unlock_door",
-              "doorId": "level_04_rescue_door"
-            },
-            {
               "type": "open_door",
-              "doorId": "level_04_rescue_door"
+              "doorId": "level_04_rescue_door",
+              "respectLock": true
             },
             {
               "type": "close_door",
@@ -2532,76 +2526,6 @@
     }
   ],
   "objectiveChain": [
-    {
-      "id": "obj_survive_wave_dw6lb3",
-      "type": "survive_wave",
-      "title": "清剿「留置档案间」",
-      "detail": "击毁房间里的机器人，再继续操作。",
-      "requiredIds": [
-        "wave_dw6lb3"
-      ],
-      "completesWhen": {
-        "type": "wave_completed",
-        "id": "wave_dw6lb3"
-      },
-      "hudLabel": "清剿",
-      "guidance": {
-        "targetType": "wave",
-        "targetId": "wave_dw6lb3",
-        "label": "留置档案间",
-        "detail": "先清掉房间威胁",
-        "urgency": "danger"
-      },
-      "startsWhen": {
-        "type": "level_start"
-      },
-      "nextObjectiveId": "obj_survive_door_d42uh6"
-    },
-    {
-      "id": "obj_survive_door_d42uh6",
-      "type": "survive_wave",
-      "title": "清剿「留置档案间」",
-      "detail": "击毁房间里的机器人，门才会解锁。",
-      "requiredIds": [
-        "wave_yjxxy4"
-      ],
-      "completesWhen": {
-        "type": "wave_completed",
-        "id": "wave_yjxxy4"
-      },
-      "hudLabel": "清剿",
-      "guidance": {
-        "targetType": "wave",
-        "targetId": "wave_yjxxy4",
-        "label": "留置档案间",
-        "detail": "清掉门锁守卫",
-        "urgency": "danger"
-      },
-      "startsWhen": {
-        "type": "objective_completed",
-        "id": "obj_survive_wave_dw6lb3"
-      },
-      "nextObjectiveId": "obj_open_door_d42uh6"
-    },
-    {
-      "id": "obj_open_door_d42uh6",
-      "type": "open_door",
-      "title": "打开留置档案间门",
-      "detail": "靠近门并打开它。",
-      "requiredIds": [
-        "door_d42uh6"
-      ],
-      "completesWhen": {
-        "type": "door_opened",
-        "id": "door_d42uh6"
-      },
-      "hudLabel": "开门",
-      "startsWhen": {
-        "type": "objective_completed",
-        "id": "obj_survive_door_d42uh6"
-      },
-      "nextObjectiveId": "obj_open_level_04_waiting_door"
-    },
     {
       "id": "obj_open_level_04_waiting_door",
       "type": "open_door",
@@ -2616,8 +2540,7 @@
       },
       "hudLabel": "开门",
       "startsWhen": {
-        "type": "objective_completed",
-        "id": "obj_open_door_d42uh6"
+        "type": "level_start"
       },
       "nextObjectiveId": "obj_survive_wave_level_04_waiting_room"
     },
@@ -2664,7 +2587,7 @@
         "targetType": "wave",
         "targetId": "wave_0z51v9",
         "label": "候诊厅",
-        "detail": "清掉门锁守卫",
+        "detail": "清掉门锁波次",
         "urgency": "danger"
       },
       "startsWhen": {
@@ -2785,13 +2708,84 @@
         "type": "objective_completed",
         "id": "obj_puzzle_level_04_theater_door"
       },
+      "nextObjectiveId": "obj_survive_door_d42uh6"
+    },
+    {
+      "id": "obj_survive_door_d42uh6",
+      "type": "survive_wave",
+      "title": "清剿「入口消毒间」",
+      "detail": "击毁房间里的机器人，门才会解锁。",
+      "requiredIds": [
+        "wave_yjxxy4"
+      ],
+      "completesWhen": {
+        "type": "wave_completed",
+        "id": "wave_yjxxy4"
+      },
+      "hudLabel": "清剿",
+      "guidance": {
+        "targetType": "wave",
+        "targetId": "wave_yjxxy4",
+        "label": "入口消毒间",
+        "detail": "清掉门锁波次",
+        "urgency": "danger"
+      },
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_open_level_04_theater_door"
+      },
+      "nextObjectiveId": "obj_open_door_d42uh6"
+    },
+    {
+      "id": "obj_open_door_d42uh6",
+      "type": "open_door",
+      "title": "打开 留置档案间门",
+      "detail": "靠近门并打开它。",
+      "requiredIds": [
+        "door_d42uh6"
+      ],
+      "completesWhen": {
+        "type": "door_opened",
+        "id": "door_d42uh6"
+      },
+      "hudLabel": "开门",
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_survive_door_d42uh6"
+      },
+      "nextObjectiveId": "obj_survive_wave_dw6lb3"
+    },
+    {
+      "id": "obj_survive_wave_dw6lb3",
+      "type": "survive_wave",
+      "title": "清剿「留置档案间」",
+      "detail": "击毁房间里的机器人，再继续操作。",
+      "requiredIds": [
+        "wave_dw6lb3"
+      ],
+      "completesWhen": {
+        "type": "wave_completed",
+        "id": "wave_dw6lb3"
+      },
+      "hudLabel": "清剿",
+      "guidance": {
+        "targetType": "wave",
+        "targetId": "wave_dw6lb3",
+        "label": "留置档案间",
+        "detail": "先清掉房间威胁",
+        "urgency": "danger"
+      },
+      "startsWhen": {
+        "type": "objective_completed",
+        "id": "obj_open_door_d42uh6"
+      },
       "nextObjectiveId": "obj_puzzle_level_04_exit_door"
     },
     {
       "id": "obj_puzzle_level_04_exit_door",
       "type": "custom",
-      "title": "压缩记忆片",
-      "detail": "在「留置档案间」的谜题台：合并相同记忆片，达到档案目标阶。",
+      "title": "压缩身份片",
+      "detail": "在「留置档案间」的谜题台：合并相同身份片，达到档案目标阶。",
       "requiredIds": [
         "pz_level_04_exit_door"
       ],
@@ -2799,10 +2793,10 @@
         "type": "puzzle_completed",
         "id": "pz_level_04_exit_door"
       },
-      "hudLabel": "记忆压缩柜",
+      "hudLabel": "身份压缩柜",
       "startsWhen": {
         "type": "objective_completed",
-        "id": "obj_open_level_04_theater_door"
+        "id": "obj_survive_wave_dw6lb3"
       },
       "nextObjectiveId": "obj_open_level_04_exit_door"
     },
@@ -3106,7 +3100,7 @@
     },
     {
       "id": "sg_level_04_waiting_room",
-      "label": "候诊厅内部",
+      "label": "候诊厅 内部",
       "layout": "front",
       "positions": [
         [
@@ -3139,11 +3133,12 @@
           0,
           13.3
         ]
-      ]
+      ],
+      "preservePositions": true
     },
     {
       "id": "sg_level_04_therapy_theater",
-      "label": "治疗剧场内部",
+      "label": "治疗剧场 内部",
       "layout": "front",
       "positions": [
         [
@@ -3176,11 +3171,12 @@
           0,
           -5.4799999999999995
         ]
-      ]
+      ],
+      "preservePositions": true
     },
     {
       "id": "sg_room_q0q7rw",
-      "label": "留置档案间内部",
+      "label": "留置档案间 内部",
       "layout": "front",
       "positions": [
         [
@@ -3203,7 +3199,8 @@
           0,
           22.233333333333334
         ]
-      ]
+      ],
+      "preservePositions": true
     }
   ],
   "cinematicBeats": [],
@@ -3215,7 +3212,8 @@
       "coreCell": 2.45,
       "repairKit": 2.25,
       "ironRod": 1.65,
-      "pistol": 1.65
+      "pistol": 1.65,
+      "breachMissile": 1.85
     },
     "repairKit": {
       "minMissingHealthToCollect": 3,
@@ -3368,12 +3366,12 @@
     "defaultWaveStartMessage": "敌对单位正在部署。",
     "reinforcementMessage": "增援单位已部署。",
     "waveLabels": {
-      "wave_level_04_waiting_room": "候诊巡检",
+      "wave_level_04_waiting_room": "候诊厅 清剿",
       "wave_0z51v9": "巡检单位",
       "wave_yjxxy4": "巡检单位",
-      "wave_yjxxy4_pressure_loop": "残余巡检",
+      "wave_yjxxy4_pressure_loop": "巡检单位 压力循环",
       "wave_dw6lb3": "巡检单位",
-      "wave_dw6lb3_pressure_loop": "残余巡检"
+      "wave_dw6lb3_pressure_loop": "巡检单位 压力循环"
     },
     "objectives": {
       "upgrade": {
@@ -3391,27 +3389,27 @@
         "detail": "拿到枪，门会锁"
       },
       "default": {
-        "title": "穿过记忆诊所",
-        "detail": "核对三段记忆"
+        "title": "继续前进",
+        "detail": "目标还没完成"
       },
       "exitUnlocked": {
-        "title": "进入出院电梯",
-        "detail": "记录未关闭",
-        "progressLabel": "出院电梯",
-        "progressText": "进入"
+        "title": "进入出口",
+        "detail": "进电梯",
+        "progressLabel": "撤离",
+        "progressText": "走"
       }
     },
     "flow": {
       "title": {
-        "system": "记忆诊所",
-        "heading": "记忆诊所 04",
-        "body": "这里不治疗伤口，只校准你相信过的记忆。",
+        "system": "异常生命信号",
+        "heading": "人类协议",
+        "body": "你醒在一段不该有人的协议里。",
         "signalStrip": [
-          "候诊白线",
-          "童年回放",
-          "出院记录"
+          "生命体征",
+          "门禁",
+          "无线电噪声"
         ],
-        "startButton": "进入诊所"
+        "startButton": "开始"
       },
       "death": {
         "system": "急救失败",
@@ -3425,63 +3423,63 @@
         "restartAfterReviveUsedButton": "重新开始"
       },
       "transition": {
-        "system": "出院电梯",
-        "heading": "记录未关闭"
+        "system": "出口",
+        "heading": "继续下行"
       },
       "victory": {
-        "system": "治疗记录",
-        "heading": "记忆留置",
-        "body": "诊所没有治好你，只确认这些记忆会跟着你走。",
+        "system": "档案片段",
+        "heading": "记录完成",
+        "body": "门合上了，下一层仍在亮。",
         "doubleMemoryButton": "看广告 x2 积分",
         "doubleMemoryClaimedButton": "x2 积分已领取",
-        "replayButton": "再次进入诊所"
+        "replayButton": "再来一次"
       }
     },
     "waves": [
       {
         "id": "wave_level_04_waiting_room",
-        "label": "候诊巡检",
-        "objectiveTitle": "清剿候诊厅",
+        "label": "候诊厅 清剿",
+        "objectiveTitle": "清剿 候诊厅",
         "objectiveDetail": "击毁房间里的敌对单位。",
-        "startMessage": "候诊厅巡检单位被唤醒。",
+        "startMessage": "候诊厅 的机器人被唤醒。",
         "startWarning": {
           "label": "敌对单位",
-          "detail": "候诊厅出现机器人"
+          "detail": "候诊厅 出现机器人"
         },
         "startWarningDuration": 1.8
       },
       {
         "id": "wave_0z51v9",
         "label": "巡检单位",
-        "objectiveTitle": "清剿候诊厅",
+        "objectiveTitle": "清剿 候诊厅",
         "objectiveDetail": "击毁房间里的敌对单位。",
-        "startMessage": "候诊厅巡检单位被唤醒。",
+        "startMessage": "候诊厅 的机器人被唤醒。",
         "startWarning": {
           "label": "敌对单位",
-          "detail": "候诊厅出现机器人"
+          "detail": "候诊厅 出现机器人"
         },
         "startWarningDuration": 1.8
       },
       {
         "id": "wave_yjxxy4",
         "label": "巡检单位",
-        "objectiveTitle": "清剿治疗剧场",
+        "objectiveTitle": "清剿 治疗剧场",
         "objectiveDetail": "击毁房间里的敌对单位。",
-        "startMessage": "治疗剧场主管上线。",
+        "startMessage": "治疗剧场 的机器人被唤醒。",
         "startWarning": {
           "label": "敌对单位",
-          "detail": "治疗剧场出现机器人"
+          "detail": "治疗剧场 出现机器人"
         },
         "startWarningDuration": 1.8
       },
       {
         "id": "wave_yjxxy4_pressure_loop",
-        "label": "残余巡检",
-        "objectiveTitle": "残余巡检",
+        "label": "巡检单位 压力循环",
+        "objectiveTitle": "压力循环",
         "objectiveDetail": "持续出现的敌对单位不会阻塞门。",
-        "startMessage": "残余巡检继续。",
+        "startMessage": "压力循环启动。",
         "startWarning": {
-          "label": "残余巡检",
+          "label": "压力循环",
           "detail": "敌对单位继续出现"
         },
         "startWarningDuration": 1.2
@@ -3489,23 +3487,23 @@
       {
         "id": "wave_dw6lb3",
         "label": "巡检单位",
-        "objectiveTitle": "清剿留置档案间",
+        "objectiveTitle": "清剿 留置档案间",
         "objectiveDetail": "击毁房间里的敌对单位。",
-        "startMessage": "留置档案间巡检单位被唤醒。",
+        "startMessage": "留置档案间 的机器人被唤醒。",
         "startWarning": {
           "label": "敌对单位",
-          "detail": "留置档案间出现机器人"
+          "detail": "留置档案间 出现机器人"
         },
         "startWarningDuration": 1.8
       },
       {
         "id": "wave_dw6lb3_pressure_loop",
-        "label": "残余巡检",
-        "objectiveTitle": "残余巡检",
+        "label": "巡检单位 压力循环",
+        "objectiveTitle": "压力循环",
         "objectiveDetail": "持续出现的敌对单位不会阻塞门。",
-        "startMessage": "残余巡检继续。",
+        "startMessage": "压力循环启动。",
         "startWarning": {
-          "label": "残余巡检",
+          "label": "压力循环",
           "detail": "敌对单位继续出现"
         },
         "startWarningDuration": 1.2
@@ -3519,9 +3517,9 @@
       "turret_rail": "左右轨道炮台",
       "around_ring": "四周通道",
       "rear_ring": "后方追击队",
-      "sg_level_04_waiting_room": "候诊厅内部",
-      "sg_level_04_therapy_theater": "治疗剧场内部",
-      "sg_room_q0q7rw": "留置档案间内部"
+      "sg_level_04_waiting_room": "候诊厅 内部",
+      "sg_level_04_therapy_theater": "治疗剧场 内部",
+      "sg_room_q0q7rw": "留置档案间 内部"
     },
     "reinforcementWarningDuration": 1.45,
     "environmentPressure": {

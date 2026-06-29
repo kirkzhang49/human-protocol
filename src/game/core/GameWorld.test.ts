@@ -96,6 +96,18 @@ describe("GameWorld progression doors", () => {
     expect(world.session.doorRevealQueue).toHaveLength(0);
   });
 
+  it("activates the Level 3 route switch target state during objective smoke flow", () => {
+    const world = new GameWorld();
+    world.loadLevel("level_03_human_museum", "playing");
+    world.session.mapProgress.activeObjectiveId = "obj_route_level_03_official_exit_door";
+
+    expect(world.activateSwitch("route_route_z43akm")).toBe(true);
+
+    expect(world.session.mapProgress.activatedSwitchIds).toContain("route_route_z43akm:out_1_route_out_yf");
+    expect(world.session.mapProgress.completedObjectiveIds).toContain("obj_route_level_03_official_exit_door");
+    expect(world.isDoorOpen("level_03_official_exit_door")).toBe(true);
+  });
+
   it("opens Level 2 care room door after its configured builder gate wave is cleared", () => {
     const world = new GameWorld();
     world.loadLevel("level_02_residential_simulation", "playing");

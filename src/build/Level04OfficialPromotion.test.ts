@@ -1,19 +1,27 @@
 import { describe, expect, it } from "vitest";
 import level04OfficialBuilderDocumentJson from "../game/config/levels/level04-memory-clinic/level.official.builder.json";
+import type { LevelDefinition } from "../game/config/schema/levelConfig";
+import { compileBuilderProjectToLevel } from "./compileBuilderProjectToLevel";
 import { level04MemoryClinic } from "../game/config/levels/level04-memory-clinic";
 import { compileOfficialBuilderDocument } from "./official-builder/compileOfficialBuilderProjectToLevel";
 import type { OfficialBuilderDocument } from "./official-builder/OfficialBuilderTypes";
 
 describe("Level 4 official builder source", () => {
   it("promotes the current memory clinic build draft as the official builder source", () => {
-    const report = compileOfficialBuilderDocument(level04OfficialBuilderDocumentJson as unknown as OfficialBuilderDocument);
+    const document = level04OfficialBuilderDocumentJson as unknown as OfficialBuilderDocument;
+    const report = compileOfficialBuilderDocument(document);
+    const compiled = compileBuilderProjectToLevel(document.project);
 
     expect(report.ok).toBe(true);
+    expect(compiled.issues).toEqual([]);
+    expect(compiled.level).not.toBeNull();
     expect(report.level).not.toBeNull();
     expect(report.level!.id).toBe("level_04_memory_clinic");
     expect(report.level!.title).toBe("记忆诊所");
     expect(report.level!.map.rooms).toHaveLength(8);
     expect(report.level!.waves).toHaveLength(6);
+    expectMemoryClinicHoldRoomObjectiveOrder(compiled.level!);
+    expectMemoryClinicHoldRoomObjectiveOrder(report.level!);
 
     const waitingRoomWaves = report.level!.waves.filter((wave) => wave.roomId === "level_04_waiting_room");
     expect(waitingRoomWaves.flatMap((wave) => wave.enemies).some((enemy) => enemy.archetype === "custodian_elite")).toBe(false);
@@ -71,5 +79,15 @@ describe("Level 4 official builder source", () => {
         }),
       ]),
     );
+    expectMemoryClinicHoldRoomObjectiveOrder(level04MemoryClinic);
   });
 });
+
+function expectMemoryClinicHoldRoomObjectiveOrder(level: LevelDefinition) {
+  const objectiveIds = level.objectiveChain?.map((objective) => objective.id) ?? [];
+  expect(objectiveIds.indexOf("obj_open_level_04_waiting_door")).toBeLessThan(objectiveIds.indexOf("obj_survive_wave_level_04_waiting_room"));
+  expect(objectiveIds.indexOf("obj_open_level_04_theater_door")).toBeLessThan(objectiveIds.indexOf("obj_survive_door_d42uh6"));
+  expect(objectiveIds.indexOf("obj_survive_door_d42uh6")).toBeLessThan(objectiveIds.indexOf("obj_open_door_d42uh6"));
+  expect(objectiveIds.indexOf("obj_open_door_d42uh6")).toBeLessThan(objectiveIds.indexOf("obj_survive_wave_dw6lb3"));
+  expect(objectiveIds.indexOf("obj_survive_wave_dw6lb3")).toBeLessThan(objectiveIds.indexOf("obj_puzzle_level_04_exit_door"));
+}

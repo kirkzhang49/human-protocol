@@ -5188,7 +5188,7 @@ function readRuntimeDebugOptions(): RuntimeDebugOptions {
   return {
     qaPlaythrough,
     noPlayerDamage: qaPlaythrough || (localQaAllowed && params.get("noDamage") === "1"),
-    physicsMode: params.get("physics") === "rapier" ? "rapier" : "legacy",
+    physicsMode: params.get("physics") === "legacy" ? "legacy" : "rapier",
     physicsDualRun: params.get("physicsDual") === "1" || params.get("physicsParity") === "1",
   };
 }

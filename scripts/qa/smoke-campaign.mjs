@@ -744,7 +744,7 @@ function performTrigger(world, levelId, trigger, objective) {
       collectKey(world, levelId, triggerId);
       break;
     case "door_opened":
-      if (!world.openConfiguredDoor(triggerId)) fail(world, levelId, `could not open door ${triggerId}`);
+      openDoorForSmoke(world, levelId, triggerId);
       break;
     case "wave_completed":
       completeWave(world, levelId, triggerId);
@@ -885,9 +885,21 @@ function answerQuiz(world, levelId, quizId) {
 function activateSwitch(world, levelId, switchId, stateId) {
   const definition = world.level.switches?.find((candidate) => candidate.id === switchId);
   if (!definition) fail(world, levelId, `missing switch ${switchId}`);
-  enterRoom(world, levelId, definition.roomId);
-  if (!world.activateSwitch(definition.id)) fail(world, levelId, `could not activate switch ${definition.id}`);
   const expectedState = stateId ?? definition.states[definition.states.length === 1 ? 0 : 1]?.id;
+  const interaction = world.level.map?.interactions.find((candidate) => candidate.id === definition.interactionId);
+  if (interaction?.consumesKeyItemId) collectKey(world, levelId, interaction.consumesKeyItemId);
+  const state = expectedState ? definition.states.find((candidate) => candidate.id === expectedState) : null;
+  if (state?.requiredKeyItemId) collectKey(world, levelId, state.requiredKeyItemId);
+  enterRoom(world, levelId, definition.roomId);
+  if (expectedState && world.isRouteSwitch(definition.id)) {
+    if (!world.chooseRouteSwitchState(definition.id, expectedState)) {
+      fail(world, levelId, `could not choose route switch state ${definition.id}:${expectedState}`);
+    }
+    world.closeRouteSwitch();
+  }
+  if (expectedState && !world.session.mapProgress.activatedSwitchIds.includes(`${definition.id}:${expectedState}`)) {
+    if (!world.activateSwitch(definition.id)) fail(world, levelId, `could not activate switch ${definition.id}`);
+  }
   if (expectedState && !world.session.mapProgress.activatedSwitchIds.includes(`${definition.id}:${expectedState}`)) {
     fail(world, levelId, `switch ${definition.id} did not activate expected state ${expectedState}`);
   }
@@ -1014,6 +1026,14 @@ function solvePuzzle(world, levelId, puzzleId) {
     return;
   }
 
+  if (puzzle.type === "archive_merge") {
+    enterRoom(world, levelId, puzzle.roomId);
+    if (!world.openArchiveMerge(puzzle.id)) fail(world, levelId, `could not open archive merge ${puzzle.id}`);
+    if (!world.submitArchiveMerge()) fail(world, levelId, `could not submit archive merge ${puzzle.id}`);
+    if (!world.isPuzzleCompleted(puzzle.id)) fail(world, levelId, `archive merge puzzle ${puzzle.id} did not complete`);
+    return;
+  }
+
   if (puzzle.type === "gallery_reading") {
     enterRoom(world, levelId, puzzle.roomId);
     // Answers live in overlay React state; smoke re-proves every question has a
@@ -1079,11 +1099,21 @@ function enterRoom(world, levelId, roomId) {
   if (!alreadyInside) {
     const door = doorToRoom(world, roomId);
     if (door && !world.isDoorOpen(door.id)) {
-      if (!world.openConfiguredDoor(door.id)) fail(world, levelId, `could not open door ${door.id} before entering room ${roomId}`);
+      openDoorForSmoke(world, levelId, door.id, ` before entering room ${roomId}`);
     }
   }
   world.setCurrentRoom(roomId);
   world.revealRoomClue(roomId);
+}
+
+function openDoorForSmoke(world, levelId, doorId, context = "") {
+  if (world.openConfiguredDoor(doorId)) return;
+  const door = world.level.map?.doors.find((candidate) => candidate.id === doorId);
+  if (door?.lock.type === "switch_state" && door.lock.switchId) {
+    activateSwitch(world, levelId, door.lock.switchId, door.lock.stateId);
+    if (world.isDoorOpen(door.id) || world.openConfiguredDoor(door.id)) return;
+  }
+  fail(world, levelId, `could not open door ${doorId}${context}`);
 }
 
 function doorToRoom(world, roomId) {
