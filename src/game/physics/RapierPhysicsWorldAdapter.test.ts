@@ -96,6 +96,62 @@ describe("RapierPhysicsWorldAdapter", () => {
     expect(moved.position.z).toBeGreaterThan(-0.35);
   });
 
+  it("lets kinematic players squeeze through a passable doorframe", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+    adapter.syncStaticObstacles([
+      obstacle({
+        id: "left-door-post",
+        position: new Vector3(-0.44, 0.75, -1),
+        halfSize: new Vector3(0.1, 0.75, 0.2),
+      }),
+      obstacle({
+        id: "right-door-post",
+        position: new Vector3(0.44, 0.75, -1),
+        halfSize: new Vector3(0.1, 0.75, 0.2),
+      }),
+    ]);
+
+    const moved = adapter.moveKinematicCircle({
+      id: "player",
+      position: new Vector3(0, 0, 0),
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(0, 0, -1.5),
+    });
+
+    expect(moved.blocked).toBe(false);
+    expect(moved.position.z).toBeCloseTo(-1.5, 4);
+  });
+
+  it("blocks kinematic players from squeezing through an undersized doorframe", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+    adapter.syncStaticObstacles([
+      obstacle({
+        id: "left-tight-door-post",
+        position: new Vector3(-0.41, 0.75, -1),
+        halfSize: new Vector3(0.1, 0.75, 0.2),
+      }),
+      obstacle({
+        id: "right-tight-door-post",
+        position: new Vector3(0.41, 0.75, -1),
+        halfSize: new Vector3(0.1, 0.75, 0.2),
+      }),
+    ]);
+
+    const moved = adapter.moveKinematicCircle({
+      id: "player",
+      position: new Vector3(0, 0, 0),
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(0, 0, -1.5),
+    });
+
+    expect(moved.blocked).toBe(true);
+    expect(moved.position.z).toBeGreaterThan(-1.1);
+  });
+
   it("uses kinematic character height when sweeping through raised obstacles", async () => {
     const adapter = createRapierPhysicsWorldAdapter();
     await adapter.init();
