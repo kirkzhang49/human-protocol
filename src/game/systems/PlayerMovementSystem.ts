@@ -4,12 +4,13 @@ import { playerConfig } from "../config/playerConfig";
 import type { GameSystem } from "../core/GameLoop";
 import type { GameWorld } from "../core/GameWorld";
 import { clamp, damp, resolveCircleAabb, resolveCircleObb } from "../core/math";
-import { reconcilePlanarVelocityWithKinematicResult } from "./KinematicMovement";
+import { dampenPlanarVelocityAgainstKinematicRecovery, reconcilePlanarVelocityWithKinematicResult } from "./KinematicMovement";
 
 export class PlayerMovementSystem implements GameSystem {
   private readonly moveDirection = new Vector3();
   private readonly forward = new Vector3();
   private readonly right = new Vector3();
+  private readonly recoveryDelta = new Vector3();
 
   update(world: GameWorld, delta: number) {
     if (world.session.mode !== "playing") return;
@@ -132,11 +133,14 @@ export class PlayerMovementSystem implements GameSystem {
     player.position.z = clamp(player.position.z, bounds.minZ, bounds.maxZ);
 
     for (const obstacle of world.syncObstacleIndex().queryCircle(player.position.x, player.position.z, playerConfig.radius)) {
+      this.recoveryDelta.copy(player.position);
       if (obstacle.yaw) {
         resolveCircleObb(player.position, playerConfig.radius, obstacle.position, obstacle.halfSize, obstacle.yaw);
       } else {
         resolveCircleAabb(player.position, playerConfig.radius, obstacle.position, obstacle.halfSize);
       }
+      this.recoveryDelta.subVectors(player.position, this.recoveryDelta);
+      dampenPlanarVelocityAgainstKinematicRecovery(player.velocity, this.recoveryDelta);
     }
   }
 }
