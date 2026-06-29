@@ -46,7 +46,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
   async init() {
     if (this.ready) return true;
     try {
-      await RAPIER.init();
+      await initRapierCompat();
       this.world = new RAPIER.World({ x: 0, y: 0, z: 0 });
       this.initialized = true;
       this.lastError = undefined;
@@ -324,6 +324,21 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
 
 export function createRapierPhysicsWorldAdapter() {
   return new RapierPhysicsWorldAdapter();
+}
+
+async function initRapierCompat() {
+  const originalWarn = console.warn;
+  console.warn = (...args) => {
+    if (args.some((arg) => typeof arg === "string" && arg.includes("deprecated parameters for the initialization function"))) {
+      return;
+    }
+    originalWarn(...args);
+  };
+  try {
+    await RAPIER.init();
+  } finally {
+    console.warn = originalWarn;
+  }
 }
 
 function toRapierVector(vector: Vector3) {

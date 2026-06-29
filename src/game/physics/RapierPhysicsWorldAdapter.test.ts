@@ -1,9 +1,22 @@
 import { Vector3 } from "three";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import type { ObstacleState } from "../entities/EntityTypes";
 import { createRapierPhysicsWorldAdapter } from "./RapierPhysicsWorldAdapter";
 
 describe("RapierPhysicsWorldAdapter", () => {
+  it("initializes Rapier without deprecated init warnings", async () => {
+    const warn = vi.spyOn(console, "warn").mockImplementation(() => {});
+    try {
+      const adapter = createRapierPhysicsWorldAdapter();
+
+      await adapter.init();
+
+      expect(warn).not.toHaveBeenCalledWith(expect.stringContaining("deprecated parameters"));
+    } finally {
+      warn.mockRestore();
+    }
+  });
+
   it("syncs fixed obstacle colliders and answers filtered segment queries", async () => {
     const adapter = createRapierPhysicsWorldAdapter();
     await adapter.init();
@@ -56,6 +69,31 @@ describe("RapierPhysicsWorldAdapter", () => {
     expect(moved.blocked).toBe(true);
     expect(moved.position.x).toBeLessThan(0.95);
     expect(moved.position.z).toBeGreaterThan(0);
+  });
+
+  it("keeps sliding momentum against rotated furniture colliders", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+    adapter.syncStaticObstacles([
+      obstacle({
+        id: "rotated-display-case",
+        position: new Vector3(0.75, 0.5, 0),
+        halfSize: new Vector3(0.25, 0.5, 0.95),
+        yaw: Math.PI / 4,
+      }),
+    ]);
+
+    const moved = adapter.moveKinematicCircle({
+      id: "player",
+      position: new Vector3(-0.5, 0, -0.55),
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(2, 0, 0.5),
+    });
+
+    expect(moved.blocked).toBe(true);
+    expect(moved.translation.length()).toBeGreaterThan(0.25);
+    expect(moved.position.z).toBeGreaterThan(-0.35);
   });
 
   it("uses kinematic character height when sweeping through raised obstacles", async () => {
@@ -140,6 +178,30 @@ describe("RapierPhysicsWorldAdapter", () => {
     const snapshot = adapter.dynamicBodySnapshots().find((body) => body.id === "loose-crate");
     expect(snapshot?.position.x).toBeGreaterThan(0.01);
     expect(snapshot?.position.y).toBeCloseTo(0.35, 4);
+  });
+
+  it("does not treat dynamic prop bodies as static kinematic blockers", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+    adapter.syncDynamicPropBodies([
+      {
+        id: "loose-crate",
+        position: new Vector3(0.7, 0.35, 0),
+        halfSize: new Vector3(0.25, 0.35, 0.25),
+        mass: 1,
+      },
+    ]);
+
+    const moved = adapter.moveKinematicCircle({
+      id: "player",
+      position: new Vector3(0, 0, 0),
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(1.2, 0, 0),
+    });
+
+    expect(moved.blocked).toBe(false);
+    expect(moved.position.x).toBeCloseTo(1.2, 4);
   });
 });
 
