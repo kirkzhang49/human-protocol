@@ -412,6 +412,8 @@ const kinematicProbe = `(() => {
       { id: obstaclePrefix + "lane_right_wall", visualKey: "test_wall", position: vector(1.65, 0.75, 6.2), halfSize: half(0.12, 0.75, 2.4) },
       { id: obstaclePrefix + "lane_rotated_furniture", visualKey: "test_rotated_console", position: vector(1.42, 0.62, 5.95), halfSize: half(0.16, 0.62, 0.75), yaw: Math.PI / 5 },
       { id: obstaclePrefix + "boss_door_edge_post", visualKey: "test_door", position: vector(10.05, 0.8, 7.2), halfSize: half(0.16, 0.8, 0.85) },
+      { id: obstaclePrefix + "player_large_rotated_furniture", visualKey: "room_residential_sofa_long", position: vector(0.05, 0.68, 11.05), halfSize: half(0.42, 0.68, 1.75), yaw: -Math.PI / 4 },
+      { id: obstaclePrefix + "leader_large_rotated_furniture", visualKey: "room_residential_sofa_long", position: vector(-0.45, 0.62, 15.35), halfSize: half(0.46, 0.62, 1.55), yaw: -Math.PI / 5 },
     ];
     const beforeCount = world.obstacles.length;
     try {
@@ -551,6 +553,62 @@ const kinematicProbe = `(() => {
         bossDoorPrevious.copy(bossDoorPosition);
         if (!Number.isFinite(bossDoorPosition.x) || !Number.isFinite(bossDoorPosition.z)) bossDoorFinite = false;
       }
+      const playerFurnitureStart = vector(-1.75, 0, 13.35);
+      const playerFurniturePosition = playerFurnitureStart.clone();
+      const playerFurniturePrevious = playerFurnitureStart.clone();
+      const playerFurnitureDirection = half(1, 0, -1).normalize();
+      let playerFurnitureMaxStep = 0;
+      let playerFurnitureStalledFrames = 0;
+      let playerFurnitureFinite = true;
+      for (let frame = 0; frame < 72; frame += 1) {
+        const moved = world.moveKinematicCircleWithPhysics({
+          id: "qa_browser_player_large_rotated_furniture",
+          position: playerFurniturePosition,
+          radius: playerRadius,
+          height: 1.6,
+          desiredTranslation: playerFurnitureDirection.clone().multiplyScalar(0.07),
+          filter: (candidate) => candidate.id === obstaclePrefix + "player_large_rotated_furniture",
+        });
+        if (!moved) {
+          playerFurnitureFinite = false;
+          break;
+        }
+        playerFurniturePosition.copy(moved.position);
+        const step = playerFurniturePosition.distanceTo(playerFurniturePrevious);
+        playerFurnitureMaxStep = Math.max(playerFurnitureMaxStep, step);
+        if (step < 0.006) playerFurnitureStalledFrames += 1;
+        playerFurniturePrevious.copy(playerFurniturePosition);
+        if (!Number.isFinite(playerFurniturePosition.x) || !Number.isFinite(playerFurniturePosition.z)) playerFurnitureFinite = false;
+      }
+      const leaderFurnitureStart = vector(-2.1, 0, 17.65);
+      const leaderFurnitureTarget = vector(0.2, 0, 13.1);
+      const leaderFurniturePosition = leaderFurnitureStart.clone();
+      const leaderFurniturePrevious = leaderFurnitureStart.clone();
+      let leaderFurnitureMaxStep = 0;
+      let leaderFurnitureStalledFrames = 0;
+      let leaderFurnitureFinite = true;
+      for (let frame = 0; frame < 96; frame += 1) {
+        const desired = leaderFurnitureTarget.clone().sub(leaderFurniturePosition).setY(0);
+        if (desired.lengthSq() > 0.000001) desired.normalize().multiplyScalar(0.04);
+        const moved = world.moveKinematicCircleWithPhysics({
+          id: "qa_browser_leader_large_rotated_furniture",
+          position: leaderFurniturePosition,
+          radius: 0.46,
+          height: 1.95,
+          desiredTranslation: desired,
+          filter: (candidate) => candidate.id === obstaclePrefix + "leader_large_rotated_furniture",
+        });
+        if (!moved) {
+          leaderFurnitureFinite = false;
+          break;
+        }
+        leaderFurniturePosition.copy(moved.position);
+        const step = leaderFurniturePosition.distanceTo(leaderFurniturePrevious);
+        leaderFurnitureMaxStep = Math.max(leaderFurnitureMaxStep, step);
+        if (step < 0.005 && desired.lengthSq() > 0.0001) leaderFurnitureStalledFrames += 1;
+        leaderFurniturePrevious.copy(leaderFurniturePosition);
+        if (!Number.isFinite(leaderFurniturePosition.x) || !Number.isFinite(leaderFurniturePosition.z)) leaderFurnitureFinite = false;
+      }
       const passableTravelZ = Number((passable?.position?.z ?? passableStart.z) - passableStart.z);
       const tightTravelZ = Number((tight?.position?.z ?? tightStart.z) - tightStart.z);
       const enemyTravelX = Number((enemyNav?.position?.x ?? navStart.x) - navStart.x);
@@ -564,6 +622,9 @@ const kinematicProbe = `(() => {
       const continuousTravelZ = Number(continuousPosition.z - continuousStart.z);
       const bossDoorTravelX = Number(bossDoorPosition.x - bossDoorStart.x);
       const bossDoorTravelZ = Number(bossDoorPosition.z - bossDoorStart.z);
+      const playerFurnitureTravel = Number(playerFurniturePosition.clone().sub(playerFurnitureStart).dot(playerFurnitureDirection));
+      const leaderFurnitureDistanceStart = Number(leaderFurnitureStart.distanceTo(leaderFurnitureTarget));
+      const leaderFurnitureDistanceEnd = Number(leaderFurniturePosition.distanceTo(leaderFurnitureTarget));
       return {
         obstacleCountDelta: world.obstacles.length - beforeCount,
         playerPassable: {
@@ -639,6 +700,29 @@ const kinematicProbe = `(() => {
           maxStep: bossDoorMaxStep,
           blockedFrames: bossDoorBlockedFrames,
           finite: bossDoorFinite,
+        },
+        largeRotatedFurniturePressure: {
+          pass: Boolean(
+            playerFurnitureFinite &&
+            playerFurnitureTravel > 0.75 &&
+            playerFurnitureMaxStep < 0.12
+          ),
+          travel: playerFurnitureTravel,
+          maxStep: playerFurnitureMaxStep,
+          stalledFrames: playerFurnitureStalledFrames,
+          finite: playerFurnitureFinite,
+        },
+        leaderRotatedFurniturePressure: {
+          pass: Boolean(
+            leaderFurnitureFinite &&
+            leaderFurnitureDistanceEnd < leaderFurnitureDistanceStart - 0.75 &&
+            leaderFurnitureMaxStep < 0.12
+          ),
+          distanceStart: leaderFurnitureDistanceStart,
+          distanceEnd: leaderFurnitureDistanceEnd,
+          maxStep: leaderFurnitureMaxStep,
+          stalledFrames: leaderFurnitureStalledFrames,
+          finite: leaderFurnitureFinite,
         },
       };
     } finally {
@@ -841,7 +925,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.projectileSweep.impactTravelZ > -1.32 &&
       probe.projectileSweep.impactTravelZ < -1.05 &&
       probe.projectileSweep.obstacleCountDelta === 1 &&
-      probe?.movementStress?.obstacleCountDelta === 14 &&
+      probe?.movementStress?.obstacleCountDelta === 16 &&
       probe.movementStress.playerPassable?.pass &&
       probe.movementStress.playerTight?.pass &&
       probe.movementStress.enemyNavigation?.pass &&
@@ -851,6 +935,8 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.movementStress.overheadClearance?.pass &&
       probe.movementStress.continuousPlayerLane?.pass &&
       probe.movementStress.continuousBossDoorEdge?.pass &&
+      probe.movementStress.largeRotatedFurniturePressure?.pass &&
+      probe.movementStress.leaderRotatedFurniturePressure?.pass &&
       probe.dynamicPropKinematicBlock?.pass &&
       (testCase.expectedDynamicBodies > 0
         ? probe?.dynamicPropImpulse?.present &&
