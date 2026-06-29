@@ -348,6 +348,7 @@ const kinematicProbe = `(() => {
     projectileSweep: projectileSweepProbe(world),
     movementStress: movementStressProbe(world),
     dynamicPropKinematicBlock: dynamicPropKinematicBlockProbe(world),
+    dynamicPropOfficialKinematicBlock: officialDynamicPropKinematicBlockProbe(world),
     dynamicPropRuntimeCap: dynamicPropRuntimeCapProbe(world),
     dynamicPropImpulse: dynamicPropImpulseProbe(world),
   };
@@ -742,10 +743,9 @@ const kinematicProbe = `(() => {
       return { present: true, count: props.length, applied: false, moved: false };
     }
     const prop = props[0];
-    const start = prop.position?.clone?.();
-    if (!start) return { present: true, count: props.length, applied: false, moved: false };
-    const startRotation = prop.rotation?.clone?.() ?? null;
-    const startYaw = Number(prop.yaw ?? 0);
+    const startState = captureDynamicPropQaState(prop);
+    const start = startState?.position;
+    if (!startState || !start) return { present: true, count: props.length, applied: false, moved: false };
     const impulse = start.clone().set(2.4, 0, 0);
     let result = { present: true, count: props.length, id: prop.id, applied: false, moved: false };
     try {
@@ -773,12 +773,10 @@ const kinematicProbe = `(() => {
       };
       return result;
     } finally {
-      prop.position.copy(start);
-      if (startRotation && prop.rotation?.copy) prop.rotation.copy(startRotation);
-      prop.yaw = startYaw;
-      prop.sleeping = false;
-      world.syncPhysicsDynamicProps();
-      world.syncDynamicPropsFromPhysics(0);
+      restoreDynamicPropBodyForQa(world, prop, {
+        ...startState,
+        sleeping: false,
+      });
     }
   }
 
@@ -865,6 +863,127 @@ const kinematicProbe = `(() => {
       cleanupBodyCountDelta,
       pass: Boolean(result.pass && cleanupDynamicCountDelta === 0 && cleanupBodyCountDelta === 0),
     };
+  }
+
+  function officialDynamicPropKinematicBlockProbe(world) {
+    const props = world.dynamicProps ?? [];
+    const count = Array.isArray(props) ? props.length : 0;
+    if (!Array.isArray(props) || props.length === 0) return { present: false, count: 0 };
+    if (!world?.moveKinematicCircleWithPhysics || !world?.syncPhysicsDynamicProps || !world?.syncDynamicPropsFromPhysics) {
+      return { present: true, count, pass: false };
+    }
+    const prop = props[0];
+    const originalState = captureDynamicPropQaState(prop);
+    if (!originalState || !prop.halfSize) return { present: true, count, id: prop?.id, pass: false };
+    const playerRadius = Number(world.player?.radius ?? 0.32);
+    const enemyRadius = 0.3;
+    const halfX = Number(prop.halfSize.x ?? 0.35);
+    const halfY = Number(prop.halfSize.y ?? 0.35);
+    const qaCenter = originalState.position.clone().set(80, Math.max(0.1, halfY), 80);
+    const playerStart = qaCenter.clone().set(qaCenter.x - halfX - playerRadius - 0.24, 0, qaCenter.z);
+    const enemyStart = qaCenter.clone().set(qaCenter.x - halfX - enemyRadius - 0.24, 0, qaCenter.z + 1.4);
+    const enemyPropCenter = qaCenter.clone().set(qaCenter.x, qaCenter.y, qaCenter.z + 1.4);
+    const desired = qaCenter.clone().set(1.4, 0, 0);
+    const beforeBodyCount = Number(world.physicsDebugSnapshot?.().dynamicBodyCount ?? count);
+    let result = null;
+    try {
+      restoreDynamicPropBodyForQa(world, prop, {
+        ...originalState,
+        position: qaCenter,
+        sleeping: false,
+      });
+      settleDynamicPropBodyForQa(world);
+      const playerMoved = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_player_official_dynamic_blocker",
+        position: playerStart,
+        radius: playerRadius,
+        height: 1.6,
+        desiredTranslation: desired,
+      });
+      restoreDynamicPropBodyForQa(world, prop, {
+        ...originalState,
+        position: enemyPropCenter,
+        sleeping: false,
+      });
+      settleDynamicPropBodyForQa(world);
+      const enemyMoved = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_enemy_official_dynamic_blocker",
+        position: enemyStart,
+        radius: enemyRadius,
+        height: 1.3,
+        desiredTranslation: desired,
+      });
+      for (let step = 0; step < 3; step += 1) world.physics?.step?.(1 / 60);
+      world.syncDynamicPropsFromPhysics?.(1 / 20);
+      const playerTravelX = Number((playerMoved?.position?.x ?? playerStart.x) - playerStart.x);
+      const enemyTravelX = Number((enemyMoved?.position?.x ?? enemyStart.x) - enemyStart.x);
+      const propTravelX = Number((prop.position?.x ?? enemyPropCenter.x) - enemyPropCenter.x);
+      const afterBodyCount = Number(world.physicsDebugSnapshot?.().dynamicBodyCount ?? beforeBodyCount);
+      result = {
+        present: true,
+        count,
+        id: prop.id,
+        playerBlocked: Boolean(playerMoved?.blocked),
+        playerTravelX,
+        enemyBlocked: Boolean(enemyMoved?.blocked),
+        enemyTravelX,
+        propNudged: propTravelX > 0.004,
+        propTravelX,
+        beforeBodyCount,
+        afterBodyCount,
+        pass: Boolean(
+          playerMoved?.blocked &&
+          playerTravelX > 0.05 &&
+          playerTravelX < 0.62 &&
+          enemyMoved?.blocked &&
+          enemyTravelX > 0.05 &&
+          enemyTravelX < 0.62 &&
+          propTravelX > 0.004 &&
+          afterBodyCount === beforeBodyCount
+        ),
+      };
+    } finally {
+      restoreDynamicPropBodyForQa(world, prop, originalState);
+    }
+    return result ?? {
+      present: true,
+      count,
+      id: prop.id,
+      pass: false,
+    };
+  }
+
+  function captureDynamicPropQaState(prop) {
+    const position = prop?.position?.clone?.();
+    if (!position) return null;
+    return {
+      position,
+      rotation: prop.rotation?.clone?.() ?? null,
+      yaw: Number(prop.yaw ?? 0),
+      sleeping: Boolean(prop.sleeping),
+    };
+  }
+
+  function restoreDynamicPropBodyForQa(world, prop, state) {
+    if (!state || !prop) return;
+    const props = world.dynamicProps;
+    const index = Array.isArray(props) ? props.indexOf(prop) : -1;
+    if (index >= 0) {
+      props.splice(index, 1);
+      world.syncPhysicsDynamicProps?.();
+    }
+    prop.position.copy(state.position);
+    if (state.rotation && prop.rotation?.copy) prop.rotation.copy(state.rotation);
+    prop.yaw = state.yaw;
+    prop.sleeping = state.sleeping;
+    if (index >= 0) props.splice(Math.min(index, props.length), 0, prop);
+    world.syncPhysicsDynamicProps?.();
+    world.syncDynamicPropsFromPhysics?.(0);
+  }
+
+  function settleDynamicPropBodyForQa(world) {
+    world.physics?.step?.(1 / 120);
+    world.syncDynamicPropsFromPhysics?.(0);
   }
 
   function dynamicPropRuntimeCapProbe(world) {
@@ -1008,6 +1127,11 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.movementStress.largeRotatedFurniturePressure?.pass &&
       probe.movementStress.leaderRotatedFurniturePressure?.pass &&
       probe.dynamicPropKinematicBlock?.pass &&
+      (testCase.expectedDynamicBodies > 0
+        ? probe.dynamicPropOfficialKinematicBlock?.present &&
+          probe.dynamicPropOfficialKinematicBlock.count === testCase.expectedDynamicBodies &&
+          probe.dynamicPropOfficialKinematicBlock.pass
+        : probe.dynamicPropOfficialKinematicBlock?.present === false && probe.dynamicPropOfficialKinematicBlock.count === 0) &&
       probe.dynamicPropRuntimeCap?.pass &&
       (testCase.expectedDynamicBodies > 0
         ? probe?.dynamicPropImpulse?.present &&
@@ -1032,6 +1156,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         projectileSweep: probe?.projectileSweep,
         movementStress: probe?.movementStress,
         dynamicPropKinematicBlock: probe?.dynamicPropKinematicBlock,
+        dynamicPropOfficialKinematicBlock: probe?.dynamicPropOfficialKinematicBlock,
         dynamicPropRuntimeCap: probe?.dynamicPropRuntimeCap,
         dynamicPropImpulse: probe?.dynamicPropImpulse,
       }),
