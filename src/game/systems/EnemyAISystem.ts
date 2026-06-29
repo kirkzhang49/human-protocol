@@ -58,10 +58,10 @@ export class EnemyAISystem implements GameSystem {
         enemy.velocity.multiplyScalar(Math.exp(-12 * delta));
         if (!this.moveWithPhysics(world, enemy, delta)) {
           enemy.position.addScaledVector(enemy.velocity, delta);
-          this.resolveArena(world, enemy.position, enemy.radius);
+          this.resolveArena(world, enemy);
         }
         this.resolveEnemySpacing(world, enemy);
-        this.resolveArena(world, enemy.position, enemy.radius);
+        this.resolveArena(world, enemy);
         world.tryTriggerBossPhases(enemy);
         continue;
       }
@@ -88,10 +88,10 @@ export class EnemyAISystem implements GameSystem {
 
       if (!this.moveWithPhysics(world, enemy, delta)) {
         enemy.position.addScaledVector(enemy.velocity, delta);
-        this.resolveArena(world, enemy.position, enemy.radius);
+        this.resolveArena(world, enemy);
       }
       this.resolveEnemySpacing(world, enemy);
-      this.resolveArena(world, enemy.position, enemy.radius);
+      this.resolveArena(world, enemy);
       this.attackPlayer(world, enemy, distance, canSeePlayer, delta);
 
       world.tryTriggerBossPhases(enemy);
@@ -184,10 +184,26 @@ export class EnemyAISystem implements GameSystem {
     world.triggerEmergencyUltimateBlast();
   }
 
-  private resolveArena(world: GameWorld, position: Vector3, radius: number) {
+  private resolveArena(world: GameWorld, enemy: EnemyState) {
+    const position = enemy.position;
+    const radius = enemy.radius;
     const bounds = movementBoundsForLevel(world.level, radius);
     position.x = clamp(position.x, bounds.minX, bounds.maxX);
     position.z = clamp(position.z, bounds.minZ, bounds.maxZ);
+
+    this.moveDelta.set(0, 0, 0);
+    const result = world.moveKinematicCircleWithPhysics({
+      id: `enemy:${enemy.id}:recovery`,
+      position,
+      radius,
+      height: enemyCollisionHeight(enemy),
+      desiredTranslation: this.moveDelta,
+      filter: enemyPhysicsObstacleBlocks,
+    });
+    if (result) {
+      position.copy(result.position);
+      return;
+    }
 
     for (const obstacle of world.syncObstacleIndex().queryCircle(position.x, position.z, radius)) {
       if (obstacle.enemyNavigation === "soft" || obstacle.enemyNavigation === "ignore") continue;

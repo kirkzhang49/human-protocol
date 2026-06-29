@@ -1,5 +1,5 @@
 import { Vector2, Vector3 } from "three";
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import type { InputSnapshot } from "../../input/InputTypes";
 import { bossVisualProfileForEnemy } from "../config/bossVisualProfiles";
 import { level03HumanMuseum } from "../config/levels/level03-human-museum/level";
@@ -551,6 +551,32 @@ describe("combat weapon rules", () => {
     new EnemyAISystem().update(world, 0.1);
 
     expect(enemy.position.z).toBeLessThan(-0.05);
+  });
+
+  it("routes enemy post-spacing arena recovery through physics when available", () => {
+    const world = createCombatWorld();
+    const enemy = world.spawnEnemy("repair_drone", "physics_recovery_chase", new Vector3(0, 0, -3), 0);
+    enemy.velocity.set(0, 0, 0);
+    enemy.staggerRemaining = 0.2;
+    const moves: Parameters<GameWorld["moveKinematicCircleWithPhysics"]>[0][] = [];
+    world.moveKinematicCircleWithPhysics = vi.fn((move) => {
+      moves.push({
+        ...move,
+        position: move.position.clone(),
+        desiredTranslation: move.desiredTranslation.clone(),
+      });
+      return {
+        position: move.position.clone(),
+        translation: move.desiredTranslation.clone(),
+        blocked: false,
+      };
+    });
+
+    new EnemyAISystem().update(world, 1 / 60);
+
+    expect(world.moveKinematicCircleWithPhysics).toHaveBeenCalledTimes(2);
+    expect(moves[1]?.id).toBe(`enemy:${enemy.id}:recovery`);
+    expect(moves[1]?.desiredTranslation.lengthSq()).toBe(0);
   });
 
   it("marks puzzle furniture as ignored for enemy navigation while ordinary furniture stays solid", () => {

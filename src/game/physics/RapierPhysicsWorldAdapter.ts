@@ -1,4 +1,4 @@
-import RAPIER, { type Collider, type RigidBody, type World } from "@dimforge/rapier3d-compat";
+import RAPIER, { type Collider, type RigidBody, type Shape, type World } from "@dimforge/rapier3d-compat";
 import { Quaternion, Vector3 } from "three";
 import type { ObstacleState } from "../entities/EntityTypes";
 import type {
@@ -140,9 +140,9 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
     const startedAt = nowMs();
     const characterShape = shapeForGroundedCharacter(move.radius, move.height);
     const center = shapeCenterForGroundedShape(move.position, characterShape.groundOffsetY);
-    const remaining = move.desiredTranslation.clone();
+    const remaining = planarTranslation(move.desiredTranslation);
     const filterPredicate = this.filterPredicate(move.filter);
-    let blocked = false;
+    let blocked = this.recoverKinematicOverlap(center, characterShape.shape, filterPredicate);
 
     for (let iteration = 0; iteration < 3; iteration += 1) {
       if (remaining.lengthSq() <= minimumMoveDistanceSq) break;
@@ -184,7 +184,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       center.addScaledVector(normal, 0.001);
     }
 
-    const position = new Vector3(center.x, center.y - characterShape.groundOffsetY, center.z);
+    const position = new Vector3(center.x, move.position.y, center.z);
     const translation = position.clone().sub(move.position);
     this.lastMoveMs = nowMs() - startedAt;
     return { position, translation, blocked };
@@ -288,6 +288,38 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       return obstacle ? filter(obstacle) : false;
     };
   }
+
+  private recoverKinematicOverlap(center: Vector3, shape: Shape, filterPredicate?: (collider: Collider) => boolean) {
+    if (!this.world) return false;
+    let recovered = false;
+
+    for (let iteration = 0; iteration < 4; iteration += 1) {
+      const bestCorrection: { value: Vector3 | null } = { value: null };
+      this.world.intersectionsWithShape(
+        toRapierVector(center),
+        identityRotation,
+        shape,
+        (collider) => {
+          const contact = collider.contactShape(shape, toRapierVector(center), identityRotation, 0.02);
+          if (!contact || contact.distance >= 0) return true;
+          const correction = planarContactCorrection(center, collider, contact.distance, contact.normal1);
+          if (!bestCorrection.value || correction.lengthSq() > bestCorrection.value.lengthSq()) bestCorrection.value = correction;
+          return true;
+        },
+        undefined,
+        undefined,
+        undefined,
+        undefined,
+        filterPredicate,
+      );
+
+      if (!bestCorrection.value || bestCorrection.value.lengthSq() <= minimumMoveDistanceSq) break;
+      center.add(bestCorrection.value);
+      recovered = true;
+    }
+
+    return recovered;
+  }
 }
 
 export function createRapierPhysicsWorldAdapter() {
@@ -298,10 +330,25 @@ function toRapierVector(vector: Vector3) {
   return { x: vector.x, y: vector.y, z: vector.z };
 }
 
+function planarTranslation(vector: Vector3) {
+  return new Vector3(vector.x, 0, vector.z);
+}
+
 function yawRotation(yaw: number) {
   if (Math.abs(yaw) <= 0.000001) return identityRotation;
   const halfYaw = yaw * 0.5;
   return { x: 0, y: Math.sin(halfYaw), z: 0, w: Math.cos(halfYaw) };
+}
+
+function planarContactCorrection(center: Vector3, collider: Collider, distance: number, normal: { x: number; z: number }) {
+  const direction = new Vector3(normal.x, 0, normal.z);
+  if (direction.lengthSq() <= minimumMoveDistanceSq) {
+    const colliderPosition = collider.translation();
+    direction.set(center.x - colliderPosition.x, 0, center.z - colliderPosition.z);
+  }
+  if (direction.lengthSq() <= minimumMoveDistanceSq) direction.set(1, 0, 0);
+  direction.normalize();
+  return direction.multiplyScalar(-distance + 0.002);
 }
 
 function shapeCenterForGroundedShape(position: Vector3, groundOffsetY: number) {

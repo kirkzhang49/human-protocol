@@ -81,6 +81,46 @@ describe("RapierPhysicsWorldAdapter", () => {
     expect(moved.position.x).toBeLessThan(0.72);
   });
 
+  it("keeps kinematic character movement on the ground plane", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+
+    const moved = adapter.moveKinematicCircle({
+      id: "player",
+      position: new Vector3(0, 0, 0),
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(0.75, 0.25, 0),
+    });
+
+    expect(moved.position.y).toBeCloseTo(0, 5);
+    expect(moved.translation.y).toBeCloseTo(0, 5);
+  });
+
+  it("recovers kinematic characters that start overlapped with fixed obstacles", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+    adapter.syncStaticObstacles([
+      obstacle({
+        id: "post-separation-wall",
+        position: new Vector3(0, 0.5, 0),
+        halfSize: new Vector3(0.5, 0.5, 0.5),
+      }),
+    ]);
+
+    const moved = adapter.moveKinematicCircle({
+      id: "enemy:1",
+      position: new Vector3(0.42, 0, 0),
+      radius: 0.3,
+      height: 1.2,
+      desiredTranslation: new Vector3(0, 0, 0),
+    });
+
+    expect(moved.blocked).toBe(true);
+    expect(moved.position.x).toBeGreaterThan(0.79);
+    expect(moved.position.y).toBeCloseTo(0, 5);
+  });
+
   it("steps opt-in dynamic prop bodies on the ground plane", async () => {
     const adapter = createRapierPhysicsWorldAdapter();
     await adapter.init();
