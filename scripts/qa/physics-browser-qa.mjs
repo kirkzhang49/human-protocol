@@ -346,6 +346,7 @@ const kinematicProbe = `(() => {
       translation: Number(enemyResult.translation?.length?.() ?? 0),
     } : null,
     projectileSweep: projectileSweepProbe(world),
+    movementStress: movementStressProbe(world),
   };
 
   function projectileSweepProbe(world) {
@@ -381,6 +382,85 @@ const kinematicProbe = `(() => {
     } finally {
       for (let index = world.obstacles.length - 1; index >= 0; index -= 1) {
         if (world.obstacles[index]?.id === obstacleId) world.obstacles.splice(index, 1);
+      }
+      world.markObstacleIndexDirty?.();
+      world.syncPhysicsStaticObstacles?.();
+    }
+  }
+
+  function movementStressProbe(world) {
+    if (!world?.moveKinematicCircleWithPhysics || !world?.obstacles) return null;
+    const obstaclePrefix = "qa_movement_stress_";
+    const base = world.player.position.clone();
+    base.y = 0;
+    const vector = (x, y, z) => world.player.position.clone().set(base.x + x, y, base.z + z);
+    const half = (x, y, z) => world.player.position.clone().set(x, y, z);
+    const obstacles = [
+      { id: obstaclePrefix + "pass_left", visualKey: "test_door", position: vector(-0.5, 0.75, -1), halfSize: half(0.1, 0.75, 0.2) },
+      { id: obstaclePrefix + "pass_right", visualKey: "test_door", position: vector(0.5, 0.75, -1), halfSize: half(0.1, 0.75, 0.2) },
+      { id: obstaclePrefix + "tight_left", visualKey: "test_door", position: vector(-0.4, 0.75, -1), halfSize: half(0.1, 0.75, 0.2) },
+      { id: obstaclePrefix + "tight_right", visualKey: "test_door", position: vector(0.4, 0.75, -1), halfSize: half(0.1, 0.75, 0.2) },
+      { id: obstaclePrefix + "nav_soft", visualKey: "test_soft_prop", position: vector(3.55, 0.5, 2), halfSize: half(0.25, 0.5, 0.65), enemyNavigation: "soft" },
+      { id: obstaclePrefix + "nav_solid", visualKey: "test_solid_prop", position: vector(4.45, 0.5, 2), halfSize: half(0.25, 0.5, 0.65) },
+    ];
+    const beforeCount = world.obstacles.length;
+    try {
+      world.obstacles.push(...obstacles);
+      world.markObstacleIndexDirty?.();
+      world.syncPhysicsStaticObstacles?.();
+
+      const playerRadius = world.player.radius ?? 0.32;
+      const passableStart = vector(0, 0, 0);
+      const passable = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_player_passable_doorframe",
+        position: passableStart,
+        radius: playerRadius,
+        height: 1.6,
+        desiredTranslation: half(0, 0, -1.5),
+        filter: (candidate) => candidate.id.startsWith(obstaclePrefix + "pass_"),
+      });
+      const tightStart = vector(0, 0, 0);
+      const tight = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_player_tight_doorframe",
+        position: tightStart,
+        radius: playerRadius,
+        height: 1.6,
+        desiredTranslation: half(0, 0, -1.5),
+        filter: (candidate) => candidate.id.startsWith(obstaclePrefix + "tight_"),
+      });
+      const navStart = vector(3, 0, 2);
+      const enemyNav = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_enemy_nav_filter",
+        position: navStart,
+        radius: 0.28,
+        height: 1.3,
+        desiredTranslation: half(2.4, 0, 0),
+        filter: (candidate) => candidate.id.startsWith(obstaclePrefix + "nav_") && candidate.enemyNavigation !== "soft" && candidate.enemyNavigation !== "ignore",
+      });
+      const passableTravelZ = Number((passable?.position?.z ?? passableStart.z) - passableStart.z);
+      const tightTravelZ = Number((tight?.position?.z ?? tightStart.z) - tightStart.z);
+      const enemyTravelX = Number((enemyNav?.position?.x ?? navStart.x) - navStart.x);
+      return {
+        obstacleCountDelta: world.obstacles.length - beforeCount,
+        playerPassable: {
+          pass: Boolean(passable && !passable.blocked && passableTravelZ < -1.35),
+          blocked: Boolean(passable?.blocked),
+          travelZ: passableTravelZ,
+        },
+        playerTight: {
+          pass: Boolean(tight?.blocked && tightTravelZ > -1.15),
+          blocked: Boolean(tight?.blocked),
+          travelZ: tightTravelZ,
+        },
+        enemyNavigation: {
+          pass: Boolean(enemyNav?.blocked && enemyTravelX > 0.65 && enemyTravelX < 1.2),
+          blocked: Boolean(enemyNav?.blocked),
+          travelX: enemyTravelX,
+        },
+      };
+    } finally {
+      for (let index = world.obstacles.length - 1; index >= 0; index -= 1) {
+        if (world.obstacles[index]?.id?.startsWith(obstaclePrefix)) world.obstacles.splice(index, 1);
       }
       world.markObstacleIndexDirty?.();
       world.syncPhysicsStaticObstacles?.();
@@ -445,7 +525,11 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe?.projectileSweep?.hit &&
       probe.projectileSweep.impactTravelZ > -1.32 &&
       probe.projectileSweep.impactTravelZ < -1.05 &&
-      probe.projectileSweep.obstacleCountDelta === 1;
+      probe.projectileSweep.obstacleCountDelta === 1 &&
+      probe?.movementStress?.obstacleCountDelta === 6 &&
+      probe.movementStress.playerPassable?.pass &&
+      probe.movementStress.playerTight?.pass &&
+      probe.movementStress.enemyNavigation?.pass;
     record(
       physicsOk ? "PASS" : "FAIL",
       `${testCase.name} Rapier runtime`,
@@ -460,6 +544,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         playerProbe: probe?.player,
         enemyProbe: probe?.enemy,
         projectileSweep: probe?.projectileSweep,
+        movementStress: probe?.movementStress,
       }),
     );
 
