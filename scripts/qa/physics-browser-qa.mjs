@@ -586,7 +586,9 @@ const kinematicProbe = `(() => {
     const halfSize = start.clone().set(0.35, 0.35, 0.35);
     const desired = start.clone().set(1.6, 0, 0);
     const beforeCount = Array.isArray(world.dynamicProps) ? world.dynamicProps.length : 0;
+    const beforeBodyCount = Number(world.physicsDebugSnapshot?.().dynamicBodyCount ?? beforeCount);
     let prop = null;
+    let result = null;
     try {
       prop = world.spawnDynamicProp({
         id: propId,
@@ -620,7 +622,7 @@ const kinematicProbe = `(() => {
       const enemyTravelX = Number((enemyMoved?.position?.x ?? start.x) - start.x);
       const propTravelX = Number((prop?.position?.x ?? propStartX) - propStartX);
       const dynamicCountDelta = (world.dynamicProps?.length ?? beforeCount) - beforeCount;
-      return {
+      result = {
         spawned: Boolean(prop),
         playerBlocked: Boolean(playerMoved?.blocked),
         playerTravelX,
@@ -648,6 +650,15 @@ const kinematicProbe = `(() => {
       world.syncPhysicsDynamicProps();
       world.syncDynamicPropsFromPhysics?.(0);
     }
+    if (!result) return result;
+    const cleanupDynamicCountDelta = (world.dynamicProps?.length ?? beforeCount) - beforeCount;
+    const cleanupBodyCountDelta = Number(world.physicsDebugSnapshot?.().dynamicBodyCount ?? beforeBodyCount) - beforeBodyCount;
+    return {
+      ...result,
+      cleanupDynamicCountDelta,
+      cleanupBodyCountDelta,
+      pass: Boolean(result.pass && cleanupDynamicCountDelta === 0 && cleanupBodyCountDelta === 0),
+    };
   }
 })()`;
 
