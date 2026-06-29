@@ -237,6 +237,38 @@ describe("RapierPhysicsWorldAdapter", () => {
     expect(moved.position.x).toBeLessThan(0.72);
   });
 
+  it("lets shorter kinematic characters pass under overhead blockers that catch bosses", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+    adapter.syncStaticObstacles([
+      obstacle({
+        id: "overhead-crossbar",
+        position: new Vector3(1.1, 2.05, 0),
+        halfSize: new Vector3(0.22, 0.16, 1),
+      }),
+    ]);
+
+    const player = adapter.moveKinematicCircle({
+      id: "player",
+      position: new Vector3(0, 0, 0),
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(1.6, 0, 0),
+    });
+    const boss = adapter.moveKinematicCircle({
+      id: "enemy:boss",
+      position: new Vector3(0, 0, 0),
+      radius: 0.52,
+      height: 2.55,
+      desiredTranslation: new Vector3(1.6, 0, 0),
+    });
+
+    expect(player.blocked).toBe(false);
+    expect(player.position.x).toBeCloseTo(1.6, 4);
+    expect(boss.blocked).toBe(true);
+    expect(boss.position.x).toBeLessThan(0.8);
+  });
+
   it("keeps kinematic character movement on the ground plane", async () => {
     const adapter = createRapierPhysicsWorldAdapter();
     await adapter.init();
