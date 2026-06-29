@@ -11,7 +11,7 @@ import { weaponSkins } from "../skins/weaponSkins";
 export const BLADE_ARC_RANGE = 1.65;
 export const BLADE_ARC_CONE_RADIANS = 0.54;
 export const BLADE_CLOSE_RANGE = 0.9;
-const BLADE_LINE_OF_SIGHT_RADIUS = 0.14;
+const BLADE_SWEEP_BLOCK_RADIUS = 0.32;
 const BLADE_DYNAMIC_PROP_IMPULSE = 2.15;
 
 export class WeaponSystem implements GameSystem {
@@ -199,7 +199,7 @@ export class WeaponSystem implements GameSystem {
       if (!inArc) continue;
       this.targetPoint.copy(enemy.position);
       this.targetPoint.y += 0.8;
-      if (!world.hasProjectileLineOfSight(player.position, this.targetPoint, BLADE_LINE_OF_SIGHT_RADIUS)) continue;
+      if (!world.hasProjectileLineOfSight(player.position, this.targetPoint, BLADE_SWEEP_BLOCK_RADIUS)) continue;
 
       const archetype = enemyArchetypes[enemy.archetypeId];
       const heavyTarget = Boolean(archetype.elite || enemy.tier !== "normal" || enemy.archetypeId === "custodian_elite");
@@ -274,7 +274,7 @@ export class WeaponSystem implements GameSystem {
 
       this.targetPoint.copy(prop.position);
       this.targetPoint.y += Math.max(0.35, Math.min(0.72, prop.halfSize.y));
-      if (!world.hasLineOfSight(this.cockpitPosition, this.targetPoint, BLADE_LINE_OF_SIGHT_RADIUS)) continue;
+      if (!world.hasLineOfSight(this.cockpitPosition, this.targetPoint, BLADE_SWEEP_BLOCK_RADIUS)) continue;
 
       this.dynamicPropImpulse.copy(direction);
       if (this.dynamicPropImpulse.lengthSq() <= 0.000001) this.dynamicPropImpulse.copy(this.bladeForward);

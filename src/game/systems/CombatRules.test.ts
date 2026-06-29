@@ -99,6 +99,27 @@ describe("combat weapon rules", () => {
     expect(world.effects.some((effect) => effect.type === "bladeSlash")).toBe(true);
   });
 
+  it("uses a wide melee sweep so thick furniture edges block rod hits", () => {
+    const world = createCombatWorld();
+    const enemy = world.spawnEnemy("repair_drone", "test_wave", new Vector3(0, 0, -1.45), 0);
+    const health = enemy.health;
+    world.obstacles.push({
+      id: "prop:melee_cover_edge",
+      visualKey: "room_crate_stack",
+      position: new Vector3(0.35, 0.85, -0.72),
+      halfSize: new Vector3(0.08, 0.85, 0.32),
+    });
+    world.markObstacleIndexDirty();
+
+    world.input.fire = true;
+    world.input.fireSource = "manual";
+    new WeaponSystem().update(world, 1 / 60);
+
+    expect(enemy.health).toBe(health);
+    expect(world.player.fireSequence).toBe(1);
+    expect(world.effects.some((effect) => effect.type === "bladeSlash")).toBe(true);
+  });
+
   it("lets the rod hit through low props that enemies can navigate through", () => {
     const world = createCombatWorld();
     const enemy = world.spawnEnemy("repair_drone", "test_wave", new Vector3(0, 0, -1.35), 0);
