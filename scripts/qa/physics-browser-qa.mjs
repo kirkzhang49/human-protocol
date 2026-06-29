@@ -407,6 +407,9 @@ const kinematicProbe = `(() => {
       { id: obstaclePrefix + "player_raised_crossbar", visualKey: "test_crossbar", position: vector(1.1, 1.2, 4), halfSize: half(0.22, 0.18, 1) },
       { id: obstaclePrefix + "boss_raised_crossbar", visualKey: "test_crossbar", position: vector(4.1, 1.75, 4), halfSize: half(0.22, 0.3, 1) },
       { id: obstaclePrefix + "overhead_crossbar", visualKey: "test_crossbar", position: vector(7.1, 2.05, 4), halfSize: half(0.22, 0.16, 1) },
+      { id: obstaclePrefix + "lane_left_wall", visualKey: "test_wall", position: vector(-1.05, 0.75, 6.2), halfSize: half(0.12, 0.75, 2.4) },
+      { id: obstaclePrefix + "lane_right_wall", visualKey: "test_wall", position: vector(1.65, 0.75, 6.2), halfSize: half(0.12, 0.75, 2.4) },
+      { id: obstaclePrefix + "lane_rotated_furniture", visualKey: "test_rotated_console", position: vector(1.42, 0.62, 5.95), halfSize: half(0.16, 0.62, 0.75), yaw: Math.PI / 5 },
     ];
     const beforeCount = world.obstacles.length;
     try {
@@ -478,6 +481,31 @@ const kinematicProbe = `(() => {
         desiredTranslation: half(1.6, 0, 0),
         filter: (candidate) => candidate.id === obstaclePrefix + "overhead_crossbar",
       });
+      const continuousStart = vector(0, 0, 8);
+      const continuousPosition = continuousStart.clone();
+      const continuousPrevious = continuousStart.clone();
+      let continuousMaxStep = 0;
+      let continuousBlockedFrames = 0;
+      let continuousFinite = true;
+      for (let frame = 0; frame < 48; frame += 1) {
+        const moved = world.moveKinematicCircleWithPhysics({
+          id: "qa_browser_player_continuous_lane",
+          position: continuousPosition,
+          radius: playerRadius,
+          height: 1.6,
+          desiredTranslation: half(0, 0, -0.08),
+          filter: (candidate) => candidate.id.startsWith(obstaclePrefix + "lane_"),
+        });
+        if (!moved) {
+          continuousFinite = false;
+          break;
+        }
+        if (moved.blocked) continuousBlockedFrames += 1;
+        continuousPosition.copy(moved.position);
+        continuousMaxStep = Math.max(continuousMaxStep, continuousPosition.distanceTo(continuousPrevious));
+        continuousPrevious.copy(continuousPosition);
+        if (!Number.isFinite(continuousPosition.x) || !Number.isFinite(continuousPosition.z)) continuousFinite = false;
+      }
       const passableTravelZ = Number((passable?.position?.z ?? passableStart.z) - passableStart.z);
       const tightTravelZ = Number((tight?.position?.z ?? tightStart.z) - tightStart.z);
       const enemyTravelX = Number((enemyNav?.position?.x ?? navStart.x) - navStart.x);
@@ -485,6 +513,8 @@ const kinematicProbe = `(() => {
       const bossRaisedTravelX = Number((bossRaised?.position?.x ?? bossRaisedStart.x) - bossRaisedStart.x);
       const playerOverheadTravelX = Number((playerOverhead?.position?.x ?? playerOverheadStart.x) - playerOverheadStart.x);
       const bossOverheadTravelX = Number((bossOverhead?.position?.x ?? bossOverheadStart.x) - bossOverheadStart.x);
+      const continuousTravelX = Number(continuousPosition.x - continuousStart.x);
+      const continuousTravelZ = Number(continuousPosition.z - continuousStart.z);
       return {
         obstacleCountDelta: world.obstacles.length - beforeCount,
         playerPassable: {
@@ -518,6 +548,20 @@ const kinematicProbe = `(() => {
           playerTravelX: playerOverheadTravelX,
           bossBlocked: Boolean(bossOverhead?.blocked),
           bossTravelX: bossOverheadTravelX,
+        },
+        continuousPlayerLane: {
+          pass: Boolean(
+            continuousFinite &&
+            continuousTravelZ < -2.2 &&
+            Math.abs(continuousTravelX) < 0.55 &&
+            continuousMaxStep < 0.12 &&
+            continuousBlockedFrames === 0
+          ),
+          travelX: continuousTravelX,
+          travelZ: continuousTravelZ,
+          maxStep: continuousMaxStep,
+          blockedFrames: continuousBlockedFrames,
+          finite: continuousFinite,
         },
       };
     } finally {
@@ -720,13 +764,14 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.projectileSweep.impactTravelZ > -1.32 &&
       probe.projectileSweep.impactTravelZ < -1.05 &&
       probe.projectileSweep.obstacleCountDelta === 1 &&
-      probe?.movementStress?.obstacleCountDelta === 9 &&
+      probe?.movementStress?.obstacleCountDelta === 12 &&
       probe.movementStress.playerPassable?.pass &&
       probe.movementStress.playerTight?.pass &&
       probe.movementStress.enemyNavigation?.pass &&
       probe.movementStress.playerRaisedCrossbar?.pass &&
       probe.movementStress.bossRaisedCrossbar?.pass &&
       probe.movementStress.overheadClearance?.pass &&
+      probe.movementStress.continuousPlayerLane?.pass &&
       probe.dynamicPropKinematicBlock?.pass &&
       (testCase.expectedDynamicBodies > 0
         ? probe?.dynamicPropImpulse?.present &&
