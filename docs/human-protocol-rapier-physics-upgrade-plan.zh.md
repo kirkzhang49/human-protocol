@@ -6,6 +6,23 @@
 
 ---
 
+## 0. 当前实施状态（2026-06-29）
+
+这份计划已经不只是预案，当前分支 `codex/rapier-physics-migration` 已经把 Rapier 接入为 `GameWorld` 下的 renderer-agnostic 物理服务。Raw WebGPU 仍然只读 `GameWorld`，Three.js 武器 viewmodel 也没有拥有物理状态。
+
+| 阶段 | 当前状态 | 还剩什么 |
+| --- | --- | --- |
+| Phase 1-2 核心/静态 collider | 已实现。`src/game/physics` 已有 Rapier adapter、null fallback、静态 obstacle sync、yaw collider 和 debug snapshot。 | 继续保留 `?physics=legacy` 回滚路径，观察真实 QA。 |
+| Phase 3 查询替换 | 已实现主路径。projectile/LOS/enemy navigation query 可走 Rapier，并保留 dual-run parity 统计。 | Phase 6 的近战/枪械 shape sweep 还没完整替换。 |
+| Phase 4 玩家移动 | 已实现代码主路径。`PlayerMovementSystem` 先尝试 `moveKinematicCircleWithPhysics`，失败才走 legacy fallback；已有速度修正、恢复修正、dash 防穿透回归。 | 还要做浏览器手感 QA：五关+试玩、移动端、门框/旋转家具/窄通道逐点验收。 |
+| Phase 5 怪物移动 | 已实现代码主路径。`EnemyAISystem` 的移动和 post-spacing recovery 已走 Rapier；`enemyNavigation` soft/ignore 过滤、boss/leader 高度、近墙恢复都有回归。 | 还要做手感调参：boss/leader 在真实关卡门边和大型家具旁的长期抖动观察。 |
+| Phase 7 动态小物件 | 基础层已实现。`DynamicPropState`、Rapier dynamic body、冲击力、睡眠/寿命清理、Raw WebGPU/Three fallback 读取都已具备；并已加配置护栏，限制数量、体积、关键标签。 | 还没把真实关卡里的小箱子/轻椅/碎片逐关标成 dynamic；需要少量精选，不应批量动态化。 |
+| Phase 8 清理 legacy | 未开始。 | 需要等 QA 证明 Rapier 主路径稳定，再删重复 legacy。 |
+
+因此，Phase 4/5 现在不是“不能做”，而是已经进入“主路径实现 + 回归覆盖 + 实机手感 QA”的阶段。Phase 7 也已经有基础层，但必须谨慎：先用配置护栏保证关键谜题、门、key item、大型机器不会被误标为动态物件，再逐关挑少量轻物件试做。
+
+---
+
 ## 1. 一句话结论
 
 Human Protocol 当前的战斗和移动已经有不错的手感设计，但底层碰撞仍是自研的轻量 2.5D 系统。为了提升家具碰撞准确度、子弹/近战命中一致性、怪物和玩家贴墙滑动，以及未来动态家具/碎片的物理战斗质感，建议引入 **Rapier** 作为 `src/game` 内的核心物理服务。
@@ -622,4 +639,3 @@ Rapier 值得引入。
 第一阶段预期提升 20-40% 的物理可信度和战斗稳定性。
 加入动态家具后，物理战斗体感有机会提升到 35-60%。
 ```
-
