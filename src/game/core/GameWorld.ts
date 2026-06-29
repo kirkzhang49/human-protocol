@@ -259,9 +259,11 @@ export class GameWorld {
     mass?: number;
   }) {
     if (this.dynamicProps.length >= MAX_DYNAMIC_PROPS) return null;
+    const id = config.id ?? `dynamic_prop_${this.nextId()}`;
+    if (this.dynamicProps.some((prop) => prop.id === id)) return null;
     const yaw = config.yaw ?? 0;
     const prop: DynamicPropState = {
-      id: config.id ?? `dynamic_prop_${this.nextId()}`,
+      id,
       modelKey: config.modelKey,
       ...(config.roomId ? { roomId: config.roomId } : {}),
       position: config.position.clone(),

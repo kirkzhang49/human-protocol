@@ -45,6 +45,38 @@ describe("GameWorld dynamic prop physics", () => {
     expect(prop?.position.y).toBeCloseTo(0.35, 4);
   });
 
+  it("rejects duplicate dynamic prop ids before they reach Rapier body sync", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    const first = world.spawnDynamicProp({
+      id: "duplicate-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+    const duplicate = world.spawnDynamicProp({
+      id: "duplicate-crate",
+      modelKey: "test_crate",
+      position: new Vector3(2, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+
+    expect(first).not.toBeNull();
+    expect(duplicate).toBeNull();
+    expect(world.dynamicProps.map((prop) => prop.id)).toEqual(["duplicate-crate"]);
+    expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(1);
+  });
+
   it("keeps player and filtered enemy kinematic movement from passing through opt-in dynamic props", async () => {
     vi.stubGlobal("window", {
       ...globalThis,
