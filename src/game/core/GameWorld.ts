@@ -318,10 +318,10 @@ export class GameWorld {
 
   syncDynamicPropsFromPhysics(delta = 0) {
     const snapshots = this.physics.dynamicBodySnapshots();
-    if (snapshots.length === 0) return;
     const snapshotById = new Map(snapshots.map((snapshot) => [snapshot.id, snapshot]));
+    const ageDelta = Math.max(0, delta);
     for (const prop of this.dynamicProps) {
-      prop.age += Math.max(0, delta);
+      prop.age += ageDelta;
       const snapshot = snapshotById.get(prop.id);
       if (!snapshot) continue;
       prop.position.copy(snapshot.position);

@@ -162,6 +162,24 @@ describe("GameWorld dynamic prop physics", () => {
     expect(world.dynamicProps.map((prop) => prop.id)).toEqual(["awake-crate"]);
   });
 
+  it("despawns old dynamic props even when physics snapshots are unavailable", () => {
+    const world = new GameWorld();
+    const prop = world.spawnDynamicProp({
+      id: "legacy-expiring-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+
+    expect(prop).not.toBeNull();
+    world.physics.dynamicBodySnapshots = vi.fn(() => []);
+
+    world.syncDynamicPropsFromPhysics(46);
+
+    expect(world.dynamicProps).toHaveLength(0);
+  });
+
   it("spawns only explicitly tagged map props as dynamic props on level reset", () => {
     const world = new GameWorld();
     if (!world.level.map) throw new Error("Expected default test level to include map geometry.");
