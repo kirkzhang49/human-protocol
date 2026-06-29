@@ -405,6 +405,7 @@ const kinematicProbe = `(() => {
       { id: obstaclePrefix + "nav_soft", visualKey: "test_soft_prop", position: vector(3.55, 0.5, 2), halfSize: half(0.25, 0.5, 0.65), enemyNavigation: "soft" },
       { id: obstaclePrefix + "nav_solid", visualKey: "test_solid_prop", position: vector(4.45, 0.5, 2), halfSize: half(0.25, 0.5, 0.65) },
       { id: obstaclePrefix + "player_raised_crossbar", visualKey: "test_crossbar", position: vector(1.1, 1.2, 4), halfSize: half(0.22, 0.18, 1) },
+      { id: obstaclePrefix + "leader_mid_crossbar", visualKey: "test_crossbar", position: vector(10.1, 1.62, 4), halfSize: half(0.22, 0.18, 1) },
       { id: obstaclePrefix + "boss_raised_crossbar", visualKey: "test_crossbar", position: vector(4.1, 1.75, 4), halfSize: half(0.22, 0.3, 1) },
       { id: obstaclePrefix + "overhead_crossbar", visualKey: "test_crossbar", position: vector(7.1, 2.05, 4), halfSize: half(0.22, 0.16, 1) },
       { id: obstaclePrefix + "lane_left_wall", visualKey: "test_wall", position: vector(-1.05, 0.75, 6.2), halfSize: half(0.12, 0.75, 2.4) },
@@ -454,6 +455,24 @@ const kinematicProbe = `(() => {
         height: 1.6,
         desiredTranslation: half(1.6, 0, 0),
         filter: (candidate) => candidate.id === obstaclePrefix + "player_raised_crossbar",
+      });
+      const normalLeaderClearanceStart = vector(9, 0, 4);
+      const normalLeaderClearance = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_normal_enemy_leader_crossbar_clearance",
+        position: normalLeaderClearanceStart,
+        radius: 0.3,
+        height: 1.3,
+        desiredTranslation: half(1.6, 0, 0),
+        filter: (candidate) => candidate.id === obstaclePrefix + "leader_mid_crossbar",
+      });
+      const leaderRaisedStart = vector(9, 0, 4);
+      const leaderRaised = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_leader_raised_crossbar",
+        position: leaderRaisedStart,
+        radius: 0.46,
+        height: 1.95,
+        desiredTranslation: half(1.6, 0, 0),
+        filter: (candidate) => candidate.id === obstaclePrefix + "leader_mid_crossbar",
       });
       const bossRaisedStart = vector(3, 0, 4);
       const bossRaised = world.moveKinematicCircleWithPhysics({
@@ -536,6 +555,8 @@ const kinematicProbe = `(() => {
       const tightTravelZ = Number((tight?.position?.z ?? tightStart.z) - tightStart.z);
       const enemyTravelX = Number((enemyNav?.position?.x ?? navStart.x) - navStart.x);
       const playerRaisedTravelX = Number((playerRaised?.position?.x ?? playerRaisedStart.x) - playerRaisedStart.x);
+      const normalLeaderClearanceTravelX = Number((normalLeaderClearance?.position?.x ?? normalLeaderClearanceStart.x) - normalLeaderClearanceStart.x);
+      const leaderRaisedTravelX = Number((leaderRaised?.position?.x ?? leaderRaisedStart.x) - leaderRaisedStart.x);
       const bossRaisedTravelX = Number((bossRaised?.position?.x ?? bossRaisedStart.x) - bossRaisedStart.x);
       const playerOverheadTravelX = Number((playerOverhead?.position?.x ?? playerOverheadStart.x) - playerOverheadStart.x);
       const bossOverheadTravelX = Number((bossOverhead?.position?.x ?? bossOverheadStart.x) - bossOverheadStart.x);
@@ -564,6 +585,19 @@ const kinematicProbe = `(() => {
           pass: Boolean(playerRaised?.blocked && playerRaisedTravelX < 0.85),
           blocked: Boolean(playerRaised?.blocked),
           travelX: playerRaisedTravelX,
+        },
+        leaderHeightCrossbar: {
+          pass: Boolean(
+            normalLeaderClearance &&
+            !normalLeaderClearance.blocked &&
+            normalLeaderClearanceTravelX > 1.35 &&
+            leaderRaised?.blocked &&
+            leaderRaisedTravelX < 0.95
+          ),
+          normalBlocked: Boolean(normalLeaderClearance?.blocked),
+          normalTravelX: normalLeaderClearanceTravelX,
+          leaderBlocked: Boolean(leaderRaised?.blocked),
+          leaderTravelX: leaderRaisedTravelX,
         },
         bossRaisedCrossbar: {
           pass: Boolean(bossRaised?.blocked && bossRaisedTravelX < 0.95),
@@ -807,11 +841,12 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.projectileSweep.impactTravelZ > -1.32 &&
       probe.projectileSweep.impactTravelZ < -1.05 &&
       probe.projectileSweep.obstacleCountDelta === 1 &&
-      probe?.movementStress?.obstacleCountDelta === 13 &&
+      probe?.movementStress?.obstacleCountDelta === 14 &&
       probe.movementStress.playerPassable?.pass &&
       probe.movementStress.playerTight?.pass &&
       probe.movementStress.enemyNavigation?.pass &&
       probe.movementStress.playerRaisedCrossbar?.pass &&
+      probe.movementStress.leaderHeightCrossbar?.pass &&
       probe.movementStress.bossRaisedCrossbar?.pass &&
       probe.movementStress.overheadClearance?.pass &&
       probe.movementStress.continuousPlayerLane?.pass &&
