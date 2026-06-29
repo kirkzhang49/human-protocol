@@ -427,6 +427,208 @@ const rawDynamicPropRenderSyncProbe = `(async () => {
   }
 })()`;
 
+const officialDoorKinematicProbe = `(() => {
+  const world = window.__HUMAN_PROTOCOL_WORLD__;
+  const doors = world?.level?.map?.doors ?? [];
+  if (!world?.moveKinematicCircleWithPhysics || !Array.isArray(world?.obstacles) || !Array.isArray(doors)) {
+    return null;
+  }
+  const testableDoors = doors.filter((door) => {
+    const width = Number(door?.size?.[0] ?? 0);
+    const depth = Number(door?.size?.[2] ?? 0);
+    return door?.id && width >= 1.8 && depth > 0 && depth <= 0.9;
+  });
+  if (!testableDoors.length) return { present: false, testedDoors: 0, pass: false };
+
+  const originalObstacles = world.obstacles.slice();
+  const originalOpenDoorIds = [...(world.session?.mapProgress?.openedDoorIds ?? [])];
+  const playerRadius = Number(world.player?.radius ?? 0.32);
+  const enemyRadius = 0.42;
+  const doorResults = [];
+  try {
+    for (const door of testableDoors) {
+      const player = probeOfficialDoorForActor(world, door, {
+        actorKind: "player",
+        radius: playerRadius,
+        height: 1.6,
+        filter: undefined,
+      });
+      const enemy = probeOfficialDoorForActor(world, door, {
+        actorKind: "enemy",
+        radius: enemyRadius,
+        height: 1.5,
+        filter: (candidate) => candidate.enemyNavigation !== "soft" && candidate.enemyNavigation !== "ignore",
+      });
+      doorResults.push({
+        doorId: door.id,
+        yaw: Number(door.yaw ?? 0),
+        width: Number(door.size?.[0] ?? 0),
+        depth: Number(door.size?.[2] ?? 0),
+        player,
+        enemy,
+        pass: Boolean(player.pass && enemy.pass),
+      });
+    }
+  } finally {
+    world.obstacles.splice(0, world.obstacles.length, ...originalObstacles);
+    if (world.session?.mapProgress?.openedDoorIds) {
+      world.session.mapProgress.openedDoorIds.splice(
+        0,
+        world.session.mapProgress.openedDoorIds.length,
+        ...originalOpenDoorIds,
+      );
+    }
+    world.markObstacleIndexDirty?.();
+    world.syncPhysicsStaticObstacles?.();
+  }
+
+  return {
+    present: true,
+    testedDoors: doorResults.length,
+    passedDoors: doorResults.filter((entry) => entry.pass).length,
+    pass: Boolean(doorResults.length && doorResults.every((entry) => entry.pass)),
+    doors: doorResults,
+  };
+
+  function probeOfficialDoorForActor(world, door, actor) {
+    const doorObstacleId = officialDoorObstacleId(door);
+    const geometry = officialDoorProbeGeometry(world, door, actor.radius);
+    setOfficialDoorObstacleForQa(world, door, true);
+    const closedDoorOnly = world.moveKinematicCircleWithPhysics({
+      id: "qa_browser_" + actor.actorKind + "_official_closed_door_" + door.id,
+      position: geometry.start,
+      radius: actor.radius,
+      height: actor.height,
+      desiredTranslation: geometry.desired,
+      filter: (candidate) => candidate.id === doorObstacleId,
+    });
+    setOfficialDoorObstacleForQa(world, door, false);
+    const openMove = world.moveKinematicCircleWithPhysics({
+      id: "qa_browser_" + actor.actorKind + "_official_open_door_" + door.id,
+      position: geometry.start,
+      radius: actor.radius,
+      height: actor.height,
+      desiredTranslation: geometry.desired,
+      ...(actor.filter ? { filter: actor.filter } : {}),
+    });
+    const closedTravel = movementAlongDoorNormal(closedDoorOnly, geometry.start, geometry.normal);
+    const openTravel = movementAlongDoorNormal(openMove, geometry.start, geometry.normal);
+    const closedBlocks = Boolean(
+      closedDoorOnly?.blocked &&
+      closedTravel >= 0 &&
+      closedTravel < geometry.desiredDistance * 0.55
+    );
+    const openPasses = Boolean(
+      openMove &&
+      openTravel > geometry.desiredDistance * 0.78 &&
+      openTravel > closedTravel + 0.45
+    );
+    return {
+      doorObstacleId,
+      closedBlocked: Boolean(closedDoorOnly?.blocked),
+      closedTravel,
+      openBlocked: Boolean(openMove?.blocked),
+      openTravel,
+      desiredDistance: geometry.desiredDistance,
+      diagnostics: openPasses ? null : diagnoseOfficialDoorOpenBlock(world, geometry, actor),
+      pass: Boolean(closedBlocks && openPasses),
+    };
+  }
+
+  function diagnoseOfficialDoorOpenBlock(world, geometry, actor) {
+    const candidates = world.obstacles
+      .map((candidate) => {
+        const only = world.moveKinematicCircleWithPhysics({
+          id: "qa_browser_" + actor.actorKind + "_official_door_diagnostic_only_" + candidate.id,
+          position: geometry.start,
+          radius: actor.radius,
+          height: actor.height,
+          desiredTranslation: geometry.desired,
+          filter: (entry) => entry.id === candidate.id,
+        });
+        const without = world.moveKinematicCircleWithPhysics({
+          id: "qa_browser_" + actor.actorKind + "_official_door_diagnostic_without_" + candidate.id,
+          position: geometry.start,
+          radius: actor.radius,
+          height: actor.height,
+          desiredTranslation: geometry.desired,
+          filter: (entry) => entry.id !== candidate.id && (!actor.filter || actor.filter(entry)),
+        });
+        const onlyTravel = movementAlongDoorNormal(only, geometry.start, geometry.normal);
+        const withoutTravel = movementAlongDoorNormal(without, geometry.start, geometry.normal);
+        return {
+          id: candidate.id,
+          visualKey: candidate.visualKey ?? null,
+          position: [Number(candidate.position.x), Number(candidate.position.y), Number(candidate.position.z)],
+          halfSize: [Number(candidate.halfSize.x), Number(candidate.halfSize.y), Number(candidate.halfSize.z)],
+          yaw: Number(candidate.yaw ?? 0),
+          onlyBlocked: Boolean(only?.blocked),
+          onlyTravel,
+          withoutBlocked: Boolean(without?.blocked),
+          withoutTravel,
+          exclusionPasses: withoutTravel > geometry.desiredDistance * 0.78,
+        };
+      });
+    return {
+      obstacleCount: candidates.length,
+      individualBlockers: candidates.filter((candidate) => candidate.onlyBlocked || candidate.onlyTravel < geometry.desiredDistance * 0.78),
+      exclusionFixes: candidates.filter((candidate) => candidate.exclusionPasses),
+    };
+  }
+
+  function officialDoorObstacleId(door) {
+    return "door:" + door.id;
+  }
+
+  function setOfficialDoorObstacleForQa(world, door, closed) {
+    const id = officialDoorObstacleId(door);
+    for (let index = world.obstacles.length - 1; index >= 0; index -= 1) {
+      if (world.obstacles[index]?.id === id) world.obstacles.splice(index, 1);
+    }
+    if (closed) {
+      world.obstacles.push({
+        id,
+        visualKey: door.visualKey ?? "official_door",
+        position: vector(Number(door.position?.[0] ?? 0), Math.max(0.35, Number(door.size?.[1] ?? 2.4) * 0.25), Number(door.position?.[2] ?? 0)),
+        halfSize: vector(
+          Math.max(0.15, Number(door.size?.[0] ?? 0) / 2),
+          Math.max(0.35, Number(door.size?.[1] ?? 0) / 2),
+          Math.max(0.12, Number(door.size?.[2] ?? 0) / 2),
+        ),
+        ...(door.yaw ? { yaw: door.yaw } : {}),
+      });
+    }
+    world.markObstacleIndexDirty?.();
+    world.syncPhysicsStaticObstacles?.();
+  }
+
+  function officialDoorProbeGeometry(world, door, radius) {
+    const yaw = Number(door.yaw ?? 0);
+    const normal = { x: Math.sin(yaw), z: Math.cos(yaw) };
+    const depth = Math.max(0.24, Number(door.size?.[2] ?? 0.32));
+    const startDistance = depth / 2 + radius + 0.24;
+    const desiredDistance = depth + radius * 2 + 0.92;
+    const cx = Number(door.position?.[0] ?? 0);
+    const cz = Number(door.position?.[2] ?? 0);
+    return {
+      normal,
+      start: vector(cx - normal.x * startDistance, 0, cz - normal.z * startDistance),
+      desired: vector(normal.x * desiredDistance, 0, normal.z * desiredDistance),
+      desiredDistance,
+    };
+  }
+
+  function movementAlongDoorNormal(move, start, normal) {
+    const x = Number(move?.position?.x ?? start.x) - Number(start.x);
+    const z = Number(move?.position?.z ?? start.z) - Number(start.z);
+    return x * normal.x + z * normal.z;
+  }
+
+  function vector(x, y, z) {
+    return world.player.position.clone().set(x, y, z);
+  }
+})()`;
+
 const kinematicProbe = `(() => {
   const world = window.__HUMAN_PROTOCOL_WORLD__;
   if (!world?.player || !world?.moveKinematicCircleWithPhysics) return null;
@@ -1215,6 +1417,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
     const physics = await page.waitFor(physicsReadySnapshot, 45000, `${testCase.name} Rapier ready`);
     const world = await page.waitFor(worldSnapshot, 15000, `${testCase.name} world snapshot`);
     const probe = await page.evaluate(kinematicProbe);
+    const officialDoorKinematic = await page.evaluate(officialDoorKinematicProbe);
     const rawDynamicPropRenderSync = await page.evaluate(rawDynamicPropRenderSyncProbe);
     await sleep(800);
     await page.screenshot(`physics-${testCase.name}`);
@@ -1243,6 +1446,9 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.movementStress.continuousBossDoorEdge?.pass &&
       probe.movementStress.largeRotatedFurniturePressure?.pass &&
       probe.movementStress.leaderRotatedFurniturePressure?.pass &&
+      officialDoorKinematic?.present &&
+      officialDoorKinematic.testedDoors > 0 &&
+      officialDoorKinematic.pass &&
       probe.dynamicPropKinematicBlock?.pass &&
       (testCase.expectedDynamicBodies > 0
         ? probe.dynamicPropOfficialKinematicBlock?.present &&
@@ -1278,6 +1484,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         enemyProbe: probe?.enemy,
         projectileSweep: probe?.projectileSweep,
         movementStress: probe?.movementStress,
+        officialDoorKinematic,
         dynamicPropKinematicBlock: probe?.dynamicPropKinematicBlock,
         dynamicPropOfficialKinematicBlock: probe?.dynamicPropOfficialKinematicBlock,
         dynamicPropRuntimeCap: probe?.dynamicPropRuntimeCap,

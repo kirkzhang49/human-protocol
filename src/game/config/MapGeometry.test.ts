@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { resolvePropCollisionProxy } from "./MapGeometry";
+import { createRoomWallSegments, resolvePropCollisionProxy } from "./MapGeometry";
 
 describe("resolvePropCollisionProxy", () => {
   it("preserves explicit collider yaw for rotated GLB furniture proxies", () => {
@@ -23,5 +23,39 @@ describe("resolvePropCollisionProxy", () => {
       halfSize: [0.8, 1.1, 0.25],
       yaw: Math.PI / 4,
     });
+  });
+});
+
+describe("createRoomWallSegments", () => {
+  it("orients shaped-room diagonal walls along their polygon edge", () => {
+    const level = {
+      id: "shape-wall-test",
+      map: {
+        rooms: [
+          {
+            id: "triangle_room",
+            label: "Triangle Room",
+            bounds: {
+              center: [0, 0, 0],
+              size: [8, 4, 5.2],
+              shape: { points: [[-4, -2.6], [4, -2.6], [0, 2.6]] },
+            },
+            geometry: { collisionWalls: true },
+          },
+        ],
+        doors: [],
+      },
+    } as any;
+
+    const segments = createRoomWallSegments(level, () => true);
+    const diagonal = segments.find((segment) => segment.id === "triangle_room:edge1:0");
+
+    expect(diagonal?.yaw).toBeTypeOf("number");
+    const edgeDirection = [-4, 5.2];
+    const length = Math.hypot(edgeDirection[0], edgeDirection[1]);
+    const yawDirection = [Math.cos(diagonal!.yaw!), -Math.sin(diagonal!.yaw!)];
+    const alignment = (yawDirection[0] * edgeDirection[0] + yawDirection[1] * edgeDirection[1]) / length;
+
+    expect(alignment).toBeGreaterThan(0.999);
   });
 });

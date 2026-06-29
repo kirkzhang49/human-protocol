@@ -175,7 +175,7 @@ function polygonSegmentsForRoom(room: LevelRoomDefinition, doors: readonly Level
     if (length < 0.05) continue;
     const dirX = dx / length;
     const dirZ = dz / length;
-    const yaw = Math.atan2(dz, dx);
+    const yaw = Math.atan2(-dz, dx);
     const intervals = carveOpenings(0, length, openingsForEdge(room, doors, a, dirX, dirZ, length));
     intervals.forEach(([start, end], index) => {
       const runLength = end - start;

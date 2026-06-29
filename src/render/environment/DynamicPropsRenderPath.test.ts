@@ -43,4 +43,12 @@ describe("dynamic prop render paths", () => {
     expect(source).toContain("__humanProtocolRawDynamicPropsDebug");
     expect(source).toContain("renderMatchesPhysics");
   });
+
+  it("physics browser QA checks official door kinematic traversal", () => {
+    const source = sourceAt("../../../scripts/qa/physics-browser-qa.mjs");
+
+    expect(source).toContain("officialDoorKinematicProbe");
+    expect(source).toContain("doorObstacleId");
+    expect(source).toContain("officialDoorKinematic");
+  });
 });
