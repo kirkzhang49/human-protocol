@@ -143,6 +143,50 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(world.player.velocity.x).toBeGreaterThan(0.5);
   });
 
+  it("keeps real Rapier player walking stable through a narrow rotated-furniture lane", async () => {
+    const world = await createRapierPlayingWorld();
+    world.player.position.set(0, 0, 0);
+    world.input.move.set(0, -1);
+    world.obstacles.push(
+      {
+        id: "rapier_narrow_lane_left_wall",
+        visualKey: "test_wall",
+        position: new Vector3(-1.05, 0.75, -1.8),
+        halfSize: new Vector3(0.12, 0.75, 2.4),
+      },
+      {
+        id: "rapier_narrow_lane_right_wall",
+        visualKey: "test_wall",
+        position: new Vector3(1.65, 0.75, -1.8),
+        halfSize: new Vector3(0.12, 0.75, 2.4),
+      },
+      {
+        id: "rapier_narrow_lane_rotated_furniture",
+        visualKey: "test_rotated_console",
+        position: new Vector3(1.42, 0.62, -2.05),
+        halfSize: new Vector3(0.16, 0.62, 0.75),
+        yaw: Math.PI / 5,
+      },
+    );
+    world.markObstacleIndexDirty();
+
+    let maxStep = 0;
+    const previous = world.player.position.clone();
+    for (let frame = 0; frame < 72; frame += 1) {
+      new PlayerMovementSystem().update(world, 1 / 60);
+      maxStep = Math.max(maxStep, world.player.position.distanceTo(previous));
+      previous.copy(world.player.position);
+    }
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(3);
+    expect(Number.isFinite(world.player.position.x)).toBe(true);
+    expect(Number.isFinite(world.player.position.z)).toBe(true);
+    expect(maxStep).toBeLessThan(0.16);
+    expect(world.player.position.z).toBeLessThan(-2.2);
+    expect(Math.abs(world.player.position.x)).toBeLessThan(0.48);
+    expect(world.player.velocity.length()).toBeLessThan(6.2);
+  });
+
   it("damps enemy velocity to the physics-resolved translation when blocked", () => {
     const world = createPlayingWorld();
     const enemy = world.spawnEnemy("repair_drone", "blocked_enemy", new Vector3(0, 0, -2.5), 0);
@@ -291,6 +335,55 @@ describe("Rapier kinematic movement reconciliation", () => {
     const bossRecoveryMove = moves.find((move) => move.id === `enemy:${boss.id}:recovery`);
     expect(bossRecoveryMove?.height).toBeGreaterThan(2.5);
     expect(boss.position.x).toBeGreaterThan(-0.1);
+    expect(boss.velocity.x).toBeGreaterThanOrEqual(-0.01);
+  });
+
+  it("keeps boss recovery stable across repeated door-edge spacing pressure", () => {
+    const world = createPlayingWorld();
+    const boss = world.spawnEnemy("custodian_elite", "door_edge_boss", new Vector3(0, 0, -2.5), 0, { tier: "boss" });
+    const pressure = world.spawnEnemy("repair_drone", "door_edge_pressure", new Vector3(0.68, 0, -2.5), 0);
+    boss.velocity.set(-2.4, 0, 0);
+    boss.staggerRemaining = 1.4;
+    pressure.velocity.set(0, 0, 0);
+    pressure.staggerRemaining = 1.4;
+
+    world.moveKinematicCircleWithPhysics = vi.fn((move: PhysicsKinematicCircleMove) => {
+      if (move.id === `enemy:${boss.id}:recovery`) {
+        const corrected = move.position.clone().add(new Vector3(0.18, 0, 0));
+        return {
+          position: corrected,
+          translation: corrected.clone().sub(move.position),
+          blocked: true,
+        };
+      }
+      if (move.id === `enemy:${boss.id}` && move.desiredTranslation.x < 0) {
+        return {
+          position: move.position.clone(),
+          translation: new Vector3(0, 0, 0),
+          blocked: true,
+        };
+      }
+      return {
+        position: move.position.clone().add(move.desiredTranslation),
+        translation: move.desiredTranslation.clone(),
+        blocked: false,
+      };
+    });
+
+    let maxSpeed = 0;
+    let maxStep = 0;
+    const previous = boss.position.clone();
+    for (let frame = 0; frame < 36; frame += 1) {
+      new EnemyAISystem().update(world, 1 / 60);
+      maxSpeed = Math.max(maxSpeed, boss.velocity.length());
+      maxStep = Math.max(maxStep, boss.position.distanceTo(previous));
+      previous.copy(boss.position);
+    }
+
+    expect(Number.isFinite(boss.position.x)).toBe(true);
+    expect(Number.isFinite(boss.velocity.x)).toBe(true);
+    expect(maxStep).toBeLessThan(0.28);
+    expect(maxSpeed).toBeLessThan(3.1);
     expect(boss.velocity.x).toBeGreaterThanOrEqual(-0.01);
   });
 
