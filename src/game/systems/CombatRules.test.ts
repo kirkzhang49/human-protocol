@@ -1,5 +1,5 @@
 import { Vector2, Vector3 } from "three";
-import { describe, expect, it, vi } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 import type { InputSnapshot } from "../../input/InputTypes";
 import { bossVisualProfileForEnemy } from "../config/bossVisualProfiles";
 import { level03HumanMuseum } from "../config/levels/level03-human-museum/level";
@@ -16,6 +16,10 @@ import { ProjectileSystem } from "./ProjectileSystem";
 import { WeaponSystem } from "./WeaponSystem";
 
 describe("combat weapon rules", () => {
+  afterEach(() => {
+    vi.unstubAllGlobals();
+  });
+
   it("swings the rod even when no target is in melee range", () => {
     const world = createCombatWorld();
     const energy = world.player.energy;
@@ -115,6 +119,64 @@ describe("combat weapon rules", () => {
     expect(enemy.health).toBeLessThan(health);
     expect(world.player.fireSequence).toBe(1);
     expect(world.effects.some((effect) => effect.type === "bladeSlash")).toBe(true);
+  });
+
+  it("pushes opt-in dynamic props brushed by the rod arc", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+    const world = createCombatWorld();
+    await world.physics.init();
+    const prop = world.spawnDynamicProp({
+      id: "blade-brushed-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, -1.05),
+      halfSize: new Vector3(0.32, 0.35, 0.32),
+      mass: 1,
+    });
+
+    world.input.fire = true;
+    world.input.fireSource = "manual";
+    new WeaponSystem().update(world, 1 / 60);
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(prop?.position.z).toBeLessThan(-1.06);
+    expect(prop?.position.y).toBeCloseTo(0.35, 4);
+  });
+
+  it("does not push opt-in dynamic props behind blade-blocking walls", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+    const world = createCombatWorld();
+    await world.physics.init();
+    const prop = world.spawnDynamicProp({
+      id: "blade-hidden-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, -1.35),
+      halfSize: new Vector3(0.32, 0.35, 0.32),
+      mass: 1,
+    });
+    world.obstacles.push(testWall(-0.72));
+    world.markObstacleIndexDirty();
+
+    world.input.fire = true;
+    world.input.fireSource = "manual";
+    new WeaponSystem().update(world, 1 / 60);
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(prop?.position.z).toBeCloseTo(-1.35, 4);
+    expect(prop?.position.y).toBeCloseTo(0.35, 4);
   });
 
   it("stops pistol projectiles at walls before damaging robots behind them", () => {

@@ -12,6 +12,7 @@ export const BLADE_ARC_RANGE = 1.65;
 export const BLADE_ARC_CONE_RADIANS = 0.54;
 export const BLADE_CLOSE_RANGE = 0.9;
 const BLADE_LINE_OF_SIGHT_RADIUS = 0.14;
+const BLADE_DYNAMIC_PROP_IMPULSE = 2.15;
 
 export class WeaponSystem implements GameSystem {
   private readonly muzzlePosition = new Vector3();
@@ -22,6 +23,7 @@ export class WeaponSystem implements GameSystem {
   private readonly targetPoint = new Vector3();
   private readonly bladeForward = new Vector3();
   private readonly toEnemy = new Vector3();
+  private readonly dynamicPropImpulse = new Vector3();
 
   update(world: GameWorld, delta: number) {
     if (world.session.mode !== "playing") return;
@@ -246,12 +248,47 @@ export class WeaponSystem implements GameSystem {
       const puzzleHitCount = world.hitPuzzleTargetsInArc(player.position, this.bladeForward, range, coneCos, "pulseRifle");
       hitCount += puzzleHitCount;
     }
+    hitCount += this.pushDynamicPropsInBladeArc(world, range, coneCos);
 
     if (hitCount > 0) {
       world.applyCameraImpact(0.2 + Math.min(hitCount, 3) * 0.055, 0.42 + Math.min(hitCount, 3) * 0.18, 0.08, 0.08);
       world.applyCombatHitStop(heavyHit ? 0.052 : 0.032, heavyHit ? 0.12 : 0.2);
     }
     return hitCount;
+  }
+
+  private pushDynamicPropsInBladeArc(world: GameWorld, range: number, coneCos: number) {
+    if (world.dynamicProps.length === 0) return 0;
+    const player = world.player;
+    let pushed = 0;
+
+    for (const prop of world.dynamicProps) {
+      this.toEnemy.copy(prop.position).sub(player.position).setY(0);
+      const distance = Math.max(0.001, this.toEnemy.length());
+      const propRadius = Math.hypot(prop.halfSize.x, prop.halfSize.z);
+      if (distance > range + propRadius) continue;
+
+      const direction = this.toEnemy.multiplyScalar(1 / distance);
+      const inArc = direction.dot(this.bladeForward) >= coneCos || distance < BLADE_CLOSE_RANGE;
+      if (!inArc) continue;
+
+      this.targetPoint.copy(prop.position);
+      this.targetPoint.y += Math.max(0.35, Math.min(0.72, prop.halfSize.y));
+      if (!world.hasLineOfSight(this.cockpitPosition, this.targetPoint, BLADE_LINE_OF_SIGHT_RADIUS)) continue;
+
+      this.dynamicPropImpulse.copy(direction);
+      if (this.dynamicPropImpulse.lengthSq() <= 0.000001) this.dynamicPropImpulse.copy(this.bladeForward);
+      this.dynamicPropImpulse.setY(0).normalize();
+      const massScale = 1 / Math.sqrt(Math.max(0.2, prop.mass ?? 1));
+      const closeScale = 0.75 + Math.max(0, 1 - distance / Math.max(0.001, range)) * 0.45;
+      this.dynamicPropImpulse.multiplyScalar(BLADE_DYNAMIC_PROP_IMPULSE * massScale * closeScale);
+      if (!world.applyDynamicPropImpulse(prop.id, this.dynamicPropImpulse)) continue;
+
+      pushed += 1;
+      world.addEffect("hitSpark", this.targetPoint, direction, 0.12, 1.08);
+    }
+
+    return pushed;
   }
 
   private assistedShotDirection(world: GameWorld) {
