@@ -6,6 +6,7 @@ import type { GameWorld } from "../core/GameWorld";
 import { isEnemyVisibleToPlayerRoom } from "../core/RoomReachability";
 import type { EnemyState } from "../entities/EnemyState";
 import { clamp, resolveCircleAabb, resolveCircleObb } from "../core/math";
+import { reconcilePlanarVelocityWithKinematicResult } from "./KinematicMovement";
 
 const HEAVY_ATTACK_STRIKE_ANIMATION_OFFSET = 0.24;
 const ENEMY_LINE_OF_SIGHT_RADIUS = 0.12;
@@ -232,6 +233,7 @@ export class EnemyAISystem implements GameSystem {
     });
     if (!result) return false;
     enemy.position.copy(result.position);
+    reconcilePlanarVelocityWithKinematicResult(enemy.velocity, this.moveDelta, result, delta);
     return true;
   }
 

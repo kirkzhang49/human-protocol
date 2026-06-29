@@ -4,6 +4,7 @@ import { playerConfig } from "../config/playerConfig";
 import type { GameSystem } from "../core/GameLoop";
 import type { GameWorld } from "../core/GameWorld";
 import { clamp, damp, resolveCircleAabb, resolveCircleObb } from "../core/math";
+import { reconcilePlanarVelocityWithKinematicResult } from "./KinematicMovement";
 
 export class PlayerMovementSystem implements GameSystem {
   private readonly moveDirection = new Vector3();
@@ -120,6 +121,7 @@ export class PlayerMovementSystem implements GameSystem {
     });
     if (!result) return false;
     player.position.copy(result.position);
+    reconcilePlanarVelocityWithKinematicResult(player.velocity, desiredTranslation, result, delta);
     return true;
   }
 
