@@ -24,7 +24,7 @@
 
 ### 0.1 最新 QA 证据
 
-- `npm run qa:playthrough:rapier`：五个官方关卡 headless real-playthrough 已覆盖 Rapier 主路径；Rapier 模式下每关 prime 时会验证官方动态体初始数量，通关时会验证 `dynamicProps` 与 Rapier `dynamicBodyCount` 不超过官方预期且无泄漏。
+- `npm run qa:playthrough:rapier`：五个官方关卡 headless real-playthrough 已覆盖 Rapier 主路径；Rapier 模式下每关 prime 时会验证官方动态体初始数量，通关时会验证 `dynamicProps` 与 Rapier `dynamicBodyCount` 不超过官方预期且无泄漏；同时统计玩家/敌人 kinematic movement 调用并阻止 null/NaN 结果，确认完整 campaign 里 Phase 4/5 主路径真实运行。
 - `npm run qa:physics:browser`：真实 Chrome browser QA，五个官方关卡均通过 Raw WebGPU backend、browser RAF/game loop、Rapier runtime、console clean 检查；包含 Level 2 移动横屏视口，并断言 Level 1/2 各 1 个动态体、Level 3-5 为 0；同时临时插入薄 cover probe，确认 projectile sweep 的命中点落在墙面附近而不是本帧终点；还临时插入玩家宽/窄门框、玩家高位横梁、玩家可过但 boss 会撞到的架空横梁、连续窄通道 + 旋转家具、大型旋转家具玩家/leader 压力探针、敌人 soft/solid 导航障碍、leader 中高横梁、boss 高位横梁、连续 boss 门边压力和动态 blocker，确认玩家无 filter movement、连续玩家移动、normal/leader/boss 高度碰撞、敌人 filtered movement、boss 门边连续压力、大型旋转家具压力稳定性、角色高度与 Phase 7 动态物件碰撞在真实浏览器 runtime 下稳定，并验证角色顶到临时动态 blocker 时会产生可观测水平位移，且 blocker 清理后动态体数量恢复；还验证运行时动态物补到总上限 12 后 overflow 被拒绝，清理后 `dynamicProps` 与 Rapier `dynamicBodyCount` 回到探针前；并对 Level 1/2 的精选动态物件施加 impulse，确认动态体会移动、保持地面高度并同步回 `GameWorld`。
 - `npm run qa:builder:browser`：已刷新到当前“烘焙并试玩 / WebGPU 试玩”单按钮 UI，并通过 /build 深度烘焙、gallery puzzle 试玩包、Raw WebGPU cooked pack、viewmodel overlay 和 compat fallback 浏览器检查。物理专项脚本不替代 builder 生产链路测试。
 - `npx vitest run src/game/systems/KinematicMovementReconciliation.test.ts`：新增 Phase 4/5 边界覆盖，验证玩家窄通道 + 旋转家具连续移动、普通行走贴大型旋转家具不会卡死或跳步、玩家 dash 撞 opt-in 动态物件会停止并轻推小物件、leader 级敌人沿大型旋转家具追击不会卡住或爆速、boss 门边 spacing pressure 连续恢复都保持稳定。

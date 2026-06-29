@@ -105,6 +105,7 @@ try {
   const world = new GameWorld();
   restoreBrowserShim();
   world.enableQaNoDamageForTests();
+  const kinematicMoveStats = installKinematicMoveStats(world);
   const runner = createRunner(world, systems);
   const fullCampaignIds = humanProtocolBasePack.campaignLevelIds;
   const campaignIds = selectCampaignLevelIds(fullCampaignIds);
@@ -119,7 +120,8 @@ try {
     if (world.level.id !== expectedLevelId) {
       fail(world, `Expected ${expectedLevelId}, got ${world.level.id}`);
     }
-    reports.push(playLevel(runner, expectedLevelId));
+    kinematicMoveStats.reset();
+    reports.push(playLevel(runner, expectedLevelId, kinematicMoveStats));
 
     const expectedNext = campaignIds[index + 1] ?? null;
     const actualNext = world.nextCampaignLevel()?.id ?? null;
@@ -139,7 +141,7 @@ try {
   for (const report of reports) {
     console.log(`PASS real-play ${report.levelId} physics=${report.physics}`);
     console.log(`  objectives=${report.objectives.join(" -> ")}`);
-    console.log(`  kills=${report.kills} health=${report.healthPercent}% memory=${report.memoryFragments} dynamicBodies=${report.dynamicBodies}`);
+    console.log(`  kills=${report.kills} health=${report.healthPercent}% memory=${report.memoryFragments} dynamicBodies=${report.dynamicBodies} kinematic=player:${report.kinematic.playerCalls}/enemy:${report.kinematic.enemyCalls}/blocked:${report.kinematic.blockedResults}`);
     console.log(`  victory=${report.victoryMessage}`);
   }
   console.log(`PASS real-play campaign=${campaignIds.join(" -> ")} physics=${world.debugOptions.physicsMode}`);
@@ -331,7 +333,7 @@ function createRunner(world, systems) {
   };
 }
 
-function playLevel(runner, levelId) {
+function playLevel(runner, levelId, kinematicMoveStats) {
   const { world } = runner;
   const objectives = [];
   let guard = 0;
@@ -347,6 +349,7 @@ function playLevel(runner, levelId) {
   if (guard >= 80) fail(world, `Objective loop exceeded on ${levelId}`);
   if (world.session.mode !== "victory") fail(world, `Did not reach victory on ${levelId}; mode=${world.session.mode}`);
   assertRapierDynamicBodyCount(world, "victory");
+  const kinematic = assertRapierKinematicMoveStats(world, kinematicMoveStats);
 
   return {
     levelId,
@@ -356,6 +359,7 @@ function playLevel(runner, levelId) {
     healthPercent: Math.round((world.player.health / world.player.maxHealth) * 100),
     memoryFragments: world.session.memoryFragments,
     dynamicBodies: world.physicsDebugSnapshot?.().dynamicBodyCount ?? world.dynamicProps?.length ?? 0,
+    kinematic,
     victoryMessage: world.session.message,
   };
 }
@@ -374,6 +378,83 @@ function assertRapierDynamicBodyCount(world, label) {
   if (!matchesContract) {
     fail(world, `Rapier dynamic body count mismatch at ${label}: expected=${expected} props=${actualProps} bodies=${actualBodies} exact=${exactInitialCount}`);
   }
+}
+
+function installKinematicMoveStats(world) {
+  const originalMove = world.moveKinematicCircleWithPhysics.bind(world);
+  let stats = createEmptyKinematicMoveStats();
+  world.moveKinematicCircleWithPhysics = (move) => {
+    const result = originalMove(move);
+    recordKinematicMove(stats, move, result);
+    return result;
+  };
+  return {
+    reset() {
+      stats = createEmptyKinematicMoveStats();
+    },
+    snapshot() {
+      return { ...stats };
+    },
+  };
+}
+
+function createEmptyKinematicMoveStats() {
+  return {
+    playerCalls: 0,
+    enemyCalls: 0,
+    enemyMoveCalls: 0,
+    enemyRecoveryCalls: 0,
+    movingCharacterCalls: 0,
+    blockedResults: 0,
+    nullResults: 0,
+    invalidResults: 0,
+    maxTranslation: 0,
+  };
+}
+
+function recordKinematicMove(stats, move, result) {
+  const id = String(move?.id ?? "");
+  const characterMove = id === "player" || id.startsWith("enemy:");
+  if (!characterMove) return;
+  if (id === "player") stats.playerCalls += 1;
+  if (id.startsWith("enemy:")) {
+    stats.enemyCalls += 1;
+    if (id.endsWith(":recovery")) stats.enemyRecoveryCalls += 1;
+    else stats.enemyMoveCalls += 1;
+  }
+  const desiredLength = move?.desiredTranslation?.length?.() ?? 0;
+  if (desiredLength > 0.0001) stats.movingCharacterCalls += 1;
+  if (!result) {
+    stats.nullResults += 1;
+    return;
+  }
+  if (result.blocked) stats.blockedResults += 1;
+  const translationLength = result.translation?.length?.() ?? 0;
+  stats.maxTranslation = Math.max(stats.maxTranslation, translationLength);
+  const position = result.position;
+  if (
+    !Number.isFinite(position?.x) ||
+    !Number.isFinite(position?.y) ||
+    !Number.isFinite(position?.z) ||
+    !Number.isFinite(translationLength)
+  ) {
+    stats.invalidResults += 1;
+  }
+}
+
+function assertRapierKinematicMoveStats(world, kinematicMoveStats) {
+  const stats = kinematicMoveStats.snapshot();
+  if (world.debugOptions.physicsMode !== "rapier") return stats;
+  if (stats.nullResults > 0 || stats.invalidResults > 0) {
+    fail(world, `Rapier kinematic movement produced unhealthy results: null=${stats.nullResults} invalid=${stats.invalidResults}`);
+  }
+  if (stats.playerCalls <= 0) {
+    fail(world, "Rapier playthrough did not route player movement through kinematic physics");
+  }
+  if (world.session.kills > 0 && stats.enemyCalls <= 0) {
+    fail(world, "Rapier playthrough combat did not route enemy movement through kinematic physics");
+  }
+  return stats;
 }
 
 function ensureActiveObjective(runner) {
