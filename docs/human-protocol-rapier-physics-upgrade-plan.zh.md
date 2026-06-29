@@ -18,7 +18,7 @@
 | Phase 5 怪物移动 | 已实现代码主路径。`EnemyAISystem` 的移动和 post-spacing recovery 已走 Rapier；`enemyNavigation` soft/ignore 过滤、boss/leader 高度、近墙恢复都有回归。`qa:physics:browser` 在 Level 1 含活体敌人 probe，确认浏览器 runtime 下敌人 kinematic query 可用；并新增 boss 门边 spacing pressure 连续恢复回归，锁住长期速度放大/抖动风险。浏览器 QA 现在还会临时插入 soft/solid 导航障碍、boss 高位横梁与临时动态 blocker，断言敌人过滤能越过 soft 但会被 solid、动态小物件和 2.55m 高位障碍阻挡，且顶到 opt-in 动态物件时不会穿过去，会触发同一套受限水平轻推。 | 还要做手感调参：boss/leader 在真实关卡门边和大型家具旁的人工长时观察，尤其是高体型敌人与门/家具边缘的连续追击。 |
 | Phase 6 战斗命中质感 | 已推进一段。`PhysicsWorldAdapter.castSegment` 现在返回 `position/timeOfImpact/obstacle`，Rapier shape cast 与 legacy 2D 查询都能给出首个命中点；`ProjectileSystem` 已用该命中点播放墙面/家具 `hitSpark`，避免高速枪械火花落到墙后。PulseRifle 近战现在也会对扫弧内、sweep 未被阻挡的敌人与 opt-in 动态小物件生效，动态小物件会获得水平 impulse；新增回归确认厚家具边缘会挡住挥击，低 ignore prop 不会误挡。 | 近战目标选择仍是扇形，后续可继续升级为多采样 arc/box sweep，并需要人工手感 QA。 |
 | Phase 7 动态小物件 | 基础层已实现。`DynamicPropState`、Rapier dynamic body、冲击力、睡眠/寿命清理、Raw WebGPU/Three fallback 读取都已具备；并已加配置护栏，限制数量、体积、关键标签。已精选 Level 1 `prop_hhup5a` 货箱堆与 Level 2 `prop_vq1oiy` 皮革软凳作为首批官方动态小物件，并用回归锁定官方动态化只允许这两个 ID。动态物件现在会响应 projectile、ultimate blast、pulseRifle 近战 impulse 与 kinematic 角色压力；浏览器 QA 会临时生成动态 blocker 验证真实 runtime 下玩家/敌人的移动碰撞和轻推反馈，并对 Level 1/2 动态物体施加 impulse，确认它们会移动并同步回 `GameWorld`；Level 3-5 继续断言 0 个动态体。 | 还没继续扩展到 Level 3-5 的碎片/小箱子/轻椅；后续仍应少量精选，不应批量动态化。 |
-| Phase 8 清理 legacy | 未开始。 | 需要等 QA 证明 Rapier 主路径稳定，再删重复 legacy。 |
+| Phase 8 默认启用与 legacy 清理 | 默认启用已完成。`PhysicsDefaults.test.ts` 已锁定无 URL 参数时默认使用 Rapier，`?physics=legacy` 仍作为紧急回滚开关。 | 重复 legacy 查询/恢复逻辑还没有删除；需要等更多人工手感 QA 后再清理。 |
 
 因此，Phase 4/5 现在不是“不能做”，而是已经进入“主路径实现 + 回归覆盖 + 实机手感 QA”的阶段。Phase 7 也已经有基础层，但必须谨慎：先用配置护栏保证关键谜题、门、key item、大型机器不会被误标为动态物件，再逐关挑少量轻物件试做。
 
@@ -432,8 +432,8 @@ flowchart TD
 
 工作内容：
 
-- 默认 `physics=rapier`
-- 保留 `?physics=legacy` 一段时间
+- 默认 `physics=rapier`（已完成）
+- 保留 `?physics=legacy` 一段时间（已完成，作为紧急回滚开关）
 - 删除已完全替代的重复查询逻辑
 - 更新 QA 文档和性能预算
 
