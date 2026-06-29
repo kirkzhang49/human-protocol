@@ -19,6 +19,7 @@ interface StaticColliderEntry {
 
 interface DynamicBodyEntry {
   body: RigidBody;
+  colliderHandle: number;
   halfSizeKey: string;
 }
 
@@ -34,6 +35,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
   private readonly staticColliders = new Map<string, StaticColliderEntry>();
   private readonly obstacleByColliderHandle = new Map<number, ObstacleState>();
   private readonly dynamicBodies = new Map<string, DynamicBodyEntry>();
+  private readonly dynamicColliderHandles = new Set<number>();
   private lastSyncMs = 0;
   private lastMoveMs = 0;
   private lastQueryMs = 0;
@@ -150,7 +152,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
     const characterShape = shapeForGroundedCharacter(move.radius, move.height);
     const center = shapeCenterForGroundedShape(move.position, characterShape.groundOffsetY);
     const remaining = planarTranslation(move.desiredTranslation);
-    const filterPredicate = this.filterPredicate(move.filter);
+    const filterPredicate = this.filterPredicate(move.filter, true);
     let blocked = this.recoverKinematicOverlap(center, characterShape.shape, filterPredicate);
 
     for (let iteration = 0; iteration < 3; iteration += 1) {
@@ -205,6 +207,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
     for (const [id, entry] of this.dynamicBodies) {
       if (nextIds.has(id)) continue;
       this.world.removeRigidBody(entry.body);
+      this.dynamicColliderHandles.delete(entry.colliderHandle);
       this.dynamicBodies.delete(id);
     }
 
@@ -213,6 +216,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       const existing = this.dynamicBodies.get(body.id);
       if (existing && existing.halfSizeKey !== halfSizeKey) {
         this.world.removeRigidBody(existing.body);
+        this.dynamicColliderHandles.delete(existing.colliderHandle);
         this.dynamicBodies.delete(body.id);
       }
 
@@ -284,15 +288,17 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       .cuboid(body.halfSize.x, body.halfSize.y, body.halfSize.z)
       .setFriction(0.92)
       .setRestitution(0.04);
-    this.world.createCollider(colliderDesc, rigidBody);
-    const entry = { body: rigidBody, halfSizeKey };
+    const collider = this.world.createCollider(colliderDesc, rigidBody);
+    this.dynamicColliderHandles.add(collider.handle);
+    const entry = { body: rigidBody, colliderHandle: collider.handle, halfSizeKey };
     this.dynamicBodies.set(body.id, entry);
     return entry;
   }
 
-  private filterPredicate(filter: PhysicsSegmentQuery["filter"]) {
+  private filterPredicate(filter: PhysicsSegmentQuery["filter"], includeDynamicColliders = false) {
     if (!filter) return undefined;
     return (collider: Collider) => {
+      if (this.dynamicColliderHandles.has(collider.handle)) return includeDynamicColliders;
       const obstacle = this.obstacleByColliderHandle.get(collider.handle);
       return obstacle ? filter(obstacle) : false;
     };

@@ -45,6 +45,48 @@ describe("GameWorld dynamic prop physics", () => {
     expect(prop?.position.y).toBeCloseTo(0.35, 4);
   });
 
+  it("keeps filtered kinematic characters from passing through opt-in dynamic props", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    world.obstacles.push({
+      id: "existing_static_wall",
+      visualKey: "test_wall",
+      position: new Vector3(-5, 0.5, -5),
+      halfSize: new Vector3(0.5, 0.5, 0.5),
+    });
+    world.syncPhysicsStaticObstacles();
+    const start = new Vector3(64, 0, 64);
+    world.spawnDynamicProp({
+      id: "kinematic-blocking-crate",
+      modelKey: "test_crate",
+      position: new Vector3(start.x + 0.9, 0.35, start.z),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+    expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(1);
+    world.physics.step(1 / 120);
+
+    const moved = world.moveKinematicCircleWithPhysics({
+      id: "enemy:dynamic-prop-blocker",
+      position: start,
+      radius: 0.3,
+      height: 1.3,
+      desiredTranslation: new Vector3(1.6, 0, 0),
+      filter: (obstacle) => obstacle.enemyNavigation !== "soft" && obstacle.enemyNavigation !== "ignore",
+    });
+
+    expect(moved?.blocked).toBe(true);
+    expect((moved?.position.x ?? start.x) - start.x).toBeLessThan(0.45);
+  });
+
   it("pushes opt-in dynamic props away from combat shock origins", async () => {
     vi.stubGlobal("window", {
       ...globalThis,

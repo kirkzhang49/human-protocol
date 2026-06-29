@@ -347,6 +347,7 @@ const kinematicProbe = `(() => {
     } : null,
     projectileSweep: projectileSweepProbe(world),
     movementStress: movementStressProbe(world),
+    dynamicPropKinematicBlock: dynamicPropKinematicBlockProbe(world),
     dynamicPropImpulse: dynamicPropImpulseProbe(world),
   };
 
@@ -546,6 +547,55 @@ const kinematicProbe = `(() => {
       world.syncDynamicPropsFromPhysics(0);
     }
   }
+
+  function dynamicPropKinematicBlockProbe(world) {
+    if (!world?.spawnDynamicProp || !world?.moveKinematicCircleWithPhysics || !world?.syncPhysicsDynamicProps) return null;
+    const propId = "qa_dynamic_kinematic_blocker";
+    const start = world.player.position.clone().set(64, 0, 64);
+    const propPosition = start.clone();
+    propPosition.x += 0.9;
+    propPosition.y = 0.35;
+    const halfSize = start.clone().set(0.35, 0.35, 0.35);
+    const desired = start.clone().set(1.6, 0, 0);
+    const beforeCount = Array.isArray(world.dynamicProps) ? world.dynamicProps.length : 0;
+    let prop = null;
+    try {
+      prop = world.spawnDynamicProp({
+        id: propId,
+        modelKey: "test_crate",
+        position: propPosition,
+        halfSize,
+        mass: 1,
+      });
+      world.syncPhysicsDynamicProps();
+      world.physics?.step?.(1 / 120);
+      world.syncDynamicPropsFromPhysics?.(0);
+      const moved = world.moveKinematicCircleWithPhysics({
+        id: "qa_browser_enemy_dynamic_blocker",
+        position: start,
+        radius: 0.3,
+        height: 1.3,
+        desiredTranslation: desired,
+        filter: (candidate) => candidate.enemyNavigation !== "soft" && candidate.enemyNavigation !== "ignore",
+      });
+      const travelX = Number((moved?.position?.x ?? start.x) - start.x);
+      return {
+        spawned: Boolean(prop),
+        blocked: Boolean(moved?.blocked),
+        travelX,
+        dynamicCountDelta: (world.dynamicProps?.length ?? beforeCount) - beforeCount,
+        pass: Boolean(prop && moved?.blocked && travelX < 0.45 && ((world.dynamicProps?.length ?? beforeCount) - beforeCount) === 1),
+      };
+    } finally {
+      if (Array.isArray(world.dynamicProps)) {
+        for (let index = world.dynamicProps.length - 1; index >= 0; index -= 1) {
+          if (world.dynamicProps[index]?.id === propId) world.dynamicProps.splice(index, 1);
+        }
+      }
+      world.syncPhysicsDynamicProps();
+      world.syncDynamicPropsFromPhysics?.(0);
+    }
+  }
 })()`;
 
 async function probeWebGpuAdapter(cdp) {
@@ -612,6 +662,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.movementStress.enemyNavigation?.pass &&
       probe.movementStress.playerRaisedCrossbar?.pass &&
       probe.movementStress.bossRaisedCrossbar?.pass &&
+      probe.dynamicPropKinematicBlock?.pass &&
       (testCase.expectedDynamicBodies > 0
         ? probe?.dynamicPropImpulse?.present &&
           probe.dynamicPropImpulse.count === testCase.expectedDynamicBodies &&
@@ -634,6 +685,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         enemyProbe: probe?.enemy,
         projectileSweep: probe?.projectileSweep,
         movementStress: probe?.movementStress,
+        dynamicPropKinematicBlock: probe?.dynamicPropKinematicBlock,
         dynamicPropImpulse: probe?.dynamicPropImpulse,
       }),
     );
