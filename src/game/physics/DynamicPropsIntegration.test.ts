@@ -2,6 +2,8 @@ import { Quaternion, Vector3 } from "three";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { resolvePropCollisionProxy } from "../config/MapGeometry";
 import { GameWorld } from "../core/GameWorld";
+import { createProjectile } from "../entities/createProjectile";
+import { ProjectileSystem } from "../systems/ProjectileSystem";
 
 describe("GameWorld dynamic prop physics", () => {
   afterEach(() => {
@@ -119,6 +121,34 @@ describe("GameWorld dynamic prop physics", () => {
     world.syncDynamicPropsFromPhysics(1 / 30);
 
     expect(prop?.position.x).toBeGreaterThan(1.02);
+    expect(prop?.position.y).toBeCloseTo(0.35, 4);
+  });
+
+  it("pushes opt-in dynamic props brushed by pistol projectiles", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    const prop = world.spawnDynamicProp({
+      id: "pistol-brushed-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0.18, 0.35, -0.48),
+      halfSize: new Vector3(0.32, 0.35, 0.32),
+      mass: 1,
+    });
+    world.addProjectile(createProjectile(999, world.player.id, "railLance", new Vector3(0, 1.2, 0), new Vector3(0, 0, -1)));
+
+    new ProjectileSystem().update(world, 1 / 60);
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(prop?.position.z).toBeLessThan(-0.49);
     expect(prop?.position.y).toBeCloseTo(0.35, 4);
   });
 

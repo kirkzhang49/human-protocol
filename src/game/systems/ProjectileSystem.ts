@@ -13,6 +13,8 @@ export class ProjectileSystem implements GameSystem {
   private readonly enemyClosestPoint = new Vector3();
   private readonly projectileSegment = new Vector3();
   private readonly projectilePointDelta = new Vector3();
+  private readonly dynamicPropHitPoint = new Vector3();
+  private readonly dynamicPropImpulse = new Vector3();
 
   update(world: GameWorld, delta: number) {
     if (world.projectiles.length === 0) return;
@@ -25,6 +27,7 @@ export class ProjectileSystem implements GameSystem {
       projectile.age += delta;
       projectile.previousPosition.copy(projectile.position);
       projectile.position.addScaledVector(projectile.velocity, delta);
+      this.pushDynamicProps(world, projectile);
 
       if (
         projectile.age >= projectile.lifetime ||
@@ -124,6 +127,47 @@ export class ProjectileSystem implements GameSystem {
     return false;
   }
 
+  private pushDynamicProps(world: GameWorld, projectile: GameWorld["projectiles"][number]) {
+    if (world.dynamicProps.length === 0) return;
+
+    const deltaX = projectile.position.x - projectile.previousPosition.x;
+    const deltaZ = projectile.position.z - projectile.previousPosition.z;
+    const segmentLengthSq = deltaX * deltaX + deltaZ * deltaZ;
+    if (segmentLengthSq <= 0.000001) return;
+
+    const impulseStrength = dynamicPropProjectileImpulse(projectile.weaponId);
+    if (impulseStrength <= 0) return;
+
+    for (const prop of world.dynamicProps) {
+      const projected =
+        ((prop.position.x - projectile.previousPosition.x) * deltaX +
+          (prop.position.z - projectile.previousPosition.z) * deltaZ) / segmentLengthSq;
+      const t = Math.max(0, Math.min(1, projected));
+      const closestX = projectile.previousPosition.x + deltaX * t;
+      const closestZ = projectile.previousPosition.z + deltaZ * t;
+      const propDeltaX = prop.position.x - closestX;
+      const propDeltaZ = prop.position.z - closestZ;
+      const reach = Math.max(prop.halfSize.x, prop.halfSize.z) + projectile.radius + 0.22;
+      const distanceSq = propDeltaX * propDeltaX + propDeltaZ * propDeltaZ;
+      if (distanceSq > reach * reach) continue;
+
+      this.dynamicPropHitPoint.set(
+        closestX,
+        projectile.previousPosition.y + (projectile.position.y - projectile.previousPosition.y) * t,
+        closestZ,
+      );
+      if (!world.hasProjectileLineOfSight(projectile.previousPosition, this.dynamicPropHitPoint, projectile.radius)) continue;
+
+      this.dynamicPropImpulse.copy(projectile.direction).setY(0);
+      if (this.dynamicPropImpulse.lengthSq() <= 0.000001) continue;
+      const distance = Math.sqrt(distanceSq);
+      const pressure = 1 - Math.min(1, distance / reach);
+      const massScale = 1 / Math.max(0.65, Math.sqrt(prop.mass));
+      this.dynamicPropImpulse.normalize().multiplyScalar(impulseStrength * (0.35 + pressure * 0.65) * massScale);
+      world.applyDynamicPropImpulse(prop.id, this.dynamicPropImpulse);
+    }
+  }
+
   private closestPointOnProjectileSegment(start: Vector3, end: Vector3, point: Vector3) {
     this.projectileSegment.copy(end).sub(start);
     const lengthSq = this.projectileSegment.lengthSq();
@@ -152,6 +196,12 @@ export class ProjectileSystem implements GameSystem {
     }
     return false;
   }
+}
+
+function dynamicPropProjectileImpulse(weaponId: GameWorld["projectiles"][number]["weaponId"]) {
+  if (weaponId === "flakBurst") return 2.1;
+  if (weaponId === "railLance") return 1.1;
+  return 0.65;
 }
 
 class ProjectileSpatialIndex {
