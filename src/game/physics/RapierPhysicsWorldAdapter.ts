@@ -130,8 +130,8 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
     }
 
     const startedAt = nowMs();
-    const shape = new RAPIER.Ball(move.radius);
-    const center = shapeCenterForGroundCircle(move.position, move.radius);
+    const characterShape = shapeForGroundedCharacter(move.radius, move.height);
+    const center = shapeCenterForGroundedShape(move.position, characterShape.groundOffsetY);
     const remaining = move.desiredTranslation.clone();
     const filterPredicate = this.filterPredicate(move.filter);
     let blocked = false;
@@ -142,7 +142,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
         toRapierVector(center),
         identityRotation,
         toRapierVector(remaining),
-        shape,
+        characterShape.shape,
         0.001,
         1,
         true,
@@ -176,7 +176,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       center.addScaledVector(normal, 0.001);
     }
 
-    const position = new Vector3(center.x, center.y - move.radius, center.z);
+    const position = new Vector3(center.x, center.y - characterShape.groundOffsetY, center.z);
     const translation = position.clone().sub(move.position);
     this.lastMoveMs = nowMs() - startedAt;
     return { position, translation, blocked };
@@ -226,8 +226,20 @@ function yawRotation(yaw: number) {
   return { x: 0, y: Math.sin(halfYaw), z: 0, w: Math.cos(halfYaw) };
 }
 
-function shapeCenterForGroundCircle(position: Vector3, radius: number) {
-  return new Vector3(position.x, position.y + radius, position.z);
+function shapeCenterForGroundedShape(position: Vector3, groundOffsetY: number) {
+  return new Vector3(position.x, position.y + groundOffsetY, position.z);
+}
+
+function shapeForGroundedCharacter(radius: number, height?: number) {
+  const safeRadius = Math.max(0.001, radius);
+  const totalHeight = Math.max(safeRadius * 2, height ?? safeRadius * 2);
+  const capsuleHalfHeight = Math.max(0, totalHeight * 0.5 - safeRadius);
+  return {
+    shape: capsuleHalfHeight > 0.0001
+      ? new RAPIER.Capsule(capsuleHalfHeight, safeRadius)
+      : new RAPIER.Ball(safeRadius),
+    groundOffsetY: safeRadius + capsuleHalfHeight,
+  };
 }
 
 function staticObstacleSignature(obstacles: readonly ObstacleState[]) {

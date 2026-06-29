@@ -14,6 +14,7 @@ export interface PhysicsKinematicCircleMove {
   id: string;
   position: Vector3;
   radius: number;
+  height?: number;
   desiredTranslation: Vector3;
   filter?: (obstacle: ObstacleState) => boolean;
 }

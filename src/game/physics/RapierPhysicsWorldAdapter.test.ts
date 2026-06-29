@@ -57,6 +57,29 @@ describe("RapierPhysicsWorldAdapter", () => {
     expect(moved.position.x).toBeLessThan(0.95);
     expect(moved.position.z).toBeGreaterThan(0);
   });
+
+  it("uses kinematic character height when sweeping through raised obstacles", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+    adapter.syncStaticObstacles([
+      obstacle({
+        id: "raised-crossbar",
+        position: new Vector3(1.1, 1.2, 0),
+        halfSize: new Vector3(0.22, 0.18, 1),
+      }),
+    ]);
+
+    const moved = adapter.moveKinematicCircle({
+      id: "player",
+      position: new Vector3(0, 0, 0),
+      radius: 0.32,
+      height: 1.6,
+      desiredTranslation: new Vector3(1.6, 0, 0),
+    });
+
+    expect(moved.blocked).toBe(true);
+    expect(moved.position.x).toBeLessThan(0.72);
+  });
 });
 
 function obstacle(partial: Pick<ObstacleState, "id" | "position" | "halfSize"> & Partial<ObstacleState>): ObstacleState {

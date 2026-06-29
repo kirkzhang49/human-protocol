@@ -5,6 +5,7 @@ export const playerConfig = {
   sprintEnergyPerSecond: 16,
   heatDissipationPerSecond: 18,
   cockpitHeight: 1.45,
+  collisionHeight: 1.75,
   moveSpeed: 5.2,
   sprintMultiplier: 1.42,
   acceleration: 12,

@@ -210,6 +210,7 @@ export class EnemyAISystem implements GameSystem {
       id: `enemy:${enemy.id}`,
       position: enemy.position,
       radius: enemy.radius,
+      height: enemyCollisionHeight(enemy),
       desiredTranslation: this.moveDelta,
       filter: enemyPhysicsObstacleBlocks,
     });
@@ -318,6 +319,11 @@ export class EnemyAISystem implements GameSystem {
 
 function enemyPhysicsObstacleBlocks(obstacle: { enemyNavigation?: "solid" | "soft" | "ignore" }) {
   return obstacle.enemyNavigation !== "soft" && obstacle.enemyNavigation !== "ignore";
+}
+
+function enemyCollisionHeight(enemy: EnemyState) {
+  const tierHeight = enemy.tier === "boss" ? 2.55 : enemy.tier === "leader" ? 1.95 : 1.45;
+  return Math.max(enemy.radius * 2.15, tierHeight * Math.max(0.85, enemy.visualScaleMultiplier));
 }
 
 function isHeavyThreat(enemy: EnemyState, world: GameWorld) {

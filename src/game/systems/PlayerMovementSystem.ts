@@ -115,6 +115,7 @@ export class PlayerMovementSystem implements GameSystem {
       id: "player",
       position: player.position,
       radius: playerConfig.radius,
+      height: playerConfig.collisionHeight,
       desiredTranslation,
     });
     if (!result) return false;
