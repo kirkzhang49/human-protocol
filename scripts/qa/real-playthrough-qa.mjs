@@ -4,6 +4,9 @@ import { PerspectiveCamera, Vector2, Vector3 } from "three";
 const frameDelta = 1 / 30;
 const maxObjectiveSeconds = 180;
 const maxWaveSeconds = 150;
+const physicsMode = readPhysicsModeArg();
+let qaPlayerRadius = 0.72;
+let qaPlayerCollisionHeight = 1.75;
 
 const server = await createServer({
   appType: "custom",
@@ -14,6 +17,7 @@ const server = await createServer({
 try {
   const [
     { GameWorld },
+    { playerConfig },
     { humanProtocolBasePack },
     { AimSystem },
     { AutoFireSystem },
@@ -27,6 +31,7 @@ try {
     { InteractionSystem },
     { MobileAssistSystem },
     { ObjectiveTrackerSystem },
+    { PhysicsSystem },
     { PickupSystem },
     { PlayerMovementSystem },
     { ProjectileSystem },
@@ -38,6 +43,7 @@ try {
     { WeaponSystem },
   ] = await Promise.all([
     server.ssrLoadModule("/src/game/core/GameWorld.ts"),
+    server.ssrLoadModule("/src/game/config/playerConfig.ts"),
     server.ssrLoadModule("/src/game/config/ConfigPackStore.ts"),
     server.ssrLoadModule("/src/game/systems/AimSystem.ts"),
     server.ssrLoadModule("/src/game/systems/AutoFireSystem.ts"),
@@ -51,6 +57,7 @@ try {
     server.ssrLoadModule("/src/game/systems/InteractionSystem.ts"),
     server.ssrLoadModule("/src/game/systems/MobileAssistSystem.ts"),
     server.ssrLoadModule("/src/game/systems/ObjectiveTrackerSystem.ts"),
+    server.ssrLoadModule("/src/game/systems/PhysicsSystem.ts"),
     server.ssrLoadModule("/src/game/systems/PickupSystem.ts"),
     server.ssrLoadModule("/src/game/systems/PlayerMovementSystem.ts"),
     server.ssrLoadModule("/src/game/systems/ProjectileSystem.ts"),
@@ -62,10 +69,14 @@ try {
     server.ssrLoadModule("/src/game/systems/WeaponSystem.ts"),
   ]);
 
+  qaPlayerRadius = playerConfig.radius;
+  qaPlayerCollisionHeight = playerConfig.collisionHeight;
+
   const systems = [
     new AimSystem(),
     new MobileAssistSystem(),
     new DoorSystem(),
+    new PhysicsSystem(),
     new PlayerMovementSystem(),
     new RoomDirectorSystem(),
     new ObjectiveTrackerSystem(),
@@ -86,7 +97,9 @@ try {
     new EffectsSystem(),
   ];
 
+  const restoreBrowserShim = installBrowserShimForPhysicsMode(physicsMode);
   const world = new GameWorld();
+  restoreBrowserShim();
   world.enableQaNoDamageForTests();
   const runner = createRunner(world, systems);
   const fullCampaignIds = humanProtocolBasePack.campaignLevelIds;
@@ -96,6 +109,7 @@ try {
   const reports = [];
 
   world.loadLevel(campaignIds[0], "playing");
+  await primePhysicsForQa(world, runner);
   for (let index = 0; index < campaignIds.length; index += 1) {
     const expectedLevelId = campaignIds[index];
     if (world.level.id !== expectedLevelId) {
@@ -114,18 +128,97 @@ try {
     if (expectedNext) {
       world.loadNextCampaignLevel("playing");
       world.enableQaNoDamageForTests();
+      await primePhysicsForQa(world, runner);
     }
   }
 
   for (const report of reports) {
-    console.log(`PASS real-play ${report.levelId}`);
+    console.log(`PASS real-play ${report.levelId} physics=${report.physics}`);
     console.log(`  objectives=${report.objectives.join(" -> ")}`);
     console.log(`  kills=${report.kills} health=${report.healthPercent}% memory=${report.memoryFragments}`);
     console.log(`  victory=${report.victoryMessage}`);
   }
-  console.log(`PASS real-play campaign=${campaignIds.join(" -> ")}`);
+  console.log(`PASS real-play campaign=${campaignIds.join(" -> ")} physics=${world.debugOptions.physicsMode}`);
 } finally {
   await server.close();
+}
+
+function readPhysicsModeArg() {
+  const physicsArg = process.argv.find((arg) => arg.startsWith("--physics="));
+  if (!physicsArg) return null;
+  const value = physicsArg.slice("--physics=".length);
+  if (value === "rapier" || value === "legacy") return value;
+  throw new Error(`Invalid --physics value: ${physicsArg}`);
+}
+
+function installBrowserShimForPhysicsMode(mode) {
+  if (!mode) return () => undefined;
+
+  const params = new URLSearchParams({ physics: mode, qa: "1", noDamage: "1" });
+  const storage = createMemoryStorage();
+  const hadWindow = Object.prototype.hasOwnProperty.call(globalThis, "window");
+  const previousWindow = globalThis.window;
+  const location = {
+    href: `http://localhost/qa-playthrough?${params.toString()}`,
+    hostname: "localhost",
+    search: `?${params.toString()}`,
+  };
+  const history = {
+    state: null,
+    replaceState(state, _title, url) {
+      this.state = state;
+      if (!url) return;
+      const nextUrl = new URL(String(url), location.href);
+      location.href = nextUrl.href;
+      location.hostname = nextUrl.hostname;
+      location.search = nextUrl.search;
+    },
+  };
+
+  globalThis.window = {
+    location,
+    history,
+    localStorage: storage,
+    sessionStorage: storage,
+    navigator: { userAgent: "human-protocol-real-playthrough-qa" },
+    addEventListener: () => undefined,
+    removeEventListener: () => undefined,
+    dispatchEvent: () => true,
+    setTimeout: globalThis.setTimeout.bind(globalThis),
+    clearTimeout: globalThis.clearTimeout.bind(globalThis),
+  };
+
+  return () => {
+    if (hadWindow) {
+      globalThis.window = previousWindow;
+    } else {
+      delete globalThis.window;
+    }
+  };
+}
+
+function createMemoryStorage() {
+  const values = new Map();
+  return {
+    get length() {
+      return values.size;
+    },
+    clear() {
+      values.clear();
+    },
+    getItem(key) {
+      return values.has(String(key)) ? values.get(String(key)) : null;
+    },
+    key(index) {
+      return [...values.keys()][index] ?? null;
+    },
+    removeItem(key) {
+      values.delete(String(key));
+    },
+    setItem(key, value) {
+      values.set(String(key), String(value));
+    },
+  };
 }
 
 function selectCampaignLevelIds(fullCampaignIds) {
@@ -149,6 +242,13 @@ function selectCampaignLevelIds(fullCampaignIds) {
   }
 
   return fullCampaignIds;
+}
+
+async function primePhysicsForQa(world, runner) {
+  if (world.debugOptions.physicsMode !== "rapier") return;
+  if (!(await world.physics.init())) fail(world, "Rapier physics did not initialize for real playthrough QA");
+  runner.step(0.06);
+  if (!world.syncPhysicsStaticObstacles()) fail(world, "Rapier static obstacle sync failed for real playthrough QA");
 }
 
 function createRunner(world, systems) {
@@ -244,6 +344,7 @@ function playLevel(runner, levelId) {
 
   return {
     levelId,
+    physics: world.debugOptions.physicsMode,
     objectives,
     kills: world.session.kills,
     healthPercent: Math.round((world.player.health / world.player.maxHealth) * 100),
@@ -462,9 +563,18 @@ function activateSwitch(runner, switchId, stateId) {
   if (interaction.consumesKeyItemId && !world.session.mapProgress.collectedKeyItemIds.includes(interaction.consumesKeyItemId)) {
     collectKey(runner, interaction.consumesKeyItemId);
   }
+  const expectedState = stateId ?? definition.states[definition.states.length === 1 ? 0 : 1]?.id;
+  const expectedStateDefinition = expectedState
+    ? definition.states.find((candidate) => candidate.id === expectedState)
+    : null;
+  if (
+    expectedStateDefinition?.requiredKeyItemId &&
+    !world.session.mapProgress.collectedKeyItemIds.includes(expectedStateDefinition.requiredKeyItemId)
+  ) {
+    collectKey(runner, expectedStateDefinition.requiredKeyItemId);
+  }
   enterRoom(runner, definition.roomId);
   runner.interact(interaction.position, definition.interactionId);
-  const expectedState = stateId ?? definition.states[definition.states.length === 1 ? 0 : 1]?.id;
   if (expectedState && world.routeSwitchForInteraction(definition.interactionId)) {
     if (!world.chooseRouteSwitchState(definition.id, expectedState)) {
       fail(world, `Could not choose route switch state ${definition.id}:${expectedState}`);
@@ -517,7 +627,11 @@ function openDoor(runner, doorId) {
   const door = world.level.map?.doors.find((candidate) => candidate.id === doorId);
   if (!door) fail(world, `Missing door ${doorId}`);
   if (!world.isDoorOpen(door.id)) {
-    runner.interact(door.position, doorId);
+    if (door.lock.type === "switch_state" && door.lock.switchId && door.lock.stateId) {
+      activateSwitch(runner, door.lock.switchId, door.lock.stateId);
+    } else {
+      runner.interact(door.position, doorId);
+    }
   }
   waitUntil(runner, () => world.isDoorOpen(door.id), `door ${doorId} open`, 4);
 }
@@ -526,10 +640,15 @@ function enterRoom(runner, roomId) {
   const { world } = runner;
   const room = world.level.map?.rooms.find((candidate) => candidate.id === roomId);
   if (!room) fail(world, `Missing room ${roomId}`);
-  const door = world.level.map?.doors.find((candidate) => candidate.toRoomId === roomId || candidate.fromRoomId === roomId);
-  if (door && !world.isDoorOpen(door.id) && world.canOpenDoor(door)) {
-    openDoor(runner, door.id);
+  if (world.session.mapProgress.currentRoomId !== roomId) {
+    const door = world.level.map?.doors.find((candidate) => candidate.toRoomId === roomId || candidate.fromRoomId === roomId);
+    if (door && !world.isDoorOpen(door.id) && world.canOpenDoor(door)) {
+      openDoor(runner, door.id);
+    }
   }
+  // The real-play QA runner teleports between authored objective targets; sync
+  // the current room before the next DoorSystem pass can auto-close distant doors.
+  world.setCurrentRoom(room.id);
   runner.place(room.bounds.center, roomId);
   waitUntil(runner, () => world.session.mapProgress.currentRoomId === roomId, `room ${roomId} entered`, 4);
 }
@@ -667,6 +786,22 @@ function solvePuzzle(runner, puzzleId) {
     return;
   }
 
+  if (puzzle.type === "archive_merge") {
+    const interaction = world.level.map?.interactions.find((candidate) => candidate.id === puzzle.interactionId);
+    if (!interaction) fail(world, `Missing archive merge interaction ${puzzle.interactionId}`);
+    enterRoom(runner, puzzle.roomId);
+    runner.interact(interaction.position, puzzle.interactionId);
+    if (world.session.activeArchiveMergePuzzleId !== puzzle.id) {
+      runner.step(0.45);
+    }
+    if (world.session.activeArchiveMergePuzzleId !== puzzle.id && !world.openArchiveMerge(puzzle.id)) {
+      fail(world, `Could not open archive merge ${puzzle.id} from interaction ${puzzle.interactionId}`);
+    }
+    if (!world.submitArchiveMerge()) fail(world, `Could not submit archive merge ${puzzle.id}`);
+    if (!world.isPuzzleCompleted(puzzle.id)) fail(world, `Archive merge puzzle did not complete: ${puzzle.id}`);
+    return;
+  }
+
   fail(world, `Unsupported puzzle type ${puzzle.type}`);
 }
 
@@ -780,9 +915,11 @@ function meleeAttackPosition(world, enemy) {
 
   for (const [x, z] of directions) {
     const candidate = new Vector3(enemy.position.x + x * distance, 0, enemy.position.z + z * distance);
-    if (room && !pointInsideRoomForQa(room, candidate.x, candidate.z, 0.36)) continue;
-    if (world.hasLineOfSight(candidate, target, 0.14)) {
-      return [candidate.x, 0, candidate.z];
+    const standPosition = resolveQaStandPosition(world, candidate);
+    if (!standPosition) continue;
+    if (room && !pointInsideRoomForQa(room, standPosition.x, standPosition.z, 0.36)) continue;
+    if (world.hasLineOfSight(standPosition, target, 0.14)) {
+      return [standPosition.x, 0, standPosition.z];
     }
   }
 
@@ -791,14 +928,32 @@ function meleeAttackPosition(world, enemy) {
     const dx = cx - enemy.position.x;
     const dz = cz - enemy.position.z;
     const length = Math.hypot(dx, dz) || 1;
-    return [
+    const fallback = new Vector3(
       clamp(enemy.position.x + (dx / length) * distance, room.bounds.center[0] - room.bounds.size[0] / 2 + 0.72, room.bounds.center[0] + room.bounds.size[0] / 2 - 0.72),
       0,
       clamp(enemy.position.z + (dz / length) * distance, room.bounds.center[2] - room.bounds.size[2] / 2 + 0.72, room.bounds.center[2] + room.bounds.size[2] / 2 - 0.72),
-    ];
+    );
+    const standPosition = resolveQaStandPosition(world, fallback) ?? fallback;
+    return [standPosition.x, 0, standPosition.z];
   }
 
-  return [enemy.position.x, 0, enemy.position.z + distance];
+  const fallback = new Vector3(enemy.position.x, 0, enemy.position.z + distance);
+  const standPosition = resolveQaStandPosition(world, fallback) ?? fallback;
+  return [standPosition.x, 0, standPosition.z];
+}
+
+function resolveQaStandPosition(world, candidate) {
+  if (world.debugOptions.physicsMode !== "rapier") return candidate;
+  const result = world.moveKinematicCircleWithPhysics({
+    id: "qa-stand-probe",
+    position: candidate,
+    radius: qaPlayerRadius,
+    height: qaPlayerCollisionHeight,
+    desiredTranslation: new Vector3(),
+  });
+  if (!result) return candidate;
+  const resolved = result.position.clone().setY(0);
+  return resolved.distanceTo(candidate) <= 0.18 ? resolved : null;
 }
 
 function roomForPosition(world, x, z) {
@@ -871,8 +1026,20 @@ function puzzlePulseKeys(world, puzzleId) {
 
 function resolveModal(world) {
   let guard = 0;
-  while ((world.session.mode === "upgrade" || world.session.mode === "choice") && guard < 20) {
+  while (
+    (
+      world.session.mode === "upgrade" ||
+      world.session.mode === "choice" ||
+      world.session.activeCampaignTransitionDialogue
+    ) &&
+    guard < 20
+  ) {
     guard += 1;
+    if (world.session.activeCampaignTransitionDialogue) {
+      world.advanceCampaignTransitionDialogue();
+      continue;
+    }
+
     if (world.session.mode === "upgrade") {
       const pick = world.session.pendingUpgradeIds[0];
       if (!pick) fail(world, "Upgrade modal opened without choices");

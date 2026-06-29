@@ -35,6 +35,7 @@
     "perf:campaign": "node scripts/qa/performance-budget-smoke.mjs",
     "compile:raw-webgpu-plan": "node tools/raw-webgpu-compiler/compile-raw-webgpu-render-plan.mjs",
     "qa:playthrough": "node scripts/qa/real-playthrough-qa.mjs",
+    "qa:playthrough:rapier": "node scripts/qa/real-playthrough-qa.mjs --physics=rapier",
     "art:qa": "node scripts/qa/art-config-qa.mjs",
     "lighting:qa": "node scripts/qa/lighting-qa.mjs",
     "lighting:search:cpp": "node scripts/optimizer/run-lighting-search.mjs",

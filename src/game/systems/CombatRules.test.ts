@@ -95,6 +95,28 @@ describe("combat weapon rules", () => {
     expect(world.effects.some((effect) => effect.type === "bladeSlash")).toBe(true);
   });
 
+  it("lets the rod hit through low props that enemies can navigate through", () => {
+    const world = createCombatWorld();
+    const enemy = world.spawnEnemy("repair_drone", "test_wave", new Vector3(0, 0, -1.35), 0);
+    const health = enemy.health;
+    world.obstacles.push({
+      id: "prop:test_route_pedestal",
+      visualKey: "age_museum_color_orb_pedestal",
+      position: new Vector3(0, 0.46, -0.72),
+      halfSize: new Vector3(0.36, 0.46, 0.36),
+      enemyNavigation: "ignore",
+    });
+    world.markObstacleIndexDirty();
+
+    world.input.fire = true;
+    world.input.fireSource = "manual";
+    new WeaponSystem().update(world, 1 / 60);
+
+    expect(enemy.health).toBeLessThan(health);
+    expect(world.player.fireSequence).toBe(1);
+    expect(world.effects.some((effect) => effect.type === "bladeSlash")).toBe(true);
+  });
+
   it("stops pistol projectiles at walls before damaging robots behind them", () => {
     const world = createCombatWorld();
     world.player.currentWeapon = "railLance";

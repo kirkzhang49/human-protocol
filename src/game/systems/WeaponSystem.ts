@@ -197,7 +197,7 @@ export class WeaponSystem implements GameSystem {
       if (!inArc) continue;
       this.targetPoint.copy(enemy.position);
       this.targetPoint.y += 0.8;
-      if (!world.hasLineOfSight(player.position, this.targetPoint, BLADE_LINE_OF_SIGHT_RADIUS)) continue;
+      if (!world.hasProjectileLineOfSight(player.position, this.targetPoint, BLADE_LINE_OF_SIGHT_RADIUS)) continue;
 
       const archetype = enemyArchetypes[enemy.archetypeId];
       const heavyTarget = Boolean(archetype.elite || enemy.tier !== "normal" || enemy.archetypeId === "custodian_elite");
