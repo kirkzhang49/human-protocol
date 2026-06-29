@@ -450,6 +450,46 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(boss.velocity.x).toBeGreaterThanOrEqual(-0.01);
   });
 
+  it("keeps real Rapier leader chasing along large rotated furniture without wedging", async () => {
+    const world = await createRapierPlayingWorld();
+    world.player.position.set(0.2, 0, -2.9);
+    const leader = world.spawnEnemy("custodian_elite", "rapier_leader_rotated_furniture_chase", new Vector3(-2.1, 0, 1.65), 0, {
+      tier: "leader",
+      radiusMultiplier: 0.9,
+      moveSpeedMultiplier: 1.05,
+      attackRangeMultiplier: 0.82,
+    });
+    world.obstacles.push({
+      id: "rapier_leader_chase_rotated_furniture",
+      visualKey: "room_residential_sofa_long",
+      position: new Vector3(-0.45, 0.62, -0.65),
+      halfSize: new Vector3(0.46, 0.62, 1.55),
+      yaw: -Math.PI / 5,
+    });
+    world.markObstacleIndexDirty();
+
+    const ai = new EnemyAISystem();
+    const startDistance = leader.position.distanceTo(world.player.position);
+    let maxStep = 0;
+    let stalledFrames = 0;
+    const previous = leader.position.clone();
+    for (let frame = 0; frame < 120; frame += 1) {
+      ai.update(world, 1 / 60);
+      const step = leader.position.distanceTo(previous);
+      maxStep = Math.max(maxStep, step);
+      if (step < 0.005 && leader.velocity.length() > 0.8) stalledFrames += 1;
+      previous.copy(leader.position);
+    }
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(1);
+    expect(Number.isFinite(leader.position.x)).toBe(true);
+    expect(Number.isFinite(leader.position.z)).toBe(true);
+    expect(maxStep).toBeLessThan(0.18);
+    expect(stalledFrames).toBeLessThan(22);
+    expect(leader.position.distanceTo(world.player.position)).toBeLessThan(startDistance - 0.75);
+    expect(leader.velocity.length()).toBeLessThan(5.6);
+  });
+
   it("damps enemy velocity that points back into a legacy recovery correction", () => {
     const world = createPlayingWorld();
     const enemy = world.spawnEnemy("repair_drone", "legacy_recovered_enemy", new Vector3(0.42, 0, -2.5), 0);
