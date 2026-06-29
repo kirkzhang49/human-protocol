@@ -141,7 +141,7 @@ try {
   for (const report of reports) {
     console.log(`PASS real-play ${report.levelId} physics=${report.physics}`);
     console.log(`  objectives=${report.objectives.join(" -> ")}`);
-    console.log(`  kills=${report.kills} health=${report.healthPercent}% memory=${report.memoryFragments} dynamicBodies=${report.dynamicBodies} kinematic=player:${report.kinematic.playerCalls}/enemy:${report.kinematic.enemyCalls}/blocked:${report.kinematic.blockedResults}`);
+    console.log(`  kills=${report.kills} health=${report.healthPercent}% memory=${report.memoryFragments} dynamicBodies=${report.dynamicBodies} kinematic=${formatKinematicStats(report.kinematic)}`);
     console.log(`  victory=${report.victoryMessage}`);
   }
   console.log(`PASS real-play campaign=${campaignIds.join(" -> ")} physics=${world.debugOptions.physicsMode}`);
@@ -404,6 +404,7 @@ function createEmptyKinematicMoveStats() {
     enemyCalls: 0,
     enemyMoveCalls: 0,
     enemyRecoveryCalls: 0,
+    enemyMovingCalls: 0,
     movingCharacterCalls: 0,
     blockedResults: 0,
     nullResults: 0,
@@ -416,13 +417,16 @@ function recordKinematicMove(stats, move, result) {
   const id = String(move?.id ?? "");
   const characterMove = id === "player" || id.startsWith("enemy:");
   if (!characterMove) return;
+  const desiredLength = move?.desiredTranslation?.length?.() ?? 0;
   if (id === "player") stats.playerCalls += 1;
   if (id.startsWith("enemy:")) {
     stats.enemyCalls += 1;
     if (id.endsWith(":recovery")) stats.enemyRecoveryCalls += 1;
-    else stats.enemyMoveCalls += 1;
+    else {
+      stats.enemyMoveCalls += 1;
+      if (desiredLength > 0.0001) stats.enemyMovingCalls += 1;
+    }
   }
-  const desiredLength = move?.desiredTranslation?.length?.() ?? 0;
   if (desiredLength > 0.0001) stats.movingCharacterCalls += 1;
   if (!result) {
     stats.nullResults += 1;
@@ -454,7 +458,18 @@ function assertRapierKinematicMoveStats(world, kinematicMoveStats) {
   if (world.session.kills > 0 && stats.enemyCalls <= 0) {
     fail(world, "Rapier playthrough combat did not route enemy movement through kinematic physics");
   }
+  if (world.session.kills > 0 && stats.enemyMoveCalls <= 0) {
+    fail(world, "Rapier playthrough combat only recorded enemy recovery; enemy main movement did not route through kinematic physics");
+  }
+  if (world.session.kills > 0 && stats.enemyMovingCalls <= 0) {
+    fail(world, "Rapier playthrough combat recorded enemy movement calls without non-zero enemy movement");
+  }
   return stats;
+}
+
+function formatKinematicStats(stats) {
+  const maxTranslation = Number.isFinite(stats.maxTranslation) ? stats.maxTranslation.toFixed(3) : String(stats.maxTranslation);
+  return `player:${stats.playerCalls}/enemy:${stats.enemyCalls}/enemyMove:${stats.enemyMoveCalls}/enemyMoving:${stats.enemyMovingCalls}/enemyRecovery:${stats.enemyRecoveryCalls}/moving:${stats.movingCharacterCalls}/blocked:${stats.blockedResults}/max:${maxTranslation}`;
 }
 
 function ensureActiveObjective(runner) {
