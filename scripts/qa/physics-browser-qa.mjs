@@ -347,6 +347,7 @@ const kinematicProbe = `(() => {
     } : null,
     projectileSweep: projectileSweepProbe(world),
     movementStress: movementStressProbe(world),
+    dynamicPropImpulse: dynamicPropImpulseProbe(world),
   };
 
   function projectileSweepProbe(world) {
@@ -466,6 +467,53 @@ const kinematicProbe = `(() => {
       world.syncPhysicsStaticObstacles?.();
     }
   }
+
+  function dynamicPropImpulseProbe(world) {
+    const props = world.dynamicProps ?? [];
+    if (!Array.isArray(props) || props.length === 0) return { present: false, count: 0 };
+    if (!world?.applyDynamicPropImpulse || !world?.syncPhysicsDynamicProps || !world?.syncDynamicPropsFromPhysics) {
+      return { present: true, count: props.length, applied: false, moved: false };
+    }
+    const prop = props[0];
+    const start = prop.position?.clone?.();
+    if (!start) return { present: true, count: props.length, applied: false, moved: false };
+    const startRotation = prop.rotation?.clone?.() ?? null;
+    const startYaw = Number(prop.yaw ?? 0);
+    const impulse = start.clone().set(2.4, 0, 0);
+    let result = { present: true, count: props.length, id: prop.id, applied: false, moved: false };
+    try {
+      world.syncPhysicsDynamicProps();
+      const applied = Boolean(world.applyDynamicPropImpulse(prop.id, impulse));
+      for (let frame = 0; frame < 8; frame += 1) {
+        world.physics?.step?.(1 / 30);
+        world.syncDynamicPropsFromPhysics(1 / 30);
+      }
+      const deltaX = Number(prop.position.x - start.x);
+      const deltaZ = Number(prop.position.z - start.z);
+      const distance = Math.hypot(deltaX, deltaZ);
+      const yDelta = Number(prop.position.y - start.y);
+      result = {
+        present: true,
+        count: props.length,
+        id: prop.id,
+        applied,
+        moved: distance > 0.015,
+        distance,
+        deltaX,
+        deltaZ,
+        yDelta,
+        sleeping: Boolean(prop.sleeping),
+      };
+      return result;
+    } finally {
+      prop.position.copy(start);
+      if (startRotation && prop.rotation?.copy) prop.rotation.copy(startRotation);
+      prop.yaw = startYaw;
+      prop.sleeping = false;
+      world.syncPhysicsDynamicProps();
+      world.syncDynamicPropsFromPhysics(0);
+    }
+  }
 })()`;
 
 async function probeWebGpuAdapter(cdp) {
@@ -529,7 +577,14 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe?.movementStress?.obstacleCountDelta === 6 &&
       probe.movementStress.playerPassable?.pass &&
       probe.movementStress.playerTight?.pass &&
-      probe.movementStress.enemyNavigation?.pass;
+      probe.movementStress.enemyNavigation?.pass &&
+      (testCase.expectedDynamicBodies > 0
+        ? probe?.dynamicPropImpulse?.present &&
+          probe.dynamicPropImpulse.count === testCase.expectedDynamicBodies &&
+          probe.dynamicPropImpulse.applied &&
+          probe.dynamicPropImpulse.moved &&
+          Math.abs(probe.dynamicPropImpulse.yDelta ?? 0) < 0.01
+        : probe?.dynamicPropImpulse?.present === false && probe.dynamicPropImpulse.count === 0);
     record(
       physicsOk ? "PASS" : "FAIL",
       `${testCase.name} Rapier runtime`,
@@ -545,6 +600,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         enemyProbe: probe?.enemy,
         projectileSweep: probe?.projectileSweep,
         movementStress: probe?.movementStress,
+        dynamicPropImpulse: probe?.dynamicPropImpulse,
       }),
     );
 
