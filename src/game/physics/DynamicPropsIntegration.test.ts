@@ -245,6 +245,41 @@ describe("GameWorld dynamic prop physics", () => {
     expect(prop?.position.y).toBeCloseTo(0.35, 4);
   });
 
+  it("does not push opt-in dynamic props behind blast-blocking walls", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    const prop = world.spawnDynamicProp({
+      id: "blast-hidden-crate",
+      modelKey: "test_crate",
+      position: new Vector3(1.2, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+    world.obstacles.push({
+      id: "blast-blocking-wall",
+      visualKey: "test_wall",
+      position: new Vector3(0.55, 0.8, 0),
+      halfSize: new Vector3(0.08, 0.8, 2),
+    });
+    world.markObstacleIndexDirty();
+    world.syncPhysicsStaticObstacles();
+
+    expect(world.applyDynamicPropImpulseFromPoint(new Vector3(0, 0.35, 0), 2, 3)).toBe(0);
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(prop?.position.x).toBeCloseTo(1.2, 4);
+    expect(prop?.position.y).toBeCloseTo(0.35, 4);
+  });
+
   it("pushes opt-in dynamic props brushed by pistol projectiles", async () => {
     vi.stubGlobal("window", {
       ...globalThis,

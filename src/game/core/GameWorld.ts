@@ -287,11 +287,16 @@ export class GameWorld {
   applyDynamicPropImpulseFromPoint(origin: Vector3, radius: number, strength: number) {
     if (radius <= 0 || strength <= 0) return 0;
     let pushed = 0;
+    const blastOrigin = origin.clone();
+    blastOrigin.y += 0.38;
     for (const prop of this.dynamicProps) {
       let dx = prop.position.x - origin.x;
       let dz = prop.position.z - origin.z;
       let distanceSq = dx * dx + dz * dz;
       if (distanceSq > radius * radius) continue;
+      const target = prop.position.clone();
+      target.y += Math.max(0.25, Math.min(0.72, prop.halfSize.y));
+      if (!this.hasLineOfSight(blastOrigin, target, 0.18)) continue;
       if (distanceSq < 0.0001) {
         const angle = deterministicDynamicPropImpulseAngle(prop.id);
         dx = Math.cos(angle) * 0.01;
