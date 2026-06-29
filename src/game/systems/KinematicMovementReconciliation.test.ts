@@ -66,6 +66,26 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(enemy.position.x).toBeGreaterThan(0);
     expect(enemy.velocity.x).toBeGreaterThanOrEqual(-0.01);
   });
+
+  it("damps enemy velocity that points back into a legacy recovery correction", () => {
+    const world = createPlayingWorld();
+    const enemy = world.spawnEnemy("repair_drone", "legacy_recovered_enemy", new Vector3(0.42, 0, -2.5), 0);
+    enemy.velocity.set(-2, 0, 0);
+    enemy.staggerRemaining = 0.2;
+    world.obstacles.push({
+      id: "legacy_recovery_wall",
+      visualKey: "test_wall",
+      position: new Vector3(0, 0.5, -2.5),
+      halfSize: new Vector3(0.5, 0.5, 0.5),
+    });
+    world.markObstacleIndexDirty();
+    world.moveKinematicCircleWithPhysics = vi.fn(() => null);
+
+    new EnemyAISystem().update(world, 0.1);
+
+    expect(enemy.position.x).toBeGreaterThan(0.5);
+    expect(enemy.velocity.x).toBeGreaterThanOrEqual(-0.01);
+  });
 });
 
 function createPlayingWorld() {

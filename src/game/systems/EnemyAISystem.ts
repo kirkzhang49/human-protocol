@@ -19,6 +19,7 @@ export class EnemyAISystem implements GameSystem {
   private readonly separation = new Vector3();
   private readonly spacingDelta = new Vector3();
   private readonly moveDelta = new Vector3();
+  private readonly recoveryDelta = new Vector3();
   private readonly sightStart = new Vector3();
   private readonly sightTarget = new Vector3();
 
@@ -209,11 +210,14 @@ export class EnemyAISystem implements GameSystem {
 
     for (const obstacle of world.syncObstacleIndex().queryCircle(position.x, position.z, radius)) {
       if (obstacle.enemyNavigation === "soft" || obstacle.enemyNavigation === "ignore") continue;
+      this.recoveryDelta.copy(position);
       if (obstacle.yaw) {
         resolveCircleObb(position, radius, obstacle.position, obstacle.halfSize, obstacle.yaw);
       } else {
         resolveCircleAabb(position, radius, obstacle.position, obstacle.halfSize);
       }
+      this.recoveryDelta.subVectors(position, this.recoveryDelta);
+      dampenPlanarVelocityAgainstKinematicRecovery(enemy.velocity, this.recoveryDelta);
     }
   }
 
