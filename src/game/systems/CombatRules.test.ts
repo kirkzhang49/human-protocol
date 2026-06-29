@@ -133,6 +133,23 @@ describe("combat weapon rules", () => {
     expect(world.effects.some((effect) => effect.type === "hitSpark")).toBe(true);
   });
 
+  it("places projectile wall sparks at the swept impact point instead of the frame endpoint", () => {
+    const world = createCombatWorld();
+    world.player.currentWeapon = "railLance";
+    world.obstacles.push(testWall(-1.45));
+    world.markObstacleIndexDirty();
+    const projectile = createProjectile(999, world.player.id, "railLance", new Vector3(0, 1.2, 0), new Vector3(0, 0, -1));
+    const frameEndpointZ = projectile.position.z + projectile.velocity.z * 0.1;
+    world.addProjectile(projectile);
+
+    new ProjectileSystem().update(world, 0.1);
+
+    const spark = world.effects.find((effect) => effect.type === "hitSpark");
+    expect(spark?.position.z).toBeGreaterThan(-1.32);
+    expect(spark?.position.z).toBeLessThan(-1.05);
+    expect(spark?.position.z).toBeGreaterThan(frameEndpointZ);
+  });
+
   it("hits robots swept through by a fast pistol projectile between frames", () => {
     const world = createCombatWorld();
     world.player.currentWeapon = "railLance";

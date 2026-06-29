@@ -7,6 +7,7 @@ import type {
   PhysicsDynamicPropBody,
   PhysicsKinematicCircleMove,
   PhysicsKinematicMoveResult,
+  PhysicsSegmentHit,
   PhysicsSegmentQuery,
   PhysicsWorldAdapter,
 } from "./PhysicsWorldAdapter";
@@ -86,45 +87,53 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
     this.lastSyncMs = nowMs() - startedAt;
   }
 
-  isSegmentBlocked(query: PhysicsSegmentQuery) {
-    if (!this.world) return false;
+  castSegment(query: PhysicsSegmentQuery): PhysicsSegmentHit | null {
+    if (!this.world) return null;
     const startedAt = nowMs();
     const delta = query.end.clone().sub(query.start);
-    if (delta.lengthSq() <= minimumMoveDistanceSq) return false;
+    if (delta.lengthSq() <= minimumMoveDistanceSq) return null;
 
     const filterPredicate = this.filterPredicate(query.filter);
     const radius = query.radius ?? 0;
-    const blocked = radius > 0.0001
-      ? Boolean(
-          this.world.castShape(
-            toRapierVector(query.start),
-            identityRotation,
-            toRapierVector(delta),
-            new RAPIER.Ball(radius),
-            0.001,
-            1,
-            true,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            filterPredicate,
-          ),
+    const hit = radius > 0.0001
+      ? this.world.castShape(
+          toRapierVector(query.start),
+          identityRotation,
+          toRapierVector(delta),
+          new RAPIER.Ball(radius),
+          0.001,
+          1,
+          true,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          filterPredicate,
         )
-      : Boolean(
-          this.world.castRay(
-            new RAPIER.Ray(toRapierVector(query.start), toRapierVector(delta)),
-            1,
-            true,
-            undefined,
-            undefined,
-            undefined,
-            undefined,
-            filterPredicate,
-          ),
+      : this.world.castRay(
+          new RAPIER.Ray(toRapierVector(query.start), toRapierVector(delta)),
+          1,
+          true,
+          undefined,
+          undefined,
+          undefined,
+          undefined,
+          filterPredicate,
         );
     this.lastQueryMs = nowMs() - startedAt;
-    return blocked;
+    if (!hit) return null;
+
+    const timeOfImpact = "time_of_impact" in hit ? hit.time_of_impact : hit.timeOfImpact;
+    const collider = hit.collider;
+    return {
+      obstacle: this.obstacleByColliderHandle.get(collider.handle),
+      position: query.start.clone().addScaledVector(delta, timeOfImpact),
+      timeOfImpact,
+    };
+  }
+
+  isSegmentBlocked(query: PhysicsSegmentQuery) {
+    return Boolean(this.castSegment(query));
   }
 
   moveKinematicCircle(move: PhysicsKinematicCircleMove): PhysicsKinematicMoveResult {

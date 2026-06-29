@@ -61,7 +61,7 @@ import type { ProjectileState } from "../entities/ProjectileState";
 import type { RobotState } from "../entities/RobotState";
 import { createNullPhysicsWorldAdapter } from "../physics/NullPhysicsWorldAdapter";
 import { createRapierPhysicsWorldAdapter } from "../physics/RapierPhysicsWorldAdapter";
-import type { PhysicsKinematicCircleMove, PhysicsKinematicMoveResult, PhysicsWorldAdapter } from "../physics/PhysicsWorldAdapter";
+import type { PhysicsKinematicCircleMove, PhysicsKinematicMoveResult, PhysicsSegmentHit, PhysicsWorldAdapter } from "../physics/PhysicsWorldAdapter";
 import { startWaveNow } from "../systems/WaveDirectorSystem";
 import {
   loadPlayerProgress,
@@ -111,7 +111,7 @@ import type {
 } from "./GameMode";
 import { createCameraState, createCombatAssistState, createTouchInputState, createWorldInputState } from "./GameWorldStateFactory";
 import type { ObjectiveEvent, RuntimeDebugOptions, TouchInputState, UpgradeModifiers } from "./GameWorldTypes";
-import { clamp, segmentIntersectsAabb2D, segmentIntersectsObb2D } from "./math";
+import { clamp, segmentIntersectionTimeAabb2D, segmentIntersectionTimeObb2D } from "./math";
 import { ObstacleSpatialIndex } from "./ObstacleSpatialIndex";
 import { createPlatformAdapter, type PlatformAdapter } from "./PlatformAdapter";
 import { RenderPerformanceGovernor } from "./RenderPerformance";
@@ -352,11 +352,15 @@ export class GameWorld {
   }
 
   isSegmentBlockedByObstacle(start: Vector3, end: Vector3, radius = 0.05) {
-    return this.segmentBlockedByObstacle(start, end, radius, () => true);
+    return Boolean(this.segmentHitObstacle(start, end, radius, () => true));
   }
 
   isProjectileSegmentBlockedByObstacle(start: Vector3, end: Vector3, radius = 0.05) {
-    return this.segmentBlockedByObstacle(start, end, radius, (obstacle) => projectileObstacleBlocks(obstacle, start, end, radius));
+    return Boolean(this.projectileSegmentHitObstacle(start, end, radius));
+  }
+
+  projectileSegmentHitObstacle(start: Vector3, end: Vector3, radius = 0.05) {
+    return this.segmentHitObstacle(start, end, radius, (obstacle) => projectileObstacleBlocks(obstacle, start, end, radius));
   }
 
   hasProjectileLineOfSight(start: Vector3, end: Vector3, radius = 0.05) {
@@ -364,49 +368,57 @@ export class GameWorld {
   }
 
   hasEnemyNavigationLineOfSight(start: Vector3, end: Vector3, radius = 0.05) {
-    return this.segmentBlockedByObstacle(start, end, radius, isStructuralObstacle) === false;
+    return this.segmentHitObstacle(start, end, radius, isStructuralObstacle) === null;
   }
 
-  private segmentBlockedByObstacle(
+  private segmentHitObstacle(
     start: Vector3,
     end: Vector3,
     radius: number,
     shouldBlock: (obstacle: ObstacleState) => boolean,
   ) {
-    const legacyBlocked = () => this.legacySegmentBlockedByObstacle(start, end, radius, shouldBlock);
+    const legacyHit = () => this.legacySegmentHitObstacle(start, end, radius, shouldBlock);
     if (this.syncPhysicsStaticObstacles()) {
-      const rapierBlocked = this.physics.isSegmentBlocked({ start, end, radius, filter: shouldBlock });
+      const rapierHit = this.physics.castSegment({ start, end, radius, filter: shouldBlock });
       if (this.debugOptions.physicsDualRun) {
-        const oldBlocked = legacyBlocked();
+        const oldBlocked = Boolean(legacyHit());
         this.physicsQuerySamples += 1;
-        if (oldBlocked !== rapierBlocked) this.physicsQueryMismatches += 1;
+        if (oldBlocked !== Boolean(rapierHit)) this.physicsQueryMismatches += 1;
       }
-      return rapierBlocked;
+      return rapierHit;
     }
-    return legacyBlocked();
+    return legacyHit();
   }
 
-  private legacySegmentBlockedByObstacle(
+  private legacySegmentHitObstacle(
     start: Vector3,
     end: Vector3,
     radius: number,
     shouldBlock: (obstacle: ObstacleState) => boolean,
-  ) {
+  ): PhysicsSegmentHit | null {
     const dx = end.x - start.x;
     const dz = end.z - start.z;
     const halfLength = Math.sqrt(dx * dx + dz * dz) * 0.5;
-    if (halfLength <= 0.001 || this.obstacles.length === 0) return false;
+    if (halfLength <= 0.001 || this.obstacles.length === 0) return null;
 
     const centerX = (start.x + end.x) * 0.5;
     const centerZ = (start.z + end.z) * 0.5;
     const broadRadius = halfLength + radius + 4;
+    let bestHit: PhysicsSegmentHit | null = null;
     for (const obstacle of this.syncObstacleIndex().queryCircle(centerX, centerZ, broadRadius)) {
-      const hit = obstacle.yaw
-        ? segmentIntersectsObb2D(start, end, obstacle.position, obstacle.halfSize, obstacle.yaw, radius)
-        : segmentIntersectsAabb2D(start, end, obstacle.position, obstacle.halfSize, radius);
-      if (hit && shouldBlock(obstacle)) return true;
+      if (!shouldBlock(obstacle)) continue;
+      const timeOfImpact = obstacle.yaw
+        ? segmentIntersectionTimeObb2D(start, end, obstacle.position, obstacle.halfSize, obstacle.yaw, radius)
+        : segmentIntersectionTimeAabb2D(start, end, obstacle.position, obstacle.halfSize, radius);
+      if (timeOfImpact === null) continue;
+      if (bestHit && timeOfImpact >= bestHit.timeOfImpact) continue;
+      bestHit = {
+        obstacle,
+        position: start.clone().lerp(end, timeOfImpact),
+        timeOfImpact,
+      };
     }
-    return false;
+    return bestHit;
   }
 
   hasLineOfSight(start: Vector3, end: Vector3, radius = 0.05) {

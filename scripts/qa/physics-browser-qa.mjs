@@ -345,7 +345,47 @@ const kinematicProbe = `(() => {
       blocked: Boolean(enemyResult.blocked),
       translation: Number(enemyResult.translation?.length?.() ?? 0),
     } : null,
+    projectileSweep: projectileSweepProbe(world),
   };
+
+  function projectileSweepProbe(world) {
+    if (!world?.projectileSegmentHitObstacle || !world?.obstacles) return null;
+    const obstacleId = "qa_projectile_sweep_cover";
+    const start = world.player.position.clone();
+    start.y = 1.2;
+    const end = start.clone();
+    end.z -= 3.4;
+    const obstaclePosition = start.clone();
+    obstaclePosition.y = 1;
+    obstaclePosition.z -= 1.45;
+    const halfSize = start.clone();
+    halfSize.set(1.2, 1, 0.08);
+    const beforeCount = world.obstacles.length;
+    try {
+      world.obstacles.push({
+        id: obstacleId,
+        visualKey: "test_wall",
+        position: obstaclePosition,
+        halfSize,
+      });
+      world.markObstacleIndexDirty?.();
+      world.syncPhysicsStaticObstacles?.();
+      const hit = world.projectileSegmentHitObstacle(start, end, 0.15);
+      return hit ? {
+        hit: true,
+        impactTravelZ: Number(hit.position.z - start.z),
+        timeOfImpact: Number(hit.timeOfImpact ?? -1),
+        obstacleId: hit.obstacle?.id ?? null,
+        obstacleCountDelta: world.obstacles.length - beforeCount,
+      } : { hit: false, obstacleCountDelta: world.obstacles.length - beforeCount };
+    } finally {
+      for (let index = world.obstacles.length - 1; index >= 0; index -= 1) {
+        if (world.obstacles[index]?.id === obstacleId) world.obstacles.splice(index, 1);
+      }
+      world.markObstacleIndexDirty?.();
+      world.syncPhysicsStaticObstacles?.();
+    }
+  }
 })()`;
 
 async function probeWebGpuAdapter(cdp) {
@@ -401,7 +441,11 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       world.obstacles > 0 &&
       physics.staticColliderCount > 0 &&
       physics.dynamicBodyCount === testCase.expectedDynamicBodies &&
-      probe?.player?.translation > 0;
+      probe?.player?.translation > 0 &&
+      probe?.projectileSweep?.hit &&
+      probe.projectileSweep.impactTravelZ > -1.32 &&
+      probe.projectileSweep.impactTravelZ < -1.05 &&
+      probe.projectileSweep.obstacleCountDelta === 1;
     record(
       physicsOk ? "PASS" : "FAIL",
       `${testCase.name} Rapier runtime`,
@@ -415,6 +459,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         expectedDynamicBodies: testCase.expectedDynamicBodies,
         playerProbe: probe?.player,
         enemyProbe: probe?.enemy,
+        projectileSweep: probe?.projectileSweep,
       }),
     );
 

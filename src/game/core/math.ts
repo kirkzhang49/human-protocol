@@ -122,7 +122,17 @@ export function segmentIntersectsAabb2D(
   halfSize: Vector3,
   radius = 0,
 ) {
-  return segmentIntersectsLocalAabb2D(
+  return segmentIntersectionTimeAabb2D(start, end, center, halfSize, radius) !== null;
+}
+
+export function segmentIntersectionTimeAabb2D(
+  start: Vector3,
+  end: Vector3,
+  center: Vector3,
+  halfSize: Vector3,
+  radius = 0,
+) {
+  return segmentIntersectionTimeLocalAabb2D(
     start.x - center.x,
     start.z - center.z,
     end.x - center.x,
@@ -140,13 +150,24 @@ export function segmentIntersectsObb2D(
   yaw: number,
   radius = 0,
 ) {
+  return segmentIntersectionTimeObb2D(start, end, center, halfSize, yaw, radius) !== null;
+}
+
+export function segmentIntersectionTimeObb2D(
+  start: Vector3,
+  end: Vector3,
+  center: Vector3,
+  halfSize: Vector3,
+  yaw: number,
+  radius = 0,
+) {
   const cos = Math.cos(yaw);
   const sin = Math.sin(yaw);
   const startX = start.x - center.x;
   const startZ = start.z - center.z;
   const endX = end.x - center.x;
   const endZ = end.z - center.z;
-  return segmentIntersectsLocalAabb2D(
+  return segmentIntersectionTimeLocalAabb2D(
     startX * cos + startZ * sin,
     -startX * sin + startZ * cos,
     endX * cos + endZ * sin,
@@ -156,7 +177,7 @@ export function segmentIntersectsObb2D(
   );
 }
 
-function segmentIntersectsLocalAabb2D(
+function segmentIntersectionTimeLocalAabb2D(
   startX: number,
   startZ: number,
   endX: number,
@@ -170,13 +191,13 @@ function segmentIntersectsLocalAabb2D(
   const deltaZ = endZ - startZ;
 
   const clippedX = clipSegmentAxis(startX, deltaX, -halfX, halfX, tMin, tMax);
-  if (!clippedX) return false;
+  if (!clippedX) return null;
   tMin = clippedX.tMin;
   tMax = clippedX.tMax;
 
   const clippedZ = clipSegmentAxis(startZ, deltaZ, -halfZ, halfZ, tMin, tMax);
-  if (!clippedZ) return false;
-  return true;
+  if (!clippedZ) return null;
+  return clippedZ.tMin;
 }
 
 function clipSegmentAxis(

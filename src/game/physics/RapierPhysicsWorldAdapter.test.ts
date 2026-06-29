@@ -48,6 +48,31 @@ describe("RapierPhysicsWorldAdapter", () => {
     ).toBe(false);
   });
 
+  it("returns the swept impact point for segment shape casts", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+
+    adapter.syncStaticObstacles([
+      obstacle({
+        id: "thin-cover",
+        position: new Vector3(0, 1, -1.45),
+        halfSize: new Vector3(2.5, 1, 0.08),
+      }),
+    ]);
+
+    const hit = adapter.castSegment({
+      start: new Vector3(0, 1.2, 0),
+      end: new Vector3(0, 1.2, -3.4),
+      radius: 0.15,
+    });
+
+    expect(hit?.obstacle?.id).toBe("thin-cover");
+    expect(hit?.position.z).toBeGreaterThan(-1.32);
+    expect(hit?.position.z).toBeLessThan(-1.05);
+    expect(hit?.timeOfImpact).toBeGreaterThan(0);
+    expect(hit?.timeOfImpact).toBeLessThan(0.5);
+  });
+
   it("honors enemyNavigation filters for kinematic enemy movement", async () => {
     const adapter = createRapierPhysicsWorldAdapter();
     await adapter.init();

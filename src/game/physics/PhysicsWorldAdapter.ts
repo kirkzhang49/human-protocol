@@ -10,6 +10,12 @@ export interface PhysicsSegmentQuery {
   filter?: (obstacle: ObstacleState) => boolean;
 }
 
+export interface PhysicsSegmentHit {
+  obstacle?: ObstacleState;
+  position: Vector3;
+  timeOfImpact: number;
+}
+
 export interface PhysicsKinematicCircleMove {
   id: string;
   position: Vector3;
@@ -59,6 +65,7 @@ export interface PhysicsWorldAdapter {
   readonly ready: boolean;
   init(): Promise<boolean>;
   syncStaticObstacles(obstacles: readonly ObstacleState[]): void;
+  castSegment(query: PhysicsSegmentQuery): PhysicsSegmentHit | null;
   isSegmentBlocked(query: PhysicsSegmentQuery): boolean;
   moveKinematicCircle(move: PhysicsKinematicCircleMove): PhysicsKinematicMoveResult;
   syncDynamicPropBodies(bodies: readonly PhysicsDynamicPropBody[]): void;

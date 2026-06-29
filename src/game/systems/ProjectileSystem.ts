@@ -189,8 +189,9 @@ export class ProjectileSystem implements GameSystem {
 
   private hitObstacle(world: GameWorld, projectileIndex: number) {
     const projectile = world.projectiles[projectileIndex];
-    if (world.isProjectileSegmentBlockedByObstacle(projectile.previousPosition, projectile.position, projectile.radius)) {
-      world.addEffect("hitSpark", projectile.position, projectile.direction, 0.22, 1);
+    const hit = world.projectileSegmentHitObstacle(projectile.previousPosition, projectile.position, projectile.radius);
+    if (hit) {
+      world.addEffect("hitSpark", hit.position, projectile.direction, 0.22, 1);
       world.emitAudio("enemy_hit", { intensity: 0.55, position: projectile.position });
       return true;
     }

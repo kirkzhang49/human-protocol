@@ -18,6 +18,10 @@ export class NullPhysicsWorldAdapter implements PhysicsWorldAdapter {
 
   syncStaticObstacles() {}
 
+  castSegment(_query: PhysicsSegmentQuery) {
+    return null;
+  }
+
   isSegmentBlocked(_query: PhysicsSegmentQuery) {
     return false;
   }
