@@ -26,3 +26,12 @@ export function reconcilePlanarVelocityWithKinematicResult(
   velocity.copy(resolvedTranslation).multiplyScalar(1 / delta);
   if (velocity.length() > previousSpeed) velocity.setLength(previousSpeed);
 }
+
+export function dampenPlanarVelocityAgainstKinematicRecovery(velocity: Vector3, recoveryTranslation: Vector3) {
+  const correction = recoveryTranslation.clone().setY(0);
+  if (correction.lengthSq() <= minimumTranslationSq) return;
+
+  correction.normalize();
+  const intoRecoveredContact = velocity.dot(correction);
+  if (intoRecoveredContact < 0) velocity.addScaledVector(correction, -intoRecoveredContact);
+}

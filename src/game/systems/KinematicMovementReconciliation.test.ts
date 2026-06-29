@@ -39,6 +39,33 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(world.moveKinematicCircleWithPhysics).toHaveBeenCalled();
     expect(enemy.velocity.length()).toBeLessThan(0.01);
   });
+
+  it("damps enemy velocity that points back into a physics recovery correction", () => {
+    const world = createPlayingWorld();
+    const enemy = world.spawnEnemy("repair_drone", "recovered_enemy", new Vector3(0, 0, -2.5), 0);
+    enemy.velocity.set(-2, 0, 0);
+    enemy.staggerRemaining = 0.2;
+    world.moveKinematicCircleWithPhysics = vi.fn((move: PhysicsKinematicCircleMove) => {
+      if (move.id.endsWith(":recovery")) {
+        const corrected = move.position.clone().add(new Vector3(0.15, 0, 0));
+        return {
+          position: corrected,
+          translation: corrected.clone().sub(move.position),
+          blocked: true,
+        };
+      }
+      return {
+        position: move.position.clone().add(move.desiredTranslation),
+        translation: move.desiredTranslation.clone(),
+        blocked: false,
+      };
+    });
+
+    new EnemyAISystem().update(world, 0.1);
+
+    expect(enemy.position.x).toBeGreaterThan(0);
+    expect(enemy.velocity.x).toBeGreaterThanOrEqual(-0.01);
+  });
 });
 
 function createPlayingWorld() {
