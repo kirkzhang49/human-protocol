@@ -6,7 +6,9 @@ export class PhysicsSystem implements GameSystem {
     world.ensurePhysicsReady();
     if (!world.physics.ready) return;
     world.syncPhysicsStaticObstacles();
+    world.syncPhysicsDynamicProps();
     world.physics.step(delta);
+    world.syncDynamicPropsFromPhysics(delta);
     publishPhysicsDebugSnapshot(world);
   }
 }

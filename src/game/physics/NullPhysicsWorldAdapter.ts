@@ -1,5 +1,7 @@
 import type {
   PhysicsDebugSnapshot,
+  PhysicsDynamicBodySnapshot,
+  PhysicsDynamicPropBody,
   PhysicsKinematicCircleMove,
   PhysicsKinematicMoveResult,
   PhysicsSegmentQuery,
@@ -29,6 +31,16 @@ export class NullPhysicsWorldAdapter implements PhysicsWorldAdapter {
     };
   }
 
+  syncDynamicPropBodies(_bodies: readonly PhysicsDynamicPropBody[]) {}
+
+  applyDynamicImpulse(_id: string) {
+    return false;
+  }
+
+  dynamicBodySnapshots(): PhysicsDynamicBodySnapshot[] {
+    return [];
+  }
+
   step(_delta: number) {}
 
   debugSnapshot(): PhysicsDebugSnapshot {
@@ -36,6 +48,7 @@ export class NullPhysicsWorldAdapter implements PhysicsWorldAdapter {
       mode: this.mode,
       ready: this.ready,
       staticColliderCount: 0,
+      dynamicBodyCount: 0,
       lastSyncMs: 0,
       lastMoveMs: 0,
       lastQueryMs: 0,

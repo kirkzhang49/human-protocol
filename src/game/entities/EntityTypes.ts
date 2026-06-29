@@ -1,4 +1,4 @@
-import { Vector2, Vector3 } from "three";
+import { Quaternion, Vector2, Vector3 } from "three";
 
 export type EntityId = number;
 export type EffectType =
@@ -50,6 +50,20 @@ export interface PickupState {
   age: number;
   collected: boolean;
   expires?: boolean;
+}
+
+export interface DynamicPropState {
+  id: string;
+  modelKey: string;
+  roomId?: string;
+  position: Vector3;
+  rotation: Quaternion;
+  scale: Vector3;
+  halfSize: Vector3;
+  yaw: number;
+  mass: number;
+  age: number;
+  sleeping: boolean;
 }
 
 export interface CameraState {

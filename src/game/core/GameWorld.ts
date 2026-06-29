@@ -1,4 +1,4 @@
-import { Vector3 } from "three";
+import { Quaternion, Vector3 } from "three";
 import type { AudioCueEvent, AudioCueOptions } from "../audio/AudioTypes";
 import { activeLevelConfig, defaultLevelId, getLevelConfig, getNextCampaignLevelConfig } from "../config/ConfigPackStore";
 import { bossFeedbackForEnemy, bossStaggerTuningForEnemy, bossVisualProfileForEnemy, type BossFeedbackRecipe } from "../config/bossVisualProfiles";
@@ -55,7 +55,7 @@ import { upgradeById, upgradePool, type UpgradeDefinition } from "../config/upgr
 import type { WeaponId } from "../config/weaponConfig";
 import { createEnemyRobot, createEnemyRobots, resetEnemyRobot, type EnemySpawnRuntimeOptions } from "../entities/createEnemyRobot";
 import { createPlayerRobot } from "../entities/createPlayerRobot";
-import type { EffectState, EffectType, ObstacleState, PickupState, WorldInputState } from "../entities/EntityTypes";
+import type { DynamicPropState, EffectState, EffectType, ObstacleState, PickupState, WorldInputState } from "../entities/EntityTypes";
 import type { EnemyState } from "../entities/EnemyState";
 import type { ProjectileState } from "../entities/ProjectileState";
 import type { RobotState } from "../entities/RobotState";
@@ -121,6 +121,7 @@ export type { ObjectiveEvent, RuntimeDebugOptions, TouchInputState, UpgradeModif
 
 const dialogueToastDurationScale = 0.5;
 const RECLAMATION_MOTHER_BOSS_MODEL_KEY = "hp_enemy_reclamation_mother_final_horror";
+const MAX_DYNAMIC_PROPS = 12;
 
 export class GameWorld {
   readonly platform: PlatformAdapter = createPlatformAdapter();
@@ -151,6 +152,7 @@ export class GameWorld {
   projectiles: ProjectileState[] = [];
   effects: EffectState[] = [];
   pickups: PickupState[] = [];
+  dynamicProps: DynamicPropState[] = [];
   enemies: EnemyState[] = createEnemyRobots(1000);
   obstacles: ObstacleState[] = [];
 
@@ -242,6 +244,67 @@ export class GameWorld {
   moveKinematicCircleWithPhysics(move: PhysicsKinematicCircleMove): PhysicsKinematicMoveResult | null {
     if (!this.syncPhysicsStaticObstacles()) return null;
     return this.physics.moveKinematicCircle(move);
+  }
+
+  spawnDynamicProp(config: {
+    id?: string;
+    modelKey: string;
+    position: Vector3;
+    halfSize: Vector3;
+    scale?: Vector3;
+    yaw?: number;
+    roomId?: string;
+    mass?: number;
+  }) {
+    if (this.dynamicProps.length >= MAX_DYNAMIC_PROPS) return null;
+    const yaw = config.yaw ?? 0;
+    const prop: DynamicPropState = {
+      id: config.id ?? `dynamic_prop_${this.nextId()}`,
+      modelKey: config.modelKey,
+      ...(config.roomId ? { roomId: config.roomId } : {}),
+      position: config.position.clone(),
+      rotation: new Quaternion().setFromAxisAngle(new Vector3(0, 1, 0), yaw),
+      scale: config.scale?.clone() ?? new Vector3(1, 1, 1),
+      halfSize: config.halfSize.clone(),
+      yaw,
+      mass: Math.max(0.001, config.mass ?? 1),
+      age: 0,
+      sleeping: false,
+    };
+    this.dynamicProps.push(prop);
+    this.syncPhysicsDynamicProps();
+    return prop;
+  }
+
+  applyDynamicPropImpulse(id: string, impulse: Vector3) {
+    return this.physics.applyDynamicImpulse(id, impulse);
+  }
+
+  syncPhysicsDynamicProps() {
+    this.physics.syncDynamicPropBodies(
+      this.dynamicProps.map((prop) => ({
+        id: prop.id,
+        position: prop.position,
+        halfSize: prop.halfSize,
+        yaw: prop.yaw,
+        mass: prop.mass,
+      })),
+    );
+  }
+
+  syncDynamicPropsFromPhysics(delta = 0) {
+    const snapshots = this.physics.dynamicBodySnapshots();
+    if (snapshots.length === 0) return;
+    const snapshotById = new Map(snapshots.map((snapshot) => [snapshot.id, snapshot]));
+    for (const prop of this.dynamicProps) {
+      prop.age += Math.max(0, delta);
+      const snapshot = snapshotById.get(prop.id);
+      if (!snapshot) continue;
+      prop.position.copy(snapshot.position);
+      prop.rotation.copy(snapshot.rotation);
+      prop.yaw = yawFromQuaternion(snapshot.rotation);
+      prop.sleeping = snapshot.sleeping;
+    }
   }
 
   physicsDebugSnapshot() {
@@ -4149,6 +4212,8 @@ export class GameWorld {
     this.projectiles.length = 0;
     this.effects.length = 0;
     this.pickups.length = 0;
+    this.dynamicProps.length = 0;
+    this.syncPhysicsDynamicProps();
     this.resetObstacles();
     this.resetEnemyPool();
     this.enemySpawnSequence += 1;
@@ -5169,6 +5234,13 @@ function pointInRoomBounds(x: number, z: number, room: LevelRoomDefinition) {
     if (intersects) inside = !inside;
   }
   return inside;
+}
+
+function yawFromQuaternion(rotation: Quaternion) {
+  return Math.atan2(
+    2 * (rotation.w * rotation.y + rotation.x * rotation.z),
+    1 - 2 * (rotation.y * rotation.y + rotation.z * rotation.z),
+  );
 }
 
 function readRuntimeDebugOptions(): RuntimeDebugOptions {

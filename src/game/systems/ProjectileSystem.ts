@@ -9,6 +9,10 @@ import type { EnemyState } from "../entities/EnemyState";
 export class ProjectileSystem implements GameSystem {
   private readonly spatialIndex = new ProjectileSpatialIndex();
   private readonly enemyHitPoint = new Vector3();
+  private readonly enemyCenter = new Vector3();
+  private readonly enemyClosestPoint = new Vector3();
+  private readonly projectileSegment = new Vector3();
+  private readonly projectilePointDelta = new Vector3();
 
   update(world: GameWorld, delta: number) {
     if (world.projectiles.length === 0) return;
@@ -39,13 +43,15 @@ export class ProjectileSystem implements GameSystem {
     const projectile = world.projectiles[projectileIndex];
     for (const enemy of this.spatialIndex.queryEnemies(projectile.position.x, projectile.position.z)) {
       if (projectile.hitEnemyIds.includes(enemy.id)) continue;
-      const dx = projectile.position.x - enemy.position.x;
-      const dy = projectile.position.y - (enemy.position.y + 1.25);
-      const dz = projectile.position.z - enemy.position.z;
+      this.enemyCenter.copy(enemy.position);
+      this.enemyCenter.y += 1.25;
+      this.closestPointOnProjectileSegment(projectile.previousPosition, projectile.position, this.enemyCenter);
+      const dx = this.enemyClosestPoint.x - this.enemyCenter.x;
+      const dy = this.enemyClosestPoint.y - this.enemyCenter.y;
+      const dz = this.enemyClosestPoint.z - this.enemyCenter.z;
       const radius = enemy.radius + projectile.radius;
       if (dx * dx + dy * dy + dz * dz <= radius * radius) {
-        this.enemyHitPoint.copy(enemy.position);
-        this.enemyHitPoint.y += 1.25;
+        this.enemyHitPoint.copy(this.enemyCenter);
         if (!world.hasProjectileLineOfSight(projectile.previousPosition, this.enemyHitPoint, projectile.radius)) {
           world.addEffect("hitSpark", projectile.position, projectile.direction, 0.22, 0.9);
           world.emitAudio("enemy_hit", { intensity: 0.55, position: projectile.position });
@@ -116,6 +122,18 @@ export class ProjectileSystem implements GameSystem {
       }
     }
     return false;
+  }
+
+  private closestPointOnProjectileSegment(start: Vector3, end: Vector3, point: Vector3) {
+    this.projectileSegment.copy(end).sub(start);
+    const lengthSq = this.projectileSegment.lengthSq();
+    if (lengthSq <= 0.000001) {
+      this.enemyClosestPoint.copy(end);
+      return this.enemyClosestPoint;
+    }
+    const t = Math.max(0, Math.min(1, this.projectilePointDelta.copy(point).sub(start).dot(this.projectileSegment) / lengthSq));
+    this.enemyClosestPoint.copy(start).addScaledVector(this.projectileSegment, t);
+    return this.enemyClosestPoint;
   }
 
   private hitPuzzleTarget(world: GameWorld, projectileIndex: number) {

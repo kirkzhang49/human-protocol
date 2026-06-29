@@ -1691,6 +1691,12 @@ export class RawWebGpuLevelRenderer {
 
     index = this.writeExitCinematicDynamicInstances(world, index, drawBatches);
 
+    for (const prop of world.dynamicProps) {
+      if (index >= MAX_INSTANCES) break;
+      if (!isDynamicPositionVisible(prop.position.x, prop.position.z)) continue;
+      index = this.writeDynamicPropInstance(index, prop, drawBatches);
+    }
+
     for (const pickup of world.pickups) {
       if (index >= MAX_INSTANCES || pickup.collected) continue;
       if (!isDynamicPositionVisible(pickup.position.x, pickup.position.z)) continue;
@@ -1868,6 +1874,68 @@ export class RawWebGpuLevelRenderer {
       }
     }
     return index;
+  }
+
+  private writeDynamicPropInstance(index: number, prop: GameWorld["dynamicProps"][number], drawBatches: RawDrawBatch[]) {
+    const geometry = this.geometryAssets.get(prop.modelKey);
+    if (!geometry || geometry.vertexCount <= 0) {
+      const nextIndex = this.writeBox(
+        index,
+        prop.position.x,
+        prop.position.y,
+        prop.position.z,
+        prop.halfSize.x * 2,
+        prop.halfSize.y * 2,
+        prop.halfSize.z * 2,
+        [0.48, 0.52, 0.54, 0.96],
+        prop.yaw,
+      );
+      this.appendDrawBatch(drawBatches, {
+        vertexBuffer: "proxy",
+        vertexOffset: 0,
+        vertexCount: CUBE_VERTEX_COUNT,
+        instanceOffset: index,
+        instanceCount: 1,
+        transparent: false,
+      });
+      return nextIndex;
+    }
+
+    const scale: Tuple3 = [prop.scale.x, prop.scale.y, prop.scale.z];
+    this.writeRuntimeModelInstance(
+      index,
+      prop.position.x,
+      prop.position.y,
+      prop.position.z,
+      0,
+      scale,
+      prop.yaw,
+      AUTHORED_MATERIAL_INSTANCE_COLOR,
+    );
+    const chunks = geometry.nodeChunks ?? [];
+    if (chunks.length > 0) {
+      for (const chunk of chunks) {
+        this.appendDrawBatch(drawBatches, {
+          vertexBuffer: "geometry",
+          vertexOffset: chunk.vertexOffset,
+          vertexCount: chunk.vertexCount,
+          instanceOffset: index,
+          instanceCount: 1,
+          transparent: this.isTransparentGeometryRange(chunk.vertexOffset, chunk.vertexCount),
+        });
+      }
+      return index + 1;
+    }
+
+    this.appendDrawBatch(drawBatches, {
+      vertexBuffer: "geometry",
+      vertexOffset: geometry.vertexOffset,
+      vertexCount: geometry.vertexCount,
+      instanceOffset: index,
+      instanceCount: 1,
+      transparent: this.isTransparentGeometryRange(geometry.vertexOffset, geometry.vertexCount),
+    });
+    return index + 1;
   }
 
   private writeExitCinematicDynamicInstances(world: GameWorld, startIndex: number, drawBatches: RawDrawBatch[]) {

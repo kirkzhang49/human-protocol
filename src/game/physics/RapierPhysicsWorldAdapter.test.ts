@@ -80,6 +80,27 @@ describe("RapierPhysicsWorldAdapter", () => {
     expect(moved.blocked).toBe(true);
     expect(moved.position.x).toBeLessThan(0.72);
   });
+
+  it("steps opt-in dynamic prop bodies on the ground plane", async () => {
+    const adapter = createRapierPhysicsWorldAdapter();
+    await adapter.init();
+
+    adapter.syncDynamicPropBodies([
+      {
+        id: "loose-crate",
+        position: new Vector3(0, 0.35, 0),
+        halfSize: new Vector3(0.35, 0.35, 0.35),
+        mass: 1,
+      },
+    ]);
+    expect(adapter.applyDynamicImpulse("loose-crate", new Vector3(2.4, 0, 0))).toBe(true);
+
+    adapter.step(1 / 30);
+
+    const snapshot = adapter.dynamicBodySnapshots().find((body) => body.id === "loose-crate");
+    expect(snapshot?.position.x).toBeGreaterThan(0.01);
+    expect(snapshot?.position.y).toBeCloseTo(0.35, 4);
+  });
 });
 
 function obstacle(partial: Pick<ObstacleState, "id" | "position" | "halfSize"> & Partial<ObstacleState>): ObstacleState {

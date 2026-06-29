@@ -1,8 +1,10 @@
-import RAPIER, { type Collider, type World } from "@dimforge/rapier3d-compat";
-import { Vector3 } from "three";
+import RAPIER, { type Collider, type RigidBody, type World } from "@dimforge/rapier3d-compat";
+import { Quaternion, Vector3 } from "three";
 import type { ObstacleState } from "../entities/EntityTypes";
 import type {
   PhysicsDebugSnapshot,
+  PhysicsDynamicBodySnapshot,
+  PhysicsDynamicPropBody,
   PhysicsKinematicCircleMove,
   PhysicsKinematicMoveResult,
   PhysicsSegmentQuery,
@@ -12,6 +14,11 @@ import type {
 interface StaticColliderEntry {
   obstacle: ObstacleState;
   collider: Collider;
+}
+
+interface DynamicBodyEntry {
+  body: RigidBody;
+  halfSizeKey: string;
 }
 
 const identityRotation = { x: 0, y: 0, z: 0, w: 1 };
@@ -25,6 +32,7 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
   private staticSignature = "";
   private readonly staticColliders = new Map<string, StaticColliderEntry>();
   private readonly obstacleByColliderHandle = new Map<number, ObstacleState>();
+  private readonly dynamicBodies = new Map<string, DynamicBodyEntry>();
   private lastSyncMs = 0;
   private lastMoveMs = 0;
   private lastQueryMs = 0;
@@ -182,6 +190,51 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
     return { position, translation, blocked };
   }
 
+  syncDynamicPropBodies(bodies: readonly PhysicsDynamicPropBody[]) {
+    if (!this.world) return;
+    const nextIds = new Set(bodies.map((body) => body.id));
+    for (const [id, entry] of this.dynamicBodies) {
+      if (nextIds.has(id)) continue;
+      this.world.removeRigidBody(entry.body);
+      this.dynamicBodies.delete(id);
+    }
+
+    for (const body of bodies) {
+      const halfSizeKey = dynamicBodyHalfSizeKey(body.halfSize);
+      const existing = this.dynamicBodies.get(body.id);
+      if (existing && existing.halfSizeKey !== halfSizeKey) {
+        this.world.removeRigidBody(existing.body);
+        this.dynamicBodies.delete(body.id);
+      }
+
+      const entry = this.dynamicBodies.get(body.id) ?? this.createDynamicPropBody(body, halfSizeKey);
+      entry.body.setTranslation(toRapierVector(body.position), false);
+      entry.body.setRotation(yawRotation(body.yaw ?? 0), false);
+    }
+  }
+
+  applyDynamicImpulse(id: string, impulse: Vector3) {
+    const entry = this.dynamicBodies.get(id);
+    if (!entry) return false;
+    entry.body.applyImpulse({ x: impulse.x, y: 0, z: impulse.z }, true);
+    return true;
+  }
+
+  dynamicBodySnapshots(): PhysicsDynamicBodySnapshot[] {
+    const snapshots: PhysicsDynamicBodySnapshot[] = [];
+    for (const [id, entry] of this.dynamicBodies) {
+      const position = entry.body.translation();
+      const rotation = entry.body.rotation();
+      snapshots.push({
+        id,
+        position: new Vector3(position.x, position.y, position.z),
+        rotation: new Quaternion(rotation.x, rotation.y, rotation.z, rotation.w),
+        sleeping: entry.body.isSleeping(),
+      });
+    }
+    return snapshots;
+  }
+
   step(delta: number) {
     if (!this.world || delta <= 0) return;
     const startedAt = nowMs();
@@ -195,12 +248,37 @@ export class RapierPhysicsWorldAdapter implements PhysicsWorldAdapter {
       mode: this.mode,
       ready: this.ready,
       staticColliderCount: this.staticColliders.size,
+      dynamicBodyCount: this.dynamicBodies.size,
       lastSyncMs: this.lastSyncMs,
       lastMoveMs: this.lastMoveMs,
       lastQueryMs: this.lastQueryMs,
       lastStepMs: this.lastStepMs,
       ...(this.lastError ? { lastError: this.lastError } : {}),
     };
+  }
+
+  private createDynamicPropBody(body: PhysicsDynamicPropBody, halfSizeKey: string) {
+    if (!this.world) throw new Error("Rapier physics world is not initialized.");
+    const desc = RAPIER.RigidBodyDesc
+      .dynamic()
+      .setTranslation(body.position.x, body.position.y, body.position.z)
+      .setRotation(yawRotation(body.yaw ?? 0))
+      .setGravityScale(0)
+      .setAdditionalMass(Math.max(0.001, body.mass ?? 1))
+      .enabledTranslations(true, false, true)
+      .enabledRotations(false, true, false)
+      .setLinearDamping(body.linearDamping ?? 3.2)
+      .setAngularDamping(body.angularDamping ?? 5.5)
+      .setCanSleep(true);
+    const rigidBody = this.world.createRigidBody(desc);
+    const colliderDesc = RAPIER.ColliderDesc
+      .cuboid(body.halfSize.x, body.halfSize.y, body.halfSize.z)
+      .setFriction(0.92)
+      .setRestitution(0.04);
+    this.world.createCollider(colliderDesc, rigidBody);
+    const entry = { body: rigidBody, halfSizeKey };
+    this.dynamicBodies.set(body.id, entry);
+    return entry;
   }
 
   private filterPredicate(filter: PhysicsSegmentQuery["filter"]) {
@@ -240,6 +318,10 @@ function shapeForGroundedCharacter(radius: number, height?: number) {
       : new RAPIER.Ball(safeRadius),
     groundOffsetY: safeRadius + capsuleHalfHeight,
   };
+}
+
+function dynamicBodyHalfSizeKey(halfSize: Vector3) {
+  return `${Math.round(halfSize.x * 1000)}:${Math.round(halfSize.y * 1000)}:${Math.round(halfSize.z * 1000)}`;
 }
 
 function staticObstacleSignature(obstacles: readonly ObstacleState[]) {

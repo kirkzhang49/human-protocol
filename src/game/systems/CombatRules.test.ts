@@ -111,6 +111,19 @@ describe("combat weapon rules", () => {
     expect(world.effects.some((effect) => effect.type === "hitSpark")).toBe(true);
   });
 
+  it("hits robots swept through by a fast pistol projectile between frames", () => {
+    const world = createCombatWorld();
+    world.player.currentWeapon = "railLance";
+    const enemy = world.spawnEnemy("repair_drone", "test_wave", new Vector3(0, 0, -1.8), 0);
+    const health = enemy.health;
+    world.addProjectile(createProjectile(999, world.player.id, "railLance", new Vector3(0, 1.25, 0), new Vector3(0, 0, -1)));
+
+    new ProjectileSystem().update(world, 0.1);
+
+    expect(enemy.health).toBeLessThan(health);
+    expect(world.projectiles).toHaveLength(0);
+  });
+
   it("does not lock aim assist onto robots hidden behind walls", () => {
     const world = createCombatWorld();
     const enemy = world.spawnEnemy("repair_drone", "test_wave", new Vector3(0, 0, -6), 0);
