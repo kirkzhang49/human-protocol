@@ -366,6 +366,35 @@ describe("GameWorld dynamic prop physics", () => {
     expect(world.dynamicProps).toHaveLength(0);
   });
 
+  it("removes Rapier bodies when old dynamic props despawn", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+
+    const world = new GameWorld();
+    await world.physics.init();
+    const prop = world.spawnDynamicProp({
+      id: "rapier-expiring-crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, 0),
+      halfSize: new Vector3(0.35, 0.35, 0.35),
+      mass: 1,
+    });
+
+    expect(prop).not.toBeNull();
+    expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(1);
+
+    world.syncDynamicPropsFromPhysics(46);
+
+    expect(world.dynamicProps).toHaveLength(0);
+    expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(0);
+    expect(world.applyDynamicPropImpulse("rapier-expiring-crate", new Vector3(2, 0, 0))).toBe(false);
+  });
+
   it("despawns old dynamic props through PhysicsSystem even before physics is ready", () => {
     const world = new GameWorld();
     const prop = world.spawnDynamicProp({
