@@ -35,11 +35,21 @@ export function enemyModelAltitude(enemy: EnemyState) {
   return 0;
 }
 
+export function isEnemyFocusRevealTarget(world: GameWorld, enemy: EnemyState) {
+  const reveal = world.session.activeFocusReveal;
+  return reveal?.kind === "robot" && reveal.targetId === `enemy:${enemy.id}`;
+}
+
+export function shouldKeepRawEnemyBackupDuringFocusReveal(world: GameWorld, enemy: EnemyState) {
+  return isEnemyFocusRevealTarget(world, enemy);
+}
+
 export function isEnemyRoomVisibleForThreeOracle(world: GameWorld, roomId: string | undefined) {
   return isRoomVisibleForEnemy(world, roomId);
 }
 
 export function isEnemyOccludedForThreeOracle(world: GameWorld, enemy: EnemyState) {
+  if (isEnemyFocusRevealTarget(world, enemy)) return false;
   const start = world.player.position;
   const end = enemy.position;
   for (const obstacle of world.obstacles) {

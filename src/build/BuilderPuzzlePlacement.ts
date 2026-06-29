@@ -1,4 +1,4 @@
-import type { BuilderProject, BuilderPuzzleComponent } from "./BuilderTypes";
+import type { BuilderProject, BuilderProp, BuilderPuzzleComponent, BuilderPuzzleInstance, BuilderRouteSwitch } from "./BuilderTypes";
 
 const EPSILON = 0.001;
 
@@ -68,35 +68,107 @@ export function projectWithAnchoredPuzzleComponentsForProp(project: BuilderProje
   if (!prop) return project;
   let changed = false;
   const puzzles = (project.puzzles ?? []).map((instance) => {
-    let instanceChanged = false;
-    const components = (instance.components ?? []).map((component) => {
+    let nextInstance = instance;
+    if (instance.sourceInteraction?.hostPropId === propId && !puzzleInteractionPlacementMatches(instance, prop)) {
+      changed = true;
+      nextInstance = puzzleInteractionWithPropPlacement(nextInstance, prop);
+    }
+    let componentsChanged = false;
+    const components = (nextInstance.components ?? []).map((component) => {
       if (puzzleComponentAnchorPropId(component) !== propId) return component;
       if (componentPlacementMatches(component, prop.position, prop.roomId)) return component;
       changed = true;
-      instanceChanged = true;
+      componentsChanged = true;
       return puzzleComponentWithPlacement(component, prop.position, prop.roomId);
     });
-    return instanceChanged ? { ...instance, components } : instance;
+    return componentsChanged ? { ...nextInstance, components } : nextInstance;
   });
-  return changed ? { ...project, puzzles } : project;
+  const routeSwitches = (project.routeSwitches ?? []).map((route) => {
+    if (route.hostPropId !== propId || routePlacementMatches(route, prop)) return route;
+    changed = true;
+    return routeWithPropPlacement(route, prop);
+  });
+  if (!changed) return project;
+  return { ...project, puzzles, routeSwitches };
 }
 
 export function normalizeAnchoredPuzzleComponents(project: BuilderProject): BuilderProject {
   const propsById = new Map(project.props.map((prop) => [prop.id, prop]));
   let changed = false;
   const puzzles = (project.puzzles ?? []).map((instance) => {
-    let instanceChanged = false;
-    const components = (instance.components ?? []).map((component) => {
+    let nextInstance = instance;
+    const hostProp = instance.sourceInteraction?.hostPropId ? propsById.get(instance.sourceInteraction.hostPropId) : null;
+    if (hostProp && !puzzleInteractionPlacementMatches(instance, hostProp)) {
+      changed = true;
+      nextInstance = puzzleInteractionWithPropPlacement(nextInstance, hostProp);
+    }
+    let componentsChanged = false;
+    const components = (nextInstance.components ?? []).map((component) => {
       const anchorPropId = puzzleComponentAnchorPropId(component);
       const prop = anchorPropId ? propsById.get(anchorPropId) : null;
       if (!prop || componentPlacementMatches(component, prop.position, prop.roomId)) return component;
       changed = true;
-      instanceChanged = true;
+      componentsChanged = true;
       return puzzleComponentWithPlacement(component, prop.position, prop.roomId);
     });
-    return instanceChanged ? { ...instance, components } : instance;
+    return componentsChanged ? { ...nextInstance, components } : nextInstance;
   });
-  return changed ? { ...project, puzzles } : project;
+  const routeSwitches = (project.routeSwitches ?? []).map((route) => {
+    const prop = route.hostPropId ? propsById.get(route.hostPropId) : null;
+    if (!prop || routePlacementMatches(route, prop)) return route;
+    changed = true;
+    return routeWithPropPlacement(route, prop);
+  });
+  return changed ? { ...project, puzzles, routeSwitches } : project;
+}
+
+export function projectWithHostedRouteSwitchProp(project: BuilderProject, routeId: string, prop: BuilderProp): BuilderProject {
+  const route = (project.routeSwitches ?? []).find((candidate) => candidate.id === routeId);
+  if (route?.hostPropId !== prop.id) return project;
+  return projectWithAnchoredPuzzleComponentsForProp({
+    ...project,
+    props: project.props.map((candidate) => (candidate.id === prop.id ? prop : candidate)),
+  }, prop.id);
+}
+
+function puzzleInteractionWithPropPlacement(instance: BuilderPuzzleInstance, prop: BuilderProp): BuilderPuzzleInstance {
+  return {
+    ...instance,
+    roomId: prop.roomId,
+    position: [prop.position[0], prop.position[1]] as const,
+    rotationY: prop.rotationY,
+    wallMount: undefined,
+  };
+}
+
+function routeWithPropPlacement(route: BuilderRouteSwitch, prop: BuilderProp): BuilderRouteSwitch {
+  return {
+    ...route,
+    roomId: prop.roomId,
+    position: [prop.position[0], prop.position[1]] as const,
+    rotationY: prop.rotationY,
+    wallMount: undefined,
+  };
+}
+
+function puzzleInteractionPlacementMatches(instance: BuilderPuzzleInstance, prop: BuilderProp): boolean {
+  return (
+    instance.roomId === prop.roomId &&
+    Math.abs(instance.position[0] - prop.position[0]) <= EPSILON &&
+    Math.abs(instance.position[1] - prop.position[1]) <= EPSILON &&
+    Math.abs(instance.rotationY - prop.rotationY) <= EPSILON &&
+    !instance.wallMount
+  );
+}
+
+function routePlacementMatches(route: BuilderRouteSwitch, prop: BuilderProp): boolean {
+  return (
+    route.roomId === prop.roomId &&
+    Math.abs(route.position[0] - prop.position[0]) <= EPSILON &&
+    Math.abs(route.position[1] - prop.position[1]) <= EPSILON &&
+    Math.abs(route.rotationY - prop.rotationY) <= EPSILON &&
+    !route.wallMount
+  );
 }
 
 function componentPlacementMatches(

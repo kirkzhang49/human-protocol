@@ -50,4 +50,6 @@ export interface ObjectiveEvent {
 export interface RuntimeDebugOptions {
   qaPlaythrough: boolean;
   noPlayerDamage: boolean;
+  physicsMode: "legacy" | "rapier";
+  physicsDualRun: boolean;
 }

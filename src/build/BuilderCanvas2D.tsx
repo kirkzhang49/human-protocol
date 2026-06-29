@@ -9,9 +9,11 @@ import {
   placementAt,
   puzzlePlanPosition,
   roomAt,
+  roomPickModifierActive,
   robotDisplayPosition,
   routeKeyPosition,
   routeOutputKeyPosition,
+  wallDoorSwitchDraftPlacementFromPoint,
   wallDoorSwitchPlanPosition,
   wallMountFromPoint,
   wallMountedPropPlacementForEntryFromPoint,
@@ -21,6 +23,7 @@ import { propWithStacking, reflowAttachedProps, resolvePropStacking } from "./Bu
 import {
   projectWithAnchoredPuzzleComponentPlacement,
   projectWithAnchoredPuzzleComponentsForProp,
+  projectWithHostedRouteSwitchProp,
 } from "./BuilderPuzzlePlacement";
 import { pickupEntry } from "./BuilderPickupCatalog";
 import { orbColorHex, puzzleInstances, puzzleKindEntry } from "./BuilderPuzzleCatalog";
@@ -101,6 +104,8 @@ interface BuilderCanvas2DProps {
   hostPick?: BuilderPuzzleHostPick | null;
   /** Full plan edits geometry; navigator is a compact select/focus minimap. */
   variant?: "editor" | "navigator";
+  /** Plain room floor clicks may select rooms while the room command/tool is active. */
+  roomSelectionEnabled?: boolean;
   onPlace: (x: number, z: number, roomId: string) => void;
   onBrush: (roomId: string, shift: boolean) => void;
   onPickPuzzleHost?: (propId: string) => void;
@@ -132,6 +137,7 @@ export function BuilderCanvas2D({
   bindDoorMode = false,
   hostPick = null,
   variant = "editor",
+  roomSelectionEnabled = false,
   onPlace,
   onBrush,
   onPickPuzzleHost,
@@ -151,6 +157,7 @@ export function BuilderCanvas2D({
   const hoveredRoomId = hovered?.kind === "room" ? hovered.id : null;
   const canFocus = !placement && !brush && !hostPick;
   const navigatorMode = variant === "navigator";
+  const roomPointerEnabled = navigatorMode || roomSelectionEnabled || brush !== null;
 
   const svgRef = useRef<SVGSVGElement>(null);
   const dragRef = useRef<DragState | null>(null);
@@ -278,6 +285,20 @@ export function BuilderCanvas2D({
     focusSelection(target);
   };
 
+  const beginRoomSelection = (room: BuilderRoom, event: React.PointerEvent, world: { x: number; z: number }) => {
+    event.stopPropagation();
+    selectAndFocus({ kind: "room", id: room.id });
+    if (navigatorMode) return;
+    dragRef.current = {
+      kind: "room",
+      id: room.id,
+      dx: room.center[0] - world.x,
+      dz: room.center[1] - world.z,
+      moved: false,
+    };
+    capturePointer(svgRef.current, event.pointerId);
+  };
+
   const isHovered = (kind: NonNullable<BuilderSelection>["kind"], id: string, componentId?: string) => {
     if (!hovered || hovered.kind !== kind || hovered.id !== id) return false;
     if (kind !== "puzzle") return true;
@@ -337,10 +358,17 @@ export function BuilderCanvas2D({
       selectAndFocus(kind === "puzzle" ? { kind, id, componentId } : kind === "routeKey" || kind === "routeOutputKey" ? { kind: "routeSwitch", id } : { kind, id });
       return;
     }
+    const world = toWorld(event.clientX, event.clientY);
+    if (!navigatorMode && (roomSelectionEnabled || roomPickModifierActive(event))) {
+      const room = world ? roomAt(project, world.x, world.z) : null;
+      if (world && room) {
+        beginRoomSelection(room, event, world);
+        return;
+      }
+    }
     event.stopPropagation();
     selectAndFocus(kind === "puzzle" ? { kind, id, componentId } : kind === "routeKey" || kind === "routeOutputKey" ? { kind: "routeSwitch", id } : { kind, id });
     if (navigatorMode) return;
-    const world = toWorld(event.clientX, event.clientY);
     if (!world) return;
     let center: readonly [number, number] | undefined;
     if (kind === "room") center = project.rooms.find((room) => room.id === id)?.center;
@@ -399,11 +427,17 @@ export function BuilderCanvas2D({
 
   const wallPlacementForPlacementSpot = (spot: NonNullable<ReturnType<typeof placementSpotFromClient>>) => {
     const entry = placement?.kind === "prop" ? propEntry(placement.modelKey) : null;
-    if (placement?.kind !== "prop" || entry?.mount !== "wall" || !spot.room) return null;
-    return wallMountedPropPlacementForEntryFromPoint(spot.room, spot.x, spot.z, {
-      sizeMeters: entry.sizeMeters,
-      wallMountFace: entry.wallMountFace,
-    });
+    if (!spot.room) return null;
+    if (placement?.kind === "prop" && entry?.mount === "wall") {
+      return wallMountedPropPlacementForEntryFromPoint(spot.room, spot.x, spot.z, {
+        sizeMeters: entry.sizeMeters,
+        wallMountFace: entry.wallMountFace,
+      });
+    }
+    if (placement?.kind === "wallDoorSwitch") {
+      return wallDoorSwitchDraftPlacementFromPoint(spot.room, spot.x, spot.z)?.placement ?? null;
+    }
+    return null;
   };
 
   const placementSpotIsValid = (spot: NonNullable<ReturnType<typeof placementSpotFromClient>>) => {
@@ -413,6 +447,7 @@ export function BuilderCanvas2D({
     const testRotationY = wallPlacement?.yaw ?? (placement?.kind === "prop" ? placement.rotationY : 0);
     return (
       spot.valid &&
+      (placement?.kind !== "wallDoorSwitch" || Boolean(wallPlacement)) &&
       Boolean(
         !placement ||
           placement.kind !== "prop" ||
@@ -469,6 +504,14 @@ export function BuilderCanvas2D({
     if (navigatorMode || hostPick) {
       onSelect(null);
       return;
+    }
+    if (roomSelectionEnabled || roomPickModifierActive(event)) {
+      const world = toWorld(event.clientX, event.clientY);
+      const room = world ? roomAt(project, world.x, world.z) : null;
+      if (room && world) {
+        beginRoomSelection(room, event, world);
+        return;
+      }
     }
     dragRef.current = {
       kind: "pan",
@@ -575,6 +618,30 @@ export function BuilderCanvas2D({
         };
       }
       if (drag.kind === "routeSwitch") {
+        const route = (draft.routeSwitches ?? []).find((candidate) => candidate.id === drag.id);
+        const hostProp = route?.hostPropId ? draft.props.find((prop) => prop.id === route.hostPropId) : null;
+        if (hostProp) {
+          const wallPlacement = spot?.room ? wallMountedPlacementForProp(spot.room, hostProp, x, z) : null;
+          const basePosition = [wallPlacement?.plan[0] ?? x, wallPlacement?.plan[1] ?? z] as [number, number];
+          const base = {
+            ...hostProp,
+            position: basePosition,
+            roomId: spot?.room ? spot.room.id : hostProp.roomId,
+            rotationY: wallPlacement?.yaw ?? hostProp.rotationY,
+            ...(wallPlacement && hostProp.elevation === undefined ? { elevation: wallPlacement.position[1] } : {}),
+          };
+          const stacking = resolvePropStacking(draft, base, basePosition[0], basePosition[1], base.roomId, hostProp.id);
+          if (!stacking.valid) return draft;
+          const nextHostProp = propWithStacking(base, stacking);
+          return projectWithHostedRouteSwitchProp(reflowAttachedProps({
+            ...draft,
+            props: draft.props.map((prop) =>
+              prop.id === hostProp.id
+                ? nextHostProp
+                : prop,
+            ),
+          }), drag.id, nextHostProp);
+        }
         return {
           ...draft,
           routeSwitches: (draft.routeSwitches ?? []).map((route) =>
@@ -766,10 +833,10 @@ export function BuilderCanvas2D({
           return (
             <g
               key={room.id}
-              className={`builder-room-group ${selected ? "selected" : ""} ${onPath ? "on-path" : ""} ${isBrushTarget ? "brush-target" : ""} ${tag?.cls === "exit" ? "is-exit" : ""} ${hoveredRoomId === room.id && !selected ? "hovered" : ""}`}
-              onPointerDown={(event) => beginMove("room", room.id, event)}
-              onPointerEnter={() => onHover({ kind: "room", id: room.id })}
-              onPointerLeave={() => onHover(null)}
+              className={`builder-room-group ${selected ? "selected" : ""} ${onPath ? "on-path" : ""} ${isBrushTarget ? "brush-target" : ""} ${tag?.cls === "exit" ? "is-exit" : ""} ${hoveredRoomId === room.id && !selected ? "hovered" : ""} ${roomPointerEnabled ? "" : "pick-disabled"}`}
+              onPointerDown={roomPointerEnabled ? (event) => beginMove("room", room.id, event) : undefined}
+              onPointerEnter={roomPointerEnabled ? () => onHover({ kind: "room", id: room.id }) : undefined}
+              onPointerLeave={roomPointerEnabled ? () => onHover(null) : undefined}
             >
               {room.shape ? (
                 <>
@@ -1243,6 +1310,12 @@ export function BuilderCanvas2D({
                 <rect className="builder-route-node-body" x={-0.62} y={-0.5} width={1.24} height={1} rx={0.18} />
                 <path className="builder-route-node-wire" d="M-0.34 0h0.42M0.08 0L0.42 -0.25M0.08 0l0.34 0.25" />
                 <text className="builder-route-node-glyph" x={0} y={0.32}>{en ? "R" : "路"}</text>
+              </>
+            ) : placement.kind === "wallDoorSwitch" ? (
+              <>
+                <rect className="builder-route-node-body" x={-0.38} y={-0.55} width={0.76} height={1.1} rx={0.16} />
+                <circle className="builder-route-node-key" cx={0} cy={0.05} r={0.2} />
+                <text className="builder-route-node-glyph" x={0} y={0.34}>{en ? "W" : "控"}</text>
               </>
             ) : (
               <>

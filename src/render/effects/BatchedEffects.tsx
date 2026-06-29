@@ -26,6 +26,9 @@ const ARMOR_SPARK = new Color("#ffd98a");
 const ARMOR_GLINT = new Color("#fff7cf");
 const CORE_SPARK = new Color("#bff8ff");
 const CORE_GLINT = new Color("#ffffff");
+const BREACH_TRAIL = new Color("#57fbff");
+const BREACH_PIERCE = new Color("#e7fff2");
+const BREACH_SHOCK = new Color("#77efff");
 const DASH_SPARK = new Color("#64d7ff");
 const DASH_GLINT = new Color("#8ef6ff");
 const STAGGER_SPARK = new Color("#ffe074");
@@ -51,7 +54,7 @@ interface PartSpec {
   alpha: number;
 }
 
-type SparkEffectType = Extract<EffectType, "hitSpark" | "armorSpark" | "coreSpark" | "dashBurst" | "staggerBurst">;
+type SparkEffectType = Extract<EffectType, "hitSpark" | "armorSpark" | "coreSpark" | "breachTrail" | "breachPierce" | "breachShock" | "dashBurst" | "staggerBurst">;
 
 interface SparkVariant {
   sparkColor: Color;
@@ -70,6 +73,9 @@ export function BatchedEffects({ world }: BatchedEffectsProps) {
       <BatchedHitSparks world={world} effectType="hitSpark" />
       <BatchedHitSparks world={world} effectType="armorSpark" />
       <BatchedHitSparks world={world} effectType="coreSpark" />
+      <BatchedHitSparks world={world} effectType="breachTrail" />
+      <BatchedHitSparks world={world} effectType="breachPierce" />
+      <BatchedHitSparks world={world} effectType="breachShock" />
       <BatchedHitSparks world={world} effectType="dashBurst" />
       <BatchedHitSparks world={world} effectType="staggerBurst" />
       <BatchedDangerTelegraphs world={world} />
@@ -240,6 +246,36 @@ function sparkVariant(effectType: SparkEffectType): SparkVariant {
       sparkAlpha: 0.68,
       glintAlpha: 0.26,
       maxCapacity: Math.min(12, gameBalance.effectPoolSize),
+    };
+  }
+  if (effectType === "breachTrail") {
+    return {
+      sparkColor: BREACH_TRAIL,
+      glintColor: CORE_GLINT,
+      yOffset: 0.38,
+      sparkAlpha: 0.62,
+      glintAlpha: 0.3,
+      maxCapacity: Math.min(18, gameBalance.effectPoolSize),
+    };
+  }
+  if (effectType === "breachPierce") {
+    return {
+      sparkColor: BREACH_PIERCE,
+      glintColor: BREACH_TRAIL,
+      yOffset: 0.42,
+      sparkAlpha: 0.86,
+      glintAlpha: 0.56,
+      maxCapacity: Math.min(18, gameBalance.effectPoolSize),
+    };
+  }
+  if (effectType === "breachShock") {
+    return {
+      sparkColor: BREACH_SHOCK,
+      glintColor: CORE_GLINT,
+      yOffset: 0.3,
+      sparkAlpha: 0.74,
+      glintAlpha: 0.34,
+      maxCapacity: Math.min(10, gameBalance.effectPoolSize),
     };
   }
   if (effectType === "armorSpark") {

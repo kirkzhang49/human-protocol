@@ -37,8 +37,10 @@ export class PlayerMovementSystem implements GameSystem {
       this.updateWalk(world, delta, wantsMove);
     }
 
-    player.position.addScaledVector(player.velocity, delta);
-    this.resolveArena(world);
+    if (!this.moveWithPhysics(world, delta)) {
+      player.position.addScaledVector(player.velocity, delta);
+      this.resolveArena(world);
+    }
     player.movementAmount = clamp(player.velocity.length() / (playerConfig.moveSpeed * 1.6), 0, 1);
     player.isMoving = player.movementAmount > 0.05;
   }
@@ -99,6 +101,25 @@ export class PlayerMovementSystem implements GameSystem {
         player.energy + playerConfig.energyRegenPerSecond * delta,
       );
     }
+  }
+
+  private moveWithPhysics(world: GameWorld, delta: number) {
+    const player = world.player;
+    const bounds = movementBoundsForLevel(world.level, playerConfig.radius);
+    const desiredTranslation = player.velocity.clone().multiplyScalar(delta);
+    const targetX = clamp(player.position.x + desiredTranslation.x, bounds.minX, bounds.maxX);
+    const targetZ = clamp(player.position.z + desiredTranslation.z, bounds.minZ, bounds.maxZ);
+    desiredTranslation.x = targetX - player.position.x;
+    desiredTranslation.z = targetZ - player.position.z;
+    const result = world.moveKinematicCircleWithPhysics({
+      id: "player",
+      position: player.position,
+      radius: playerConfig.radius,
+      desiredTranslation,
+    });
+    if (!result) return false;
+    player.position.copy(result.position);
+    return true;
   }
 
   private resolveArena(world: GameWorld) {

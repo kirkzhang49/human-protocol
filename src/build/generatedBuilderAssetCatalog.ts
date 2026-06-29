@@ -338,6 +338,7 @@ export const generatedBuilderPackPropEntries: readonly BuilderPropEntry[] = [
     themeId: "hp_l4_memory_clinic_premium_sci_fi_hospital_v1",
     mount: "wall",
     wallPreferred: "back",
+    wallMountFace: "-z",
     canHoldSmallProps: false,
     clueCapacity: 0,
     sizeMeters: [1.24, 0.72, 0.12],

@@ -176,13 +176,13 @@ export const bossVisualProfiles = [
     },
     stagger: {
       thresholdMultiplier: 0.86,
-      durationMultiplier: 1.28,
-      interruptDurationBonus: 0.22,
-      postStaggerCooldownBonus: 0.58,
-      carryChargeRatio: 0.24,
-      interruptCarryChargeRatio: 0.14,
-      hitReactFloor: 0.5,
-      velocityImpulse: 1.38,
+      durationMultiplier: 0.78,
+      interruptDurationBonus: 0.12,
+      postStaggerCooldownBonus: 0.22,
+      carryChargeRatio: 0.2,
+      interruptCarryChargeRatio: 0.1,
+      hitReactFloor: 0.38,
+      velocityImpulse: 1.18,
     },
     pose: {
       hitReactMultiplier: 2.08,
@@ -296,14 +296,15 @@ function defaultBossPoseTuningForEnemy(enemy: BossVisualEnemyRef): BossPoseTunin
 }
 
 function defaultBossStaggerTuningForEnemy(enemy: BossVisualEnemyRef): BossStaggerTuning {
+  const isBoss = enemy.tier === "boss";
   return {
     thresholdMultiplier: 1,
-    durationMultiplier: 1,
-    interruptDurationBonus: 0.16,
-    postStaggerCooldownBonus: enemy.tier === "boss" ? 0.54 : 0.38,
-    carryChargeRatio: 0.28,
-    interruptCarryChargeRatio: 0.18,
-    hitReactFloor: enemy.tier === "boss" ? 0.42 : 0.34,
-    velocityImpulse: enemy.tier === "boss" ? 0.86 : 1.02,
+    durationMultiplier: isBoss ? 0.82 : 0.9,
+    interruptDurationBonus: isBoss ? 0.11 : 0.1,
+    postStaggerCooldownBonus: isBoss ? 0.24 : 0.28,
+    carryChargeRatio: 0.24,
+    interruptCarryChargeRatio: 0.14,
+    hitReactFloor: isBoss ? 0.34 : 0.3,
+    velocityImpulse: isBoss ? 0.82 : 0.96,
   };
 }

@@ -118,9 +118,9 @@ import image2CeilingMuseumRedrawCofferColor from "../assets/textures/environment
 import image2CeilingMuseumRedrawCofferNormal from "../assets/textures/environment/builder-surfaces/image2_ceiling_museum_redraw_coffer_v1_normal.webp";
 import image2CeilingMuseumRedrawCofferRough from "../assets/textures/environment/builder-surfaces/image2_ceiling_museum_redraw_coffer_v1_rough.webp";
 import level01MaintenanceBayFloorColor from "../assets/textures/environment/hero-floors/level01_image2_maintenance_bay_room_fit_floor.png";
-import level03MuseumFloorPremiumStoneColor from "../assets/textures/environment/level03/level03_image2_museum_floor_premium_stone_skin_v6.png";
+import level03MuseumFloorPremiumStoneColor from "../assets/textures/environment/level03/level03_image2_museum_floor_premium_stone_skin_v6.webp";
 import level03MuseumBlackGalleryWallColor from "../assets/textures/environment/level03/level03_image2_museum_black_gallery_wall_skin_v6.png";
-import level03MuseumCeilingWarmPanelColor from "../assets/textures/environment/level03/level03_image2_museum_ceiling_warm_panel_skin_v6.png";
+import level03MuseumCeilingWarmPanelColor from "../assets/textures/environment/level03/level03_image2_museum_ceiling_warm_panel_skin_v6.webp";
 import level04MemoryClinicFloorImage2TileableV4Color from "../assets/textures/environment/builder-surfaces/level04_memory_clinic_floor_image2_tileable_v4_color.jpg";
 import level04MemoryClinicWallImage2TileableV4Color from "../assets/textures/environment/builder-surfaces/level04_memory_clinic_wall_image2_tileable_v4_color.jpg";
 import level04MemoryClinicCeilingImage2TileableV4Color from "../assets/textures/environment/builder-surfaces/level04_memory_clinic_ceiling_image2_tileable_v4_color.jpg";

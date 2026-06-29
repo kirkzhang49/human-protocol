@@ -14,7 +14,12 @@ import type { HumanAgeGroundingMode } from "../../adapters/age/humanAgeRuntimeFl
 import { humanAgeContactsFromWorld } from "../../adapters/age/humanRuntimeBridge";
 import { ageMaterialRoleForHumanMaterial } from "../../adapters/age/humanMaterialRoles";
 import { modelKeyForEnemy, type EnemyModelKey } from "../../assets/enemyModelAssets";
-import { enemyModelAltitude, enemyModelTargetHeight, shouldRenderEnemyWithThreeOracle } from "../enemies/EnemyOraclePolicy";
+import {
+  enemyModelAltitude,
+  enemyModelTargetHeight,
+  shouldKeepRawEnemyBackupDuringFocusReveal,
+  shouldRenderEnemyWithThreeOracle,
+} from "../enemies/EnemyOraclePolicy";
 import { bossPoseTuningForEnemy, bossVisualProfileForEnemy } from "../../game/config/bossVisualProfiles";
 import { enemyArchetypes } from "../../game/config/enemyArchetypes";
 import { defaultUltimateAbilityId, ultimateAbilityConfig } from "../../game/config/ultimateAbilityConfig";
@@ -22,6 +27,7 @@ import type { LevelSwitchDefinition } from "../../game/config/schema/levelConfig
 import { isExitCinematicViewActive } from "../../game/core/ExitCinematicView";
 import type { GameWorld } from "../../game/core/GameWorld";
 import { exitElevatorButtonVisualState, exitElevatorShaftVisualState } from "../../game/core/ExitCinematicTiming";
+import { interactionFocusRevealRiseOffsetY } from "../../game/core/RenderVisibility";
 import { isEnemyVisibleToPlayerRoom } from "../../game/core/RoomReachability";
 import {
   BLOOM_BUFFER_BYTES,
@@ -103,6 +109,7 @@ import {
 import { resolveRawMuseumEnvProfile } from "./RawMuseumEnvProfile";
 import {
   canUseRigidNodePalette,
+  canUseRawEnemyBakedAnimation,
   enemyTintFor,
   pickupGeometryForType,
   planShadowFor,
@@ -234,7 +241,8 @@ function rawThreeEnemyOracleOnlyEnabled() {
   return rawThreeEnemyOracleOnlyEnabledFromParams(new URLSearchParams(window.location.search));
 }
 
-function rawEnemyHandledByThreeOracle(enemy: GameWorld["enemies"][number]) {
+function rawEnemyHandledByThreeOracle(world: GameWorld, enemy: GameWorld["enemies"][number]) {
+  if (shouldKeepRawEnemyBackupDuringFocusReveal(world, enemy)) return false;
   const params = new URLSearchParams(window.location.search);
   if (!resolveRawThreeEnemyOracleModeFromParams(params).enabled) return false;
   const modelKey = modelKeyForEnemy(enemy);
@@ -1570,8 +1578,10 @@ export class RawWebGpuLevelRenderer {
     this.doorVisualAnimating = this.updateDoorVisualProgress(world);
     const visibilityKey = this.roomRuntime.frame(world).visibilityKey;
     const wallSwitchVisualKey = this.wallDoorSwitchVisualKey(world);
+    const interactionRevealAnimating = this.isInteractionFocusRevealAnimating(world);
     const staticVisibilityChanged = visibilityKey !== this.lastStaticVisibilityKey;
-    const staticSceneChanged = staticVisibilityChanged || this.doorVisualAnimating || wallSwitchVisualKey !== this.lastWallDoorSwitchVisualKey;
+    const staticSceneChanged =
+      staticVisibilityChanged || this.doorVisualAnimating || interactionRevealAnimating || wallSwitchVisualKey !== this.lastWallDoorSwitchVisualKey;
     if (staticSceneChanged) {
       this.lastStaticVisibilityKey = visibilityKey;
       this.lastWallDoorSwitchVisualKey = wallSwitchVisualKey;
@@ -1611,6 +1621,11 @@ export class RawWebGpuLevelRenderer {
       }
     }
     return instanceCount;
+  }
+
+  private isInteractionFocusRevealAnimating(world: GameWorld) {
+    const reveal = world.session.activeFocusReveal;
+    return Boolean(reveal && reveal.kind === "puzzle" && reveal.targetId && reveal.elapsed < reveal.duration);
   }
 
   private writeStaticInstances(world: GameWorld, startIndex: number, drawBatches: RawDrawBatch[]) {
@@ -1754,7 +1769,7 @@ export class RawWebGpuLevelRenderer {
         if (index >= MAX_INSTANCES || !rawEnemyRenderable(enemy)) continue;
         if (!isEnemyVisibleToPlayerRoom(world, enemy)) continue;
         if (!isDynamicPositionVisible(enemy.position.x, enemy.position.z)) continue;
-        if (rawEnemyHandledByThreeOracle(enemy)) continue;
+        if (rawEnemyHandledByThreeOracle(world, enemy)) continue;
         index = this.writeEnemyInstance(index, enemy, enemyTintFor(enemy), drawBatches);
       }
     }
@@ -1786,6 +1801,57 @@ export class RawWebGpuLevelRenderer {
           const ringSize = Math.max(0.32, effect.intensity * (1.05 + effect.age * 0.72));
           index = this.writeGroundPlane(index, effect.position.x, effect.position.y + 0.035, effect.position.z, ringSize, ringSize, [0.24, 0.92, 1.0, 0.34 * life]);
           this.appendShadowDrawBatch(drawBatches, index - 1);
+          continue;
+        }
+        if (effect.type === "breachShock") {
+          const shockLength = Math.max(0.42, effect.intensity * (0.82 + effect.age * 0.48));
+          const shockWidth = Math.max(0.16, effect.intensity * 0.2);
+          index = this.writeBox(
+            index,
+            effect.position.x + effect.direction.x * shockLength * 0.36,
+            effect.position.y + 0.12,
+            effect.position.z + effect.direction.z * shockLength * 0.36,
+            shockWidth,
+            0.08,
+            shockLength,
+            [0.36, 0.96, 1.0, 0.48 * life],
+            Math.atan2(effect.direction.x, effect.direction.z),
+          );
+          this.appendDrawBatch(drawBatches, {
+            vertexBuffer: "proxy",
+            vertexOffset: 0,
+            vertexCount: CUBE_VERTEX_COUNT,
+            instanceOffset: index - 1,
+            instanceCount: 1,
+            transparent: true,
+          });
+          continue;
+        }
+        if (effect.type === "breachPierce" || effect.type === "breachTrail") {
+          const streakLength = Math.max(0.28, effect.intensity * (effect.type === "breachPierce" ? 0.38 : 0.3));
+          const streakWidth = effect.type === "breachPierce" ? 0.08 : 0.12;
+          const color: Tuple4 = effect.type === "breachPierce"
+            ? [0.86, 1.0, 0.94, 0.62 * life]
+            : [0.24, 0.98, 1.0, 0.42 * life];
+          index = this.writeBox(
+            index,
+            effect.position.x + effect.direction.x * streakLength * 0.28,
+            effect.position.y + 0.18,
+            effect.position.z + effect.direction.z * streakLength * 0.28,
+            streakWidth,
+            streakWidth,
+            streakLength,
+            color,
+            Math.atan2(effect.direction.x, effect.direction.z),
+          );
+          this.appendDrawBatch(drawBatches, {
+            vertexBuffer: "proxy",
+            vertexOffset: 0,
+            vertexCount: CUBE_VERTEX_COUNT,
+            instanceOffset: index - 1,
+            instanceCount: 1,
+            transparent: true,
+          });
           continue;
         }
         const instanceOffset = index;
@@ -2383,7 +2449,7 @@ export class RawWebGpuLevelRenderer {
           : undefined);
     const forceOpaque = rawInstanceShouldRemainOpaque(instance);
     if (!geometry || geometry.vertexCount <= 0) {
-      const nextIndex = this.writePlanBox(index, instance);
+      const nextIndex = this.writePlanBox(world, index, instance);
       drawBatches.push({
         vertexBuffer: "proxy",
         vertexOffset: 0,
@@ -2606,12 +2672,12 @@ export class RawWebGpuLevelRenderer {
     return motionIndex + 1;
   }
 
-  private writePlanBox(index: number, instance: RawPlanInstance) {
+  private writePlanBox(world: GameWorld | null, index: number, instance: RawPlanInstance) {
     const bounds = instance.estimatedBounds;
     const sizeX = Math.max(bounds.halfSize[0] * 2, instance.role === "floor" ? 0.08 : 0.1);
     const sizeY = Math.max(bounds.halfSize[1] * 2, instance.role === "floor" ? 0.04 : 0.1);
     const sizeZ = Math.max(bounds.halfSize[2] * 2, instance.role === "floor" ? 0.08 : 0.1);
-    return this.writeBox(index, bounds.center[0], bounds.center[1], bounds.center[2], sizeX, sizeY, sizeZ, roleColors[instance.role] ?? roleColors.prop);
+    return this.writeBox(index, bounds.center[0], bounds.center[1] + this.interactionRevealRiseOffset(world, instance), bounds.center[2], sizeX, sizeY, sizeZ, roleColors[instance.role] ?? roleColors.prop);
   }
 
   private writeBox(index: number, x: number, y: number, z: number, sizeX: number, sizeY: number, sizeZ: number, color: Tuple4, yaw = 0) {
@@ -2673,10 +2739,11 @@ export class RawWebGpuLevelRenderer {
   ) {
     const groundedY = this.groundedPlanInstanceY(instance, geometry);
     const doorOffset = this.openDoorVisualOffset(world, instance);
+    const revealRiseY = this.interactionRevealRiseOffset(world, instance, geometry, groundedY);
     this.writeRuntimeModelInstance(
       index,
       instance.position[0] + doorOffset[0],
-      groundedY + doorOffset[1],
+      groundedY + doorOffset[1] + revealRiseY,
       instance.position[2] + doorOffset[2],
       instance.localOffset[1],
       instance.scale,
@@ -2685,6 +2752,30 @@ export class RawWebGpuLevelRenderer {
       instance.localOffset,
       instance.rotation,
     );
+  }
+
+  private interactionRevealRiseOffset(
+    world: GameWorld | null,
+    instance: RawPlanInstance,
+    geometry?: RawPlanGeometryAsset | null,
+    groundedY = instance.position[1],
+  ) {
+    if (!world || !instance.state?.interactionId) return 0;
+    const interaction = world.level.map?.interactions.find((candidate) => candidate.id === instance.state?.interactionId);
+    return interaction ? interactionFocusRevealRiseOffsetY(world, interaction, this.interactionRevealDepthY(instance, geometry, groundedY)) : 0;
+  }
+
+  private interactionRevealDepthY(instance: RawPlanInstance, geometry?: RawPlanGeometryAsset | null, groundedY = instance.position[1]) {
+    return Math.max(0.1, this.interactionVisualTopY(instance, geometry, groundedY) + 0.08);
+  }
+
+  private interactionVisualTopY(instance: RawPlanInstance, geometry?: RawPlanGeometryAsset | null, groundedY = instance.position[1]) {
+    if (geometry?.bounds) {
+      const scaleY = Math.max(0.0001, instance.scale[1]);
+      const top = groundedY + instance.localOffset[1] + (geometry.bounds.min[1] + geometry.bounds.size[1]) * scaleY;
+      if (Number.isFinite(top)) return top;
+    }
+    return instance.estimatedBounds.center[1] + instance.estimatedBounds.halfSize[1] + (groundedY - instance.position[1]);
   }
 
   private openDoorVisualOffset(world: GameWorld | null, instance: RawPlanInstance): Tuple3 {
@@ -2844,7 +2935,7 @@ export class RawWebGpuLevelRenderer {
   ) {
     const chunks = geometry.nodeChunks ?? [];
     const sampler = this.robotAnimationSampler;
-    if (!sampler || chunks.length <= 0 || !sampler.hasModel(modelKey)) return index;
+    if (!sampler || !canUseRawEnemyBakedAnimation(modelKey, geometry) || chunks.length <= 0 || !sampler.hasModel(modelKey)) return index;
     if (index + chunks.length > MAX_INSTANCES) return index;
 
     const playback = this.enemyClipPlayback(enemy, modelKey);

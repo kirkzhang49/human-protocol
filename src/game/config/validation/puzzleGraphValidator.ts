@@ -327,6 +327,7 @@ function switchTransitions(level: LevelDefinition, map: LevelMapConfig, state: P
     if (definition.oneShot && state.switches.has(definition.id)) continue;
     const targetState = nextSwitchStateInGraph(definition, state);
     if (!targetState) continue;
+    if (!switchStateKeyRequirementMetInGraph(targetState, state)) continue;
     const next = cloneGraphState(state);
     const stateKey = switchStateKey(definition.id, targetState.id);
     next.activeSwitchStates.set(definition.id, targetState.id);
@@ -399,6 +400,7 @@ function graphStateSignature(state: PuzzleGraphSimulationState) {
     [...state.interactions].sort().join(","),
     [...state.articles].sort().join(","),
     [...state.quizzes].sort().join(","),
+    [...state.switches].sort().join(","),
     [...state.bigScreens].sort().join(","),
     [...state.puzzles].sort().join(","),
     [...state.objectives].sort().join(","),
@@ -552,6 +554,7 @@ function completeReachableSwitches(level: LevelDefinition, state: PuzzleGraphSim
     if (!state.interactions.has(definition.interactionId)) continue;
     const targetState = nextSwitchStateInGraph(definition, state);
     if (!targetState) continue;
+    if (!switchStateKeyRequirementMetInGraph(targetState, state)) continue;
     const stateKey = switchStateKey(definition.id, targetState.id);
     if (state.switches.has(stateKey)) continue;
     state.switches.add(definition.id);
@@ -580,6 +583,13 @@ function nextSwitchStateInGraph(
     return definition.states[currentIndex] ?? definition.states[definition.states.length - 1] ?? null;
   }
   return definition.states[currentIndex >= 0 ? (currentIndex + 1) % definition.states.length : 0] ?? definition.states[0] ?? null;
+}
+
+function switchStateKeyRequirementMetInGraph(
+  stateDefinition: NonNullable<LevelDefinition["switches"]>[number]["states"][number],
+  state: PuzzleGraphSimulationState,
+) {
+  return !stateDefinition.requiredKeyItemId || state.keyItems.has(stateDefinition.requiredKeyItemId);
 }
 
 function completeReachableBigScreens(level: LevelDefinition, map: LevelMapConfig, state: PuzzleGraphSimulationState) {
@@ -845,9 +855,17 @@ function interactionPrerequisitesMet(
 ) {
   if (interaction.requiresObjectiveId && !state.objectives.has(interaction.requiresObjectiveId)) return false;
   if ((interaction.requiresArticleIds ?? []).some((articleId) => !state.articles.has(articleId))) return false;
-  if (interaction.requiresSwitchState && state.activeSwitchStates.get(interaction.requiresSwitchState.switchId) !== interaction.requiresSwitchState.stateId) return false;
+  if (interaction.requiresSwitchState && !switchStateRequirementMetInGraph(interaction.requiresSwitchState, state)) return false;
   if (interaction.consumesKeyItemId && !state.keyItems.has(interaction.consumesKeyItemId)) return false;
   return true;
+}
+
+function switchStateRequirementMetInGraph(
+  requirement: { switchId: string; stateId: string },
+  state: PuzzleGraphSimulationState,
+) {
+  if (state.activeSwitchStates.get(requirement.switchId) === requirement.stateId) return true;
+  return state.switches.has(switchStateKey(requirement.switchId, requirement.stateId));
 }
 
 function puzzleSolvableInGraph(puzzle: LevelPuzzleDefinition, state: PuzzleGraphSimulationState) {

@@ -8,9 +8,11 @@ import {
   pickAt,
   placementAt,
   roomAt,
+  roomPickModifierActive,
   robotDisplayPosition,
   routeKeyPosition,
   routeOutputKeyPosition,
+  wallDoorSwitchDraftPlacementFromPoint,
   wallDoorSwitchPlanPosition,
   wallMountFromPoint,
   wallMountedPropPlacementForEntryFromPoint,
@@ -20,6 +22,7 @@ import { propWithStacking, reflowAttachedProps, resolvePropStacking } from "./Bu
 import {
   projectWithAnchoredPuzzleComponentPlacement,
   projectWithAnchoredPuzzleComponentsForProp,
+  projectWithHostedRouteSwitchProp,
 } from "./BuilderPuzzlePlacement";
 import { pickupEntry } from "./BuilderPickupCatalog";
 import {
@@ -107,6 +110,8 @@ interface Builder3DEditingOptions {
   panMode: boolean;
   /** Active puzzle-host picking flow; while set, only props are clickable targets. */
   hostPick?: BuilderPuzzleHostPick | null;
+  /** Plain floor clicks may select rooms while the room command/tool is active. */
+  roomSelectionEnabled?: boolean;
   doorEdges: readonly DoorEdgeInfo[];
   snapStep?: number;
   /** Editor chrome language for the resize/overlap status strings (passed as a prop — this runs in-canvas). */
@@ -153,9 +158,10 @@ function wallMountedPlacementForProp(room: BuilderRoom, prop: BuilderProp, x: nu
 
 /**
  * Sims-style floor editing for the 3D view. All interaction is resolved from the
- * floor point of a single ground raycast target: select (robot > prop > door >
- * room), drag with grid snap + room reassignment, room move/resize via gizmo
- * handles, environment brush clicks, and placement-ghost tracking.
+ * floor point of a single ground raycast target: select small objects first,
+ * select rooms explicitly via room-command mode or Command/Ctrl, drag with grid
+ * snap + room reassignment, room move/resize via gizmo handles, environment
+ * brush clicks, and placement-ghost tracking.
  */
 export function useBuilder3DEditing({
   project,
@@ -164,6 +170,7 @@ export function useBuilder3DEditing({
   brush,
   panMode,
   hostPick = null,
+  roomSelectionEnabled = false,
   doorEdges,
   snapStep = 0.5,
   language = "zh",
@@ -195,6 +202,8 @@ export function useBuilder3DEditing({
   panRef.current = panMode;
   const hostPickRef = useRef(hostPick);
   hostPickRef.current = hostPick;
+  const roomSelectionEnabledRef = useRef(roomSelectionEnabled);
+  roomSelectionEnabledRef.current = roomSelectionEnabled;
   const onHoverRef = useRef(onHover);
   onHoverRef.current = onHover;
   const onBrushRef = useRef(onBrush);
@@ -326,6 +335,27 @@ export function useBuilder3DEditing({
         }
       }
 
+      const forcedRoomPick = roomSelectionEnabledRef.current || roomPickModifierActive(event.nativeEvent ?? event);
+      if (forcedRoomPick) {
+        const room = roomAt(current, point.x, point.z);
+        if (room) {
+          onSelect({ kind: "room", id: room.id });
+          dragRef.current = {
+            kind: "room-move",
+            id: room.id,
+            dx: room.center[0] - point.x,
+            dz: room.center[1] - point.z,
+            axis: null,
+            start: room,
+            baseline: roomEditIssues(current, room.id),
+            moved: false,
+          };
+          setDragging(true);
+          qaTrace("pick-room-forced", point.x.toFixed(1), point.z.toFixed(1), room.id);
+          return;
+        }
+      }
+
       const pick = pickAt(current, point.x, point.z, propPickFootprint, doorEdgesRef.current);
       qaTrace("pick", point.x.toFixed(1), point.z.toFixed(1), pick?.kind ?? "none", pick?.id ?? "");
 
@@ -410,17 +440,21 @@ export function useBuilder3DEditing({
       if (placement) {
         const spot = placementAt(current, point.x, point.z, snapRef.current);
         const entry = placement.kind === "prop" ? propEntry(placement.modelKey) : null;
-        const wallPlacement = placement.kind === "prop" && entry?.mount === "wall" && spot.room
-          ? wallMountedPropPlacementForEntryFromPoint(spot.room, spot.x, spot.z, {
-              sizeMeters: entry.sizeMeters,
-              wallMountFace: entry.wallMountFace,
-            })
-          : null;
+        const wallPlacement =
+          placement.kind === "prop" && entry?.mount === "wall" && spot.room
+            ? wallMountedPropPlacementForEntryFromPoint(spot.room, spot.x, spot.z, {
+                sizeMeters: entry.sizeMeters,
+                wallMountFace: entry.wallMountFace,
+              })
+            : placement.kind === "wallDoorSwitch" && spot.room
+              ? wallDoorSwitchDraftPlacementFromPoint(spot.room, spot.x, spot.z)?.placement ?? null
+              : null;
         const hoverX = wallPlacement?.plan[0] ?? spot.x;
         const hoverZ = wallPlacement?.plan[1] ?? spot.z;
         const hoverRotationY = wallPlacement?.yaw ?? (placement.kind === "prop" ? placement.rotationY : undefined);
         const valid =
           spot.valid &&
+          (placement.kind !== "wallDoorSwitch" || Boolean(wallPlacement)) &&
           Boolean(
             placement.kind !== "prop" ||
               (spot.room &&
@@ -447,8 +481,15 @@ export function useBuilder3DEditing({
           reportHover(room ? { kind: "room", id: room.id } : null);
           return;
         }
+        if (roomSelectionEnabledRef.current || roomPickModifierActive(event.nativeEvent ?? event)) {
+          const room = roomAt(current, point.x, point.z);
+          reportHover(room ? { kind: "room", id: room.id } : null);
+          return;
+        }
         // Idle hover: report the object under the cursor for highlight + cursor affordance.
-        reportHover(pickAt(current, point.x, point.z, propPickFootprint, doorEdgesRef.current));
+        reportHover(
+          pickAt(current, point.x, point.z, propPickFootprint, doorEdgesRef.current),
+        );
         return;
       }
 
@@ -545,6 +586,33 @@ export function useBuilder3DEditing({
           };
         }
         if (drag.kind === "routeSwitch") {
+          const route = (draft.routeSwitches ?? []).find((candidate) => candidate.id === drag.id);
+          const hostProp = route?.hostPropId ? draft.props.find((prop) => prop.id === route.hostPropId) : null;
+          if (hostProp) {
+            const wallPlacement = spot.room ? wallMountedPlacementForProp(spot.room, hostProp, spot.x, spot.z) : null;
+            const basePosition = [wallPlacement?.plan[0] ?? spot.x, wallPlacement?.plan[1] ?? spot.z] as [number, number];
+            const base = {
+              ...hostProp,
+              position: basePosition,
+              roomId: spot.room ? spot.room.id : hostProp.roomId,
+              rotationY: wallPlacement?.yaw ?? hostProp.rotationY,
+              ...(wallPlacement && hostProp.elevation === undefined ? { elevation: wallPlacement.position[1] } : {}),
+            };
+            const stacking = resolvePropStacking(draft, base, basePosition[0], basePosition[1], base.roomId, hostProp.id);
+            if (!stacking.valid) {
+              onStatusRef.current?.(stackingDragStatusText(stacking, languageRef.current));
+              return draft;
+            }
+            const nextHostProp = propWithStacking(base, stacking);
+            return projectWithHostedRouteSwitchProp(reflowAttachedProps({
+              ...draft,
+              props: draft.props.map((prop) =>
+                prop.id === hostProp.id
+                  ? nextHostProp
+                  : prop,
+              ),
+            }), drag.id, nextHostProp);
+          }
           return {
             ...draft,
             routeSwitches: (draft.routeSwitches ?? []).map((route) =>
@@ -655,6 +723,21 @@ export function PlacementGhost3D({ draft, hover }: { draft: PlacementDraft; hove
           <meshBasicMaterial color="#ffd76b" transparent opacity={0.78} toneMapped={false} depthWrite={false} />
         </mesh>
         <GhostRing color={color} radius={0.78} />
+      </group>
+    );
+  }
+  if (draft.kind === "wallDoorSwitch") {
+    return (
+      <group position={[hover.x, 0, hover.z]} rotation={[0, hover.rotationY ?? 0, 0]}>
+        <mesh position={[0, 1.34, 0]} scale={[0.48, 0.72, 0.12]}>
+          <boxGeometry args={[1, 1, 1]} />
+          <meshStandardMaterial color="#07101a" transparent opacity={0.5} emissive={color} emissiveIntensity={0.35} depthWrite={false} />
+        </mesh>
+        <mesh position={[0, 1.34, 0.08]} rotation={[Math.PI / 2, 0, 0]}>
+          <torusGeometry args={[0.16, 0.035, 8, 24]} />
+          <meshBasicMaterial color="#7bb7ff" transparent opacity={0.85} toneMapped={false} depthWrite={false} />
+        </mesh>
+        <GhostRing color={color} radius={0.62} />
       </group>
     );
   }

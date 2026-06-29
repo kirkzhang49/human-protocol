@@ -6,10 +6,16 @@ export type PlacementDraft =
   | { kind: "prop"; modelKey: string; rotationY: number }
   | { kind: "pickup"; pickupKind: BuilderPickupKind }
   | { kind: "robot"; archetype: BuilderRobotArchetype; presetId?: BuilderRobotPresetId }
-  | { kind: "routeSwitch" };
+  | { kind: "routeSwitch" }
+  | { kind: "wallDoorSwitch" };
 
 export function snapStep(value: number, step = 0.5) {
   return Math.round(value / step) * step;
+}
+
+/** Explicit modifier for selecting the room underneath the pointer. */
+export function roomPickModifierActive(event: { metaKey?: boolean; ctrlKey?: boolean }) {
+  return Boolean(event.metaKey || event.ctrlKey);
 }
 
 /** The room whose footprint contains (x, z), if any. */
@@ -83,11 +89,11 @@ export function robotDisplayPosition(
   return { x, z, room };
 }
 
-const ROUTE_OUTPUT_KEY_OFFSETS: readonly (readonly [number, number])[] = [
-  [-0.34, -0.28],
-  [0.34, -0.28],
-  [-0.34, 0.28],
-  [0.34, 0.28],
+export const ROUTE_OUTPUT_KEY_OFFSETS: readonly (readonly [number, number])[] = [
+  [-0.55, -0.65],
+  [0.55, -0.65],
+  [-0.55, 0.45],
+  [0.55, 0.45],
 ];
 
 /** Legacy / imported default placement for a route console's generated keys. */
@@ -105,11 +111,12 @@ export function routeOutputKeyPosition(
   output: BuilderRouteSwitchOutput,
   index: number,
 ): readonly [number, number] {
-  const keyRoom = project.rooms.find((room) => room.id === (output.keyRoomId ?? route.keyRoomId));
+  const keyRoomId = output.keyRoomId ?? (route.keyPosition ? route.keyRoomId : route.roomId);
+  const keyRoom = project.rooms.find((room) => room.id === keyRoomId);
   const offset = ROUTE_OUTPUT_KEY_OFFSETS[index] ?? [0, 0];
   const anchor = output.keyPosition
     ?? (route.keyPosition ? ([route.keyPosition[0] + offset[0], route.keyPosition[1] + offset[1]] as const) : undefined)
-    ?? (keyRoom ? ([keyRoom.center[0] + offset[0], keyRoom.center[1] + offset[1]] as const) : route.position);
+    ?? ([route.position[0] + offset[0], route.position[1] + offset[1]] as const);
   return keyRoom ? clampIntoRoom(keyRoom, anchor[0], anchor[1], 0.8) : anchor;
 }
 
@@ -224,6 +231,26 @@ export function wallMountFromPoint(room: BuilderRoom, x: number, z: number): Bui
   return best ? { side: best.side, offset: best.offset } : { side: "north", offset: 0 };
 }
 
+export function wallDoorSwitchDraftPlacementFromPoint(
+  room: BuilderRoom,
+  x: number,
+  z: number,
+): { wallMount: BuilderWallMount; placement: WallMountPlacement } | null {
+  const placement = wallMountedPropPlacementFromPoint(room, x, z, {
+    height: DEFAULT_WALL_MOUNT_HEIGHT,
+    inset: DEFAULT_WALL_MOUNT_INSET,
+  });
+  if (!placement) return null;
+  return {
+    wallMount: {
+      ...wallMountFromPoint(room, x, z),
+      height: DEFAULT_WALL_MOUNT_HEIGHT,
+      inset: DEFAULT_WALL_MOUNT_INSET,
+    },
+    placement,
+  };
+}
+
 export interface WallMountedPropPlacementOptions {
   height?: number;
   inset?: number;
@@ -331,6 +358,7 @@ export function pickAt(
   z: number,
   propFootprint: (modelKey: string) => readonly [number, number] | null,
   doorEdges: readonly { id: string; x: number; z: number; yaw: number }[],
+  options: { includeRooms?: boolean } = {},
 ): FloorPick {
   // Puzzle orbs/components first (smallest targets, generous radius).
   let bestComponent: { instanceId: string; componentId: string; distance: number } | null = null;
@@ -438,9 +466,10 @@ export function pickAt(
     if (along <= 1.9 && across <= 0.95) return { kind: "door", id: edge.id };
   }
 
-  // In 3D the whole room floor is a room handle after smaller objects and doors
-  // have had priority. This keeps shaped rooms draggable: their thin walls are
-  // too hard to grab reliably from an angled camera.
+  if (!options.includeRooms) return null;
+
+  // Room command mode: the whole floor is a room handle after smaller objects
+  // and doors have had priority.
   const room = roomAt(project, x, z);
   return room ? { kind: "room", id: room.id } : null;
 }

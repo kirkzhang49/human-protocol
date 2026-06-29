@@ -222,7 +222,7 @@ function nearestCandidate(world: GameWorld): InteractionCandidate | null {
 function canUseInteraction(world: GameWorld, interaction: LevelInteractionDefinition) {
   if (interaction.requiresObjectiveId && !world.isObjectiveCompleted(interaction.requiresObjectiveId)) return false;
   if (hasUnreadRequiredArticles(world, interaction)) return false;
-  if (interaction.requiresSwitchState && world.activeSwitchStateId(interaction.requiresSwitchState.switchId) !== interaction.requiresSwitchState.stateId) return false;
+  if (interaction.requiresSwitchState && !switchStateRequirementMet(world, interaction.requiresSwitchState)) return false;
   // Route switches stay openable without the key (the overlay shows the locked,
   // unauthorized state); every other key-gated interaction needs the key first.
   if (
@@ -237,6 +237,11 @@ function canUseInteraction(world: GameWorld, interaction: LevelInteractionDefini
   if (codeLockPuzzle && !world.isPuzzleCompleted(codeLockPuzzle.id)) return world.canUseCodeLockPuzzle(codeLockPuzzle);
   if (interaction.type === "exit") return world.session.exitUnlocked;
   return true;
+}
+
+function switchStateRequirementMet(world: GameWorld, requirement: { switchId: string; stateId: string }) {
+  if (world.activeSwitchStateId(requirement.switchId) === requirement.stateId) return true;
+  return world.session.mapProgress.activatedSwitchIds.includes(`${requirement.switchId}:${requirement.stateId}`);
 }
 
 function effectiveInteractionRadius(world: GameWorld, interaction: LevelInteractionDefinition, canInteract: boolean) {

@@ -119,6 +119,8 @@ interface BuilderPreview3DProps {
   bindDoorMode?: boolean;
   /** Puzzle-host picking mode: furniture props become the only valid click targets. */
   hostPick?: BuilderPuzzleHostPick | null;
+  /** Plain floor clicks may select rooms only while the room command/tool is active. */
+  roomSelectionEnabled?: boolean;
   onPickPuzzleHost?: (propId: string) => void;
 }
 
@@ -144,6 +146,7 @@ export function BuilderPreview3D({
   roofHidden = false,
   bindDoorMode = false,
   hostPick = null,
+  roomSelectionEnabled = false,
   onPickPuzzleHost,
 }: BuilderPreview3DProps) {
   // Read chrome language ABOVE the <Canvas> and pass it down as a prop to every
@@ -173,6 +176,7 @@ export function BuilderPreview3D({
     brush,
     panMode,
     hostPick,
+    roomSelectionEnabled,
     doorEdges,
     snapStep,
     language,
@@ -1702,6 +1706,7 @@ function RouteSwitchMarkers({
         const isHovered = hovered?.kind === "routeSwitch" && hovered.id === route.id;
         const showLinks = selected || isHovered;
         const [x, z] = route.position;
+        const hostedByProp = Boolean(route.hostPropId);
         return (
           <group key={route.id}>
             {route.outputs.slice(0, 4).map((output, index) => {
@@ -1723,8 +1728,15 @@ function RouteSwitchMarkers({
               );
             })}
             <group position={[x, 0, z]} rotation={[0, route.rotationY, 0]}>
-              <ContactShadow spec={contactShadowSpec(0.64, profile, "puzzle")} />
-              <RouteSwitchMesh selected={selected} hovered={isHovered} />
+              {!hostedByProp ? <ContactShadow spec={contactShadowSpec(0.64, profile, "puzzle")} /> : null}
+              {!hostedByProp ? (
+                <RouteSwitchMesh selected={selected} hovered={isHovered} />
+              ) : (
+                <mesh position={[0, 0.08, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+                  <ringGeometry args={[0.42, 0.58, 36]} />
+                  <meshBasicMaterial color="#5ee8c8" transparent opacity={selected || isHovered ? 0.52 : 0.28} blending={AdditiveBlending} depthWrite={false} toneMapped={false} />
+                </mesh>
+              )}
               {selected ? <PulsingRing radius={0.78} color="#7ff2ff" /> : null}
               {isHovered && !selected ? <HoverGlow radius={0.72} /> : null}
             </group>

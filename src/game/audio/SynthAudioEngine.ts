@@ -96,6 +96,20 @@ export class SynthAudioEngine {
       case "assist_reorient":
         this.playTone({ frequency: 360, endFrequency: 720, type: "triangle", envelope: { attack: 0.004, decay: 0.1, volume: 0.12 }, cue });
         break;
+      case "pickup_repair_kit":
+        this.playTone({ frequency: 420, endFrequency: 760, type: "triangle", envelope: { attack: 0.004, decay: 0.12, volume: 0.12 }, cue });
+        this.playTone({ frequency: 820, endFrequency: 1180, type: "sine", envelope: { attack: 0.018, decay: 0.15, volume: 0.08 }, cue, delay: 0.045 });
+        this.playNoise({ envelope: { attack: 0.002, decay: 0.05, volume: 0.035 }, cue, filterFrequency: 2400 });
+        break;
+      case "pickup_core_cell":
+        this.playTone({ frequency: 520, endFrequency: 1180, type: "sine", envelope: { attack: 0.005, decay: 0.16, volume: 0.14 }, cue });
+        this.playTone({ frequency: 1040, endFrequency: 1560, type: "triangle", envelope: { attack: 0.035, decay: 0.14, volume: 0.08 }, cue, delay: 0.04 });
+        break;
+      case "pickup_breach_missile":
+        this.playTone({ frequency: 180, endFrequency: 340, type: "sawtooth", envelope: { attack: 0.006, decay: 0.18, volume: 0.14 }, cue });
+        this.playNoise({ envelope: { attack: 0.003, decay: 0.11, volume: 0.08 }, cue, filterFrequency: 940 });
+        this.playTone({ frequency: 760, endFrequency: 920, type: "triangle", envelope: { attack: 0.035, decay: 0.12, volume: 0.07 }, cue, delay: 0.055 });
+        break;
       case "ui_upgrade_select":
         this.playTone({ frequency: 520, endFrequency: 980, type: "sine", envelope: { attack: 0.006, decay: 0.18, volume: 0.16 }, cue });
         break;

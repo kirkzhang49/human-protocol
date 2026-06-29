@@ -228,4 +228,150 @@ describe("puzzle graph wall switch reachability", () => {
     expect(graph.reachability.exitInteractionReady).toBe(true);
     expect(graph.reachability.solutionPath.map((step) => step.id)).toContain("use_switch_smoke_exit");
   });
+
+  it("keeps route-revealed puzzle interactions usable after another route output becomes active", () => {
+    const baseMap = doorSwitchSmokeLevel.map!;
+    const level: LevelDefinition = {
+      ...doorSwitchSmokeLevel,
+      id: "smoke_route_revealed_puzzle_latch",
+      map: {
+        ...baseMap,
+        doors: baseMap.doors.map((door) =>
+          door.id === "switch_exit_door"
+            ? {
+                ...door,
+                lock: {
+                  type: "switch_state",
+                  switchId: "reroute_switch",
+                  stateId: "open_puzzle_room",
+                  manualOpen: false,
+                  lockedMessage: "路由尚未打开谜题间。",
+                  unlockedMessage: "谜题间已打开。",
+                },
+              }
+            : door,
+        ),
+        interactions: [
+          ...baseMap.interactions.map((interaction) =>
+            interaction.id === "use_switch_smoke_exit"
+              ? { ...interaction, requiresObjectiveId: undefined }
+              : interaction,
+          ),
+          {
+            id: "route_revealed_tool_panel",
+            type: "puzzle",
+            roomId: "switch_exit_room",
+            position: [1.5, 0, -7.3],
+            yaw: -Math.PI / 2,
+            radius: 1.6,
+            visualKey: "puzzle_console_circuit_grid",
+            materialKey: "terminal_cyan",
+            label: "路由接入工具台",
+            requiresSwitchState: { switchId: "reroute_switch", stateId: "reveal_puzzle" },
+          },
+        ],
+      },
+      switches: doorSwitchSmokeLevel.switches?.map((definition) =>
+        definition.id === "reroute_switch"
+          ? {
+              ...definition,
+              cycling: { mode: "next", wrap: false },
+              states: [
+                {
+                  id: "idle",
+                  label: "待机",
+                  message: "路由待机。",
+                  actions: [{ type: "set_message", message: "路由待机。" }],
+                },
+                {
+                  id: "reveal_puzzle",
+                  label: "接入谜题",
+                  message: "谜题台已接入。",
+                  actions: [{ type: "set_message", message: "谜题台已接入。" }],
+                },
+                {
+                  id: "open_puzzle_room",
+                  label: "打开谜题间",
+                  message: "谜题间已打开。",
+                  actions: [
+                    { type: "unlock_door", doorId: "switch_exit_door" },
+                    { type: "open_door", doorId: "switch_exit_door" },
+                  ],
+                },
+              ],
+            }
+          : definition,
+      ),
+      puzzles: [
+        {
+          id: "route_latched_tool_puzzle",
+          type: "tool_calibration",
+          label: "路由持久接入谜题",
+          roomId: "switch_exit_room",
+          interactionId: "route_revealed_tool_panel",
+          columns: 1,
+          rows: 1,
+          entry: { x: 0, y: 0, channel: "signal" },
+          targets: [{ x: 0, y: 0, channel: "signal" }],
+          cells: [{ x: 0, y: 0, kind: "straight" }],
+          success: { unlockExit: true },
+        },
+      ],
+      objectiveChain: [],
+    };
+
+    const graph = explainPuzzle(level);
+    const stepIds = graph.reachability.solutionPath.map((step) => step.id);
+
+    expect(graph.reachability.puzzles).toContain("route_latched_tool_puzzle");
+    expect(graph.reachability.exitUnlocked).toBe(true);
+    expect(stepIds.indexOf("reroute_switch:reveal_puzzle")).toBeLessThan(stepIds.indexOf("reroute_switch:open_puzzle_room"));
+    expect(stepIds.indexOf("reroute_switch:open_puzzle_room")).toBeLessThan(stepIds.indexOf("route_latched_tool_puzzle"));
+  });
+
+  it("does not activate a keyed route output before its authorization orb is reachable", () => {
+    const baseMap = doorSwitchSmokeLevel.map!;
+    const level: LevelDefinition = {
+      ...doorSwitchSmokeLevel,
+      id: "smoke_route_keyed_output_requires_orb",
+      map: {
+        ...baseMap,
+        keyItems: [
+          ...baseMap.keyItems,
+          {
+            id: "late_route_output_orb",
+            label: "后置路由授权球",
+            roomId: "switch_exit_room",
+            position: [0, 0, -7.3],
+            collectRadius: 1.2,
+            autoCollect: true,
+            visualKey: "route_output_orb_1",
+            requiredForDoorIds: [],
+          },
+        ],
+      },
+      switches: doorSwitchSmokeLevel.switches?.map((definition) =>
+        definition.id === "reroute_switch"
+          ? {
+              ...definition,
+              states: definition.states.map((state) =>
+                state.id === "rerouted"
+                  ? {
+                      ...state,
+                      requiredKeyItemId: "late_route_output_orb",
+                    }
+                  : state,
+              ),
+            }
+          : definition,
+      ),
+    };
+
+    const graph = explainPuzzle(level);
+
+    expect(graph.reachability.switches).not.toContain("reroute_switch:rerouted");
+    expect(graph.reachability.keyItems).not.toContain("late_route_output_orb");
+    expect(graph.reachability.exitUnlocked).toBe(false);
+    expect(graph.reachability.exitInteractionReady).toBe(false);
+  });
 });

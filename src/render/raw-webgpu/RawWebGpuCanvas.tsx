@@ -11,10 +11,11 @@ import {
   humanEscapeRoomVisualProfileFor,
   type HumanAgeDebugBridge,
 } from "../../adapters/age";
+import { preloadEnemyModelAssets } from "../../assets/enemyModelAssets";
 import { loadRawWebGpuLevelAssetsOrRuntimePack } from "../../build/runtime-pack/BuilderRuntimePackAssets";
 import { playerConfig } from "../../game/config/playerConfig";
 import { createDefaultGameSystems } from "../../game/core/createDefaultGameSystems";
-import { focusRevealBlend, focusRevealCameraApproach } from "../focusRevealCamera";
+import { applyFocusRevealCameraBlend, focusRevealCameraApproach } from "../focusRevealCamera";
 import { GameLoop } from "../../game/core/GameLoop";
 import type { GameWorld } from "../../game/core/GameWorld";
 import type { RenderQualityTier } from "../../game/core/RenderPerformance";
@@ -45,6 +46,18 @@ export function RawWebGpuCanvas({ world, onFailure, onFrameReady }: RawWebGpuCan
   // player-facing path is Three, while raw remains an explicit experiment.
   const [effectiveViewmodelMode, setEffectiveViewmodelMode] = useState<RawViewmodelMode>(() => rawWebGpuViewmodelMode());
   const enemyOracle = rawThreeEnemyOracleMode();
+
+  useEffect(() => {
+    if (!enemyOracle.enabled) return;
+    let disposed = false;
+    preloadEnemyModelAssets().catch((error: unknown) => {
+      if (disposed) return;
+      console.warn("[HumanProtocol] Enemy model oracle prewarm failed; focus reveals keep the Raw fallback.", error);
+    });
+    return () => {
+      disposed = true;
+    };
+  }, [enemyOracle.enabled]);
 
   useEffect(() => {
     const canvas = canvasRef.current;
@@ -435,6 +448,7 @@ function createRawCameraRig(camera: PerspectiveCamera) {
   const cameraPosition = new Vector3();
   const revealPosition = new Vector3();
   const revealTarget = new Vector3();
+  let lastRevealWasCameraCut = false;
 
   return {
     update(world: GameWorld, delta: number, elapsed: number) {
@@ -470,15 +484,14 @@ function createRawCameraRig(camera: PerspectiveCamera) {
       }
 
       const reveal = world.session.activeFocusReveal;
-      if (reveal) {
-        const blend = focusRevealBlend(reveal);
-        revealPosition.fromArray(reveal.cameraPosition);
-        revealTarget.fromArray(reveal.targetPosition);
-        cameraPosition.lerp(revealPosition, blend);
-        lookTarget.lerp(revealTarget, blend);
-      }
+      applyFocusRevealCameraBlend(reveal, cameraPosition, lookTarget, revealPosition, revealTarget);
+      const snapReturnFromCameraCut = !reveal && lastRevealWasCameraCut;
+      lastRevealWasCameraCut = Boolean(reveal?.cameraCut);
 
-      camera.position.lerp(cameraPosition, 1 - Math.exp(-focusRevealCameraApproach(reveal) * delta));
+      camera.position.lerp(
+        cameraPosition,
+        1 - Math.exp(-focusRevealCameraApproach(reveal, { snapReturnFromCameraCut }) * delta),
+      );
       camera.lookAt(lookTarget);
       camera.fov = 72 + world.camera.fovKick;
       camera.updateProjectionMatrix();

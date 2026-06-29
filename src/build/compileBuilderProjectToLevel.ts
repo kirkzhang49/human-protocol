@@ -44,7 +44,7 @@ import { builderDoorDisplayLabel, builderDoorSurviveRobotIds, builderDoorWaveIds
 import { projectLighting } from "./BuilderEnvironment";
 import { normalizeBuilderKeyPickups } from "./BuilderKeyPickups";
 import { pickupEntry } from "./BuilderPickupCatalog";
-import { wallMountPlacementForRoom, wallMountedPropPlacementForEntryFromPoint } from "./BuilderPlacementRules";
+import { ROUTE_OUTPUT_KEY_OFFSETS, wallMountPlacementForRoom, wallMountedPropPlacementForEntryFromPoint } from "./BuilderPlacementRules";
 import {
   compile2DPuzzle,
   compileColorPuzzle,
@@ -54,6 +54,7 @@ import {
   puzzleKindEntry,
   validateBuilderPuzzles,
 } from "./BuilderPuzzleCatalog";
+import { normalizedBuilderRobotCombat } from "./BuilderRobotPresets";
 import { storyTemplateById } from "./BuilderStoryTemplates";
 import {
   pointInPolygon,
@@ -78,6 +79,7 @@ import type {
 } from "./BuilderTypes";
 import {
   MAX_WALL_DOOR_SWITCH_CONTROLLERS_PER_DOOR,
+  MAX_WALL_DOOR_SWITCH_STATES,
   MAX_WALL_DOOR_SWITCHES_PER_LEVEL,
   effectiveWallDoorSwitchStates,
   primaryDoorIdForWallDoorSwitch,
@@ -417,12 +419,13 @@ function builderRobotReadableLabel(robot: BuilderRobotGroup) {
 }
 
 function robotSpawnDefinition(robot: BuilderRobotGroup, groupId: string) {
+  const combat = normalizedBuilderRobotCombat(robot);
   return {
     archetype: robot.archetype,
     count: Math.max(1, Math.min(4, Math.round(robot.count))),
     from: groupId,
     ...(robot.tier ? { tier: robot.tier } : {}),
-    ...(robot.combat ?? {}),
+    ...(combat ?? {}),
   };
 }
 
@@ -543,6 +546,7 @@ export function compileBuilderProjectToLevel(project: BuilderProject): BuilderCo
         label: groupLabel,
         layout: waveMeta?.spawnGroupLayout ?? "front",
         positions: storedPositions,
+        preservePositions: true,
       });
     } else if (waveMeta?.spawnGroupCenter) {
       upsertSpawnGroup({
@@ -559,6 +563,7 @@ export function compileBuilderProjectToLevel(project: BuilderProject): BuilderCo
         label: groupLabel,
         layout: "front",
         positions: placedPositions.length > 0 ? [...placedPositions, ...spawnPointsInRoom(room)] : spawnPointsInRoom(room),
+        ...(placedPositions.length > 0 ? { preservePositions: true } : {}),
       });
     }
     spawnSourceLabels[groupId] = groupLabel;
@@ -690,7 +695,9 @@ export function compileBuilderProjectToLevel(project: BuilderProject): BuilderCo
     }
 
     const routeControlledPlainDoor = door.lockType === "none" && routeSwitchOpenDoorIds.has(door.id);
-    const locked = door.lockType !== "none" || routeControlledPlainDoor;
+    const wallControlledPlainDoor = door.lockType === "none" && wallDoorSwitchControlIdsForDoor(project, door.id).length > 0;
+    const mechanismControlledPlainDoor = routeControlledPlainDoor || wallControlledPlainDoor;
+    const locked = door.lockType !== "none" || mechanismControlledPlainDoor;
     // Curated generated-boundary door materials only (puzzle_purple_glass is a
     // puzzle-orb material and fails 校验 on doors).
     const lockedDoorMaterial =
@@ -866,18 +873,19 @@ export function compileBuilderProjectToLevel(project: BuilderProject): BuilderCo
           unlockedMessage: "门控状态确认，门已解锁。",
         };
       }
-    } else if (routeControlledPlainDoor) {
+    } else if (mechanismControlledPlainDoor) {
       definition.lock = {
         type: "environment_state",
         environmentStateId: routeDoorLockStateId(door.id),
-        lockedMessage: "需要对应的路由授权球。",
-        unlockedMessage: "路由授权确认，门已解锁。",
+        manualOpen: false,
+        lockedMessage: routeControlledPlainDoor ? "需要对应的路由授权球。" : "需要先使用连接的机关控制。",
+        unlockedMessage: "机关授权确认，门已解锁。",
       };
     }
 
     if (sourceDoor) {
       const source = sourceDoor;
-      const sourceMayOverrideRuntimeState = (!preferBuilderRuntimeOverSource || door.lockType === "none") && !routeControlledPlainDoor;
+      const sourceMayOverrideRuntimeState = (!preferBuilderRuntimeOverSource || door.lockType === "none") && !mechanismControlledPlainDoor;
       const sourceLockIsBuilderOutputGate =
         door.lockType === "none" &&
         outputOpenDoorIds.has(door.id) &&
@@ -990,7 +998,7 @@ export function compileBuilderProjectToLevel(project: BuilderProject): BuilderCo
   const routeDoorEnvironmentStates = project.doors
     .filter((door) =>
       door.lockType === "none" &&
-      routeSwitchOpenDoorIds.has(door.id) &&
+      (routeSwitchOpenDoorIds.has(door.id) || wallDoorSwitchControlIdsForDoor(project, door.id).length > 0) &&
       !(door.sourceDoor?.lock?.type && outputDoorSourceLockTypes.has(door.sourceDoor.lock.type)) &&
       !sourceEnvironmentStateIds.has(routeDoorLockStateId(door.id)),
     )
@@ -1306,11 +1314,15 @@ function validateBuilderRouteSwitches(project: BuilderProject): BuilderCompileIs
   const roomIds = new Set(project.rooms.map((room) => room.id));
   const doorsById = new Map(project.doors.map((door) => [door.id, door]));
   const puzzlesById = new Map(puzzleInstances(project).map((instance) => [instance.id, instance]));
+  const propsById = new Map(project.props.map((prop) => [prop.id, prop]));
   const robotRoomIds = new Set(project.robots.map((robot) => robot.roomId));
 
   for (const route of project.routeSwitches ?? []) {
     if (!roomIds.has(route.roomId)) issues.push({ path: `routeSwitches.${route.id}.roomId`, message: "路由台所在房间不存在。" });
     if (!roomIds.has(route.keyRoomId)) issues.push({ path: `routeSwitches.${route.id}.keyRoomId`, message: "路由台钥匙房间不存在。" });
+    if (route.hostPropId && !propsById.has(route.hostPropId)) {
+      issues.push({ path: `routeSwitches.${route.id}.hostPropId`, message: "路由台承载家具不存在。" });
+    }
     if (route.outputs.length < 1 || route.outputs.length > 4) {
       issues.push({ path: `routeSwitches.${route.id}.outputs`, message: "路由台需要 1-4 个输出。" });
     }
@@ -1373,8 +1385,8 @@ function validateBuilderWallDoorSwitches(project: BuilderProject): BuilderCompil
     if (states.length < 2) {
       issues.push({ path: `wallDoorSwitches.${switchDef.id}.states`, message: "墙面门控至少需要两个可切换状态。" });
     }
-    if (states.length > 4) {
-      issues.push({ path: `wallDoorSwitches.${switchDef.id}.states`, message: "墙面门控最多建议 4 个状态，避免玩家记不住。" });
+    if (states.length > MAX_WALL_DOOR_SWITCH_STATES) {
+      issues.push({ path: `wallDoorSwitches.${switchDef.id}.states`, message: `墙面门控最多支持 ${MAX_WALL_DOOR_SWITCH_STATES} 个状态。` });
     }
     if (switchDef.wallMount.offset < -1 || switchDef.wallMount.offset > 1) {
       issues.push({ path: `wallDoorSwitches.${switchDef.id}.wallMount.offset`, message: "墙面门控 offset 必须在 -1 到 1 之间。" });
@@ -1673,13 +1685,15 @@ function compileRouteSwitches(
     const label = route.label.trim() || "管制路由台";
     const routePresentation = route.presentation ?? { kind: "route_console" as const, modelKey: "builder_route_switch_console" };
     const routePlacement = route.wallMount ? wallMountPlacementForRoom(room, route.wallMount) : null;
+    const routeHostProp = route.hostPropId ? project.props.find((prop) => prop.id === route.hostPropId) : null;
     const routeInteractionVisualKey =
-      route.visualKey ?? (routePresentation.kind === "wall_button" || routePresentation.kind === "wall_lever" ? "wall_door_switch_button" : "direction_keypad_panel");
-    const routeOutputKeyRoom = (output: BuilderRouteSwitchOutput) => roomsById.get(output.keyRoomId ?? route.keyRoomId) ?? keyRoom;
+      routeHostProp
+        ? "none"
+        : route.visualKey ?? (routePresentation.kind === "wall_button" || routePresentation.kind === "wall_lever" ? "wall_door_switch_button" : "direction_keypad_panel");
+    const routeOutputKeyRoom = (output: BuilderRouteSwitchOutput) => roomsById.get(output.keyRoomId ?? (route.keyPosition ? route.keyRoomId : route.roomId)) ?? keyRoom;
     const routeOutputKeyPosition = (output: BuilderRouteSwitchOutput, index: number): Vec3Tuple => {
       const outputKeyRoom = routeOutputKeyRoom(output);
-      const offsets: readonly (readonly [number, number])[] = [[-0.34, -0.28], [0.34, -0.28], [-0.34, 0.28], [0.34, 0.28]];
-      const offset = offsets[index] ?? [0, 0];
+      const offset = ROUTE_OUTPUT_KEY_OFFSETS[index] ?? [0, 0];
       if (output.keyPosition) {
         return [
           clamp(output.keyPosition[0], outputKeyRoom.center[0] - outputKeyRoom.size[0] / 2 + 0.8, outputKeyRoom.center[0] + outputKeyRoom.size[0] / 2 - 0.8),
@@ -1694,7 +1708,11 @@ function compileRouteSwitches(
           clamp(route.keyPosition[1] + offset[1], outputKeyRoom.center[1] - outputKeyRoom.size[1] / 2 + 0.8, outputKeyRoom.center[1] + outputKeyRoom.size[1] / 2 - 0.8),
         ];
       }
-      return pointInRoom(outputKeyRoom, -0.28 + (index % 2) * 0.16, -0.24 + Math.floor(index / 2) * 0.16, keyItems.length + index);
+      return [
+        clamp(route.position[0] + offset[0], outputKeyRoom.center[0] - outputKeyRoom.size[0] / 2 + 0.8, outputKeyRoom.center[0] + outputKeyRoom.size[0] / 2 - 0.8),
+        0,
+        clamp(route.position[1] + offset[1], outputKeyRoom.center[1] - outputKeyRoom.size[1] / 2 + 0.8, outputKeyRoom.center[1] + outputKeyRoom.size[1] / 2 - 0.8),
+      ];
     };
 
     route.outputs.slice(0, 4).forEach((output, index) => {
@@ -1721,6 +1739,7 @@ function compileRouteSwitches(
       radius: 1.85,
       visualKey: routeInteractionVisualKey,
       materialKey: "terminal_cyan",
+      ...(routeHostProp ? { anchorPropId: routeHostProp.id } : {}),
       label,
       rewardPulse: { label, detail: "输出已改接", rarity: "rare" },
     });
@@ -1837,7 +1856,7 @@ function compileWallDoorSwitches(
             issues.push({ path: `wallDoorSwitches.${switchDef.id}.states.${index}.openDoorIds`, message: `门控引用了不存在的门：${doorId}。` });
             continue;
           }
-          if (shouldRespectWallDoorSwitchStateLock(door, switchDef) || (doorId === inverseDoorId && shouldRespectInverseDoorProgressionLock(inverseDoor))) {
+          if (shouldRespectMechanismDoorOpenLock(door, switchDef) || (doorId === inverseDoorId && shouldRespectInverseDoorProgressionLock(inverseDoor))) {
             actions.push({ type: "open_door", doorId, respectLock: true });
           } else {
             actions.push({ type: "unlock_door", doorId }, { type: "open_door", doorId });
@@ -1869,6 +1888,12 @@ function shouldRespectInverseDoorProgressionLock(door: BuilderDoor | null | unde
   return door?.lockType === "key_item" || door?.lockType === "puzzle_complete" || door?.lockType === "survive_wave";
 }
 
+function shouldRespectMechanismDoorOpenLock(door: BuilderDoor | null | undefined, switchDef: BuilderWallDoorSwitch) {
+  if (!door || door.lockType === "none") return false;
+  if (door.lockType === "switch_state") return shouldRespectWallDoorSwitchStateLock(door, switchDef);
+  return true;
+}
+
 function shouldRespectWallDoorSwitchStateLock(door: BuilderDoor | null | undefined, switchDef: BuilderWallDoorSwitch) {
   return door?.lockType === "switch_state" && door.wallDoorSwitchId === switchDef.id;
 }
@@ -1897,11 +1922,14 @@ function routeOutputActions(
     const door = project.doors.find((candidate) => candidate.id === output.doorId);
     actions.push(...routeOpenDoorActions(door, output.doorId));
   } else if (output.kind === "start_robots" && output.robotRoomId) {
-    // Start the wave just after the camera reaches the room so the player sees
-    // the robots wake, then reveal the robot room.
+    const hasFocusEnemy = project.robots.some(
+      (robot) =>
+        robot.roomId === output.robotRoomId &&
+        (robot.tier === "boss" || robot.tier === "leader" || robot.tier === "elite" || robot.archetype === "custodian_elite"),
+    );
     actions.push(
-      { type: "start_wave", waveId: builderWaveIdForRobotRoom(project, output.robotRoomId, waveChainCanonicalizer), delay: 0.6 },
-      { type: "focus_reveal", reveal: { kind: "robot", roomId: output.robotRoomId } },
+      { type: "start_wave", waveId: builderWaveIdForRobotRoom(project, output.robotRoomId, waveChainCanonicalizer), immediate: true },
+      { type: "focus_reveal", reveal: { kind: "robot", roomId: output.robotRoomId, cameraMode: "door_front", durationSec: hasFocusEnemy ? 3 : 2 } },
     );
   } else if (output.kind === "reveal_puzzle" && output.puzzleId) {
     const puzzle = puzzleInstances(project).find((instance) => instance.id === output.puzzleId);
@@ -1909,7 +1937,7 @@ function routeOutputActions(
     // reveal resolves it from the firing switch state and frames it.
     actions.push(
       { type: "set_message", message: puzzle ? `${puzzleKindEntry(puzzle.kind).label}已接入。` : "谜题台已接入。" },
-      { type: "focus_reveal", reveal: { kind: "puzzle" } },
+      { type: "focus_reveal", reveal: { kind: "puzzle", cameraMode: "door_front", durationSec: 3.4 } },
     );
   } else {
     issues.push({ path: issuePath, message: "输出缺少目标。" });
@@ -2512,11 +2540,12 @@ function buildObjectiveChain(
   exitLabel = "撤离电梯",
   exitInteractionId = "use_builder_exit",
 ): LevelObjectiveDefinition[] {
-  const roomOrder = new Map(criticalPath.map((roomId, index) => [roomId, index]));
+  const roomOrder = buildObjectiveRoomOrder(criticalPath, doors);
   const roomLabel = (roomId: string) => project.rooms.find((room) => room.id === roomId)?.label ?? roomId;
   const lockedDoors = doors
     .filter((door) => door.lock.type !== "none")
-    .sort((a, b) => doorOrder(a, roomOrder) - doorOrder(b, roomOrder));
+    .filter((door) => !isBacktrackControllerDoor(door, roomOrder, project))
+    .sort((a, b) => doorOrder(a, roomOrder, project) - doorOrder(b, roomOrder, project));
   const coveredWaveIds = new Set(lockedDoors.flatMap((door) => (door.lock.type === "survive_wave" ? doorSurviveWaveIds(door.lock) : [])));
   const appendedRoomWaveIds = new Set<string>();
   const roomEnteredWaves = new Map<string, WaveDefinition[]>();
@@ -2720,11 +2749,59 @@ function appendMissingById<T extends { id: string }>(target: T[], source: readon
   }
 }
 
-function doorOrder(door: LevelDoorDefinition, roomOrder: Map<string, number>) {
-  const from = roomOrder.get(door.fromRoomId);
-  const to = roomOrder.get(door.toRoomId);
-  if (from === undefined && to === undefined) return 999;
-  return Math.max(from ?? -1, to ?? -1);
+function buildObjectiveRoomOrder(criticalPath: readonly string[], doors: readonly LevelDoorDefinition[]) {
+  const roomOrder = new Map(criticalPath.map((roomId, index) => [roomId, index]));
+  const queue = criticalPath.map((roomId) => ({ roomId, order: roomOrder.get(roomId) ?? 0, depth: 0 }));
+  while (queue.length > 0) {
+    const current = queue.shift() as (typeof queue)[number];
+    for (const door of doors) {
+      const nextRoomId = door.fromRoomId === current.roomId ? door.toRoomId : door.toRoomId === current.roomId ? door.fromRoomId : null;
+      if (!nextRoomId || roomOrder.has(nextRoomId)) continue;
+      const next = { roomId: nextRoomId, order: current.order + 0.1 + current.depth * 0.01, depth: current.depth + 1 };
+      roomOrder.set(next.roomId, next.order);
+      queue.push(next);
+    }
+  }
+  return roomOrder;
+}
+
+function doorOrder(door: LevelDoorDefinition, roomOrder: Map<string, number>, project: BuilderProject) {
+  const anchors = [
+    roomOrder.get(door.fromRoomId),
+    roomOrder.get(door.toRoomId),
+    ...doorControllerRoomIds(project, door.id).map((roomId) => roomOrder.get(roomId)),
+  ].filter((order): order is number => order !== undefined);
+  if (anchors.length === 0) return 999;
+  return Math.max(...anchors);
+}
+
+function isBacktrackControllerDoor(door: LevelDoorDefinition, roomOrder: Map<string, number>, project: BuilderProject) {
+  const endpointOrders = [roomOrder.get(door.fromRoomId), roomOrder.get(door.toRoomId)].filter((order): order is number => order !== undefined);
+  if (endpointOrders.length === 0) return false;
+  const endpointOrder = Math.max(...endpointOrders);
+  return doorControllerRoomIds(project, door.id)
+    .map((roomId) => roomOrder.get(roomId))
+    .some((order) => order !== undefined && order > endpointOrder + 0.001);
+}
+
+function doorControllerRoomIds(project: BuilderProject, doorId: string) {
+  const roomIds: string[] = [];
+  for (const wallSwitch of project.wallDoorSwitches ?? []) {
+    if (wallSwitch.inverseDoorId === doorId || wallSwitch.states.some((state) => state.openDoorIds?.includes(doorId) || state.closeDoorIds?.includes(doorId))) {
+      roomIds.push(wallSwitch.roomId);
+    }
+  }
+  for (const route of project.routeSwitches ?? []) {
+    if (route.outputs.some((output) => output.kind === "open_door" && output.doorId === doorId)) {
+      roomIds.push(route.roomId);
+    }
+  }
+  const door = project.doors.find((candidate) => candidate.id === doorId);
+  if (door?.wallDoorSwitchId) {
+    const wallSwitch = project.wallDoorSwitches?.find((candidate) => candidate.id === door.wallDoorSwitchId);
+    if (wallSwitch) roomIds.push(wallSwitch.roomId);
+  }
+  return [...new Set(roomIds)];
 }
 
 function clamp(value: number, min: number, max: number) {

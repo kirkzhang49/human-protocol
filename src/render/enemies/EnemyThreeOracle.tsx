@@ -5,8 +5,10 @@ import { PerspectiveCamera, Vector3, type Group } from "three";
 import { modelKeyForEnemy, preloadEnemyModelAssets, type EnemyModelKey } from "../../assets/enemyModelAssets";
 import { enemyArchetypes } from "../../game/config/enemyArchetypes";
 import { playerConfig } from "../../game/config/playerConfig";
+import type { FocusRevealState } from "../../game/core/GameMode";
 import type { GameWorld } from "../../game/core/GameWorld";
 import type { EnemyState } from "../../game/entities/EnemyState";
+import { applyFocusRevealCameraBlend, focusRevealCameraApproach } from "../focusRevealCamera";
 import { EnemyModelInstance } from "./EnemyModelInstance";
 import {
   enemyModelAltitude,
@@ -87,6 +89,9 @@ function EnemyThreeOracleCamera({ world }: EnemyThreeOracleProps) {
   const lookTarget = useMemo(() => new Vector3(), []);
   const shakeOffset = useMemo(() => new Vector3(), []);
   const cameraPosition = useMemo(() => new Vector3(), []);
+  const revealPosition = useMemo(() => new Vector3(), []);
+  const revealTarget = useMemo(() => new Vector3(), []);
+  const lastRevealWasCameraCut = useRef(false);
 
   useFrame((state, delta) => {
     const player = world.player;
@@ -121,7 +126,15 @@ function EnemyThreeOracleCamera({ world }: EnemyThreeOracleProps) {
       cameraPosition.addScaledVector(player.aimDirection, combatFocus * 0.18);
     }
 
-    camera.position.lerp(cameraPosition, 1 - Math.exp(-18 * delta));
+    const reveal = world.session.activeFocusReveal;
+    applyFocusRevealCameraBlend(reveal, cameraPosition, lookTarget, revealPosition, revealTarget);
+    const snapReturnFromCameraCut = !reveal && lastRevealWasCameraCut.current;
+    lastRevealWasCameraCut.current = Boolean(reveal?.cameraCut);
+
+    camera.position.lerp(
+      cameraPosition,
+      1 - Math.exp(-focusRevealCameraApproach(reveal, { snapReturnFromCameraCut }) * delta),
+    );
     camera.lookAt(lookTarget);
     if (camera instanceof PerspectiveCamera) {
       camera.fov = 72 + world.camera.fovKick;
@@ -147,13 +160,13 @@ function EnemyThreeOracleEnemies({ world, allEnemies = false }: EnemyThreeOracle
   return (
     <>
       {entries.map((entry) => (
-        <EnemyThreeOracleEnemy key={entry.id} entry={entry} />
+        <EnemyThreeOracleEnemy key={entry.id} entry={entry} world={world} />
       ))}
     </>
   );
 }
 
-function EnemyThreeOracleEnemy({ entry }: { entry: OracleEnemyEntry }) {
+function EnemyThreeOracleEnemy({ entry, world }: { entry: OracleEnemyEntry; world: GameWorld }) {
   const rootRef = useRef<Group>(null);
   const animationNameRef = useRef("idle");
 
@@ -167,7 +180,7 @@ function EnemyThreeOracleEnemy({ entry }: { entry: OracleEnemyEntry }) {
     root.position.y += enemyModelAltitude(enemy);
     root.rotation.set(0, enemy.rotationY, 0);
     root.scale.setScalar(enemy.visualScaleMultiplier);
-    animationNameRef.current = enemyModelAnimationName(enemy);
+    animationNameRef.current = enemyModelAnimationName(enemy, world.session.activeFocusReveal);
   });
 
   return (
@@ -206,17 +219,26 @@ function rawThreeEnemyOracleMaxEnemies() {
   return Number.isFinite(parsed) ? Math.max(1, Math.min(96, Math.floor(parsed))) : 48;
 }
 
-function enemyModelAnimationName(enemy: EnemyState) {
+export function enemyModelAnimationName(enemy: EnemyState, reveal?: FocusRevealState | null) {
   if (!enemy.isAlive) return "death";
   if (enemy.spawnAge < 0.44) return "spawn_boot";
   if (enemy.staggerRemaining > 0) return "stagger";
   if (enemy.attackWindupRemaining > 0) return "attack_windup";
+  if (isBossRobotFocusRevealTarget(enemy, reveal)) return "move";
   const archetype = enemyArchetypes[enemy.archetypeId];
   const cooldown = archetype.attackCooldown * enemy.attackCooldownMultiplier;
   const sinceAttack = cooldown - enemy.attackCooldownRemaining;
-  if (sinceAttack >= 0 && sinceAttack < 0.24) return "attack_windup";
-  if (sinceAttack >= 0.24 && sinceAttack < 0.58) return "attack_strike";
-  if (sinceAttack >= 0.58 && sinceAttack < 0.98) return "attack_recover";
+  const canShowRecentAttack = enemy.spawnAge > 1.1;
+  if (canShowRecentAttack && sinceAttack >= 0 && sinceAttack < 0.24) return "attack_windup";
+  if (canShowRecentAttack && sinceAttack >= 0.24 && sinceAttack < 0.58) return "attack_strike";
+  if (canShowRecentAttack && sinceAttack >= 0.58 && sinceAttack < 0.98) return "attack_recover";
   if (enemy.velocity.lengthSq() > 0.04) return "move";
   return "idle";
+}
+
+function isBossRobotFocusRevealTarget(enemy: EnemyState, reveal?: FocusRevealState | null) {
+  if (enemy.tier !== "boss") return false;
+  if (reveal?.kind !== "robot") return false;
+  if (reveal.targetId !== `enemy:${enemy.id}`) return false;
+  return reveal.elapsed >= 0.2 && reveal.elapsed <= Math.min(2.65, reveal.duration - 0.2);
 }

@@ -1150,9 +1150,10 @@ function routeSwitchesFromLevel(
       label: switchDefinition.label ?? interaction.label ?? "管制路由台",
       roomId: interaction.roomId,
       keyRoomId,
+      ...(interaction.anchorPropId ? { hostPropId: interaction.anchorPropId } : {}),
       ...(key ? { keyPosition: [roundMeter(key.position[0]), roundMeter(key.position[2])] as const } : {}),
       position: [roundMeter(interaction.position[0]), roundMeter(interaction.position[2])] as const,
-      rotationY: 0,
+      rotationY: interaction.yaw ?? 0,
       outputs,
     }];
   });

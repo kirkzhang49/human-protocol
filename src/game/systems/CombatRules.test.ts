@@ -194,9 +194,20 @@ describe("combat weapon rules", () => {
   });
 
   it("tunes the breach missile as a smaller two-x damage boss-piercing skill 3 pickup", () => {
+    expect(ultimateAbilityConfig.coreBomb.blastRadius).toBe(6.35);
+    expect(ultimateAbilityConfig.coreBomb.damage).toBe(200);
+    expect(ultimateAbilityConfig.coreBomb.throwCollisionRadius).toBe(0.34);
+    expect(ultimateAbilityConfig.coreBomb.bossDamageMultiplier).toBe(1);
+    expect(ultimateAbilityConfig.coreBomb.resource).toBe("coreCell");
+    expect(ultimateAbilityConfig.coreBomb.resourceSpendPhase).toBe("throw");
+    expect(ultimateAbilityConfig.breachMissile.blastRadius).toBe(4.75);
+    expect(ultimateAbilityConfig.breachMissile.damage).toBe(400);
+    expect(ultimateAbilityConfig.breachMissile.throwCollisionRadius).toBe(0.26);
     expect(ultimateAbilityConfig.breachMissile.blastRadius).toBeLessThan(ultimateAbilityConfig.coreBomb.blastRadius);
     expect(ultimateAbilityConfig.breachMissile.damage).toBe(ultimateAbilityConfig.coreBomb.damage * 2);
     expect(ultimateAbilityConfig.breachMissile.bossDamageMultiplier).toBeCloseTo(1.2);
+    expect(ultimateAbilityConfig.breachMissile.resource).toBe("coreCell");
+    expect(ultimateAbilityConfig.breachMissile.resourceSpendPhase).toBe("throw");
   });
 
   it("adds concentrated impact VFX when the breach missile hits an enemy", () => {
@@ -215,8 +226,46 @@ describe("combat weapon rules", () => {
 
     expect(world.session.deployedUltimate).toBeNull();
     expect(enemy.health).toBeLessThan(enemy.maxHealth);
-    expect(world.effects.filter((effect) => effect.type === "coreSpark").length).toBeGreaterThanOrEqual(6);
-    expect(world.effects.filter((effect) => effect.type === "dashBurst").length).toBeGreaterThanOrEqual(4);
+    const effectTypes = world.effects.map((effect) => effect.type as string);
+    expect(effectTypes).toContain("breachPierce");
+    expect(effectTypes).toContain("breachShock");
+    expect(effectTypes).toContain("breachTrail");
+    expect(world.effects.filter((effect) => (effect.type as string) === "breachPierce").length).toBeGreaterThanOrEqual(6);
+    expect(world.effects.filter((effect) => (effect.type as string) === "breachTrail").length).toBeGreaterThanOrEqual(3);
+  });
+
+  it("keeps core bomb and breach missile on separate explosion VFX keys", () => {
+    const coreWorld = createCombatWorld();
+    coreWorld.session.activeUltimateAbilityId = "coreBomb";
+    coreWorld.session.coreCells = 1;
+
+    expect(coreWorld.useUltimateAbility()).toBe(true);
+    expect(coreWorld.useUltimateAbility()).toBe(true);
+    for (let frame = 0; frame < 90 && coreWorld.session.deployedUltimate; frame += 1) {
+      coreWorld.updateDeployedUltimate(1 / 60);
+    }
+
+    const missileWorld = createCombatWorld();
+    missileWorld.session.activeUltimateAbilityId = "breachMissile";
+    missileWorld.session.coreCells = 1;
+
+    expect(missileWorld.useUltimateAbility()).toBe(true);
+    expect(missileWorld.useUltimateAbility()).toBe(true);
+    for (let frame = 0; frame < 90 && missileWorld.session.deployedUltimate; frame += 1) {
+      missileWorld.updateDeployedUltimate(1 / 60);
+    }
+
+    const coreEffectTypeList = coreWorld.effects.map((effect) => effect.type as string);
+    const coreEffectTypes = new Set(coreEffectTypeList);
+    const missileEffectTypes = new Set(missileWorld.effects.map((effect) => effect.type as string));
+    expect(coreEffectTypeList).toEqual(expect.arrayContaining(["shockwave", "dashBurst", "hitSpark"]));
+    expect(coreEffectTypes.has("breachPierce")).toBe(false);
+    expect(coreEffectTypes.has("breachShock")).toBe(false);
+    expect(coreEffectTypes.has("breachTrail")).toBe(false);
+    expect(missileEffectTypes.has("breachPierce")).toBe(true);
+    expect(missileEffectTypes.has("breachShock")).toBe(true);
+    expect(missileEffectTypes.has("breachTrail")).toBe(true);
+    expect(missileEffectTypes.has("hitSpark")).toBe(false);
   });
 
   it("kills Level 3 health-multiplied small robots in the blast radius", () => {
@@ -313,8 +362,10 @@ describe("combat weapon rules", () => {
     world.markEnemyHit(boss, new Vector3(0, 0, -1), 1.12);
     world.markEnemyHit(boss, new Vector3(0, 0, -1), 1.12);
 
-    expect(boss.staggerRemaining).toBeGreaterThan(0.3);
+    expect(boss.staggerRemaining).toBeGreaterThan(0.45);
+    expect(boss.staggerRemaining).toBeLessThan(0.7);
     expect(boss.attackCooldownRemaining).toBeGreaterThan(0.6);
+    expect(boss.attackCooldownRemaining).toBeLessThan(1);
     expect(world.effects.filter((effect) => effect.type === "armorSpark").length).toBeGreaterThanOrEqual(3);
     expect(world.effects.some((effect) => effect.type === "staggerBurst")).toBe(true);
     expect(world.effects.some((effect) => effect.type === "shockwave")).toBe(true);
@@ -334,7 +385,7 @@ describe("combat weapon rules", () => {
       tier: "boss",
       tierLabel: "策展主管",
       healthMultiplier: 0.26,
-      damageMultiplier: 0.31,
+      damageMultiplier: 0.34,
       moveSpeedMultiplier: 0.96,
       attackCooldownMultiplier: 1.08,
       attackRangeMultiplier: 1.08,
@@ -358,8 +409,10 @@ describe("combat weapon rules", () => {
     world.markEnemyHit(curator, new Vector3(0, 0, -1), 1.12);
     world.markEnemyHit(curator, new Vector3(0, 0, -1), 1.12);
 
-    expect(curator.staggerRemaining).toBeGreaterThan(0.6);
-    expect(curator.attackCooldownRemaining).toBeGreaterThan(1);
+    expect(curator.staggerRemaining).toBeGreaterThan(0.45);
+    expect(curator.staggerRemaining).toBeLessThan(0.7);
+    expect(curator.attackCooldownRemaining).toBeGreaterThan(0.6);
+    expect(curator.attackCooldownRemaining).toBeLessThan(1);
     expect(world.effects.some((effect) => effect.type === "staggerBurst")).toBe(true);
     expect(world.effects.some((effect) => effect.type === "shockwave")).toBe(true);
     expect(world.combatHitStopRemaining).toBeGreaterThan(0);

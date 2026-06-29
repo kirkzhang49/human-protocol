@@ -1,7 +1,7 @@
 import { Vector3 } from "three";
 import { describe, expect, it } from "vitest";
 import { createEnemyRobot } from "../../game/entities/createEnemyRobot";
-import { canUseRigidNodePalette, enemyTintFor } from "./RawWebGpuRuntimeHelpers";
+import { canUseRawEnemyBakedAnimation, canUseRigidNodePalette, enemyTintFor } from "./RawWebGpuRuntimeHelpers";
 
 describe("enemyTintFor", () => {
   it("uses configured core/warning colors for the Level 3 curator boss tint", () => {
@@ -77,6 +77,24 @@ describe("canUseRigidNodePalette", () => {
           { nodeIndex: 1, vertexOffset: 0, vertexCount: 3, bindMatrix: identity, inverseBindMatrix: identity },
           { nodeIndex: 2, vertexOffset: 3, vertexCount: 3, bindMatrix: identity, inverseBindMatrix: identity },
         ],
+      }),
+    ).toBe(true);
+  });
+});
+
+describe("canUseRawEnemyBakedAnimation", () => {
+  it("keeps the reclamation mother on the grounded static Raw path until its chunk and animation node indexes match", () => {
+    expect(
+      canUseRawEnemyBakedAnimation("hp_enemy_reclamation_mother_final_horror", {
+        nodeChunks: [{ nodeIndex: 0, vertexOffset: 0, vertexCount: 3, bindMatrix: [], inverseBindMatrix: [] }],
+      }),
+    ).toBe(false);
+  });
+
+  it("allows other chunked enemy models to use baked Raw animation", () => {
+    expect(
+      canUseRawEnemyBakedAnimation("hp_enemy_custodian_foreman_horror", {
+        nodeChunks: [{ nodeIndex: 0, vertexOffset: 0, vertexCount: 3, bindMatrix: [], inverseBindMatrix: [] }],
       }),
     ).toBe(true);
   });

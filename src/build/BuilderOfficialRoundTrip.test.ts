@@ -992,9 +992,9 @@ describe("official level builder round trip", () => {
       expect.arrayContaining([
         { modelKey: "puzzle_console_color_sequence", kind: "furniture" },
         { modelKey: "hp_l2_cc0_ceiling_lamp_polyhaven_v1", kind: "furniture" },
-        { modelKey: "puzzle_orb_free_red", kind: "furniture" },
-        { modelKey: "puzzle_orb_free_blue", kind: "furniture" },
-        { modelKey: "puzzle_orb_free_green", kind: "furniture" },
+        { modelKey: "age_museum_puzzle_orb_red", kind: "furniture" },
+        { modelKey: "age_museum_puzzle_orb_blue", kind: "furniture" },
+        { modelKey: "age_museum_puzzle_orb_green", kind: "furniture" },
       ]),
     );
 
@@ -1017,9 +1017,9 @@ describe("official level builder round trip", () => {
         models: new Map([
           ["puzzle_console_color_sequence", rawModel("puzzle_console_color_sequence", [1.34, 1.69, 0.42])],
           ["hp_l2_cc0_ceiling_lamp_polyhaven_v1", rawModel("hp_l2_cc0_ceiling_lamp_polyhaven_v1", [0.39, 0.928, 0.39])],
-          ["puzzle_orb_free_red", rawModel("puzzle_orb_free_red", [0.64, 1.52, 0.64])],
-          ["puzzle_orb_free_blue", rawModel("puzzle_orb_free_blue", [0.64, 1.52, 0.64])],
-          ["puzzle_orb_free_green", rawModel("puzzle_orb_free_green", [0.64, 1.52, 0.64])],
+          ["age_museum_puzzle_orb_red", rawModel("age_museum_puzzle_orb_red", [0.72, 0.72, 0.72])],
+          ["age_museum_puzzle_orb_blue", rawModel("age_museum_puzzle_orb_blue", [0.72, 0.72, 0.72])],
+          ["age_museum_puzzle_orb_green", rawModel("age_museum_puzzle_orb_green", [0.72, 0.72, 0.72])],
         ]),
         materials: [],
         baseColorTextures: [],
@@ -1039,34 +1039,34 @@ describe("official level builder round trip", () => {
       expect.arrayContaining([
         "puzzle_console_color_sequence",
         "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
-        "puzzle_orb_free_red",
-        "puzzle_orb_free_blue",
-        "puzzle_orb_free_green",
+        "age_museum_puzzle_orb_red",
+        "age_museum_puzzle_orb_blue",
+        "age_museum_puzzle_orb_green",
       ]),
     );
     const nativeOrbInstances = nativePack.renderPlan.instances.filter((instance) => instance.id.startsWith("orb_pzc_"));
     expect(new Set(nativeOrbInstances.map((instance) => instance.modelKey))).toEqual(
-      new Set(["puzzle_orb_free_red", "puzzle_orb_free_blue", "puzzle_orb_free_green"]),
+      new Set(["age_museum_puzzle_orb_red", "age_museum_puzzle_orb_blue", "age_museum_puzzle_orb_green"]),
     );
-    expect(nativeOrbInstances.map((instance) => instance.position[1])).toEqual([0, 0, 0]);
+    expect(nativeOrbInstances.map((instance) => instance.position[1])).toEqual([1.15, 1.15, 1.15]);
     expect(nativePack.manifest.fallbackProxyModels).not.toEqual(
       expect.arrayContaining([
         "puzzle_console_color_sequence",
         "hp_l2_cc0_ceiling_lamp_polyhaven_v1",
-        "puzzle_orb_free_red",
-        "puzzle_orb_free_blue",
-        "puzzle_orb_free_green",
+        "age_museum_puzzle_orb_red",
+        "age_museum_puzzle_orb_blue",
+        "age_museum_puzzle_orb_green",
       ]),
     );
   });
 
-  it("deep-bakes Level 2 color puzzle machines while free-standing orbs use stable raw modelKeys", () => {
+  it("deep-bakes Level 2 color puzzle machines while color orbs use curated museum modelKeys", () => {
     const { project, level } = importAndCompile("level_02_residential_simulation");
     const cookedModels = new Map([
       ["puzzle_console_color_sequence", cookedTriangleModel("puzzle_console_color_sequence", [0.9, 1.4, 0.55])],
-      ["puzzle_orb_free_red", cookedTriangleModel("puzzle_orb_free_red", [0.7, 1.5, 0.7])],
-      ["puzzle_orb_free_blue", cookedTriangleModel("puzzle_orb_free_blue", [0.7, 1.5, 0.7])],
-      ["puzzle_orb_free_green", cookedTriangleModel("puzzle_orb_free_green", [0.7, 1.5, 0.7])],
+      ["age_museum_puzzle_orb_red", cookedTriangleModel("age_museum_puzzle_orb_red", [0.72, 0.72, 0.72])],
+      ["age_museum_puzzle_orb_blue", cookedTriangleModel("age_museum_puzzle_orb_blue", [0.72, 0.72, 0.72])],
+      ["age_museum_puzzle_orb_green", cookedTriangleModel("age_museum_puzzle_orb_green", [0.72, 0.72, 0.72])],
     ]);
     const deepPack = compileBuilderRuntimePack(level, project, {
       assetIndex: builderRuntimeAssetIndexForProject(level, project),
@@ -1079,12 +1079,12 @@ describe("official level builder round trip", () => {
     const orbInstances = deepPack.renderPlan.instances.filter((instance) => instance.id.startsWith("orb_pzc_"));
     expect(orbInstances.length).toBeGreaterThanOrEqual(3);
     expect(new Set(orbInstances.map((instance) => instance.modelKey))).toEqual(
-      new Set(["puzzle_orb_free_red", "puzzle_orb_free_blue", "puzzle_orb_free_green"]),
+      new Set(["age_museum_puzzle_orb_red", "age_museum_puzzle_orb_blue", "age_museum_puzzle_orb_green"]),
     );
     expect(new Set(orbInstances.map((instance) => instance.state?.colorKey))).toEqual(new Set(["red", "blue", "green"]));
-    expect(orbInstances.map((instance) => instance.position[1])).toEqual([0, 0, 0]);
+    expect(orbInstances.map((instance) => instance.position[1])).toEqual([1.15, 1.15, 1.15]);
     expect(deepPack.manifest.fallbackProxyModels).not.toEqual(
-      expect.arrayContaining(["puzzle_console_color_sequence", "puzzle_orb_free_red", "puzzle_orb_free_blue", "puzzle_orb_free_green"]),
+      expect.arrayContaining(["puzzle_console_color_sequence", "age_museum_puzzle_orb_red", "age_museum_puzzle_orb_blue", "age_museum_puzzle_orb_green"]),
     );
   });
 
@@ -1404,7 +1404,7 @@ describe("official level builder round trip", () => {
     expect(routeOutputState?.requiredKeyItemId).toBe("route_route_z43akm_out_1_route_out_yf_key");
     expect(level.map?.keyItems.find((item) => item.id === routeOutputState?.requiredKeyItemId)).toMatchObject({
       roomId: "level_03_gallery_lobby",
-      position: [-5.38, 0, 0.58],
+      position: [-5.59, 0, 0.20999999999999996],
       visualKey: "route_output_orb_1",
       materialKey: "terminal_cyan",
       requiredForDoorIds: [],

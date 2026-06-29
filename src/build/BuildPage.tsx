@@ -18,6 +18,7 @@ import {
   puzzleInstances,
   puzzleKindEntry,
 } from "./BuilderPuzzleCatalog";
+import { projectWithAnchoredPuzzleComponentsForProp } from "./BuilderPuzzlePlacement";
 import { pickupEntry } from "./BuilderPickupCatalog";
 import {
   applyBrushToRooms,
@@ -40,7 +41,7 @@ import { BuilderErrorBoundary } from "./BuilderErrorBoundary";
 import { BuilderOverlayLegend } from "./preview3d/BuilderOverlayLegend";
 import { normalizeBuilderProjectForBoot } from "./BuilderLoadPolicy";
 import { builderProjectFromBuiltInLevel, normalizeOfficialBuilderProject, pristineOfficialSourceLevelIdForProject, readBuilderImportLevelId } from "./BuilderLevelImport";
-import { wallMountedPropPlacementForEntryFromPoint, type PlacementDraft } from "./BuilderPlacementRules";
+import { wallDoorSwitchDraftPlacementFromPoint, wallMountedPropPlacementForEntryFromPoint, type PlacementDraft } from "./BuilderPlacementRules";
 import { builderRobotPresetDefaults, isBuilderRobotPresetId } from "./BuilderRobotPresets";
 import {
   attachedChildCount,
@@ -197,6 +198,7 @@ function normalizeStoredPlacementDraft(value: unknown): PlacementDraft | null {
     };
   }
   if (draft.kind === "routeSwitch") return { kind: "routeSwitch" };
+  if (draft.kind === "wallDoorSwitch") return { kind: "wallDoorSwitch" };
   return null;
 }
 
@@ -577,7 +579,12 @@ export function BuildPage() {
           wallDoorSwitches: (draft.wallDoorSwitches ?? []).filter((wallSwitch) => wallSwitch.id !== selection.id),
           doors: draft.doors.map((door) =>
             door.wallDoorSwitchId === selection.id
-              ? { ...door, lockType: "none" as const, wallDoorSwitchId: undefined, wallDoorSwitchStateId: undefined }
+              ? {
+                  ...door,
+                  ...(door.lockType === "switch_state" ? { lockType: "none" as const } : {}),
+                  wallDoorSwitchId: undefined,
+                  wallDoorSwitchStateId: undefined,
+                }
               : door,
           ),
         };
@@ -653,15 +660,15 @@ export function BuildPage() {
     if (selection?.kind !== "prop") return;
     update((draft) => {
       const parentById = new Map(draft.props.map((prop) => [prop.id, prop]));
-      return reflowAttachedProps({
-        ...draft,
-        props: draft.props.map((prop) => {
-          if (prop.id !== selection.id) return prop;
-          const rotationY = prop.rotationY + Math.PI / 4;
-          const parent = prop.parentPropId ? parentById.get(prop.parentPropId) : null;
-          return { ...prop, rotationY, ...(parent ? { localRotationY: rotationY - parent.rotationY } : {}) };
-        }),
-      });
+        return projectWithAnchoredPuzzleComponentsForProp(reflowAttachedProps({
+          ...draft,
+          props: draft.props.map((prop) => {
+            if (prop.id !== selection.id) return prop;
+            const rotationY = prop.rotationY + Math.PI / 4;
+            const parent = prop.parentPropId ? parentById.get(prop.parentPropId) : null;
+            return { ...prop, rotationY, ...(parent ? { localRotationY: rotationY - parent.rotationY } : {}) };
+          }),
+        }), selection.id);
     });
     setStatusText(language === "en" ? "Rotated 45° (shortcut R)." : "已旋转 45°（快捷键 R）。");
   }, [language, selection, update]);
@@ -933,10 +940,11 @@ export function BuildPage() {
     const { project: repaired, fixes } = repairProject(project);
     if (fixes.length === 0) {
       setStatusText(language === "en" ? "Quick check found nothing to auto-fix." : "快速检查没有发现可自动修复的问题。");
-      return;
+      return false;
     }
     update(() => repaired);
     setStatusText(language === "en" ? `Auto-fix done: ${fixes.join(" ")}` : `一键修复完成：${fixes.join(" ")}`);
+    return true;
   };
 
   // 点击模板先开确认 modal（替换了原来难看的 window.confirm）；真正载入在 confirmApplyTemplate。
@@ -1252,6 +1260,20 @@ export function BuildPage() {
 
   const startPuzzleHostPick = useCallback(
     (request: BuilderPuzzleHostPick) => {
+      if (request.kind === "routeSwitch") {
+        const routeSwitch = (project.routeSwitches ?? []).find((candidate) => candidate.id === request.routeSwitchId);
+        if (!routeSwitch) {
+          setStatusText(language === "en" ? "This route switch no longer exists." : "这座路由台已经不存在。");
+          return;
+        }
+        setPlacement(null);
+        setBrush(null);
+        setPuzzleBind(null);
+        setHostPick(request);
+        setSelection({ kind: "routeSwitch", id: request.routeSwitchId });
+        setStatusText(language === "en" ? "Pick a furniture prop to host this route switch · Esc to cancel" : "选择一个家具 / 展柜 / 面板作为这座路由台的交互点 · Esc 取消");
+        return;
+      }
       const puzzle = puzzleInstances(project).find((candidate) => candidate.id === request.puzzleId);
       if (!puzzle) {
         setStatusText(language === "en" ? "This puzzle no longer exists." : "这座谜题已经不存在。");
@@ -1281,6 +1303,28 @@ export function BuildPage() {
       const prop = project.props.find((candidate) => candidate.id === propId);
       if (!request || !prop) {
         setStatusText(language === "en" ? "Pick a valid furniture prop." : "请选择有效的家具 / 展柜 / 面板。");
+        return;
+      }
+      if (request.kind === "routeSwitch") {
+        update((draft) => ({
+          ...draft,
+          routeSwitches: (draft.routeSwitches ?? []).map((route) =>
+            route.id === request.routeSwitchId
+              ? {
+                  ...route,
+                  hostPropId: prop.id,
+                  roomId: prop.roomId,
+                  position: prop.position,
+                  rotationY: prop.rotationY,
+                  wallMount: undefined,
+                  outputs: route.outputs.map((output) => ({ ...output, keyRoomId: undefined, keyPosition: undefined })),
+                }
+              : route,
+          ),
+        }));
+        setHostPick(null);
+        setSelection({ kind: "routeSwitch", id: request.routeSwitchId });
+        setStatusText(language === "en" ? "Route switch interaction is now hosted by the selected prop. Ctrl+Z to undo." : "路由台交互点已换到选中的家具上。Ctrl+Z 可撤销。");
         return;
       }
       const selectedPuzzle = project.puzzles?.find((instance) => instance.id === request.puzzleId);
@@ -1406,8 +1450,8 @@ export function BuildPage() {
   const beginPlacement = useCallback((draft: PlacementDraft) => {
     setPlacement(draft);
     setBrush(null);
-    setSelection(null);
-    setActiveTool(draft.kind === "prop" ? "props" : draft.kind === "pickup" ? "pickups" : draft.kind === "routeSwitch" ? "mechanisms" : "robots");
+    if (draft.kind !== "wallDoorSwitch") setSelection(null);
+    setActiveTool(draft.kind === "prop" ? "props" : draft.kind === "pickup" ? "pickups" : draft.kind === "routeSwitch" || draft.kind === "wallDoorSwitch" ? "mechanisms" : "robots");
     setRecent((current) => {
       const next = [draft, ...current.filter((entry) => placementDraftKey(entry) !== placementDraftKey(draft))].slice(0, 8);
       writeStoredRecentPlacements(next);
@@ -1426,6 +1470,10 @@ export function BuildPage() {
             ? language === "en"
               ? "Route switch placement: click a room floor to drop it · Esc to cancel"
               : "路由台放置模式：点击房间地面放下 · Esc 取消"
+            : draft.kind === "wallDoorSwitch"
+              ? language === "en"
+                ? "Wall switch placement: click near a wall to mount it · Esc to cancel"
+                : "墙控把手放置：点击墙边挂上去 · Esc 取消"
             : language === "en"
               ? "Placement mode: click a room floor to deploy a robot · Esc to cancel"
               : "放置模式：点击房间地面部署机器人 · Esc 取消",
@@ -1562,7 +1610,7 @@ export function BuildPage() {
           id: createBuilderId("route"),
           label: "管制路由台",
           roomId,
-          keyRoomId: project.rooms.find((candidate) => candidate.id !== roomId)?.id ?? roomId,
+          keyRoomId: roomId,
           position: [x, z],
           rotationY: 0,
           outputs: [defaultRouteSwitchOutput(project)],
@@ -1573,6 +1621,41 @@ export function BuildPage() {
           language === "en"
             ? `Route switch placed${room ? ` in ${bl(room.label, language)}` : ""}. Drag each numbered orb and bind outputs to doors, puzzle stations or robot rooms.`
             : `管制路由台已放下${room ? `：${bl(room.label, language)}` : ""}。拖动每个编号授权球，并绑定门、谜题台或机器人房间。`,
+        );
+      } else if (placement.kind === "wallDoorSwitch") {
+        const room = project.rooms.find((candidate) => candidate.id === roomId);
+        const wallPlacement = room ? wallDoorSwitchDraftPlacementFromPoint(room, x, z) : null;
+        if (!room || !wallPlacement) {
+          setStatusText(language === "en" ? "Wall switches must be placed on a wall. Move the cursor to a room edge." : "墙控把手必须挂在墙上。请把光标移到房间墙边。");
+          return;
+        }
+        const selectedDoor = selection?.kind === "door" ? project.doors.find((door) => door.id === selection.id) ?? null : null;
+        const wallSwitch: BuilderWallDoorSwitch = {
+          id: createBuilderId("wall_switch"),
+          label: "墙面门控把手",
+          roomId,
+          wallMount: wallPlacement.wallMount,
+          mode: "state_cycle",
+          initialStateId: "idle",
+          oneShot: false,
+          states: [
+            { id: "idle", label: "待机", openDoorIds: [], closeDoorIds: [], message: "门控待机。" },
+            { id: "armed", label: "触发", openDoorIds: [], closeDoorIds: [], message: "门控触发。" },
+          ],
+        };
+        update((draft) => {
+          const next: BuilderProject = { ...draft, wallDoorSwitches: [...(draft.wallDoorSwitches ?? []), wallSwitch] };
+          return selectedDoor ? applyToggleDoorOwnership(next, wallSwitch.id, selectedDoor.id) : next;
+        });
+        setSelection({ kind: "wallDoorSwitch", id: wallSwitch.id });
+        setStatusText(
+          selectedDoor
+            ? language === "en"
+              ? "Wall switch mounted and bound to the selected door. Drag it along any wall if needed."
+              : "墙控把手已挂墙并绑定到选中的门。需要时可继续沿墙拖动。"
+            : language === "en"
+              ? "Wall switch mounted. Pick doors/states in the right panel before playtesting."
+              : "墙控把手已挂墙。试玩前请在右侧给它绑定门和状态。",
         );
       } else {
         const robot = {
@@ -1589,15 +1672,15 @@ export function BuildPage() {
       }
       // Soundless visual tick confirming the drop.
       if (placeFlashTimer.current !== null) window.clearTimeout(placeFlashTimer.current);
-      setPlaceFlash({ x, z, token: Date.now(), color: placement.kind === "prop" ? "#5ee8c8" : placement.kind === "pickup" ? pickupEntry(placement.pickupKind).color : placement.kind === "routeSwitch" ? "#5ee8c8" : "#ff9d7a" });
+      setPlaceFlash({ x, z, token: Date.now(), color: placement.kind === "prop" ? "#5ee8c8" : placement.kind === "pickup" ? pickupEntry(placement.pickupKind).color : placement.kind === "routeSwitch" ? "#5ee8c8" : placement.kind === "wallDoorSwitch" ? "#7bb7ff" : "#ff9d7a" });
       placeFlashTimer.current = window.setTimeout(() => setPlaceFlash(null), 700);
       setPlacement(null);
       setActiveTool("select");
-      if (placement.kind !== "routeSwitch") {
+      if (placement.kind !== "routeSwitch" && placement.kind !== "wallDoorSwitch") {
         setStatusText(language === "en" ? "Placed. Cmd/Ctrl+R to duplicate / drag to reposition." : "已放置。Cmd/Ctrl+R 复制 / 拖动调整位置。");
       }
     },
-    [firstKeyDoorForPickup, language, placement, project, update],
+    [firstKeyDoorForPickup, language, placement, project, selection, update],
   );
 
   /** 密室导演 chip → route the player to the matching tool/tab. */
@@ -1681,7 +1764,7 @@ export function BuildPage() {
       ((tool === "props" && placement.kind !== "prop") ||
         (tool === "pickups" && placement.kind !== "pickup") ||
         (tool === "robots" && placement.kind !== "robot") ||
-        (tool === "mechanisms" && placement.kind !== "routeSwitch"))
+        (tool === "mechanisms" && placement.kind !== "routeSwitch" && placement.kind !== "wallDoorSwitch"))
     ) {
       setPlacement(null);
     }
@@ -1733,6 +1816,7 @@ export function BuildPage() {
       bindDoorMode={puzzleBind !== null}
       hostPick={hostPick}
       variant={variant}
+      roomSelectionEnabled={activeTool === "rooms"}
       onPlace={placeAt}
       onBrush={applyBrush}
       onPickPuzzleHost={applyPuzzleHostPick}
@@ -1855,6 +1939,7 @@ export function BuildPage() {
               blockedCount={statusChips.filter((chip) => chip.id !== "playable" && chip.state === "bad").length}
               onShowIssues={runValidate}
               playtestRequestToken={playtestRequestToken}
+              onAutoRepair={runRepair}
               onBeforeLaunch={stopBuilderMusic}
               onStatus={setStatusText}
             />
@@ -1932,6 +2017,7 @@ export function BuildPage() {
                 roofHidden={roofHidden}
                 bindDoorMode={puzzleBind !== null}
                 hostPick={hostPick}
+                roomSelectionEnabled={activeTool === "rooms"}
                 panMode={panMode}
                 snapStep={snapStep}
                 update={update}
@@ -2009,6 +2095,10 @@ export function BuildPage() {
                   ? language === "en"
                     ? "Pick furniture for this orb target"
                     : "选择承载这个色球的家具"
+                  : hostPick.kind === "routeSwitch"
+                    ? language === "en"
+                      ? "Pick furniture for this route switch"
+                      : "选择承载这座路由台的家具"
                   : language === "en"
                     ? "Pick furniture for this puzzle interaction"
                     : "选择承载这座谜题交互的家具"}
@@ -2069,6 +2159,10 @@ export function BuildPage() {
                       ? language === "en"
                         ? "Route switch placement · click the floor to drop"
                         : "路由台放置 · 点击地面放下"
+                    : placement.kind === "wallDoorSwitch"
+                      ? language === "en"
+                        ? "Wall switch placement · click near a wall to mount"
+                        : "墙控把手放置 · 点击墙边挂上去"
                     : language === "en"
                       ? "Deploy mode · click the floor to place a robot"
                       : "部署模式 · 点击地面放下机器人"}

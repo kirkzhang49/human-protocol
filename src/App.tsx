@@ -353,10 +353,13 @@ function BootLoading({
   return overlay ? <div className={className}>{panel}</div> : <main className={className}>{panel}</main>;
 }
 
-function BootPanel({ progress, error, language }: { progress: number; error?: string; language: GameLanguage }) {
+export function BootPanel({ progress, error, language }: { progress: number; error?: string; language: GameLanguage }) {
   const strings = playerStrings(language);
   return (
-    <div className="boot-panel" aria-live="polite">
+    <div className={`boot-panel${error ? " has-error" : ""}`} aria-live="polite">
+      <div className="boot-spinner" aria-hidden="true">
+        <i />
+      </div>
       <span>{error ? strings.boot.failed : strings.boot.warmup}</span>
       <strong>{error ? "!" : `${Math.round(progress * 100)}%`}</strong>
       <div className="boot-bar">

@@ -154,6 +154,41 @@ describe('Config Validators - Puzzle Validation', () => {
       })),
     } as unknown as LevelDefinition);
 
+    const createWallSwitchCountLevel = (switchCount: number): LevelDefinition => ({
+      ...createMockLevel(),
+      map: {
+        id: 'test-map',
+        schemaVersion: 'hp.map.v1',
+        rooms: [{ id: 'room-a' }, { id: 'room-b' }],
+        doors: Array.from({ length: switchCount }, (_, index) => ({
+          id: `door-${index + 1}`,
+          fromRoomId: 'room-a',
+          toRoomId: 'room-b',
+          lock: { type: 'none' },
+        })),
+        interactions: Array.from({ length: switchCount }, (_, index) => ({
+          id: `switch-panel-${index + 1}`,
+          type: 'switch',
+          roomId: 'room-a',
+        })),
+        keyItems: [],
+        navigation: { criticalPathRoomIds: ['room-a', 'room-b'], optionalRoomIds: [], maxBacktrackSeconds: 0, mobileReadableDoorCount: 1 },
+      },
+      switches: Array.from({ length: switchCount }, (_, index) => ({
+        id: `wall-switch-${index + 1}`,
+        roomId: 'room-a',
+        interactionId: `switch-panel-${index + 1}`,
+        presentation: { kind: 'wall_lever' },
+        wallMount: { roomId: 'room-a', side: 'east', offset: 0, height: 1.34 },
+        states: [
+          {
+            id: 'open',
+            actions: [{ type: 'open_door', doorId: `door-${index + 1}` }],
+          },
+        ],
+      })),
+    } as unknown as LevelDefinition);
+
     it('should reject a door controlled by more than two wall switches', () => {
       const level = createWallSwitchLevel(3);
       const errors: unknown[] = [];
@@ -167,8 +202,21 @@ describe('Config Validators - Puzzle Validation', () => {
       expect(limitError).toBeDefined();
     });
 
-    it('should reject more than four wall switches in one level', () => {
-      const level = createWallSwitchLevel(5, 'door-limit');
+    it('should allow six wall switches in one level', () => {
+      const level = createWallSwitchCountLevel(6);
+      const errors: unknown[] = [];
+      const warnings: unknown[] = [];
+
+      validateSwitches(level, errors, warnings);
+
+      const countError = errors.find(
+        (e: unknown) => typeof e === 'object' && e !== null && 'code' in e && (e as { code: string }).code === 'switch.wall.count.limit'
+      );
+      expect(countError).toBeUndefined();
+    });
+
+    it('should reject the seventh wall switch in one level', () => {
+      const level = createWallSwitchCountLevel(7);
       const errors: unknown[] = [];
       const warnings: unknown[] = [];
 

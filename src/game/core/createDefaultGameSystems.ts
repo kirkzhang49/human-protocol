@@ -16,6 +16,7 @@ import { InputSystem } from "../systems/InputSystem";
 import { InteractionSystem } from "../systems/InteractionSystem";
 import { MobileAssistSystem } from "../systems/MobileAssistSystem";
 import { ObjectiveTrackerSystem } from "../systems/ObjectiveTrackerSystem";
+import { PhysicsSystem } from "../systems/PhysicsSystem";
 import { PickupSystem } from "../systems/PickupSystem";
 import { PlayerMovementSystem } from "../systems/PlayerMovementSystem";
 import { ProjectileSystem } from "../systems/ProjectileSystem";
@@ -32,6 +33,7 @@ export function createDefaultGameSystems(): GameSystem[] {
     new AimSystem(),
     new MobileAssistSystem(),
     new DoorSystem(),
+    new PhysicsSystem(),
     new PlayerMovementSystem(),
     new RoomDirectorSystem(),
     new ObjectiveTrackerSystem(),

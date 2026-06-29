@@ -8,7 +8,7 @@ import { enemyReactionProfileFor } from "../config/enemyReactionProfiles";
 import { enemyTierProfiles, type EnemyTierOverrideConfig } from "../config/enemyTiers";
 import { arenaObstacles } from "../config/gameBalance";
 import { localizedConfigCopy, localizedConfigText, localizedDialogue, localizedExit } from "../config/LevelLocalization";
-import { createDialogueTriggerMap } from "../config/levelManifest";
+import { createDialogueTriggerMap, waveById } from "../config/levelManifest";
 import { resolvePropCollisionProxy } from "../config/MapGeometry";
 import { playerConfig } from "../config/playerConfig";
 import { resolveRoomPresentation } from "../config/RoomPresentationRegistry";
@@ -59,6 +59,10 @@ import type { EffectState, EffectType, ObstacleState, PickupState, WorldInputSta
 import type { EnemyState } from "../entities/EnemyState";
 import type { ProjectileState } from "../entities/ProjectileState";
 import type { RobotState } from "../entities/RobotState";
+import { createNullPhysicsWorldAdapter } from "../physics/NullPhysicsWorldAdapter";
+import { createRapierPhysicsWorldAdapter } from "../physics/RapierPhysicsWorldAdapter";
+import type { PhysicsKinematicCircleMove, PhysicsKinematicMoveResult, PhysicsWorldAdapter } from "../physics/PhysicsWorldAdapter";
+import { startWaveNow } from "../systems/WaveDirectorSystem";
 import {
   loadPlayerProgress,
   memoryToNextProgressLevel,
@@ -107,7 +111,7 @@ import type {
 } from "./GameMode";
 import { createCameraState, createCombatAssistState, createTouchInputState, createWorldInputState } from "./GameWorldStateFactory";
 import type { ObjectiveEvent, RuntimeDebugOptions, TouchInputState, UpgradeModifiers } from "./GameWorldTypes";
-import { segmentIntersectsAabb2D, segmentIntersectsObb2D } from "./math";
+import { clamp, segmentIntersectsAabb2D, segmentIntersectsObb2D } from "./math";
 import { ObstacleSpatialIndex } from "./ObstacleSpatialIndex";
 import { createPlatformAdapter, type PlatformAdapter } from "./PlatformAdapter";
 import { RenderPerformanceGovernor } from "./RenderPerformance";
@@ -116,6 +120,7 @@ import { recordHumanProtocolPerfEvent } from "./RenderSpikeRecorder";
 export type { ObjectiveEvent, RuntimeDebugOptions, TouchInputState, UpgradeModifiers } from "./GameWorldTypes";
 
 const dialogueToastDurationScale = 0.5;
+const RECLAMATION_MOTHER_BOSS_MODEL_KEY = "hp_enemy_reclamation_mother_final_horror";
 
 export class GameWorld {
   readonly platform: PlatformAdapter = createPlatformAdapter();
@@ -135,6 +140,9 @@ export class GameWorld {
     this.session.mode = next;
   }
   readonly debugOptions: RuntimeDebugOptions = readRuntimeDebugOptions();
+  readonly physics: PhysicsWorldAdapter = this.debugOptions.physicsMode === "rapier"
+    ? createRapierPhysicsWorldAdapter()
+    : createNullPhysicsWorldAdapter();
   level: LevelDefinition = activeLevelConfig;
   levelRevision = 0;
   private dialogueByTrigger = createDialogueTriggerMap(this.level.dialogues);
@@ -182,6 +190,9 @@ export class GameWorld {
   private readonly enemyHitDirection = new Vector3();
   private readonly levelChangeListeners = new Set<() => void>();
   private obstacleIndexDirty = true;
+  private physicsInitRequested = false;
+  private physicsQuerySamples = 0;
+  private physicsQueryMismatches = 0;
 
   nextId() {
     this.nextEntityId += 1;
@@ -207,6 +218,40 @@ export class GameWorld {
     return this.obstacleSpatialIndex;
   }
 
+  ensurePhysicsReady() {
+    if (this.debugOptions.physicsMode !== "rapier" || this.physicsInitRequested) return;
+    if (this.physics.ready) {
+      this.physicsInitRequested = true;
+      return;
+    }
+    this.physicsInitRequested = true;
+    void this.physics.init().then((ready) => {
+      if (ready) {
+        this.syncPhysicsStaticObstacles();
+      }
+    });
+  }
+
+  syncPhysicsStaticObstacles() {
+    this.ensurePhysicsReady();
+    if (!this.physics.ready) return false;
+    this.physics.syncStaticObstacles(this.obstacles);
+    return true;
+  }
+
+  moveKinematicCircleWithPhysics(move: PhysicsKinematicCircleMove): PhysicsKinematicMoveResult | null {
+    if (!this.syncPhysicsStaticObstacles()) return null;
+    return this.physics.moveKinematicCircle(move);
+  }
+
+  physicsDebugSnapshot() {
+    return {
+      ...this.physics.debugSnapshot(),
+      querySamples: this.physicsQuerySamples,
+      queryMismatches: this.physicsQueryMismatches,
+    };
+  }
+
   isSegmentBlockedByObstacle(start: Vector3, end: Vector3, radius = 0.05) {
     return this.segmentBlockedByObstacle(start, end, radius, () => true);
   }
@@ -224,6 +269,25 @@ export class GameWorld {
   }
 
   private segmentBlockedByObstacle(
+    start: Vector3,
+    end: Vector3,
+    radius: number,
+    shouldBlock: (obstacle: ObstacleState) => boolean,
+  ) {
+    const legacyBlocked = () => this.legacySegmentBlockedByObstacle(start, end, radius, shouldBlock);
+    if (this.syncPhysicsStaticObstacles()) {
+      const rapierBlocked = this.physics.isSegmentBlocked({ start, end, radius, filter: shouldBlock });
+      if (this.debugOptions.physicsDualRun) {
+        const oldBlocked = legacyBlocked();
+        this.physicsQuerySamples += 1;
+        if (oldBlocked !== rapierBlocked) this.physicsQueryMismatches += 1;
+      }
+      return rapierBlocked;
+    }
+    return legacyBlocked();
+  }
+
+  private legacySegmentBlockedByObstacle(
     start: Vector3,
     end: Vector3,
     radius: number,
@@ -1620,12 +1684,31 @@ export class GameWorld {
       return;
     }
     reveal.elapsed += delta;
+    this.refreshDynamicFocusRevealTarget(reveal);
     if (reveal.elapsed >= reveal.duration) {
       if (this.session.doorRevealQueue.length > 0) {
         this.session.activeFocusReveal = null;
         this.startNextDoorReveal({ chainFromReveal: true });
       } else {
         this.session.activeFocusReveal = null;
+      }
+    }
+  }
+
+  private refreshDynamicFocusRevealTarget(reveal: FocusRevealState) {
+    const enemyTargetPrefix = "enemy:";
+    if (reveal.kind !== "robot" || !reveal.targetId?.startsWith(enemyTargetPrefix)) return;
+    const enemyId = Number(reveal.targetId.slice(enemyTargetPrefix.length));
+    if (!Number.isFinite(enemyId)) return;
+    const enemy = this.enemies.find((candidate) => candidate.id === enemyId && candidate.isAlive);
+    if (!enemy) return;
+    const target = new Vector3(enemy.position.x, enemy.position.y + this.focusRevealEnemyLookHeight(enemy), enemy.position.z);
+    reveal.targetPosition = [target.x, target.y, target.z];
+    if (reveal.cameraCut && reveal.roomId) {
+      const room = this.level.map?.rooms.find((candidate) => candidate.id === reveal.roomId) ?? null;
+      if (room) {
+        const camera = this.frameEnemyFocusRevealCamera(room, enemy, target, this.player.position);
+        reveal.cameraPosition = [camera.x, camera.y, camera.z];
       }
     }
   }
@@ -1691,6 +1774,7 @@ export class GameWorld {
     const point = new Vector3();
     let roomId: string | null = target.roomId ?? null;
     let targetId: string | null = null;
+    let focusRevealEnemy: EnemyState | null = null;
 
     const eye = new Vector3(
       this.player.position.x,
@@ -1721,8 +1805,15 @@ export class GameWorld {
     } else if (target.kind === "robot" || target.kind === "room") {
       const room = this.level.map?.rooms.find((candidate) => candidate.id === target.roomId);
       if (!room) return null;
-      point.set(room.bounds.center[0], room.bounds.center[1] + 1.0, room.bounds.center[2]);
-      targetId = room.id;
+      const focusEnemy = target.kind === "robot" ? this.focusRevealEnemyForRoom(room) : null;
+      if (focusEnemy) {
+        focusRevealEnemy = focusEnemy;
+        point.set(focusEnemy.position.x, focusEnemy.position.y + this.focusRevealEnemyLookHeight(focusEnemy), focusEnemy.position.z);
+        targetId = `enemy:${focusEnemy.id}`;
+      } else {
+        point.set(room.bounds.center[0], room.bounds.center[1] + 1.0, room.bounds.center[2]);
+        targetId = room.id;
+      }
       roomId = room.id;
     } else {
       const interaction = this.resolveFocusRevealInteraction(target, source);
@@ -1732,7 +1823,117 @@ export class GameWorld {
       roomId = roomId ?? interaction.roomId ?? null;
     }
 
+    if (target.cameraMode === "door_front" && roomId && target.kind !== "door") {
+      const room = this.level.map?.rooms.find((candidate) => candidate.id === roomId) ?? null;
+      if (room) {
+        const camera = focusRevealEnemy
+          ? this.frameEnemyFocusRevealCamera(room, focusRevealEnemy, point, eye)
+          : this.framePointFocusRevealCamera(room, point, eye);
+        return { target: point, camera, roomId, targetId, cameraCut: true };
+      }
+    }
+
     return { target: point, camera: eye, roomId, targetId };
+  }
+
+  private focusRevealEnemyForRoom(room: LevelRoomDefinition) {
+    let best: { enemy: EnemyState; score: number } | null = null;
+    for (const enemy of this.enemies) {
+      if (!enemy.isAlive) continue;
+      if (!this.enemyMatchesFocusRevealRoom(enemy, room)) continue;
+      const score = this.focusRevealEnemyPriority(enemy);
+      if (!best || score > best.score) best = { enemy, score };
+    }
+    return best?.enemy ?? null;
+  }
+
+  private enemyMatchesFocusRevealRoom(enemy: EnemyState, room: LevelRoomDefinition) {
+    if (enemy.spawnRoomId === room.id) return true;
+    if (enemy.spawnRoomId && enemy.spawnRoomId !== room.id) return false;
+    const halfX = room.bounds.size[0] * 0.5;
+    const halfZ = room.bounds.size[2] * 0.5;
+    return (
+      enemy.position.x >= room.bounds.center[0] - halfX &&
+      enemy.position.x <= room.bounds.center[0] + halfX &&
+      enemy.position.z >= room.bounds.center[2] - halfZ &&
+      enemy.position.z <= room.bounds.center[2] + halfZ
+    );
+  }
+
+  private focusRevealEnemyPriority(enemy: EnemyState) {
+    const tierScore =
+      enemy.tier === "boss"
+        ? 5000
+        : enemy.tier === "leader"
+          ? 4200
+          : enemy.tier === "elite" || enemy.archetypeId === "custodian_elite" || enemy.archetypeId === this.level.combatLimits.eliteArchetypeId
+            ? 3600
+            : 1000;
+    return tierScore + enemy.maxHealth * 0.08 - enemy.spawnAge * 0.18;
+  }
+
+  private focusRevealEnemyLookHeight(enemy: EnemyState) {
+    const scale = Math.max(0.8, enemy.visualScaleMultiplier);
+    if (this.isReclamationMotherFocusEnemy(enemy)) return 1.5 * scale;
+    if (enemy.tier === "boss") return 1.38 * scale;
+    if (enemy.tier === "leader" || enemy.tier === "elite" || enemy.archetypeId === "custodian_elite") return 1.35 * scale;
+    return 1.0 * scale;
+  }
+
+  private framePointFocusRevealCamera(
+    room: LevelRoomDefinition,
+    target: Vector3,
+    eye: Vector3,
+    desiredDistance?: number,
+    preferredFromTarget?: Vector3,
+  ) {
+    const halfX = room.bounds.size[0] * 0.5;
+    const halfZ = room.bounds.size[2] * 0.5;
+    const margin = 0.85;
+    const distance =
+      desiredDistance ?? Math.max(2.8, Math.min(5.4, Math.min(room.bounds.size[0], room.bounds.size[2]) * 0.38));
+    const fromTarget = preferredFromTarget && preferredFromTarget.lengthSq() > 0.01 ? preferredFromTarget.clone() : eye.clone().sub(target);
+    fromTarget.y = 0;
+    if (fromTarget.lengthSq() < 0.01) {
+      fromTarget.set(target.x - room.bounds.center[0], 0, target.z - room.bounds.center[2]);
+    }
+    if (fromTarget.lengthSq() < 0.01) fromTarget.set(0, 0, 1);
+    fromTarget.normalize();
+
+    const camera = target.clone().addScaledVector(fromTarget, distance);
+    camera.x = clamp(camera.x, room.bounds.center[0] - halfX + margin, room.bounds.center[0] + halfX - margin);
+    camera.z = clamp(camera.z, room.bounds.center[2] - halfZ + margin, room.bounds.center[2] + halfZ - margin);
+    camera.y = Math.max(playerConfig.cockpitHeight, target.y + 0.12);
+    return camera;
+  }
+
+  private frameEnemyFocusRevealCamera(room: LevelRoomDefinition, enemy: EnemyState, target: Vector3, eye: Vector3) {
+    return this.framePointFocusRevealCamera(
+      room,
+      target,
+      eye,
+      this.focusRevealEnemyCameraDistance(room, enemy),
+      this.focusRevealEnemyCameraDirection(enemy),
+    );
+  }
+
+  private focusRevealEnemyCameraDistance(room: LevelRoomDefinition, enemy: EnemyState) {
+    const roomSpan = Math.min(room.bounds.size[0], room.bounds.size[2]);
+    if (this.isReclamationMotherFocusEnemy(enemy)) return Math.max(2.55, Math.min(2.9, roomSpan * 0.44));
+    if (enemy.tier === "boss") return Math.max(3.35, Math.min(4.4, roomSpan * 0.68));
+    if (enemy.tier === "leader" || enemy.tier === "elite" || enemy.archetypeId === "custodian_elite") {
+      return Math.max(2.2, Math.min(2.55, roomSpan * 0.38));
+    }
+    return Math.max(2.35, Math.min(2.8, roomSpan * 0.4));
+  }
+
+  private focusRevealEnemyCameraDirection(enemy: EnemyState) {
+    if (enemy.tier !== "boss") return undefined;
+    return new Vector3(Math.sin(enemy.rotationY), 0, Math.cos(enemy.rotationY));
+  }
+
+  private isReclamationMotherFocusEnemy(enemy: EnemyState) {
+    return enemy.modelKey === RECLAMATION_MOTHER_BOSS_MODEL_KEY;
   }
 
   private focusRevealDoorCameraRoomId(door: LevelDoorDefinition, requestedRoomId: string | null, doorMode?: DoorRevealMode) {
@@ -1961,6 +2162,11 @@ export class GameWorld {
     if (!this.routeSwitchStateHasKey(switchId, stateId)) {
       this.setSpawnWarning({ label: definition.label ? this.configText(definition.label) : "路由台", detail: "缺少授权钥匙。" }, 1.35);
       return false;
+    }
+    if (this.session.mode === "routeSwitch" && this.session.activeRouteSwitchId === definition.id) {
+      this.session.activeRouteSwitchId = null;
+      this.setMode("playing");
+      this.platform.reportGameplayStart();
     }
     return this.applySwitchState(definition, state);
   }
@@ -2539,6 +2745,29 @@ export class GameWorld {
     return true;
   }
 
+  startWaveImmediately(waveId: string, options?: { repeat?: boolean }) {
+    const wave = waveById(this.level, waveId);
+    if (!wave) return false;
+    if (this.session.activeWaveId === waveId) return false;
+    if (!options?.repeat && this.session.mapProgress.triggeredWaveIds.includes(waveId)) return false;
+    if (!options?.repeat && this.session.mapProgress.completedWaveIds.includes(waveId)) return false;
+    if (this.session.activeWaveId) {
+      const activeWave = waveById(this.level, this.session.activeWaveId);
+      if (!wave.interruptsActiveWave && !activeWave?.nonBlocking) return false;
+    }
+
+    this.session.pendingWaveStarts = this.session.pendingWaveStarts.filter((pending) => pending.waveId !== waveId);
+    if (options?.repeat) {
+      removeValue(this.session.mapProgress.triggeredWaveIds, waveId);
+      removeValue(this.session.mapProgress.completedWaveIds, waveId);
+    }
+    startWaveNow(this, wave, { preserveSpawnPositions: true });
+    for (const enemy of this.enemies) {
+      if (enemy.waveId === waveId && enemy.isAlive) enemy.spawnAge = Math.max(enemy.spawnAge, 0.5);
+    }
+    return true;
+  }
+
   dispatchObjectiveEvent(event: ObjectiveEvent) {
     this.objectiveEvents.push({ ...event });
 
@@ -2635,7 +2864,13 @@ export class GameWorld {
         }
         break;
       case "start_wave":
-        this.queueWaveStart(action.waveId, action.delay ?? 0, source, { repeat: action.repeat });
+        if (action.immediate) {
+          if (!this.startWaveImmediately(action.waveId, { repeat: action.repeat })) {
+            this.queueWaveStart(action.waveId, action.delay ?? 0, source, { repeat: action.repeat });
+          }
+        } else {
+          this.queueWaveStart(action.waveId, action.delay ?? 0, source, { repeat: action.repeat });
+        }
         break;
       case "unlock_door":
         this.unlockConfiguredDoor(action.doorId);
@@ -3019,7 +3254,9 @@ export class GameWorld {
         detail: `${coreCell.pickupDetailPrefix} ${this.session.coreCells}/${coreCell.maxHeld}`,
         rarity: "epic",
       }, 1.45);
-      this.emitAudio("ui_upgrade_select", { intensity: 1.05, position: pickup.position });
+      this.addEffect("coreSpark", pickup.position, this.player.aimDirection, 0.2, 0.94);
+      this.applyCameraImpact(0.07, 0.26, 0.035, 0.07);
+      this.emitAudio("pickup_core_cell", { intensity: 1.05, position: pickup.position });
       return;
     }
     if (pickup.type === "breachMissile") {
@@ -3032,7 +3269,8 @@ export class GameWorld {
         rarity: "epic",
       }, 1.45);
       this.addEffect("coreSpark", pickup.position, this.player.aimDirection, 0.28, 1.12);
-      this.emitAudio("ui_upgrade_select", { intensity: 1.12, position: pickup.position });
+      this.applyCameraImpact(0.1, 0.38, 0.05, 0.08);
+      this.emitAudio("pickup_breach_missile", { intensity: 1.12, position: pickup.position });
       return;
     }
 
@@ -3044,8 +3282,10 @@ export class GameWorld {
       detail: `生命 +${Math.round(healAmount)}`,
       rarity: healAmount >= this.level.pickups.repairKit.healAmount ? "rare" : "common",
     }, 1.25);
+    this.addEffect("coreSpark", pickup.position, this.player.aimDirection, 0.18, 0.78 + Math.min(0.32, healAmount / this.player.maxHealth));
     this.addEffect("dashBurst", pickup.position, this.player.aimDirection, 0.22, 1.05);
-    this.emitAudio("ui_upgrade_select", { intensity: 0.72, position: pickup.position });
+    this.applyCameraImpact(0.055, 0.18, 0.026, 0.055);
+    this.emitAudio("pickup_repair_kit", { intensity: 0.82 + Math.min(0.22, healAmount / this.player.maxHealth), position: pickup.position });
   }
 
   shouldCollectPickup(pickup: PickupState) {
@@ -3172,7 +3412,13 @@ export class GameWorld {
     deployed.flightAge = 0;
     deployed.armed = false;
     this.setRewardPulse(ability.throwReward, 0.95);
-    this.addEffect("dashBurst", start, velocity.clone().setY(0).normalize(), 0.22, 1.35);
+    const throwDirection = velocity.clone().setY(0).normalize();
+    if (ability.id === "breachMissile") {
+      this.addEffect("breachTrail", start.clone().addScaledVector(throwDirection, -0.18), throwDirection, 0.24, 2.35);
+      this.addEffect("breachPierce", start.clone().addScaledVector(throwDirection, 0.26), throwDirection, 0.18, 1.8);
+    } else {
+      this.addEffect("dashBurst", start, throwDirection, 0.22, 1.35);
+    }
     this.emitAudio(ability.throwAudioKey, { intensity: 1.05, position: start });
     return true;
   }
@@ -3191,8 +3437,12 @@ export class GameWorld {
     const velocity = new Vector3().fromArray(deployed.velocity ?? [0, 0, 0]);
     velocity.y -= ability.throwGravity * delta;
     const next = previous.clone().addScaledVector(velocity, delta);
-    const flightAge = (deployed.flightAge ?? 0) + delta;
+    const previousFlightAge = deployed.flightAge ?? 0;
+    const flightAge = previousFlightAge + delta;
     deployed.flightAge = flightAge;
+    if (ability.id === "breachMissile") {
+      this.addBreachMissileFlightEffects(previous, next, velocity, previousFlightAge, flightAge);
+    }
 
     const enemyImpact = this.findThrownUltimateEnemyImpact(previous, next, ability.throwCollisionRadius);
     if (enemyImpact && flightAge > 0.025) {
@@ -3214,7 +3464,11 @@ export class GameWorld {
       deployed.velocity = [0, 0, 0];
       deployed.age = 0;
       deployed.armed = true;
-      this.addEffect("hitSpark", next, this.resolveUltimateForwardDirection(), 0.16, 1.1);
+      if (ability.id === "breachMissile") {
+        this.addEffect("breachPierce", next, this.resolveUltimateForwardDirection(), 0.16, 1.45);
+      } else {
+        this.addEffect("hitSpark", next, this.resolveUltimateForwardDirection(), 0.16, 1.1);
+      }
       this.emitAudio("ui_confirm", { intensity: 0.72, position: next });
       return;
     }
@@ -3226,6 +3480,25 @@ export class GameWorld {
       this.session.deployedUltimate = null;
       this.detonateUltimateAt(next, ability, true);
     }
+  }
+
+  private addBreachMissileFlightEffects(
+    previous: Vector3,
+    next: Vector3,
+    velocity: Vector3,
+    previousFlightAge: number,
+    flightAge: number,
+  ) {
+    const trailStep = 0.045;
+    if (Math.floor(previousFlightAge / trailStep) === Math.floor(flightAge / trailStep)) return;
+    const forward = velocity.clone().setY(0);
+    if (forward.lengthSq() < 0.001) forward.copy(this.resolveUltimateForwardDirection());
+    forward.normalize();
+    const side = new Vector3(-forward.z, 0, forward.x);
+    const midpoint = previous.clone().lerp(next, 0.58);
+    midpoint.y += 0.02;
+    this.addEffect("breachTrail", midpoint.clone().addScaledVector(forward, -0.28), forward, 0.18, 2.25);
+    this.addEffect("breachTrail", midpoint.clone().addScaledVector(side, 0.08), forward.clone().addScaledVector(side, 0.2).normalize(), 0.13, 1.62);
   }
 
   private findThrownUltimateEnemyImpact(start: Vector3, end: Vector3, collisionRadius: number) {
@@ -3295,9 +3568,26 @@ export class GameWorld {
     const side = new Vector3(-forward.z, 0, forward.x);
     if (side.lengthSq() < 0.001) side.set(1, 0, 0);
     side.normalize();
-    const visualScale = ability.id === "breachMissile"
-      ? Math.max(0.62, Math.min(1, ability.blastRadius / ultimateAbilityConfig.coreBomb.blastRadius))
-      : 1;
+    if (ability.id === "breachMissile") {
+      this.addBreachMissileImpactEffects(center, forward, side);
+    } else {
+      this.addCoreBombBlastEffects(center, forward, side);
+    }
+    this.emitAudio(ability.detonateAudioKey, { intensity: 1.85, position });
+    this.applyCameraImpact(0.94 + Math.min(hitCount, 4) * 0.07, 6.2, 0.72, 0.42);
+    this.triggerRenderSurge(0.9, 0.58);
+    this.camera.shakeSeed += 1;
+    if (showReward) {
+      this.setRewardPulse(ability.detonateReward, 1.15);
+    }
+    if (this.upgrades.shockRepairPing && hitCount > 0) {
+      const heal = Math.min(this.player.maxHealth - this.player.health, hitCount * this.upgrades.shockHealPerHit);
+      this.player.health = Math.min(this.player.maxHealth, this.player.health + heal);
+    }
+  }
+
+  private addCoreBombBlastEffects(center: Vector3, forward: Vector3, side: Vector3) {
+    const visualScale = 1;
     this.addEffect("shockwave", center, forward, 0.92 * visualScale, 4.25 * visualScale);
     this.addEffect("shockwave", center.clone().addScaledVector(forward, 0.34 * visualScale), forward, 0.68 * visualScale, 3.15 * visualScale);
     this.addEffect("shockwave", center.clone().addScaledVector(side, 0.26 * visualScale), side, 0.48 * visualScale, 2.15 * visualScale);
@@ -3320,20 +3610,6 @@ export class GameWorld {
     }
     this.addEffect("dashBurst", center.clone().addScaledVector(forward, 0.68 * visualScale), forward, 0.44 * visualScale, 3.05 * visualScale);
     this.addEffect("dashBurst", center.clone().addScaledVector(forward, -0.5 * visualScale), forward.clone().multiplyScalar(-1), 0.4 * visualScale, 2.65 * visualScale);
-    if (ability.id === "breachMissile") {
-      this.addBreachMissileImpactEffects(center, forward, side);
-    }
-    this.emitAudio(ability.detonateAudioKey, { intensity: 1.85, position });
-    this.applyCameraImpact(0.94 + Math.min(hitCount, 4) * 0.07, 6.2, 0.72, 0.42);
-    this.triggerRenderSurge(0.9, 0.58);
-    this.camera.shakeSeed += 1;
-    if (showReward) {
-      this.setRewardPulse(ability.detonateReward, 1.15);
-    }
-    if (this.upgrades.shockRepairPing && hitCount > 0) {
-      const heal = Math.min(this.player.maxHealth - this.player.health, hitCount * this.upgrades.shockHealPerHit);
-      this.player.health = Math.min(this.player.maxHealth, this.player.health + heal);
-    }
   }
 
   private addBreachMissileImpactEffects(center: Vector3, forward: Vector3, side: Vector3) {
@@ -3345,10 +3621,13 @@ export class GameWorld {
     missileSide.normalize();
 
     const focusOrigin = center.clone().addScaledVector(missileForward, -0.28);
-    this.addEffect("shockwave", center.clone().addScaledVector(missileForward, 0.26), missileForward, 0.36, 2.85);
-    this.addEffect("dashBurst", focusOrigin, missileForward, 0.34, 3.4);
-    this.addEffect("dashBurst", center.clone().addScaledVector(missileForward, 0.58), missileForward, 0.28, 3.05);
-    for (let index = 0; index < 8; index += 1) {
+    this.addEffect("breachShock", center.clone().addScaledVector(missileForward, 0.24), missileForward, 0.3, 3.55);
+    this.addEffect("breachShock", center.clone().addScaledVector(missileForward, -0.12), missileForward, 0.24, 2.75);
+    this.addEffect("breachPierce", focusOrigin, missileForward, 0.26, 3.75);
+    this.addEffect("breachPierce", center.clone().addScaledVector(missileForward, 0.62), missileForward, 0.2, 3.15);
+    this.addEffect("breachTrail", center.clone().addScaledVector(missileForward, -0.54), missileForward, 0.22, 2.65);
+    this.addEffect("breachTrail", center.clone().addScaledVector(missileForward, -0.82), missileForward, 0.18, 2.15);
+    for (let index = 0; index < 10; index += 1) {
       const lateral = ((index % 2 === 0 ? 1 : -1) * (0.04 + (index % 4) * 0.035));
       const lift = 0.1 + (index % 3) * 0.09;
       const sparkPosition = focusOrigin
@@ -3361,7 +3640,7 @@ export class GameWorld {
         .addScaledVector(missileSide, lateral * 2.4)
         .setY(0.2 + (index % 2) * 0.12)
         .normalize();
-      this.addEffect("coreSpark", sparkPosition, sparkDirection, 0.24 + index * 0.015, 1.9 + index * 0.12);
+      this.addEffect("breachPierce", sparkPosition, sparkDirection, 0.2 + index * 0.012, 1.95 + index * 0.1);
     }
   }
 
@@ -4894,7 +5173,7 @@ function pointInRoomBounds(x: number, z: number, room: LevelRoomDefinition) {
 
 function readRuntimeDebugOptions(): RuntimeDebugOptions {
   if (typeof window === "undefined") {
-    return { qaPlaythrough: false, noPlayerDamage: false };
+    return { qaPlaythrough: false, noPlayerDamage: false, physicsMode: "legacy", physicsDualRun: false };
   }
 
   const params = new URLSearchParams(window.location.search);
@@ -4909,5 +5188,7 @@ function readRuntimeDebugOptions(): RuntimeDebugOptions {
   return {
     qaPlaythrough,
     noPlayerDamage: qaPlaythrough || (localQaAllowed && params.get("noDamage") === "1"),
+    physicsMode: params.get("physics") === "rapier" ? "rapier" : "legacy",
+    physicsDualRun: params.get("physicsDual") === "1" || params.get("physicsParity") === "1",
   };
 }

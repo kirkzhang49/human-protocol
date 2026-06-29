@@ -21,6 +21,7 @@ export interface PropCollisionProxy {
   modelKey: string;
   position: Vec3Tuple;
   halfSize: Vec3Tuple;
+  yaw?: number;
   enemyNavigation?: "solid" | "soft" | "ignore";
 }
 
@@ -78,6 +79,7 @@ export function resolvePropCollisionProxy(prop: LevelMapPropDefinition): PropCol
   const offset = explicitCollider
     ? (collider.offset ?? [0, 0, 0])
     : rotateOffsetY(scaleOffset(collider.offset ?? [0, 0, 0], prop.scale), yaw);
+  const enemyNavigation = enemyNavigationForProp(prop, collider);
 
   return {
     id: prop.id,
@@ -88,7 +90,8 @@ export function resolvePropCollisionProxy(prop: LevelMapPropDefinition): PropCol
       prop.position[2] + offset[2],
     ],
     halfSize,
-    ...(enemyNavigationForProp(prop, collider) !== "solid" ? { enemyNavigation: enemyNavigationForProp(prop, collider) } : {}),
+    ...(explicitCollider && Math.abs(yaw) > 0.000001 ? { yaw } : {}),
+    ...(enemyNavigation !== "solid" ? { enemyNavigation } : {}),
   };
 }
 

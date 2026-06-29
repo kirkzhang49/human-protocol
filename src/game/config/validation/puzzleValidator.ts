@@ -5,9 +5,10 @@ import { addIssue as add, type ConfigValidationIssue } from "./issues";
 import { validateMaterialKey, validateVisualKey } from "./mapValidator";
 import { createLevelReferenceSets, type LevelReferenceSets } from "./referenceSets";
 import { validateRuntimeEventAction } from "./runtimeEventValidator";
-
-const MAX_WALL_SWITCHES_PER_LEVEL = 4;
-const MAX_WALL_SWITCH_CONTROLLERS_PER_DOOR = 2;
+import {
+  MAX_WALL_DOOR_SWITCH_CONTROLLERS_PER_DOOR as MAX_WALL_SWITCH_CONTROLLERS_PER_DOOR,
+  MAX_WALL_DOOR_SWITCHES_PER_LEVEL as MAX_WALL_SWITCHES_PER_LEVEL,
+} from "../shared/wallDoorSwitchLimits";
 
 export function validatePuzzles(
   level: LevelDefinition,

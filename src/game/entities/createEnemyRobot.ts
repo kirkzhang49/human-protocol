@@ -8,6 +8,8 @@ import {
 import type { EnemyState } from "./EnemyState";
 
 const dormantPosition = new Vector3(0, 0, -4);
+const RECLAMATION_MOTHER_MODEL_KEY = "hp_enemy_reclamation_mother_final_horror";
+const RECLAMATION_MOTHER_SCALE_MULTIPLIER = 0.83;
 
 export interface EnemySpawnRuntimeOptions {
   spawnRoomId?: string;
@@ -25,7 +27,7 @@ export function createEnemyRobot(
   const archetype = enemyArchetypes[archetypeId];
   const tier = resolveEnemyTierConfig(tierConfig);
   const maxHealth = Math.max(1, Math.round(archetype.maxHealth * tier.healthMultiplier));
-  const visualScaleMultiplier = tier.visual.scaleMultiplier * (enemyArchetypeVisualScaleMultipliers[archetypeId] ?? 1);
+  const visualScaleMultiplier = enemyVisualScaleMultiplier(archetypeId, tier);
 
   return {
     id,
@@ -82,7 +84,7 @@ export function resetEnemyRobot(
   const archetype = enemyArchetypes[archetypeId];
   const tier = resolveEnemyTierConfig(tierConfig);
   const maxHealth = Math.max(1, Math.round(archetype.maxHealth * tier.healthMultiplier));
-  const visualScaleMultiplier = tier.visual.scaleMultiplier * (enemyArchetypeVisualScaleMultipliers[archetypeId] ?? 1);
+  const visualScaleMultiplier = enemyVisualScaleMultiplier(archetypeId, tier);
 
   enemy.archetypeId = archetypeId;
   enemy.tier = tier.tier;
@@ -172,4 +174,11 @@ function resolveTextureAtlasKey(
   if (archetypeId === "custodian_elite") return "custodian_boss";
   if (archetypeId === "clamp_bot") return "clamp_bot";
   return "repair_drone";
+}
+
+function enemyVisualScaleMultiplier(archetypeId: EnemyArchetypeId, tier: ReturnType<typeof resolveEnemyTierConfig>) {
+  const authoredScale = tier.visual.modelKey === RECLAMATION_MOTHER_MODEL_KEY
+    ? RECLAMATION_MOTHER_SCALE_MULTIPLIER
+    : tier.visual.scaleMultiplier;
+  return authoredScale * (enemyArchetypeVisualScaleMultipliers[archetypeId] ?? 1);
 }

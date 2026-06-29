@@ -345,7 +345,10 @@ function effectTypeValue(type: WorldEffect["type"]) {
   if (type === "armorSpark") return 2.35;
   if (type === "coreSpark") return 2.45;
   if (type === "dashBurst") return 3;
+  if (type === "breachTrail") return 3.15;
   if (type === "staggerBurst") return 3.4;
+  if (type === "breachPierce") return 4.05;
+  if (type === "breachShock") return 4.25;
   if (type === "dangerTelegraph") return 6;
   if (type === "shockwave") return 5;
   return 4;
@@ -356,6 +359,9 @@ function colorForEffect(effect: WorldEffect): [number, number, number] {
   if (effect.type === "armorSpark") return [1.0, 0.78, 0.36];
   if (effect.type === "coreSpark") return [0.70, 0.98, 1.0];
   if (effect.type === "dashBurst") return [0.48, 0.76, 0.82];
+  if (effect.type === "breachTrail") return [0.34, 0.98, 1.0];
+  if (effect.type === "breachPierce") return [0.90, 1.0, 0.94];
+  if (effect.type === "breachShock") return [0.46, 0.94, 1.0];
   if (effect.type === "staggerBurst") return [1.0, 0.82, 0.26];
   if (effect.type === "dangerTelegraph") return [1.0, 0.16, 0.08];
   if (effect.type === "shockwave") return [0.42, 0.92, 1.0];

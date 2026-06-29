@@ -1,9 +1,11 @@
-import type { LevelDoorDefinition, LevelMapConfig, LevelObjectiveGuidanceDefinition } from "../config/schema/levelConfig";
+import type { LevelDoorDefinition, LevelInteractionDefinition, LevelMapConfig, LevelObjectiveGuidanceDefinition } from "../config/schema/levelConfig";
 import type { GameWorld } from "./GameWorld";
 
 const BALANCED_NEAR_ROOM_DISTANCE_SQ = 12 * 12;
 const HIGH_NEAR_ROOM_DISTANCE_SQ = 14 * 14;
 const DOOR_NEAR_PLAYER_DISTANCE_SQ = 22 * 22;
+const PUZZLE_INTERACTION_REVEAL_RISE_SECONDS = 2.5;
+const DEFAULT_PUZZLE_INTERACTION_REVEAL_DEPTH = 1.8;
 
 interface RenderVisibilityMapCache {
   adjacentRoomIds: Map<string, Set<string>>;
@@ -44,12 +46,45 @@ export function isDoorRenderVisible(world: GameWorld, door: LevelDoorDefinition)
   return dx * dx + dz * dz <= DOOR_NEAR_PLAYER_DISTANCE_SQ;
 }
 
+export function isInteractionVisualVisible(
+  world: Pick<GameWorld, "activeSwitchStateId" | "session">,
+  interaction: Pick<LevelInteractionDefinition, "id" | "requiresSwitchState">,
+) {
+  const required = interaction.requiresSwitchState;
+  if (!required) return true;
+  if (world.activeSwitchStateId(required.switchId) === required.stateId) return true;
+  if ((world.session.mapProgress?.activatedSwitchIds ?? []).includes(`${required.switchId}:${required.stateId}`)) return true;
+  const reveal = world.session.activeFocusReveal;
+  return Boolean(reveal && reveal.kind === "puzzle" && reveal.targetId === interaction.id);
+}
+
+export function interactionFocusRevealRiseOffsetY(
+  world: Pick<GameWorld, "session">,
+  interaction: Pick<LevelInteractionDefinition, "id">,
+  revealDepth = DEFAULT_PUZZLE_INTERACTION_REVEAL_DEPTH,
+) {
+  const reveal = world.session.activeFocusReveal;
+  if (!reveal || reveal.kind !== "puzzle" || reveal.targetId !== interaction.id) return 0;
+  const progress = clamp01(reveal.elapsed / PUZZLE_INTERACTION_REVEAL_RISE_SECONDS);
+  const eased = smootherstep(progress);
+  return -Math.max(0.1, revealDepth) * (1 - eased);
+}
+
 export function isRoomAdjacentToCurrent(world: GameWorld, roomId: string | undefined) {
   if (!roomId) return true;
   const map = world.level.map;
   const currentRoomId = world.session.mapProgress.currentRoomId;
   if (!map || !currentRoomId) return true;
   return roomId === currentRoomId || isRoomAdjacentTo(map, currentRoomId, roomId);
+}
+
+function clamp01(value: number) {
+  return Math.max(0, Math.min(1, value));
+}
+
+function smootherstep(value: number) {
+  const t = clamp01(value);
+  return t * t * t * (t * (t * 6 - 15) + 10);
 }
 
 export function roomCenterDistanceSqToPlayer(world: GameWorld, map: LevelMapConfig, roomId: string | undefined) {

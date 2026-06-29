@@ -9,6 +9,8 @@ function createWorld(overrides: any = {}) {
       mapProgress: {
         completedInteractionIds: [],
         collectedKeyItemIds: [],
+        activatedSwitchIds: [],
+        activeSwitchStateIds: {},
       },
     },
     input: { interactPressed: false },
@@ -585,5 +587,48 @@ describe("InteractionSystem article interactions", () => {
     new InteractionSystem().update(world as any);
 
     expect(prompt).toBeNull();
+  });
+});
+
+describe("InteractionSystem route-gated interactions", () => {
+  it("keeps a route-revealed interaction usable after another route output becomes active", () => {
+    let prompt: any = null;
+    const interaction = {
+      id: "route_puzzle_panel",
+      type: "puzzle",
+      roomId: "puzzle_room",
+      position: [0, 0, 0],
+      yaw: 0,
+      radius: 1.6,
+      visualKey: "puzzle_console_circuit_grid",
+      label: "路由谜题台",
+      requiresSwitchState: { switchId: "route_console", stateId: "out_1_puzzle" },
+    };
+    const world = createWorld({
+      setInteractionPrompt: (value: any) => {
+        prompt = value;
+      },
+      activeSwitchStateId: (switchId: string) => (switchId === "route_console" ? "out_2_wave" : null),
+      session: {
+        mapProgress: {
+          activatedSwitchIds: ["route_console:out_1_puzzle", "route_console:out_2_wave"],
+          activeSwitchStateIds: { route_console: "out_2_wave" },
+        },
+      },
+      level: {
+        map: {
+          interactions: [interaction],
+          keyItems: [],
+          doors: [],
+        },
+      },
+    });
+
+    new InteractionSystem().update(world as any);
+
+    expect(prompt).toMatchObject({
+      id: "route_puzzle_panel",
+      canInteract: true,
+    });
   });
 });

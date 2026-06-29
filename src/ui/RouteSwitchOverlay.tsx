@@ -166,19 +166,15 @@ export function RouteSwitchOverlay({ world }: RouteSwitchOverlayProps) {
       setSelectedId(option.stateId);
       setPhase("rotating");
       setPointerAngle(angleForOption(option, outputs));
-      const switchId = view.switchId;
-      const t1 = window.setTimeout(() => {
-        const committed = world.chooseRouteSwitchState(switchId, option.stateId);
-        clearTimers();
-        if (committed) {
-          // The chosen output already started the 3D target reveal; drop the 2D
-          // panel immediately instead of holding it for seconds over the reveal.
-          if (world.session.mode === "routeSwitch") world.closeRouteSwitch();
-        } else {
-          setPhase("select");
-        }
-      }, ROTATE_MS);
-      timers.current.push(t1);
+      const committed = world.chooseRouteSwitchState(view.switchId, option.stateId);
+      clearTimers();
+      if (committed) {
+        // The chosen output starts the 3D target reveal; drop the 2D panel in the
+        // same click so it never rides behind the facility camera cut.
+        if (world.session.mode === "routeSwitch") world.closeRouteSwitch();
+        return;
+      }
+      setPhase("select");
     },
     [view, phase, outputs, world, clearTimers],
   );

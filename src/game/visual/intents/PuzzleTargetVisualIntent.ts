@@ -41,11 +41,9 @@ export function isFreePuzzleOrbModelKey(modelKey: string | null | undefined): bo
 }
 
 export function puzzleTargetVisualModelKey(target: Pick<LevelPuzzleTargetDefinition, "visualKey" | "colorKey" | "anchorPropId">): string | null {
-  const freeColor = puzzleOrbColorForVisualKey(target.visualKey, target.colorKey);
-  if (!target.anchorPropId && freeColor && (target.visualKey?.startsWith("puzzle_orb_") || target.colorKey)) {
-    return freePuzzleOrbModelKeyForColor(freeColor);
-  }
-  return puzzleOrbModelKeyForVisualKey(target.visualKey, target.colorKey);
+  const color = puzzleOrbColorForVisualKey(target.visualKey, target.colorKey);
+  if (!color) return null;
+  return puzzleOrbModelKeys[color] ?? freePuzzleOrbModelKeyForColor(color);
 }
 
 function puzzleOrbColorForVisualKey(visualKey: string | undefined, colorKey?: LevelPuzzleColorKey): LevelPuzzleColorKey | null {

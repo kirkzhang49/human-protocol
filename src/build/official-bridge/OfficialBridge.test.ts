@@ -314,7 +314,7 @@ describe("official builder bridge", () => {
       lightPosition: [14.5, 1.5499999999999998, 1.5],
     });
 
-    const freeTarget = colorPuzzleTargetFromBuilderComponent(
+    const unanchoredTarget = colorPuzzleTargetFromBuilderComponent(
       {
         id: "free_blue",
         role: "orb_blue",
@@ -323,9 +323,9 @@ describe("official builder bridge", () => {
       },
       "blue",
     );
-    expect(resolvePuzzleTargetVisualIntent(freeTarget)).toMatchObject({
+    expect(resolvePuzzleTargetVisualIntent(unanchoredTarget)).toMatchObject({
       colorKey: "blue",
-      modelKey: "puzzle_orb_free_blue",
+      modelKey: "age_museum_puzzle_orb_blue",
       visualKey: "puzzle_orb_blue",
     });
   });

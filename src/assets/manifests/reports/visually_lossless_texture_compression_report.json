@@ -1,0 +1,329 @@
+{
+  "generatedAt": "2026-06-28T21:56:09.799Z",
+  "mode": "write",
+  "reportPath": "src/assets/manifests/reports/visually_lossless_texture_compression_report.json",
+  "roots": [
+    "src/assets/textures/environment/level03"
+  ],
+  "write": true,
+  "audit": false,
+  "overwrite": false,
+  "includeSourceArchives": false,
+  "force": false,
+  "maxFiles": 12,
+  "scannedFiles": 26,
+  "skippedFiles": 0,
+  "beforeBytes": 56775886,
+  "afterBytes": 8761754,
+  "plannedFiles": 0,
+  "acceptedFiles": 10,
+  "rejectedFiles": 2,
+  "writtenFiles": 10,
+  "savedBytes": 48014132,
+  "savedRatio": 0.8456782515027594,
+  "files": [
+    {
+      "inputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_tile_skin_v2.png",
+      "outputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_tile_skin_v2.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 7268397,
+      "afterBytes": 1637930,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 1.1307136217753093,
+        "maxAbsoluteError": 9,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9706294536590576
+      },
+      "accepted": true,
+      "savedBytes": 5630467,
+      "savedRatio": 0.7746504490605013
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v2.png",
+      "outputPath": "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v2.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 7114933,
+      "afterBytes": 1233902,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 1.2398143609364827,
+        "maxAbsoluteError": 9,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9786803722381592
+      },
+      "accepted": true,
+      "savedBytes": 5881031,
+      "savedRatio": 0.8265757386612074
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_tile_skin_v3.png",
+      "outputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_tile_skin_v3.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 6891110,
+      "afterBytes": 1649694,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 1.0560033321380615,
+        "maxAbsoluteError": 9,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9416718482971191
+      },
+      "accepted": true,
+      "savedBytes": 5241416,
+      "savedRatio": 0.7606054757506411
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v3.png",
+      "outputPath": "src/assets/textures/environment/level03/level03_image2_museum_ceiling_grid_skin_v3.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 6042586,
+      "afterBytes": 948006,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 1.0619392395019531,
+        "maxAbsoluteError": 8,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9356956481933594
+      },
+      "accepted": true,
+      "savedBytes": 5094580,
+      "savedRatio": 0.8431125349312364
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/image2-floor-variants-v7/level03_image2_museum_floor_c_dark_charcoal_route_v7.png",
+      "outputPath": "src/assets/textures/environment/level03/image2-floor-variants-v7/level03_image2_museum_floor_c_dark_charcoal_route_v7.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 4544833,
+      "afterBytes": 396020,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 0.8401149113972982,
+        "maxAbsoluteError": 8,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9444139003753662
+      },
+      "accepted": true,
+      "savedBytes": 4148813,
+      "savedRatio": 0.9128636849802843
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/image2-floor-variants-v7/level03_image2_museum_floor_d_black_titanium_stone_v7.png",
+      "outputPath": "src/assets/textures/environment/level03/image2-floor-variants-v7/level03_image2_museum_floor_d_black_titanium_stone_v7.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 4453492,
+      "afterBytes": 392464,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 0.8296918074289957,
+        "maxAbsoluteError": 9,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9433958530426025
+      },
+      "accepted": true,
+      "savedBytes": 4061028,
+      "savedRatio": 0.9118749960704993
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_premium_stone_skin_v6.png",
+      "outputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_premium_stone_skin_v6.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 4285657,
+      "afterBytes": 409634,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 0.8698648611704508,
+        "maxAbsoluteError": 9,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9492900371551514
+      },
+      "accepted": true,
+      "savedBytes": 3876023,
+      "savedRatio": 0.9044174557133247
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/image2-floor-variants-v7/level03_image2_museum_floor_b_graphite_brass_panel_v7.png",
+      "outputPath": "src/assets/textures/environment/level03/image2-floor-variants-v7/level03_image2_museum_floor_b_graphite_brass_panel_v7.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 3814702,
+      "afterBytes": 328366,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 0.774986982345581,
+        "maxAbsoluteError": 8,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.8774049282073975
+      },
+      "accepted": true,
+      "savedBytes": 3486336,
+      "savedRatio": 0.9139209301277007
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/level03_image2_museum_ceiling_warm_panel_skin_v6.png",
+      "outputPath": "src/assets/textures/environment/level03/level03_image2_museum_ceiling_warm_panel_skin_v6.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 3373052,
+      "afterBytes": 204908,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 1.0674609343210857,
+        "maxAbsoluteError": 9,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9565911293029785
+      },
+      "accepted": true,
+      "savedBytes": 3168144,
+      "savedRatio": 0.9392514553585299
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/image2-floor-variants-v7/level03_image2_museum_floor_a_warm_black_stone_v7.png",
+      "outputPath": "src/assets/textures/environment/level03/image2-floor-variants-v7/level03_image2_museum_floor_a_warm_black_stone_v7.webp",
+      "kind": "color",
+      "action": "written",
+      "beforeBytes": 3313600,
+      "afterBytes": 295260,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 4194304,
+        "meanAbsoluteError": 0.7603881359100342,
+        "maxAbsoluteError": 7,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9239790439605713
+      },
+      "accepted": true,
+      "savedBytes": 3018340,
+      "savedRatio": 0.9108944954128441
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_premium_stone_source_v6.png",
+      "outputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_premium_stone_source_v6.webp",
+      "kind": "color",
+      "action": "rejected",
+      "beforeBytes": 2883072,
+      "afterBytes": 650446,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 1572516,
+        "meanAbsoluteError": 1.330829914184233,
+        "maxAbsoluteError": 24,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.9822793535964022
+      },
+      "accepted": false,
+      "reason": "pixel-error-too-high",
+      "savedBytes": 2232626,
+      "savedRatio": 0.7743913436778548
+    },
+    {
+      "inputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_source_variant_a_v6.png",
+      "outputPath": "src/assets/textures/environment/level03/level03_image2_museum_floor_source_variant_a_v6.webp",
+      "kind": "color",
+      "action": "rejected",
+      "beforeBytes": 2790452,
+      "afterBytes": 615124,
+      "encoder": {
+        "format": "webp",
+        "quality": 96,
+        "effort": 6,
+        "lossless": false,
+        "nearLossless": false
+      },
+      "metrics": {
+        "totalPixels": 1572516,
+        "meanAbsoluteError": 1.3081318939415136,
+        "maxAbsoluteError": 26,
+        "alphaMaxAbsoluteError": 0,
+        "changedPixelRatio": 0.979542338519926
+      },
+      "accepted": false,
+      "reason": "pixel-error-too-high",
+      "savedBytes": 2175328,
+      "savedRatio": 0.779561160700847
+    }
+  ],
+  "skipped": []
+}

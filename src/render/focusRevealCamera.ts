@@ -1,4 +1,5 @@
 import type { FocusRevealState } from "../game/core/GameMode";
+import type { Vector3 } from "three";
 
 function smoothstep(t: number) {
   const clamped = Math.max(0, Math.min(1, t));
@@ -14,10 +15,7 @@ export function focusRevealBlend(reveal: FocusRevealState): number {
   const duration = Math.max(0.001, reveal.duration);
   const elapsed = reveal.elapsed;
   if (reveal.cameraCut) {
-    if (reveal.chainToNext) return 1;
-    const outro = Math.min(0.45, duration * 0.28);
-    if (elapsed < duration - outro) return 1;
-    return smoothstep((duration - elapsed) / outro);
+    return 1;
   }
   const ramp = Math.min(0.6, duration * 0.32);
   if (elapsed < ramp) return smoothstep(elapsed / ramp);
@@ -47,7 +45,26 @@ export function focusRevealWeaponHidden(reveal: FocusRevealState | null | undefi
  * glide is intentionally gentler than normal first-person follow so the handoff
  * reads as a controlled facility camera move rather than a snap.
  */
-export function focusRevealCameraApproach(reveal: FocusRevealState | null | undefined): number {
-  if (reveal?.cameraCut) return 1_000_000;
+export function focusRevealCameraApproach(
+  reveal: FocusRevealState | null | undefined,
+  options: { snapReturnFromCameraCut?: boolean } = {},
+): number {
+  if (reveal?.cameraCut || options.snapReturnFromCameraCut) return 1_000_000;
   return reveal ? 7.5 : 18;
+}
+
+export function applyFocusRevealCameraBlend(
+  reveal: FocusRevealState | null | undefined,
+  cameraPosition: Vector3,
+  lookTarget: Vector3,
+  revealPosition: Vector3,
+  revealTarget: Vector3,
+) {
+  if (!reveal) return 0;
+  const blend = focusRevealBlend(reveal);
+  revealPosition.fromArray(reveal.cameraPosition);
+  revealTarget.fromArray(reveal.targetPosition);
+  cameraPosition.lerp(revealPosition, blend);
+  lookTarget.lerp(revealTarget, blend);
+  return blend;
 }

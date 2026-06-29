@@ -17,6 +17,7 @@ interface BuilderPlaytestPackControlsProps {
   onShowIssues?: () => void;
   /** Incrementing token from other UI surfaces that should trigger the same WebGPU playtest path. */
   playtestRequestToken?: number;
+  onAutoRepair?: () => boolean | void;
   onBeforeLaunch?: () => void;
   onStatus: (text: string) => void;
 }
@@ -61,6 +62,7 @@ export function BuilderPlaytestPackControls({
   blockedCount = 0,
   onShowIssues,
   playtestRequestToken = 0,
+  onAutoRepair,
   onBeforeLaunch,
   onStatus,
 }: BuilderPlaytestPackControlsProps) {
@@ -224,6 +226,14 @@ export function BuilderPlaytestPackControls({
     void generateDeep(true);
   };
 
+  const runFailureRepair = () => {
+    const repaired = onAutoRepair?.();
+    if (!repaired) return;
+    setFailure(null);
+    setNotice(null);
+    setPopOpen(false);
+  };
+
   useEffect(() => {
     if (!playtestRequestToken || handledRequestTokenRef.current === playtestRequestToken) return;
     handledRequestTokenRef.current = playtestRequestToken;
@@ -344,6 +354,11 @@ export function BuilderPlaytestPackControls({
             </details>
           ) : null}
           <div className="builder-pack-pop-actions">
+            {onAutoRepair ? (
+              <button type="button" onClick={runFailureRepair}>
+                {language === "en" ? "Auto-fix" : "自动修复"}
+              </button>
+            ) : null}
             <button type="button" onClick={() => void generateDeep(false)}>
               {language === "en" ? "Retry bake" : "重试烘焙"}
             </button>

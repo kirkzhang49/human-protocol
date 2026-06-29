@@ -4,8 +4,10 @@ import { createEnemyRobot } from "../../game/entities/createEnemyRobot";
 import {
   enemyModelTargetHeight,
   enemyUsesBossMaterialFinish,
+  isEnemyFocusRevealTarget,
   isEnemyOccludedForThreeOracle,
   isEnemyRoomVisibleForThreeOracle,
+  shouldKeepRawEnemyBackupDuringFocusReveal,
   shouldRenderEnemyWithThreeOracle,
 } from "./EnemyOraclePolicy";
 
@@ -87,6 +89,7 @@ describe("EnemyOraclePolicy", () => {
   it("hides oracle enemies behind blocking room obstacles", () => {
     const enemy = createEnemyRobot(8, "shield_tech", "far_room", new Vector3(0, 0, 10), 0);
     const world = {
+      session: { activeFocusReveal: null },
       player: { position: new Vector3(0, 0, 0) },
       obstacles: [
         {
@@ -101,9 +104,53 @@ describe("EnemyOraclePolicy", () => {
     expect(isEnemyOccludedForThreeOracle(world as any, enemy)).toBe(true);
   });
 
+  it("keeps the selected robot focus target visible even when the player sightline is blocked", () => {
+    const enemy = createEnemyRobot(10, "shield_tech", "far_room", new Vector3(0, 0, 10), 0);
+    const world = {
+      session: {
+        activeFocusReveal: {
+          kind: "robot",
+          targetId: `enemy:${enemy.id}`,
+          roomId: "far_room",
+        },
+      },
+      player: { position: new Vector3(0, 0, 0) },
+      obstacles: [
+        {
+          id: "wall_between_rooms",
+          visualKey: "wall",
+          position: new Vector3(0, 1, 5),
+          halfSize: new Vector3(4, 2, 0.2),
+        },
+      ],
+    };
+
+    expect(isEnemyOccludedForThreeOracle(world as any, enemy)).toBe(false);
+  });
+
+  it("keeps a Raw backup for the selected robot reveal target so the focus shot cannot be empty", () => {
+    const enemy = createEnemyRobot(11, "custodian_elite", "far_room", new Vector3(0, 0, 10), 0, {
+      tier: "boss",
+      visual: { modelKey: "hp_enemy_reclamation_mother_final_horror" },
+    });
+    const world = {
+      session: {
+        activeFocusReveal: {
+          kind: "robot",
+          targetId: `enemy:${enemy.id}`,
+          roomId: "far_room",
+        },
+      },
+    };
+
+    expect(isEnemyFocusRevealTarget(world as any, enemy)).toBe(true);
+    expect(shouldKeepRawEnemyBackupDuringFocusReveal(world as any, enemy)).toBe(true);
+  });
+
   it("keeps oracle enemies visible when no obstacle crosses the sight line", () => {
     const enemy = createEnemyRobot(9, "shield_tech", "same_room", new Vector3(0, 0, 10), 0);
     const world = {
+      session: { activeFocusReveal: null },
       player: { position: new Vector3(0, 0, 0) },
       obstacles: [
         {

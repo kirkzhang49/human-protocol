@@ -316,7 +316,28 @@ export function repairProject(project: BuilderProject): { project: BuilderProjec
     fixes.push(`「${fromRoom?.label ?? door.fromRoomId}」缺少机器人，已补 2 台维修无人机。`);
   }
 
+  next = repairRemoteRouteOutputKeys(next, fixes);
+
   return { project: next, fixes };
+}
+
+function repairRemoteRouteOutputKeys(project: BuilderProject, fixes: string[]): BuilderProject {
+  if (!project.routeSwitches?.length) return project;
+  let repairedCount = 0;
+  const routeSwitches = project.routeSwitches.map((route) => {
+    let routeChanged = false;
+    const outputs = route.outputs.map((output) => {
+      if (!output.keyRoomId || output.keyRoomId === route.roomId) return output;
+      routeChanged = true;
+      repairedCount += 1;
+      const { keyRoomId: _keyRoomId, keyPosition: _keyPosition, ...rest } = output;
+      return rest;
+    });
+    return routeChanged ? { ...route, outputs } : route;
+  });
+  if (repairedCount === 0) return project;
+  fixes.push(`已将 ${repairedCount} 个路由输出授权球复位到路由台附近，避免授权球被放在自己解锁后的区域。`);
+  return { ...project, routeSwitches };
 }
 
 function invalidDoorIds(project: BuilderProject) {

@@ -35,6 +35,7 @@ import {
   normalizeValveMatrixTimeLimit,
   valveMatrixTimeLimit,
 } from "./BuilderPuzzleCatalog";
+import { projectWithHostedRouteSwitchProp } from "./BuilderPuzzlePlacement";
 import { builderPickupCatalog, pickupEntry } from "./BuilderPickupCatalog";
 import { builderRobotPresetDefaults, isBuilderRobotPresetActive, isMuseumCuratorBossRobot } from "./BuilderRobotPresets";
 import {
@@ -117,10 +118,12 @@ import { ProjectInspector } from "./BuilderProjectInspector";
 import { roomsOverlap } from "./BuilderRoomEditing";
 import { shapeBboxSize } from "./BuilderRoomShape";
 import { SurfaceSwatch } from "./BuilderSurfaceArt";
+import { useBuilderSelection } from "./BuilderSelectionContext";
 import {
   applyToggleDoorOwnership,
   createDedicatedWallDoorSwitch,
   effectiveWallDoorSwitchStates,
+  controlledDoorIdsForWallDoorSwitch,
   primaryDoorIdForWallDoorSwitch,
   toggleStatesForWallDoorSwitch,
   wallDoorSwitchCanControlDoor,
@@ -403,7 +406,14 @@ function BuilderInspectorPanelImpl({
           onStartHostPick={onStartPuzzleHostPick}
         />
       ) : selectedRouteSwitch ? (
-        <RouteSwitchInspector project={project} routeSwitch={selectedRouteSwitch} onChange={update} onSelect={onSelect} />
+        <RouteSwitchInspector
+          project={project}
+          routeSwitch={selectedRouteSwitch}
+          onChange={update}
+          onSelect={onSelect}
+          hostPick={hostPick}
+          onStartHostPick={onStartPuzzleHostPick}
+        />
       ) : selectedWallDoorSwitch ? (
         <WallDoorSwitchInspector project={project} wallSwitch={selectedWallDoorSwitch} onChange={update} onSelect={onSelect} />
       ) : selectedRobot ? (
@@ -732,6 +742,16 @@ function DoorInspector({
   const selectedGuardRobots = selectedGuardIds.map((robotId) => project.robots.find((robot) => robot.id === robotId)).filter((robot): robot is BuilderProject["robots"][number] => Boolean(robot));
   const wallDoorSwitches = project.wallDoorSwitches ?? [];
   const selectedWallSwitch = door.wallDoorSwitchId ? wallDoorSwitches.find((wallSwitch) => wallSwitch.id === door.wallDoorSwitchId) ?? null : null;
+  const coreLockTypes = (Object.keys(builderLockLabels) as BuilderDoor["lockType"][]).filter((lockType) => lockType !== "switch_state" || door.lockType === "switch_state");
+  const wallMechanismControllers = wallDoorSwitches.filter((wallSwitch) => controlledDoorIdsForWallDoorSwitch(wallSwitch).includes(door.id));
+  const routeMechanismControllers = (project.routeSwitches ?? []).flatMap((route) =>
+    route.outputs.flatMap((output, index) =>
+      output.kind === "open_door" && output.doorId === door.id
+        ? [{ route, output, index }]
+        : [],
+    ),
+  );
+  const mechanismControllerCount = wallMechanismControllers.length + routeMechanismControllers.length;
   const toggleGuardRobot = (robotId: string) => {
     const selected = new Set(explicitGuardIds);
     const waveIds = new Set(authoredWaveIds);
@@ -790,7 +810,7 @@ function DoorInspector({
       <div className="builder-card">
         <h3>{language === "en" ? "Lock Type" : "锁类型"}</h3>
         <div className="builder-lockgrid">
-          {(Object.keys(builderLockLabels) as BuilderDoor["lockType"][]).map((lockType) => (
+          {coreLockTypes.map((lockType) => (
             <button
               key={lockType}
               type="button"
@@ -1010,6 +1030,48 @@ function DoorInspector({
           </div>
         ) : null}
       </div>
+      <div className="builder-card builder-door-control-card mechanism">
+        <div className="builder-door-control-head">
+          <h3>{language === "en" ? "Mechanism Control" : "机关控制"}</h3>
+          <span>{mechanismControllerCount}</span>
+        </div>
+        {mechanismControllerCount > 0 ? (
+          <>
+            <div className="builder-door-control-list">
+              {wallMechanismControllers.map((wallSwitch) => {
+                const states = effectiveWallDoorSwitchStates(wallSwitch);
+                const openCount = states.filter((state) => state.openDoorIds?.includes(door.id)).length;
+                const closeCount = states.filter((state) => state.closeDoorIds?.includes(door.id)).length;
+                return (
+                  <button key={wallSwitch.id} type="button" onClick={() => onSelect({ kind: "wallDoorSwitch", id: wallSwitch.id })}>
+                    <i>控</i>
+                    <strong>{wallSwitch.label}</strong>
+                    <span>{language === "en" ? `Wall switch · Open ${openCount} · Close ${closeCount}` : `墙控把手 · 开 ${openCount} · 关 ${closeCount}`}</span>
+                  </button>
+                );
+              })}
+              {routeMechanismControllers.map(({ route, output, index }) => (
+                <button key={`${route.id}:${output.id}`} type="button" onClick={() => onSelect({ kind: "routeSwitch", id: route.id })}>
+                  <i>路</i>
+                  <strong>{route.label}</strong>
+                  <span>{language === "en" ? `Output ${index + 1}: ${output.label?.trim() || "Open door"}` : `输出 ${index + 1}：${output.label?.trim() || "开门"}`}</span>
+                </button>
+              ))}
+            </div>
+            <p className="builder-hint">
+              {language === "en"
+                ? "Route consoles and wall switches are mechanism controllers: they can reopen this door only after its key, puzzle, or combat lock is satisfied."
+                : "路由台和墙控属于机关控制：它们只会在这扇门的钥匙、谜题或清怪条件满足后重新开门。"}
+            </p>
+          </>
+        ) : (
+          <InspectorHint tone="ok">
+            {language === "en"
+              ? "No mechanism currently controls this door. Drag a wall switch or bind a route-console output to add one."
+              : "目前没有机关控制这扇门。可以拖入墙控把手，或把路由台输出绑定到这扇门。"}
+          </InspectorHint>
+        )}
+      </div>
       <div className="builder-card">
         <h3>{language === "en" ? "Door Family (Look)" : "门族（外观）"}</h3>
         {isExitDoor ? (
@@ -1037,9 +1099,11 @@ function DoorInspector({
           </>
         )}
       </div>
-      {door.lockType === "puzzle_complete" ? (
-        <div className="builder-card builder-puzzle-door-card">
-          <h3>{language === "en" ? "Puzzle" : "谜题"}</h3>
+      <div className="builder-card builder-puzzle-door-card builder-door-control-card puzzle">
+        <div className="builder-door-control-head">
+          <h3>{language === "en" ? "Puzzle Control" : "谜题控制"}</h3>
+          <span>{linkedPuzzle ? 1 : 0}</span>
+        </div>
           {linkedPuzzle ? (
             <>
               <p className="builder-puzzle-chain" style={{ color: puzzleKindEntry(linkedPuzzle.kind).color }}>
@@ -1071,10 +1135,17 @@ function DoorInspector({
               </button>
             </>
           ) : (
-            <InspectorHint tone="warn">{language === "en" ? '⚠ This door has no puzzle yet — switch to the "Puzzle" tool and bind one from the catalog to this door.' : "⚠ 这扇门还没有谜题——切到「谜题」工具，从目录选一种绑到这扇门。"}</InspectorHint>
+            <InspectorHint tone={door.lockType === "puzzle_complete" ? "warn" : "ok"}>
+              {door.lockType === "puzzle_complete"
+                ? language === "en"
+                  ? 'This door is marked as puzzle-locked but has no puzzle station yet. Bind one from the Puzzle catalog.'
+                  : "这扇门标记为谜题锁，但还没有谜题台。请从「谜题」目录绑定一个。"
+                : language === "en"
+                  ? "No puzzle currently controls this door."
+                  : "目前没有谜题控制这扇门。"}
+            </InspectorHint>
           )}
-        </div>
-      ) : null}
+      </div>
     </div>
   );
 }
@@ -1240,6 +1311,7 @@ function PuzzleInspector({
             roomId: prop.roomId,
             position: prop.position,
             rotationY: prop.rotationY,
+            wallMount: undefined,
           }
         : {}),
     });
@@ -2039,22 +2111,56 @@ function RouteSwitchInspector({
   routeSwitch,
   onChange,
   onSelect,
+  hostPick,
+  onStartHostPick,
 }: InspectorProps & {
   project: BuilderProject;
   routeSwitch: BuilderRouteSwitch;
   onSelect: (selection: BuilderSelection) => void;
+  hostPick?: BuilderPuzzleHostPick | null;
+  onStartHostPick?: (request: BuilderPuzzleHostPick) => void;
 }) {
   const { language } = useBuilderLanguage();
+  const selectionCtx = useBuilderSelection();
   const outputs = routeSwitch.outputs.slice(0, 4);
   const targetDoors = project.doors;
   const puzzles = puzzleInstances(project);
   const robotRoomIds = [...new Set(project.robots.map((robot) => robot.roomId))];
   const robotRooms = project.rooms.filter((room) => robotRoomIds.includes(room.id));
   const patchRoute = (changes: Partial<BuilderRouteSwitch>) =>
-    onChange((draft) => ({
-      ...draft,
-      routeSwitches: (draft.routeSwitches ?? []).map((candidate) => (candidate.id === routeSwitch.id ? { ...candidate, ...changes } : candidate)),
-    }));
+    onChange((draft) => {
+      const currentRoute = (draft.routeSwitches ?? []).find((candidate) => candidate.id === routeSwitch.id);
+      const changesHost = Object.prototype.hasOwnProperty.call(changes, "hostPropId");
+      const placementChange = changes.position !== undefined || changes.roomId !== undefined || changes.rotationY !== undefined;
+      const hostedProp = currentRoute?.hostPropId && !changesHost && placementChange
+        ? draft.props.find((prop) => prop.id === currentRoute.hostPropId)
+        : null;
+      if (hostedProp) {
+        const manualDetach = changes.position !== undefined || changes.roomId !== undefined;
+        const nextHostedProp: BuilderProp = {
+          ...hostedProp,
+          ...(changes.position ? { position: [changes.position[0], changes.position[1]] as [number, number] } : {}),
+          ...(changes.roomId ? { roomId: changes.roomId } : {}),
+          ...(changes.rotationY !== undefined ? { rotationY: changes.rotationY } : {}),
+          ...(manualDetach
+            ? {
+                parentPropId: undefined,
+                parentSurfaceId: undefined,
+                localPosition: undefined,
+                localRotationY: undefined,
+              }
+            : {}),
+        };
+        return projectWithHostedRouteSwitchProp(reflowAttachedProps({
+          ...draft,
+          props: draft.props.map((prop) => (prop.id === hostedProp.id ? nextHostedProp : prop)),
+        }), routeSwitch.id, nextHostedProp);
+      }
+      return {
+        ...draft,
+        routeSwitches: (draft.routeSwitches ?? []).map((candidate) => (candidate.id === routeSwitch.id ? { ...candidate, ...changes } : candidate)),
+      };
+    });
   const patchOutput = (outputId: string, changes: Partial<BuilderRouteSwitchOutput>) =>
     patchRoute({ outputs: outputs.map((output) => (output.id === outputId ? { ...output, ...changes } : output)) });
   const patchOutputKeyPosition = (output: BuilderRouteSwitchOutput, position: readonly [number, number]) => {
@@ -2076,6 +2182,31 @@ function RouteSwitchInspector({
       {bl(room.label, language)}
     </option>
   ));
+  const hostPropId = routeSwitch.hostPropId ?? "";
+  const hostProp = hostPropId ? project.props.find((prop) => prop.id === hostPropId) ?? null : null;
+  const hostPickActive = hostPick?.kind === "routeSwitch" && hostPick.routeSwitchId === routeSwitch.id;
+  const hostableProps = project.props.filter((prop) => prop.roomId === routeSwitch.roomId || prop.id === hostPropId);
+  const startRouteHostPick = () => onStartHostPick?.({ kind: "routeSwitch", routeSwitchId: routeSwitch.id });
+  const focusRouteOutputKey = (output: BuilderRouteSwitchOutput, index: number) => {
+    const keyPosition = routeOutputKeyPosition(project, routeSwitch, output, index);
+    onSelect({ kind: "routeSwitch", id: routeSwitch.id });
+    selectionCtx?.requestFocus({ x: keyPosition[0], z: keyPosition[1], span: 5 });
+  };
+  const setHostProp = (propId: string) => {
+    const prop = project.props.find((candidate) => candidate.id === propId);
+    patchRoute({
+      hostPropId: prop?.id,
+      ...(prop
+        ? {
+            roomId: prop.roomId,
+            position: prop.position,
+            rotationY: prop.rotationY,
+            wallMount: undefined,
+            outputs: routeSwitch.outputs.map((output) => ({ ...output, keyRoomId: undefined, keyPosition: undefined })),
+          }
+        : {}),
+    });
+  };
 
   return (
     <div className="builder-fields">
@@ -2101,23 +2232,76 @@ function RouteSwitchInspector({
         <AngleControl label={language === "en" ? "Facing" : "朝向"} valueRad={routeSwitch.rotationY} onChange={(value) => patchRoute({ rotationY: value })} />
       </div>
 
+      <div className="builder-card">
+        <h3>{language === "en" ? "Control Station Furniture" : "路由台家具"}</h3>
+        <div className={`builder-host-card ${hostPickActive ? "active" : ""}`}>
+          <div className="builder-host-current">
+            <i>{hostProp ? "❑" : "⌁"}</i>
+            <span>
+              <b>{language === "en" ? "Interaction Host" : "交互家具"}</b>
+              <em>{hostProp ? builderPropInspectorLabel(hostProp, language) : language === "en" ? "Standalone route console" : "独立路由台"}</em>
+            </span>
+          </div>
+          <div className="builder-host-actions">
+            <button type="button" className={hostPickActive ? "active" : ""} onClick={startRouteHostPick} disabled={!onStartHostPick || project.props.length === 0}>
+              {hostPickActive ? (language === "en" ? "Picking…" : "选择中…") : language === "en" ? "Pick Furniture" : "更换家具"}
+            </button>
+            {hostProp ? (
+              <>
+                <button type="button" onClick={() => onSelect({ kind: "prop", id: hostProp.id })}>{language === "en" ? "Jump" : "跳到家具"}</button>
+                <button type="button" onClick={() => setHostProp("")}>{language === "en" ? "Standalone" : "恢复独立"}</button>
+              </>
+            ) : null}
+          </div>
+        </div>
+        <label>
+          <span>{language === "en" ? "Quick Select Host" : "快速选择承载"}</span>
+          <select value={hostPropId} onChange={(event) => setHostProp(event.target.value)}>
+            <option value="">{language === "en" ? "Standalone route console" : "独立路由台"}</option>
+            {hostableProps.map((prop) => (
+              <option key={prop.id} value={prop.id}>
+                {builderPropInspectorLabel(prop, language)}
+              </option>
+            ))}
+          </select>
+        </label>
+        {project.props.length === 0 ? (
+          <InspectorHint tone="warn">{language === "en" ? "Place furniture first, then use Pick Furniture." : "先放置家具 / 展柜 / 面板，再使用「更换家具」。"}</InspectorHint>
+        ) : (
+          <p className="builder-hint">{language === "en" ? "Hosted route switches keep their outputs and authorization orbs; only the visible interaction moves onto the selected furniture." : "承载后保留输出与授权球；只有可交互的路由台外观换到选中家具上。"}</p>
+        )}
+      </div>
+
       <div className="builder-card builder-route-outputs-card">
         <h3>{language === "en" ? "Outputs (1-4)" : "输出（1-4）"}</h3>
         {outputs.map((output, index) => {
           const keyPosition = routeOutputKeyPosition(project, routeSwitch, output, index);
           return (
             <div key={output.id} className="builder-route-output-row">
-              <b>{index + 1}</b>
-              <label>
-                <span>{language === "en" ? "Action" : "动作"}</span>
-                <select value={output.kind} onChange={(event) => changeOutputKind(output, event.target.value as BuilderRouteSwitchOutputKind)}>
-                  {(Object.keys(routeOutputKindLabelsZh) as BuilderRouteSwitchOutputKind[]).map((kind) => (
-                    <option key={kind} value={kind}>
-                      {routeOutputKindLabel(kind, language)}
-                    </option>
-                  ))}
-                </select>
-              </label>
+              <div className="builder-route-output-head">
+                <b>{index + 1}</b>
+                <label>
+                  <span>{language === "en" ? "Action" : "动作"}</span>
+                  <select value={output.kind} onChange={(event) => changeOutputKind(output, event.target.value as BuilderRouteSwitchOutputKind)}>
+                    {(Object.keys(routeOutputKindLabelsZh) as BuilderRouteSwitchOutputKind[]).map((kind) => (
+                      <option key={kind} value={kind}>
+                        {routeOutputKindLabel(kind, language)}
+                      </option>
+                    ))}
+                  </select>
+                </label>
+                <button type="button" className="builder-danger" disabled={outputs.length <= 1} title={language === "en" ? "Remove this output" : "移除这个输出"} onClick={() => removeOutput(output.id)}>
+                  ✕
+                </button>
+                <button
+                  type="button"
+                  className={`builder-route-output-orb-jump output-${index + 1}`}
+                  title={language === "en" ? `Select and focus authorization orb ${index + 1}` : `选中并跳到授权球 ${index + 1}`}
+                  onClick={() => focusRouteOutputKey(output, index)}
+                >
+                  ●{index + 1}
+                </button>
+              </div>
               <RouteOutputTargetSelect
                 project={project}
                 output={output}
@@ -2127,27 +2311,34 @@ function RouteSwitchInspector({
                 onChange={(changes) => patchOutput(output.id, changes)}
                 onSelect={onSelect}
               />
-              <label className="builder-route-output-label">
-                <span>{language === "en" ? "Display Name" : "显示名"}</span>
-                <input
-                  value={output.label ?? ""}
-                  placeholder={routeOutputAutoLabel(project, output, language)}
-                  onChange={(event) => patchOutput(output.id, { label: event.target.value })}
-                />
-              </label>
-              <div className="builder-route-output-key-field">
-                <label>
-                  <span>{language === "en" ? `Orb ${index + 1}` : `授权球 ${index + 1}`}</span>
-                  <select value={output.keyRoomId ?? routeSwitch.keyRoomId} onChange={(event) => patchOutputKeyRoom(output, event.target.value)}>
-                    {roomOptions}
-                  </select>
+              <details className="builder-route-output-advanced">
+                <summary>{language === "en" ? "Orb position / label" : "授权球位置 / 名称"}</summary>
+                <label className="builder-route-output-label">
+                  <span>{language === "en" ? "Display Name" : "显示名"}</span>
+                  <input
+                    value={output.label ?? ""}
+                    placeholder={routeOutputAutoLabel(project, output, language)}
+                    onChange={(event) => patchOutput(output.id, { label: event.target.value })}
+                  />
                 </label>
-                <Stepper label="X" value={keyPosition[0]} min={-60} max={60} step={0.5} decimals={1} onChange={(value) => patchOutputKeyPosition(output, [value, keyPosition[1]])} />
-                <Stepper label="Z" value={keyPosition[1]} min={-60} max={60} step={0.5} decimals={1} onChange={(value) => patchOutputKeyPosition(output, [keyPosition[0], value])} />
-              </div>
-              <button type="button" className="builder-danger" disabled={outputs.length <= 1} title={language === "en" ? "Remove this output" : "移除这个输出"} onClick={() => removeOutput(output.id)}>
-                ✕
-              </button>
+                <div className="builder-route-output-key-field">
+                  <div className="builder-route-output-orb-label">
+                    <span>{language === "en" ? `Orb ${index + 1}` : `授权球 ${index + 1}`}</span>
+                    <em>{language === "en" ? "Defaults near the console; drag the orb to detach." : "默认贴近路由台；拖动小球后独立摆放。"}</em>
+                    <button type="button" onClick={() => focusRouteOutputKey(output, index)}>
+                      {language === "en" ? "Jump to orb" : "跳到授权球"}
+                    </button>
+                  </div>
+                  <label className="builder-route-output-room-field">
+                    <span>{language === "en" ? "Room" : "房间"}</span>
+                    <select value={output.keyRoomId ?? (routeSwitch.keyPosition ? routeSwitch.keyRoomId : routeSwitch.roomId)} onChange={(event) => patchOutputKeyRoom(output, event.target.value)}>
+                      {roomOptions}
+                    </select>
+                  </label>
+                  <Stepper label="X" value={keyPosition[0]} min={-60} max={60} step={0.5} decimals={1} onChange={(value) => patchOutputKeyPosition(output, [value, keyPosition[1]])} />
+                  <Stepper label="Z" value={keyPosition[1]} min={-60} max={60} step={0.5} decimals={1} onChange={(value) => patchOutputKeyPosition(output, [keyPosition[0], value])} />
+                </div>
+              </details>
             </div>
           );
         })}

@@ -30,6 +30,25 @@ export function pushBuilderPuzzleOrb(
   geometry.pushBox(0, y + 0.28, 0, 0.12, 0.026, 0.12, brass);
 }
 
+export function pushBuilderPuzzleOrbStand(
+  geometry: GeometryWriter,
+  materials: MaterialTable,
+  colorKey: string,
+  hex: string,
+  orbCenterY: number,
+) {
+  const base = materials.surface(`marker:orb-stand-base:${colorKey}`, { color: "#10161c", roughness: 0.52, visualRole: "structural_dark" });
+  const brass = materials.surface(`marker:orb-stand-brass:${colorKey}`, { color: "#9c7836", roughness: 0.36, visualRole: "route_gold" });
+  const glow = materials.emissive(`marker:orb-stand-ring:${colorKey}`, hex, 0.72, "cyan_emissive");
+  const y = Math.max(0.72, orbCenterY);
+  geometry.pushBox(0, 0.035, 0, 0.48, 0.07, 0.48, base);
+  geometry.pushBox(0, 0.12, 0, 0.34, 0.045, 0.34, brass);
+  geometry.pushBox(0, y * 0.5, 0, 0.055, y * 0.84, 0.055, base);
+  geometry.pushBox(0, y - 0.25, 0, 0.24, 0.035, 0.24, brass);
+  geometry.pushBox(0, y + 0.28, 0, 0.16, 0.026, 0.16, brass);
+  geometry.pushBox(0, 0.17, 0, 0.58, 0.018, 0.58, glow);
+}
+
 export function pushCoolingValveClusterProxy(geometry: GeometryWriter, materials: MaterialTable, bodyMaterial: number) {
   const dark = materials.surface("prop:coolant-cluster-dark", { color: "#10161b", roughness: 0.52, visualRole: "structural_dark" });
   const steel = materials.surface("prop:coolant-cluster-steel", { color: "#5f7076", roughness: 0.42, visualRole: "neutral_surface" });

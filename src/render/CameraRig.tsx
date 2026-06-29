@@ -1,9 +1,10 @@
 import { useFrame } from "@react-three/fiber";
+import { useRef } from "react";
 import { Vector3 } from "three";
 import { resolveRoomPresentation, resolveRoomRelativePosition } from "../game/config/RoomPresentationRegistry";
 import { playerConfig } from "../game/config/playerConfig";
 import type { GameWorld } from "../game/core/GameWorld";
-import { focusRevealBlend, focusRevealCameraApproach } from "./focusRevealCamera";
+import { applyFocusRevealCameraBlend, focusRevealCameraApproach } from "./focusRevealCamera";
 
 interface CameraRigProps {
   world: GameWorld;
@@ -16,6 +17,7 @@ export function CameraRig({ world }: CameraRigProps) {
   const revealPosition = new Vector3();
   const revealTarget = new Vector3();
   const artPreview = isArtPreviewMode();
+  const lastRevealWasCameraCut = useRef(false);
 
   useFrame(({ camera, clock }, delta) => {
     const map = world.level.map;
@@ -71,15 +73,14 @@ export function CameraRig({ world }: CameraRigProps) {
     }
 
     const reveal = world.session.activeFocusReveal;
-    if (reveal) {
-      const blend = focusRevealBlend(reveal);
-      revealPosition.fromArray(reveal.cameraPosition);
-      revealTarget.fromArray(reveal.targetPosition);
-      cameraPosition.lerp(revealPosition, blend);
-      lookTarget.lerp(revealTarget, blend);
-    }
+    applyFocusRevealCameraBlend(reveal, cameraPosition, lookTarget, revealPosition, revealTarget);
+    const snapReturnFromCameraCut = !reveal && lastRevealWasCameraCut.current;
+    lastRevealWasCameraCut.current = Boolean(reveal?.cameraCut);
 
-    camera.position.lerp(cameraPosition, 1 - Math.exp(-focusRevealCameraApproach(reveal) * delta));
+    camera.position.lerp(
+      cameraPosition,
+      1 - Math.exp(-focusRevealCameraApproach(reveal, { snapReturnFromCameraCut }) * delta),
+    );
     camera.lookAt(lookTarget);
     if ("fov" in camera && "updateProjectionMatrix" in camera) {
       camera.fov = 72 + world.camera.fovKick;

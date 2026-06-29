@@ -17,6 +17,7 @@ export class EnemyAISystem implements GameSystem {
   private readonly obstacleDelta = new Vector3();
   private readonly separation = new Vector3();
   private readonly spacingDelta = new Vector3();
+  private readonly moveDelta = new Vector3();
   private readonly sightStart = new Vector3();
   private readonly sightTarget = new Vector3();
 
@@ -55,8 +56,10 @@ export class EnemyAISystem implements GameSystem {
         enemy.attackWindupTotal = 0;
         enemy.attackCooldownRemaining = Math.max(enemy.attackCooldownRemaining, 0.22);
         enemy.velocity.multiplyScalar(Math.exp(-12 * delta));
-        enemy.position.addScaledVector(enemy.velocity, delta);
-        this.resolveArena(world, enemy.position, enemy.radius);
+        if (!this.moveWithPhysics(world, enemy, delta)) {
+          enemy.position.addScaledVector(enemy.velocity, delta);
+          this.resolveArena(world, enemy.position, enemy.radius);
+        }
         this.resolveEnemySpacing(world, enemy);
         this.resolveArena(world, enemy.position, enemy.radius);
         world.tryTriggerBossPhases(enemy);
@@ -83,8 +86,10 @@ export class EnemyAISystem implements GameSystem {
         }
       }
 
-      enemy.position.addScaledVector(enemy.velocity, delta);
-      this.resolveArena(world, enemy.position, enemy.radius);
+      if (!this.moveWithPhysics(world, enemy, delta)) {
+        enemy.position.addScaledVector(enemy.velocity, delta);
+        this.resolveArena(world, enemy.position, enemy.radius);
+      }
       this.resolveEnemySpacing(world, enemy);
       this.resolveArena(world, enemy.position, enemy.radius);
       this.attackPlayer(world, enemy, distance, canSeePlayer, delta);
@@ -194,6 +199,25 @@ export class EnemyAISystem implements GameSystem {
     }
   }
 
+  private moveWithPhysics(world: GameWorld, enemy: EnemyState, delta: number) {
+    const bounds = movementBoundsForLevel(world.level, enemy.radius);
+    this.moveDelta.copy(enemy.velocity).multiplyScalar(delta);
+    const targetX = clamp(enemy.position.x + this.moveDelta.x, bounds.minX, bounds.maxX);
+    const targetZ = clamp(enemy.position.z + this.moveDelta.z, bounds.minZ, bounds.maxZ);
+    this.moveDelta.x = targetX - enemy.position.x;
+    this.moveDelta.z = targetZ - enemy.position.z;
+    const result = world.moveKinematicCircleWithPhysics({
+      id: `enemy:${enemy.id}`,
+      position: enemy.position,
+      radius: enemy.radius,
+      desiredTranslation: this.moveDelta,
+      filter: enemyPhysicsObstacleBlocks,
+    });
+    if (!result) return false;
+    enemy.position.copy(result.position);
+    return true;
+  }
+
   private steerAroundNavigationObstacles(world: GameWorld, enemy: EnemyState, directionToPlayer: Vector3) {
     const probeDistance = Math.max(0.9, Math.min(1.8, enemy.radius + 0.95));
     const probeX = enemy.position.x + directionToPlayer.x * probeDistance;
@@ -290,6 +314,10 @@ export class EnemyAISystem implements GameSystem {
       enemy.velocity.addScaledVector(this.spacingDelta, push * 4.5);
     }
   }
+}
+
+function enemyPhysicsObstacleBlocks(obstacle: { enemyNavigation?: "solid" | "soft" | "ignore" }) {
+  return obstacle.enemyNavigation !== "soft" && obstacle.enemyNavigation !== "ignore";
 }
 
 function isHeavyThreat(enemy: EnemyState, world: GameWorld) {

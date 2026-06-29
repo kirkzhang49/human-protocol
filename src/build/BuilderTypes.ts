@@ -128,7 +128,8 @@ export interface BuilderInteractionSource {
 /** Temporary editor mode: choose a normal prop as a puzzle interaction host. */
 export type BuilderPuzzleHostPick =
   | { kind: "interaction"; puzzleId: string }
-  | { kind: "component"; puzzleId: string; componentId: string };
+  | { kind: "component"; puzzleId: string; componentId: string }
+  | { kind: "routeSwitch"; routeSwitchId: string };
 
 /**
  * A freely-placed, door-linked puzzle. The instance itself is the
@@ -220,6 +221,8 @@ export interface BuilderRouteSwitch {
   label: string;
   roomId: string;
   keyRoomId: string;
+  /** Optional furniture prop that visually hosts the switch interaction. */
+  hostPropId?: string;
   /** Optional imported key placement; hand-authored route switches can omit it. */
   keyPosition?: readonly [number, number];
   position: readonly [number, number];

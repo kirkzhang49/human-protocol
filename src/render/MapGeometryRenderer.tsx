@@ -30,7 +30,7 @@ import type {
 import type { GameWorld } from "../game/core/GameWorld";
 import { isExitCinematicViewActive } from "../game/core/ExitCinematicView";
 import { exitElevatorButtonVisualState, exitElevatorShaftVisualState } from "../game/core/ExitCinematicTiming";
-import { isRoomRenderVisible } from "../game/core/RenderVisibility";
+import { interactionFocusRevealRiseOffsetY, isInteractionVisualVisible, isRoomRenderVisible } from "../game/core/RenderVisibility";
 import {
   resolveDoorMaterial,
   resolveDoorSkin,
@@ -104,7 +104,7 @@ export function MapGeometryRenderer({ world }: MapGeometryRendererProps) {
         <EnvironmentStateLayer key={`environment-state:${state.id}`} state={state} world={world} />
       ))}
       <ConfiguredKeyItemRenderer world={world} />
-      {map.interactions.filter((interaction) => isRoomRenderVisible(world, interaction.roomId)).map((interaction) => (
+      {map.interactions.filter((interaction) => isRoomRenderVisible(world, interaction.roomId) && isInteractionVisualVisible(world, interaction)).map((interaction) => (
         <InteractionMarker
           key={interaction.id}
           world={world}
@@ -2407,9 +2407,12 @@ function InteractionMarker({
   if (interaction.type === "exit" && !modelKey) return null;
   if (modelKey) {
     const modelScale = visual.primitive === "archive_book" ? visual.scale * 0.9 : visual.scale;
+    const revealBaseY = wallDoorSwitch ? y : 0.045;
+    const revealDepth = interactionModelRevealDepthY(modelKey, modelScale, revealBaseY);
+    const revealRiseY = interactionFocusRevealRiseOffsetY(world, interaction, revealDepth);
     return (
       <group
-        position={[x, wallDoorSwitch ? y : 0.045, z]}
+        position={[x, revealBaseY + revealRiseY, z]}
         rotation={[0, wallDoorSwitch ? interaction.yaw ?? 0 : 0, 0]}
         scale={[modelScale, modelScale, modelScale]}
       >
@@ -2434,8 +2437,9 @@ function InteractionMarker({
   }
   const isExit = visual.primitive === "exit_panel";
   const panelScale: [number, number, number] = isExit ? [0.46, 0.62, 0.2] : [0.38, 0.42, 0.18];
+  const panelRevealDepth = interactionPrimitiveRevealDepthY(0.38, panelScale[1], visual.scale);
   return (
-    <group position={[x, 0.38, z]} scale={[visual.scale, visual.scale, visual.scale]}>
+    <group position={[x, 0.38 + interactionFocusRevealRiseOffsetY(world, interaction, panelRevealDepth), z]} scale={[visual.scale, visual.scale, visual.scale]}>
       <mesh scale={panelScale} castShadow>
         <boxGeometry args={[1, 1, 1]} />
         <meshStandardMaterial color={material.color} emissive={color} emissiveIntensity={completed ? 0.18 : 0.62} metalness={material.metalness} roughness={material.roughness} />
@@ -2446,6 +2450,15 @@ function InteractionMarker({
       </mesh>
     </group>
   );
+}
+
+function interactionModelRevealDepthY(modelKey: EnvironmentModelKey, modelScale: number, baseY: number) {
+  const asset = getEnvironmentModelAsset(modelKey);
+  return Math.max(0.1, baseY + asset.sizeMeters[1] * modelScale + 0.08);
+}
+
+function interactionPrimitiveRevealDepthY(baseY: number, localHeight: number, scale: number) {
+  return Math.max(0.1, baseY + localHeight * scale + 0.08);
 }
 
 function ArchiveBookMarker({
@@ -2798,7 +2811,7 @@ function PuzzleTargetMarker({
 
   if (!target.anchorPropId) {
     const orbY = Math.max(0.86, y);
-    const orbRadius = Math.max(0.22, Math.min(0.34, target.radius * visual.scale * 0.38));
+    const orbRadius = Math.max(0.34, Math.min(0.54, target.radius * visual.scale * 0.72));
     return (
       <group position={[x, 0, z]}>
         <mesh position={[0, 0.045, 0]} castShadow receiveShadow>

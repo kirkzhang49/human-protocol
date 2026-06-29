@@ -780,6 +780,131 @@ describe("GameWorld progression doors", () => {
     expect(reveal?.cameraPosition[2]).toBeLessThan(reveal?.targetPosition[2] ?? Number.NEGATIVE_INFINITY);
   });
 
+  it("aims robot focus reveals at an elite or boss enemy in the spawned room", () => {
+    const project = createStarterProject();
+    const compiled = compileBuilderProjectToLevel(project);
+    expect(compiled.issues).toEqual([]);
+    expect(compiled.level).not.toBeNull();
+
+    const world = new GameWorld();
+    world.level = compiled.level!;
+    (world as unknown as { resetLevel(mode: "playing"): void }).resetLevel("playing");
+    world.spawnEnemy("repair_drone", "test_wave", new Vector3(-2, 0, 1), 0, { tier: "normal" }, { spawnRoomId: "room_archive" });
+    const elite = world.spawnEnemy("custodian_elite", "test_wave", new Vector3(-7, 0, 2), 0, { tier: "elite" }, { spawnRoomId: "room_archive" });
+
+    world.beginFocusReveal({ kind: "robot", roomId: "room_archive", cameraMode: "door_front", durationSec: 3 });
+
+    expect(world.session.activeFocusReveal).toMatchObject({
+      kind: "robot",
+      targetId: `enemy:${elite.id}`,
+      roomId: "room_archive",
+      duration: 3,
+    });
+    expect(world.session.activeFocusReveal?.targetPosition[0]).toBeCloseTo(elite.position.x);
+    expect(world.session.activeFocusReveal?.targetPosition[2]).toBeCloseTo(elite.position.z);
+  });
+
+  it("keeps robot focus reveals tracked to the selected moving enemy", () => {
+    const project = createStarterProject();
+    const compiled = compileBuilderProjectToLevel(project);
+    expect(compiled.issues).toEqual([]);
+    expect(compiled.level).not.toBeNull();
+
+    const world = new GameWorld();
+    world.level = compiled.level!;
+    (world as unknown as { resetLevel(mode: "playing"): void }).resetLevel("playing");
+    const elite = world.spawnEnemy("custodian_elite", "test_wave", new Vector3(-7, 0, 2), 0, { tier: "elite" }, { spawnRoomId: "room_archive" });
+
+    world.beginFocusReveal({ kind: "robot", roomId: "room_archive", cameraMode: "door_front", durationSec: 3 });
+    elite.position.x = -5.5;
+    elite.position.z = 3.2;
+    world.updateFocusReveal(0.1);
+
+    expect(world.session.activeFocusReveal?.targetPosition[0]).toBeCloseTo(elite.position.x);
+    expect(world.session.activeFocusReveal?.targetPosition[2]).toBeCloseTo(elite.position.z);
+  });
+
+  it("starts route robot waves before the focus reveal so the shot frames the boss", () => {
+    const project = createStarterProject();
+    project.doors = project.doors.map((door) => ({ ...door, lockType: "none" as const }));
+    project.robots = [
+      {
+        id: "route_boss",
+        label: "回收主管",
+        roomId: "room_archive",
+        archetype: "custodian_elite",
+        count: 1,
+        position: [-7, 2],
+        tier: "boss",
+      },
+      {
+        id: "route_add",
+        label: "回收助手",
+        roomId: "room_archive",
+        archetype: "repair_drone",
+        count: 1,
+        position: [-5, 1],
+      },
+    ];
+    project.routeSwitches = [
+      {
+        id: "route_robot_reveal",
+        label: "管制路由台",
+        roomId: "room_hall",
+        keyRoomId: "room_hall",
+        position: [2, 3],
+        rotationY: 0,
+        outputs: [
+          {
+            id: "out_robots",
+            kind: "start_robots",
+            robotRoomId: "room_archive",
+          },
+        ],
+      },
+    ];
+
+    const compiled = compileBuilderProjectToLevel(project);
+    expect(compiled.issues).toEqual([]);
+    expect(compiled.level).not.toBeNull();
+    const route = compiled.level!.switches?.find((entry) => entry.id === "route_route_robot_reveal");
+    const state = route?.states.find((candidate) => candidate.id === "out_1_out_robots");
+    expect(route).toBeDefined();
+    expect(state).toBeDefined();
+
+    const world = new GameWorld();
+    world.level = compiled.level!;
+    (world as unknown as { resetLevel(mode: "playing"): void }).resetLevel("playing");
+    world.player.position.set(-7, 0, 4);
+    for (const key of world.level.map?.keyItems ?? []) {
+      world.grantConfiguredKeyItem(key.id);
+    }
+    world.openRouteSwitch(route!.id);
+    expect(world.session.mode).toBe("routeSwitch");
+
+    expect(world.chooseRouteSwitchState(route!.id, state!.id)).toBe(true);
+    expect(world.session.mode).toBe("playing");
+    expect(world.session.activeRouteSwitchId).toBeNull();
+
+    const boss = world.enemies.find((enemy) => enemy.waveId === world.session.activeWaveId && enemy.tier === "boss");
+    expect(boss).toBeDefined();
+    expect(boss!.position.x).toBeCloseTo(-7);
+    expect(boss!.position.z).toBeCloseTo(2);
+    expect(boss!.spawnAge).toBeGreaterThanOrEqual(0.44);
+    expect(world.session.activeFocusReveal).toMatchObject({
+      kind: "robot",
+      targetId: `enemy:${boss!.id}`,
+      roomId: "room_archive",
+      duration: 3,
+      cameraCut: true,
+    });
+    const reveal = world.session.activeFocusReveal!;
+    const cameraDistance = Math.hypot(reveal.cameraPosition[0] - reveal.targetPosition[0], reveal.cameraPosition[2] - reveal.targetPosition[2]);
+    expect(cameraDistance).toBeGreaterThanOrEqual(2.55);
+    expect(cameraDistance).toBeLessThanOrEqual(2.9);
+    expect(reveal.cameraPosition[2]).toBeGreaterThan(reveal.targetPosition[2]);
+  });
+
   it("offsets remote door reveal cameras away from visible blockers in front of the door", () => {
     const world = new GameWorld();
     world.loadLevel("level_04_memory_clinic", "playing");
@@ -1494,6 +1619,25 @@ describe("GameWorld pickups", () => {
     expect(world.session.activeUltimateAbilityId).toBe("breachMissile");
     expect(world.session.coreCells).toBe(1);
     expect(world.session.rewardPulse?.label).toBe("突破导弹装入");
+    expect(world.effects.some((effect) => effect.type === "coreSpark")).toBe(true);
+  });
+
+  it("makes repair kit pickup feedback noticeable without interrupting play", () => {
+    const world = new GameWorld();
+    world.loadLevel("level_02_residential_simulation", "playing");
+    world.pickups.length = 0;
+    world.player.health = world.player.maxHealth - 38;
+    world.drainAudioEvents();
+
+    world.addPickup("repairKit", new Vector3(0, 0, 0), { ignoreDynamicLimit: true, expires: false });
+    world.collectPickup(world.pickups[0]);
+
+    const audioKeys = world.drainAudioEvents().map((event) => event.key);
+    expect(world.pickups[0].collected).toBe(true);
+    expect(world.player.health).toBeGreaterThan(world.player.maxHealth - 38);
+    expect(audioKeys).toContain("pickup_repair_kit");
+    expect(world.camera.shake).toBeGreaterThan(0);
+    expect(world.camera.shake).toBeLessThan(0.16);
     expect(world.effects.some((effect) => effect.type === "coreSpark")).toBe(true);
   });
 });

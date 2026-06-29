@@ -1,5 +1,6 @@
 import { isExitCinematicViewActive } from "../../game/core/ExitCinematicView";
 import type { GameWorld } from "../../game/core/GameWorld";
+import { isInteractionVisualVisible } from "../../game/core/RenderVisibility";
 import type { RenderQualityTier } from "../../game/core/RenderPerformance";
 import type { PickupType } from "../../game/entities/EntityTypes";
 import { defaultLightingProfile } from "./RawWebGpuLighting";
@@ -206,6 +207,10 @@ export class RawRoomRuntime {
       if (isRuntimePickupType(pickupType) && !hasMatchingRuntimePickup(world, instance, pickupType)) return false;
     }
     if (!isConfiguredKeyItemInstanceVisible(world, instance)) return false;
+    if (instance.state?.interactionId) {
+      const interaction = world.level.map?.interactions.find((candidate) => candidate.id === instance.state?.interactionId);
+      if (interaction && !isInteractionVisualVisible(world, interaction)) return false;
+    }
     if (
       instance.state?.interactionId &&
       instance.state.type !== "exit" &&

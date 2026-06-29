@@ -50,6 +50,7 @@ import { GeometryWriter } from "./GeometryWriter";
 import { MaterialTable } from "./MaterialTable";
 import {
   pushBuilderPuzzleOrb,
+  pushBuilderPuzzleOrbStand,
   pushCoolingValveClusterProxy,
   pushRouteSwitchConsole,
   puzzleConsoleFallbackBake,
@@ -916,6 +917,32 @@ export function compileBuilderRuntimePack(
     });
   }
 
+  const puzzleOrbStandAssets = new Map<string, string>();
+  const puzzleOrbStandAssetFor = (colorKey: string, hex: string, orbCenterY: number) => {
+    const assetId = `builder:orb-stand:${colorKey}:${Math.round(Math.max(0.72, orbCenterY) * 100)}`;
+    const existing = puzzleOrbStandAssets.get(assetId);
+    if (existing) return existing;
+    geometry.beginAsset(assetId);
+    pushBuilderPuzzleOrbStand(geometry, materials, colorKey, hex, orbCenterY);
+    const assetKey = geometry.endAsset();
+    puzzleOrbStandAssets.set(assetId, assetKey);
+    return assetKey;
+  };
+  const pushCookedPuzzleOrbStand = (
+    target: { id: string; roomId: string },
+    targetPosition: readonly [number, number, number],
+    colorKey: string,
+    hex: string,
+    proxyHalfSize: Tuple3,
+  ) => {
+    const standAsset = puzzleOrbStandAssetFor(colorKey, hex, targetPosition[1]);
+    instances.push({
+      ...planInstance(`orb_stand_${target.id}`, "puzzle_orb_stand", standAsset, target.roomId, [targetPosition[0], 0, targetPosition[2]], proxyHalfSize),
+      state: { targetId: target.id, colorKey },
+    });
+    counts.markers += 1;
+  };
+
   const terminalMaterial = materials.surface("marker:terminal-body", { color: "#1b2733", roughness: 0.5, visualRole: "structural_dark" });
   const screenMaterial = materials.emissive("marker:terminal-screen", "#54e0ff", 1.9, "screen_label");
   const routeSwitchInteractionIds = bakePlan.routeSwitchInteractionIds;
@@ -1181,6 +1208,7 @@ export function compileBuilderRuntimePack(
       if (nativeRawOrbModel) {
         const orbAsset = ensureNativeRawAsset(nativeRawOrbModel);
         const boundsSize = nativeRawOrbModel.asset.bounds?.size ?? ([0.7, 0.8, 0.7] as Tuple3);
+        pushCookedPuzzleOrbStand(target, targetPosition, colorKey, hex, targetVisual.proxyHalfSize);
         instances.push({
           ...planInstance(`orb_${target.id}`, "prop", orbAsset, target.roomId, [targetPosition[0], orbPositionY, targetPosition[2]], [
             Math.max(0.05, boundsSize[0] / 2),
@@ -1207,6 +1235,7 @@ export function compileBuilderRuntimePack(
       const cookedOrbModel = orbModelKey ? cooked?.models.get(orbModelKey) : null;
       if (cookedOrbModel) {
         const orbAsset = ensureCookedAsset(cookedOrbModel);
+        pushCookedPuzzleOrbStand(target, targetPosition, colorKey, hex, targetVisual.proxyHalfSize);
         instances.push({
           ...planInstance(`orb_${target.id}`, "prop", orbAsset, target.roomId, [targetPosition[0], orbPositionY, targetPosition[2]], [
             Math.max(0.05, cookedOrbModel.bounds.size[0] / 2),

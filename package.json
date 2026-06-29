@@ -68,6 +68,9 @@
     "gui:layout-audit": "node scripts/qa/gui-layout-audit.mjs",
     "optimize:glb": "node scripts/asset-build/optimize-glb.mjs",
     "decimate:glb": "node scripts/asset-build/decimate-glb.mjs",
+    "assets:textures:visually-lossless": "node scripts/asset-build/compress-visually-lossless-textures.mjs",
+    "assets:textures:visually-lossless:audit": "node scripts/asset-build/compress-visually-lossless-textures.mjs --audit",
+    "assets:textures:visually-lossless:write": "node scripts/asset-build/compress-visually-lossless-textures.mjs --write",
     "cook:runtime-glb": "node scripts/asset-build/cook-runtime-glbs.mjs",
     "assets:environment:generate": "node scripts/optimizer/generate-environment-assets.mjs",
     "assets:environment:validate": "node scripts/qa/validate-environment-assets.mjs",
@@ -99,6 +102,7 @@
     "assets:wall-door-switch:blender": "/Applications/Blender.app/Contents/MacOS/Blender --background --python scripts/asset-build/generate-wall-door-switch-button-glb.py"
   },
   "dependencies": {
+    "@dimforge/rapier3d-compat": "^0.19.3",
     "@react-three/drei": "^9.122.0",
     "@react-three/fiber": "^8.17.10",
     "@react-three/postprocessing": "^2.16.3",
@@ -114,6 +118,7 @@
     "@types/three": "^0.171.0",
     "@vitejs/plugin-react": "^4.3.4",
     "gltf-validator": "^2.0.0-dev.3.10",
+    "sharp": "^0.35.2",
     "tsx": "^4.20.6",
     "typescript": "^5.7.3",
     "vite": "^6.0.7",

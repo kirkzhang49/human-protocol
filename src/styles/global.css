@@ -306,6 +306,62 @@ select {
   letter-spacing: 0;
 }
 
+.boot-spinner {
+  position: relative;
+  width: 54px;
+  height: 54px;
+  margin: 0 auto 18px;
+  border: 1px solid rgba(102, 229, 255, 0.18);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 50% 50%, rgba(102, 229, 255, 0.16), transparent 42%),
+    rgba(6, 13, 20, 0.56);
+  box-shadow:
+    0 0 26px rgba(102, 229, 255, 0.14),
+    inset 0 0 18px rgba(102, 229, 255, 0.1);
+}
+
+.boot-spinner::before,
+.boot-spinner::after {
+  position: absolute;
+  content: "";
+  border-radius: 50%;
+}
+
+.boot-spinner::before {
+  inset: 6px;
+  border: 3px solid rgba(102, 229, 255, 0.16);
+  border-top-color: #66e5ff;
+  border-right-color: #f08a56;
+  animation: boot-spin 0.82s linear infinite;
+}
+
+.boot-spinner::after {
+  inset: 17px;
+  background: rgba(239, 248, 255, 0.86);
+  box-shadow:
+    0 0 12px rgba(102, 229, 255, 0.72),
+    0 0 24px rgba(240, 138, 86, 0.2);
+  animation: boot-pulse 1.3s ease-in-out infinite;
+}
+
+.boot-spinner i {
+  position: absolute;
+  left: 50%;
+  top: -3px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #66e5ff;
+  box-shadow: 0 0 14px rgba(102, 229, 255, 0.86);
+  transform: translateX(-50%);
+}
+
+.boot-panel.has-error .boot-spinner::before {
+  border-top-color: #ff735c;
+  border-right-color: rgba(255, 115, 92, 0.45);
+}
+
 .boot-panel span,
 .boot-panel strong {
   display: block;
@@ -338,4 +394,30 @@ select {
   transform-origin: left center;
   background: linear-gradient(90deg, #66e5ff, #f08a56);
   transition: transform 180ms ease;
+}
+
+@keyframes boot-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes boot-pulse {
+  0%,
+  100% {
+    opacity: 0.62;
+    transform: scale(0.86);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .boot-spinner::before,
+  .boot-spinner::after {
+    animation: none;
+  }
 }

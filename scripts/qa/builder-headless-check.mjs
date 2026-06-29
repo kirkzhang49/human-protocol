@@ -1293,11 +1293,20 @@ try {
   if (orbPick?.kind !== "puzzle" || orbPick.componentId !== orb.id) {
     throw new Error("clicking an orb must pick that component: " + JSON.stringify(orbPick));
   }
-  const floorPick = pickAt(colorPickProject, colorPickProject.rooms[0].center[0], colorPickProject.rooms[0].center[1], () => null, []);
+  const floorPick = pickAt(colorPickProject, colorPickProject.rooms[0].center[0], colorPickProject.rooms[0].center[1], () => null, [], {
+    includeRooms: true,
+  });
   if (floorPick?.kind !== "room" || floorPick.id !== colorPickProject.rooms[0].id) {
-    throw new Error("empty room floor must pick the room so it can be dragged in 3D: " + JSON.stringify(floorPick));
+    throw new Error("explicit room-pick mode must pick empty room floor so it can be dragged in 3D: " + JSON.stringify(floorPick));
   }
-  const wallPick = pickAt(colorPickProject, colorPickProject.rooms[0].center[0] - colorPickProject.rooms[0].size[0] / 2 + 0.2, colorPickProject.rooms[0].center[1], () => null, []);
+  const wallPick = pickAt(
+    colorPickProject,
+    colorPickProject.rooms[0].center[0] - colorPickProject.rooms[0].size[0] / 2 + 0.2,
+    colorPickProject.rooms[0].center[1],
+    () => null,
+    [],
+    { includeRooms: true },
+  );
   if (wallPick?.kind !== "room") throw new Error("room wall band must still pick the room: " + JSON.stringify(wallPick));
   console.log("PASS 3D picking priority: terminal > orb component > room floor/wall handle (plan-space pickAt)");
 

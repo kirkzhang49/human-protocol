@@ -145,7 +145,7 @@ function cloneEnemyMaterial(material: Material, modelKey: EnemyModelKey, finish:
   return cloned;
 }
 
-function polishEnemyMaterial(material: Material, modelKey: EnemyModelKey, bossFinish: boolean) {
+export function polishEnemyMaterial(material: Material, modelKey: EnemyModelKey, bossFinish: boolean) {
   const name = material.name.toLowerCase();
   const isBoss = bossFinish || modelKey === "hp_enemy_custodian_foreman_horror" || modelKey === "hp_enemy_reclamation_mother_final_horror";
   const isMuseumSmallRobot =
@@ -154,8 +154,16 @@ function polishEnemyMaterial(material: Material, modelKey: EnemyModelKey, bossFi
       modelKey === "hp_enemy_clamp_repair_horror" ||
       modelKey === "hp_enemy_shield_technician_horror");
   const isRepairDrone = modelKey === "hp_enemy_repair_drone_horror";
-  const cyanCore = name.includes("scanner") || name.includes("core") || name.includes("cyan") || name.includes("beam");
+  const coreGlass = isEnemyCoreGlassMaterial(name);
+  const darkCoreShadow = name.includes("core_shadow") || name.includes("core_dark") || name.includes("socket");
+  const cyanCore =
+    !darkCoreShadow &&
+    (name.includes("scanner") || name.includes("cyan") || name.includes("beam") || name.includes("core_blue") || name.includes("energy_glass"));
   const amberWarning = name.includes("warning") || name.includes("amber");
+  if (coreGlass) {
+    applyReadableEnemyCoreGlass(material, isBoss);
+    return;
+  }
   forceOpaqueEnemyMaterial(material);
 
   if (material instanceof MeshBasicMaterial) {
@@ -206,6 +214,33 @@ function polishEnemyMaterial(material: Material, modelKey: EnemyModelKey, bossFi
     material.roughness = isMuseumSmallRobot ? 0.74 : Math.max(material.roughness, 0.5);
   }
   material.needsUpdate = true;
+}
+
+function isEnemyCoreGlassMaterial(name: string) {
+  return name.includes("core_blue_glass") || name.includes("core_blue_front_lens") || name.includes("protocol_cyan_energy_glass");
+}
+
+function applyReadableEnemyCoreGlass(material: Material, bossFinish: boolean) {
+  material.transparent = true;
+  material.opacity = bossFinish ? 0.76 : 0.68;
+  material.alphaTest = 0;
+  material.depthWrite = false;
+  material.depthTest = true;
+  if (material instanceof MeshBasicMaterial) {
+    material.color.set(enemyPremiumLightingPalette.core);
+    material.toneMapped = false;
+    material.needsUpdate = true;
+    return;
+  }
+  if (material instanceof MeshStandardMaterial) {
+    material.color.set(enemyPremiumLightingPalette.core);
+    material.emissive.set(enemyPremiumLightingPalette.coreEmissive);
+    material.emissiveIntensity = bossFinish ? 1.9 : 1.1;
+    material.metalness = Math.max(material.metalness, 0.42);
+    material.roughness = Math.min(Math.max(material.roughness, 0.18), 0.34);
+    material.toneMapped = false;
+    material.needsUpdate = true;
+  }
 }
 
 function applyMatteEnemyMaterialFinish(material: Material) {

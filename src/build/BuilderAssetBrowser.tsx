@@ -166,7 +166,6 @@ function lockTilesFor(language: GameLanguage): readonly { lockType: BuilderLockT
     { lockType: "none", glyph: "门", color: "#76b7e8", hint: en ? "Opens automatically, no condition" : "自动开门，无条件" },
     { lockType: "key_item", glyph: "钥", color: "#ffd24f", hint: en ? "Opens after picking up the key" : "拾取钥匙后开启" },
     { lockType: "survive_wave", glyph: "战", color: "#ff7a5c", hint: en ? "Clear the robots in room A" : "清剿房间 A 的机器人" },
-    { lockType: "switch_state", glyph: "控", color: "#7bb7ff", hint: en ? "Requires a wall door switch state" : "需要墙面门控状态" },
   ];
 }
 
@@ -202,6 +201,7 @@ export function placementDraftKey(draft: PlacementDraft) {
   if (draft.kind === "prop") return `prop:${draft.modelKey}`;
   if (draft.kind === "pickup") return `pickup:${draft.pickupKind}`;
   if (draft.kind === "routeSwitch") return "routeSwitch:control-routing-station";
+  if (draft.kind === "wallDoorSwitch") return "wallDoorSwitch:wall-mounted-door-control";
   return `robot:${draft.presetId ?? draft.archetype}`;
 }
 
@@ -209,6 +209,7 @@ function placementDraftLabel(draft: PlacementDraft) {
   if (draft.kind === "prop") return propEntry(draft.modelKey)?.label ?? draft.modelKey;
   if (draft.kind === "pickup") return builderPickupCatalog.find((entry) => entry.kind === draft.pickupKind)?.label ?? draft.pickupKind;
   if (draft.kind === "routeSwitch") return "管制路由台";
+  if (draft.kind === "wallDoorSwitch") return "墙面门控把手";
   if (draft.presetId) return builderRobotCatalog.find((entry) => entry.presetId === draft.presetId)?.label ?? robotLabel(draft.archetype);
   return robotLabel(draft.archetype);
 }
@@ -288,11 +289,23 @@ function RouteSwitchThumb() {
   );
 }
 
+function WallDoorSwitchThumb() {
+  return (
+    <svg className="builder-thumb builder-thumb-route-switch" viewBox="0 0 24 24" aria-hidden="true">
+      <rect x="7" y="3.8" width="10" height="16.4" rx="1.8" fill="#07101a" stroke="#7bb7ff" strokeOpacity="0.76" />
+      <rect x="9.4" y="6.4" width="5.2" height="3.2" rx="0.8" fill="#0d1d2a" stroke="#5ee8c8" strokeOpacity="0.62" />
+      <circle cx="12" cy="14" r="2.7" fill="#5ee8c8" fillOpacity="0.9" />
+      <path d="M12 11.8v4.4" stroke="#061617" strokeWidth="1.6" strokeLinecap="round" />
+      <path d="M4 4v16M20 4v16" stroke="#7bb7ff" strokeOpacity="0.26" strokeWidth="1.3" strokeLinecap="round" />
+    </svg>
+  );
+}
+
 function recentPlacementKindLabel(draft: PlacementDraft, language: GameLanguage) {
   const en = language === "en";
   if (draft.kind === "prop") return en ? "Furniture" : "家具";
   if (draft.kind === "pickup") return en ? "Pickup" : "拾取";
-  if (draft.kind === "routeSwitch") return en ? "Mechanism" : "机关";
+  if (draft.kind === "routeSwitch" || draft.kind === "wallDoorSwitch") return en ? "Mechanism" : "机关";
   return en ? "Robot" : "机器人";
 }
 
@@ -329,6 +342,8 @@ function RecentPlacementCard({
           <PickupImageThumb kind={draft.pickupKind} />
         ) : draft.kind === "routeSwitch" ? (
           <RouteSwitchThumb />
+        ) : draft.kind === "wallDoorSwitch" ? (
+          <WallDoorSwitchThumb />
         ) : (
           <RobotThumb archetype={draft.archetype} />
         )}
@@ -981,29 +996,40 @@ function BuilderAssetBrowserImpl({
             </button>
               );
             })()}
+            {(() => {
+              const wallSwitchPlacementDraft: PlacementDraft = { kind: "wallDoorSwitch" };
+              const beginWallSwitchPlacement = () => {
+                if (project.rooms.length === 0) {
+                  onStatus?.(en ? "Add a room first, then mount a wall switch." : "先添加一个房间，再挂墙控把手。");
+                  return;
+                }
+                onBeginPlacement(wallSwitchPlacementDraft);
+              };
+              return (
             <button
               type="button"
-              className="builder-puzzle-card builder-route-card"
+              className={`builder-puzzle-card builder-route-card ${placement?.kind === "wallDoorSwitch" ? "placing" : ""}`}
               style={{ color: "#7bb7ff" }}
-              title={en ? "Select a door, lock it, and place a movable wall switch beside it" : "先选中一扇门，将它上墙面门控锁，并在门旁放置可移动把手"}
-              onClick={onAddWallDoorSwitch}
+              title={en ? "Drag or click to mount a wall door switch on a room wall" : "点击或拖入场景，把墙面门控把手挂到房间墙上"}
+              draggable
+              onClick={beginWallSwitchPlacement}
+              onDragStart={(event) => {
+                writePlacementDragPayload(event, wallSwitchPlacementDraft);
+                beginWallSwitchPlacement();
+              }}
             >
               <i className="builder-puzzle-card-glyph">
-                <svg viewBox="0 0 24 24" className="builder-puzzlekind-icon" aria-hidden="true">
-                  <rect x="5" y="3.5" width="14" height="17" rx="2" fill="#07101a" stroke="#7bb7ff" strokeOpacity="0.72" />
-                  <rect x="7.5" y="6.2" width="9" height="4.2" rx="1" fill="#0d1d2a" stroke="#5ee8c8" strokeOpacity="0.65" />
-                  <circle cx="12" cy="14" r="3" fill="#5ee8c8" fillOpacity="0.9" />
-                  <path d="M12 11v6" stroke="#061617" strokeWidth="1.7" strokeLinecap="round" />
-                  <circle cx="17" cy="5.2" r="1.1" fill="#ff5b4c" />
-                </svg>
+                <WallDoorSwitchThumb />
               </i>
               <span className="builder-puzzle-card-body">
                 <strong>{en ? "Wall Door Switch" : "墙面门控把手"}</strong>
-                <em>{en ? "Locks the selected door and adds a switch" : "给选中门上锁并生成把手"}</em>
-                <small>{en ? "Movable wall handle · visible hand press" : "可移动墙面把手 · 可见手部按压"}</small>
+                <em>{en ? "Mounts on a wall, then bind door states" : "挂在墙上，再绑定门状态"}</em>
+                <small>{en ? "Drag into the room edge · movable after placement" : "拖进墙边放置 · 后续可沿墙移动"}</small>
               </span>
               <b className="builder-puzzle-card-add">＋</b>
             </button>
+              );
+            })()}
             <p className="builder-hint">
               {en
                 ? "After selecting a mechanism, bind existing locked doors, puzzle stations and robot-occupied rooms on the right."

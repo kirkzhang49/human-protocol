@@ -92,11 +92,18 @@ export class DoorSystem implements GameSystem {
       const halfSize = new Vector3(...proxy.halfSize);
       const existing = world.obstacles.find((obstacle) => obstacle.id === obstacleId);
       if (existing) {
-        if (!existing.position.equals(position) || !existing.halfSize.equals(halfSize) || existing.visualKey !== proxy.modelKey || existing.enemyNavigation !== proxy.enemyNavigation) {
+        if (
+          !existing.position.equals(position) ||
+          !existing.halfSize.equals(halfSize) ||
+          existing.visualKey !== proxy.modelKey ||
+          existing.enemyNavigation !== proxy.enemyNavigation ||
+          existing.yaw !== proxy.yaw
+        ) {
           existing.position.copy(position);
           existing.halfSize.copy(halfSize);
           existing.visualKey = proxy.modelKey;
           existing.enemyNavigation = proxy.enemyNavigation;
+          existing.yaw = proxy.yaw;
           changed = true;
         }
         continue;
@@ -106,6 +113,7 @@ export class DoorSystem implements GameSystem {
         visualKey: proxy.modelKey,
         position,
         halfSize,
+        ...(proxy.yaw ? { yaw: proxy.yaw } : {}),
         ...(proxy.enemyNavigation ? { enemyNavigation: proxy.enemyNavigation } : {}),
       });
       changed = true;

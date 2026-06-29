@@ -1222,6 +1222,7 @@ export interface SpawnGroupDefinition {
   radius?: number;
   spread?: number;
   positions?: readonly Vec3Tuple[];
+  preservePositions?: boolean;
 }
 
 export interface WavePresentationDefinition {
@@ -1275,7 +1276,7 @@ export type LevelRuntimeEventAction =
   | { type: "clear_environment_state"; stateId: string }
   | { type: "set_big_screen_state"; screenId: string; stateId: string }
   | { type: "adjust_campaign_route"; routeId: string; amount: number; label?: string; rewardPulse?: RewardPulseConfig; rewardPulseDuration?: number }
-  | { type: "start_wave"; waveId: string; delay?: number; repeat?: boolean }
+  | { type: "start_wave"; waveId: string; delay?: number; repeat?: boolean; immediate?: boolean }
   | { type: "unlock_door"; doorId: string }
   | { type: "open_door"; doorId: string; respectLock?: boolean }
   | { type: "close_door"; doorId: string; respectLock?: boolean }

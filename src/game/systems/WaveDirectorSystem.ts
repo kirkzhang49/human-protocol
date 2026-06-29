@@ -28,6 +28,10 @@ interface LivingEnemyCounts {
   waveArchetypes: Partial<Record<EnemyArchetypeId, number>>;
 }
 
+interface StartWaveNowOptions {
+  preserveSpawnPositions?: boolean;
+}
+
 export class WaveDirectorSystem implements GameSystem {
   update(world: GameWorld, delta: number) {
     if (world.session.mode !== "playing") return;
@@ -68,32 +72,7 @@ export class WaveDirectorSystem implements GameSystem {
   }
 
   private startWave(world: GameWorld, wave: WaveDefinition) {
-    const rawPresentation = wavePresentationById(world.level, wave.id);
-    const presentation = rawPresentation ? localizedWavePresentation(world.level, rawPresentation, world.settings.language) : null;
-
-    world.session.activeWaveId = wave.id;
-    world.session.activeWaveElapsed = 0;
-    world.session.reinforcementCounts = {};
-    const waveIndex = world.level.waves.findIndex((candidate) => candidate.id === wave.id);
-    if (waveIndex >= 0) {
-      world.session.waveIndex = Math.max(world.session.waveIndex, waveIndex);
-    }
-    world.markWaveTriggered(wave.id);
-    world.session.message = presentation?.startMessage ?? world.level.presentation.defaultWaveStartMessage;
-    world.setSpawnWarning(presentation?.startWarning ?? fallbackWaveWarning(world.level, wave), presentation?.startWarningDuration ?? 2);
-
-    if (presentation?.startDialogueTrigger) {
-      world.queueDialogue(presentation.startDialogueTrigger);
-    }
-    world.emitConfiguredAudio(presentation?.startAudio);
-    world.applyConfiguredCameraImpact(presentation?.startCamera);
-
-    let waveSpawnSeedOffset = 0;
-    for (const group of wave.enemies) {
-      const spawnedCount = this.spawnGroup(world, wave, group, undefined, waveSpawnSeedOffset);
-      waveSpawnSeedOffset += Math.max(spawnedCount, group.count);
-    }
-    world.enemySpawnSequence += Math.max(1, waveSpawnSeedOffset);
+    startWaveNow(world, wave);
   }
 
   private spawnReinforcements(world: GameWorld, wave: WaveDefinition) {
@@ -188,40 +167,7 @@ export class WaveDirectorSystem implements GameSystem {
     counts?: LivingEnemyCounts,
     spawnSeedOffset = 0,
   ) {
-    const spawnCount = spawnCountForGroup(group, counts);
-    if (spawnCount <= 0) return 0;
-    const spawnRoomId = spawnRoomIdForGroup(world.level, wave, group);
-
-    for (let index = 0; index < spawnCount; index += 1) {
-      const position = spawnPosition(world.level, group.from, index, spawnCount, spawnScratch, world.enemySpawnSequence + spawnSeedOffset + index);
-      clampPositionToWaveRoom(world.level, spawnRoomId, position, spawnRadiusForGroup(group));
-      moveSpawnAwayFromPlayer(world, spawnRoomId, position, spawnRadiusForGroup(group), world.enemySpawnSequence + spawnSeedOffset + index);
-      const dx = world.player.position.x - position.x;
-      const dz = world.player.position.z - position.z;
-      const rotationY = Math.atan2(dx, dz);
-      world.spawnEnemy(group.archetype, wave.id, position, rotationY, group, { spawnRoomId });
-    }
-    if (counts) {
-      counts.waveArchetypes[group.archetype] = (counts.waveArchetypes[group.archetype] ?? 0) + spawnCount;
-    }
-    const effectPosition = spawnPosition(
-      world.level,
-      group.from,
-      Math.floor(spawnCount / 2),
-      Math.max(spawnCount, 1),
-      spawnScratch,
-      world.enemySpawnSequence + spawnSeedOffset + spawnCount,
-    );
-    clampPositionToWaveRoom(world.level, spawnRoomId, effectPosition, spawnRadiusForGroup(group));
-    moveSpawnAwayFromPlayer(world, spawnRoomId, effectPosition, spawnRadiusForGroup(group), world.enemySpawnSequence + spawnSeedOffset + spawnCount);
-    directionScratch.copy(world.player.position).sub(effectPosition).setY(0);
-    if (directionScratch.lengthSq() < 0.01) directionScratch.set(0, 0, 1);
-    world.addEffect("dashBurst", effectPosition, directionScratch, 0.34, 1 + Math.min(spawnCount, 5) * 0.16);
-    if (spawnCount >= 3) {
-      world.triggerRenderSurge(0.72 + Math.min(4, spawnCount) * 0.12);
-      world.applyCameraImpact(0.18 + Math.min(5, spawnCount) * 0.035, 0.9, 0.08, 0.18);
-    }
-    return spawnCount;
+    return spawnWaveGroup(world, wave, group, counts, spawnSeedOffset);
   }
 
   private startPendingWave(world: GameWorld, delta: number, allowInterrupt: boolean) {
@@ -321,6 +267,99 @@ export class WaveDirectorSystem implements GameSystem {
 
 }
 
+export function startWaveNow(world: GameWorld, wave: WaveDefinition, options: StartWaveNowOptions = {}) {
+  const rawPresentation = wavePresentationById(world.level, wave.id);
+  const presentation = rawPresentation ? localizedWavePresentation(world.level, rawPresentation, world.settings.language) : null;
+
+  world.session.activeWaveId = wave.id;
+  world.session.activeWaveElapsed = 0;
+  world.session.reinforcementCounts = {};
+  const waveIndex = world.level.waves.findIndex((candidate) => candidate.id === wave.id);
+  if (waveIndex >= 0) {
+    world.session.waveIndex = Math.max(world.session.waveIndex, waveIndex);
+  }
+  world.markWaveTriggered(wave.id);
+  world.session.message = presentation?.startMessage ?? world.level.presentation.defaultWaveStartMessage;
+  world.setSpawnWarning(presentation?.startWarning ?? fallbackWaveWarning(world.level, wave), presentation?.startWarningDuration ?? 2);
+
+  if (presentation?.startDialogueTrigger) {
+    world.queueDialogue(presentation.startDialogueTrigger);
+  }
+  world.emitConfiguredAudio(presentation?.startAudio);
+  world.applyConfiguredCameraImpact(presentation?.startCamera);
+
+  let waveSpawnSeedOffset = 0;
+  for (const group of wave.enemies) {
+    const spawnedCount = spawnWaveGroup(world, wave, group, undefined, waveSpawnSeedOffset, options);
+    waveSpawnSeedOffset += Math.max(spawnedCount, group.count);
+  }
+  world.enemySpawnSequence += Math.max(1, waveSpawnSeedOffset);
+}
+
+function spawnWaveGroup(
+  world: GameWorld,
+  wave: WaveDefinition,
+  group: EnemySpawnDefinition,
+  counts?: LivingEnemyCounts,
+  spawnSeedOffset = 0,
+  options: StartWaveNowOptions = {},
+) {
+  const spawnCount = spawnCountForGroup(group, counts);
+  if (spawnCount <= 0) return 0;
+  const spawnRoomId = spawnRoomIdForGroup(world.level, wave, group);
+  const preserveGroupPositions = shouldPreserveSpawnPositions(world.level, group.from, options);
+
+  for (let index = 0; index < spawnCount; index += 1) {
+    const position = spawnPosition(
+      world.level,
+      group.from,
+      index,
+      spawnCount,
+      spawnScratch,
+      world.enemySpawnSequence + spawnSeedOffset + index,
+      { preservePositionOrder: preserveGroupPositions },
+    );
+    clampPositionToWaveRoom(world.level, spawnRoomId, position, spawnRadiusForGroup(group));
+    if (!preserveGroupPositions) {
+      moveSpawnAwayFromPlayer(world, spawnRoomId, position, spawnRadiusForGroup(group), world.enemySpawnSequence + spawnSeedOffset + index);
+    }
+    const dx = world.player.position.x - position.x;
+    const dz = world.player.position.z - position.z;
+    const rotationY = Math.atan2(dx, dz);
+    world.spawnEnemy(group.archetype, wave.id, position, rotationY, group, { spawnRoomId });
+  }
+  if (counts) {
+    counts.waveArchetypes[group.archetype] = (counts.waveArchetypes[group.archetype] ?? 0) + spawnCount;
+  }
+  const effectPosition = spawnPosition(
+    world.level,
+    group.from,
+    Math.floor(spawnCount / 2),
+    Math.max(spawnCount, 1),
+    spawnScratch,
+    world.enemySpawnSequence + spawnSeedOffset + spawnCount,
+    { preservePositionOrder: preserveGroupPositions },
+  );
+  clampPositionToWaveRoom(world.level, spawnRoomId, effectPosition, spawnRadiusForGroup(group));
+  if (!preserveGroupPositions) {
+    moveSpawnAwayFromPlayer(world, spawnRoomId, effectPosition, spawnRadiusForGroup(group), world.enemySpawnSequence + spawnSeedOffset + spawnCount);
+  }
+  directionScratch.copy(world.player.position).sub(effectPosition).setY(0);
+  if (directionScratch.lengthSq() < 0.01) directionScratch.set(0, 0, 1);
+  world.addEffect("dashBurst", effectPosition, directionScratch, 0.34, 1 + Math.min(spawnCount, 5) * 0.16);
+  if (spawnCount >= 3) {
+    world.triggerRenderSurge(0.72 + Math.min(4, spawnCount) * 0.12);
+    world.applyCameraImpact(0.18 + Math.min(5, spawnCount) * 0.035, 0.9, 0.08, 0.18);
+  }
+  return spawnCount;
+}
+
+function shouldPreserveSpawnPositions(level: LevelDefinition, groupId: SpawnGroupId, options: StartWaveNowOptions) {
+  if (!options.preserveSpawnPositions) return false;
+  const definition = spawnGroupById(level, groupId);
+  return Boolean(definition?.preservePositions && definition.positions?.length);
+}
+
 function exitEntryDoorOpen(world: GameWorld) {
   const doorId = exitEntryDoorId(world);
   return !doorId || world.isDoorOpen(doorId);
@@ -336,7 +375,15 @@ function playerIsInExitRoom(world: GameWorld) {
   return !exitRoomId || world.session.mapProgress.currentRoomId === exitRoomId;
 }
 
-function spawnPosition(level: LevelDefinition, group: SpawnGroupId, index: number, total: number, target: Vector3, seed = 0) {
+function spawnPosition(
+  level: LevelDefinition,
+  group: SpawnGroupId,
+  index: number,
+  total: number,
+  target: Vector3,
+  seed = 0,
+  options: { preservePositionOrder?: boolean } = {},
+) {
   const definition = spawnGroupById(level, group);
   const layout = definition?.layout ?? group;
   const center = definition?.center ?? [0, 0, 0];
@@ -349,9 +396,11 @@ function spawnPosition(level: LevelDefinition, group: SpawnGroupId, index: numbe
   const wave = Math.sin(index * 1.7) * 1.2;
 
   if (definition?.positions?.length) {
-    const slot = positiveModulo(Math.floor(seed), definition.positions.length);
+    const slot = options.preservePositionOrder
+      ? positiveModulo(index, definition.positions.length)
+      : positiveModulo(Math.floor(seed), definition.positions.length);
     const point = definition.positions[slot];
-    const jitter = total <= 1 ? 0 : (positiveModulo(Math.floor(seed), 5) - 2) * 0.16;
+    const jitter = options.preservePositionOrder || total <= 1 ? 0 : (positiveModulo(Math.floor(seed), 5) - 2) * 0.16;
     return target.set(point[0] + jitter, point[1], point[2] - jitter);
   }
 

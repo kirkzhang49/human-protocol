@@ -235,8 +235,8 @@ function validateGeneratedEnemyStyle(
   if (visual.modelKey && !generatedEnemyModelKeys.has(visual.modelKey)) {
     add(errors, "authoring.generated.enemy.model_key", `${path}.visual.modelKey`, `Generated enemy modelKey "${visual.modelKey}" is not curated.`);
   }
-  if (visual.scaleMultiplier !== undefined && (visual.scaleMultiplier < 0.8 || visual.scaleMultiplier > 1.45)) {
-    add(warnings, "authoring.generated.enemy.scale_range", `${path}.visual.scaleMultiplier`, "Generated enemy scale should stay between 0.8 and 1.45 to preserve silhouette quality.");
+  if (visual.scaleMultiplier !== undefined && (visual.scaleMultiplier < 0.72 || visual.scaleMultiplier > 1.45)) {
+    add(warnings, "authoring.generated.enemy.scale_range", `${path}.visual.scaleMultiplier`, "Generated enemy scale should stay between 0.72 and 1.45 to preserve silhouette quality.");
   }
   if (visual.lightIntensityMultiplier !== undefined && (visual.lightIntensityMultiplier < 0.65 || visual.lightIntensityMultiplier > 1.9)) {
     add(warnings, "authoring.generated.enemy.light_range", `${path}.visual.lightIntensityMultiplier`, "Generated enemy light intensity should stay between 0.65 and 1.9.");

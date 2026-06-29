@@ -47,6 +47,7 @@ try {
 
   const project = createStarterProject();
   project.projectId = "proj_route_qa";
+  project.doors = project.doors.map((door) => (door.id === "door_c" ? { ...door, lockType: "none" } : door));
   project.routeSwitches = [
     {
       id: "rt_main",
@@ -148,8 +149,9 @@ try {
   ok(robotReveal?.kind === "robot", `robot output starts a robot reveal (got ${robotReveal?.kind})`);
   ok(robotReveal?.roomId === "room_fight", `robot reveal targets room_fight (got ${robotReveal?.roomId})`);
   ok(
-    (world.session.pendingWaveStarts ?? []).some((pending) => pending.waveId === "wave_room_fight"),
-    "robot output queued wave_room_fight",
+    world.session.activeWaveId === "wave_room_fight" ||
+      (world.session.pendingWaveStarts ?? []).some((pending) => pending.waveId === "wave_room_fight"),
+    "robot output starts or queues wave_room_fight",
   );
   // The reveal is a real cinematic pose and the first-person viewmodel hides.
   ok(isFinitePose(robotReveal), "robot reveal carries finite camera + target positions");

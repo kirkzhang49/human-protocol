@@ -25,4 +25,17 @@ describe("createEnemyRobot", () => {
       spawnRoomId: "room_exit",
     });
   });
+
+  it("normalizes stale reclamation mother runtime scale from cached or exported levels", () => {
+    const mother = createEnemyRobot(3, "custodian_elite", "wave_mother", new Vector3(), 0, {
+      tier: "boss",
+      visual: {
+        modelKey: "hp_enemy_reclamation_mother_final_horror",
+        textureAtlasKey: "custodian_boss",
+        scaleMultiplier: 0.75,
+      },
+    });
+
+    expect(mother.visualScaleMultiplier).toBe(0.83);
+  });
 });

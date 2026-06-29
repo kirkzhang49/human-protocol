@@ -1,8 +1,16 @@
 import { clampIntoRoom, wallMountFromPoint } from "./BuilderPlacementRules";
 import { createBuilderId, type BuilderDoor, type BuilderProject, type BuilderRoom, type BuilderWallDoorSwitch, type BuilderWallDoorSwitchState } from "./BuilderTypes";
+import {
+  MAX_WALL_DOOR_SWITCH_CONTROLLERS_PER_DOOR,
+  MAX_WALL_DOOR_SWITCH_STATES,
+  MAX_WALL_DOOR_SWITCHES_PER_LEVEL,
+} from "../game/config/shared/wallDoorSwitchLimits";
 
-export const MAX_WALL_DOOR_SWITCHES_PER_LEVEL = 4;
-export const MAX_WALL_DOOR_SWITCH_CONTROLLERS_PER_DOOR = 2;
+export {
+  MAX_WALL_DOOR_SWITCH_CONTROLLERS_PER_DOOR,
+  MAX_WALL_DOOR_SWITCH_STATES,
+  MAX_WALL_DOOR_SWITCHES_PER_LEVEL,
+};
 
 export interface BuilderDoorEdge {
   panelPosition: readonly [number, number, number];
@@ -130,38 +138,16 @@ export function applyToggleDoorOwnership(project: BuilderProject, switchId: stri
     ...project,
     wallDoorSwitches,
     doors: project.doors.map((door) => {
-      if (door.id === primaryDoorId) {
-        return clearDoorProgressionLock({
-          ...door,
-          lockType: "switch_state",
-          wallDoorSwitchId: switchId,
-          wallDoorSwitchStateId: "open",
-        });
-      }
-      if (door.wallDoorSwitchId === switchId) {
-        return {
-          ...clearDoorProgressionLock(door),
-          lockType: "none" as const,
-          wallDoorSwitchId: undefined,
-          wallDoorSwitchStateId: undefined,
-        };
-      }
-      return door;
+      if (door.id === primaryDoorId) return door;
+      if (door.wallDoorSwitchId !== switchId) return door;
+      return {
+        ...door,
+        ...(door.lockType === "switch_state" ? { lockType: "none" as const } : {}),
+        wallDoorSwitchId: undefined,
+        wallDoorSwitchStateId: undefined,
+      };
     }),
-    puzzles: (project.puzzles ?? []).filter((instance) => instance.linkedDoorId !== primaryDoorId),
-  };
-}
-
-function clearDoorProgressionLock<T extends BuilderDoor>(door: T): T {
-  return {
-    ...door,
-    keyRoomId: undefined,
-    puzzleKind: undefined,
-    puzzleRoomId: undefined,
-    surviveRobotId: undefined,
-    surviveRobotIds: undefined,
-    waveId: undefined,
-    waveIds: undefined,
+    puzzles: project.puzzles,
   };
 }
 

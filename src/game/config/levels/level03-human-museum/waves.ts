@@ -98,7 +98,7 @@ export const level03Waves = [
         "tier": "boss",
         "tierLabel": "策展主管",
         "healthMultiplier": 0.44,
-        "damageMultiplier": 0.31,
+        "damageMultiplier": 0.34,
         "moveSpeedMultiplier": 1.05,
         "attackCooldownMultiplier": 1.08,
         "attackRangeMultiplier": 1.08,

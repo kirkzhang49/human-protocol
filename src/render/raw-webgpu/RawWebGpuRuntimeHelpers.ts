@@ -184,6 +184,11 @@ export function canUseRigidNodePalette(geometry: Pick<RawPlanGeometryAsset, "rig
   return true;
 }
 
+export function canUseRawEnemyBakedAnimation(modelKey: string, geometry: Pick<RawPlanGeometryAsset, "nodeChunks">) {
+  if (modelKey === "hp_enemy_reclamation_mother_final_horror") return false;
+  return (geometry.nodeChunks?.length ?? 0) > 0;
+}
+
 function matrixAlmostEqual(a: number[], b: number[]) {
   for (let index = 0; index < 16; index += 1) {
     if (Math.abs((a[index] ?? 0) - (b[index] ?? 0)) > 0.00001) return false;

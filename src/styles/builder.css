@@ -1242,6 +1242,13 @@ g .builder-prop.g-mus ~ .builder-prop-inner {
   cursor: grab;
 }
 
+.builder-room-group.pick-disabled .builder-wall,
+.builder-room-group.pick-disabled .builder-floor,
+.builder-room-group.pick-disabled .builder-room-hitbox {
+  pointer-events: none;
+  cursor: default;
+}
+
 .builder-canvas.editor .builder-room-group .builder-floor {
   cursor: grab;
 }
@@ -2366,6 +2373,104 @@ g .builder-prop.g-mus ~ .builder-prop-inner {
 
 .builder-lockgrid button.active span {
   color: #e8f1fb;
+}
+
+.builder-door-control-card {
+  display: grid;
+  gap: 8px;
+  min-width: 0;
+}
+
+.builder-door-control-card.mechanism {
+  border-color: rgba(94, 232, 200, 0.28);
+  background: linear-gradient(180deg, rgba(6, 20, 18, 0.92), rgba(10, 12, 11, 0.96));
+}
+
+.builder-door-control-card.puzzle {
+  border-color: rgba(180, 122, 255, 0.24);
+}
+
+.builder-door-control-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  min-width: 0;
+}
+
+.builder-door-control-head h3 {
+  margin: 0;
+  min-width: 0;
+}
+
+.builder-door-control-head > span {
+  display: inline-grid;
+  place-items: center;
+  min-width: 26px;
+  height: 24px;
+  padding: 0 8px;
+  border: 1px solid rgba(141, 164, 196, 0.28);
+  border-radius: 999px;
+  color: #d7e5f3;
+  background: rgba(7, 12, 20, 0.72);
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.builder-door-control-list {
+  display: grid;
+  gap: 6px;
+  min-width: 0;
+}
+
+.builder-door-control-list button {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr);
+  grid-template-rows: auto auto;
+  align-items: center;
+  gap: 2px 8px;
+  min-width: 0;
+  padding: 8px 10px;
+  text-align: left;
+  background: rgba(8, 16, 16, 0.88);
+  border-color: rgba(94, 232, 200, 0.22);
+}
+
+.builder-door-control-list button i {
+  grid-row: 1 / span 2;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border: 1px solid currentColor;
+  border-radius: 50%;
+  color: #5ee8c8;
+  font-style: normal;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.builder-door-control-list button strong,
+.builder-door-control-list button span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.builder-door-control-list button strong {
+  color: #e4f4f1;
+  font-size: 12px;
+}
+
+.builder-door-control-list button span {
+  color: #8da4c4;
+  font-size: 10.5px;
+}
+
+.builder-door-control-list button:hover {
+  border-color: rgba(94, 232, 200, 0.55);
+  background: rgba(12, 31, 27, 0.92);
 }
 
 /* door-family (door art) grid */
@@ -5568,62 +5673,114 @@ g .builder-prop.g-mus ~ .builder-prop-inner {
 }
 
 .builder-route-output-row {
-  display: grid;
-  grid-template-columns: 20px minmax(0, 1fr) 28px;
-  gap: 6px;
-  align-items: end;
-  padding: 7px;
-  border: 1px solid #243a34;
-  border-radius: 7px;
-  background: #070d0ce8;
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  padding: 9px;
+  border: 1px solid #244a41;
+  border-radius: 8px;
+  background:
+    linear-gradient(180deg, #071512f2, #080b0af0),
+    repeating-linear-gradient(90deg, transparent 0 11px, #5ee8c80a 11px 12px);
 }
 
-.builder-route-output-row > b {
-  grid-row: 1 / span 3;
-  align-self: start;
+.builder-route-output-head {
+  display: grid;
+  grid-template-columns: 28px minmax(0, 1fr) 30px 42px;
+  gap: 6px;
+  align-items: end;
+}
+
+.builder-route-output-head > b {
   display: grid;
   place-items: center;
-  width: 20px;
-  height: 20px;
+  width: 28px;
+  height: 28px;
   border: 1px solid #5ee8c866;
   border-radius: 50%;
   color: #5ee8c8;
-  font-size: 11px;
+  background: #05201bcc;
+  font-size: 13px;
+  line-height: 1;
 }
 
-.builder-route-output-row > label:first-of-type {
-  grid-column: 2 / 3;
-}
-
-.builder-route-output-row > .builder-danger {
-  grid-column: 3;
-  grid-row: 1;
-  width: 28px;
-  height: 27px;
+.builder-route-output-head > .builder-danger {
+  width: 30px;
+  height: 30px;
   padding: 0 !important;
 }
 
+.builder-route-output-orb-jump {
+  width: 42px;
+  height: 30px;
+  padding: 0 !important;
+  border-color: #5ee8c866;
+  color: #d7f1ec;
+  background: #061916;
+  font-size: 11px;
+  font-weight: 900;
+}
+
+.builder-route-output-orb-jump.output-2 {
+  border-color: #ffd76b88;
+  color: #ffe4a1;
+}
+
+.builder-route-output-orb-jump.output-3 {
+  border-color: #71dc9288;
+  color: #b8f5c9;
+}
+
+.builder-route-output-orb-jump.output-4 {
+  border-color: #b995ff88;
+  color: #d8c4ff;
+}
+
 .builder-route-target-field {
-  grid-column: 2 / 4;
   display: flex;
   align-items: end;
-  gap: 5px;
+  gap: 8px;
   min-width: 0;
 }
 
 .builder-route-target-field label,
 .builder-route-output-label {
-  grid-column: 2 / 4;
   min-width: 0;
 }
 
 .builder-route-output-key-field {
-  grid-column: 2 / 4;
   display: grid;
-  grid-template-columns: minmax(0, 1fr) 74px 74px;
-  gap: 6px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: 8px;
   align-items: end;
-  padding-top: 2px;
+  padding: 8px;
+  border: 1px solid #1f4038;
+  border-radius: 7px;
+  background: #040b0af2;
+}
+
+.builder-route-output-advanced {
+  border: 1px solid #1b352f;
+  border-radius: 7px;
+  background: #050b0af0;
+}
+
+.builder-route-output-advanced > summary {
+  cursor: pointer;
+  padding: 7px 8px;
+  color: #8fb1cc;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.builder-route-output-advanced[open] > summary {
+  color: #d7f1ec;
+  border-bottom: 1px solid #1b352f;
+}
+
+.builder-route-output-advanced > label,
+.builder-route-output-advanced > .builder-route-output-key-field {
+  margin: 8px;
 }
 
 .builder-route-output-key-field label,
@@ -5632,9 +5789,42 @@ g .builder-prop.g-mus ~ .builder-prop-inner {
   min-width: 0;
 }
 
+.builder-route-output-orb-label {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  grid-column: 1 / -1;
+  min-width: 0;
+  color: #d7f1ec;
+}
+
+.builder-route-output-room-field {
+  grid-column: 1 / -1;
+}
+
+.builder-route-output-orb-label span {
+  font-size: 12px;
+  font-weight: 900;
+}
+
+.builder-route-output-orb-label em {
+  color: #8ba7c8;
+  font-size: 11px;
+  font-style: normal;
+  line-height: 1.35;
+}
+
+.builder-route-output-orb-label button {
+  justify-self: start;
+  width: fit-content;
+  min-height: 28px;
+  padding: 4px 9px !important;
+  color: #9be8ff;
+}
+
 .builder-route-target-field button {
-  width: 28px;
-  height: 27px;
+  width: 32px;
+  height: 32px;
   padding: 0 !important;
   flex: none;
   color: #9be8ff;

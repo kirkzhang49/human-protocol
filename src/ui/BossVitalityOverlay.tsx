@@ -175,11 +175,15 @@ function bossDisplayName(enemy: EnemyState, language: GameLanguage, profile?: Bo
   if (profile) return bossCopy(profile.copy.displayName, language);
   if (language === "en") return englishBossName(enemy.archetypeId, enemy.tier);
   const tierLabel = enemy.tierLabel?.trim();
-  if (tierLabel && tierLabel !== enemy.tier && !tierLabel.toLowerCase().includes("boss")) return tierLabel;
+  if (tierLabel && tierLabel !== enemy.tier && !tierLabel.toLowerCase().includes("boss") && !isGenericBossTierLabel(tierLabel)) return tierLabel;
   if (enemy.archetypeId === "custodian_elite") return "维修主管";
   if (enemy.tier === "boss") return "大型主管机体";
   if (enemy.tier === "leader") return "头领机体";
   return "高威胁目标";
+}
+
+function isGenericBossTierLabel(label: string) {
+  return label === "大型主管" || label === "大型主管机体" || label === "头领机体";
 }
 
 function englishBossName(archetypeId: EnemyArchetypeId, tier: EnemyState["tier"]) {
