@@ -5,6 +5,10 @@ const frameDelta = 1 / 30;
 const maxObjectiveSeconds = 180;
 const maxWaveSeconds = 150;
 const physicsMode = readPhysicsModeArg();
+const expectedDynamicBodiesByLevelId = new Map([
+  ["level_01_maintenance_bay", 1],
+  ["level_02_residential_simulation", 1],
+]);
 let qaPlayerRadius = 0.72;
 let qaPlayerCollisionHeight = 1.75;
 
@@ -135,7 +139,7 @@ try {
   for (const report of reports) {
     console.log(`PASS real-play ${report.levelId} physics=${report.physics}`);
     console.log(`  objectives=${report.objectives.join(" -> ")}`);
-    console.log(`  kills=${report.kills} health=${report.healthPercent}% memory=${report.memoryFragments}`);
+    console.log(`  kills=${report.kills} health=${report.healthPercent}% memory=${report.memoryFragments} dynamicBodies=${report.dynamicBodies}`);
     console.log(`  victory=${report.victoryMessage}`);
   }
   console.log(`PASS real-play campaign=${campaignIds.join(" -> ")} physics=${world.debugOptions.physicsMode}`);
@@ -249,6 +253,7 @@ async function primePhysicsForQa(world, runner) {
   if (!(await world.physics.init())) fail(world, "Rapier physics did not initialize for real playthrough QA");
   runner.step(0.06);
   if (!world.syncPhysicsStaticObstacles()) fail(world, "Rapier static obstacle sync failed for real playthrough QA");
+  assertRapierDynamicBodyCount(world, "prime");
 }
 
 function createRunner(world, systems) {
@@ -341,6 +346,7 @@ function playLevel(runner, levelId) {
 
   if (guard >= 80) fail(world, `Objective loop exceeded on ${levelId}`);
   if (world.session.mode !== "victory") fail(world, `Did not reach victory on ${levelId}; mode=${world.session.mode}`);
+  assertRapierDynamicBodyCount(world, "victory");
 
   return {
     levelId,
@@ -349,8 +355,25 @@ function playLevel(runner, levelId) {
     kills: world.session.kills,
     healthPercent: Math.round((world.player.health / world.player.maxHealth) * 100),
     memoryFragments: world.session.memoryFragments,
+    dynamicBodies: world.physicsDebugSnapshot?.().dynamicBodyCount ?? world.dynamicProps?.length ?? 0,
     victoryMessage: world.session.message,
   };
+}
+
+function assertRapierDynamicBodyCount(world, label) {
+  if (world.debugOptions.physicsMode !== "rapier") return;
+  world.syncPhysicsDynamicProps?.();
+  world.syncDynamicPropsFromPhysics?.(0);
+  const expected = expectedDynamicBodiesByLevelId.get(world.level.id) ?? 0;
+  const actualProps = world.dynamicProps?.length ?? 0;
+  const actualBodies = world.physicsDebugSnapshot?.().dynamicBodyCount ?? actualProps;
+  const exactInitialCount = label === "prime";
+  const matchesContract = exactInitialCount
+    ? actualProps === expected && actualBodies === expected
+    : actualProps <= expected && actualBodies <= expected && actualProps === actualBodies;
+  if (!matchesContract) {
+    fail(world, `Rapier dynamic body count mismatch at ${label}: expected=${expected} props=${actualProps} bodies=${actualBodies} exact=${exactInitialCount}`);
+  }
 }
 
 function ensureActiveObjective(runner) {
