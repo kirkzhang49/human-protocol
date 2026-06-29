@@ -24,7 +24,7 @@
 ### 0.1 最新 QA 证据
 
 - `npm run qa:playthrough:rapier`：五个官方关卡 headless real-playthrough 已覆盖 Rapier 主路径。
-- `npm run qa:physics:browser`：真实 Chrome browser QA，五个官方关卡均通过 Raw WebGPU backend、browser RAF/game loop、Rapier runtime、console clean 检查；包含 Level 2 移动横屏视口。
+- `npm run qa:physics:browser`：真实 Chrome browser QA，五个官方关卡均通过 Raw WebGPU backend、browser RAF/game loop、Rapier runtime、console clean 检查；包含 Level 2 移动横屏视口，并断言 Level 1/2 各 1 个动态体、Level 3-5 为 0。
 - `npm run qa:builder:browser`：已刷新到当前“烘焙并试玩 / WebGPU 试玩”单按钮 UI，并通过 /build 深度烘焙、gallery puzzle 试玩包、Raw WebGPU cooked pack、viewmodel overlay 和 compat fallback 浏览器检查。物理专项脚本不替代 builder 生产链路测试。
 - `npx vitest run src/game/systems/KinematicMovementReconciliation.test.ts`：新增 Phase 4/5 边界覆盖，验证玩家窄通道 + 旋转家具连续移动、boss 门边 spacing pressure 连续恢复都保持稳定。
 - `npx vitest run src/game/config/validation/mapValidator.test.ts` 与 `src/game/physics/DynamicPropsIntegration.test.ts`：确认 Phase 7 仍为 opt-in，小物件动态基础层可用，官方五关动态化范围被限制在 Level 1 货箱堆和 Level 2 软凳两个精选 ID。

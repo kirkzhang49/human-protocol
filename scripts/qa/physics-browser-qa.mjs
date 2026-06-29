@@ -20,11 +20,11 @@ const CHROME_CANDIDATES = [
 ];
 
 const PHYSICS_CASES = [
-  { name: "level01-desktop", levelId: "level_01_maintenance_bay", width: 1440, height: 900 },
-  { name: "level02-mobile-landscape", levelId: "level_02_residential_simulation", width: 800, height: 360, mobile: true },
-  { name: "level03-furniture-desktop", levelId: "level_03_human_museum", width: 1440, height: 900 },
-  { name: "level04-desktop", levelId: "level_04_memory_clinic", width: 1366, height: 768 },
-  { name: "level05-desktop", levelId: "level_05_reclamation_core", width: 1366, height: 768 },
+  { name: "level01-desktop", levelId: "level_01_maintenance_bay", width: 1440, height: 900, expectedDynamicBodies: 1 },
+  { name: "level02-mobile-landscape", levelId: "level_02_residential_simulation", width: 800, height: 360, mobile: true, expectedDynamicBodies: 1 },
+  { name: "level03-furniture-desktop", levelId: "level_03_human_museum", width: 1440, height: 900, expectedDynamicBodies: 0 },
+  { name: "level04-desktop", levelId: "level_04_memory_clinic", width: 1366, height: 768, expectedDynamicBodies: 0 },
+  { name: "level05-desktop", levelId: "level_05_reclamation_core", width: 1366, height: 768, expectedDynamicBodies: 0 },
 ];
 const levelFilter = process.argv.find((arg) => arg.startsWith("--level="))?.slice("--level=".length) ?? null;
 
@@ -400,6 +400,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       world.physicsReady &&
       world.obstacles > 0 &&
       physics.staticColliderCount > 0 &&
+      physics.dynamicBodyCount === testCase.expectedDynamicBodies &&
       probe?.player?.translation > 0;
     record(
       physicsOk ? "PASS" : "FAIL",
@@ -411,6 +412,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         aliveEnemies: world?.aliveEnemies,
         staticColliders: physics.staticColliderCount,
         dynamicBodies: physics.dynamicBodyCount,
+        expectedDynamicBodies: testCase.expectedDynamicBodies,
         playerProbe: probe?.player,
         enemyProbe: probe?.enemy,
       }),
