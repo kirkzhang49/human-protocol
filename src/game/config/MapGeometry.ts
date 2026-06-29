@@ -66,6 +66,7 @@ export function createPropCollisionProxies(level: LevelDefinition) {
 
 export function resolvePropCollisionProxy(prop: LevelMapPropDefinition): PropCollisionProxy | null {
   if (prop.initiallyVisible === false) return null;
+  if (isDynamicMapProp(prop)) return null;
 
   const explicitCollider = prop.collider ?? null;
   const inferredCollider = explicitCollider ? null : inferPropCollider(prop);
@@ -93,6 +94,10 @@ export function resolvePropCollisionProxy(prop: LevelMapPropDefinition): PropCol
     ...(explicitCollider && Math.abs(yaw) > 0.000001 ? { yaw } : {}),
     ...(enemyNavigation !== "solid" ? { enemyNavigation } : {}),
   };
+}
+
+export function isDynamicMapProp(prop: LevelMapPropDefinition) {
+  return prop.tags?.includes("dynamic_prop") ?? false;
 }
 
 function enemyNavigationForProp(prop: LevelMapPropDefinition, collider: PropColliderDefinition) {

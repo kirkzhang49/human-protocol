@@ -1,5 +1,6 @@
 import { Quaternion, Vector3 } from "three";
 import { afterEach, describe, expect, it, vi } from "vitest";
+import { resolvePropCollisionProxy } from "../config/MapGeometry";
 import { GameWorld } from "../core/GameWorld";
 
 describe("GameWorld dynamic prop physics", () => {
@@ -132,5 +133,61 @@ describe("GameWorld dynamic prop physics", () => {
     world.syncDynamicPropsFromPhysics(16);
 
     expect(world.dynamicProps.map((prop) => prop.id)).toEqual(["awake-crate"]);
+  });
+
+  it("spawns only explicitly tagged map props as dynamic props on level reset", () => {
+    const world = new GameWorld();
+    if (!world.level.map) throw new Error("Expected default test level to include map geometry.");
+    world.level = {
+      ...world.level,
+      map: {
+        ...world.level.map,
+        props: [
+          {
+            id: "dynamic_loose_crate",
+            roomId: world.level.map.rooms[0].id,
+            modelKey: "room_locker_low",
+            position: [1, 0.35, 2],
+            rotation: [0, Math.PI / 4, 0],
+            scale: [1, 1, 1],
+            collider: { halfSize: [0.32, 0.35, 0.28] },
+            tags: ["dynamic_prop"],
+          },
+          {
+            id: "static_locker",
+            roomId: world.level.map.rooms[0].id,
+            modelKey: "room_locker_low",
+            position: [3, 0.35, 2],
+            collider: { halfSize: [0.32, 0.35, 0.28] },
+          },
+        ],
+      },
+    };
+
+    (world as unknown as { resetLevel(mode: "playing"): void }).resetLevel("playing");
+
+    expect(world.dynamicProps).toHaveLength(1);
+    expect(world.dynamicProps[0]).toMatchObject({
+      id: "dynamic_loose_crate",
+      modelKey: "room_locker_low",
+      roomId: world.level.map.rooms[0].id,
+      mass: 1,
+    });
+    expect(world.dynamicProps[0].position.toArray()).toEqual([1, 0.35, 2]);
+    expect(world.dynamicProps[0].halfSize.toArray()).toEqual([0.32, 0.35, 0.28]);
+    expect(world.dynamicProps[0].yaw).toBeCloseTo(Math.PI / 4);
+  });
+
+  it("does not mirror dynamic map props as static collision proxies", () => {
+    expect(
+      resolvePropCollisionProxy({
+        id: "dynamic_loose_crate",
+        roomId: "room_test",
+        modelKey: "room_locker_low",
+        position: [0, 0.35, 0],
+        collider: { halfSize: [0.32, 0.35, 0.28] },
+        tags: ["dynamic_prop"],
+      }),
+    ).toBeNull();
   });
 });

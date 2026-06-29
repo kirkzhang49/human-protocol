@@ -9,7 +9,7 @@ import { enemyTierProfiles, type EnemyTierOverrideConfig } from "../config/enemy
 import { arenaObstacles } from "../config/gameBalance";
 import { localizedConfigCopy, localizedConfigText, localizedDialogue, localizedExit } from "../config/LevelLocalization";
 import { createDialogueTriggerMap, waveById } from "../config/levelManifest";
-import { resolvePropCollisionProxy } from "../config/MapGeometry";
+import { isDynamicMapProp, resolvePropCollisionProxy } from "../config/MapGeometry";
 import { playerConfig } from "../config/playerConfig";
 import { resolveRoomPresentation } from "../config/RoomPresentationRegistry";
 import { defaultUltimateAbilityId, ultimateAbilityConfig, type UltimateAbilityConfig } from "../config/ultimateAbilityConfig";
@@ -4267,6 +4267,7 @@ export class GameWorld {
       for (const pickup of this.level.pickups.storyPickups) {
         this.addPickup(pickup.type, vectorFromTuple(pickup.position), { ignoreDynamicLimit: true, expires: false });
       }
+      this.spawnConfiguredDynamicProps();
     }
     this.combatAssist.lockedEnemyId = null;
     this.combatAssist.lockedStrength = 0;
@@ -4294,6 +4295,20 @@ export class GameWorld {
           halfSize: new Vector3(...obstacle.halfSize),
         }));
     this.markObstacleIndexDirty();
+  }
+
+  private spawnConfiguredDynamicProps() {
+    for (const prop of this.level.map?.props ?? []) {
+      if (!isDynamicMapProp(prop) || prop.initiallyVisible === false || !prop.collider) continue;
+      this.spawnDynamicProp({
+        id: prop.id,
+        roomId: prop.roomId,
+        modelKey: prop.modelKey,
+        position: vectorFromTuple(prop.position),
+        halfSize: vectorFromTuple(prop.collider.halfSize),
+        yaw: prop.rotation?.[1] ?? 0,
+      });
+    }
   }
 
   private notifyLevelChange() {
