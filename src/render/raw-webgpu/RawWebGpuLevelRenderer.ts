@@ -173,6 +173,16 @@ const AUTHORED_MATERIAL_INSTANCE_COLOR: Tuple4 = [1, 1, 1, 0];
 // must stay on local Y; moving local Z pushes the handle into/out of the wall.
 const WALL_DOOR_SWITCH_LEVER_DOWN_OFFSET_Y = -0.34;
 
+type RawDynamicPropDebugEntry = {
+  id: string;
+  modelKey: string;
+  instanceOffset: number;
+  source: "geometry" | "proxy";
+  position: Tuple3;
+  yaw: number;
+  scale: Tuple3;
+};
+
 function pickupColorForType(type: GameWorld["pickups"][number]["type"]): Tuple4 {
   if (type === "coreCell") return roleColors.pickup_coreCell;
   if (type === "ironRod") return roleColors.pickup_ironRod;
@@ -239,6 +249,18 @@ function isExitElevatorShaftModelKey(modelKey: string | null | undefined) {
 
 function rawThreeEnemyOracleOnlyEnabled() {
   return rawThreeEnemyOracleOnlyEnabledFromParams(new URLSearchParams(window.location.search));
+}
+
+function rawDynamicPropsDebugEnabled() {
+  const params = new URLSearchParams(window.location.search);
+  return (
+    params.get("qa") === "1" ||
+    params.get("physicsDebug") === "1" ||
+    params.get("rawDynamicPropsDebug") === "1" ||
+    window.location.hostname === "localhost" ||
+    window.location.hostname === "127.0.0.1" ||
+    window.location.hostname === "::1"
+  );
 }
 
 function rawEnemyHandledByThreeOracle(world: GameWorld, enemy: GameWorld["enemies"][number]) {
@@ -460,6 +482,7 @@ export class RawWebGpuLevelRenderer {
   private ageGroundingFailed = false;
   private ageGroundingQuadCount = 0;
   private dynamicShadowPlaneCount = 0;
+  private readonly dynamicPropDebugEntries: RawDynamicPropDebugEntry[] = [];
 
   private constructor(
     canvas: HTMLCanvasElement,
@@ -1604,6 +1627,7 @@ export class RawWebGpuLevelRenderer {
     let instanceCount = this.staticInstanceCount;
     this.robotJointMatrixCount = 0;
     instanceCount = this.writeDynamicInstances(world, instanceCount, this.drawBatches);
+    this.publishDynamicPropsDebugSnapshot(world);
     this.writeRobotJointMatrixBuffer();
     const floatCount = instanceCount * FLOATS_PER_INSTANCE;
     if (staticSceneChanged) {
@@ -1667,6 +1691,7 @@ export class RawWebGpuLevelRenderer {
   private writeDynamicInstances(world: GameWorld, startIndex: number, drawBatches: RawDrawBatch[]) {
     let index = startIndex;
     const hideRawEnemies = rawThreeEnemyOracleOnlyEnabled();
+    this.dynamicPropDebugEntries.length = 0;
     this.dynamicShadowPlaneCount = 0;
     this.ageGroundingQuadCount = 0;
     const ageQuads = this.planAgeGroundingQuads(world, hideRawEnemies);
@@ -1879,6 +1904,7 @@ export class RawWebGpuLevelRenderer {
   private writeDynamicPropInstance(index: number, prop: GameWorld["dynamicProps"][number], drawBatches: RawDrawBatch[]) {
     const geometry = this.geometryAssets.get(prop.modelKey);
     if (!geometry || geometry.vertexCount <= 0) {
+      this.recordDynamicPropDebugEntry(index, prop, "proxy");
       const nextIndex = this.writeBox(
         index,
         prop.position.x,
@@ -1902,6 +1928,7 @@ export class RawWebGpuLevelRenderer {
     }
 
     const scale: Tuple3 = [prop.scale.x, prop.scale.y, prop.scale.z];
+    this.recordDynamicPropDebugEntry(index, prop, "geometry");
     this.writeRuntimeModelInstance(
       index,
       prop.position.x,
@@ -1936,6 +1963,39 @@ export class RawWebGpuLevelRenderer {
       transparent: this.isTransparentGeometryRange(geometry.vertexOffset, geometry.vertexCount),
     });
     return index + 1;
+  }
+
+  private recordDynamicPropDebugEntry(index: number, prop: GameWorld["dynamicProps"][number], source: RawDynamicPropDebugEntry["source"]) {
+    this.dynamicPropDebugEntries.push({
+      id: prop.id,
+      modelKey: prop.modelKey,
+      instanceOffset: index,
+      source,
+      position: [prop.position.x, prop.position.y, prop.position.z],
+      yaw: prop.yaw,
+      scale: [prop.scale.x, prop.scale.y, prop.scale.z],
+    });
+  }
+
+  private publishDynamicPropsDebugSnapshot(world: GameWorld) {
+    if (!rawDynamicPropsDebugEnabled()) return;
+    (window as typeof window & {
+      __humanProtocolRawDynamicPropsDebug?: {
+        levelId: string;
+        frameIndex: number;
+        count: number;
+        entries: RawDynamicPropDebugEntry[];
+      };
+    }).__humanProtocolRawDynamicPropsDebug = {
+      levelId: world.level.id,
+      frameIndex: world.frameIndex,
+      count: this.dynamicPropDebugEntries.length,
+      entries: this.dynamicPropDebugEntries.map((entry) => ({
+        ...entry,
+        position: [...entry.position] as Tuple3,
+        scale: [...entry.scale] as Tuple3,
+      })),
+    };
   }
 
   private writeExitCinematicDynamicInstances(world: GameWorld, startIndex: number, drawBatches: RawDrawBatch[]) {

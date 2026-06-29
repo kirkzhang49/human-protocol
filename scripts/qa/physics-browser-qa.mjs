@@ -311,6 +311,122 @@ const rawBackendReadyEvent = `(() => {
   return event ? { levelId: event.levelId, detail: event.detail } : null;
 })()`;
 
+const rawDynamicPropRenderSyncProbe = `(async () => {
+  const world = window.__HUMAN_PROTOCOL_WORLD__;
+  const props = world?.dynamicProps ?? [];
+  const count = Array.isArray(props) ? props.length : 0;
+  if (!world || !Array.isArray(props) || props.length === 0) {
+    const raw = window.__humanProtocolRawDynamicPropsDebug ?? null;
+    return { present: false, count, rawCount: Number(raw?.count ?? 0), pass: Number(raw?.count ?? 0) === 0 };
+  }
+  if (!world?.applyDynamicPropImpulse || !world?.syncPhysicsDynamicProps || !world?.syncDynamicPropsFromPhysics) {
+    return { present: true, count, pass: false, reason: "dynamic prop physics api unavailable" };
+  }
+  const prop = props[0];
+  const startState = captureDynamicPropQaState(prop);
+  if (!startState) return { present: true, count, id: prop?.id, pass: false, reason: "missing dynamic prop state" };
+  let result = null;
+  try {
+    const halfY = Number(prop.halfSize?.y ?? 0.35);
+    const qaStartPosition = world.player.position.clone();
+    qaStartPosition.x += 1.1;
+    qaStartPosition.y = Math.max(0.1, halfY);
+    qaStartPosition.z += 0.8;
+    restoreDynamicPropBodyForQa(world, prop, {
+      ...startState,
+      position: qaStartPosition,
+      sleeping: false,
+    });
+    await nextRawFrame();
+    await nextRawFrame();
+    const preImpulseRaw = window.__humanProtocolRawDynamicPropsDebug ?? null;
+    const preImpulseEntry = preImpulseRaw?.entries?.find?.((candidate) => candidate.id === prop.id) ?? null;
+    if (!preImpulseEntry) {
+      return {
+        present: true,
+        count,
+        id: prop.id,
+        pass: false,
+        reason: "dynamic prop was not visible in Raw WebGPU QA position",
+        rawCount: Number(preImpulseRaw?.count ?? 0),
+      };
+    }
+    const physicsStart = prop.position.clone();
+    const impulse = prop.position.clone().set(2.1, 0, 0.35);
+    const applied = Boolean(world.applyDynamicPropImpulse(prop.id, impulse));
+    for (let frame = 0; frame < 8; frame += 1) {
+      world.physics?.step?.(1 / 30);
+      world.syncDynamicPropsFromPhysics(1 / 30);
+    }
+    await nextRawFrame();
+    await nextRawFrame();
+    const raw = window.__humanProtocolRawDynamicPropsDebug ?? null;
+    const entry = raw?.entries?.find?.((candidate) => candidate.id === prop.id) ?? null;
+    const renderX = Number(entry?.position?.[0] ?? NaN);
+    const renderY = Number(entry?.position?.[1] ?? NaN);
+    const renderZ = Number(entry?.position?.[2] ?? NaN);
+    const dx = Math.abs(renderX - Number(prop.position.x));
+    const dy = Math.abs(renderY - Number(prop.position.y));
+    const dz = Math.abs(renderZ - Number(prop.position.z));
+    const distance = Math.hypot(Number(prop.position.x - physicsStart.x), Number(prop.position.z - physicsStart.z));
+    const renderMatchesPhysics = Boolean(entry && dx < 0.015 && dy < 0.015 && dz < 0.015);
+    result = {
+      present: true,
+      count,
+      id: prop.id,
+      applied,
+      moved: distance > 0.015,
+      rawCount: Number(raw?.count ?? 0),
+      source: entry?.source ?? null,
+      renderMatchesPhysics,
+      dx,
+      dy,
+      dz,
+      distance,
+      pass: Boolean(applied && distance > 0.015 && renderMatchesPhysics && Number(raw?.count ?? 0) === count),
+    };
+    return result;
+  } finally {
+    restoreDynamicPropBodyForQa(world, prop, {
+      ...startState,
+      sleeping: false,
+    });
+    await nextRawFrame();
+  }
+
+  function nextRawFrame() {
+    return new Promise((resolve) => requestAnimationFrame(() => resolve(true)));
+  }
+
+  function captureDynamicPropQaState(prop) {
+    const position = prop?.position?.clone?.();
+    if (!position) return null;
+    return {
+      position,
+      rotation: prop.rotation?.clone?.() ?? null,
+      yaw: Number(prop.yaw ?? 0),
+      sleeping: Boolean(prop.sleeping),
+    };
+  }
+
+  function restoreDynamicPropBodyForQa(world, prop, state) {
+    if (!state || !prop) return;
+    const props = world.dynamicProps;
+    const index = Array.isArray(props) ? props.indexOf(prop) : -1;
+    if (index >= 0) {
+      props.splice(index, 1);
+      world.syncPhysicsDynamicProps?.();
+    }
+    prop.position.copy(state.position);
+    if (state.rotation && prop.rotation?.copy) prop.rotation.copy(state.rotation);
+    prop.yaw = state.yaw;
+    prop.sleeping = state.sleeping;
+    if (index >= 0) props.splice(Math.min(index, props.length), 0, prop);
+    world.syncPhysicsDynamicProps?.();
+    world.syncDynamicPropsFromPhysics?.(0);
+  }
+})()`;
+
 const kinematicProbe = `(() => {
   const world = window.__HUMAN_PROTOCOL_WORLD__;
   if (!world?.player || !world?.moveKinematicCircleWithPhysics) return null;
@@ -1099,6 +1215,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
     const physics = await page.waitFor(physicsReadySnapshot, 45000, `${testCase.name} Rapier ready`);
     const world = await page.waitFor(worldSnapshot, 15000, `${testCase.name} world snapshot`);
     const probe = await page.evaluate(kinematicProbe);
+    const rawDynamicPropRenderSync = await page.evaluate(rawDynamicPropRenderSyncProbe);
     await sleep(800);
     await page.screenshot(`physics-${testCase.name}`);
 
@@ -1139,7 +1256,13 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
           probe.dynamicPropImpulse.applied &&
           probe.dynamicPropImpulse.moved &&
           Math.abs(probe.dynamicPropImpulse.yDelta ?? 0) < 0.01
-        : probe?.dynamicPropImpulse?.present === false && probe.dynamicPropImpulse.count === 0);
+        : probe?.dynamicPropImpulse?.present === false && probe.dynamicPropImpulse.count === 0) &&
+      (testCase.expectedDynamicBodies > 0
+        ? rawDynamicPropRenderSync?.present &&
+          rawDynamicPropRenderSync.count === testCase.expectedDynamicBodies &&
+          rawDynamicPropRenderSync.pass &&
+          rawDynamicPropRenderSync.renderMatchesPhysics
+        : rawDynamicPropRenderSync?.present === false && rawDynamicPropRenderSync.rawCount === 0);
     record(
       physicsOk ? "PASS" : "FAIL",
       `${testCase.name} Rapier runtime`,
@@ -1159,6 +1282,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
         dynamicPropOfficialKinematicBlock: probe?.dynamicPropOfficialKinematicBlock,
         dynamicPropRuntimeCap: probe?.dynamicPropRuntimeCap,
         dynamicPropImpulse: probe?.dynamicPropImpulse,
+        rawDynamicPropRenderSync,
       }),
     );
 

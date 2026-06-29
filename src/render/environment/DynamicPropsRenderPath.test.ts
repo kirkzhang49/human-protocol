@@ -27,4 +27,20 @@ describe("dynamic prop render paths", () => {
     expect(source).toContain("prop.yaw");
     expect(source).toContain("const scale: Tuple3 = [prop.scale.x, prop.scale.y, prop.scale.z]");
   });
+
+  it("Raw WebGPU exposes a QA dynamic prop transform snapshot", () => {
+    const source = sourceAt("../raw-webgpu/RawWebGpuLevelRenderer.ts");
+
+    expect(source).toContain("__humanProtocolRawDynamicPropsDebug");
+    expect(source).toContain("publishDynamicPropsDebugSnapshot(world)");
+    expect(source).toContain("this.dynamicPropDebugEntries");
+  });
+
+  it("physics browser QA checks Raw WebGPU dynamic prop transform sync", () => {
+    const source = sourceAt("../../../scripts/qa/physics-browser-qa.mjs");
+
+    expect(source).toContain("rawDynamicPropRenderSync");
+    expect(source).toContain("__humanProtocolRawDynamicPropsDebug");
+    expect(source).toContain("renderMatchesPhysics");
+  });
 });
