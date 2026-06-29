@@ -410,6 +410,7 @@ const kinematicProbe = `(() => {
       { id: obstaclePrefix + "lane_left_wall", visualKey: "test_wall", position: vector(-1.05, 0.75, 6.2), halfSize: half(0.12, 0.75, 2.4) },
       { id: obstaclePrefix + "lane_right_wall", visualKey: "test_wall", position: vector(1.65, 0.75, 6.2), halfSize: half(0.12, 0.75, 2.4) },
       { id: obstaclePrefix + "lane_rotated_furniture", visualKey: "test_rotated_console", position: vector(1.42, 0.62, 5.95), halfSize: half(0.16, 0.62, 0.75), yaw: Math.PI / 5 },
+      { id: obstaclePrefix + "boss_door_edge_post", visualKey: "test_door", position: vector(10.05, 0.8, 7.2), halfSize: half(0.16, 0.8, 0.85) },
     ];
     const beforeCount = world.obstacles.length;
     try {
@@ -506,6 +507,31 @@ const kinematicProbe = `(() => {
         continuousPrevious.copy(continuousPosition);
         if (!Number.isFinite(continuousPosition.x) || !Number.isFinite(continuousPosition.z)) continuousFinite = false;
       }
+      const bossDoorStart = vector(9.2, 0, 7.2);
+      const bossDoorPosition = bossDoorStart.clone();
+      const bossDoorPrevious = bossDoorStart.clone();
+      let bossDoorMaxStep = 0;
+      let bossDoorBlockedFrames = 0;
+      let bossDoorFinite = true;
+      for (let frame = 0; frame < 36; frame += 1) {
+        const moved = world.moveKinematicCircleWithPhysics({
+          id: "qa_browser_boss_continuous_door_edge",
+          position: bossDoorPosition,
+          radius: 0.52,
+          height: 2.55,
+          desiredTranslation: half(0.08, 0, -0.03),
+          filter: (candidate) => candidate.id === obstaclePrefix + "boss_door_edge_post",
+        });
+        if (!moved) {
+          bossDoorFinite = false;
+          break;
+        }
+        if (moved.blocked) bossDoorBlockedFrames += 1;
+        bossDoorPosition.copy(moved.position);
+        bossDoorMaxStep = Math.max(bossDoorMaxStep, bossDoorPosition.distanceTo(bossDoorPrevious));
+        bossDoorPrevious.copy(bossDoorPosition);
+        if (!Number.isFinite(bossDoorPosition.x) || !Number.isFinite(bossDoorPosition.z)) bossDoorFinite = false;
+      }
       const passableTravelZ = Number((passable?.position?.z ?? passableStart.z) - passableStart.z);
       const tightTravelZ = Number((tight?.position?.z ?? tightStart.z) - tightStart.z);
       const enemyTravelX = Number((enemyNav?.position?.x ?? navStart.x) - navStart.x);
@@ -515,6 +541,8 @@ const kinematicProbe = `(() => {
       const bossOverheadTravelX = Number((bossOverhead?.position?.x ?? bossOverheadStart.x) - bossOverheadStart.x);
       const continuousTravelX = Number(continuousPosition.x - continuousStart.x);
       const continuousTravelZ = Number(continuousPosition.z - continuousStart.z);
+      const bossDoorTravelX = Number(bossDoorPosition.x - bossDoorStart.x);
+      const bossDoorTravelZ = Number(bossDoorPosition.z - bossDoorStart.z);
       return {
         obstacleCountDelta: world.obstacles.length - beforeCount,
         playerPassable: {
@@ -562,6 +590,21 @@ const kinematicProbe = `(() => {
           maxStep: continuousMaxStep,
           blockedFrames: continuousBlockedFrames,
           finite: continuousFinite,
+        },
+        continuousBossDoorEdge: {
+          pass: Boolean(
+            bossDoorFinite &&
+            bossDoorBlockedFrames > 0 &&
+            bossDoorTravelX > 0.2 &&
+            bossDoorTravelX < 0.7 &&
+            bossDoorTravelZ < -0.7 &&
+            bossDoorMaxStep < 0.12
+          ),
+          travelX: bossDoorTravelX,
+          travelZ: bossDoorTravelZ,
+          maxStep: bossDoorMaxStep,
+          blockedFrames: bossDoorBlockedFrames,
+          finite: bossDoorFinite,
         },
       };
     } finally {
@@ -764,7 +807,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.projectileSweep.impactTravelZ > -1.32 &&
       probe.projectileSweep.impactTravelZ < -1.05 &&
       probe.projectileSweep.obstacleCountDelta === 1 &&
-      probe?.movementStress?.obstacleCountDelta === 12 &&
+      probe?.movementStress?.obstacleCountDelta === 13 &&
       probe.movementStress.playerPassable?.pass &&
       probe.movementStress.playerTight?.pass &&
       probe.movementStress.enemyNavigation?.pass &&
@@ -772,6 +815,7 @@ async function runPhysicsCase(cdp, testCase, webgpuAvailable) {
       probe.movementStress.bossRaisedCrossbar?.pass &&
       probe.movementStress.overheadClearance?.pass &&
       probe.movementStress.continuousPlayerLane?.pass &&
+      probe.movementStress.continuousBossDoorEdge?.pass &&
       probe.dynamicPropKinematicBlock?.pass &&
       (testCase.expectedDynamicBodies > 0
         ? probe?.dynamicPropImpulse?.present &&
