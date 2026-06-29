@@ -215,6 +215,41 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(world.player.velocity.length()).toBeLessThan(6.2);
   });
 
+  it("keeps real Rapier player walking along large rotated furniture without wedging", async () => {
+    const world = await createRapierPlayingWorld();
+    const start = new Vector3(-1.75, 0, 1.35);
+    const inputDirection = new Vector3(1, 0, -1).normalize();
+    world.player.position.copy(start);
+    world.input.move.set(1, -1);
+    world.obstacles.push({
+      id: "rapier_large_rotated_furniture_walk_slide",
+      visualKey: "test_large_sofa",
+      position: new Vector3(0.05, 0.68, -0.95),
+      halfSize: new Vector3(0.42, 0.68, 1.75),
+      yaw: -Math.PI / 4,
+    });
+    world.markObstacleIndexDirty();
+
+    let maxStep = 0;
+    let stalledFrames = 0;
+    const previous = world.player.position.clone();
+    for (let frame = 0; frame < 96; frame += 1) {
+      new PlayerMovementSystem().update(world, 1 / 60);
+      const step = world.player.position.distanceTo(previous);
+      maxStep = Math.max(maxStep, step);
+      if (step < 0.006 && world.player.velocity.length() > 1.2) stalledFrames += 1;
+      previous.copy(world.player.position);
+    }
+
+    expect(world.physicsDebugSnapshot().staticColliderCount).toBe(1);
+    expect(Number.isFinite(world.player.position.x)).toBe(true);
+    expect(Number.isFinite(world.player.position.z)).toBe(true);
+    expect(maxStep).toBeLessThan(0.16);
+    expect(stalledFrames).toBeLessThan(18);
+    expect(world.player.position.clone().sub(start).dot(inputDirection)).toBeGreaterThan(0.42);
+    expect(world.player.velocity.length()).toBeLessThan(6.2);
+  });
+
   it("damps enemy velocity to the physics-resolved translation when blocked", () => {
     const world = createPlayingWorld();
     const enemy = world.spawnEnemy("repair_drone", "blocked_enemy", new Vector3(0, 0, -2.5), 0);
