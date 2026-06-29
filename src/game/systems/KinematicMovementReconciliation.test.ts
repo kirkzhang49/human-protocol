@@ -3,6 +3,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { GameWorld } from "../core/GameWorld";
 import type { PhysicsKinematicCircleMove } from "../physics/PhysicsWorldAdapter";
 import { EnemyAISystem } from "./EnemyAISystem";
+import { PhysicsSystem } from "./PhysicsSystem";
 import { PlayerMovementSystem } from "./PlayerMovementSystem";
 
 describe("Rapier kinematic movement reconciliation", () => {
@@ -147,6 +148,41 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(world.player.dashTimeRemaining).toBe(0);
     expect(world.player.isDashing).toBe(false);
     expect(prop!.position.x).toBeGreaterThan(propStartX + 0.01);
+    expect(prop!.position.y).toBeCloseTo(0.35, 4);
+  });
+
+  it("keeps default-loop player pressure stable against opt-in dynamic props", async () => {
+    const world = await createRapierPlayingWorld();
+    const physics = new PhysicsSystem();
+    const movement = new PlayerMovementSystem();
+    const prop = world.spawnDynamicProp({
+      id: "rapier_walk_pressure_dynamic_crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, -1.45),
+      halfSize: new Vector3(0.34, 0.35, 0.34),
+      mass: 1,
+    });
+
+    expect(prop).not.toBeNull();
+    const propStartZ = prop!.position.z;
+    world.input.move.set(0, -1);
+
+    let maxPlayerStep = 0;
+    const previousPlayerPosition = world.player.position.clone();
+    for (let frame = 0; frame < 96; frame += 1) {
+      physics.update(world, 1 / 60);
+      movement.update(world, 1 / 60);
+      maxPlayerStep = Math.max(maxPlayerStep, world.player.position.distanceTo(previousPlayerPosition));
+      previousPlayerPosition.copy(world.player.position);
+    }
+    physics.update(world, 1 / 60);
+
+    expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(1);
+    expect(Number.isFinite(world.player.position.z)).toBe(true);
+    expect(Number.isFinite(prop!.position.z)).toBe(true);
+    expect(maxPlayerStep).toBeLessThan(0.16);
+    expect(world.player.position.z).toBeGreaterThan(prop!.position.z - prop!.halfSize.z - 0.35);
+    expect(prop!.position.z).toBeLessThan(propStartZ - 0.04);
     expect(prop!.position.y).toBeCloseTo(0.35, 4);
   });
 
@@ -488,6 +524,44 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(stalledFrames).toBeLessThan(22);
     expect(leader.position.distanceTo(world.player.position)).toBeLessThan(startDistance - 0.75);
     expect(leader.velocity.length()).toBeLessThan(5.6);
+  });
+
+  it("keeps default-loop enemy pressure stable against opt-in dynamic props", async () => {
+    const world = await createRapierPlayingWorld();
+    const physics = new PhysicsSystem();
+    const ai = new EnemyAISystem();
+    world.player.position.set(0, 0, -3);
+    const enemy = world.spawnEnemy("repair_drone", "rapier_enemy_dynamic_pressure", new Vector3(0, 0, 2.7), 0);
+    const prop = world.spawnDynamicProp({
+      id: "rapier_enemy_pressure_dynamic_crate",
+      modelKey: "test_crate",
+      position: new Vector3(0, 0.35, 0.9),
+      halfSize: new Vector3(0.34, 0.35, 0.34),
+      mass: 1,
+    });
+
+    expect(prop).not.toBeNull();
+    const propStartZ = prop!.position.z;
+    const enemyStartDistance = enemy.position.distanceTo(world.player.position);
+    let maxEnemyStep = 0;
+    const previousEnemyPosition = enemy.position.clone();
+    for (let frame = 0; frame < 150; frame += 1) {
+      physics.update(world, 1 / 60);
+      ai.update(world, 1 / 60);
+      maxEnemyStep = Math.max(maxEnemyStep, enemy.position.distanceTo(previousEnemyPosition));
+      previousEnemyPosition.copy(enemy.position);
+    }
+    physics.update(world, 1 / 60);
+
+    expect(world.physicsDebugSnapshot().dynamicBodyCount).toBe(1);
+    expect(Number.isFinite(enemy.position.z)).toBe(true);
+    expect(Number.isFinite(prop!.position.z)).toBe(true);
+    expect(maxEnemyStep).toBeLessThan(0.18);
+    expect(enemy.position.z).toBeGreaterThan(prop!.position.z + prop!.halfSize.z + enemy.radius - 0.12);
+    expect(prop!.position.z).toBeLessThan(propStartZ - 0.03);
+    expect(enemy.position.distanceTo(world.player.position)).toBeLessThan(enemyStartDistance - 0.75);
+    expect(enemy.velocity.length()).toBeLessThan(5.6);
+    expect(prop!.position.y).toBeCloseTo(0.35, 4);
   });
 
   it("damps enemy velocity that points back into a legacy recovery correction", () => {
