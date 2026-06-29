@@ -753,7 +753,24 @@
           -5
         ],
         "rotationY": 0,
-        "scale": 1
+        "scale": 1,
+        "elevation": 0,
+        "sourceProp": {
+          "y": 0,
+          "scale": 1,
+          "collider": {
+            "halfSize": [
+              0.326,
+              0.23,
+              0.2355
+            ]
+          },
+          "label": "皮革软凳",
+          "tags": [
+            "dynamic_prop",
+            "loose_furniture"
+          ]
+        }
       }
     ],
     "pickups": [

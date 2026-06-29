@@ -16,7 +16,7 @@
 | Phase 3 查询替换 | 已实现主路径。projectile/LOS/enemy navigation query 可走 Rapier，并保留 dual-run parity 统计。 | Phase 6 的近战/枪械 shape sweep 还没完整替换。 |
 | Phase 4 玩家移动 | 已实现代码主路径。`PlayerMovementSystem` 先尝试 `moveKinematicCircleWithPhysics`，失败才走 legacy fallback；已有速度修正、恢复修正、dash 防穿透回归。新增 `qa:physics:browser`，在真实 Chrome + Raw WebGPU 下覆盖五个官方关卡、桌面/移动横屏、RAF/game loop、Rapier static collider 与玩家 kinematic probe；并新增窄通道 + 旋转家具连续行走回归。 | 还要做人工手感 QA：试玩包、门框/旋转家具/窄通道逐点验收，以及移动端真机触控体感。 |
 | Phase 5 怪物移动 | 已实现代码主路径。`EnemyAISystem` 的移动和 post-spacing recovery 已走 Rapier；`enemyNavigation` soft/ignore 过滤、boss/leader 高度、近墙恢复都有回归。`qa:physics:browser` 在 Level 1 含活体敌人 probe，确认浏览器 runtime 下敌人 kinematic query 可用；并新增 boss 门边 spacing pressure 连续恢复回归，锁住长期速度放大/抖动风险。 | 还要做手感调参：boss/leader 在真实关卡门边和大型家具旁的人工长时观察，尤其是高体型敌人与门/家具边缘的连续追击。 |
-| Phase 7 动态小物件 | 基础层已实现。`DynamicPropState`、Rapier dynamic body、冲击力、睡眠/寿命清理、Raw WebGPU/Three fallback 读取都已具备；并已加配置护栏，限制数量、体积、关键标签。新增官方五关“无意外 dynamic_prop tag”回归，确保真实关卡家具不会被批量动态化。 | 还没把真实关卡里的小箱子/轻椅/碎片逐关标成 dynamic；需要少量精选，不应批量动态化。 |
+| Phase 7 动态小物件 | 基础层已实现。`DynamicPropState`、Rapier dynamic body、冲击力、睡眠/寿命清理、Raw WebGPU/Three fallback 读取都已具备；并已加配置护栏，限制数量、体积、关键标签。已精选 Level 1 `prop_hhup5a` 货箱堆与 Level 2 `prop_vq1oiy` 皮革软凳作为首批官方动态小物件，并用回归锁定官方动态化只允许这两个 ID。 | 还没继续扩展到 Level 3-5 的碎片/小箱子/轻椅；后续仍应少量精选，不应批量动态化。 |
 | Phase 8 清理 legacy | 未开始。 | 需要等 QA 证明 Rapier 主路径稳定，再删重复 legacy。 |
 
 因此，Phase 4/5 现在不是“不能做”，而是已经进入“主路径实现 + 回归覆盖 + 实机手感 QA”的阶段。Phase 7 也已经有基础层，但必须谨慎：先用配置护栏保证关键谜题、门、key item、大型机器不会被误标为动态物件，再逐关挑少量轻物件试做。
@@ -27,7 +27,7 @@
 - `npm run qa:physics:browser`：真实 Chrome browser QA，五个官方关卡均通过 Raw WebGPU backend、browser RAF/game loop、Rapier runtime、console clean 检查；包含 Level 2 移动横屏视口。
 - `npm run qa:builder:browser`：已刷新到当前“烘焙并试玩 / WebGPU 试玩”单按钮 UI，并通过 /build 深度烘焙、gallery puzzle 试玩包、Raw WebGPU cooked pack、viewmodel overlay 和 compat fallback 浏览器检查。物理专项脚本不替代 builder 生产链路测试。
 - `npx vitest run src/game/systems/KinematicMovementReconciliation.test.ts`：新增 Phase 4/5 边界覆盖，验证玩家窄通道 + 旋转家具连续移动、boss 门边 spacing pressure 连续恢复都保持稳定。
-- `npx vitest run src/game/config/validation/mapValidator.test.ts` 与 `src/game/physics/DynamicPropsIntegration.test.ts`：确认 Phase 7 仍为 opt-in，小物件动态基础层可用，官方五关没有意外动态化家具。
+- `npx vitest run src/game/config/validation/mapValidator.test.ts` 与 `src/game/physics/DynamicPropsIntegration.test.ts`：确认 Phase 7 仍为 opt-in，小物件动态基础层可用，官方五关动态化范围被限制在 Level 1 货箱堆和 Level 2 软凳两个精选 ID。
 
 ---
 

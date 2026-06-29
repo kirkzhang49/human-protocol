@@ -404,7 +404,11 @@
               0.36
             ]
           },
-          "label": "货箱堆"
+          "label": "货箱堆",
+          "tags": [
+            "dynamic_prop",
+            "loose_crate"
+          ]
         }
       },
       {

@@ -66,14 +66,17 @@ describe("dynamic map prop validation", () => {
     );
   });
 
-  it("keeps official campaign levels free of dynamic prop tags until explicitly curated", () => {
+  it("limits official campaign dynamic prop tags to explicitly curated props", () => {
     const dynamicPropIds = officialCampaignLevels.flatMap((level) =>
       (level.map?.props ?? [])
         .filter((prop) => isDynamicPropTagged(prop))
         .map((prop) => `${level.id}:${prop.id}`),
     );
 
-    expect(dynamicPropIds).toEqual([]);
+    expect(dynamicPropIds).toEqual([
+      "level_01_maintenance_bay:prop_hhup5a",
+      "level_02_residential_simulation:prop_vq1oiy",
+    ]);
   });
 });
 

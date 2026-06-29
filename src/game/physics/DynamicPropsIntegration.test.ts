@@ -1,6 +1,8 @@
 import { Quaternion, Vector3 } from "three";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { resolvePropCollisionProxy } from "../config/MapGeometry";
+import { level01MaintenanceBay } from "../config/levels/level01-maintenance-bay";
+import { level02ResidentialSimulation } from "../config/levels/level02-residential-simulation";
 import { GameWorld } from "../core/GameWorld";
 import { createProjectile } from "../entities/createProjectile";
 import { PhysicsSystem } from "../systems/PhysicsSystem";
@@ -270,6 +272,30 @@ describe("GameWorld dynamic prop physics", () => {
     expect(world.dynamicProps[0].position.toArray()).toEqual([1, 0.35, 2]);
     expect(world.dynamicProps[0].halfSize.toArray()).toEqual([0.32, 0.35, 0.28]);
     expect(world.dynamicProps[0].yaw).toBeCloseTo(Math.PI / 4);
+  });
+
+  it("spawns only curated official campaign props as dynamic props on level reset", () => {
+    const level01World = new GameWorld();
+    level01World.level = level01MaintenanceBay;
+    (level01World as unknown as { resetLevel(mode: "playing"): void }).resetLevel("playing");
+
+    expect(level01World.dynamicProps.map((prop) => prop.id)).toEqual(["prop_hhup5a"]);
+    expect(level01World.dynamicProps[0]).toMatchObject({
+      modelKey: "room_crate_stack",
+      roomId: "maintenance_bay_floor",
+    });
+    expect(level01World.dynamicProps[0].halfSize.toArray()).toEqual([0.45, 0.45, 0.36]);
+
+    const level02World = new GameWorld();
+    level02World.level = level02ResidentialSimulation;
+    (level02World as unknown as { resetLevel(mode: "playing"): void }).resetLevel("playing");
+
+    expect(level02World.dynamicProps.map((prop) => prop.id)).toEqual(["prop_vq1oiy"]);
+    expect(level02World.dynamicProps[0]).toMatchObject({
+      modelKey: "hp_l2_cc0_ottoman_polyhaven_v1",
+      roomId: "level_02_living_room",
+    });
+    expect(level02World.dynamicProps[0].halfSize.toArray()).toEqual([0.326, 0.23, 0.2355]);
   });
 
   it("does not mirror dynamic map props as static collision proxies", () => {
