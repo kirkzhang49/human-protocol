@@ -106,6 +106,44 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(enemy.velocity.x).toBeGreaterThanOrEqual(-0.01);
   });
 
+  it("keeps boss spacing pushes stable when physics recovery moves it off a wall", () => {
+    const world = createPlayingWorld();
+    const boss = world.spawnEnemy("custodian_elite", "wall_pinned_boss", new Vector3(0, 0, -2.5), 0, { tier: "boss" });
+    const blocker = world.spawnEnemy("repair_drone", "boss_spacing_pressure", new Vector3(0.68, 0, -2.5), 0);
+    boss.velocity.set(-2.4, 0, 0);
+    boss.staggerRemaining = 0.2;
+    blocker.velocity.set(0, 0, 0);
+
+    const moves: PhysicsKinematicCircleMove[] = [];
+    world.moveKinematicCircleWithPhysics = vi.fn((move: PhysicsKinematicCircleMove) => {
+      moves.push({
+        ...move,
+        position: move.position.clone(),
+        desiredTranslation: move.desiredTranslation.clone(),
+      });
+      if (move.id === `enemy:${boss.id}:recovery`) {
+        const corrected = move.position.clone().add(new Vector3(0.22, 0, 0));
+        return {
+          position: corrected,
+          translation: corrected.clone().sub(move.position),
+          blocked: true,
+        };
+      }
+      return {
+        position: move.position.clone().add(move.desiredTranslation),
+        translation: move.desiredTranslation.clone(),
+        blocked: false,
+      };
+    });
+
+    new EnemyAISystem().update(world, 0.1);
+
+    const bossRecoveryMove = moves.find((move) => move.id === `enemy:${boss.id}:recovery`);
+    expect(bossRecoveryMove?.height).toBeGreaterThan(2.5);
+    expect(boss.position.x).toBeGreaterThan(-0.1);
+    expect(boss.velocity.x).toBeGreaterThanOrEqual(-0.01);
+  });
+
   it("damps enemy velocity that points back into a legacy recovery correction", () => {
     const world = createPlayingWorld();
     const enemy = world.spawnEnemy("repair_drone", "legacy_recovered_enemy", new Vector3(0.42, 0, -2.5), 0);
