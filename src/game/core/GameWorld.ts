@@ -286,10 +286,16 @@ export class GameWorld {
     if (radius <= 0 || strength <= 0) return 0;
     let pushed = 0;
     for (const prop of this.dynamicProps) {
-      const dx = prop.position.x - origin.x;
-      const dz = prop.position.z - origin.z;
-      const distanceSq = dx * dx + dz * dz;
+      let dx = prop.position.x - origin.x;
+      let dz = prop.position.z - origin.z;
+      let distanceSq = dx * dx + dz * dz;
       if (distanceSq > radius * radius) continue;
+      if (distanceSq < 0.0001) {
+        const angle = deterministicDynamicPropImpulseAngle(prop.id);
+        dx = Math.cos(angle) * 0.01;
+        dz = Math.sin(angle) * 0.01;
+        distanceSq = dx * dx + dz * dz;
+      }
       const distance = Math.sqrt(Math.max(0.0001, distanceSq));
       const falloff = 1 - Math.min(1, distance / radius);
       const impulse = new Vector3((dx / distance) * strength * falloff, 0, (dz / distance) * strength * falloff);
@@ -5287,6 +5293,15 @@ function yawFromQuaternion(rotation: Quaternion) {
     2 * (rotation.w * rotation.y + rotation.x * rotation.z),
     1 - 2 * (rotation.y * rotation.y + rotation.z * rotation.z),
   );
+}
+
+function deterministicDynamicPropImpulseAngle(id: string) {
+  let hash = 2166136261;
+  for (let index = 0; index < id.length; index += 1) {
+    hash ^= id.charCodeAt(index);
+    hash = Math.imul(hash, 16777619);
+  }
+  return ((hash >>> 0) / 4294967296) * Math.PI * 2;
 }
 
 function readRuntimeDebugOptions(): RuntimeDebugOptions {
