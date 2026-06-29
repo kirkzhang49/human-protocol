@@ -12,6 +12,7 @@ export const BLADE_ARC_RANGE = 1.65;
 export const BLADE_ARC_CONE_RADIANS = 0.54;
 export const BLADE_CLOSE_RANGE = 0.9;
 const BLADE_SWEEP_BLOCK_RADIUS = 0.32;
+const BLADE_BODY_ARC_MARGIN_RADIANS = 0.18;
 const BLADE_DYNAMIC_PROP_IMPULSE = 2.15;
 
 export class WeaponSystem implements GameSystem {
@@ -195,7 +196,7 @@ export class WeaponSystem implements GameSystem {
       if (distance > range + enemy.radius) continue;
 
       const direction = this.toEnemy.multiplyScalar(1 / distance);
-      const inArc = direction.dot(this.bladeForward) >= coneCos || distance < BLADE_CLOSE_RANGE;
+      const inArc = this.targetOverlapsBladeArc(direction, distance, enemy.radius, coneCos);
       if (!inArc) continue;
       this.targetPoint.copy(enemy.position);
       this.targetPoint.y += 0.8;
@@ -269,7 +270,7 @@ export class WeaponSystem implements GameSystem {
       if (distance > range + propRadius) continue;
 
       const direction = this.toEnemy.multiplyScalar(1 / distance);
-      const inArc = direction.dot(this.bladeForward) >= coneCos || distance < BLADE_CLOSE_RANGE;
+      const inArc = this.targetOverlapsBladeArc(direction, distance, propRadius, coneCos);
       if (!inArc) continue;
 
       this.targetPoint.copy(prop.position);
@@ -289,6 +290,14 @@ export class WeaponSystem implements GameSystem {
     }
 
     return pushed;
+  }
+
+  private targetOverlapsBladeArc(direction: Vector3, distance: number, targetRadius: number, coneCos: number) {
+    if (distance < BLADE_CLOSE_RANGE) return true;
+    const coneRadians = Math.acos(Math.max(-1, Math.min(1, coneCos)));
+    const bodyAngularWidth = Math.asin(Math.min(0.95, Math.max(0, targetRadius) / Math.max(0.001, distance)));
+    const angularMargin = Math.min(BLADE_BODY_ARC_MARGIN_RADIANS, bodyAngularWidth);
+    return direction.dot(this.bladeForward) >= Math.cos(coneRadians + angularMargin);
   }
 
   private assistedShotDirection(world: GameWorld) {

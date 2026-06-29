@@ -13,7 +13,7 @@ import { EnemyAISystem } from "./EnemyAISystem";
 import { InputSystem } from "./InputSystem";
 import { MobileAssistSystem } from "./MobileAssistSystem";
 import { ProjectileSystem } from "./ProjectileSystem";
-import { WeaponSystem } from "./WeaponSystem";
+import { BLADE_ARC_CONE_RADIANS, WeaponSystem } from "./WeaponSystem";
 
 describe("combat weapon rules", () => {
   afterEach(() => {
@@ -62,6 +62,27 @@ describe("combat weapon rules", () => {
 
     expect(enemy.health).toBeLessThan(health);
     expect(world.player.energy).toBeLessThan(world.player.maxEnergy);
+    expect(world.player.fireSequence).toBe(1);
+    expect(world.effects.some((effect) => effect.type === "bladeSlash")).toBe(true);
+  });
+
+  it("hits robots whose body overlaps the rod sweep even when their center is just outside the cone", () => {
+    const world = createCombatWorld();
+    const distance = 1.42;
+    const angle = BLADE_ARC_CONE_RADIANS + 0.14;
+    const enemy = world.spawnEnemy(
+      "repair_drone",
+      "test_wave",
+      new Vector3(Math.sin(angle) * distance, 0, -Math.cos(angle) * distance),
+      0,
+    );
+    const health = enemy.health;
+
+    world.input.fire = true;
+    world.input.fireSource = "manual";
+    new WeaponSystem().update(world, 1 / 60);
+
+    expect(enemy.health).toBeLessThan(health);
     expect(world.player.fireSequence).toBe(1);
     expect(world.effects.some((effect) => effect.type === "bladeSlash")).toBe(true);
   });
@@ -167,6 +188,37 @@ describe("combat weapon rules", () => {
     world.syncDynamicPropsFromPhysics(1 / 30);
 
     expect(prop?.position.z).toBeLessThan(-1.06);
+    expect(prop?.position.y).toBeCloseTo(0.35, 4);
+  });
+
+  it("pushes opt-in dynamic props whose body overlaps the rod sweep near the cone edge", async () => {
+    vi.stubGlobal("window", {
+      ...globalThis,
+      location: {
+        search: "?physics=rapier",
+        hostname: "localhost",
+      },
+    });
+    const world = createCombatWorld();
+    await world.physics.init();
+    const distance = 1.18;
+    const angle = BLADE_ARC_CONE_RADIANS + 0.12;
+    const prop = world.spawnDynamicProp({
+      id: "blade-edge-brushed-crate",
+      modelKey: "test_crate",
+      position: new Vector3(Math.sin(angle) * distance, 0.35, -Math.cos(angle) * distance),
+      halfSize: new Vector3(0.34, 0.35, 0.34),
+      mass: 1,
+    });
+    const startDistance = prop?.position.distanceTo(world.player.position) ?? 0;
+
+    world.input.fire = true;
+    world.input.fireSource = "manual";
+    new WeaponSystem().update(world, 1 / 60);
+    world.physics.step(1 / 30);
+    world.syncDynamicPropsFromPhysics(1 / 30);
+
+    expect(prop?.position.distanceTo(world.player.position)).toBeGreaterThan(startDistance + 0.01);
     expect(prop?.position.y).toBeCloseTo(0.35, 4);
   });
 
