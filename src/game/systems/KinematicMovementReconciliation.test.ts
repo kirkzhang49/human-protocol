@@ -125,6 +125,25 @@ describe("Rapier kinematic movement reconciliation", () => {
     expect(enemy.position.x).toBeGreaterThan(0.5);
     expect(enemy.velocity.x).toBeGreaterThanOrEqual(-0.01);
   });
+
+  it("keeps fallback enemy knockback from tunneling through thin blockers", () => {
+    const world = createPlayingWorld();
+    const enemy = world.spawnEnemy("repair_drone", "fallback_knockback_enemy", new Vector3(0, 0, -2.5), 0);
+    enemy.velocity.set(28, 0, 0);
+    enemy.staggerRemaining = 0.2;
+    world.obstacles.push({
+      id: "thin_enemy_blocker",
+      visualKey: "test_door",
+      position: new Vector3(0.65, 0.5, -2.5),
+      halfSize: new Vector3(0.05, 0.5, 2),
+    });
+    world.markObstacleIndexDirty();
+    world.moveKinematicCircleWithPhysics = vi.fn(() => null);
+
+    new EnemyAISystem().update(world, 0.1);
+
+    expect(enemy.position.x).toBeLessThan(0.3);
+  });
 });
 
 function createPlayingWorld() {

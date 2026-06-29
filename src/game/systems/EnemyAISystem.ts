@@ -10,6 +10,7 @@ import { dampenPlanarVelocityAgainstKinematicRecovery, reconcilePlanarVelocityWi
 
 const HEAVY_ATTACK_STRIKE_ANIMATION_OFFSET = 0.24;
 const ENEMY_LINE_OF_SIGHT_RADIUS = 0.12;
+const LEGACY_FALLBACK_MAX_STEP_FACTOR = 0.45;
 
 export class EnemyAISystem implements GameSystem {
   private readonly toPlayer = new Vector3();
@@ -59,8 +60,7 @@ export class EnemyAISystem implements GameSystem {
         enemy.attackCooldownRemaining = Math.max(enemy.attackCooldownRemaining, 0.22);
         enemy.velocity.multiplyScalar(Math.exp(-12 * delta));
         if (!this.moveWithPhysics(world, enemy, delta)) {
-          enemy.position.addScaledVector(enemy.velocity, delta);
-          this.resolveArena(world, enemy);
+          this.moveWithLegacyFallback(world, enemy, delta);
         }
         this.resolveEnemySpacing(world, enemy);
         this.resolveArena(world, enemy);
@@ -89,8 +89,7 @@ export class EnemyAISystem implements GameSystem {
       }
 
       if (!this.moveWithPhysics(world, enemy, delta)) {
-        enemy.position.addScaledVector(enemy.velocity, delta);
-        this.resolveArena(world, enemy);
+        this.moveWithLegacyFallback(world, enemy, delta);
       }
       this.resolveEnemySpacing(world, enemy);
       this.resolveArena(world, enemy);
@@ -240,6 +239,19 @@ export class EnemyAISystem implements GameSystem {
     enemy.position.copy(result.position);
     reconcilePlanarVelocityWithKinematicResult(enemy.velocity, this.moveDelta, result, delta);
     return true;
+  }
+
+  private moveWithLegacyFallback(world: GameWorld, enemy: EnemyState, delta: number) {
+    const distance = enemy.velocity.length() * delta;
+    const maxStepDistance = Math.max(0.08, enemy.radius * LEGACY_FALLBACK_MAX_STEP_FACTOR);
+    const steps = Math.max(1, Math.ceil(distance / maxStepDistance));
+    const stepDelta = delta / steps;
+
+    for (let step = 0; step < steps; step += 1) {
+      if (enemy.velocity.lengthSq() <= 0.000001) break;
+      enemy.position.addScaledVector(enemy.velocity, stepDelta);
+      this.resolveArena(world, enemy);
+    }
   }
 
   private steerAroundNavigationObstacles(world: GameWorld, enemy: EnemyState, directionToPlayer: Vector3) {
